@@ -3,12 +3,6 @@
 // Reset default styles.
 // Add border box sizing in all browsers (opinionated).
 
-/* *,
-::before,
-::after {
-  box-sizing: border-box;
-} */
-
 * {
 	box-sizing: inherit;
 	margin: 0;
@@ -19,12 +13,6 @@
 		box-sizing: inherit;
 	}
 }
-
-/* * {
-  // @stylint ignore
-  margin: 0;
-  padding: 0;
-} */
 
 // Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
 audio,

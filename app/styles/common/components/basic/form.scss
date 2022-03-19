@@ -17,11 +17,9 @@
     content: '';
     width: 0.8rem;
     height: 0.8rem;
-    //background-image: ;
+    //background-image: url(../images/icons/check.svg);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @extend %pos-center-xy;
 }
 
 // ===================== RADIO ===================== //
@@ -34,7 +32,7 @@
 }
 
 .radio-style {
-    position: absolute;
+    position: relative;
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%;
@@ -48,9 +46,7 @@
     border-radius: 50%;
     //background-color: $accent;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @extend %pos-center-xy;
 }
 
 // input number
