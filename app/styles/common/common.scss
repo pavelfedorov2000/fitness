@@ -6,10 +6,6 @@ html {
         font-size: calc(100vw / 768 * 10);
     }
 
-    /* @media(max-width: 992px) {
-        font-size: calc(100vw / 768 * 10);
-    } */
-
     @media (max-width: 767px) {
         font-size: calc(100vw / 500 * 10);
     }
@@ -22,14 +18,15 @@ html {
 body {
     min-width: 320px;
     font-style: normal;
+    font-family: $ff;
+    font-size: rem($fz);
+    line-height: 2.2rem;
     font-weight: 400;
-    color: #000;
+    color: $color-default;
 
-    //background-color: #fff;
     &._lock {
         overflow-y: hidden;
     }
-
     /* &::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 0;
@@ -51,9 +48,11 @@ body {
 }
 
 .container {
-    max-width: $container + $gap * 2;
-    padding: 0 $gap;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, var(--gap)) 1fr repeat(2, var(--gap));
+    @media (max-width: 1024px) {
+        grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+    }
 }
 
 img {
@@ -64,6 +63,20 @@ img {
 
     table & {
         max-width: none;
+    }
+}
+
+.section-body {
+    grid-column: 3 / 4;
+}
+
+.section-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    p {
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
     }
 }
 
@@ -105,19 +118,4 @@ img {
 	background: -webkit-linear-gradient(#eee, #333);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-} */
-
-// COUNTER LIST
-/* ol.counter {
-	counter-reset: num;
-
-	li {
-		position: relative;
-
-		&:before {
-			content: counter(num);
-			counter-increment: num;
-			position: absolute;
-		}
-	}
 } */

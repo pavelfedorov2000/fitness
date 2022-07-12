@@ -1,0 +1,30 @@
+// COUNTER LIST
+ol.counter {
+    --counter-num: 2.4rem;
+    --pl: 1.6rem;
+
+    counter-reset: num;
+    display: grid;
+
+    li {
+        position: relative;
+        padding-left: calc(var(--pl) + var(--counter-num));
+        @extend %text-14;
+
+        &:before {
+            content: counter(num);
+            counter-increment: num;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--counter-num);
+            height: var(--counter-num);
+            border-radius: 50%;
+            @extend %grid-center;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            background-color: var(--black);
+            color: #fff;
+        }
+    }
+}

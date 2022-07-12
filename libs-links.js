@@ -1,7 +1,5 @@
 export const libsJsLink = [
     'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/vanilla-lazyload/dist/lazyload.min.js',
-    'node_modules/svg4everybody/dist/svg4everybody.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
     //'node_modules/jquery-validation/dist/jquery.validate.min.js',
     //'node_modules/wowjs/dist/wow.min.js',

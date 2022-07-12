@@ -1,0 +1,30 @@
+.aside-client {
+    --gap: 6.4rem;
+
+    display: none;
+    @media (min-width: 1025px) {
+        display: grid;
+        align-items: center;
+        gap: var(--gap);
+    }
+    // .aside-client__img
+
+    &__img {
+        height: 48rem;
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .aside-client__descr
+
+    &__descr {
+        @extend %vertical-align;
+        flex-direction: row-reverse;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: var(--dark-gray);
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg);
+    }
+}

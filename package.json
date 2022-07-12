@@ -1,7 +1,7 @@
 {
-  "name": "project-front-template-html",
+  "name": "fitness",
   "version": "2.0.0",
-  "description": "A template for a quick start",
+  "description": "Fitness On Web corporate website",
   "keywords": [
     "project",
     "template",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:imediasolutionsby/project-front-template-html.git"
+    "url": ""
   },
   "author": "Pavel Fedorov <p.fedorov@imedia.by>",
   "contributors": [],
@@ -108,9 +108,7 @@
     "jquery-validation": "^1.19.3",
     "jquery.maskedinput": "^1.4.1",
     "sass": "^1.45.1",
-    "svg4everybody": "^2.1.9",
     "swiper": "^7.4.1",
-    "vanilla-lazyload": "^17.5.0",
     "wowjs": "^1.1.3"
   }
 }

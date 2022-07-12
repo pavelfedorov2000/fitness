@@ -1,0 +1,18 @@
+.scroll-btn {
+    display: none;
+    @media (min-width: 1025px) {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        width: var(--gap);
+        height: var(--gap);
+        background-color: var(--black);
+        grid-area: scroll;
+        // .scroll-btn__arrow
+
+        &__arrow {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+}

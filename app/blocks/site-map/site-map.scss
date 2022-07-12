@@ -1,0 +1,29 @@
+.site-map {
+    @extend %grid-center;
+    @extend %text-11;
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--purple);
+    color: #fff;
+    @media (min-width: 1025px) {
+        position: fixed;
+        top: 28.4rem;
+        left: 0;
+        z-index: 200;
+    }
+    @media (max-width: 1024px) {
+        width: var(--header-height);
+        height: var(--header-height);
+    }
+    span {
+        @media (max-width: 500px) {
+            display: none;
+        }
+        &.mob {
+            display: none;
+            @media (max-width: 500px) {
+                display: block;
+            }
+        }
+    }
+}

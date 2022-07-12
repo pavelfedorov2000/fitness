@@ -1,0 +1,77 @@
+.unique-concept {
+    --form: 28.8rem;
+    --img: 48rem;
+    --decor: 17.1rem;
+    --decor--offset: 4rem;
+    --pt: 12rem;
+
+    position: relative;
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(0, 100%, var(--beige));
+            right: 0;
+        }
+    }
+
+    &__inner {
+        align-items: flex-start;
+    }
+
+    // .unique-concept__body
+
+    &__body {
+        display: grid;
+        grid-template-rows: var(--pt) max-content 7.2rem max-content 11rem 23.5rem 1fr 10.4rem - 4.9rem;
+        grid-template-columns: var(--form) 4.8rem 10.1rem 1fr calc(var(--img) - var(--circle-text) / 2) calc(
+                var(--circle-text) / 2
+            );
+    }
+
+    // .unique-concept__title
+
+    &__title {
+        grid-row: 2 / 3;
+        grid-column: 1 / -2;
+    }
+
+    // .unique-concept__text
+
+    &__text {
+        position: relative;
+        grid-row: 4 / 5;
+        grid-column: span 3;
+        &::before {
+            content: '';
+            position: absolute;
+            top: var(--decor--offset);
+            right: -13.8rem;
+            bottom: calc(var(--decor--offset) * (-1));
+            width: var(--decor);
+            background-image: url(../images/content/unique-concept/decor.svg);
+            @extend %bg-contain;
+        }
+    }
+
+    // .unique-concept__img
+
+    &__img {
+        position: relative;
+        grid-row: 4 / 7;
+        grid-column: 5 / -1;
+    }
+
+    // .unique-concept__form
+
+    &__form {
+        grid-row: 6 / -2;
+        grid-column: 1 / 2;
+    }
+
+    // .unique-concept__video
+
+    &__video {
+        grid-row: 6 / -2;
+        grid-column: 3 / -1;
+        grid-template-columns: 1fr 4.7rem max-content;
+    }
+}

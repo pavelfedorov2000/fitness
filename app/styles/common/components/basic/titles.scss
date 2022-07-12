@@ -1,5 +1,59 @@
-.title {}
+.title {
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
 
-.page-title {}
+.section-title {
+    @extend .title;
+    font-size: 3.8rem;
+    line-height: 150%;
+    span {
+        color: var(--yellow);
+    }
+}
 
-.section-title {}
+h {
+    &1,
+    &2,
+    &3,
+    &4,
+    &5,
+    &6 {
+        margin: 0;
+        font-size: inherit;
+        font-weight: 900;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    &1 {
+        font-size: 3.8rem;
+        line-height: 5.3rem;
+    }
+
+    &2 {
+        font-size: 3.2rem;
+        line-height: 4.5rem;
+    }
+
+    &3 {
+        font-size: 2.6rem;
+        line-height: 3.6rem;
+    }
+
+    &4 {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    &5 {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+    &6 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+}

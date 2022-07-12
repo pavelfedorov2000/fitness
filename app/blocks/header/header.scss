@@ -1,1 +1,135 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    min-height: var(--header-height);
+    color: #fff;
+    padding: 2rem 0;
+    @media (max-width: 1024px) {
+        position: fixed;
+        border-bottom: 0.1rem solid var(--line-color);
+        padding: 0 0 0 var(--mob-padding);
+    }
+    // .header__inner
 
+    &__inner {
+        @extend %flex-row-center;
+        max-width: 100%;
+        margin: 0 auto;
+        @media (min-width: 1025px) {
+            width: calc(var(--container) + var(--mob-padding) * 2);
+        }
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    // .header__logo-img
+
+    &__logo-img {
+        width: 15.8rem;
+        height: 5rem;
+    }
+
+    // .header__menu
+
+    &__menu {
+        @include row-grid(1.6rem);
+        justify-items: end;
+    }
+}
+
+.menu-header {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+    // .menu-header__top
+
+    &__top {
+    }
+
+    // .menu-header__main
+
+    &__main {
+    }
+}
+
+.header-top-menu {
+    @extend %vertical-align;
+    // .header-top-menu__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 1.6rem;
+        }
+    }
+
+    // .header-top-menu__link
+
+    &__link {
+        @extend %vertical-align;
+        @extend %text-10;
+        text-transform: uppercase;
+        color: rgba(#fff, 0.5);
+        transition: 0.3s color;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--yellow);
+                .header-top-menu__icon path {
+                    fill: var(--yellow);
+                }
+            }
+        }
+    }
+
+    // .header-top-menu__icon
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        margin-right: 0.8rem;
+        path {
+            fill: rgba(#fff, 0.5);
+            transition: 0.3s fill;
+        }
+    }
+}
+.header-main-menu {
+    // .header-main-menu__list
+
+    &__list {
+        display: flex;
+    }
+
+    // .header-main-menu__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 3.2rem;
+        }
+    }
+
+    // .header-main-menu__link
+
+    &__link {
+        @extend %text-12;
+        text-transform: uppercase;
+        transition: 0.3s color;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--yellow);
+            }
+        }
+        span {
+            margin-left: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            background-color: #fff;
+            border-radius: 3.2rem;
+            color: var(--black);
+        }
+    }
+}

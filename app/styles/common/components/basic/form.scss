@@ -68,6 +68,39 @@ input[type='number']:focus {
     -moz-appearance: number-input;
 }
 
+.input {
+    height: var(--input-height);
+    @include padding-x(1.6rem);
+    background-color: var(--light-blue);
+
+    &::placeholder {
+        color: var(--black);
+    }
+}
+
+.form {
+    > * {
+        &:not(:last-child) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__title {
+        @extend %text-17;
+        font-weight: 700;
+    }
+
+    &__body {
+        display: grid;
+        row-gap: 2.4rem;
+    }
+}
+
+.form-agree {
+    @extend %text-13;
+    color: var(--dark-gray);
+}
+
 // jquery ui range slider
 /* .ui-widget-content {
 	background-color: #c7d8ce;

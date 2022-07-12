@@ -1,0 +1,39 @@
+.messangers {
+    @extend %grid-row;
+}
+
+.messanger {
+    // .messanger__icon
+
+    &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        path {
+            transition: 0.3s fill;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                path {
+                    fill: var(--dark-yellow);
+                }
+            }
+        }
+    }
+}
+
+.contacts {
+    @extend %flex-row-center;
+}
+
+.contact {
+    @extend %text-17;
+    font-weight: 700;
+    transition: 0.3s color;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--yellow);
+        }
+    }
+}

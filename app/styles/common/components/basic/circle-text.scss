@@ -1,0 +1,20 @@
+.circle-text {
+    position: absolute;
+    top: calc(var(--circle-text) / -2);
+    right: calc(var(--circle-text) / -2);
+    width: var(--circle-text);
+    height: var(--circle-text);
+    animation: circleText 5s infinite ease-in-out;
+}
+
+@keyframes circleText {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

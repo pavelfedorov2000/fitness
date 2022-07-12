@@ -1,0 +1,26 @@
+.apps {
+    @extend %grid-row;
+    // .apps__item
+
+    &__item {
+        height: 4rem;
+        &--radius {
+            border-radius: 0.4rem;
+            img {
+                border-radius: 0.4rem;
+            }
+        }
+
+        &--appstore {
+            width: 12.8rem;
+        }
+
+        &--googleplay {
+            width: 13.5rem;
+        }
+
+        img {
+            @extend %cover;
+        }
+    }
+}

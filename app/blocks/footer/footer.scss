@@ -1,1 +1,168 @@
+.footer {
+    position: relative;
 
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(auto, 40rem, var(--yellow));
+            bottom: 0;
+        }
+    }
+
+    // .footer__body
+
+    &__body {
+        @include padding-y(8rem);
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        justify-content: space-between;
+        align-items: flex-start;
+        grid-template-rows: max-content 5.6rem max-content 5.9rem max-content;
+        grid-template-areas:
+            'menu-1 menu-2 menu-3 contacts'
+            '. . . .'
+            'logo apps . soc'
+            '. . . .'
+            'copy politics . dev';
+    }
+
+    // .footer__menu-col--1
+
+    &__menu-col--1 {
+        grid-area: menu-1;
+    }
+
+    // .footer__title
+
+    &__title {
+        font-size: 1.7rem;
+        line-height: 2.6rem;
+        font-weight: 700;
+        color: var(--dark);
+        &:not(:last-child) {
+            margin-bottom: 2.2rem;
+        }
+    }
+
+    // .footer__menu-list
+
+    &__menu-list {
+        @include row-grid(2rem);
+    }
+
+    // .footer__link
+
+    &__link {
+        @extend %text-14;
+        color: var(--dark-gray);
+        transition: 0.3s color;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--yellow);
+            }
+        }
+    }
+
+    // .footer__menu-col--2
+
+    &__menu-col--2 {
+        grid-area: menu-2;
+    }
+
+    // .footer__menu-list--row
+
+    &__menu-list--row {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 8.6rem;
+    }
+
+    // .footer__menu-col--3
+
+    &__menu-col--3 {
+        grid-area: menu-3;
+    }
+
+    // .footer__contacts
+
+    &__contacts {
+        justify-self: end;
+        grid-area: contacts;
+        @include row-grid(1.4rem);
+    }
+
+    // .footer__social
+
+    &__social {
+        grid-area: soc;
+        gap: 1.6rem;
+    }
+
+    // .footer__apps
+
+    &__apps {
+        grid-area: apps;
+        gap: 2.4rem;
+    }
+
+    // .footer__logo
+
+    &__logo {
+        grid-area: logo;
+    }
+
+    // .footer__logo-img
+
+    &__logo-img {
+        width: 15.7rem;
+        height: 2.3rem;
+    }
+
+    // .footer__copyright
+
+    &__copyright {
+        color: var(--gray-second);
+        grid-area: copy;
+    }
+
+    // .footer__politics
+
+    &__politics {
+        color: var(--gray-second);
+        grid-area: politics;
+        align-self: flex-end;
+    }
+
+    // .footer__dev
+
+    &__dev {
+        @extend %flex-col;
+        align-items: flex-end;
+        text-align: right;
+        color: var(--gray-second);
+        grid-area: dev;
+        align-self: flex-end;
+
+        > div {
+            display: flex;
+            &:not(:last-child) {
+                margin-bottom: 0.2rem;
+            }
+        }
+
+        dd {
+            margin-left: 0.8rem;
+            font-weight: 500;
+            transition: 0.3s color;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+}
+
+.accordeon-title {
+}
+.accordeon-content {
+}

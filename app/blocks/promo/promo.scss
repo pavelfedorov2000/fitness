@@ -1,3 +1,172 @@
 .promo {
-  // your code
+    --pt: 10.4rem;
+    --pb: 12.8rem;
+    @media (max-width: 1024px) {
+        --pt: 5.8rem;
+        --pb: 1.6rem;
+    }
+
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+
+    &::before {
+        --line-width: 0.1rem;
+        @media (min-width: 1025px) {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: var(--gap);
+            left: calc(var(--gap) - var(--line-width));
+            width: var(--line-width);
+            background-color: rgba(#fff, 0.3);
+        }
+    }
+
+    &__bg,
+    &__body {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    // .promo__bg
+
+    &__bg {
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .promo__body
+
+    &__body {
+        @media (max-width: 1024px) {
+            display: block;
+        }
+        @media (min-width: 1025px) {
+            grid-template-rows: calc(var(--header-height) + var(--pt)) 1fr calc(var(--gap) - var(--pb)) var(--pb);
+            grid-template-areas:
+                '. . . . marquee'
+                '. . content . marquee'
+                'scroll . content . marquee'
+                'scroll . . . marquee';
+        }
+    }
+
+    // .promo__content
+
+    &__content {
+        color: #fff;
+        display: grid;
+        grid-template-columns: 1fr var(--gap);
+        grid-template-areas:
+            'title box'
+            'nums nums';
+        @media (min-width: 1025px) {
+            grid-area: content;
+            align-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 1024px) {
+            grid-template-rows:
+                calc(var(--header-height) + var(--pt)) max-content 3rem minmax(var(--gap), max-content) minmax(
+                    3rem,
+                    1fr
+                )
+                max-content var(--pb);
+            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding) max-content var(--mob-padding);
+            grid-template-areas:
+                '. . . . .'
+                '. title . marquee .'
+                '. . . marquee .'
+                '. box . marquee .'
+                '. . . marquee .'
+                '. nums . marquee .'
+                '. . . . .';
+        }
+        @media (max-width: 767px) {
+            min-height: 100%;
+            grid-template-rows: calc(var(--header-height) + var(--pt)) max-content 1fr max-content 6rem max-content var(
+                    --pb
+                );
+            grid-template-columns: var(--mob-padding) 1fr max-content 0.4rem 0.8rem;
+            grid-template-areas:
+                '. . . . .'
+                '. title marquee marquee .'
+                '. . marquee marquee .'
+                '. nums marquee marquee .'
+                '. . . . .'
+                '. box box . .'
+                '. . . . .';
+        }
+    }
+
+    // .promo__title
+
+    &__title {
+        grid-area: title;
+        @media (max-width: 767px) {
+            max-width: 24rem;
+            font-size: 2rem;
+            line-height: 2.8rem;
+            padding-bottom: 1.6rem;
+        }
+        span {
+            display: block;
+        }
+    }
+
+    // .promo__nums
+
+    &__nums {
+        grid-area: nums;
+    }
+
+    &__box-link {
+        grid-area: box;
+    }
+}
+
+.numbers {
+    @extend %flex-row;
+    // .numbers__item
+
+    &__item {
+        @extend %flex-col;
+        max-width: 22.8rem;
+        @media (max-width: 1024px) {
+            max-width: 19.8rem;
+        }
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 1.6rem;
+                @media (max-width: 767px) {
+                    margin-bottom: 0.4rem;
+                }
+            }
+        }
+    }
+
+    // .numbers__item-num
+
+    &__item-num {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: calc(42 / 32 * 100%);
+        @media (max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+    }
+
+    // .numbers__item-descr
+
+    &__item-descr {
+        font-weight: 300;
+        line-height: 2.4rem;
+        opacity: 0.8;
+        @media (max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+    }
 }

@@ -1,8 +1,10 @@
 @import 'helpers/optimize';
 @import 'helpers/nojs';
+@import 'helpers/fonts';
+@import 'helpers/functions';
 @import 'helpers/variables';
 @import 'helpers/mixins';
-//@import 'helpers/fonts';
+@import 'helpers/custom';
 @import 'common/common';
 @import 'common/components/components';
 @import './common/progress';

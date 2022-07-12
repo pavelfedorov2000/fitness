@@ -1,0 +1,92 @@
+.social {
+    @extend %grid-row;
+    // .social__item
+
+    &__item {
+        width: 4rem;
+        height: 4rem;
+        background-color: #fff;
+        border: 0.1rem solid var(--dark);
+        transition: 0.3s background-color, 0.3s border-color;
+        svg {
+            width: 1.7rem;
+            height: 1.6rem;
+            path {
+                transition: 0.3s all;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    // .social__item--vk
+
+    &__item--vk {
+        svg {
+            width: 1.8rem;
+            height: 1.1rem;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--vk);
+                border-color: var(--vk);
+            }
+        }
+    }
+
+    // .social__link
+
+    &__link {
+        @extend %grid-center;
+        width: 100%;
+        height: 100%;
+    }
+
+    // .social__item--youtube
+
+    &__item--youtube {
+        svg {
+            width: 1.9rem;
+            height: 1.3rem;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--youtube);
+                border-color: var(--youtube);
+            }
+        }
+    }
+
+    // .social__item--fb
+
+    &__item--fb {
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--fb);
+                border-color: var(--fb);
+
+                svg path {
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+
+    // .social__item--inst
+
+    &__item--inst {
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--inst);
+                border-color: var(--inst);
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.logo {
+    // .logo__img
+
+    &__img {
+        object-fit: contain;
+    }
+
+    // .logo__text
+
+    &__text {
+        display: none;
+        @media (min-width: 1025px) {
+            display: block;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            letter-spacing: 0.19em;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: rgba(#fff, 0.6);
+        }
+    }
+}

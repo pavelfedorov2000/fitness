@@ -1,0 +1,95 @@
+.mobile-app {
+    --padding: 10.5rem;
+    --pt: calc(var(--padding) - var(--marquee-padding));
+    --top-offset: 7rem;
+    --bg-height: 42.4rem;
+    --offset-x: 9.5rem;
+    --title-offset: 13.4rem;
+    --iphone-width: 43.5rem;
+    --iphone-height: 87rem;
+
+    position: relative;
+    padding-top: var(--pt);
+    padding-bottom: var(--padding);
+    &::after {
+        @extend %contain;
+    }
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(var(--pt), 27rem, var(--yellow));
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 12.2rem;
+            bottom: 15.7rem;
+            z-index: -1;
+            width: 154.8rem;
+            height: 24.3rem;
+            background-image: url(../images/content/mobile-app/elements.svg);
+        }
+    }
+
+    &__container {
+        grid-template-rows: var(--top-offset) var(--bg-height) auto;
+    }
+
+    // .mobile-app__bg
+
+    &__bg {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+    }
+
+    // .mobile-app__content
+
+    &__content {
+        display: grid;
+        grid-row: 1 / -1;
+        grid-template-rows:
+            var(--top-offset) var(--title-offset) max-content var(--title-offset) calc(var(--top-offset) + 1rem)
+            max-content var(--padding) max-content;
+        grid-template-columns: var(--offset-x) 34.4rem 1fr var(--iphone-width) var(--offset-x);
+        grid-template-areas:
+            '. . . iphone .'
+            '. . . iphone .'
+            '. title . iphone .'
+            '. . . iphone .'
+            '. . . iphone .'
+            '. text . iphone .'
+            '. . . iphone .'
+            '. apps . iphone .';
+    }
+
+    // .mobile-app__title
+
+    &__title {
+        color: #fff;
+        grid-area: title;
+    }
+
+    // .mobile-app__text
+
+    &__text {
+        grid-area: text;
+        p {
+            &:first-child {
+                font-weight: 500;
+            }
+        }
+    }
+
+    // .mobile-app__download
+
+    &__download {
+        gap: 4rem;
+        grid-area: apps;
+    }
+
+    // .mobile-app__img
+
+    &__img {
+        grid-area: iphone;
+    }
+}
