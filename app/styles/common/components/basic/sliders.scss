@@ -1,4 +1,4 @@
-.swiper-button-prev,
+/* .swiper-button-prev,
 .swiper-button-next {
     top: 0;
     right: 0;
@@ -51,7 +51,7 @@
     &:not(:last-child) {
         margin-right: 1.65rem;
     }
-}
+} */
 
 /* .swiper-pagination-current,
 .swiper-pagination-total {
@@ -62,3 +62,91 @@
         left: 0;
     }
 } */
+
+.slider-nav {
+    --nav-gap: 1.6rem;
+    --nav: 5.6rem;
+    --proressbar-width: 6.7rem;
+    --proressbar-height: 0.2rem;
+
+    display: grid;
+    gap: var(--nav-gap);
+    grid-template-columns: calc(var(--nav) * 2) max-content var(--proressbar-width) max-content;
+    grid-template-areas: 'arrows current bar total';
+    align-items: center;
+    height: var(--nav);
+    background-color: var(--black);
+    color: #fff;
+    padding-right: var(--nav-gap);
+
+    @media(max-width: 1024px) {
+        --nav: 4.8rem;
+    }
+
+    @media(max-width: 767px) {
+        grid-template-columns: calc(var(--nav) * 2) 1fr max-content var(--proressbar-width) max-content;
+        grid-template-areas: 'arrows . current bar total';
+    }
+
+    &__arrows {
+        display: flex;
+        grid-area: arrows;
+    }
+
+    &__arrow {
+        @extend %grid-center;
+        width: var(--nav);
+        height: var(--nav);
+        transition: .3s background-color;
+
+        &:focus,
+        &:active {
+            background-color: var(--dark-yellow);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--yellow);
+            }
+        }
+    }
+
+    &__progress {
+        position: relative;
+        grid-area: bar;
+        //width: var(--proressbar-width);
+        height: var(--proressbar-height);
+        background-color: var(--gray);
+    }
+
+    &__progress-bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+    }
+
+    &__counter {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.3rem;
+
+        &--current {
+            grid-area: current;
+        }
+
+        &--total {
+            grid-area: total;
+        }
+    }
+}
+
+.splide {
+    &__arrow {
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

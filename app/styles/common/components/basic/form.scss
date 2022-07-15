@@ -63,6 +63,7 @@ input[type='number'] {
 input[type='number'] {
     -moz-appearance: textfield;
 }
+
 input[type='number']:hover,
 input[type='number']:focus {
     -moz-appearance: number-input;
@@ -72,6 +73,9 @@ input[type='number']:focus {
     height: var(--input-height);
     @include padding-x(1.6rem);
     background-color: var(--light-blue);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--black);
 
     &::placeholder {
         color: var(--black);

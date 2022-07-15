@@ -1,12 +1,15 @@
 .promo-marquee {
     @extend %text-64;
     @include border-text(rgba(#fff, 0.8), transparent);
-    font-weight: 900;
-    grid-area: marquee;
+    height: 100vh;
+
     @media (max-width: 1024px) {
+        height: calc(100vh - var(--header-height) - var(--pt) - var(--pb));
         font-size: 4.8rem;
     }
+
     @media (max-width: 767px) {
+        height: calc(100vh - var(--header-height) - var(--pt) - var(--pb) - 6rem - 8rem);
         font-size: 2rem;
         line-height: 2.8rem;
     }
@@ -17,16 +20,11 @@
     align-items: center;
     flex-direction: column-reverse;
     letter-spacing: 0.05em;
-    //max-height: 100vh;
-    height: 100vh;
     transform: rotate(-180deg);
     overflow: auto;
-    @media (max-width: 1024px) {
-        height: calc(100vh - var(--header-height) - var(--pt) - var(--pb));
-    }
-    @media (max-width: 767px) {
-        height: calc(100vh - var(--header-height) - var(--pt) - var(--pb) - 6rem - 8rem);
-    }
+    font-weight: 900;
+    grid-area: marquee;
+
     &::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 0;
@@ -37,6 +35,7 @@
         white-space: nowrap;
         margin: 2rem 0;
         animation: marquee 7s linear infinite;
+
         @media (max-width: 767px) {
             margin: var(--mob-padding) 0;
         }
@@ -58,8 +57,10 @@
     border-top: 0.1rem solid var(--dark-second);
     border-bottom: 0.1rem solid var(--dark-second);
     overflow: hidden;
+
     > * {
         display: flex;
+
         &:not(:last-child) {
             margin-bottom: 0.8rem;
         }
@@ -71,6 +72,7 @@
         margin: 0 0.8rem;
         white-space: nowrap;
         @include border-text(var(--gray), transparent);
+
         span {
             -webkit-text-fill-color: initial;
             -webkit-text-stroke-width: initial;
@@ -79,12 +81,14 @@
             margin: 0 0.8rem;
         }
     }
+
     // .double-marquee__top
 
     &__line {
         animation-duration: 10s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
+
         &--top {
             flex-direction: row-reverse;
             animation-name: horizontal-marquee-top;

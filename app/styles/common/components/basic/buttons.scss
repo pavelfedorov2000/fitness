@@ -21,11 +21,13 @@
     &--black {
         background-color: var(--black);
         color: #fff;
+
         @media (any-hover: hover) {
             &:hover {
                 background-color: var(--gray);
             }
         }
+
         &:active,
         &:focus {
             background-color: var(--dark-gray);
@@ -35,6 +37,7 @@
     &--border {
         border: 0.1rem solid var(--black);
         transition: 0.3s background-color 0.3s border-color;
+
         @media (any-hover: hover) {
             &:hover {
                 background-color: var(--yellow);
@@ -48,12 +51,14 @@
     @extend %grid-center;
     width: var(--arrow-btn);
     height: var(--arrow-btn);
+    background-color: var(--yellow);
 
     // .arrow-btn__svg
 
     &__svg {
         width: 2.4rem;
         height: 2.4rem;
+
         @media (max-width: 767px) {
             width: 1.6rem;
             height: 1.6rem;

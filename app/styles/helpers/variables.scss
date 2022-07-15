@@ -29,16 +29,19 @@
     --circle-text: 22rem;
     --marquee-padding: 4.9rem;
     --input-height: 5.6rem;
+
     @media (max-width: 1024px) {
         --header-height: 4.8rem;
     }
+
     @media (max-width: 767px) {
         --arrow-btn: 4rem;
     }
 }
 
 $fz: 15;
-$ff: 'Gotham Pro', sans-serif;
+$ff: 'Gotham Pro',
+sans-serif;
 $color-default: var(--black);
 
 %grid-row {

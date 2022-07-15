@@ -11,7 +11,7 @@ html {
     }
 
     @media (max-width: 500px) {
-        font-size: calc(100vw / 375 * 10);
+        font-size: calc(100vw / 320 * 10);
     }
 }
 
@@ -27,6 +27,7 @@ body {
     &._lock {
         overflow-y: hidden;
     }
+
     /* &::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 0;
@@ -50,6 +51,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(2, var(--gap)) 1fr repeat(2, var(--gap));
+
     @media (max-width: 1024px) {
         grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
     }
@@ -73,6 +75,7 @@ img {
 .section-text {
     font-size: 1.4rem;
     line-height: 2rem;
+
     p {
         &:not(:last-child) {
             margin-bottom: 1.5rem;

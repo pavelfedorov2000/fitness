@@ -8,12 +8,23 @@
     @extend .title;
     font-size: 3.8rem;
     line-height: 150%;
+
+    @media(max-width: 1024px) {
+        font-size: 3.2rem;
+    }
+
     span {
         color: var(--yellow);
     }
 }
 
+.section-suptitle {
+    @extend %text-17;
+    color: var(--dark-gray);
+}
+
 h {
+
     &1,
     &2,
     &3,
