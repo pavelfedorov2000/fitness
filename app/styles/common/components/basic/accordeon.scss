@@ -1,0 +1,21 @@
+.accordeon {
+    &-title {
+        transition: 0.3s background-color;
+        &:before {
+            position: absolute;
+            top: 1.4rem;
+            right: var(--mob-padding);
+            width: 2rem;
+            height: 2rem;
+            background-image: url(../images/icons/drop.svg);
+            @extend %bg-contain;
+            transition: 0.3s transform;
+        }
+        &.active {
+            background-color: var(--light-blue);
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

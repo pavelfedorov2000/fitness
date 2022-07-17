@@ -6,11 +6,15 @@
 
 .section-title {
     @extend .title;
-    font-size: 3.8rem;
-    line-height: 150%;
+    @extend %text-38;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         font-size: 3.2rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 2rem;
+        line-height: 2.8rem;
     }
 
     span {
@@ -21,10 +25,13 @@
 .section-suptitle {
     @extend %text-17;
     color: var(--dark-gray);
+    @media (max-width: 767px) {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
 }
 
 h {
-
     &1,
     &2,
     &3,

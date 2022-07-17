@@ -1,24 +1,43 @@
 .free-training-recording {
     --form: 67.2rem;
-    //--col-gap: 14.4rem;
+    --border-width: 2.4rem;
+    @media (max-width: 1024px) {
+        --gap: 3.2rem;
+        --border-width: 1.2rem;
+    }
 
-    padding: 10.4rem 0;
-    border: 2.4rem solid var(--yellow);
+    @include padding-y(10.4rem);
+    border: var(--border-width) solid var(--yellow);
     background-image: url(../images/elements/free-training-elements.svg);
     background-size: 164.6rem 42.9rem;
     background-position: 50% 12.5rem;
     background-repeat: no-repeat;
+
+    @media (max-width: 1024px) {
+        @include padding-y(4rem);
+    }
+
+    &__container {
+        @media (max-width: 1024px) {
+            grid-template-columns: calc(var(--gap) - var(--border-width)) 1fr calc(var(--gap) - var(--border-width));
+        }
+    }
     // .free-training-recording__container
 
     &__inner {
         display: grid;
-        grid-template-columns: 29.6rem 1fr var(--form);
-        grid-template-rows: 0.7rem max-content 8rem max-content;
-        grid-template-areas:
-            '. . form'
-            'text . form'
-            '. . .'
-            'contacts . agree';
+        @media (max-width: 1024px) {
+            row-gap: var(--gap);
+        }
+        @media (min-width: 1025px) {
+            grid-template-columns: 29.6rem 1fr var(--form);
+            grid-template-rows: 0.7rem max-content 8rem max-content;
+            grid-template-areas:
+                '. . form'
+                'text . form'
+                '. . .'
+                'contacts . agree';
+        }
     }
 
     // .free-training-recording__title
@@ -26,60 +45,98 @@
     &__title {
         max-width: 71.5rem;
         margin-bottom: 6.4rem;
+        @media (max-width: 1024px) {
+            margin-bottom: 3.2rem;
+        }
     }
 
     // .free-training-recording__text
 
     &__text {
-        grid-area: text;
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+        }
+        @media (min-width: 1025px) {
+            grid-area: text;
+        }
     }
 
     &__form {
-        grid-area: form;
         display: grid;
-        grid-template-columns: 32rem 15rem 1fr;
-        grid-template-areas:
-            'name tel tel'
-            'select select btn';
         gap: 4rem 3.2rem;
+        @media (max-width: 767px) {
+            gap: 1.6rem;
+        }
+        @media (min-width: 768px) {
+            grid-template-columns: 32rem 15rem 1fr;
+            grid-template-areas:
+                'name tel tel'
+                'select select btn';
+        }
+        @media (min-width: 1025px) {
+            grid-area: form;
+        }
     }
 
     // .free-training-recording__input
 
     &__input {
         &--name {
-            grid-area: name;
+            @media (min-width: 768px) {
+                grid-area: name;
+            }
         }
 
         &--tel {
-            grid-area: tel;
+            @media (min-width: 768px) {
+                grid-area: tel;
+            }
         }
     }
 
     &__select {
-        grid-area: select;
+        @media (min-width: 768px) {
+            grid-area: select;
+        }
     }
 
     // .free-training-recording__btn
 
     &__btn {
-        grid-area: btn;
+        @media (min-width: 768px) {
+            grid-area: btn;
+        }
     }
 
     // .free-training-recording__contacts
 
     &__contacts {
-        grid-area: contacts;
+        @media (min-width: 1025px) {
+            grid-area: contacts;
+        }
     }
 
     &__messangers {
         gap: 3.2rem;
+        @media (max-width: 767px) {
+            gap: 1.6rem;
+        }
     }
 
     // .free-training-recording__form-agree
 
     &__form-agree {
-        grid-area: agree;
-        align-self: center;
+        @media (min-width: 1025px) {
+            grid-area: agree;
+            align-self: center;
+        }
+    }
+
+    &__contact {
+        @media (max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
     }
 }

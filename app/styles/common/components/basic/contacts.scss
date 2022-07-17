@@ -1,27 +1,3 @@
-.messangers {
-    @extend %grid-row;
-}
-
-.messanger {
-    // .messanger__icon
-
-    &__icon {
-        width: 2.4rem;
-        height: 2.4rem;
-        path {
-            transition: 0.3s fill;
-        }
-
-        @media (any-hover: hover) {
-            &:hover {
-                path {
-                    fill: var(--dark-yellow);
-                }
-            }
-        }
-    }
-}
-
 .contacts {
     @extend %flex-row-center;
 }

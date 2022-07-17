@@ -1,17 +1,9 @@
-.splide {
-
-    // .splide__slide
-
-    &__slide {}
-}
-
 .article-card {
-
-    @extend %flex-col;
-    align-items: flex-end;
     // .article-card__date
 
     &__date {
+        display: block;
+        text-align: right;
         margin-bottom: 0.9rem;
     }
 
@@ -20,6 +12,7 @@
     &__body {
         display: grid;
         position: relative;
+        min-height: var(--card-height);
 
         &::before {
             content: '';
@@ -27,8 +20,11 @@
             right: 0;
             bottom: 0;
             left: 0;
+            z-index: 1;
             height: 22rem;
             background: linear-gradient(180deg, rgba(2, 8, 24, 0) 0%, rgba(2, 8, 24, 0.4) 100%);
+            opacity: 0;
+            transition: 0.5s opacity;
         }
     }
 
@@ -47,25 +43,33 @@
     }
 
     &__kg {
-        flex-grow: 1;
+        font-size: 8rem;
+        line-height: 7.7rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: 37%;
+        margin-bottom: auto;
     }
 
     // .article-card__content
 
     &__content {
+        z-index: 10;
         @extend %flex-col;
         justify-content: space-between;
-    }
-
-    // .article-card__label
-
-    &__label {
-        flex-grow: 1;
+        align-items: flex-start;
+        padding: 2.4rem;
+        color: #fff;
+        text-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.2);
     }
 
     // .article-card__title
 
     &__title {
+        @extend %text-17;
+        font-weight: 700;
+        margin-top: auto;
+
         &:not(:last-child) {
             margin-bottom: 2.2rem;
         }
@@ -82,19 +86,36 @@
         right: 0;
         bottom: 0;
     }
+
+    @media (any-hover: hover) {
+        &:hover {
+            .article-card {
+                &__body {
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sale {
+        .article-card__title {
+            @extend %flex-col;
+            align-items: flex-start;
+            text-shadow: none;
+            span {
+                background-color: var(--red);
+                @include padding-x(0.8rem);
+            }
+        }
+    }
 }
 
 .date {
     font-size: 1.2rem;
     line-height: 1.7rem;
     color: var(--dark-gray);
-}
-
-.label {
-    @extend %text-13;
-    background-color: #fff;
-    border-radius: 3.2rem;
-    padding: 0.1rem 0.8rem;
 }
 
 .views {
@@ -110,7 +131,7 @@
         left: 0;
         width: 2rem;
         height: 2rem;
-        background-image: url(../images/icons/views);
+        background-image: url(../images/icons/view.svg);
         @extend %bg-contain;
     }
 }

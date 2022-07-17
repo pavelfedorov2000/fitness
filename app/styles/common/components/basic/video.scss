@@ -1,16 +1,23 @@
 .video {
     display: grid;
-    grid-template-columns: 1fr 2rem max-content;
-    grid-template-rows: 1fr max-content 4rem;
-    grid-template-areas:
-        'video . .'
-        'video . info'
-        'video . .';
+    @media (min-width: 1025px) {
+        grid-template-columns: 1fr 2rem max-content;
+        grid-template-rows: 1fr max-content 4rem;
+        grid-template-areas:
+            'video . .'
+            'video . info'
+            'video . .';
+    }
+    @media (max-width: 1024px) {
+        row-gap: 1.6rem;
+    }
     // .video__body
 
     &__body {
         position: relative;
-        grid-area: video;
+        @media (min-width: 1025px) {
+            grid-area: video;
+        }
     }
 
     // .video__bg
@@ -35,53 +42,105 @@
         bottom: 0;
         background-color: var(--yellow);
         display: grid;
-        grid-template-columns: var(--pl) 1fr var(--pl) var(--play) var(--pr);
-        grid-template-rows: var(--pt) max-content 0.3rem var(--play) var(--pb);
-        grid-template-areas:
-            '. . . . .'
-            '. text . . .'
-            '. . . . .'
-            '. . . player .'
-            '. . . . .';
+        @media (min-width: 1025px) {
+            grid-template-columns: var(--pl) 1fr var(--pl) var(--play) var(--pr);
+            grid-template-rows: var(--pt) max-content 0.3rem var(--play) var(--pb);
+            grid-template-areas:
+                '. . . . .'
+                '. text . . .'
+                '. . . . .'
+                '. . . player .'
+                '. . . . .';
+        }
+        @media (max-width: 1024px) {
+            --play: 2.8rem;
+            width: 5.6rem;
+            height: 5.6rem;
+            place-items: center;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        @media (max-width: 767px) {
+            --play: 2.3rem;
+            width: 4rem;
+            height: 4rem;
+        }
 
         &--icon-only {
             --play: 2.8rem;
             width: 5.6rem;
             height: 5.6rem;
             place-items: center;
-            grid-template-areas: unset;
-            grid-template-columns: unset;
-            grid-template-rows: unset;
+            @media (min-width: 1025px) {
+                grid-template-areas: unset;
+                grid-template-columns: unset;
+                grid-template-rows: unset;
+            }
+
+            @media (max-width: 767px) {
+                --play: 2.3rem;
+                width: 4rem;
+                height: 4rem;
+            }
 
             .video__player {
-                grid-area: unset;
-                width: var(--play);
-                height: var(--play);
+                @media (min-width: 1025px) {
+                    width: var(--play);
+                    height: var(--play);
+                    grid-area: unset;
+                }
             }
         }
     }
 
     &__text {
         @extend %text-12;
-        font-weight: 700;
-        text-transform: uppercase;
-        grid-area: text;
-        text-align: left;
+        display: none;
+        @media (min-width: 1025px) {
+            display: block;
+            grid-area: text;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: left;
+        }
     }
 
     &__player {
-        grid-area: player;
+        @media (min-width: 1025px) {
+            grid-area: player;
+        }
+        @media (max-width: 1024px) {
+            width: var(--play);
+            height: var(--play);
+        }
     }
 
     // .video__info
 
     &__info {
-        grid-area: info;
-        font-size: 1.3rem;
+        @extend %text-13;
         line-height: 2.2rem;
+        @media (max-width: 1024px) {
+            color: var(--dark-gray);
+        }
+        @media (min-width: 1025px) {
+            grid-area: info;
+        }
+
+        span {
+            @media (min-width: 1025px) {
+                display: block;
+            }
+        }
 
         &--white {
-            color: #fff;
+            @media (min-width: 1025px) {
+                color: #fff;
+            }
         }
     }
 }

@@ -1,16 +1,21 @@
 .btn {
-    @include padding-y(1.5rem);
+    padding: 1.55rem;
     @extend %text-12;
     font-weight: 500;
     background-color: var(--yellow);
     text-transform: uppercase;
     text-align: center;
-    transition: 0.3s background-color;
+    transition: 0.5s background-color;
 
     @media (any-hover: hover) {
         &:hover {
             background-color: var(--hover-yellow);
         }
+    }
+
+    &[disabled] {
+        background-color: var(--gray);
+        pointer-events: none;
     }
 
     &:active,
@@ -35,8 +40,9 @@
     }
 
     &--border {
+        background-color: transparent;
         border: 0.1rem solid var(--black);
-        transition: 0.3s background-color 0.3s border-color;
+        transition: 0.5s background-color, 0.5s border-color;
 
         @media (any-hover: hover) {
             &:hover {
@@ -67,5 +73,28 @@
 
     &--white {
         background-color: #fff;
+    }
+}
+
+.label {
+    @extend %text-13;
+    font-weight: 500;
+    background-color: #fff;
+    color: var(--black);
+    border-radius: 3.2rem;
+    padding: 0.1rem 0.8rem;
+
+    &--black {
+        background-color: var(--black);
+        color: #fff;
+    }
+
+    &--green {
+        background-color: var(--green);
+        color: #fff;
+    }
+
+    &--yellow {
+        background-color: var(--yellow);
     }
 }

@@ -1,3 +1,311 @@
-.timetable {
-  // your code
+.timetable-section {
+    --pt: 8.5rem;
+    --pb: 7.6rem;
+    --card-mh: 33.6rem;
+
+    position: relative;
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(100%, 25.6rem, var(--beige));
+            right: 0;
+        }
+    }
+    // .timetable-section__grid
+
+    &__grid {
+        grid-template-rows: var(--pt) max-content 5.6rem minmax(var(--card-mh), max-content) max-content var(--pb);
+        grid-template-areas:
+            'asideClient . . . .'
+            'asideClient . head . .'
+            'asideClient . . . .'
+            'asideClient . timetable . stats'
+            'asideClient . timetable . .'
+            '. . . . .';
+    }
+
+    // .timetable-section__aside-client
+
+    &__aside-client {
+        grid-area: asideClient;
+    }
+
+    // .timetable-section__head
+
+    &__head {
+        display: grid;
+        align-items: center;
+        grid-template-columns: max-content 53.3rem 1fr max-content;
+        grid-template-areas: 'date title . btn';
+        gap: 4rem;
+        grid-area: head;
+    }
+
+    // .timetable-section__date
+
+    &__date {
+        grid-area: date;
+    }
+
+    // .timetable-section__title
+
+    &__title {
+        grid-area: title;
+    }
+
+    // .timetable-section__btn
+
+    &__btn {
+        grid-area: btn;
+    }
+
+    // .timetable-section__items
+
+    &__items {
+        display: grid;
+        gap: 4rem;
+        grid-area: timetable;
+    }
+
+    &__stats {
+        display: none;
+        @media (min-width: 1025px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            grid-area: stats;
+        }
+    }
+}
+
+.date-box {
+    @extend %grid-center;
+    background-color: var(--black);
+    color: #fff;
+    width: 9.6rem;
+    height: 9.6rem;
+}
+
+.timetable-card {
+    --coach: 8rem;
+    --gap: 3.2rem;
+    --people: 16.3rem;
+
+    display: grid;
+    grid-template-rows: var(--gap) max-content 2.4rem max-content calc(var(--gap) / 2) max-content 1fr minmax(
+            var(--coach),
+            max-content
+        );
+    grid-template-columns: var(--gap) 31.5rem 4rem 5.5rem 11.7rem 1fr 3rem calc(var(--people) - var(--coach)) var(
+            --coach
+        );
+    background-color: var(--light-blue);
+    position: relative;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: var(--coach);
+        bottom: var(--coach);
+        background-color: rgba(var(--dark-gray), 0.3);
+    }
+    &::before {
+        width: 0.1rem;
+        top: 0;
+    }
+    &::after {
+        width: calc(50% - var(--coach));
+        height: 0.1rem;
+    }
+
+    // .timetable-card__labels
+
+    &__labels {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -0.8rem;
+        grid-row: 2 / 3;
+        grid-column: 2 / 5;
+    }
+
+    // .timetable-card__label
+
+    &__label {
+        margin: 0.8rem;
+
+        &.label--green,
+        &.label--yellow {
+            display: none;
+        }
+    }
+
+    // .timetable-card__wrap
+
+    &__wrap {
+        @extend %vertical-align;
+        grid-row: 4 / 5;
+        grid-column: 2 / 5;
+    }
+
+    // .timetable-card__title
+
+    &__title {
+    }
+
+    // .timetable-card__time
+
+    &__time {
+        margin-left: 3.2rem;
+    }
+
+    // .timetable-card__text
+
+    &__text {
+        grid-row: 6 / 7;
+        grid-column: 2 / 5;
+    }
+
+    // .timetable-card__coach
+
+    &__coach {
+        display: grid;
+        align-items: center;
+        grid-template-rows: 1fr max-content max-content 1fr;
+        grid-template-columns: var(--coach) max-content;
+        grid-template-areas:
+            'avatar .'
+            'avatar name'
+            'avatar descr'
+            'avatar .';
+        gap: 0.5rem 3.2rem;
+        grid-row: -2 / -1;
+        grid-column: 1 / 4;
+    }
+
+    // .timetable-card__coach-img
+
+    &__coach-img {
+        grid-row: span 2;
+        grid-area: avatar;
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .timetable-card__coach-name
+
+    &__coach-name {
+        @extend %text-14;
+        font-weight: 500;
+        grid-area: name;
+    }
+
+    // .timetable-card__coach-specialization
+
+    &__coach-specialization {
+        @extend %text-13;
+        color: rgba(var(--dark-gray), 0.7);
+        grid-column: 2 / 3;
+        grid-area: descr;
+    }
+
+    // .timetable-card__img
+
+    &__img {
+        grid-row: 1 / -1;
+        grid-column: 6 / -1;
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .timetable-card__progress
+
+    &__progress {
+        position: relative;
+        background-color: #fff;
+        height: 0.6rem;
+        border-radius: 3.2rem;
+        align-self: center;
+        grid-row: -2 / -1;
+        grid-column: 4 / 7;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: var(--green);
+            border-radius: 0.3rem 0 0 0.3rem;
+            width: var(--progress);
+        }
+    }
+
+    // .timetable-card__people
+
+    &__people {
+        background-color: #fff;
+        @extend %flex-center;
+        @extend %text-12;
+        grid-column: -3 / -1;
+        grid-row: 1 / span 3;
+        align-self: start;
+        padding: 2.4rem 2.4rem 1.9rem;
+
+        b {
+            @extend %text-26;
+            flex-shrink: 0;
+            white-space: nowrap;
+            margin-right: 1.6rem;
+        }
+    }
+
+    // .timetable-card__btn
+
+    &__btn {
+        grid-row: -2 / -1;
+        grid-column: -2 / -1;
+        width: 100%;
+        height: 100%;
+        span {
+            display: none;
+        }
+    }
+
+    &.progress {
+        .timetable-card__label.label--green {
+            display: inline-block;
+        }
+    }
+
+    &.planning {
+        .timetable-card__label.label--yellow {
+            display: inline-block;
+        }
+    }
+}
+
+.aside-nums {
+    // .aside-nums__item
+
+    &__item {
+        @extend %flex-col;
+        align-items: flex-start;
+    }
+
+    // .aside-nums__item-num
+
+    &__item-num {
+        @extend .title;
+        @extend %text-38;
+        @include border-text(var(--dark-gray), transparent);
+    }
+
+    // .aside-nums__item-descr
+
+    &__item-descr {
+        @extend %text-13;
+        color: var(--dark-gray);
+        max-width: 14.8rem;
+    }
 }
