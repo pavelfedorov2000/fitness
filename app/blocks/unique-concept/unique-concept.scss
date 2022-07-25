@@ -112,4 +112,10 @@
             height: 19.4rem;
         }
     }
+
+    &__circle-text {
+        position: absolute;
+        top: calc(var(--circle-text) / -2);
+        right: calc(var(--circle-text) / -2);
+    }
 }

@@ -82,6 +82,15 @@
         }
     }
 
+    &--gray {
+        p {
+            -webkit-text-stroke-color: var(--dark-gray);
+            span {
+                color: var(--dark-gray);
+            }
+        }
+    }
+
     // .double-marquee__top
 
     &__line {

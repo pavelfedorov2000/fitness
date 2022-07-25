@@ -1,10 +1,21 @@
 .club-vacancies {
+    --row-gap: 2.4rem;
+
     @include padding-y(var(--section-padding));
+
+    &__body {
+        @media (max-width: 1024px) {
+            display: grid;
+            gap: var(--row-gap);
+        }
+    }
 
     // .club-vacancies__title
 
     &__title {
-        margin-bottom: 5.6rem;
+        @media (min-width: 1025px) {
+            margin-bottom: 5.6rem;
+        }
     }
 
     // .club-vacancies__slider
@@ -13,12 +24,16 @@
         @media (min-width: 1025px) {
             visibility: visible;
         }
+
+        @media (max-width: 1024px) {
+            width: calc(100vw - var(--mob-padding) * 2);
+        }
     }
 
     // .club-vacancies__cards
 
     &__cards {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 4rem;
@@ -28,9 +43,6 @@
     // .club-vacancies__slider-item
 
     &__slider-item {
-        @media(max-width: 1024px) {
-            width: calc(228 / 320 * 100vw);
-        }
     }
 
     // .club-vacancies__slider-nav
@@ -38,32 +50,34 @@
     &__slider-nav {
         display: none;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: grid;
+            margin-top: var(--row-gap);
         }
     }
 }
 
 .splide {
-
     // .splide__track
 
-    &__track {}
+    &__track {
+    }
 
     // .splide__list
 
-    &__list {}
+    &__list {
+    }
 
     // .splide__slide
 
-    &__slide {}
+    &__slide {
+    }
 }
 
 .vacancy-card {
-
     --gap: 2.4rem;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         --gap: 1.6rem;
     }
 
@@ -74,7 +88,9 @@
         min-height: 24.8rem;
         justify-items: start;
         display: grid;
-        grid-template-rows: var(--gap) max-content var(--gap) max-content 1fr max-content calc(var(--arrow-btn) - var(--gap)) var(--gap);
+        grid-template-rows:
+            var(--gap) max-content var(--gap) max-content 1fr max-content calc(var(--arrow-btn) - var(--gap))
+            var(--gap);
         grid-template-columns: var(--gap) 1fr 3.2rem calc(var(--arrow-btn) - var(--gap)) var(--gap);
         grid-template-areas:
             '. . . . .'
@@ -84,8 +100,7 @@
             '. . . . .'
             '. address . . .'
             '. address . arrow arrow'
-            '. . . arrow arrow'
-        ;
+            '. . . arrow arrow';
     }
 
     // .vacancy-card__label
@@ -101,7 +116,7 @@
         line-height: 2.2rem;
         grid-area: title;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.4rem;
             line-height: 2rem;
         }
@@ -116,7 +131,7 @@
         padding-left: 2.8rem;
         color: var(--dark-gray);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.3rem;
             line-height: 1.8rem;
         }

@@ -1,6 +1,8 @@
 // Custom select
 .select {
+    $this: &;
     position: relative;
+    color: var(--black);
 
     &__title {
         @extend %vertical-align;
@@ -8,7 +10,7 @@
         font-weight: 500;
         height: var(--input-height);
         @include padding-x(1.6rem);
-        background-color: var(--light-blue);
+        background-color: #fff;
         cursor: pointer;
         transition: 0.3s background-color;
 
@@ -76,6 +78,12 @@
             &:hover {
                 background-color: var(--light-blue);
             }
+        }
+    }
+
+    &--light-blue {
+        #{$this}__title {
+            background-color: var(--light-blue);
         }
     }
 }

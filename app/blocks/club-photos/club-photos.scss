@@ -1,3 +1,56 @@
 .club-photos {
-  // your code
+    --thumb: 10.4rem;
+    --pb: 10.4rem;
+    min-height: var(--section-mh);
+    color: #fff;
+    &__grid {
+        grid-template-rows: var(--section-padding) max-content 1fr var(--thumb) var(--pb);
+    }
+    // .club-photos__title
+
+    &__title {
+        position: relative;
+        z-index: 10;
+        max-width: 32.7rem;
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+    }
+
+    // .club-photos__slider
+
+    &__slider {
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+    }
+
+    &__slider-nav {
+        position: absolute;
+        bottom: 0;
+        left: calc(var(--gap) * 2);
+    }
+
+    // .club-photos__img
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .club-photos__thumbs-slider
+
+    &__thumbs-slider {
+        grid-row: -3 / -2;
+        grid-column: 3 / 4;
+    }
+}
+
+.club-photos-thumbs {
+    // .club-photos-thumbs__item
+
+    &__item {
+        cursor: pointer;
+    }
 }

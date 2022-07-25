@@ -1,3 +1,105 @@
 .club-ceo {
-  // your code
+    position: relative;
+    @media (min-width: 1025px) {
+        background-image: url(../images/decor/lifter.svg);
+        background-size: 54.6rem 57.2rem;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(0, 100%, var(--beige));
+            right: 0;
+        }
+    }
+    // .club-ceo__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, var(--gap)) repeat(2, 1fr) repeat(2, var(--gap));
+        align-items: center;
+    }
+
+    &__marquee {
+        grid-column: 1 / -1;
+        position: relative;
+        z-index: 30;
+    }
+
+    // .club-ceo__img
+
+    &__img {
+        position: relative;
+        height: 63.8rem;
+        display: flex;
+        align-items: flex-end;
+        @media (min-width: 1025px) {
+            grid-row: 2 / 3;
+            grid-column: 4 / -2;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 6.6rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-color: var(--yellow);
+        }
+
+        img {
+            @extend %contain;
+            object-position: bottom;
+        }
+    }
+
+    // .club-ceo__content
+
+    &__content {
+        display: grid;
+        grid-template-columns: max-content 14.4rem 1fr;
+        grid-template-rows: max-content 0.6rem max-content 9.9rem max-content;
+        grid-template-areas:
+            'suptitle suptitle suptitle'
+            '. . .'
+            'title title title'
+            '. . .'
+            'soc . text';
+        @media (min-width: 1025px) {
+            width: 63.2rem;
+            grid-row: 2 / 3;
+            grid-column: 3 / span 2;
+        }
+    }
+
+    // .club-ceo__suptitle
+
+    &__suptitle {
+        @extend %text-17;
+        grid-area: suptitle;
+    }
+
+    // .club-ceo__title
+
+    &__title {
+        grid-area: title;
+        span {
+            display: block;
+        }
+    }
+
+    // .club-ceo__social
+
+    &__social {
+        gap: 2.4rem;
+        grid-area: soc;
+    }
+
+    // .club-ceo__text
+
+    &__text {
+        grid-area: text;
+        color: #000;
+    }
 }

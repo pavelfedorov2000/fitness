@@ -144,3 +144,13 @@
         }
     }
 }
+
+.player-btn {
+    @extend %grid-center;
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: var(--yellow);
+    &--round {
+        border-radius: 50%;
+    }
+}

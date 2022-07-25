@@ -7,6 +7,7 @@
     min-height: var(--header-height);
     color: #fff;
     padding: 2rem 0;
+    //mix-blend-mode: difference;
     @media (max-width: 1024px) {
         position: fixed;
         border-bottom: 0.1rem solid var(--line-color);
@@ -45,15 +46,6 @@
 .menu-header {
     @media (max-width: 1024px) {
         display: none;
-    }
-    // .menu-header__top
-
-    &__top {
-    }
-
-    // .menu-header__main
-
-    &__main {
     }
 }
 

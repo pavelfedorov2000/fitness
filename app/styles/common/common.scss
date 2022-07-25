@@ -79,7 +79,7 @@ img {
 .section-top {
     > * {
         &:not(:last-child) {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             @media (max-width: 767px) {
                 margin-bottom: 0.4rem;
             }

@@ -1,16 +1,16 @@
 <section class="fitness-card">
 	<div class="container fitness-card__grid">
-		<div class="fitness-card__body">
+		<div class="section-body fitness-card__body">
 			<h2 class="title fitness-card__title">
 				Что входит
 				в&nbsp;карту
 				Fitness<span>on</span>
 			</h2>
-			<div class="fitness-card__circle-text">
-				<img class="circle-text" src="assets/images/circle-text.svg" alt="unique concept">
+			<div class="circle-text fitness-card__circle-text circle-text--dot">
+				<img src="assets/images/circle-text.svg" alt="unique-concept" width="220" height="220" loading="lazy">
 			</div>
 			<div class="fitness-card__list-col fitness-card__list-col--1">
-				<div class="fitness-card__list-title">В клубе Fitness<span>on</span></div>
+				<div class="title fitness-card__list-title">В клубе Fitness<span>on</span></div>
 				<ul class="fitness-card__list">
 					<li class="fitness-card__list-item">
 						Персональный тренер-наставник
@@ -58,9 +58,11 @@
 			</div>
 			<button class="btn fitness-card__btn btn--black" type="button">Показать еще</button>
 		</div>
-		<picture class="fitness-card__aside-img">
-			<source type="image/webp" srcset="assets/images/content/fitness-card-aside.webp">
-			<img src="assets/images/content/fitness-card-aside.jpg" alt="фото" width="200" height="480" loading="lazy">
-		</picture>
+		<div class="fitness-card__aside-img">
+			<picture>
+				<source type="image/webp" srcset="assets/images/content/aside-coach.webp">
+				<img src="assets/images/content/aside-coach.jpg" alt="фото" width="200" height="480" loading="lazy">
+			</picture>
+		</div>
 	</div>
 </section>

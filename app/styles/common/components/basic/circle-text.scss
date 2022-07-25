@@ -1,10 +1,20 @@
 .circle-text {
-    position: absolute;
-    top: calc(var(--circle-text) / -2);
-    right: calc(var(--circle-text) / -2);
     width: var(--circle-text);
     height: var(--circle-text);
     animation: circleText 5s infinite ease-in-out;
+
+    &--dot {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-xy;
+            width: var(--arrow-btn);
+            height: var(--arrow-btn);
+            border-radius: 50%;
+            background-color: var(--ocean);
+        }
+    }
 }
 
 @keyframes circleText {

@@ -1,0 +1,111 @@
+.team-member {
+    $this: &;
+
+    --offset: 3.2rem;
+
+    @media (max-width: 767px) {
+        --offset: 1.6rem;
+    }
+
+    height: 100%;
+    // .team-member__body
+
+    &__body {
+        display: grid;
+        height: 100%;
+    }
+
+    &__img,
+    &__content {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    // .team-member__img
+
+    &__img {
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .team-member__content
+
+    &__content {
+        @extend %flex-col;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: var(--offset) var(--arrow-btn) var(--offset) var(--offset);
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            height: 50%;
+            background: linear-gradient(180deg, rgba(2, 8, 24, 0) 0%, rgba(2, 8, 24, 0.58) 100%);
+            opacity: 0;
+            transition: 0.3s opacity;
+        }
+    }
+
+    // .team-member__role
+
+    &__role {
+        @extend %text-14;
+        grid-area: role;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.16);
+        margin-bottom: 1rem;
+    }
+
+    // .team-member__name
+
+    &__name {
+        @extend .title;
+        @extend %text-16;
+        grid-area: name;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.16);
+    }
+
+    // .team-member__arrow
+
+    &__arrow {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &--pink {
+        background-color: #ed94bf;
+    }
+
+    &--yellow {
+        background-color: #ffe49e;
+    }
+
+    &--ocean {
+        background-color: #9cd3db;
+    }
+
+    &--purple {
+        background-color: #9d9cdb;
+    }
+
+    &--green {
+        background-color: #a9f1b9;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            #{$this}__content {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

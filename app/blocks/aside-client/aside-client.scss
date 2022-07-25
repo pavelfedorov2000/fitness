@@ -21,7 +21,7 @@
     &__descr {
         @extend %vertical-align;
         flex-direction: row-reverse;
-        font-size: 1.4rem;
+        @extend %text-14;
         line-height: 2.4rem;
         color: var(--dark-gray);
         writing-mode: vertical-lr;

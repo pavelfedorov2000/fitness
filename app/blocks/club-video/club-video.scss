@@ -1,21 +1,75 @@
 .club-video {
+    --title: 44rem;
+    --text: 34.4rem;
+
+    position: relative;
+    min-height: --section-mh;
+    color: #fff;
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(auto, var(--gap), #fff);
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &__bg,
+    &__content {
+        grid-row: 1 / 2;
+    }
     // .club-video__bg
 
     &__bg {
+        grid-column: 1 / -1;
+        img {
+            @extend %cover;
+        }
     }
 
+    &__content {
+        @include padding-y(var(--section-padding));
+        display: grid;
+        @media (min-width: 1025px) {
+            grid-template-columns: var(--title) 1.6rem var(--gap) 1fr var(--text);
+            grid-template-rows: max-content 6rem var(--gap) 7.2rem max-content;
+            grid-template-areas:
+                'title . . . .'
+                '. . . . .'
+                '. . player . .'
+                '. . . . .'
+                '. . . . text';
+        }
+    }
     // .club-video__title
 
     &__title {
+        @media (min-width: 1025px) {
+            grid-area: title;
+        }
     }
 
     // .club-video__player
 
     &__player {
+        @extend %grid-center;
+        border-radius: 50%;
+        border: 0.1rem solid #fff;
+        @media (min-width: 1025px) {
+            grid-area: player;
+        }
+
+        svg {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
     }
 
     // .club-video__text
 
     &__text {
+        @extend %text-16;
+        @media (min-width: 1025px) {
+            grid-area: text;
+        }
     }
 }

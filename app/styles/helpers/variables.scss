@@ -14,6 +14,7 @@
     --red: #e73656;
     --line-color: #ddd;
     --purple: #9b36cb;
+    --pink: #e677f8;
     --beige: #fff5da;
     --light-blue: #ecf1ff;
     --vk: #007fef;
@@ -29,7 +30,11 @@
     --circle-text: 22rem;
     --marquee-padding: 4.9rem;
     --input-height: 5.6rem;
+    --section-mh: 80rem;
     --section-padding: 8rem;
+    --radius: 3.2rem;
+    --nav: 5.6rem;
+    --team-card-h: 41.6rem;
 
     @media (max-width: 1024px) {
         --header-height: 4.8rem;
@@ -38,12 +43,12 @@
 
     @media (max-width: 767px) {
         --arrow-btn: 4rem;
+        --team-card-h: 29.6rem;
     }
 }
 
 $fz: 15;
-$ff: 'Gotham Pro',
-sans-serif;
+$ff: 'Gotham Pro', sans-serif;
 $color-default: var(--black);
 
 %text-10 {
@@ -146,7 +151,7 @@ $color-default: var(--black);
 
 %text-48 {
     font-size: rem(48);
-    line-height: rem(58);
+    line-height: rem(46);
 }
 
 %text-64 {

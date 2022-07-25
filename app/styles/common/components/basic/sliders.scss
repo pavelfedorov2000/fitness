@@ -1,71 +1,6 @@
-/* .swiper-button-prev,
-.swiper-button-next {
-    top: 0;
-    right: 0;
-    width: 5.6rem;
-    height: 5.6rem;
-    background-color: #bdbdbd;
-    margin: 0;
-    transition: 0.3s all;
-
-    &:after {
-        content: '';
-        @extend %pos-center-xy;
-        width: 0.7rem;
-        height: 0.8rem;
-        background-color: #fff;
-    }
-
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: var(--yellow);
-            border-color: var(--yellow);
-
-            svg path {
-                stroke: #fff;
-            }
-        }
-    }
-}
-
-.swiper-button-next {
-    margin-bottom: 0;
-    margin-left: 0.8rem;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-    display: flex;
-    justify-content: center;
-    @extend %pos-center-x;
-    bottom: 0;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color: var(--black);
-
-    &:not(:last-child) {
-        margin-right: 1.65rem;
-    }
-} */
-
-/* .swiper-pagination-current,
-.swiper-pagination-total {
-    &:before {
-        content: '0'; // если хотим нумерацию 01, 02, 03, ...
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-} */
-
 .slider-nav {
+    $this: &;
     --nav-gap: 1.6rem;
-    --nav: 5.6rem;
     --proressbar-width: 6.7rem;
     --proressbar-height: 0.2rem;
 
@@ -79,11 +14,8 @@
     color: #fff;
     padding-right: var(--nav-gap);
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         --nav: 4.8rem;
-    }
-
-    @media(max-width: 767px) {
         grid-template-columns: calc(var(--nav) * 2) 1fr max-content var(--proressbar-width) max-content;
         grid-template-areas: 'arrows . current bar total';
     }
@@ -97,7 +29,7 @@
         @extend %grid-center;
         width: var(--nav);
         height: var(--nav);
-        transition: .3s background-color;
+        transition: 0.3s background-color;
 
         &:focus,
         &:active {
@@ -114,7 +46,6 @@
     &__progress {
         position: relative;
         grid-area: bar;
-        //width: var(--proressbar-width);
         height: var(--proressbar-height);
         background-color: var(--gray);
     }
@@ -128,7 +59,7 @@
     }
 
     &__counter {
-        font-size: 1.4rem;
+        @extend %text-14;
         font-weight: 500;
         line-height: 2.3rem;
 
@@ -138,6 +69,21 @@
 
         &--total {
             grid-area: total;
+        }
+    }
+
+    &--white {
+        background-color: #fff;
+        color: var(--black);
+        #{$this} {
+            &__arrow {
+                svg path {
+                    fill: var(--black);
+                }
+            }
+            &__progress-bar {
+                background-color: var(--black);
+            }
         }
     }
 }

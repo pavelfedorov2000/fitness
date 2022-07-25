@@ -1,3 +1,138 @@
 .fitness-card {
-  // your code
+    position: relative;
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(auto, calc(100% - 23.5rem), var(--yellow));
+            bottom: 0;
+        }
+    }
+    // .fitness-card__grid
+
+    &__grid {
+        @media (min-width: 1025px) {
+            grid-template-rows: 8.8rem max-content var(--section-padding);
+            grid-template-areas:
+                '. . . . aside'
+                '. . body . aside'
+                '. . . . .';
+        }
+    }
+
+    // .fitness-card__body
+
+    &__body {
+        --gap: 4.8rem;
+        --title: 28.8rem;
+
+        display: grid;
+        grid-template-rows: max-content 1fr var(--circle-text) 7rem max-content;
+        grid-template-columns:
+            var(--circle-text) calc(var(--title) - var(--circle-text)) calc(var(--gap) * 2) 1fr var(--gap)
+            1fr;
+        grid-template-areas:
+            'title title . list-1 . list-2'
+            '. . . list-1 .list-2'
+            'circle circle . list-1 . list-2'
+            '. . . . . .'
+            'btn btn btn btn btn btn';
+        @media (min-width: 1025px) {
+            grid-area: body;
+        }
+    }
+
+    // .fitness-card__title
+
+    &__title {
+        grid-area: title;
+    }
+
+    // .fitness-card__circle-text
+
+    &__circle-text {
+        grid-area: circle;
+    }
+
+    // .fitness-card__list-col--1
+
+    &__list-col--1 {
+        grid-area: list-1;
+        .fitness-card {
+            &__list-item {
+                &:before {
+                    background-image: url(../images/icons/check.svg);
+                }
+            }
+
+            &__list-title {
+                @extend %text-20;
+                span {
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+
+    // .fitness-card__list-col--2
+
+    &__list-col--2 {
+        grid-area: list-2;
+        .fitness-card {
+            &__list-item {
+                &:before {
+                    background-image: url(../images/icons/minus.svg);
+                }
+            }
+
+            &__list-title {
+                @extend %text-18;
+            }
+        }
+    }
+
+    // .fitness-card__list-title
+
+    &__list-title {
+        margin-bottom: 4rem;
+    }
+
+    // .fitness-card__list
+
+    &__list {
+        @include row-grid(4.2rem);
+    }
+
+    // .fitness-card__list-item
+
+    &__list-item {
+        position: relative;
+        padding-left: 4.8rem;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            width: 2.4rem;
+            height: 2.4rem;
+            @extend %bg-contain;
+        }
+    }
+
+    // .fitness-card__btn
+
+    &__btn {
+        grid-area: btn;
+        padding: 1.95rem;
+    }
+
+    // .fitness-card__aside-img
+
+    &__aside-img {
+        height: 48rem;
+        @media (min-width: 1025px) {
+            grid-area: aside;
+        }
+        img {
+            @extend %cover;
+        }
+    }
 }

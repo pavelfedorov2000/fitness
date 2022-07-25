@@ -1,0 +1,58 @@
+.club-team {
+    padding-top: var(--section-padding);
+    // .club-team__grid
+
+    &__grid {
+    }
+
+    // .club-team__top
+
+    &__top {
+        margin-bottom: 6.4rem;
+    }
+
+    &__suptitle {
+        color: var(--dark-gray);
+    }
+
+    &__title {
+        span {
+            @include border-text(var(--black), transparent);
+        }
+    }
+
+    // .club-team__slider
+
+    &__slider {
+        grid-column: 1 / -1;
+    }
+
+    &__slider-nav {
+        position: absolute;
+        top: calc((var(--section-padding) + var(--nav)) * (-1));
+        right: calc(var(--gap) * 2);
+    }
+
+    &__slider-item {
+        &--grid,
+        &--grid_reverse {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &--grid {
+            > * {
+                &:first-child {
+                    grid-column: span 2;
+                }
+            }
+            &_reverse {
+                > * {
+                    &:last-child {
+                        grid-column: span 2;
+                    }
+                }
+            }
+        }
+    }
+}

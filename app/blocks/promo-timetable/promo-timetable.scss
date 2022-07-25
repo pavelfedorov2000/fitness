@@ -1,3 +1,133 @@
 .promo-timetable {
-  // your code
+    --img-w: 74.8rem;
+    --img--offset: calc(var(--img-w) - var(--gap) * 2);
+    --select: 7.2rem;
+    --title: 27.2rem;
+    --text: 34.4rem;
+    --offset: 4rem;
+    --pb: 10.4rem;
+
+    position: relative;
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(auto, 50%, var(--yellow));
+            width: calc(100% - var(--gap));
+            right: var(--gap);
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+    // .promo-timetable__grid
+
+    &__grid {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, var(--gap)) var(--img--offset) 1fr repeat(2, var(--gap));
+    }
+
+    // .promo-timetable__img
+
+    &__img {
+        grid-row: 1 / -1;
+        grid-column: 1 / span 3;
+        img {
+            @extend %cover;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: var(--img--offset) 1fr calc(var(--title) - var(--offset)) var(--offset) calc(
+                var(--text) - var(--offset)
+            );
+        grid-template-rows: repeat(2, var(--header-height)) max-content 7.9rem max-content 1fr var(--select) var(--pb);
+        grid-template-areas:
+            '. . . . .'
+            '. . . . .'
+            'num . title title .'
+            '. . . . .'
+            'descr . . text text'
+            '. . . . .'
+            'select select select select select'
+            '. . . . .';
+        align-items: center;
+        @media (min-width: 1025px) {
+            grid-row: 1 / -1;
+            grid-column: 3 / 5;
+        }
+    }
+
+    // .promo-timetable__num
+
+    &__num {
+        @extend .title;
+        font-size: 8rem;
+        line-height: 7.7rem;
+        color: #fff;
+        @media (min-width: 1025px) {
+            grid-area: num;
+        }
+    }
+
+    // .promo-timetable__title
+
+    &__title {
+        @media (min-width: 1025px) {
+            grid-area: title;
+        }
+    }
+
+    // .promo-timetable__descr
+
+    &__descr {
+        @extend .title;
+        @extend %text-26;
+        color: #fff;
+        @media (min-width: 1025px) {
+            grid-area: descr;
+            align-self: flex-end;
+        }
+    }
+
+    // .promo-timetable__text
+
+    &__text {
+        @media (min-width: 1025px) {
+            grid-area: text;
+        }
+    }
+
+    &__select {
+        grid-area: select;
+
+        .select__title {
+            height: var(--select);
+        }
+    }
+
+    // .promo-timetable__decor-title
+
+    &__decor-title {
+        display: none;
+        @media (min-width: 1025px) {
+            display: flex;
+            grid-row: 1 / 2;
+            grid-column: -2 / -1;
+        }
+    }
+
+    // .promo-timetable__aside-img
+
+    &__aside-img {
+        display: none;
+        @media (min-width: 1025px) {
+            display: block;
+            grid-row: 2 / 3;
+            grid-column: -2 / -1;
+        }
+        img {
+            @extend %cover;
+        }
+    }
 }

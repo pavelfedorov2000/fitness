@@ -2,6 +2,8 @@
     $(document).ready(function () {
         //new WOW().init();
         app.blog.init();
+        app.clubPhotos.init();
+        app.clubTeam.init();
         //app.burger.init();
         //app.slider.init();
         //app.menu.init();
@@ -117,9 +119,9 @@
                 //const slideId = activeSlide.getAttribute('id').split('-')[1].split('').slice(-1)[0];
                 //console.log(saleSlider.index);
                 //document.querySelector('.events-slider__item.is-active').classList.add('active');
-                document.querySelectorAll('.events-section__content')[saleSlider.index].classList.add('active');
+                document.querySelectorAll('.events-section__content')[eventsSlider.index].classList.add('active');
                 eventSliderSlides.forEach(slide => slide.classList.remove('active'));
-                eventSliderSlides[saleSlider.index].classList.add('active');
+                eventSliderSlides[eventsSlider.index].classList.add('active');
             });
 
             eventSliderSlides.forEach(slide => {
@@ -134,6 +136,96 @@
             });
 
             eventsSlider.mount();
+        }
+
+        if (document.querySelectorAll('.club-vacancies-slider').length) {
+            const clubVacanciesSlider = new Splide('.club-vacancies-slider', {
+                type: 'loop',
+                perPage: 2,
+                gap: '2.4rem',
+                classes: {
+                    arrows: 'splide__arrows slider-nav__arrows',
+                    arrow: 'splide__arrow slider-nav__arrow',
+                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
+                    next: 'splide__arrow--next slider-nav__arrow--next',
+                    //pagination: 'slider-nav__pagination'
+                },
+                pagination: false,
+                breakpoints: {
+                    575: {
+                        perPage: 1,
+                        gap: '1.7rem',
+                    },
+                },
+            });
+
+            const clubVacanciesSliderBar = clubVacanciesSlider.root.querySelector('.slider-nav__progress-bar');
+
+            clubVacanciesSlider.on('mounted move', function () {
+                const end = clubVacanciesSlider.Components.Controller.getEnd() + 1;
+                //console.log(end);
+                clubVacanciesSliderBar.style.width = String(100 * (clubVacanciesSlider.index + 1) / end) + '%';
+                clubVacanciesSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${clubVacanciesSlider.index + 1}`;
+                clubVacanciesSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
+            });
+
+            if ($(window).width() <= 1024) {
+                clubVacanciesSlider.mount();
+            }
+        }
+
+        if (document.querySelectorAll('.children-sections-slider').length) {
+            const childrenSectionsSlider = new Splide('.children-sections-slider', {
+                type: 'loop',
+                gap: '2.4rem',
+                classes: {
+                    arrows: 'splide__arrows slider-nav__arrows',
+                    arrow: 'splide__arrow slider-nav__arrow',
+                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
+                    next: 'splide__arrow--next slider-nav__arrow--next',
+                    //pagination: 'slider-nav__pagination'
+                },
+                pagination: false,
+            });
+
+            const childrenSectionsSliderBar = childrenSectionsSlider.root.querySelector('.slider-nav__progress-bar');
+
+            childrenSectionsSlider.on('mounted move', function () {
+                const end = childrenSectionsSlider.Components.Controller.getEnd() + 1;
+                //console.log(end);
+                childrenSectionsSliderBar.style.width = String(100 * (childrenSectionsSlider.index + 1) / end) + '%';
+                childrenSectionsSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${childrenSectionsSlider.index + 1}`;
+                childrenSectionsSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
+            });
+
+            childrenSectionsSlider.mount();
+        }
+
+        if (document.querySelectorAll('.success-stories-slider').length) {
+            const successStoriesSlider = new Splide('.success-stories-slider', {
+                type: 'loop',
+                perPage: 3,
+                classes: {
+                    arrows: 'splide__arrows slider-nav__arrows',
+                    arrow: 'splide__arrow slider-nav__arrow',
+                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
+                    next: 'splide__arrow--next slider-nav__arrow--next',
+                    //pagination: 'slider-nav__pagination'
+                },
+                pagination: false
+            });
+
+            const successStoriesSliderBar = successStoriesSlider.root.querySelector('.slider-nav__progress-bar');
+
+            successStoriesSlider.on('mounted move', function () {
+                const end = successStoriesSlider.Components.Controller.getEnd() + 1;
+                //console.log(end);
+                successStoriesSliderBar.style.width = String(100 * (successStoriesSlider.index + 1) / end) + '%';
+                successStoriesSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${successStoriesSlider.index + 1}`;
+                successStoriesSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
+            });
+
+            successStoriesSlider.mount();
         }
 
 

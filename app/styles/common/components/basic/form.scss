@@ -70,15 +70,26 @@ input[type='number']:focus {
 }
 
 .input {
+    @extend %vertical-align;
+    @extend %text-14;
     height: var(--input-height);
     @include padding-x(1.6rem);
-    background-color: var(--light-blue);
-    font-size: 1.4rem;
-    line-height: 2rem;
+    background-color: #fff;
     color: var(--black);
+
+    &--light-blue {
+        background-color: var(--light-blue);
+    }
 
     &::placeholder {
         color: var(--black);
+    }
+
+    &--search {
+        background-image: url(../images/icons/search.svg);
+        background-size: 2rem;
+        background-position: calc(100% - 2.4rem) 50%;
+        background-repeat: no-repeat;
     }
 }
 

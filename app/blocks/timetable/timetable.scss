@@ -2,11 +2,12 @@
     --pt: 8.5rem;
     --pb: 7.6rem;
     --card-mh: 33.6rem;
+    --rect: 25.6rem;
 
     position: relative;
     @media (min-width: 1025px) {
         &:before {
-            @include rect(100%, 25.6rem, var(--beige));
+            @include rect(calc(100% - var(--rect) - var(--pb)), var(--rect), var(--beige));
             right: 0;
         }
     }
@@ -144,11 +145,6 @@
         @extend %vertical-align;
         grid-row: 4 / 5;
         grid-column: 2 / 5;
-    }
-
-    // .timetable-card__title
-
-    &__title {
     }
 
     // .timetable-card__time
