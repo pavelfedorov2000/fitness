@@ -1,2 +1,39 @@
 //@import './breadcrumbs';
 @import './pagination';
+
+.promo-nav {
+
+    // .promo-nav__mobile
+
+    &__mobile {
+        display: none;
+    }
+
+    // .promo-nav__list
+
+    &__list {
+        display: flex;
+    }
+
+    // .promo-nav__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 4rem;
+        }
+    }
+
+    // .promo-nav__link
+
+    &__link {
+        @extend %text-12;
+        color: #fff;
+        transition: .3s color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--yellow);
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.ratings {
+    display: grid;
+}
+
+.rating-box {
+
+    @include row-grid(0.9rem);
+    padding: 1.6rem;
+    // .rating-box__logo
+
+    &__logo {
+        height: 2rem;
+    }
+
+    // .rating-box__rate
+
+    &__rate {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    // .rating-box__current-rate
+
+    &__current-rate {
+        @extend .title;
+        @extend %text-20;
+        color: #fff;
+    }
+
+    // .rating-box__total-rate
+
+    &__total-rate {
+        @extend %text-12;
+    }
+
+    &__total-rate,
+    &__title {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    // .rating-box__title
+
+    &__title {
+        @extend %text-12;
+    }
+
+    &--gray {
+        background-color: var(--dark-gray);
+    }
+
+    &--black {
+        background-color: var(--black);
+    }
+}

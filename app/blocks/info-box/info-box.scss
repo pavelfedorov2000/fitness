@@ -1,0 +1,124 @@
+.info-block {
+
+    background-color: #fff;
+    color: var(--black);
+    padding: 4.5rem 4.8rem 5.2rem;
+    display: grid;
+    grid-template-areas:
+        'contacts capacity'
+        'contacts soc'
+    ;
+    justify-content: space-between;
+    // .info-block__capacity
+
+    &__capacity {
+        grid-area: capacity;
+    }
+
+    // .info-block__contacts
+
+    &__contacts {
+        grid-area: contacts;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 5.2rem 7.6rem;
+    }
+
+    // .info-block__socials
+
+    &__socials {
+        column-gap: 1.6rem;
+        grid-area: soc;
+        align-self: flex-end;
+        justify-self: end;
+    }
+}
+
+.capacity {
+
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    //grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        'icon percent'
+        'icon descr'
+    ;
+    align-items: center;
+    column-gap: 2.4rem;
+
+    // .capacity__icon
+
+    &__icon {
+        grid-area: icon;
+        width: 5.6rem;
+        height: 5.6rem;
+        border-radius: 50%;
+        border: 0.3rem solid var(--green);
+    }
+
+    // .capacity__percent
+
+    &__percent {
+        @extend .title;
+        @extend %text-26;
+        grid-area: percent;
+    }
+
+    // .capacity__descr
+
+    &__descr {
+        @extend %text-14;
+        color: var(--dark-gray);
+        grid-area: descr;
+        margin-top: -3rem;
+    }
+}
+
+.contact-info-item {
+
+    display: grid;
+    grid-template-columns: 2.4rem max-content;
+    grid-template-rows: 2.4rem max-content;
+    grid-template-areas:
+        'icon title'
+        'value value'
+    ;
+    align-items: center;
+    gap: 0.8rem;
+
+    // .contact-info-item__icon
+
+    &__icon {
+        grid-area: icon;
+    }
+
+    // .contact-info-item__title
+
+    &__title {
+        @extend %text-12;
+        grid-area: title;
+    }
+
+    // .contact-info-item__value
+
+    &__value {
+        @extend %text-14;
+        grid-area: value;
+
+        b {
+            font-weight: 500;
+        }
+    }
+
+    // .contact-info-item__link
+
+    &__link {
+        transition: .3s color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--yellow);
+            }
+        }
+    }
+}

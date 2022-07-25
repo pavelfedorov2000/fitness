@@ -1,38 +1,42 @@
 <section class="free-training-recording">
-	<div class="container free-training-recording__container">
-		<div class="section-body">
-			<h2 class="section-title free-training-recording__title">
-				Запишитесь <span>на&nbsp;бесплатную</span>
-				тренировку с&nbsp;тренером
-			</h2>
-			<div class="free-training-recording__inner">
-				<p class="section-text free-training-recording__text">
-					Наши менеджеры позвонят вам, расскажут про все детали и ответят
-					на&nbsp;вопросы.
-				</p>
-				<form action="#" class="free-training-recording__form">
-					@@include('blocks/select-club/select-club.html', {
-					"class": "free-training-recording",
-					"modifier": "light-blue"
-					})
-					<input
-						class="input free-training-recording__input free-training-recording__input--name input--light-blue"
-						name="name" placeholder="Имя">
-					<input
-						class="input free-training-recording__input free-training-recording__input--tel input--light-blue"
-						type="tel" name="phone" placeholder="Телефон">
-					<button class="btn free-training-recording__btn btn--black" type="submit">Записаться</button>
-				</form>
-				<p class="free-training-recording__form-agree form-agree">
-					Отправляя заявку вы соглашаетесь с&nbsp;условиями обработки персональных&nbsp;данных.
-				</p>
-				<div class="free-training-recording__contacts contacts">
-					@@include('blocks/messangers/messangers.html', {
-					"class": "free-training-recording"
-					})
-					<a href="tel:+74959467600" class="contact free-training-recording__contact">+7 495 946-76-00</a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container free-training-recording__container">
+        <div class="section-body">
+            <h2 class="section-title free-training-recording__title">
+                Запишитесь <span>на&nbsp;бесплатную</span>
+                тренировку с&nbsp;тренером
+            </h2>
+            <div class="free-training-recording__inner">
+                <p class="section-text free-training-recording__text">
+                    Наши менеджеры позвонят вам, расскажут про все детали и ответят
+                    на&nbsp;вопросы.
+                </p>
+                <form action="#"
+                      class="free-training-recording__form">
+                    @@include('blocks/select-club/select-club.html', {
+                    "class": "free-training-recording",
+                    "modifier": "light-blue"
+                    })
+                    <input class="input free-training-recording__input free-training-recording__input--name input--light-blue"
+                           name="name"
+                           placeholder="Имя">
+                    <input class="input free-training-recording__input free-training-recording__input--tel input--light-blue"
+                           type="tel"
+                           name="phone"
+                           placeholder="Телефон">
+                    <button class="btn free-training-recording__btn btn--black"
+                            type="submit">Записаться</button>
+                </form>
+                <p class="free-training-recording__form-agree form-agree">
+                    Отправляя заявку вы соглашаетесь с&nbsp;условиями обработки персональных&nbsp;данных.
+                </p>
+                <div class="free-training-recording__contacts contacts">
+                    @@include('blocks/messangers/messangers.html', {
+                    "class": "free-training-recording"
+                    })
+                    <a href="tel:+74959467600"
+                       class="contact free-training-recording__contact">+7 495 946-76-00</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
