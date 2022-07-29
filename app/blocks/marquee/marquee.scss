@@ -13,6 +13,11 @@
         font-size: 2rem;
         line-height: 2.8rem;
     }
+
+    &--gray {
+        -webkit-text-stroke-color: var(--dark-gray);
+        color: var(--dark-gray);
+    }
 }
 
 .vertical-marquee {
@@ -85,6 +90,7 @@
     &--gray {
         p {
             -webkit-text-stroke-color: var(--dark-gray);
+
             span {
                 color: var(--dark-gray);
             }

@@ -1,3 +1,51 @@
-<div class="promo-success">
-  <!--your code-->
-</div>
+<section class="promo-success">
+    <div class="promo-bg promo-success__bg">
+        <picture>
+            <source type="image/webp"
+                    srcset="assets/images/content/promo/promo-concept.webp">
+            <img src="assets/images/content/promo/promo-concept.jpg"
+                 alt="фото"
+                 width="1920"
+                 height="960"
+                 loading="lazy">
+        </picture>
+    </div>
+    <div class="container promo-success__grid promo-body">
+        <div class="promo-success__aside-img">
+            <picture>
+                <source type="image/webp"
+                        srcset="assets/images/content/promo/promo-aside-man.webp">
+                <img src="assets/images/content/promo/promo-aside-man.jpg"
+                     alt="фото"
+                     width="200"
+                     height="480"
+                     loading="lazy">
+            </picture>
+        </div>
+        @@include('blocks/scroll-btn/scroll-btn.html')
+        <div class="section-body promo-success__content">
+            <h1 class="section-title promo-success__title">
+                Истории успеха клиентов FINTESSON
+            </h1>
+            <div class="promo-success__box">
+                <div class="circle-text promo-success__circle-text"
+                     data-da=".promo-success, 767, 0">
+                    <img class="circle-text__img"
+                         src="assets/images/white-circle-text.svg"
+                         alt="фото"
+                         width="220"
+                         height="220"
+                         loading="lazy">
+                </div>
+                @@include('blocks/box-link/box-link.html', {
+                "class": "promo-success__box-link",
+                "text": "Хочу свою историю успеха"
+                })
+            </div>
+            <p class="promo-success__text">
+                Мы рады представить вам нашу гордость — истории успеха клиентов <span class="ttu">FITNESSON</span>. Вы можете увидеть, как наши клиенты под чутким руководством персонального тренера–наставника добились своих поставленных фитнес–целей. Мы делом доказываем эффективность нашей уникальной модели фитнес–клуба.
+            </p>
+        </div>
+        @@include('blocks/marquee/promo-marquee.html')
+    </div>
+</section>

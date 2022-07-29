@@ -1,0 +1,28 @@
+.pagination {
+
+    display: grid;
+    justify-items: center;
+    // .pagination__list
+
+    &__list {
+        @extend %grid-row;
+        gap: 1.6rem;
+    }
+
+    // .pagination__link
+
+    &__link {
+        @extend %text-18;
+        @extend %grid-center;
+        width: var(--arrow-btn);
+        height: var(--arrow-btn);
+        background-color: var(--light-blue);
+        border: 0.1rem solid var(--light-blue);
+
+        &.active {
+            font-weight: 700;
+            border-color: var(--black);
+            background-color: #fff;
+        }
+    }
+}

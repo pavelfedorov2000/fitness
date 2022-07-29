@@ -1,3 +1,47 @@
 .coach-included {
-  // your code
+
+    --title: 53.3rem;
+    --text: 38.4rem;
+
+    display: grid;
+    background-color: var(--black);
+    color: #fff;
+    // .coach-included__body
+
+    &__body {}
+
+    // .coach-included__bg
+
+    &__bg {
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .coach-included__content
+
+    &__content {
+        --row-gap: 5.6rem;
+        display: grid;
+        grid-template-columns: 1fr calc(var(--title) - var(--text)) var(--text);
+        grid-template-areas:
+            '. title title'
+            '. . text'
+        ;
+        row-gap: var(--row-gap);
+        align-content: center;
+        @include padding-y(var(--row-gap));
+    }
+
+    // .coach-included__title
+
+    &__title {
+        grid-area: title;
+    }
+
+    // .coach-included__text
+
+    &__text {
+        grid-area: text;
+    }
 }

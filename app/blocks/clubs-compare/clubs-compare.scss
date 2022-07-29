@@ -1,3 +1,103 @@
 .clubs-compare {
-  // your code
+
+    position: relative;
+    background-color: var(--beige);
+    @include padding-y(var(--section-padding));
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(0, var(--gap), var(--yellow));
+        }
+
+        &:after {
+            @include rect(0, 100%, #fff);
+            right: 0;
+            z-index: 10;
+        }
+    }
+
+    // .clubs-compare__content
+
+    &__content {
+        display: grid;
+        row-gap: 11.5rem;
+        justify-items: end;
+    }
+
+    // .clubs-compare__title
+
+    &__title {
+        text-align: right;
+    }
+
+    // .clubs-compare__slider
+
+    &__slider {
+        width: var(--container);
+        padding-bottom: calc(12.8rem + var(--arrow-btn));
+    }
+
+    &__slider-nav {
+        position: absolute;
+        @extend %pos-center-x;
+        bottom: 0;
+    }
+}
+
+.clubs-compare-item {
+
+    @include row-grid(3.2rem);
+
+    &__top {
+        @extend %flex-row-center;
+    }
+
+    // .clubs-compare-item__title
+
+    &__title {
+        @extend .title;
+        @extend %text-16;
+        max-width: 17rem;
+    }
+
+    &__num {
+        @extend .title;
+        @extend %text-32;
+        margin-right: 5rem;
+    }
+
+    &__plus,
+    &__minus {
+        --icon: 2.4rem;
+        position: relative;
+        padding-left: calc(var(--icon) * 2);
+
+        &::before {
+            @extend %bg-contain;
+            content: '';
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            width: var(--icon);
+            height: var(--icon);
+        }
+    }
+
+    // .clubs-compare-item__plus
+
+    &__plus {
+        &:before {
+            background-image: url(../images/icons/ico-check.svg);
+        }
+    }
+
+    // .clubs-compare-item__minus
+
+    &__minus {
+        color: var(--dark-gray);
+
+        &:before {
+            background-image: url(../images/icons/ico-minus.svg);
+        }
+    }
 }

@@ -1,3 +1,85 @@
 .regular-measurements {
-  // your code
+    --title: 31rem;
+    --circle-text: 40rem;
+    --half-circle: calc(var(--circle-text) / 2);
+
+    @include padding-y(8.8rem);
+    background-color: var(--black);
+    position: relative;
+    color: #fff;
+
+    &:before {
+        @extend %pos-center-x;
+        content: '';
+        position: absolute;
+        bottom: -4.6rem;
+        z-index: 1;
+        width: 69.3rem;
+        height: 69.3rem;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(24, 129, 226, 0.46) 0%, rgba(17, 53, 123, 0) 100%);
+    }
+
+    // .regular-measurements__grid
+
+    &__grid {
+        display: grid;
+        grid-template-rows: max-content 1fr max-content;
+        grid-template-columns: repeat(2, var(--gap)) var(--gap) calc(var(--title) - var(--gap)) 4.5rem repeat(2, var(--half-circle)) 1fr repeat(2, var(--gap));
+    }
+
+    // .regular-measurements__title
+
+    &__title {
+        @media(min-width: 1025px) {
+            grid-column: 3 / span 2;
+        }
+    }
+
+    // .regular-measurements__circle-text
+
+    &__circle {
+        @extend %grid-center;
+        position: relative;
+        z-index: 25;
+
+        @media(min-width: 1025px) {
+            grid-column: 6 / span 2;
+            grid-row: 1 / -1;
+        }
+
+        &-text {
+            width: 26.8rem;
+            height: 26.8rem;
+        }
+
+        &-img {
+            width: 22.3rem;
+            height: 22.3rem;
+        }
+
+        p {
+            max-width: 13.6rem;
+        }
+    }
+
+    &__box-link {
+        grid-column: 3 / 4;
+        grid-row: -2 / -1;
+    }
+
+    // .regular-measurements__img
+
+    &__img {
+        position: relative;
+        z-index: 10;
+
+        @media(min-width: 1025px) {
+            grid-row: 1 / -1;
+            grid-column: 7 / -1;
+        }
+
+        img {
+            @extend %cover;
+        }
+    }
 }

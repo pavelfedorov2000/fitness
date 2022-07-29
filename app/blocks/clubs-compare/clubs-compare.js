@@ -1,7 +1,33 @@
-app.yourScriptName = {
-  name: 'yourScriptName',
-  description: 'your script description',
-  init() {
-    // your code
-  },
+app.clubsCompre = {
+    name: 'clubsCompre',
+    description: 'your script description',
+    init() {
+        if (document.querySelectorAll('.clubs-compare-slider').length) {
+            const clubsCompareSlider = new Splide('.clubs-compare-slider', {
+                type: 'loop',
+                perPage: 3,
+                gap: '4rem',
+                classes: {
+                    arrows: 'splide__arrows slider-nav__arrows',
+                    arrow: 'splide__arrow slider-nav__arrow',
+                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
+                    next: 'splide__arrow--next slider-nav__arrow--next',
+                    //pagination: 'slider-nav__pagination'
+                },
+                pagination: false
+            });
+
+            const clubsCompareSliderBar = clubsCompareSlider.root.querySelector('.slider-nav__progress-bar');
+
+            clubsCompareSlider.on('mounted move', function () {
+                const end = clubsCompareSlider.Components.Controller.getEnd() + 1;
+                //console.log(end);
+                clubsCompareSliderBar.style.width = String(100 * (clubsCompareSlider.index + 1) / end) + '%';
+                clubsCompareSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${clubsCompareSlider.index + 1}`;
+                clubsCompareSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
+            });
+
+            clubsCompareSlider.mount();
+        }
+    },
 };

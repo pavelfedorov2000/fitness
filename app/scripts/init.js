@@ -4,6 +4,7 @@
         app.blog.init();
         app.clubPhotos.init();
         app.clubTeam.init();
+        app.clubsCompre.init();
         //app.burger.init();
         //app.slider.init();
         //app.menu.init();

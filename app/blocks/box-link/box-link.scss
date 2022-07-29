@@ -1,20 +1,24 @@
 .box-link {
     $pd: 2.4rem;
     $pdr: 4rem;
+
     @media (max-width: 767px) {
         $pd: 1.6rem;
         $pdr: 2.5rem;
     }
 
+    display: block;
     position: relative;
     padding: $pd $pdr calc(var(--arrow-btn) + $pd) $pd;
     min-height: var(--gap);
     background-color: var(--yellow);
     color: var(--black);
     transition: 0.3s all;
+
     @media (min-width: 768px) {
         width: var(--gap);
     }
+
     @media (max-width: 767px) {
         padding: $pd;
         min-height: 8rem;
@@ -33,6 +37,7 @@
         font-weight: 500;
         letter-spacing: 0.1em;
         text-transform: uppercase;
+
         @media (max-width: 767px) {
             max-width: 21.5rem;
             font-size: 1.1rem;

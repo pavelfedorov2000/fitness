@@ -1,9 +1,12 @@
 .blog-section {
     position: relative;
+
     @media (max-width: 1024px) {
         background-color: var(--light-blue);
     }
+
     @media (min-width: 1025px) {
+
         &:before,
         &:after {
             @include rect(0, 100%, var(--light-blue));
@@ -17,14 +20,17 @@
             right: var(--gap);
         }
     }
+
     // .blog-section__body
 
     &__body {
         padding-top: 8rem;
+
         @media (min-width: 1025px) {
             background-color: var(--light-blue);
             padding-bottom: 9.5rem;
         }
+
         @media (max-width: 1024px) {
             padding-top: 3.2rem;
         }
@@ -34,6 +40,7 @@
 
     &__top {
         margin-bottom: 4rem;
+
         @media (max-width: 767px) {
             margin-bottom: 1.6rem;
         }
@@ -42,20 +49,20 @@
     // .blog-section__grid
 
     &__grid {
-        --card-height: 44rem;
         --date: 2.6rem;
         --row-gap: 2.2rem;
         --btn: 4.8rem;
 
         display: grid;
+
         @media (max-width: 1024px) {
             row-gap: 1.6rem;
         }
+
         @media (min-width: 1025px) {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows:
-                var(--date) var(--btn) var(--row-gap) 1fr var(--btn)
-                var(--btn);
+                var(--date) var(--btn) var(--row-gap) 1fr var(--btn) var(--btn);
             grid-template-areas:
                 'slider slider .'
                 'slider slider allNews'
@@ -109,6 +116,7 @@
 
     &__more {
         display: none;
+
         @media (min-width: 1025px) {
             display: block;
             grid-area: moreBtn;
@@ -119,6 +127,7 @@
         @media (min-width: 1025px) {
             grid-area: allNews;
         }
+
         @media (max-width: 1024px) {
             margin-right: var(--mob-padding);
         }
@@ -126,6 +135,7 @@
 
     &__success {
         display: none;
+
         @media (min-width: 1025px) {
             display: grid;
             gap: var(--btn);
@@ -142,6 +152,7 @@
 .blog-slider {
     &__slider-nav {
         display: none;
+
         @media (max-width: 1024px) {
             display: grid;
         }

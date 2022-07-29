@@ -9,7 +9,6 @@ ol.counter {
     li {
         position: relative;
         padding-left: calc(var(--pl) + var(--counter-num));
-        @extend %text-14;
 
         &:before {
             content: counter(num);
@@ -21,8 +20,6 @@ ol.counter {
             height: var(--counter-num);
             border-radius: 50%;
             @extend %grid-center;
-            font-size: 1.4rem;
-            line-height: 2.4rem;
             background-color: var(--black);
             color: #fff;
         }

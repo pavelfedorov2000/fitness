@@ -1,3 +1,66 @@
 .clients-reviews {
-  // your code
+
+    --title: 44rem;
+
+    position: relative;
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(auto, var(--gap), #fff);
+            right: 0;
+            bottom: 0;
+        }
+
+        &:after {
+            @include rect(0, 100%, rgba(#fff, .5));
+            width: 0.1rem;
+            right: var(--gap);
+        }
+    }
+
+    // .clients-reviews__bg
+
+    &__bg {
+        grid-column: 2 / -1;
+    }
+
+    // .clients-reviews__content
+
+    &__content {
+        @include padding-y(var(--section-padding));
+        display: grid;
+        grid-row: 1 / 2;
+        color: #fff;
+
+        @media(min-width: 1025px) {
+            grid-template-rows: max-content 6rem var(--gap) 1fr;
+            grid-template-columns: 1fr var(--gap) 1.5rem var(--title);
+            grid-template-areas:
+                '. . . title'
+                '. . . .'
+                '. player . .'
+                '. . . .'
+            ;
+        }
+    }
+
+    // .clients-reviews__title
+
+    &__title {
+        @media(min-width: 1025px) {
+            grid-area: title;
+        }
+    }
+
+    // .clients-reviews__player
+
+    &__player {
+        @extend %grid-center;
+        border: 0.1rem solid #fff;
+        border-radius: 50%;
+
+        @media(min-width: 1025px) {
+            grid-area: player;
+        }
+    }
 }
