@@ -1,0 +1,49 @@
+.numbers {
+    @extend %flex-row;
+    // .numbers__item
+
+    &__item {
+        @extend %flex-col;
+        max-width: 22.8rem;
+
+        @media (max-width: 1024px) {
+            max-width: 19.8rem;
+        }
+
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 1.6rem;
+
+                @media (max-width: 767px) {
+                    margin-bottom: 0.4rem;
+                }
+            }
+        }
+    }
+
+    // .numbers__item-num
+
+    &__item-num {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: calc(42 / 32 * 100%);
+
+        @media (max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+    }
+
+    // .numbers__item-descr
+
+    &__item-descr {
+        font-weight: 300;
+        line-height: 2.4rem;
+        opacity: 0.8;
+
+        @media (max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+    }
+}

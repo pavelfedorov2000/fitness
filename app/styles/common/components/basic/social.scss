@@ -1,5 +1,8 @@
 .social {
+    $this: &;
+
     @extend %grid-row;
+
     // .social__item
 
     &__item {
@@ -8,13 +11,16 @@
         background-color: #fff;
         border: 0.1rem solid var(--dark);
         transition: 0.3s background-color, 0.3s border-color;
+
         svg {
             width: 1.7rem;
             height: 1.6rem;
+
             path {
                 transition: 0.3s all;
             }
         }
+
         @media (any-hover: hover) {
             &:hover {
                 svg {
@@ -22,8 +28,19 @@
                         fill: #fff;
                     }
                 }
+
+                #{$this}__num {
+                    color: #fff;
+                }
             }
         }
+    }
+
+    &__num {
+        font-size: 1.1rem;
+        line-height: 1;
+        color: var(--dark-gray);
+        transition: .3s color;
     }
 
     // .social__item--vk
@@ -33,6 +50,7 @@
             width: 1.8rem;
             height: 1.1rem;
         }
+
         @media (any-hover: hover) {
             &:hover {
                 background-color: var(--vk);
@@ -45,6 +63,8 @@
 
     &__link {
         @extend %grid-center;
+        align-content: center;
+        gap: 0.6rem;
         width: 100%;
         height: 100%;
     }
@@ -56,6 +76,7 @@
             width: 1.9rem;
             height: 1.3rem;
         }
+
         @media (any-hover: hover) {
             &:hover {
                 background-color: var(--youtube);
@@ -86,6 +107,20 @@
             &:hover {
                 background-color: var(--inst);
                 border-color: var(--inst);
+            }
+        }
+    }
+
+    &--col {
+        grid-auto-flow: row;
+
+        #{$this} {
+            &__item {
+                border-bottom: none;
+
+                &:last-child {
+                    border-bottom: 0.1rem solid var(--dark);
+                }
             }
         }
     }

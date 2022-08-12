@@ -1,9 +1,9 @@
 // COUNTER LIST
-ol.counter {
+ol.counter,
+.mark-list {
     --counter-num: 2.4rem;
     --pl: 1.6rem;
 
-    counter-reset: num;
     display: grid;
 
     li {
@@ -11,8 +11,6 @@ ol.counter {
         padding-left: calc(var(--pl) + var(--counter-num));
 
         &:before {
-            content: counter(num);
-            counter-increment: num;
             position: absolute;
             top: 0;
             left: 0;
@@ -22,6 +20,29 @@ ol.counter {
             @extend %grid-center;
             background-color: var(--black);
             color: #fff;
+        }
+    }
+}
+
+ol.counter {
+    counter-reset: num;
+
+    li {
+        &:before {
+            content: counter(num);
+            counter-increment: num;
+        }
+    }
+}
+
+.mark-list {
+    li {
+        &:before {
+            content: '';
+            background-image: url(../images/icons/check-mark.svg);
+            background-size: 1.6rem;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     }
 }

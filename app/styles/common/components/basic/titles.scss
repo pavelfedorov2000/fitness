@@ -2,6 +2,7 @@
     font-weight: 900;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+
     span {
         color: var(--yellow);
     }
@@ -35,6 +36,7 @@
 .section-suptitle {
     @extend %text-17;
     color: var(--dark-gray);
+
     @media (max-width: 767px) {
         font-size: 1.2rem;
         line-height: 1.7rem;
@@ -47,13 +49,16 @@
     @extend %text-48;
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
+    background-color: var(--yellow);
     color: #fff;
+
     &--ocean {
         background-color: var(--ocean);
     }
 }
 
 h {
+
     &1,
     &2,
     &3,

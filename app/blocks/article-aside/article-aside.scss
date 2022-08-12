@@ -1,3 +1,34 @@
-.article-aside {
-  // your code
+.aside-article {
+    // .aside-article__img
+
+    &__img {
+        position: relative;
+        height: 24.8rem;
+    }
+
+    &__label {
+        position: absolute;
+        top: 1.6rem;
+        left: 1.6rem;
+    }
+
+    // .aside-article__arrow
+
+    &__arrow {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    // .aside-article__content
+
+    &__content {
+        padding-top: 1.6rem;
+    }
+
+    // .aside-article__text
+
+    &__text {
+        font-weight: 700;
+    }
 }

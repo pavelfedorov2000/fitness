@@ -1,0 +1,23 @@
+.date {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: var(--dark-gray);
+}
+
+.views {
+    position: relative;
+    padding-left: 3rem;
+    @extend %text-13;
+    line-height: 2rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        @extend %pos-center-y;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../images/icons/view.svg);
+        @extend %bg-contain;
+    }
+}
