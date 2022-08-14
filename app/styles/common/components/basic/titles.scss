@@ -47,7 +47,9 @@
     @extend %text-48;
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
+    background-color: var(--yellow);
     color: #fff;
+
     &--ocean {
         background-color: var(--ocean);
     }

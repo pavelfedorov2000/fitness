@@ -1,3 +1,42 @@
 .fitness-app {
-  // your code
+    display: grid;
+    position: relative;
+    background-color: var(--black);
+    color: #fff;
+
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(0, var(--gap), var(--ocean));
+            right: 0;
+        }
+    }
+    // .fitness-app__content
+
+    &__content {
+        --gap: 6.6rem;
+        --title: 53.2rem;
+        --text: 34.4rem;
+
+        width: var(--title);
+        display: grid;
+        grid-template-columns: calc(var(--title) - var(--text)) 1fr;
+        grid-template-areas:
+            'title title'
+            '. text';
+        row-gap: var(--gap);
+        align-content: center;
+        @include padding-y(var(--gap));
+    }
+
+    // .fitness-app__title
+
+    &__title {
+        grid-area: title;
+    }
+
+    // .fitness-app__text
+
+    &__text {
+        grid-area: text;
+    }
 }

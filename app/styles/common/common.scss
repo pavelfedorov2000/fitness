@@ -69,6 +69,10 @@ img {
     }
 }
 
+.section {
+    min-height: var(--section-mh);
+}
+
 .section-body {
     grid-column: 3 / 4;
 
@@ -105,7 +109,6 @@ img {
 }
 
 .promo {
-
     &-body,
     &-bg {
         grid-row: 1 / 2;

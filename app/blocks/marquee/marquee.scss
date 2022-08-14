@@ -9,7 +9,8 @@
     }
 
     @media (max-width: 767px) {
-        height: calc(100vh - var(--header-height) - var(--pt) - var(--pb) - 6rem - 8rem);
+        height: auto;
+        //height: calc(100vh - var(--header-height) - var(--pt) - var(--pb) - 6rem - 8rem);
         font-size: 2rem;
         line-height: 2.8rem;
     }
@@ -17,6 +18,20 @@
     &--gray {
         -webkit-text-stroke-color: var(--dark-gray);
         color: var(--dark-gray);
+    }
+
+    p {
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        &:first-child {
+            @media (max-width: 767px) {
+                display: block;
+                animation: none;
+                margin: 0;
+            }
+        }
     }
 }
 

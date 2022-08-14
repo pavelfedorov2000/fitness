@@ -8,7 +8,7 @@
     --pb: 10.4rem;
 
     position: relative;
-    
+
     @media (min-width: 1025px) {
         &:before {
             @include rect(auto, 50%, var(--yellow));
@@ -33,6 +33,7 @@
     &__img {
         grid-row: 1 / -1;
         grid-column: 1 / span 3;
+
         img {
             @extend %cover;
         }
@@ -54,6 +55,7 @@
             'select select select select select'
             '. . . . .';
         align-items: center;
+
         @media (min-width: 1025px) {
             grid-row: 1 / -1;
             grid-column: 3 / 5;
@@ -67,6 +69,7 @@
         font-size: 8rem;
         line-height: 7.7rem;
         color: #fff;
+
         @media (min-width: 1025px) {
             grid-area: num;
         }
@@ -86,6 +89,7 @@
         @extend .title;
         @extend %text-26;
         color: #fff;
+
         @media (min-width: 1025px) {
             grid-area: descr;
             align-self: flex-end;
@@ -112,6 +116,7 @@
 
     &__decor-title {
         display: none;
+
         @media (min-width: 1025px) {
             display: flex;
             grid-row: 1 / 2;
@@ -123,11 +128,13 @@
 
     &__aside-img {
         display: none;
+
         @media (min-width: 1025px) {
             display: block;
             grid-row: 2 / 3;
             grid-column: -2 / -1;
         }
+
         img {
             @extend %cover;
         }

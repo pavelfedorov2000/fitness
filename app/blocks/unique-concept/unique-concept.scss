@@ -7,6 +7,7 @@
     --row-gap: 2.4rem;
 
     position: relative;
+
     @media (min-width: 1025px) {
         &:before {
             @include rect(0, 100%, var(--beige));
@@ -22,10 +23,12 @@
 
     &__body {
         display: grid;
+
         @media (max-width: 1024px) {
             row-gap: var(--row-gap);
             @include padding-y(var(--row-gap));
         }
+
         @media (min-width: 1025px) {
             grid-template-rows: var(--pt) max-content 7.2rem max-content 11rem 23.5rem 1fr 10.4rem - 4.9rem;
             grid-template-columns: var(--form) 4.8rem 10.1rem 1fr calc(var(--img) - var(--circle-text) / 2) calc(
@@ -54,10 +57,12 @@
 
     &__text {
         position: relative;
+
         @media (min-width: 1025px) {
             grid-row: 4 / 5;
             grid-column: span 3;
         }
+
         &::before {
             @extend %bg-contain;
             @media (min-width: 1025px) {
@@ -76,11 +81,16 @@
 
     &__img {
         display: none;
+
         @media (min-width: 1025px) {
             display: block;
             position: relative;
             grid-row: 4 / 7;
             grid-column: 5 / -1;
+        }
+
+        img {
+            @extend %cover;
         }
     }
 
