@@ -2,6 +2,7 @@ export const libsJsLink = [
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/@splidejs/splide/dist/js/splide.min.js',
+    'node_modules/sticky-sidebar-v2/dist/sticky-sidebar.min.js',
     //'node_modules/jquery-validation/dist/jquery.validate.min.js',
     //'node_modules/wowjs/dist/wow.min.js',
     //'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',

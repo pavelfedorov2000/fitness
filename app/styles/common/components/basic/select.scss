@@ -1,6 +1,7 @@
 // Custom select
 .select {
     $this: &;
+
     position: relative;
     color: var(--black);
 
@@ -34,6 +35,14 @@
 
             @media (max-width: 1024px) {
                 top: 1.4rem;
+            }
+        }
+
+        &--small {
+            height: var(--arrow-btn);
+
+            &::after {
+                top: 1.5rem;
             }
         }
 

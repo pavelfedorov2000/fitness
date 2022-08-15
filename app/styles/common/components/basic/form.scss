@@ -72,14 +72,18 @@ input[type='number']:focus {
 .input {
     @extend %vertical-align;
     @extend %text-14;
+    @include padding-x(1.6rem);
     width: 100%;
     height: var(--input-height);
-    @include padding-x(1.6rem);
     background-color: #fff;
     color: var(--black);
 
     &--light-blue {
         background-color: var(--light-blue);
+    }
+
+    &--small {
+        height: var(--arrow-btn);
     }
 
     &::placeholder {
@@ -98,6 +102,7 @@ input[type='number']:focus {
     > * {
         &:not(:last-child) {
             margin-bottom: 3.2rem;
+
             @media (max-width: 767px) {
                 margin-bottom: 2.4rem;
             }
@@ -112,6 +117,7 @@ input[type='number']:focus {
     &__body {
         display: grid;
         row-gap: 2.4rem;
+
         @media (max-width: 767px) {
             row-gap: 1.6rem;
         }
