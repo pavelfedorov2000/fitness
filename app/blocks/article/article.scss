@@ -165,6 +165,7 @@
     &__footer {
         @extend %flex-row-center;
         padding-top: 4rem;
+        padding-bottom: 4.7rem;
     }
 
     // .article-page__bottom
@@ -183,6 +184,13 @@
 
     &__numbers-item {
         max-width: 19.2rem;
+    }
+
+    &__slider-nav {
+        width: max-content;
+        position: absolute;
+        left: 0;
+        bottom: var(--figcaption--mh);
     }
 }
 
@@ -274,5 +282,22 @@
 
     &__btn {
         padding: 1.1rem 3.1rem;
+    }
+}
+
+.picture {
+    @extend %flex-col;
+    align-items: flex-end;
+
+    picture {
+        display: block;
+        width: 100%;
+    }
+
+    &__descr {
+        @extend %text-13;
+        color: var(--dark-gray);
+        padding-top: 1.6rem;
+        min-height: var(--figcaption--mh);
     }
 }

@@ -2,15 +2,18 @@
     --gap: 6.4rem;
 
     display: none;
+
     @media (min-width: 1025px) {
         display: grid;
         align-items: center;
         gap: var(--gap);
     }
+
     // .aside-client__img
 
     &__img {
         height: 48rem;
+
         img {
             @extend %cover;
         }

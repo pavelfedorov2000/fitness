@@ -1,0 +1,63 @@
+<section class="contacts-map section">
+    <div class="container contacts-map__grid">
+        <div class="decor-title contacts-map__decor-title">FITNESSON</div>
+        <div id="map"
+             class="contacts-map__map">
+            <picture>
+                <source type="image/webp"
+                        srcset="assets/images/content/map.webp">
+                <img src="assets/images/content/map.jpg"
+                     alt="фото"
+                     width="1720"
+                     height="800"
+                     loading="lazy">
+            </picture>
+        </div>
+        <div class="section-body contacts-map__content">
+            <div class="select contacts-map__select">
+                <div class="select__title">Выберите клуб</div>
+                <div class="select__content">
+                    <input id="region0"
+                           class="select__input"
+                           type="radio"
+                           name="region"
+                           checked />
+                    <label for="region0"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Московская область">Московская область</label>
+                    <input id="region1"
+                           class="select__input"
+                           type="radio"
+                           name="region" />
+                    <label for="region1"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Ленинградская область">Ленинградская область</label>
+                </div>
+            </div>
+            <h2 class="section-title contacts-map__title">
+                40<br>
+                клубов<br>
+                по россии
+            </h2>
+            @@include('blocks/box-link/box-link.html', {
+            "class": "contacts-map__box-link",
+            "text": "Перейти на страницу клубов"
+            })
+        </div>
+        <div class="aside-client contacts-map__aside-client">
+            <div class="aside-client__img">
+                <picture>
+                    <source type="image/webp"
+                            srcset="assets/images/content/aside-girl-client.webp">
+                    <img src="assets/images/content/aside-girl-client.jpg"
+                         alt="фото"
+                         width="200"
+                         height="480"
+                         loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>

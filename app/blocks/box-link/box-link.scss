@@ -1,15 +1,15 @@
 .box-link {
     $pd: 2.4rem;
-    $pdr: 4rem;
+    $pr: 4rem;
 
-    @media (max-width: 767px) {
+    /* @media (max-width: 767px) {
         $pd: 1.6rem;
-        $pdr: 2.5rem;
-    }
+        $pr: 2.5rem;
+    } */
 
     display: block;
     position: relative;
-    padding: $pd $pdr calc(var(--arrow-btn) + $pd) $pd;
+    padding: $pd $pr calc(var(--arrow-btn) + $pd) $pd;
     min-height: var(--gap);
     background-color: var(--yellow);
     color: var(--black);

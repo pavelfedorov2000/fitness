@@ -128,3 +128,124 @@ input[type='number']:focus {
     @extend %text-13;
     color: var(--dark-gray);
 }
+
+.form-block {
+    display: grid;
+
+    @media (max-width: 1024px) {
+        row-gap: var(--gap);
+    }
+
+    @media (min-width: 1025px) {
+        grid-template-columns: 29.6rem 1fr var(--form);
+        grid-template-rows: 0.7rem max-content 8rem max-content;
+        grid-template-areas:
+            '. . form'
+            'text . form'
+            '. . .'
+            'contacts . agree';
+    }
+
+    // .free-training-recording__text
+
+    &__text {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+        @media (min-width: 1025px) {
+            grid-area: text;
+        }
+    }
+
+    &__form {
+        display: grid;
+        gap: 4rem 3.2rem;
+
+        @media (max-width: 767px) {
+            gap: 1.6rem;
+        }
+
+        @media (min-width: 1025px) {
+            grid-area: form;
+        }
+    }
+
+    // .free-training-recording__input
+
+    &__input {
+        &--name {
+            @media (min-width: 768px) {
+                grid-area: name;
+            }
+        }
+
+        &--tel {
+            @media (min-width: 768px) {
+                grid-area: tel;
+            }
+        }
+
+        &--email {
+            @media(min-width: 768px) {
+                grid-area: email;
+            }
+        }
+
+        &--textarea {
+            padding-top: 1.8rem;
+
+            @media(min-width: 768px) {
+                grid-area: textarea;
+            }
+        }
+    }
+
+    &__select {
+        @media (min-width: 768px) {
+            grid-area: select;
+        }
+    }
+
+    // .free-training-recording__btn
+
+    &__btn {
+        @media (min-width: 768px) {
+            grid-area: btn;
+        }
+    }
+
+    // .free-training-recording__contacts
+
+    &__contacts {
+        @media (min-width: 1025px) {
+            grid-area: contacts;
+        }
+    }
+
+    &__messangers {
+        gap: 3.2rem;
+
+        @media (max-width: 767px) {
+            gap: 1.6rem;
+        }
+    }
+
+    // .free-training-recording__form-agree
+
+    &__form-agree {
+        @media (min-width: 1025px) {
+            grid-area: agree;
+            align-self: center;
+        }
+    }
+
+    &__contact {
+        @media (max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+    }
+}

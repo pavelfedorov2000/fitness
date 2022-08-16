@@ -7,8 +7,7 @@
     display: grid;
     grid-template-columns: repeat(2, var(--gap)) var(--select) var(--text) var(--input-height) 1fr repeat(2, var(--gap));
     grid-template-rows:
-        var(--header-height) var(--input-height) calc(var(--gap) - var(--header-height) - var(--input-height))
-        max-content 1rem max-content repeat(3, var(--input-height));
+        var(--header-height) var(--input-height) calc(var(--gap) - var(--header-height) - var(--input-height)) max-content 1rem max-content repeat(3, var(--input-height));
     grid-template-areas:
         'aside . . . . . . .'
         'aside . . . . img img .'
@@ -19,6 +18,7 @@
         '. . . . . img img .'
         '. . select . . img img .'
         '. . . search search search . .';
+
     &::before,
     &::after {
         @media (min-width: 1025px) {
@@ -26,8 +26,10 @@
             position: absolute;
         }
     }
+
     &::before {
         @extend %pos-center-y;
+
         @media (min-width: 1025px) {
             right: 6rem;
             width: 159.2rem;
@@ -46,10 +48,12 @@
             background-color: #fff;
         }
     }
+
     // .promo-team__aside-img
 
     &__aside-img {
         grid-area: aside;
+
         img {
             @extend %cover;
         }
@@ -79,6 +83,7 @@
 
     &__select {
         grid-area: select;
+
         .select__title {
             border-bottom: 0.1rem solid var(--line-color);
         }
@@ -88,6 +93,7 @@
 
     &__img {
         grid-area: img;
+
         img {
             @extend %cover;
         }
@@ -98,30 +104,33 @@
     padding-top: var(--input-height);
     padding-bottom: calc(var(--section-padding) + 0.8rem);
     position: relative;
-    @media (min-width: 1025px) {
-        @media (min-width: 1025px) {
-            &:before {
-                @include rect(calc(var(--input-height) + var(--team-card-h)), 64rem, var(--beige));
-            }
 
-            &:after {
-                @include rect(calc(var(--input-height) * (-1)), 67.2rem, var(--beige));
-                right: 0;
-                z-index: 2;
-            }
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(calc(var(--input-height) + var(--team-card-h)), 64rem, var(--beige));
+        }
+
+        &:after {
+            @include rect(calc(var(--input-height) * (-1)), 67.2rem, var(--beige));
+            right: 0;
+            z-index: 2;
         }
     }
+
     // .team-grid__items
 
     &__items {
         display: grid;
         grid-auto-rows: minmax(var(--team-card-h), max-content);
+
         @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
         }
+
         @media (min-width: 1025px) {
             grid-template-columns: repeat(3, 1fr);
         }
+
         @media (max-width: 767px) {
             gap: 1.6rem;
         }
@@ -133,11 +142,13 @@
                 grid-column: span 2;
             }
         }
+
         &:nth-child(9n + 6) {
             @media (min-width: 1025px) {
                 grid-column: span 2;
             }
         }
+
         &:nth-child(9n + 7) {
             @media (min-width: 1025px) {
                 grid-row: span 2;

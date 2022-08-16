@@ -32,6 +32,32 @@
 
         // Update the bar width:
 
+        if (document.querySelectorAll('.article-page-slider').length) {
+            const articlePageSlider = new Splide('.article-page-slider', {
+                type: 'loop',
+                classes: {
+                    arrows: 'splide__arrows slider-nav__arrows',
+                    arrow: 'splide__arrow slider-nav__arrow',
+                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
+                    next: 'splide__arrow--next slider-nav__arrow--next',
+                    //pagination: 'slider-nav__pagination'
+                },
+                pagination: false
+            });
+
+            const articlePageSliderBar = articlePageSlider.root.querySelector('.slider-nav__progress-bar');
+
+            articlePageSlider.on('mounted move', function () {
+                const end = articlePageSlider.Components.Controller.getEnd() + 1;
+                //console.log(end);
+                articlePageSliderBar.style.width = String(100 * (articlePageSlider.index + 1) / end) + '%';
+                articlePageSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${articlePageSlider.index + 1}`;
+                articlePageSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
+            });
+
+            articlePageSlider.mount();
+        }
+
 
         if (document.querySelectorAll('.sale-slider').length) {
             const saleSlider = new Splide('.sale-slider', {

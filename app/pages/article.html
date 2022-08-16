@@ -83,7 +83,7 @@
                                         Новая музыка, новые движения, новые эмоции! Это эффективная жиросжигающая тренировка со штангой сочетает в себе силовую и кардио нагрузку. Улучшает физическую подготовку, тонизирует мышцы, делает ваше тело еще красивее. За одну тренировку вы теряете 400 ккал!
                                     </p>
                                 </div>
-                                <figure>
+                                <figure class="picture">
                                     <picture>
                                         <source type="image/webp"
                                                 srcset="assets/images/content/text-page/picture-01.webp">
@@ -93,7 +93,7 @@
                                              height="460"
                                              loading="lazy">
                                     </picture>
-                                    <figcaption>Подпись к фотографии</figcaption>
+                                    <figcaption class="picture__descr">Подпись к фотографии</figcaption>
                                 </figure>
                                 <section class="article-page__part">
                                     <h2>Подзаголовок</h2>
@@ -110,7 +110,7 @@
                                         <div class="splide__track">
                                             <div class="splide__list">
                                                 <div class="splide__slide">
-                                                    <figure>
+                                                    <figure class="picture">
                                                         <picture>
                                                             <source type="image/webp"
                                                                     srcset="assets/images/content/text-page/picture-02.webp">
@@ -120,11 +120,11 @@
                                                                  height="460"
                                                                  loading="lazy">
                                                         </picture>
-                                                        <figcaption>Подпись к фотографии</figcaption>
+                                                        <figcaption class="picture__descr">Подпись к фотографии</figcaption>
                                                     </figure>
                                                 </div>
                                                 <div class="splide__slide">
-                                                    <figure>
+                                                    <figure class="picture">
                                                         <picture>
                                                             <source type="image/webp"
                                                                     srcset="assets/images/content/text-page/picture-01.webp">
@@ -134,11 +134,14 @@
                                                                  height="460"
                                                                  loading="lazy">
                                                         </picture>
-                                                        <figcaption>Подпись к фотографии</figcaption>
+                                                        <figcaption class="picture__descr">Подпись к фотографии</figcaption>
                                                     </figure>
                                                 </div>
                                             </div>
                                         </div>
+                                        @@include('blocks/slider-nav/slider-nav.html', {
+                                            "class": "article-page"
+                                        })
                                     </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet elementum est. Mauris fringilla risus a turpis faucibus semper. Vestibulum in mauris eleifend, dignissim sem eget, dignissim ex. Vivamus eleifend ipsum in lorem maximus, posuere porttitor diam accumsan. Nulla et ipsum vel felis porttitor aliquam. Donec posuere metus mi, sed varius nulla ultricies sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus in risus vitae nisi ornare laoreet. Integer quis mattis est. Fusce dapibus euismod fermentum. Sed scelerisque nec urna ut fermentum. Sed id tincidunt metus, eget egestas est.

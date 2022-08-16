@@ -3,7 +3,7 @@ app.articleAside = {
     description: 'your script description',
     init() {
         function fixSidebar() {
-            if (window.innerWidth > 1024) {
+            if ($('.article-page').length && $(window).width() > 1024) {
                 new StickySidebar('.article-page__sidebar', {
                     topSpacing: 0,
                     bottomSpacing: 32,

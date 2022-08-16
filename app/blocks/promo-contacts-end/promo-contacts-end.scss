@@ -1,0 +1,29 @@
+.promo-contacts-end {
+    position: relative;
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(0, var(--gap), #fff);
+            right: 0;
+        }
+    }
+
+    &__content {
+        display: grid;
+        gap: 6.4rem;
+
+        @media(min-width: 1025px) {
+            align-self: center;
+        }
+    }
+
+    // .promo-contacts-end__form
+
+    &__form {
+        grid-template-columns: repeat(2, 1fr) repeat(2, max-content);
+        grid-template-areas:
+            'name tel email email'
+            'textarea textarea textarea btn'
+        ;
+    }
+}

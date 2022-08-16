@@ -36,10 +36,11 @@
 
     &__marquee {
         grid-column: -2 / -1;
+        height: var(--section-mh);
 
         @media(max-width: 1024px) {
-            grid-column: -3 / -2;
             height: 100%;
+            grid-column: -3 / -2;
             font-size: 3.8rem;
             line-height: 5.3rem;
         }

@@ -15,6 +15,7 @@
     &__body {
         @include padding-y(8rem);
         display: grid;
+
         @media (min-width: 768px) {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: max-content max-content max-content 2.4rem max-content 2.4rem max-content 3.2rem max-content;
@@ -29,6 +30,7 @@
                 '. . .'
                 'copy politics dev';
         }
+
         @media (min-width: 1025px) {
             justify-content: space-between;
             align-items: flex-start;
@@ -41,10 +43,12 @@
                 '. . . .'
                 'copy politics . dev';
         }
+
         @media (max-width: 1024px) {
             padding-top: 0;
             padding-bottom: 2.4rem;
         }
+
         @media (max-width: 767px) {
             row-gap: var(--row-gap);
         }
@@ -76,6 +80,7 @@
             @media (min-width: 768px) {
                 grid-area: menu-2;
             }
+
             @media (max-width: 767px) {
                 margin-top: calc(var(--row-gap) * (-1));
             }
@@ -85,6 +90,7 @@
             @media (min-width: 768px) {
                 grid-area: menu-3;
             }
+
             @media (max-width: 767px) {
                 margin-top: calc(var(--row-gap) * (-1));
             }
@@ -97,15 +103,18 @@
         @extend %text-17;
         font-weight: 700;
         color: var(--dark);
-        @media (max-width: 1024px) {
-            position: relative;
-            padding: 1.4rem var(--mob-padding);
-        }
+
         &::before {
             @media (max-width: 1024px) {
                 content: '';
             }
         }
+
+        @media (max-width: 1024px) {
+            position: relative;
+            padding: 1.4rem var(--mob-padding);
+        }
+
         @media (min-width: 1025px) {
             margin-bottom: 2.2rem;
         }
@@ -114,19 +123,16 @@
     // .footer__menu-list
 
     &__menu-list {
+        @include row-grid(2rem);
+
         @media (max-width: 1024px) {
             display: none;
             background-color: var(--light-blue);
             padding: 0 var(--mob-padding) 1.6rem;
         }
 
-        li {
-            &:not(:last-child) {
-                margin-bottom: 2rem;
-                @media (max-width: 767px) {
-                    margin-bottom: 1.8rem;
-                }
-            }
+        @media(max-width: 767px) {
+           row-gap: 1.8rem;
         }
     }
 
@@ -136,6 +142,7 @@
         @extend %text-14;
         color: var(--dark-gray);
         transition: 0.3s color;
+
         @media (any-hover: hover) {
             &:hover {
                 color: var(--yellow);
@@ -158,14 +165,17 @@
     &__contacts {
         display: grid;
         gap: 1.4rem;
+
         @media (min-width: 768px) {
             grid-area: contacts;
         }
+
         @media (max-width: 1024px) {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
         }
+
         @media (min-width: 1025px) {
             justify-self: end;
         }
@@ -183,9 +193,11 @@
 
     &__social {
         gap: 1.6rem;
+
         @media (min-width: 768px) and (max-width: 1024px) {
             justify-self: end;
         }
+
         @media (min-width: 768px) {
             grid-area: soc;
         }
@@ -195,6 +207,7 @@
 
     &__apps {
         gap: 2.4rem;
+
         @media (min-width: 768px) {
             grid-area: apps;
         }
@@ -213,6 +226,7 @@
     &__logo-img {
         width: 15.7rem;
         height: 2.3rem;
+
         @media (max-width: 767px) {
             width: 13.6rem;
             height: 2rem;
@@ -223,9 +237,11 @@
 
     &__copyright {
         color: var(--gray-second);
+
         @media (min-width: 768px) {
             grid-area: copy;
         }
+
         @media (max-width: 767px) {
             font-size: 1.3rem;
             line-height: 1.8rem;
@@ -236,10 +252,12 @@
 
     &__politics {
         color: var(--gray-second);
+
         @media (min-width: 768px) {
             grid-area: politics;
             align-self: flex-end;
         }
+
         @media (max-width: 767px) {
             font-size: 1.3rem;
             line-height: 1.8rem;
@@ -251,12 +269,14 @@
     &__dev {
         @extend %flex-col;
         color: var(--gray-second);
+
         @media (min-width: 768px) {
             align-items: flex-end;
             text-align: right;
             grid-area: dev;
             align-self: flex-end;
         }
+
         @media (max-width: 767px) {
             font-size: 1.3rem;
             line-height: 1.8rem;
@@ -264,6 +284,7 @@
 
         > div {
             display: flex;
+
             &:not(:last-child) {
                 margin-bottom: 0.2rem;
             }
@@ -273,6 +294,7 @@
             margin-left: 0.8rem;
             font-weight: 500;
             transition: 0.3s color;
+
             @media (any-hover: hover) {
                 &:hover {
                     color: var(--yellow);
