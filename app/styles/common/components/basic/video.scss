@@ -63,7 +63,7 @@
 
         @media (max-width: 1024px) {
             --play: 2.8rem;
-            
+
             width: 5.6rem;
             height: 5.6rem;
             place-items: center;
@@ -163,6 +163,12 @@
     }
 }
 
+.player-circle-wrap {
+    @extend %grid-center;
+    border: 0.1rem solid #fff;
+    border-radius: 50%;
+}
+
 .player-btn {
     @extend %grid-center;
     width: 5.6rem;
@@ -171,6 +177,10 @@
 
     &--round {
         border-radius: 50%;
+    }
+
+    &--ocean {
+        background-color: var(--ocean);
     }
 
     svg {

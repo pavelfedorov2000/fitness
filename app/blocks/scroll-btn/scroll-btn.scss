@@ -1,5 +1,8 @@
 .scroll-btn {
+    $this: &;
+
     display: none;
+
     @media (min-width: 1025px) {
         display: grid;
         place-items: center;
@@ -13,6 +16,24 @@
         &__arrow {
             width: 2.4rem;
             height: 2.4rem;
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &--yellow {
+        @media(min-width: 1025px) {
+            background-color: var(--yellow);
+
+            #{$this} {
+                &__arrow {
+                    path {
+                        fill: var(--black);
+                    }
+                }
+            }
         }
     }
 }

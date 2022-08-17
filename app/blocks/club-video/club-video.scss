@@ -7,9 +7,7 @@
     color: #fff;
     @media (min-width: 1025px) {
         &:before {
-            @include rect(auto, var(--gap), #fff);
-            right: 0;
-            bottom: 0;
+            @include rect(bottom, right, 0, 0, var(--gap), #fff);
         }
     }
 

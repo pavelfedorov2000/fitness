@@ -2,16 +2,16 @@
 <div class="wrapper">
     @@include('blocks/site-map/site-map.html')
     @@include("blocks/header/header.html")
-    <main class="page">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                @@include("blocks/promo-contacts-start/promo-contacts-start.html")
-                @@include("blocks/promo-contacts-end/promo-contacts-end.html")
-            </div>
+    <div class="page page-slider swiper">
+        <div class="swiper-wrapper">
+            @@include("blocks/promo-contacts-start/promo-contacts-start.html")
+            @@include("blocks/promo-contacts-end/promo-contacts-end.html")
+            @@include('blocks/contacts-map/contacts-map.html')
+            @@include("blocks/footer/footer.html")
         </div>
-        @@include('blocks/contacts-map/contacts-map.html')
-    </main>
-    @@include("blocks/footer/footer.html")
+    </div>
     <!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
+<script src="assets/js/swiper-page.js"></script>
+</body>

@@ -1,7 +1,6 @@
 //@import './breadcrumbs';
 
 .promo-nav {
-
     // .promo-nav__mobile
 
     &__mobile {
@@ -12,14 +11,14 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
+        margin: 0 -2rem;
     }
 
     // .promo-nav__item
 
     &__item {
-        &:not(:last-child) {
-            margin-right: 4rem;
-        }
+        margin: 0 2rem;
     }
 
     // .promo-nav__link
@@ -27,6 +26,7 @@
     &__link {
         @extend %text-12;
         color: #fff;
+        text-transform: uppercase;
         transition: .3s color;
 
         @media (any-hover: hover) {

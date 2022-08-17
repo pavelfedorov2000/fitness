@@ -8,7 +8,7 @@
 
     @media(min-width: 1025px) {
         &:before {
-            @include rect(0, 100%, linear-gradient(270deg, #0AB3CA 0%, rgba(10, 179, 202, 0.82) 100%));
+            @include rect(top, left, 0, 0, 100%, linear-gradient(270deg, #0AB3CA 0%, rgba(10, 179, 202, 0.82) 100%));
             width: calc(748 / 1920 * 100%);
             z-index: 1;
         }

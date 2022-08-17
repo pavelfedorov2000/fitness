@@ -16,15 +16,14 @@
     min-height: 100vh;
 
     &:before {
-        @include rect(0, 100%, linear-gradient(270deg, #0AB3CA -2.14%, rgba(10, 179, 202, 0.82) 100%));
+        @include rect(top, left, 0, 0, 100%, linear-gradient(270deg, #0AB3CA -2.14%, rgba(10, 179, 202, 0.82) 100%));
         width: var(--bg);
         z-index: 1;
     }
 
     @media(min-width: 1025px) {
         &:after {
-            @include rect(0, var(--gap), #fff);
-            right: 0;
+            @include rect(top, right, 0, 0, var(--gap), #fff);
         }
     }
 

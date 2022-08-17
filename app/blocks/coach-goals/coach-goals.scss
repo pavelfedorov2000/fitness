@@ -1,3 +1,72 @@
 .coach-goals {
-  // your code
+
+    // .coach-goals__main
+
+    &__main {
+        @extend %flex-col-center;
+        @include padding-y(var(--section-padding));
+        text-align: center;
+    }
+
+    // .coach-goals__top
+
+    &__top {
+        @extend %flex-col-center;
+        margin-bottom: 2.8rem;
+    }
+
+    // .coach-goals__avatar
+
+    &__avatar {}
+
+    // .coach-goals__descr
+
+    &__descr {}
+
+    // .coach-goals__title
+
+    &__title {
+        max-width: 56rem;
+
+        &:not(:last-child) {
+            margin-bottom: 8.8rem;
+        }
+    }
+
+    // .coach-goals__items
+
+    &__items {
+        width: 61.5rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: -2rem -3rem;
+    }
+
+    // .coach-goals__item
+
+    &__item {
+        width: 33.3333%;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        row-gap: 3.2rem;
+        padding: 2rem 5rem;
+    }
+
+    // .coach-goals__item-img
+
+    &__item-img {
+        max-width: 8.5rem;
+        max-height: 8rem;
+    }
+
+    // .coach-goals__item-title
+
+    &__item-title {
+        @extend .title;
+        @extend %text-14;
+        font-weight: 700;
+        max-width: 13.2rem;
+    }
 }

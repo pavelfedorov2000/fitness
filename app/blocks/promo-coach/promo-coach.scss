@@ -1,3 +1,142 @@
 .promo-coach {
-  // your code
+    --img-w: 55.3rem;
+    --img-half-w: calc(var(--img-w) / 2);
+    --img-h: 80rem;
+    --player: 24rem;
+    --content-mt: 10.3rem;
+
+    position: relative;
+    height: 100vh;
+    background-color: var(--black);
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, var(--gap)) 1fr repeat(2, var(--img-half-w)) 1fr repeat(2, var(--gap));
+    grid-template-rows: calc(var(--header-height) + 6.4rem) var(--content-mt) max-content 1fr var(--gap);
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(top, left, 0, 0, 50%, #fff);
+        }
+
+        &:after {
+            @include rect(bottom, left, 0, 0, 50%, linear-gradient(360deg, rgba(2, 8, 24, 0.3) 0%, rgba(2, 8, 24, 0) 100%));
+            width: 100%;
+        }
+    }
+
+    // .promo-coach__content
+
+    &__content {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+    }
+
+    // .promo-coach__position
+
+    &__position {
+        @extend %text-16;
+        margin-bottom: 1.6rem;
+    }
+
+    // .promo-coach__title
+
+    &__title {
+        @extend .title;
+        @extend %text-48;
+
+        &:not(:last-child) {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    // .promo-coach__social
+
+    &__social {
+        column-gap: 1.6rem;
+    }
+
+    // .promo-coach__player
+
+    &__player {
+        position: relative;
+        z-index: 25;
+        grid-row: 3 / 4;
+        grid-column: 6 / 7;
+        width: var(--player);
+        height: var(--player);
+        align-self: center;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    // .promo-coach__bg
+
+    &__bg {
+        grid-column: 5 / -1;
+        grid-row: 1 / -1;
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .promo-coach__img
+
+    &__img {
+        grid-row: 2 / -1;
+        grid-column: 4 / 6;
+        align-self: flex-end;
+
+        img {
+            @extend %contain;
+        }
+    }
+
+    // .promo-coach__nav
+
+    &__nav {
+        --before-line: calc(100vh / 2 - var(--gap));
+
+        position: relative;
+        z-index: 20;
+        grid-column: 3 / span 4;
+        grid-row: -2 / -1;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: calc(var(--gap) * (-1));
+            background-color: rgba(#fff, .4);
+        }
+
+        &::before {
+            top: calc(var(--before-line) * (-1));
+            width: 0.1rem;
+            height: var(--before-line);
+        }
+
+        &::after {
+            top: 0;
+            right: 0;
+            height: 0.1rem;
+        }
+    }
+
+    .scroll-btn {
+        @media(min-width: 1025px) {
+            position: relative;
+            z-index: 20;
+            grid-row: -2 / -1;
+            grid-column: 1 / 2;
+        }
+    }
+
+    &__marquee {
+        grid-column: -2 / -1;
+        grid-row: 1 / -1;
+    }
 }

@@ -1,0 +1,34 @@
+.page-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 1024px) {
+        position: relative;
+        overflow: visible;
+        height: auto;
+    }
+
+    .swiper-wrapper {
+        @media (max-width: 1024px) {
+            display: block;
+            height: auto;
+            transform: none !important;
+        }
+
+        /* > * {
+            @media (min-width: 1025px) {
+                height: 100vh;
+            }
+        } */
+    }
+}
+
+*[data-swiper-parallax-y] {
+    @media (max-width: 1024px) {
+        transform: none !important;
+    }
+}

@@ -13,14 +13,11 @@
         background-repeat: no-repeat;
 
         &:before {
-            @include rect(auto, var(--gap), #fff);
-            bottom: 0;
+            @include rect(bottom, left, 0, 0, var(--gap), #fff);
         }
 
         &:after {
-            @include rect(auto, var(--bottom-offset), #fff);
-            bottom: 0;
-            left: var(--gap);
+            @include rect(bottom, left, 0, var(--gap), var(--bottom-offset), #fff);
             width: 100%;
         }
     }

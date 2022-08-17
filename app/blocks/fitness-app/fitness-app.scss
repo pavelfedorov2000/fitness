@@ -6,8 +6,7 @@
 
     @media (min-width: 1025px) {
         &:before {
-            @include rect(0, var(--gap), var(--ocean));
-            right: 0;
+            @include rect(top, right, 0, 0, var(--gap), var(--ocean));
         }
     }
     // .fitness-app__content

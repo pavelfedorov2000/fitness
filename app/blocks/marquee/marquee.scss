@@ -74,8 +74,8 @@
 
 .double-marquee {
     @include padding-y(var(--marquee-padding));
-    border-top: 0.1rem solid var(--dark-second);
-    border-bottom: 0.1rem solid var(--dark-second);
+    border-top: 0.1rem solid var(--black);
+    border-bottom: 0.1rem solid var(--black);
     overflow: hidden;
 
     > * {

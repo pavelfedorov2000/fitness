@@ -53,9 +53,8 @@
             grid-template-columns: 1fr calc(var(--sidebar) + var(--sidebar-pl));
 
             &:before {
-                @include rect(0, 100%, var(--beige));
+                @include rect(top, right, 0, calc(var(--gap) * (-1)), 100%, var(--beige));
                 width: calc(var(--sidebar) + var(--sidebar-pl) + var(--gap));
-                right: calc(var(--gap) * (-1));
             }
         }
     }

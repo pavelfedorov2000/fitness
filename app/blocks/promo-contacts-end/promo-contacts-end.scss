@@ -3,8 +3,7 @@
 
     @media(min-width: 1025px) {
         &:before {
-            @include rect(0, var(--gap), #fff);
-            right: 0;
+            @include rect(top, right, 0, 0, var(--gap), #fff);
         }
     }
 

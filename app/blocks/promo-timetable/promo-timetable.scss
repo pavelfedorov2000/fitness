@@ -11,10 +11,8 @@
 
     @media (min-width: 1025px) {
         &:before {
-            @include rect(auto, 50%, var(--yellow));
+            @include rect(bottom, right, 0, var(--gap), 50%, var(--yellow));
             width: calc(100% - var(--gap));
-            right: var(--gap);
-            bottom: 0;
             left: 0;
             z-index: -1;
         }

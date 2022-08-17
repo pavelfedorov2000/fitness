@@ -5,8 +5,7 @@
 
     @media (min-width: 1025px) {
         &:before {
-            @include rect(auto, 40rem, var(--yellow));
-            bottom: 0;
+            @include rect(bottom, left, 0, 0, 40rem, var(--yellow));
         }
     }
 

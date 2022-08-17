@@ -32,7 +32,7 @@
 
     @media (min-width: 1025px) {
         &:before {
-            @include rect(var(--pt), 27rem, var(--yellow));
+            @include rect(top, left, var(--pt), 0, 27rem, var(--yellow));
         }
 
         &::after {

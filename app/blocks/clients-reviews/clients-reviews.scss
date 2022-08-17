@@ -6,15 +6,12 @@
 
     @media(min-width: 1025px) {
         &:before {
-            @include rect(auto, var(--gap), #fff);
-            right: 0;
-            bottom: 0;
+            @include rect(bottom, right, 0, 0, var(--gap), #fff);
         }
 
         &:after {
-            @include rect(0, 100%, rgba(#fff, .5));
+            @include rect(top, right, 0, var(--gap), 100%, rgba(#fff, .5));
             width: 0.1rem;
-            right: var(--gap);
         }
     }
 
@@ -55,10 +52,6 @@
     // .clients-reviews__player
 
     &__player {
-        @extend %grid-center;
-        border: 0.1rem solid #fff;
-        border-radius: 50%;
-
         @media(min-width: 1025px) {
             grid-area: player;
         }

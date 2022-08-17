@@ -1,7 +1,19 @@
-@mixin rect($top, $h, $bg) {
+@mixin rect($verticalPosition, $horizontalPosition, $verticalOffset, $horizontalOffset, $h, $bg) {
     content: '';
     position: absolute;
-    top: $top;
+
+    @if $verticalPosition == top {
+        top: $verticalOffset;
+    } @else if $verticalPosition == bottom {
+        bottom: $verticalOffset;
+    }
+
+    @if $horizontalPosition == left {
+        left: $horizontalOffset;
+    } @else if $horizontalPosition == right {
+        right: $horizontalOffset;
+    }
+
     width: var(--gap);
     height: $h;
     background: $bg;
