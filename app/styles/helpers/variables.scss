@@ -39,6 +39,15 @@
     --figcaption--mh: 3.4rem;
     --form: 67.2rem;
 
+    // offsets (gaps)
+    --offset-xxl: 5.6rem;
+    --offset-xl: var(--arrow-btn);
+    --offset-l: 3.2rem;
+    --offset-m: 2.4rem;
+    --offset-s: 1.6rem;
+    --offset-xs: var(--mob-padding);
+    --offset-xxs: 0.8rem;
+
     @media (max-width: 1024px) {
         --header-height: 4.8rem;
         --input-height: 4.8rem;

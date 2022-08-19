@@ -1,3 +1,127 @@
 .coach-signup {
-  // your code
+    background-color: var(--black);
+    color: #fff;
+    position: relative;
+
+    @media(min-width: 1025px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(top, left, 0, 0, var(--gap), var(--ocean));
+        }
+
+        &:after {
+            @include rect(top, right, 0, 0, var(--gap), #fff);
+        }
+    }
+
+    // .coach-signup__img
+
+    &__img {
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: block;
+        }
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .coach-signup__form-wrap
+
+    &__form-wrap {
+        @extend %grid-center;
+        align-content: center;
+        gap: var(--section-padding);
+        position: relative;
+        padding: var(--offset-l) var(--mob-padding);
+
+        @media(max-width: 767px) {
+            gap: var(--offset-l);
+        }
+
+        &::before {
+            @extend %bg-contain;
+
+            @media(min-width: 1025px) {
+                content: '';
+                position: absolute;
+                bottom: -1rem;
+                left: -3.1rem;
+                z-index: 1;
+                width: 61.9rem;
+                height: 46.1rem;
+                background-image: url(../images/decor/coach-signup.svg);
+            }
+        }
+    }
+
+    // .coach-signup__form-title
+
+    &__title {
+        @extend .title;
+        @extend %text-26;
+        max-width: 48rem;
+
+        @media(min-width: 768px) {
+            text-align: center;
+        }
+
+        @media(max-width: 767px) {
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
+    }
+
+    // .coach-signup__form-body
+
+    &__form-body {
+        @media(min-width: 768px) {
+            width: 34.4rem;
+        }
+    }
+
+    &__form-top {
+        @extend %flex-row;
+        align-items: flex-end;
+        margin-bottom: var(--offset-l);
+
+        @media(max-width: 767px) {
+            margin-bottom: 1.7rem;
+        }
+    }
+
+    &__logo {
+        @media(max-width: 767px) {
+            width: 13.6rem;
+            height: 2rem;
+        }
+    }
+
+    &__city {
+        font-weight: 700;
+    }
+
+    &__form {
+        position: relative;
+        z-index: 2;
+        @include row-grid(var(--offset-l));
+
+        @media(max-width: 767px) {
+            row-gap: var(--offset-s);
+        }
+    }
+
+    &__form-agree {
+        color: rgba(255, 255, 255, 0.6);
+
+        @media(max-width: 767px) {
+            margin-top: var(--offset-s);
+        }
+    }
 }

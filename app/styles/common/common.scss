@@ -53,7 +53,6 @@ body {
     grid-template-columns: repeat(2, var(--gap)) 1fr repeat(2, var(--gap));
 
     @media (max-width: 1024px) {
-        //@include padding-x(var(--mob-padding));
         grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
     }
 }

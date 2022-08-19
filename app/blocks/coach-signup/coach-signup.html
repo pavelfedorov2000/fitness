@@ -1,3 +1,52 @@
 <div class="coach-signup">
-  <!--your code-->
+    <div class="coach-signup__img">
+        <picture>
+            <source type="image/webp"
+                    srcset="assets/images/content/coach-signup.webp">
+            <img src="assets/images/content/coach-signup.jpg"
+                 alt="фото"
+                 width="960"
+                 height="800"
+                 loading="lazy">
+        </picture>
+    </div>
+    <div class="coach-signup__form-wrap">
+        <div class="coach-signup__title">
+            Запишитесь
+            на&nbsp;бесплатную пробную тренировку с Алексеем
+        </div>
+        <div class="coach-signup__form-body">
+            <div class="coach-signup__form-top">
+                <a class="coach-signup__logo"
+                   href="#">
+                    <img src="assets/images/logo/header-logo.svg"
+                         alt="logo"
+                         loading="lazy">
+                </a>
+                <div class="coach-signup__city">Можайск</div>
+            </div>
+            <form action="#"
+                  class="coach-signup__form">
+                <label class="form-field coach-signup__form-field">
+                    <input class="input coach-signup__form-input"
+                           name="name"
+                           placeholder="Имя">
+                    <!-- <span>Имя</span> -->
+                </label>
+                <label class="form-field coach-signup__form-field coach-signup__form-field--phone">
+                    <input class="input coach-signup__form-input"
+                           type="tel"
+                           name="phone"
+                           placeholder="Телефон">
+                    <!-- <span>Телефон</span> -->
+                </label>
+                <button class="btn coach-signup__form-btn"
+                        type="submit">Отправить заявку</button>
+                <div class="form-agree coach-signup__form-agree">
+                    Отправляя заявку вы соглашаетесь
+                    с&nbsp;условиями обработки персональных данных
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

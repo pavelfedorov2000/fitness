@@ -1,0 +1,89 @@
+.card {
+    --gap: 2.4rem;
+
+    @media (max-width: 767px) {
+        --gap: 1.6rem;
+    }
+
+    position: relative;
+    background-color: var(--light-blue);
+    padding: var(--gap) var(--gap) 2.8rem;
+    min-height: 24.8rem;
+
+    @media(max-width: 767px) {
+        min-height: 18.1rem;
+        padding: var(--gap) var(--mob-padding) 2.8rem;
+    }
+
+    // .card__inner
+
+    &__content {
+        @extend %flex-col;
+        align-items: flex-start;
+        min-height: 100%;
+
+        > * {
+            &:not(:last-child) {
+                margin-bottom: var(--gap);
+            }
+
+            &:last-child {
+                margin-top: auto;
+            }
+        }
+    }
+
+    // .card__title
+
+    &__title {
+        @extend %text-16;
+
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+
+    &__address {
+        @extend %text-14;
+        position: relative;
+        padding-left: 2.8rem;
+        color: var(--dark-gray);
+
+        @media (max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            width: 2rem;
+            height: 2rem;
+            background-image: url(../images/icons/ico-pin.svg);
+            @extend %bg-contain;
+        }
+
+        b {
+            display: block;
+            font-weight: 500;
+            color: var(--black);
+        }
+    }
+
+    // .card__text
+
+    &__text {
+        @extend %text-14;
+    }
+
+    // .card__btn
+
+    &__btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}

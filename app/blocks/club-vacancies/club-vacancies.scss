@@ -40,11 +40,6 @@
         }
     }
 
-    // .club-vacancies__slider-item
-
-    &__slider-item {
-    }
-
     // .club-vacancies__slider-nav
 
     &__slider-nav {
@@ -54,109 +49,5 @@
             display: grid;
             margin-top: var(--row-gap);
         }
-    }
-}
-
-.splide {
-    // .splide__track
-
-    &__track {
-    }
-
-    // .splide__list
-
-    &__list {
-    }
-
-    // .splide__slide
-
-    &__slide {
-    }
-}
-
-.vacancy-card {
-    --gap: 2.4rem;
-
-    @media (max-width: 767px) {
-        --gap: 1.6rem;
-    }
-
-    background-color: var(--light-blue);
-    // .vacancy-card__inner
-
-    &__inner {
-        min-height: 24.8rem;
-        justify-items: start;
-        display: grid;
-        grid-template-rows:
-            var(--gap) max-content var(--gap) max-content 1fr max-content calc(var(--arrow-btn) - var(--gap))
-            var(--gap);
-        grid-template-columns: var(--gap) 1fr 3.2rem calc(var(--arrow-btn) - var(--gap)) var(--gap);
-        grid-template-areas:
-            '. . . . .'
-            '. label . . .'
-            '. . . . .'
-            '. title . . .'
-            '. . . . .'
-            '. address . . .'
-            '. address . arrow arrow'
-            '. . . arrow arrow';
-    }
-
-    // .vacancy-card__label
-
-    &__label {
-        grid-area: label;
-    }
-
-    // .vacancy-card__title
-
-    &__title {
-        @extend %text-16;
-        line-height: 2.2rem;
-        grid-area: title;
-
-        @media (max-width: 767px) {
-            font-size: 1.4rem;
-            line-height: 2rem;
-        }
-    }
-
-    // .vacancy-card__address
-
-    &__address {
-        @extend %text-14;
-        grid-area: address;
-        position: relative;
-        padding-left: 2.8rem;
-        color: var(--dark-gray);
-
-        @media (max-width: 767px) {
-            font-size: 1.3rem;
-            line-height: 1.8rem;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0rem;
-            left: 0rem;
-            width: 2rem;
-            height: 2rem;
-            background-image: url(../images/icons/ico-pin.svg);
-            @extend %bg-contain;
-        }
-
-        b {
-            display: block;
-            font-weight: 500;
-            color: var(--black);
-        }
-    }
-
-    // .vacancy-card__btn
-
-    &__btn {
-        grid-area: arrow;
     }
 }

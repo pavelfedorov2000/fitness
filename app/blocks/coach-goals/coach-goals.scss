@@ -1,27 +1,84 @@
 .coach-goals {
 
+    position: relative;
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(top, right, 0, 0, 100%, var(--beige));
+        }
+    }
+
     // .coach-goals__main
 
     &__main {
         @extend %flex-col-center;
         @include padding-y(var(--section-padding));
         text-align: center;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-xy;
+            width: 119.2rem;
+            height: 55rem;
+            background-image: url(../images/elements/coach-goals.svg);
+            @extend %bg-contain;
+        }
+
+        @media(max-width: 767px) {
+            @include padding-y(var(--offset-l));
+        }
     }
 
     // .coach-goals__top
 
     &__top {
         @extend %flex-col-center;
-        margin-bottom: 2.8rem;
+        position: relative;
+        padding-bottom: var(--offset-m);
+
+        &:not(:last-child) {
+            margin-bottom: 2.8rem;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            @extend %pos-center-x;
+            bottom: 0;
+            width: 8rem;
+            height: 0.2rem;
+            background-color: var(--yellow);
+        }
     }
 
     // .coach-goals__avatar
 
-    &__avatar {}
+    &__avatar {
+        width: 7.2rem;
+        height: 7.2rem;
+        margin-bottom: var(--offset-l);
+
+        @media(max-width: 767px) {
+            width: var(--offset-xxl);
+            height: var(--offset-xxl);
+            margin-bottom: var(--offset-s);
+        }
+
+        img {
+            @extend %cover;
+        }
+    }
 
     // .coach-goals__descr
 
-    &__descr {}
+    &__descr {
+        @media(max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+    }
 
     // .coach-goals__title
 
@@ -30,28 +87,44 @@
 
         &:not(:last-child) {
             margin-bottom: 8.8rem;
+
+            @media(max-width: 1024px) {
+                margin-bottom: 5.3rem;
+            }
         }
     }
 
     // .coach-goals__items
 
     &__items {
-        width: 61.5rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         margin: -2rem -3rem;
+
+        @media(max-width: 767px) {
+            margin: calc(var(--offset-s) * (-1));
+        }
+
+        @media(min-width: 768px) {
+            width: 61.5rem;
+        }
     }
 
     // .coach-goals__item
 
     &__item {
         width: 33.3333%;
-        display: grid;
         justify-items: center;
         align-content: center;
-        row-gap: 3.2rem;
         padding: 2rem 5rem;
+        @include row-grid(3.2rem);
+
+        @media(max-width: 767px) {
+            width: 50%;
+            row-gap: 2rem;
+            padding: var(--offset-s);
+        }
     }
 
     // .coach-goals__item-img
@@ -59,6 +132,11 @@
     &__item-img {
         max-width: 8.5rem;
         max-height: 8rem;
+
+        @media(max-width: 767px) {
+            max-width: 6.8rem;
+            max-height: 6.4rem;
+        }
     }
 
     // .coach-goals__item-title
@@ -68,5 +146,11 @@
         @extend %text-14;
         font-weight: 700;
         max-width: 13.2rem;
+
+        @media(max-width: 767px) {
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+            text-transform: none;
+        }
     }
 }
