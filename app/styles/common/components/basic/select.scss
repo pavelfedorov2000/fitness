@@ -1,4 +1,13 @@
 // Custom select
+.filter-selects {
+    display: grid;
+
+    @media(min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+}
+
 .select {
     $this: &;
 

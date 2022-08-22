@@ -13,13 +13,7 @@
     // .success-stories__filter
 
     &__filter {
-        display: grid;
         margin-bottom: var(--arrow-btn);
-
-        @media(min-width: 768px) {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4rem;
-        }
     }
 
     &__select {

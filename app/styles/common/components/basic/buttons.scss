@@ -110,4 +110,9 @@
     &--yellow {
         background-color: var(--yellow);
     }
+
+    &--transparent {
+        background-color: transparent;
+        color: var(--dark-gray);
+    }
 }

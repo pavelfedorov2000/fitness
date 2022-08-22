@@ -1,44 +1,52 @@
 <section class="promo-timetable">
-	<div class="promo-timetable__grid">
-		<div class="promo-timetable__img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/promo/promo-timetable.webp">
-				<img src="assets/images/content/promo/promo-timetable.jpg" alt="фото" width="748" height="800"
-					loading="lazy">
-			</picture>
-		</div>
-		<div class="promo-timetable__content">
-			<div class="promo-timetable__num">35</div>
-			<h1 class="section-title promo-timetable__title">
-				Раписание
-				FITNESS<span>ON</span>
-			</h1>
-			<div class="promo-timetable__descr">
-				Групповых<br>
-				занятий<br>
-				в&nbsp;неделю
-			</div>
-			<div class="section-text promo-timetable__text">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue sed tortor non mollis. Cras
-					quis
-					lacus
-					in tellus tincidunt pretium eget eget mauris.
-				</p>
-
-				<p>Pellentesque pretium diam semper leo lacinia, eget accumsan urna rutrum.</p>
-			</div>
-			@@include('blocks/select-club/select-club.html', {
-			"class": "promo-timetable"
-			})
-		</div>
-		<div class="decor-title promo-timetable__decor-title decor-title--ocean">Timetable</div>
-		<div class="promo-timetable__aside-img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/promo/promo-client.webp">
-				<img src="assets/images/content/promo/promo-client.jpg" alt="фото" width="200" height="400"
-					loading="lazy">
-			</picture>
-		</div>
-	</div>
+    <div class="promo-timetable__grid">
+        <div class="promo-timetable__img"
+             data-da=".promo-timetable__content, 1024, 2">
+            <picture>
+                <source type="image/webp"
+                        srcset="assets/images/content/promo/promo-timetable.webp">
+                <img src="assets/images/content/promo/promo-timetable.jpg"
+                     alt="фото"
+                     width="748"
+                     height="800"
+                     loading="lazy">
+            </picture>
+        </div>
+        <div class="promo-timetable__content">
+            <h1 class="section-title promo-timetable__title">
+                Раписание
+                FITNESS<span>ON</span>
+            </h1>
+            <div class="section-text promo-timetable__text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue sed tortor non mollis. Cras
+                    quis
+                    lacus
+                    in tellus tincidunt pretium eget eget mauris.
+                </p>
+                <p>Pellentesque pretium diam semper leo lacinia, eget accumsan urna rutrum.</p>
+            </div>
+            <div class="promo-timetable__num">35</div>
+            <div class="promo-timetable__descr">
+                Групповых<br>
+                занятий<br>
+                в&nbsp;неделю
+            </div>
+            @@include('blocks/select-club/select-club.html', {
+            "class": "promo-timetable"
+            })
+        </div>
+        <div class="decor-title promo-timetable__decor-title decor-title--ocean">Timetable</div>
+        <div class="promo-timetable__aside-img">
+            <picture>
+                <source type="image/webp"
+                        srcset="assets/images/content/promo/promo-client.webp">
+                <img src="assets/images/content/promo/promo-client.jpg"
+                     alt="фото"
+                     width="200"
+                     height="400"
+                     loading="lazy">
+            </picture>
+        </div>
+    </div>
 </section>

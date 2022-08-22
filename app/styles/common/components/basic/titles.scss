@@ -2,10 +2,6 @@
     font-weight: 900;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-
-    span {
-        color: var(--yellow);
-    }
 }
 
 .suptitle {
@@ -23,6 +19,10 @@
     @media (max-width: 767px) {
         font-size: 2rem;
         line-height: 2.8rem;
+    }
+
+    span {
+        color: var(--yellow);
     }
 
     &--border {

@@ -13,6 +13,7 @@
     --red: #e73656;
     --line-color: #ddd;
     --purple: #9b36cb;
+    --light-purple: #CB7AD9;
     --pink: #e677f8;
     --beige: #fff5da;
     --light-blue: #ecf1ff;
@@ -62,7 +63,8 @@
 }
 
 $fz: 15;
-$ff: 'Gotham Pro', sans-serif;
+$ff: 'Gotham Pro',
+sans-serif;
 $color-default: var(--black);
 
 %text-10 {

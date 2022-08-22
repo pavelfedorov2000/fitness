@@ -1,4 +1,6 @@
 .article-card {
+
+    $this: &;
     // .article-card__date
 
     &__date {
@@ -114,7 +116,7 @@
 
     @media (any-hover: hover) {
         &:hover {
-            .article-card {
+            #{$this} {
                 &__body {
                     &:before {
                         opacity: 1;
@@ -125,7 +127,7 @@
     }
 
     &.sale {
-        .article-card__title {
+        #{$this}__title {
             @extend %flex-col;
             align-items: flex-start;
             text-shadow: none;

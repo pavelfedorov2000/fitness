@@ -1,3 +1,188 @@
 .timetable-calendar {
-  // your code
+
+    position: relative;
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(top, left, 10.6rem, 0, 100%, var(--beige));
+        }
+    }
+
+    @media(max-width: 767px) {
+        grid-template-columns: unset;
+    }
+
+    // .timetable-calendar__body
+
+    &__body {
+        padding: var(--arrow-btn) 0 var(--section-padding);
+        @include row-grid(4rem);
+
+        @media(max-width: 767px) {
+            grid-column: unset;
+        }
+    }
+
+    // .timetable-calendar__select
+
+    &__select {
+        &.mob-visible {
+            display: none;
+        }
+    }
+}
+
+.calendar-item {
+    @media(min-width: 1025px) {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: max-content 1fr;
+        align-items: flex-start;
+    }
+
+    &__date {
+        display: none;
+
+        @media(min-width: 1025px) {
+            @include row-grid(1.5rem);
+            min-width: 8.9rem;
+        }
+    }
+
+    // .calendar-item__cards
+
+    &__cards {
+        display: grid;
+        gap: var(--offset-m);
+
+        @media(max-width: 767px) {
+            gap: var(--offset-xxs);
+        }
+
+        @media(min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media(min-width: 1025px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.calendar-date {
+    // .calendar-date__num
+
+    &__num {
+        @extend .title;
+        @extend %text-20;
+    }
+
+    // .calendar-date__day
+
+    &__day {
+        @extend %text-13;
+        color: var(--dark-gray);
+    }
+}
+
+.calendar-card {
+
+    $this: &;
+
+    position: relative;
+    // .calendar-card__inner
+
+    &__inner {
+        @extend %flex-col;
+        justify-content: space-between;
+        min-height: 17.2rem;
+        padding: var(--offset-s);
+    }
+
+    // .calendar-card__top
+
+    &__top {
+        @extend %flex-row-center;
+    }
+
+    // .calendar-card__time
+
+    &__time {
+        @extend %text-13;
+        font-weight: 500;
+    }
+
+    // .calendar-card__category
+
+    &__category {
+        display: flex;
+        margin: -0.4rem;
+
+        > * {
+            margin: 0.4rem;
+        }
+    }
+
+    // .calendar-card__middle
+
+    &__middle {
+        @extend %flex-row;
+    }
+
+    // .calendar-card__title
+
+    &__title {
+        @extend .title;
+        @extend %text-14;
+        font-weight: 500;
+    }
+
+    // .calendar-card__place
+
+    &__place {
+        @extend %text-13;
+        color: var(--dark-gray);
+    }
+
+    // .calendar-card__coach
+
+    &__coach {
+        @extend %text-13;
+        padding-right: var(--arrow-btn);
+    }
+
+    // .calendar-card__btn
+
+    &__btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &.group {
+        background-color: var(--light-blue);
+    }
+
+    &.appointment {
+        background-color: var(--beige);
+    }
+
+    &.children {
+        background-color: var(--light-purple);
+    }
+
+    &.business-class {
+        background-color: var(--black);
+    }
+
+    &.business-class,
+    &.children {
+        color: #fff;
+
+        #{$this} {
+            &__place {
+                color: #fff;
+            }
+        }
+    }
 }
