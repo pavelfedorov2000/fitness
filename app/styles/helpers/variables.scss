@@ -40,6 +40,7 @@
     --form: 67.2rem;
 
     // offsets (gaps)
+    --offset-xxxl: 6.4rem;
     --offset-xxl: 5.6rem;
     --offset-xl: var(--arrow-btn);
     --offset-l: 3.2rem;
@@ -61,8 +62,7 @@
 }
 
 $fz: 15;
-$ff: 'Gotham Pro',
-sans-serif;
+$ff: 'Gotham Pro', sans-serif;
 $color-default: var(--black);
 
 %text-10 {
@@ -147,7 +147,7 @@ $color-default: var(--black);
     font-size: rem(32);
     line-height: rem(46);
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         font-size: rem(20);
         line-height: rem(28);
     }

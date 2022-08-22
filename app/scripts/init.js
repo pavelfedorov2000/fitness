@@ -6,6 +6,7 @@
         app.clubTeam.init();
         app.clubsCompre.init();
         app.articleAside.init();
+        app.faq.init();
         //app.burger.init();
         //app.slider.init();
         //app.menu.init();
