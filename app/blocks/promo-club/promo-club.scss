@@ -74,6 +74,7 @@
     &__ratings {
         grid-area: ratings;
         row-gap: 3.4rem;
+        grid-template-columns: unset;
     }
 
     &__info-box {

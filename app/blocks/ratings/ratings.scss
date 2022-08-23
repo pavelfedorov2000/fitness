@@ -1,9 +1,9 @@
 .ratings {
     display: grid;
+    grid-template-columns: repeat(2, var(--rating));
 }
 
 .rating-box {
-
     @include row-grid(0.9rem);
     padding: 1.6rem;
     // .rating-box__logo

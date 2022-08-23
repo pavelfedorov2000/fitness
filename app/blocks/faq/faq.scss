@@ -29,6 +29,7 @@
             background-image: url(../images/elements/faq.svg);
         }
     }
+
     // .promo-faq__decor-title
 
     &__decor-title {
@@ -58,7 +59,7 @@
         @extend %text-32;
 
         @media (min-width: 1025px) {
-            max-width: 25rem;
+            max-width: 41rem;
         }
     }
 }
@@ -71,6 +72,7 @@
     @media (max-width: 1024px) {
         @include padding-y(var(--offset-l));
     }
+
     // .faq-body__aside-client
 
     &__aside-client {
@@ -107,7 +109,7 @@
     }
 
     &::before {
-        content: '0' counter(faq-num);
+        content: '0'counter(faq-num);
         counter-increment: faq-num;
         position: absolute;
         top: 0;
@@ -116,6 +118,7 @@
         @extend %text-16;
         color: var(--gray);
     }
+
     // .faq-section__title
 
     &__title {

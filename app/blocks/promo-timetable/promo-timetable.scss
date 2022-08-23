@@ -161,6 +161,12 @@
         .select__title {
             height: var(--select);
 
+            &:after {
+                @media(min-width: 1025px) {
+                    top: 2.5rem;
+                }
+            }
+
             @media(max-width: 1024px) {
                 height: var(--input-height);
                 border: 0.1rem solid var(--line-color);

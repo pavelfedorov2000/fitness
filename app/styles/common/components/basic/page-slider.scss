@@ -25,6 +25,10 @@
             }
         } */
     }
+
+    .swiper-slide {
+        min-height: 100vh;
+    }
 }
 
 *[data-swiper-parallax-y] {

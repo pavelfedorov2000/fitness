@@ -1,3 +1,51 @@
 .club-map {
-  // your code
+    --title: 36rem;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, var(--gap)) var(--title) 1fr 14.8rem repeat(2, var(--gap));
+    grid-template-rows: 8.8rem max-content 1fr max-content;
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(top, left, 0, 0, var(--gap), var(--yellow));
+        }
+    }
+
+    // .club-map__map
+
+    &__map {
+        grid-column: 1 / -2;
+        grid-row: 1 / -1;
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .club-map__title
+
+    &__title {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
+    &__ratings {
+        grid-column: 4 / 6;
+        grid-row: 2 / 3;
+        justify-self: end;
+        align-self: flex-start;
+    }
+
+    &__info-box {
+        grid-row: -2 / -1;
+        grid-column: 3 / 5;
+    }
+
+    // .club-map__marquee
+
+    &__marquee {
+        grid-row: 1 / -1;
+        grid-column: -2 / -1;
+    }
 }

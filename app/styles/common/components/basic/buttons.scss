@@ -63,6 +63,7 @@
     width: var(--arrow-btn);
     height: var(--arrow-btn);
     background-color: var(--yellow);
+    transition: .3s background-color;
 
     // .arrow-btn__svg
 
@@ -92,6 +93,7 @@
     color: var(--black);
     border-radius: 3.2rem;
     padding: 0.1rem 0.8rem;
+    transition: .3s background-color;
 
     &--blue {
         background-color: var(--light-blue);

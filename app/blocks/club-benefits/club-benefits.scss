@@ -19,6 +19,7 @@
         display: grid;
 
         @media(min-width: 1025px) {
+            min-height: 100vh;
             grid-template-columns: repeat(2, var(--gap)) calc(var(--img) - var(--gap) * 2) 1fr repeat(2, var(--gap));
             grid-template-rows: 8.8rem 1fr 12.3rem;
         }

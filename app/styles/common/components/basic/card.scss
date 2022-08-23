@@ -1,4 +1,6 @@
 .card {
+    $this: &;
+
     --gap: 2.4rem;
 
     @media (max-width: 767px) {
@@ -7,12 +9,31 @@
 
     position: relative;
     background-color: var(--light-blue);
+    border: 0.1rem solid var(--light-blue);
     padding: var(--gap) var(--gap) 2.8rem;
     min-height: 24.8rem;
+    transition: .3s all;
 
     @media(max-width: 767px) {
         min-height: 18.1rem;
         padding: var(--gap) var(--mob-padding) 2.8rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #fff;
+            border-color: var(--black);
+
+            #{$this} {
+                &__label {
+                    background-color: var(--light-blue);
+                }
+
+                &__btn {
+                    background-color: var(--yellow);
+                }
+            }
+        }
     }
 
     // .card__inner

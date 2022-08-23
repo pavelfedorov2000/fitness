@@ -25,6 +25,10 @@
         display: grid;
         grid-template-rows: max-content 1fr max-content;
         grid-template-columns: repeat(2, var(--gap)) var(--gap) calc(var(--title) - var(--gap)) 4.5rem repeat(2, var(--half-circle)) 1fr repeat(2, var(--gap));
+
+        @media(min-width: 1025px) {
+            min-height: calc(100vh - 8.8rem * 2);
+        }
     }
 
     // .regular-measurements__title

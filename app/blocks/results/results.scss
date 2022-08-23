@@ -27,11 +27,16 @@
         right: var(--gap);
         bottom: 0;
     }
+
     // .results__img
 
     &__img {
         @media (min-width: 1025px) {
             grid-area: img;
+        }
+
+        img {
+            @extend %cover;
         }
     }
 

@@ -6,6 +6,7 @@
     // .contacts-map__grid
 
     &__grid {
+        min-height: 100vh;
         grid-template-rows: var(--pt) calc(50% - var(--pt)) calc(50% - var(--pb)) var(--pb);
     }
 
