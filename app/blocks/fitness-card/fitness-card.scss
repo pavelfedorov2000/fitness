@@ -13,7 +13,7 @@
 
     &__grid {
         @media (min-width: 1025px) {
-            grid-template-rows: 8.8rem max-content var(--section-padding);
+            grid-template-rows: var(--section-padding-xl) max-content var(--section-padding);
             grid-template-areas:
                 '. . . . aside'
                 '. . body . aside'
@@ -29,8 +29,9 @@
 
         display: grid;
         grid-template-rows: max-content 1fr var(--circle-text) 7rem max-content;
-        grid-template-columns:
-            var(--circle-text) calc(var(--title) - var(--circle-text)) calc(var(--gap) * 2) 1fr var(--gap) 1fr;
+        grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text)) calc(var(--gap) * 2) 1fr var(
+                --gap
+            ) 1fr;
         grid-template-areas:
             'title title . list-1 . list-2'
             '. . . list-1 .list-2'

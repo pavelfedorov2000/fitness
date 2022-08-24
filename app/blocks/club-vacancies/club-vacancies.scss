@@ -14,7 +14,7 @@
 
     &__title {
         @media (min-width: 1025px) {
-            margin-bottom: 5.6rem;
+            margin-bottom: var(--offset-xxl);
         }
     }
 

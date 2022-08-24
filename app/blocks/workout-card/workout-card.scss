@@ -1,0 +1,197 @@
+.workout-card {
+    --col-gap: 4rem;
+    --row-gap: 3.2rem;
+
+    background-color: #fff;
+    border: 0.8rem solid var(--pink);
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: var(--col-gap) 1fr var(--col-gap) 50%;
+    grid-template-rows: var(--col-gap) max-content var(--row-gap) max-content var(--row-gap) max-content 5.7rem max-content 4.8rem max-content var(
+            --row-gap
+        );
+
+    @media (min-width: 1025px) {
+        grid-template-areas:
+            '. . . img'
+            '. top . img'
+            '. . . img'
+            '. text . img'
+            '. . . img'
+            '. timetable . img'
+            '. . . img'
+            '. instructor . img'
+            '. . . img'
+            '. btn . img'
+            '. . . img';
+    }
+    // .children-section__top
+
+    &__top {
+        @extend %flex-row-center;
+
+        @media (min-width: 1025px) {
+            grid-area: top;
+        }
+    }
+
+    // .children-section__title
+
+    &__title {
+        @extend %text-20;
+    }
+
+    // .children-section__years
+
+    &__years {
+        position: relative;
+        padding-left: 4rem;
+        @extend %text-17;
+        color: var(--dark-gray);
+
+        &::before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            left: 0rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            background-image: url(../images/icons/ico-kid.svg);
+            @extend %bg-contain;
+        }
+    }
+
+    // .children-section__text
+
+    &__text {
+        color: var(--dark-gray);
+
+        @media (min-width: 1025px) {
+            grid-area: text;
+        }
+    }
+
+    // .children-section__timetable
+
+    &__timetable {
+        @media (min-width: 1025px) {
+            grid-area: timetable;
+        }
+    }
+
+    // .children-section__img
+
+    &__img {
+        @media (min-width: 1025px) {
+            grid-area: img;
+        }
+
+        img {
+            @extend %cover;
+
+            @media (min-width: 1025px) {
+                border-radius: 0 var(--radius) var(--radius) 0;
+            }
+        }
+    }
+
+    // .children-section__instructor
+
+    &__instructor {
+        @media (min-width: 1025px) {
+            grid-area: instructor;
+        }
+    }
+
+    // .children-section__btn
+
+    &__btn {
+        @media (min-width: 1025px) {
+            grid-area: btn;
+        }
+    }
+}
+
+.workout-timetable {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem -2rem;
+    // .training-timetable__item
+
+    &__item {
+        margin: 0.5rem 2rem;
+        @include row-grid(0.8rem);
+        justify-items: start;
+    }
+
+    // .training-timetable__item-day
+
+    &__item-day {
+        @extend %text-14;
+        font-weight: 500;
+    }
+}
+
+.instructor {
+    @include row-grid(2.4rem);
+
+    // .children-instructor__info
+
+    &__info {
+        @extend %text-14;
+        display: grid;
+        grid-template-rows: 1fr max-content 0.5rem max-content 1fr;
+        grid-template-columns: 5.6rem max-content;
+        column-gap: 2.4rem;
+        grid-template-areas:
+            'ava .'
+            'ava name'
+            'ava .'
+            'ava position'
+            'ava .';
+    }
+
+    // .children-instructor__avatar
+
+    &__avatar {
+        grid-area: ava;
+
+        img {
+            @extend %cover;
+            border-radius: 50%;
+        }
+    }
+
+    // .children-instructor__name
+
+    &__name {
+        font-weight: 500;
+        grid-area: name;
+    }
+
+    // .children-instructor__descr
+
+    &__descr {
+        grid-area: position;
+    }
+
+    // .children-instructor__bio
+
+    &__bio {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        gap: 2.4rem;
+        align-items: flex-start;
+    }
+
+    // .children-instructor__bio-item
+
+    &__bio-item {
+        @extend %text-14;
+        @include row-grid(0.5rem);
+
+        dt {
+            color: var(--dark-gray);
+        }
+    }
+}

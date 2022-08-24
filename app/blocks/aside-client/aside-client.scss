@@ -1,19 +1,16 @@
 .aside-client {
-    --gap: 6.4rem;
-
     display: none;
 
     @media (min-width: 1025px) {
         display: grid;
         align-items: center;
-        gap: var(--gap);
+        gap: var(--offset-xxxl);
+        grid-template-rows: 48rem max-content;
     }
 
     // .aside-client__img
 
     &__img {
-        height: 48rem;
-
         img {
             @extend %cover;
         }
@@ -29,5 +26,9 @@
         color: var(--dark-gray);
         writing-mode: vertical-lr;
         transform: rotate(-180deg);
+    }
+
+    &--light-bkue {
+        background-color: var(--light-blue);
     }
 }

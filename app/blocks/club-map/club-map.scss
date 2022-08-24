@@ -4,9 +4,9 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, var(--gap)) var(--title) 1fr 14.8rem repeat(2, var(--gap));
-    grid-template-rows: 8.8rem max-content 1fr max-content;
+    grid-template-rows: var(--section-padding-xl) max-content 1fr max-content;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
             @include rect(top, left, 0, 0, var(--gap), var(--yellow));
         }
@@ -35,6 +35,7 @@
         grid-row: 2 / 3;
         justify-self: end;
         align-self: flex-start;
+        grid-template-columns: repeat(2, var(--rating));
     }
 
     &__info-box {

@@ -55,21 +55,27 @@
     &--ocean {
         background-color: var(--ocean);
     }
+
+    &--gray {
+        background-color: #fff;
+        color: var(--dark-gray);
+
+        span {
+            color: var(--yellow);
+        }
+    }
 }
 
 h {
-
     &1,
     &2,
     &3,
     &4,
     &5,
     &6 {
+        @extend .title;
         margin: 0;
         font-size: inherit;
-        font-weight: 900;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
     }
 
     &1 {
@@ -93,12 +99,12 @@ h {
     }
 
     &5 {
-        font-size: 1.6rem;
-        line-height: 2.2rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
 
     &6 {
-        font-size: 1.4rem;
-        line-height: 2rem;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
     }
 }

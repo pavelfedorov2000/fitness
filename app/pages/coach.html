@@ -1,19 +1,21 @@
 @@include("blocks/head/head.html", {"title": "Профиль тренера"})
-<div class="wrapper">
-    @@include('blocks/site-map/site-map.html')
-    @@include("blocks/header/header.html")
-    <main class="page">
-        @@include("blocks/promo-coach/promo-coach.html")
-        @@include("blocks/coach-bio/coach-bio.html")
-        @@include("blocks/success-stories-section/success-stories-section.html")
-        @@include("blocks/coach-photos/coach-photos.html")
-        @@include("blocks/coach-reviews/coach-reviews.html")
-        @@include("blocks/coach-goals/coach-goals.html")
-        @@include("blocks/certificates/certificates.html")
-        @@include("blocks/coach-signup/coach-signup.html")
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+<div class="wrapper wrapper--black-promo">
+	@@include('blocks/site-map/site-map.html')
+	@@include("blocks/header/header.html", {
+	"dark": true
+	})
+	<main class="page">
+		@@include("blocks/promo-coach/promo-coach.html")
+		@@include("blocks/coach-bio/coach-bio.html")
+		@@include("blocks/success-stories-section/success-stories-section.html")
+		@@include("blocks/coach-photos/coach-photos.html")
+		@@include("blocks/coach-reviews/coach-reviews.html")
+		@@include("blocks/coach-goals/coach-goals.html")
+		@@include("blocks/certificates/certificates.html")
+		@@include("blocks/coach-signup/coach-signup.html")
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
 </body>

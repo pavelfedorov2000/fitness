@@ -1,191 +1,148 @@
 @@include("blocks/head/head.html", {"title": "Блог"})
-<div class="wrapper">
-    @@include('blocks/site-map/site-map.html')
-    @@include("blocks/header/header.html")
-    <main class="page">
-        @@include('blocks/promo-blog/promo-blog.html')
+<div class="wrapper wrapper--yellow-promo">
+	@@include('blocks/site-map/site-map.html')
+	@@include("blocks/header/header.html", {
+	"dark": true
+	})
+	<main class="page">
+		@@include('blocks/promo-blog/promo-blog.html')
+		<section class="blog-page">
+			<div class="container">
+				<div class="section-body">
+					<div class="blog-page__filters tabs">
+						<button class="tab blog-page__filter active" type="button">Все категории</button>
+						<button class="tab blog-page__filter" type="button">Похудение</button>
+						<button class="tab blog-page__filter" type="button">Скидки</button>
+						<button class="tab blog-page__filter" type="button">Советы тренера</button>
+						<button class="tab blog-page__filter" type="button">Упражнения</button>
+						<button class="tab blog-page__filter" type="button">Психология</button>
+						<button class="tab blog-page__filter" type="button">Питание</button>
+						<button class="tab blog-page__filter" type="button">Истории успеха</button>
+					</div>
 
-        <section class="blog-page">
-            <div class="container">
-                <div class="section-body">
-                    <div class="blog-page__filters tabs">
-                        <button class="tab blog-page__filter active"
-                                type="button">Все категории</button>
-                        <button class="tab blog-page__filter"
-                                type="button">Похудение</button>
-                        <button class="tab blog-page__filter"
-                                type="button">Скидки</button>
-                        <button class="tab blog-page__filter"
-                                type="button">Советы тренера</button>
-                        <button class="tab blog-page__filter"
-                                type="button">Упражнения</button>
-                        <button class="tab blog-page__filter"
-                                type="button">Психология</button>
-                        <button class="tab blog-page__filter"
-                                type="button">Питание</button>
-                        <button class="tab blog-page__filter"
-                                type="button">Истории успеха</button>
-                    </div>
+					<div class="blog-page__cards">
+						<article class="article-card">
+							<time class="date article-card__date" datetime="2020-09-08">08.09.2020</time>
+							<a href="#" class="article-card__body">
+								<div class="article-card__img">
+									<picture>
+										<source type="image/webp" srcset="assets/images/content/blog/01.webp">
+										<img src="assets/images/content/blog/01.jpg" alt="фото" width="344" height="440"
+											loading="lazy">
+									</picture>
+								</div>
+								<div class="article-card__content">
+									<span class="label article-card__label">Тренировки</span>
+									<div class="article-card__title">Советы по домашним тренировкам
+										от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
+									</div>
+									<span class="article-card__views views">1 200</span>
+									<div class="arrow-btn article-card__arrow arrow-btn--white">
+										<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z"
+												fill="#020818" />
+										</svg>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article class="article-card sale">
+							<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
+							<a href="#" class="article-card__body">
+								<div class="article-card__img">
+									<picture>
+										<source type="image/webp" srcset="assets/images/content/blog/02.webp">
+										<img src="assets/images/content/blog/02.jpg" alt="фото" width="344" height="440"
+											loading="lazy">
+									</picture>
+								</div>
+								<div class="article-card__content">
+									<span class="label article-card__label">Акции</span>
+									<div class="article-card__title">
+										<span>Осенние скидки</span>
+										<span>от 17% до 33%</span>
+									</div>
+									<span class="article-card__views views">542</span>
+									<div class="arrow-btn article-card__arrow arrow-btn--white">
+										<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z"
+												fill="#020818" />
+										</svg>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article class="article-card">
+							<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
+							<a href="#" class="article-card__body">
+								<div class="article-card__img">
+									<picture>
+										<source type="image/webp" srcset="assets/images/content/blog/08.webp">
+										<img src="assets/images/content/blog/08.jpg" alt="фото" width="344" height="440"
+											loading="lazy">
+									</picture>
+								</div>
+								<div class="article-card__content">
+									<span class="label article-card__label">Тренировки</span>
+									<div class="article-card__title">
+										Как определить оптимальную
+										программу тренировок?
+									</div>
+									<span class="article-card__views views">1 200</span>
+									<div class="arrow-btn article-card__arrow arrow-btn--white">
+										<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z"
+												fill="#020818" />
+										</svg>
+									</div>
+								</div>
+							</a>
+						</article>
+						<article class="article-card sale">
+							<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
+							<a href="#" class="article-card__body">
+								<div class="article-card__img">
+									<picture>
+										<source type="image/webp" srcset="assets/images/content/blog/10.webp">
+										<img src="assets/images/content/blog/10.jpg" alt="фото" width="344" height="440"
+											loading="lazy">
+									</picture>
+								</div>
+								<div class="article-card__content">
+									<span class="label article-card__label">Акции</span>
+									<div class="article-card__title">
+										<span>Безумные</span>
+										<span>зимние скидки до 50%</span>
+									</div>
+									<span class="article-card__views views">542</span>
+									<div class="arrow-btn article-card__arrow arrow-btn--white">
+										<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z"
+												fill="#020818" />
+										</svg>
+									</div>
+								</div>
+							</a>
+						</article>
+					</div>
 
-                    <div class="blog-page__cards">
-                        <article class="article-card">
-                            <time class="date article-card__date"
-                                  datetime="2020-09-08">08.09.2020</time>
-                            <a href="#"
-                               class="article-card__body">
-                                <div class="article-card__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                srcset="assets/images/content/blog/01.webp">
-                                        <img src="assets/images/content/blog/01.jpg"
-                                             alt="фото"
-                                             width="344"
-                                             height="440"
-                                             loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="article-card__content">
-                                    <span class="label article-card__label">Тренировки</span>
-                                    <div class="article-card__title">Советы по домашним тренировкам
-                                        от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
-                                    </div>
-                                    <span class="article-card__views views">1 200</span>
-                                    <div class="arrow-btn article-card__arrow arrow-btn--white">
-                                        <svg class="arrow-btn__svg"
-                                             viewBox="0 0 24 24"
-                                             fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                  clip-rule="evenodd"
-                                                  d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z"
-                                                  fill="#020818" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="article-card sale">
-                            <time class="date article-card__date"
-                                  datetime="2020-09-08">08.09.2020 </time>
-                            <a href="#"
-                               class="article-card__body">
-                                <div class="article-card__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                srcset="assets/images/content/blog/02.webp">
-                                        <img src="assets/images/content/blog/02.jpg"
-                                             alt="фото"
-                                             width="344"
-                                             height="440"
-                                             loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="article-card__content">
-                                    <span class="label article-card__label">Акции</span>
-                                    <div class="article-card__title">
-                                        <span>Осенние скидки</span>
-                                        <span>от 17% до 33%</span>
-                                    </div>
-                                    <span class="article-card__views views">542</span>
-                                    <div class="arrow-btn article-card__arrow arrow-btn--white">
-                                        <svg class="arrow-btn__svg"
-                                             viewBox="0 0 24 24"
-                                             fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                  clip-rule="evenodd"
-                                                  d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z"
-                                                  fill="#020818" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="article-card">
-                            <time class="date article-card__date"
-                                  datetime="2020-09-08">08.09.2020 </time>
-                            <a href="#"
-                               class="article-card__body">
-                                <div class="article-card__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                srcset="assets/images/content/blog/08.webp">
-                                        <img src="assets/images/content/blog/08.jpg"
-                                             alt="фото"
-                                             width="344"
-                                             height="440"
-                                             loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="article-card__content">
-                                    <span class="label article-card__label">Тренировки</span>
-                                    <div class="article-card__title">
-                                        Как определить оптимальную
-                                        программу тренировок?
-                                    </div>
-                                    <span class="article-card__views views">1 200</span>
-                                    <div class="arrow-btn article-card__arrow arrow-btn--white">
-                                        <svg class="arrow-btn__svg"
-                                             viewBox="0 0 24 24"
-                                             fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                  clip-rule="evenodd"
-                                                  d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z"
-                                                  fill="#020818" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="article-card sale">
-                            <time class="date article-card__date"
-                                  datetime="2020-09-08">08.09.2020 </time>
-                            <a href="#"
-                               class="article-card__body">
-                                <div class="article-card__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                srcset="assets/images/content/blog/10.webp">
-                                        <img src="assets/images/content/blog/10.jpg"
-                                             alt="фото"
-                                             width="344"
-                                             height="440"
-                                             loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="article-card__content">
-                                    <span class="label article-card__label">Акции</span>
-                                    <div class="article-card__title">
-                                        <span>Безумные</span>
-                                        <span>зимние скидки до 50%</span>
-                                    </div>
-                                    <span class="article-card__views views">542</span>
-                                    <div class="arrow-btn article-card__arrow arrow-btn--white">
-                                        <svg class="arrow-btn__svg"
-                                             viewBox="0 0 24 24"
-                                             fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd"
-                                                  clip-rule="evenodd"
-                                                  d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z"
-                                                  fill="#020818" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-
-                    @@include('blocks/pagination/pagination.html', {
-                    "class": "blog-page"
-                    })
-                </div>
-            </div>
-        </section>
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+					@@include('blocks/pagination/pagination.html', {
+					"class": "blog-page"
+					})
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
 </body>

@@ -1,5 +1,4 @@
 .club-benefits {
-
     --img: 74.8rem;
     --title: 62.5rem;
     --offset: var(--section-paading);
@@ -7,7 +6,7 @@
 
     position: relative;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
             @include rect(bottom, left, 0, 0, var(--gap), var(--yellow));
         }
@@ -18,16 +17,15 @@
     &__grid {
         display: grid;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             min-height: 100vh;
             grid-template-columns: repeat(2, var(--gap)) calc(var(--img) - var(--gap) * 2) 1fr repeat(2, var(--gap));
-            grid-template-rows: 8.8rem 1fr 12.3rem;
+            grid-template-rows: var(--section-padding-xl) 1fr 12.3rem;
         }
     }
 
     &__img {
-
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-row: 1 / -1;
             grid-column: 1 / span 3;
         }
@@ -40,25 +38,25 @@
     &__content {
         display: grid;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-row: 2 / 3;
             grid-column: 3 / 5;
             grid-template-rows: max-content 10.4rem max-content var(--circle-text);
-            grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text) - var(--offset)) var(--offset) 1fr;
+            grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text) - var(--offset)) var(
+                    --offset
+                ) 1fr;
             grid-template-areas:
                 'title title title .'
                 '. . . .'
                 '. . ol ol'
-                'circle . ol ol'
-            ;
+                'circle . ol ol';
         }
     }
 
     // .club-benefits__title
 
     &__title {
-
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: title;
         }
     }
@@ -66,7 +64,7 @@
     // .club-benefits__circle-text
 
     &__circle-text {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: circle;
         }
     }
@@ -78,13 +76,13 @@
         grid-template-rows: repeat(4, max-content);
         gap: 6.4rem 4.2rem;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: ol;
         }
     }
 
     &__marquee {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             position: absolute;
             top: 0;
             right: 6rem;

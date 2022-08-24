@@ -5,19 +5,17 @@
 }
 
 .views {
-    position: relative;
-    padding-left: 3rem;
-    @extend %text-13;
-    line-height: 2rem;
+    @extend %vertical-align;
 
-    &::before {
-        content: '';
-        position: absolute;
-        @extend %pos-center-y;
-        left: 0;
+    &__icon {
+        flex-shrink: 0;
+        margin-right: 0.8rem;
         width: 2rem;
         height: 2rem;
-        background-image: url(../images/icons/view.svg);
-        @extend %bg-contain;
+    }
+
+    &__value {
+        @extend %text-13;
+        line-height: 2rem;
     }
 }

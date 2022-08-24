@@ -41,6 +41,44 @@ body {
     overflow-x: hidden;
     @extend %flex-col;
     min-height: 100vh;
+
+    &--yellow-promo {
+        .header {
+            &__logo-img {
+                path {
+                    &:last-child {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            &--dark {
+                .logo__text {
+                    color: var(--black);
+                }
+            }
+        }
+    }
+
+    &--black-promo {
+        .header {
+            &--dark {
+                .header {
+                    &__logo-img {
+                        path {
+                            &:first-child {
+                                fill: #fff;
+                            }
+                        }
+                    }
+                }
+
+                .logo__text {
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
 
 .page {
@@ -108,7 +146,6 @@ img {
 }
 
 .promo {
-
     &-body,
     &-bg {
         grid-row: 1 / 2;

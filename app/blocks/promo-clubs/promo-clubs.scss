@@ -1,0 +1,232 @@
+.promo-clubs {
+    --map-height: 55.2rem;
+    --select: 34.4rem;
+
+    &__grid {
+        @media (min-width: 1025px) {
+            grid-template-rows: var(--header-height) calc(var(--gap) - var(--header-height)) calc(
+                    var(--map-height) - (var(--gap) - var(--header-height))
+                );
+        }
+    }
+
+    &__content {
+        position: relative;
+        grid-column: 1 / -2;
+
+        @media (max-width: 1024px) {
+            padding-top: var(--header-height);
+            grid-column: 1 / -1;
+        }
+
+        @media (min-width: 1025px) {
+            grid-row: 2 / -1;
+        }
+    }
+    // .promo-clubs__map
+
+    &__map {
+        @media (min-width: 1025px) {
+            height: 100%;
+        }
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .promo-clubs__select
+
+    &__select {
+        @media (min-width: 1025px) {
+            position: absolute;
+            top: 6.5rem;
+            left: calc(var(--gap) * 2);
+            width: var(--select);
+            box-shadow: $bsh;
+        }
+
+        @media (max-width: 1024px) {
+            border: 0.1rem solid var(--black);
+        }
+    }
+
+    // .promo-clubs__aside-img
+
+    &__aside-img {
+        display: none;
+
+        @media (min-width: 1025px) {
+            display: block;
+            grid-column: -2 / -1;
+            grid-row: 1 / span 2;
+        }
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .promo-clubs__decor-title
+
+    &__decor-title {
+        display: none;
+
+        @media (min-width: 1025px) {
+            display: flex;
+            grid-column: -2 / -1;
+            grid-row: -2 / -1;
+        }
+    }
+}
+
+.clubs-page {
+    position: relative;
+
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(top, right, 0, 0, 48.5rem, var(--beige));
+        }
+
+        &:after {
+            @include rect(bottom, right, 0, 0, 47.2rem, var(--yellow));
+        }
+    }
+    // .clubs-page__content
+
+    &__content {
+        padding: var(--offset-xxxl) 0 var(--section-padding);
+    }
+
+    // .clubs-page__title
+
+    &__title {
+        display: none;
+        margin-bottom: 5.5rem;
+
+        @media (min-width: 1025px) {
+            display: block;
+        }
+    }
+
+    // .clubs-page__inner
+
+    &__inner {
+        display: grid;
+
+        @media (min-width: 1025px) {
+            grid-template-columns: max-content 1fr;
+            align-items: flex-start;
+        }
+    }
+
+    // .clubs-page__nav
+
+    &__nav {
+        display: none;
+
+        @media (min-width: 1025px) {
+            @include row-grid(var(--offset-m));
+        }
+    }
+
+    // .clubs-page__nav-title
+
+    &__nav-title {
+        @extend %text-14;
+        color: var(--dark-gray);
+    }
+
+    // .clubs-page__nav-btns
+
+    &__nav-btns {
+        @include row-grid(var(--offset-m));
+    }
+
+    // .clubs-page__nav-btn
+
+    &__nav-btn {
+        @extend %vertical-align;
+        @extend .title;
+        @extend %text-12;
+        font-weight: 500;
+        color: var(--dark-gray);
+
+        span {
+            margin-right: 1.7rem;
+            padding: 0.1rem 0.8rem;
+            background-color: var(--light-blue);
+            border-radius: var(--offset-m);
+        }
+
+        &.active {
+            color: var(--black);
+
+            span {
+                background-color: var(--black);
+                color: #fff;
+            }
+        }
+    }
+
+    // .clubs-page__regions
+
+    &__regions {
+        @media (min-width: 1025px) {
+            padding-left: 7.8rem;
+        }
+    }
+
+    // .clubs-page__region
+
+    &__region {
+        @include padding-y(4rem);
+
+        &:not(:last-child) {
+            border-bottom: 0.1rem solid var(--black);
+        }
+
+        &:first-child {
+            @media (max-width: 1024px) {
+                padding-top: 0;
+            }
+
+            @media (min-width: 1025px) {
+                border-top: 0.1rem solid var(--black);
+            }
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.region {
+    // .region__title
+
+    &__title {
+        @extend .title;
+        @extend %text-20;
+        margin-bottom: 3.4rem;
+    }
+
+    // .region__items
+
+    &__items {
+        display: grid;
+        gap: 6rem var(--offset-m);
+
+        @media (max-width: 1024px) {
+            row-gap: var(--offset-l);
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1025px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
