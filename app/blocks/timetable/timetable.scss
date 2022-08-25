@@ -5,11 +5,13 @@
     --rect: 25.6rem;
 
     position: relative;
+
     @media (min-width: 1025px) {
         &:before {
             @include rect(top, right, calc(100% - var(--rect) - var(--pb)), 0, var(--rect), var(--beige));
         }
     }
+
     // .timetable-section__grid
 
     &__grid {
@@ -68,6 +70,7 @@
 
     &__stats {
         display: none;
+
         @media (min-width: 1025px) {
             display: flex;
             flex-direction: column;
@@ -79,6 +82,7 @@
 
 .date-box {
     @extend %grid-center;
+    align-content: center;
     background-color: var(--black);
     color: #fff;
     width: 9.6rem;
@@ -92,13 +96,9 @@
     --people: 16.3rem;
 
     display: grid;
-    grid-template-rows: var(--gap) max-content 2.4rem max-content calc(var(--gap) / 2) max-content 1fr minmax(
-            var(--coach),
-            max-content
-        );
-    grid-template-columns: var(--gap) 31.5rem 4rem 5.5rem 11.7rem 1fr 3rem calc(var(--people) - var(--coach)) var(
-            --coach
-        );
+    grid-template-rows: var(--gap) max-content 2.4rem max-content calc(var(--gap) / 2) max-content 1fr minmax(var(--coach),
+            max-content);
+    grid-template-columns: var(--gap) 31.5rem 4rem 5.5rem 11.7rem 1fr 3rem calc(var(--people) - var(--coach)) var(--coach);
     background-color: var(--light-blue);
     position: relative;
 

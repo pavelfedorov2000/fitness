@@ -7,6 +7,7 @@
         app.clubsCompre.init();
         app.articleAside.init();
         app.faq.init();
+        app.childrenSections.init();
         //app.burger.init();
         //app.slider.init();
         //app.menu.init();
@@ -203,33 +204,6 @@
             }
         }
 
-        if (document.querySelectorAll('.children-sections-slider').length) {
-            const childrenSectionsSlider = new Splide('.children-sections-slider', {
-                type: 'loop',
-                gap: '2.4rem',
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                    //pagination: 'slider-nav__pagination'
-                },
-                pagination: false,
-            });
-
-            const childrenSectionsSliderBar = childrenSectionsSlider.root.querySelector('.slider-nav__progress-bar');
-
-            childrenSectionsSlider.on('mounted move', function () {
-                const end = childrenSectionsSlider.Components.Controller.getEnd() + 1;
-                //console.log(end);
-                childrenSectionsSliderBar.style.width = String(100 * (childrenSectionsSlider.index + 1) / end) + '%';
-                childrenSectionsSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${childrenSectionsSlider.index + 1}`;
-                childrenSectionsSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            childrenSectionsSlider.mount();
-        }
-
         if (document.querySelectorAll('.success-stories-slider').length) {
             const successStoriesSlider = new Splide('.success-stories-slider', {
                 type: 'loop',
@@ -255,6 +229,57 @@
             });
 
             successStoriesSlider.mount();
+        }
+
+        if (document.querySelectorAll('.individual-lessons-slider').length) {
+            const individualLessonsSlider = new Splide('.individual-lessons-slider', {
+                type: 'loop',
+                gap: '6.4rem',
+                classes: {
+                    arrows: 'splide__arrows slider-nav__arrows',
+                    arrow: 'splide__arrow slider-nav__arrow',
+                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
+                    next: 'splide__arrow--next slider-nav__arrow--next',
+                },
+                pagination: false
+            });
+
+            const individualLessonsSliderBar = individualLessonsSlider.root.querySelector('.slider-nav__progress-bar');
+
+            individualLessonsSlider.on('mounted move', function () {
+                const end = individualLessonsSlider.Components.Controller.getEnd() + 1;
+                individualLessonsSliderBar.style.width = String(100 * (individualLessonsSlider.index + 1) / end) + '%';
+                individualLessonsSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${individualLessonsSlider.index + 1}`;
+                individualLessonsSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
+            });
+
+            individualLessonsSlider.mount();
+        }
+
+        if (document.querySelectorAll('.services-more-slider').length) {
+            const servicesMoreSlider = new Splide('.services-more-slider', {
+                type: 'loop',
+                perPage: 3,
+                gap: '4rem',
+                classes: {
+                    arrows: 'splide__arrows slider-nav__arrows',
+                    arrow: 'splide__arrow slider-nav__arrow',
+                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
+                    next: 'splide__arrow--next slider-nav__arrow--next',
+                },
+                pagination: false
+            });
+
+            const servicesMoreSliderBar = servicesMoreSlider.root.querySelector('.slider-nav__progress-bar');
+
+            servicesMoreSlider.on('mounted move', function () {
+                const end = servicesMoreSlider.Components.Controller.getEnd() + 1;
+                servicesMoreSliderBar.style.width = String(100 * (servicesMoreSlider.index + 1) / end) + '%';
+                servicesMoreSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${servicesMoreSlider.index + 1}`;
+                servicesMoreSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
+            });
+
+            servicesMoreSlider.mount();
         }
 
 

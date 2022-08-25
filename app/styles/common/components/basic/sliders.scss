@@ -1,21 +1,20 @@
 .slider-nav {
     $this: &;
-    --nav-gap: 1.6rem;
+
     --proressbar-width: 6.7rem;
     --proressbar-height: 0.2rem;
 
     display: grid;
-    gap: var(--nav-gap);
+    gap: var(--offset-s);
     grid-template-columns: calc(var(--nav) * 2) max-content var(--proressbar-width) max-content;
     grid-template-areas: 'arrows current bar total';
     align-items: center;
     height: var(--nav);
+    padding-right: var(--offset-s);
     background-color: var(--black);
     color: #fff;
-    padding-right: var(--nav-gap);
 
     @media (max-width: 1024px) {
-        --nav: 4.8rem;
         grid-template-columns: calc(var(--nav) * 2) 1fr max-content var(--proressbar-width) max-content;
         grid-template-areas: 'arrows . current bar total';
     }
@@ -75,6 +74,7 @@
     &--white {
         background-color: #fff;
         color: var(--black);
+
         #{$this} {
             &__arrow {
                 svg path {
@@ -84,6 +84,22 @@
 
             &__progress-bar {
                 background-color: var(--black);
+            }
+        }
+    }
+
+    &--brs {
+        border-radius: $brs;
+
+        #{$this} {
+            &__arrow {
+                &--prev {
+                    border-radius: $brs 0 0 $brs;
+                }
+
+                &--next {
+                    border-radius: 0 $brs $brs 0;
+                }
             }
         }
     }

@@ -1,3 +1,78 @@
 .individual-lessons {
-  // your code
+    --slider: 73rem;
+
+    @include padding-y(var(--section-padding-xl));
+    position: relative;
+
+    &::before {
+        @extend %contain;
+        @extend %pos-center-y;
+
+        @media(min-width: 1025px) {
+            content: '';
+            position: absolute;
+            left: 15.3rem;
+            width: 138.2rem;
+            height: 60rem;
+            background-image: url(../images/elements/services.svg);
+        }
+    }
+
+    @media(min-width: 1025px) {
+        background-image: url(../images/decor/abbs.svg);
+        background-size: 117rem 32.8rem;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+    }
+
+    // .individual-lessons__inner
+
+    &__inner {
+        @extend %flex-row;
+        align-items: flex-start;
+    }
+
+    // .individual-lessons__title
+
+    &__title {
+        position: relative;
+        padding-top: var(--offset-l);
+        max-width: 28rem;
+        @extend %text-20;
+        @extend .title;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--section-padding);
+            height: 0.2rem;
+            background-color: var(--yellow);
+        }
+    }
+
+    // .individual-lessons__slider
+
+    &__slider {
+        width: var(--slider);
+
+        .splide {
+            &__track {
+                overflow: visible;
+            }
+
+            &__slide {
+                &.is-prev {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__slider-nav {
+        position: absolute;
+        bottom: 0;
+        left: calc((100vw - var(--gap) * 2) - var(--slider) * (-1));
+    }
 }

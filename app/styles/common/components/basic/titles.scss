@@ -31,6 +31,13 @@
             margin-left: 1.6rem;
         }
     }
+
+    &--stroke {
+        span {
+            margin-left: 2.4rem;
+            @include border-text(var(--black), transparent);
+        }
+    }
 }
 
 .section-suptitle {
@@ -67,6 +74,7 @@
 }
 
 h {
+
     &1,
     &2,
     &3,

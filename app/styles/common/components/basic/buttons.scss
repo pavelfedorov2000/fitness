@@ -6,7 +6,7 @@
     background-color: var(--yellow);
     text-transform: uppercase;
     text-align: center;
-    transition: 0.5s background-color;
+    transition: .3s background-color;
 
     @media (any-hover: hover) {
         &:hover {
@@ -91,7 +91,7 @@
     font-weight: 500;
     background-color: #fff;
     color: var(--black);
-    border-radius: 3.2rem;
+    border-radius: $brs;
     padding: 0.1rem 0.8rem;
     transition: .3s background-color;
 

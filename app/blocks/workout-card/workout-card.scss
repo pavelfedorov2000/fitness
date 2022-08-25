@@ -1,15 +1,14 @@
 .workout-card {
+    $this: &;
+
     --col-gap: 4rem;
-    --row-gap: 3.2rem;
 
     background-color: #fff;
-    border: 0.8rem solid var(--pink);
-    border-radius: var(--radius);
+    border: var(--offset-xxs) solid var(--pink);
+    border-radius: $brs;
     display: grid;
     grid-template-columns: var(--col-gap) 1fr var(--col-gap) 50%;
-    grid-template-rows: var(--col-gap) max-content var(--row-gap) max-content var(--row-gap) max-content 5.7rem max-content 4.8rem max-content var(
-            --row-gap
-        );
+    grid-template-rows: var(--col-gap) max-content var(--offset-l) max-content var(--offset-l) max-content 5.7rem max-content 4.8rem max-content var(--offset-l);
 
     @media (min-width: 1025px) {
         grid-template-areas:
@@ -25,6 +24,7 @@
             '. btn . img'
             '. . . img';
     }
+
     // .children-section__top
 
     &__top {
@@ -90,7 +90,7 @@
             @extend %cover;
 
             @media (min-width: 1025px) {
-                border-radius: 0 var(--radius) var(--radius) 0;
+                border-radius: 0 $brs $brs 0;
             }
         }
     }
@@ -106,8 +106,37 @@
     // .children-section__btn
 
     &__btn {
+        @include padding-x(2.8rem);
+
         @media (min-width: 1025px) {
             grid-area: btn;
+        }
+    }
+
+    &--light-blue {
+        background-color: var(--light-blue);
+
+        .label {
+            background-color: #fff;
+        }
+    }
+
+    &--without-brs {
+        border: none;
+        border-radius: 0;
+
+        #{$this} {
+            &__img {
+                img {
+                    @media(min-width: 1025px) {
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            &__btn {
+                border-radius: 0;
+            }
         }
     }
 }

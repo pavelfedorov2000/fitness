@@ -1,3 +1,71 @@
 .club-services {
-  // your code
+
+    position: relative;
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(top, right, 0, 0, 28.5rem, var(--ocean));
+        }
+    }
+
+    // .club-services__grid
+
+    &__grid {}
+
+    // .club-services__content
+
+    &__content {}
+
+    // .club-services__title
+
+    &__title {
+        margin-bottom: var(--offset-xxl);
+    }
+
+    // .club-services__tabs
+
+    &__tabs {
+        @extend %flex-row;
+        flex-wrap: wrap;
+        @include padding-y(3rem);
+    }
+
+    // .club-services__tab
+
+    &__tab {
+        min-height: 3.6rem;
+    }
+
+    // .club-services__tabs-content
+
+    &__tabs-content {
+        grid-column: 1 / -1;
+    }
+
+    .workout-card {
+        &__btn {
+            justify-self: end;
+        }
+    }
+}
+
+.tab {
+    position: relative;
+    text-align: left;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 0.6rem;
+        background-color: var(--yellow);
+    }
+
+    &.active {
+        &:after {
+            width: 100%;
+        }
+    }
 }

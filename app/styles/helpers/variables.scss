@@ -28,12 +28,12 @@
     --header-height: 9.6rem;
     --arrow-btn: 4.8rem;
     --circle-text: 22rem;
+    --half-circle: calc(var(--circle-text) / 2);
     --marquee-padding: 4.9rem;
     --input-height: 5.6rem;
     --section-mh: 80rem;
     --section-padding: 8rem;
     --section-padding-xl: 8.8rem;
-    --radius: 3.2rem;
     --nav: 5.6rem;
     --card-height: 44rem;
     --team-card-h: 41.6rem;
@@ -55,6 +55,7 @@
     @media (max-width: 1024px) {
         --header-height: 4.8rem;
         --input-height: 4.8rem;
+        --nav: 4.8rem;
     }
 
     @media (max-width: 767px) {
@@ -65,9 +66,11 @@
 }
 
 $fz: 15;
-$ff: 'Gotham Pro', sans-serif;
+$ff: 'Gotham Pro',
+sans-serif;
 $color-default: var(--black);
 $bsh: 0rem 0.8rem 2.4rem rgba(0, 0, 0, 0.2);
+$brs: 3.2rem;
 
 %text-10 {
     font-size: rem(10);

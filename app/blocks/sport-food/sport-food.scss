@@ -1,3 +1,104 @@
 .sport-food {
-  // your code
+    --content: 44.6rem;
+
+    position: relative;
+
+    &::after {
+        @extend %bg-contain;
+    }
+
+    @media(min-width: 1025px) {
+        background-image: url(../images/decor/lifter.svg);
+        background-size: 55.3rem 42rem;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+
+        &:before {
+            @include rect(top, left, 0, 0, 28.6rem, var(--ocean));
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 4rem;
+            left: 14.7rem;
+            width: 75.7rem;
+            height: 49.2rem;
+            background-image: url(../images/elemets/sport-food.svg);
+        }
+    }
+
+    // .sport-food__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, var(--gap)) var(--content) 10.9rem 1fr repeat(2, var(--gap));
+        grid-template-rows: 1fr max-content;
+    }
+
+    // .sport-food__content
+
+    &__content {
+        padding: 9.2rem 0 8.3rem;
+        grid-column: 3 / 4;
+        grid-row: 1 / -1;
+
+        > * {
+            margin-bottom: var(--arrow-btn);
+        }
+    }
+
+    // .sport-food__title
+
+    &__title {
+        position: relative;
+        padding-bottom: var(--arrow-btn);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: var(--section-padding);
+            height: 0.2rem;
+            background-color: var(--yellow);
+        }
+
+        span {
+            color: var(--yellow);
+        }
+    }
+
+    // .sport-food__text
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: 6.6rem;
+        }
+    }
+
+    // .sport-food__labels
+
+    &__labels {
+        display: flex;
+        flex-wrap: wrap;
+        margin: calc(var(--offset-l) * (-1) / 2);
+
+        > * {
+            margin: calc(var(--offset-l) / 2);
+        }
+    }
+
+    // .sport-food__img
+
+    &__img {
+        grid-column: 5 / -1;
+        grid-row: 1 / -1;
+    }
+
+    &__decor-title {
+        grid-column: -2 / -1;
+        grid-row: -2 / -1;
+        padding: 6.5rem 0;
+    }
 }

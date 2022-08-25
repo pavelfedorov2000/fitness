@@ -1,0 +1,79 @@
+.test-workout {
+    --title-mb: 5.3rem;
+
+    position: relative;
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(top, right, 0, 0, var(--gap), var(--ocean));
+        }
+
+        &:after {
+            @include rect(bottom, right, 0, 0, var(--gap), var(--beige));
+        }
+    }
+
+    // .test-workout__content
+
+    &__content {
+        display: grid;
+        grid-template-columns: 27.2rem 7.5rem 1fr;
+        grid-template-rows: max-content var(--title-mb) max-content 3.5rem max-content var(--offset-xs) max-content;
+        grid-template-areas: 'title title title'
+            '. . .'
+            'ol . video'
+            '. . video'
+            'btn . video'
+            '. . video'
+            'small . video'
+        ;
+    }
+
+    // .test-workout__title
+
+    &__title {
+        max-width: 35rem;
+        grid-area: title;
+    }
+
+    // .test-workout__list
+
+    &__list {
+        @include row-grid(var(--offset-l));
+        grid-area: ol;
+    }
+
+    // .test-workout__btn
+
+    &__btn {
+        @include padding-x(4.7rem);
+        grid-area: btn;
+    }
+
+    // .test-workout__subbtn-text
+
+    &__subbtn-text {
+        @extend %text-12;
+        color: var(--dark-gray);
+        grid-area: small;
+    }
+
+    // .test-workout__video
+
+    &__video {
+        position: relative;
+        grid-area: video;
+    }
+
+    // .test-workout__circle-text
+
+    &__circle-text {
+        position: absolute;
+        top: calc(var(--half-circle) * (-1));
+        right: calc(var(--half-circle) * (-1));
+    }
+
+    // .test-workout__video-body
+
+    &__video-body {}
+}

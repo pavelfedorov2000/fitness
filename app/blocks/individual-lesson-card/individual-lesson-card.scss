@@ -1,0 +1,66 @@
+.individual-lesson-card {
+    --card: 73rem;
+    --half-card: calc(var(--card) / 2);
+    --btn-full: 39.9rem;
+    --gap: 4rem;
+    --btn: calc(var(--half-card) - var(--gap));
+    --btn-offset: calc(var(--btn-full) - var(--btn));
+
+    width: var(--card);
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: var(--gap) 1fr var(--gap) var(--btn-offset) 1fr;
+    grid-template-rows: var(--gap) max-content var(--gap) max-content 1fr max-content var(--offset-s) max-content var(--gap);
+    color: #fff;
+    // .individual-lesson-card__img
+
+    &__img {
+        grid-row: 1 / -1;
+        grid-column: -3 / -1;
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .individual-lesson-card__title
+
+    &__title {
+        @extend %text-20;
+        @extend .title;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+
+    // .individual-lesson-card__text
+
+    &__text {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+
+    // .individual-lesson-card__btn
+
+    &__btn {
+        grid-row: -5 / -4;
+        grid-column: 2 / 5;
+    }
+
+    // .individual-lesson-card__info-text
+
+    &__info-text {
+        @extend %text-13;
+        grid-row: -3 / -2;
+        grid-column: 2 / 3;
+    }
+
+    &--bg {
+        &_ocean {
+            background-color: var(--ocean);
+        }
+
+        &_black {
+            background-color: var(--black);
+        }
+    }
+}

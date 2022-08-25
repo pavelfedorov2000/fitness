@@ -1,9 +1,8 @@
 .children-sections {
-    --title-mb: 5.6rem;
-
     position: relative;
     padding-top: 21.1rem;
     padding-bottom: 12.8rem;
+
     &::before {
         content: '';
         position: absolute;
@@ -17,41 +16,43 @@
         background-repeat: no-repeat;
     }
 
-    // .children-sections__container
-
-    &__container {
-    }
-
-    // .children-sections__body
-
-    &__body {
-    }
-
     // .children-sections__title
 
     &__title {
-        margin-bottom: var(--title-mb);
+        position: relative;
+        z-index: 25;
+        margin-bottom: var(--offset-xxl);
+    }
+}
+
+.workout-section {
+    $this: &;
+
+    &__slider-nav {
+        position: absolute;
+        top: calc(var(--offset-xxl) * (-2));
+        right: 0;
     }
 
     &__slider {
         width: calc(100vw - var(--gap) * 4);
     }
 
-    &__slider-nav {
-        position: absolute;
-        top: calc(var(--title-mb) * (-2));
-        right: 0;
-        border-radius: var(--radius);
+    &--without-top {
+        --nav: var(--arrow-btn);
+
+        #{$this}__slider-nav {
+            top: auto;
+            right: auto;
+            bottom: 4rem;
+            left: 4rem;
+            height: var(--nav);
+        }
 
         .slider-nav {
             &__arrow {
-                &--prev {
-                    border-radius: var(--radius) 0 0 var(--radius);
-                }
-
-                &--next {
-                    border-radius: 0 var(--radius) var(--radius) 0;
-                }
+                width: var(--nav);
+                height: var(--nav);
             }
         }
     }

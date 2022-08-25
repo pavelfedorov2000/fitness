@@ -1,3 +1,16 @@
 .aims {
-  // your code
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 33rem;
+    gap: var(--offset-xxs);
+
+    &__item {
+        &:nth-child(6n + 1) {
+            grid-column: span 2;
+        }
+
+        &:nth-child(6n + 2) {
+            grid-row: span 2;
+        }
+    }
 }

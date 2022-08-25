@@ -1,0 +1,62 @@
+.club-services-more {
+    position: relative;
+    @include padding-y(var(--section-padding-xl));
+
+    @media(min-width: 1025px) {
+        background-image: url(../images/elements/services-more.svg);
+        background-size: 155.2rem 45.5rem;
+        background-position: calc(100% - var(--section-padding)) var(--offset-xxl);
+        background-repeat: no-repeat;
+
+        &:before {
+            @include rect(bottom, right, 0, 0, 28.8rem, var(--ocean));
+        }
+    }
+
+    // .club-services-more__title
+
+    &__title {
+        position: absolute;
+        @extend %pos-center-x;
+        @extend %text-20;
+        @extend .title;
+        max-width: 30.4rem;
+    }
+
+    &__slider-nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.club-service-more {
+    @include row-grid(var(--offset-l));
+    align-content: start;
+    justify-items: start;
+    // .club-service-more__img
+
+    &__img {
+        height: 28rem;
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .club-service-more__title
+
+    &__title {
+        @extend %text-17;
+        font-weight: 700;
+        color: #000;
+    }
+
+    &.splide__slide {
+        transition: .3s padding-top;
+
+        &.is-next {
+            padding-top: calc(8.4rem + var(--offset-xxl));
+        }
+    }
+}
