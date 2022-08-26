@@ -2,9 +2,8 @@
     --form: 28.8rem;
     --img: 48rem;
     --decor: 17.1rem;
-    --decor--offset: 4rem;
+    --decor--offset: var(--offset-xls);
     --pt: 12rem;
-    --row-gap: 2.4rem;
 
     position: relative;
 
@@ -24,15 +23,13 @@
         display: grid;
 
         @media (max-width: 1024px) {
-            row-gap: var(--row-gap);
-            @include padding-y(var(--row-gap));
+            row-gap: var(--offset-m);
+            @include padding-y(var(--offset-m));
         }
 
         @media (min-width: 1025px) {
             grid-template-rows: var(--pt) max-content 7.2rem max-content 11rem 23.5rem 1fr 10.4rem - 4.9rem;
-            grid-template-columns: var(--form) 4.8rem 10.1rem 1fr calc(var(--img) - var(--circle-text) / 2) calc(
-                    var(--circle-text) / 2
-                );
+            grid-template-columns: var(--form) var(--arrow-btn) 10.1rem 1fr calc(var(--img) - var(--circle-text) / 2) calc(var(--circle-text) / 2);
         }
 
         > * {
@@ -64,6 +61,7 @@
 
         &::before {
             @extend %bg-contain;
+
             @media (min-width: 1025px) {
                 content: '';
                 position: absolute;
@@ -117,6 +115,7 @@
             width: 100vw;
             margin-left: calc(var(--mob-padding) * (-1));
         }
+
         @media (max-width: 500px) {
             height: 19.4rem;
         }

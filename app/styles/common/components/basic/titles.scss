@@ -28,13 +28,13 @@
     &--border {
         span {
             display: inline-block;
-            margin-left: 1.6rem;
+            margin-left: var(--offset-s);
         }
     }
 
     &--stroke {
         span {
-            margin-left: 2.4rem;
+            margin-left: var(--offset-m);
             @include border-text(var(--black), transparent);
         }
     }

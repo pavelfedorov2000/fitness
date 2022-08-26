@@ -72,12 +72,12 @@
         @extend %flex-col;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 2.4rem;
+        padding: var(--offset-m);
         color: #fff;
-        text-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.2);
+        text-shadow: $bsh;
 
         @media(max-width: 767px) {
-            padding: 1.6rem;
+            padding: var(--offset-s);
         }
     }
 
@@ -105,7 +105,7 @@
     // .article-card__views
 
     &__views {
-        text-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.2);
+        text-shadow: $bsh;
     }
 
     &__arrow {
@@ -134,7 +134,7 @@
 
             span {
                 background-color: var(--red);
-                @include padding-x(0.8rem);
+                @include padding-x(var(--offset-xxs));
             }
         }
     }

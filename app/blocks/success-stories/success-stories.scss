@@ -1,5 +1,4 @@
 .success-stories {
-
     padding-top: var(--arrow-btn);
     padding-bottom: var(--section-padding);
     position: relative;
@@ -35,10 +34,10 @@
         --row-gap-3: 10.4rem;
 
         display: grid;
-        gap: 0 4rem;
+        gap: 0 var(--offset-xls);
 
         @media(max-width: 1024px) {
-            gap: 2.4rem;
+            gap: var(--offset-m);
         }
 
         @media(min-width: 768px) {
@@ -74,7 +73,7 @@
         }
 
         @media(max-width: 1024px) {
-            margin-top: 3.2rem - 2.4rem;
+            margin-top: calc(var(--offset-l) - var(--offset-m));
         }
     }
 

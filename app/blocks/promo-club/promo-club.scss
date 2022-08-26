@@ -1,8 +1,5 @@
 .promo-club {
-
     --pt: 11.2rem;
-    --pb: 5.6rem;
-    --col-gap: 3.2rem;
     --title: 39.3rem;
 
     display: grid;
@@ -24,7 +21,7 @@
     // .promo-club__body
 
     &__body {
-        grid-template-rows: calc(var(--header-height) + var(--pt)) max-content calc(var(--gap) - var(--pb)) var(--pb);
+        grid-template-rows: calc(var(--header-height) + var(--pt)) max-content calc(var(--gap) - var(--offset-xxl)) var(--offset-xxl);
         grid-template-areas:
             '. . . . marquee'
             '. . content . marquee'
@@ -39,7 +36,7 @@
         grid-area: content;
         display: grid;
         grid-template-columns: var(--rating) var(--col-gap) calc(var(--title) - var(--col-gap) - var(--rating)) 1fr var(--gap);
-        grid-template-rows: max-content 1fr max-content calc(var(--pb) - 0.1rem);
+        grid-template-rows: max-content 1fr max-content calc(var(--offset-xxl) - 0.1rem);
         grid-template-areas:
             'title title title . box'
             '. . . . .'

@@ -1,0 +1,120 @@
+.coach-rating {
+    position: relative;
+    // .coach-rating__head
+
+    &__head {
+        cursor: pointer;
+        @extend %flex-row-center;
+        background-color: #fff;
+        padding-right: var(--offset-xxs);
+    }
+
+    // .coach-rating__avatar
+
+    &__avatar {
+        width: var(--offset-xxxl);
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .coach-rating__head-info
+
+    &__head-info {
+        margin-left: var(--offset-l);
+        margin-right: auto;
+
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 0.1rem;
+            }
+        }
+    }
+
+    // .coach-rating__name
+
+    &__name {
+        @extend .title;
+        @extend %text-14;
+        font-weight: 700;
+    }
+
+    // .coach-rating__head-descr
+
+    &__head-descr {
+        @extend %text-12;
+        color: var(--dark-gray);
+    }
+
+    // .coach-rating__average
+
+    &__average {
+        @extend %grid-center;
+        @extend %text-20;
+        @extend .title;
+        width: var(--arrow-btn);
+        height: var(--arrow-btn);
+        background-color: var(--green);
+        color: #fff;
+    }
+
+    // .coach-rating__body
+
+    &__body {
+        position: absolute;
+        top: var(--offset-xxxl);
+        left: var(--offset-xxxl);
+        right: 0;
+        background-color: #fff;
+        padding: calc(var(--offset-l) / 2) var(--offset-l) var(--offset-l);
+        @include row-grid(var(--offset-s));
+    }
+
+    // .coach-rating__item
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr minmax(2.1rem, max-content);
+        grid-template-rows: repeat(2, max-content);
+        gap: 0.2rem 2rem;
+        grid-template-areas:
+            'text text'
+            'bar value'
+        ;
+    }
+
+    // .coach-rating__item-text
+
+    &__item-text {
+        @extend %text-13;
+        grid-area: text;
+    }
+
+    // .coach-rating__item-bar
+
+    &__item-bar {
+        align-self: center;
+        grid-area: bar;
+        position: relative;
+        height: 0.6rem;
+        background-color: var(--light-blue);
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: var(--green);
+        }
+    }
+
+    // .coach-rating__item-value
+
+    &__item-value {
+        @extend %text-13;
+        font-weight: 500;
+        color: var(--dark-gray);
+        grid-area: value;
+    }
+}

@@ -1,3 +1,70 @@
-<div class="coach-photos">
-  <!--your code-->
-</div>
+<section class="coach-photos">
+    <div class="container">
+        <div class="section-body">
+            <div class="splide coach-photos__slider coach-photos-slider">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="assets/images/content/coach-photos/01.webp">
+                                <img src="assets/images/content/coach-photos/01.jpg"
+                                     alt="фото"
+                                     width="200"
+                                     height="200"
+                                     loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="splide__slide">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="assets/images/content/coach-photos/02.webp">
+                                <img src="assets/images/content/coach-photos/02.jpg"
+                                     alt="фото"
+                                     width="553"
+                                     height="553"
+                                     loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="splide__slide">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="assets/images/content/coach-photos/03.webp">
+                                <img src="assets/images/content/coach-photos/03.jpg"
+                                     alt="фото"
+                                     width="200"
+                                     height="200"
+                                     loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="splide__slide">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="assets/images/content/coach-photos/02.webp">
+                                <img src="assets/images/content/coach-photos/02.jpg"
+                                     alt="фото"
+                                     width="553"
+                                     height="553"
+                                     loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="splide__slide">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="assets/images/content/coach-photos/02.webp">
+                                <img src="assets/images/content/coach-photos/02.jpg"
+                                     alt="фото"
+                                     width="553"
+                                     height="553"
+                                     loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                @@include('blocks/slider-nav/slider-nav.html', {
+                "class": "coach-photos"
+                })
+            </div>
+        </div>
+    </div>
+</section>

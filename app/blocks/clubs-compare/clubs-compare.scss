@@ -1,5 +1,4 @@
 .clubs-compare {
-
     position: relative;
     background-color: var(--beige);
     @include padding-y(var(--section-padding));
@@ -44,8 +43,7 @@
 }
 
 .clubs-compare-item {
-
-    @include row-grid(3.2rem);
+    @include row-grid(var(--offset-l));
 
     &__top {
         @extend %flex-row-center;
@@ -67,7 +65,8 @@
 
     &__plus,
     &__minus {
-        --icon: 2.4rem;
+        --icon: var(--offset-m);
+
         position: relative;
         padding-left: calc(var(--icon) * 2);
 

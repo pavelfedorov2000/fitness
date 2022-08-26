@@ -1,5 +1,4 @@
 .timetable-calendar {
-
     position: relative;
 
     @media(min-width: 1025px) {
@@ -16,7 +15,7 @@
 
     &__body {
         padding: var(--arrow-btn) 0 var(--section-padding);
-        @include row-grid(4rem);
+        @include row-grid(var(--offset-xls));
 
         @media(max-width: 767px) {
             grid-column: unset;
@@ -116,10 +115,10 @@
 
     &__category {
         display: flex;
-        margin: -0.4rem;
+        margin: calc(var(--offset-xls) / (-2));
 
         > * {
-            margin: 0.4rem;
+            margin: calc(var(--offset-xxs) / 2);
         }
     }
 

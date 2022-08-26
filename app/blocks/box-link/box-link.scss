@@ -1,15 +1,10 @@
 .box-link {
-    $pd: 2.4rem;
     $pr: 4rem;
 
-    /* @media (max-width: 767px) {
-        $pd: 1.6rem;
-        $pr: 2.5rem;
-    } */
-
+    box-sizing: border-box;
     display: block;
     position: relative;
-    padding: $pd $pr calc(var(--arrow-btn) + $pd) $pd;
+    padding: var(--offset-m) $pr calc(var(--arrow-btn) + var(--offset-m)) var(--offset-m);
     min-height: var(--gap);
     background-color: var(--yellow);
     color: var(--black);
@@ -20,7 +15,7 @@
     }
 
     @media (max-width: 767px) {
-        padding: $pd;
+        padding: var(--offset-m);
         min-height: 8rem;
     }
 

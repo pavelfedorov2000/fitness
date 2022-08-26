@@ -1,3 +1,50 @@
 .club-reviews {
-  // your code
+    position: relative;
+    @include padding-y(var(--section-padding));
+
+    @media(min-width: 1025px) {
+        &:before {
+            z-index: -1;
+            @include rect(top, left, 0, 0, 60%, var(--yellow));
+            width: 100%;
+        }
+    }
+
+    // .club-reviews__grid
+
+    &__grid {
+        row-gap: var(--offset-xxl);
+    }
+
+    // .club-reviews__title
+
+    &__title {
+        span {
+            display: block;
+            margin-left: 9.8rem;
+        }
+    }
+
+    // .club-reviews__slider
+
+    &__slider {
+        width: 100vw;
+        grid-column: 1 / -1;
+        padding-bottom: var(--offset-xxl);
+    }
+}
+
+.swiper-scrollbar {
+    background: #fff;
+
+    &-drag {
+        background: var(--black);
+        border-radius: $brs;
+    }
+}
+
+.swiper-horizontal > .swiper-scrollbar {
+    width: 39.8rem;
+    height: 0.8rem;
+    left: calc(404 / 1920 * 100%);
 }

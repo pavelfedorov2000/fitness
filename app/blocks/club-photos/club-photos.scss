@@ -1,11 +1,14 @@
 .club-photos {
     --thumb: 10.4rem;
     --pb: 10.4rem;
+
     min-height: var(--section-mh);
     color: #fff;
+
     &__grid {
         grid-template-rows: var(--section-padding) max-content 1fr var(--thumb) var(--pb);
     }
+
     // .club-photos__title
 
     &__title {
@@ -34,6 +37,7 @@
     &__img {
         width: 100%;
         height: 100%;
+
         img {
             @extend %cover;
         }

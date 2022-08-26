@@ -130,11 +130,11 @@
 
     &__item-img {
         max-width: 8.5rem;
-        max-height: 8rem;
+        max-height: var(--section-paading);
 
         @media (max-width: 767px) {
             max-width: 6.8rem;
-            max-height: 6.4rem;
+            max-height: var(--offset-xxxl);
         }
     }
 

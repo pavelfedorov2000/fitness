@@ -124,7 +124,7 @@ img {
             margin-bottom: 0.6rem;
 
             @media (max-width: 767px) {
-                margin-bottom: 0.4rem;
+                margin-bottom: calc(var(--offset-xxs) / 2);
             }
         }
     }
@@ -146,6 +146,7 @@ img {
 }
 
 .promo {
+
     &-body,
     &-bg {
         grid-row: 1 / 2;

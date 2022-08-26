@@ -45,6 +45,7 @@
     // offsets (gaps)
     --offset-xxxl: 6.4rem;
     --offset-xxl: 5.6rem;
+    --offset-xls: 4rem;
     --offset-xl: var(--arrow-btn);
     --offset-l: 3.2rem;
     --offset-m: 2.4rem;
@@ -69,8 +70,8 @@ $fz: 15;
 $ff: 'Gotham Pro',
 sans-serif;
 $color-default: var(--black);
-$bsh: 0rem 0.8rem 2.4rem rgba(0, 0, 0, 0.2);
-$brs: 3.2rem;
+$bsh: 0rem var(--offset-xxs) var(--offset-m) rgba(0, 0, 0, 0.2);
+$brs: var(--offset-l);
 
 %text-10 {
     font-size: rem(10);

@@ -78,7 +78,7 @@
         }
 
         @media(max-width: 1024px) {
-            padding: calc(var(--header-height) + 3rem) 0 1.6rem;
+            padding: calc(var(--header-height) + 3rem) 0 var(--offset-s);
         }
 
         @media(max-width: 767px) {

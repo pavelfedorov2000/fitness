@@ -74,7 +74,7 @@
     &__list {
         grid-auto-flow: column;
         grid-template-rows: repeat(4, max-content);
-        gap: 6.4rem 4.2rem;
+        gap: var(--offset-xxxl) 4.2rem;
 
         @media (min-width: 1025px) {
             grid-area: ol;

@@ -48,7 +48,7 @@
     // .app__apps
 
     &__apps {
-        gap: 4rem;
+        gap: var(--offset-xls);
 
         @media(max-width: 1024px) {
             gap: var(--offset-l);

@@ -123,16 +123,14 @@
     // .blog-article__content
 
     &__content {
-        --gap: 2.4rem;
-
         position: relative;
         //@extend %flex-col;
         //align-items: flex-start
         color: #fff;
         display: grid;
-        grid-template-columns: var(--gap) 1fr var(--arrow-btn);
-        grid-template-rows: var(--gap) max-content 1fr max-content var(--arrow-btn);
-        gap: var(--gap);
+        grid-template-columns: var(--offset-m) 1fr var(--arrow-btn);
+        grid-template-rows: var(--offset-m) max-content 1fr max-content var(--arrow-btn);
+        gap: var(--offset-m);
         justify-items: start;
         grid-template-areas:
             '. . .'
@@ -151,7 +149,7 @@
     &__title {
         @extend .title;
         @extend %text-20;
-        text-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.2);
+        text-shadow: $bsh;
         max-width: 29.6rem;
         //margin-top: auto;
         grid-area: title;

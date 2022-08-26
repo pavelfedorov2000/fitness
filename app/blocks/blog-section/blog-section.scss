@@ -26,17 +26,17 @@
         }
 
         @media (max-width: 1024px) {
-            padding-top: 3.2rem;
+            padding-top: var(--offset-l);
         }
     }
 
     // .blog-section__top
 
     &__top {
-        margin-bottom: 4rem;
+        margin-bottom: var(--offset-xls);
 
         @media (max-width: 767px) {
-            margin-bottom: 1.6rem;
+            margin-bottom: var(--offset-s);
         }
     }
 
@@ -50,7 +50,7 @@
         display: grid;
 
         @media (max-width: 1024px) {
-            row-gap: 1.6rem;
+            row-gap: var(--offset-s);
         }
 
         @media (min-width: 1025px) {
@@ -64,7 +64,7 @@
                 'slider slider success'
                 '. . success'
                 'moreBtn moreBtn success';
-            column-gap: 4rem;
+            column-gap: var(--offset-xls);
         }
     }
 
@@ -79,8 +79,7 @@
         @media (max-width: 1024px) {
             width: 100vw;
             margin-left: calc(var(--mob-padding) * (-1));
-            display: grid;
-            row-gap: 2.4rem;
+            @include row-grid(var(--offset-m));
         }
     }
 
@@ -88,7 +87,7 @@
         @media (min-width: 1025px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 4rem;
+            gap: var(--offset-xls);
         }
     }
 
@@ -154,12 +153,12 @@
 }
 
 .blog-page {
-    padding: 5.6rem 0 6.4rem;
+    padding: var(--offset-xxl) 0 var(--offset-xxxl);
     position: relative;
 
     @media(min-width: 1025px) {
         &:before {
-            @include rect(top, left, -4.8rem, 0, 65.7rem, var(--beige));
+            @include rect(top, left, calc(var(--arrow-btn) * (-1)), 0, 65.7rem, var(--beige));
         }
 
         &:after {
@@ -171,8 +170,8 @@
 
     &__filters {
         display: flex;
-        padding-bottom: 1.6rem;
-        margin-bottom: 4.8rem;
+        padding-bottom: var(--offset-s);
+        margin-bottom: var(--arrow-btn);
         border-bottom: 0.1rem solid var(--line-color);
     }
 
@@ -185,13 +184,13 @@
         color: var(--black);
 
         &:not(:last-child) {
-            margin-right: 3.2rem;
+            margin-right: var(--offset-l);
         }
 
         &:after {
             content: '';
             position: absolute;
-            bottom: -1.6rem;
+            bottom: calc(var(--offset-s) * (-1));
             left: 0;
             width: 0%;
             height: 0.1rem;
@@ -208,10 +207,10 @@
     &__cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 4rem;
+        gap: var(--offset-xls);
 
         &:not(:last-child) {
-            margin-bottom: 6.4rem;
+            margin-bottom: var(--offset-xxxl);
         }
     }
 }

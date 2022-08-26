@@ -2,15 +2,14 @@
     --card: 73rem;
     --half-card: calc(var(--card) / 2);
     --btn-full: 39.9rem;
-    --gap: 4rem;
-    --btn: calc(var(--half-card) - var(--gap));
+    --btn: calc(var(--half-card) - var(--offset-xls));
     --btn-offset: calc(var(--btn-full) - var(--btn));
 
     width: var(--card);
     flex-shrink: 0;
     display: grid;
-    grid-template-columns: var(--gap) 1fr var(--gap) var(--btn-offset) 1fr;
-    grid-template-rows: var(--gap) max-content var(--gap) max-content 1fr max-content var(--offset-s) max-content var(--gap);
+    grid-template-columns: var(--offset-xls) 1fr var(--offset-xls) var(--btn-offset) 1fr;
+    grid-template-rows: var(--offset-xls) max-content var(--offset-xls) max-content 1fr max-content var(--offset-s) max-content var(--offset-xls);
     color: #fff;
     // .individual-lesson-card__img
 

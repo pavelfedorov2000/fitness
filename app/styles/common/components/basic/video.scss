@@ -5,7 +5,7 @@
 
     @media (min-width: 1025px) {
         grid-template-columns: 1fr 2rem max-content;
-        grid-template-rows: 1fr max-content 4rem;
+        grid-template-rows: 1fr max-content var(--offset-xls);
         grid-template-areas:
             'video . .'
             'video . info'
@@ -13,7 +13,7 @@
     }
 
     @media (max-width: 1024px) {
-        row-gap: 1.6rem;
+        row-gap: var(--offset-s);
     }
 
     // .video__body
@@ -38,11 +38,11 @@
     }
 
     &__box {
-        --pt: 2.4rem;
+        --pt: var(--offset-m);
         --pr: 2rem;
         --pb: 2rem;
-        --pl: 2.4rem;
-        --play: 3.2rem;
+        --pl: var(--offset-m);
+        --play: var(--offset-l);
 
         position: absolute;
         right: 0;
@@ -64,8 +64,8 @@
         @media (max-width: 1024px) {
             --play: 2.8rem;
 
-            width: 5.6rem;
-            height: 5.6rem;
+            width: var(--offset-xxl);
+            height: var(--offset-xxl);
             place-items: center;
             right: auto;
             bottom: auto;
@@ -78,15 +78,15 @@
         @media (max-width: 767px) {
             --play: 2.3rem;
 
-            width: 4rem;
-            height: 4rem;
+            width: var(--offset-xls);
+            height: var(--offset-xls);
         }
 
         &--icon-only {
             --play: 2.8rem;
 
-            width: 5.6rem;
-            height: 5.6rem;
+            width: var(--offset-xxl);
+            height: var(--offset-xxl);
             place-items: center;
 
             @media (min-width: 1025px) {
@@ -97,8 +97,8 @@
 
             @media (max-width: 767px) {
                 --play: 2.3rem;
-                width: 4rem;
-                height: 4rem;
+                width: var(--offset-xls);
+                height: var(--offset-xls);
             }
 
             #{$this}__player {
@@ -171,8 +171,8 @@
 
 .player-btn {
     @extend %grid-center;
-    width: 5.6rem;
-    height: 5.6rem;
+    width: var(--offset-xxl);
+    height: var(--offset-xxl);
     background-color: var(--yellow);
 
     &--round {
@@ -184,7 +184,7 @@
     }
 
     svg {
-        width: 3.2rem;
-        height: 3.2rem;
+        width: var(--offset-l);
+        height: var(--offset-l);
     }
 }

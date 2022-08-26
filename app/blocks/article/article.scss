@@ -1,6 +1,6 @@
 .article-page {
     --sidebar: 24.8rem;
-    --sidebar-pl: 5.6rem;
+    --sidebar-pl: var(--offset-xxl);
     --form-mh: 59.6rem;
 
     .header {
@@ -39,8 +39,8 @@
     }
 
     &__social-item {
-        width: 6.4rem;
-        height: 6.4rem;
+        width: var(--offset-xxxl);
+        height: var(--offset-xxxl);
     }
 
     // .article-page__wrapper
@@ -79,7 +79,7 @@
     &__sidebar-inner {
         @media (min-width: 1025px) {
             padding: 7.7rem 0 var(--form-mh) var(--sidebar-pl);
-            @include row-grid(4rem);
+            @include row-grid(var(--offset-xls));
             align-content: start;
         }
     }
@@ -94,20 +94,20 @@
     // .article-page__content
 
     &__content {
-        @include row-grid(4rem);
+        @include row-grid(var(--offset-xls));
     }
 
     // .article-page__part
 
     &__part {
-        @include row-grid(3.2rem);
+        @include row-grid(var(--offset-l));
 
         aside {
             @extend %text-17;
             font-weight: 700;
-            padding: 4rem 8rem;
+            padding: var(--offset-xls) var(--section-padding);
             background-color: var(--yellow);
-            margin-top: 0.8rem;
+            margin-top: var(--offset-xxs);
         }
     }
 
@@ -144,22 +144,22 @@
     &__form-wrap {
         @extend %grid-center;
         background-color: var(--yellow);
-        padding: 6rem 0 6.4rem;
+        padding: 6rem 0 var(--offset-xxxl);
     }
 
     // .article-page__form-body
 
     &__form-body {
         width: 32rem;
-        @include row-grid(2.4rem);
+        @include row-grid(var(--offset-m));
     }
 
     // .article-page__footer
 
     &__footer {
         @extend %flex-row-center;
-        padding-top: 4rem;
-        padding-bottom: 4.7rem;
+        padding-top: var(--offset-xls);
+        padding-bottom: calc(var(--offset-xls) + 0.7rem);
     }
 
     // .article-page__bottom
@@ -193,7 +193,7 @@
     // .article-info__item
 
     &__item {
-        margin-right: 1.6rem;
+        margin-right: var(--offset-s);
     }
 }
 
@@ -219,7 +219,7 @@
     }
 
     &__content {
-        padding: 3.2rem 3.2rem 4rem;
+        padding: var(--offset-l) var(--offset-l) var(--offset-xls);
         @extend %flex-col;
         justify-content: space-between;
         color: #fff;
@@ -247,7 +247,7 @@
     // .subscribe-form__input
 
     &__input {
-        padding: 1rem 1.6rem;
+        padding: 1rem var(--offset-s);
     }
 
     // .subscribe-form__btn
@@ -273,7 +273,7 @@
     &__descr {
         @extend %text-13;
         color: var(--dark-gray);
-        padding-top: 1.6rem;
+        padding-top: var(--offset-s);
         min-height: var(--figcaption--mh);
     }
 }

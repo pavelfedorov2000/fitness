@@ -39,7 +39,7 @@ ol.counter {
         &:before {
             content: '';
             background-image: url(../images/icons/check-mark.svg);
-            background-size: 1.6rem;
+            background-size: var(--offset-s);
             background-position: center;
             background-repeat: no-repeat;
         }

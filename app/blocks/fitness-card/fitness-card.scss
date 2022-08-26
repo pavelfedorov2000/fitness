@@ -29,9 +29,7 @@
 
         display: grid;
         grid-template-rows: max-content 1fr var(--circle-text) 7rem max-content;
-        grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text)) calc(var(--gap) * 2) 1fr var(
-                --gap
-            ) 1fr;
+        grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text)) calc(var(--gap) * 2) 1fr var(--gap) 1fr;
         grid-template-areas:
             'title title . list-1 . list-2'
             '. . . list-1 .list-2'
@@ -99,13 +97,13 @@
     // .fitness-card__list-title
 
     &__list-title {
-        margin-bottom: 4rem;
+        margin-bottom: var(--offset-xls);
     }
 
     // .fitness-card__list
 
     &__list {
-        @include row-grid(4.2rem);
+        @include row-grid(calc(var(--offset-xls) + 0.2rem));
     }
 
     // .fitness-card__list-item
@@ -119,8 +117,8 @@
             position: absolute;
             top: 0rem;
             left: 0rem;
-            width: 2.4rem;
-            height: 2.4rem;
+            width: var(--offset-m);
+            height: var(--offset-m);
             @extend %bg-contain;
         }
     }

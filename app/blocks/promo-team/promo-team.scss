@@ -1,5 +1,4 @@
 .promo-team {
-    --select: 34.4rem;
     --text: 32.8rem;
 
     position: relative;
@@ -77,7 +76,7 @@
         position: relative;
         z-index: 10;
         grid-area: search;
-        padding-left: 2.4rem;
+        padding-left: var(--offset-m);
         padding-right: 5rem;
     }
 
@@ -131,7 +130,7 @@
         }
 
         @media (max-width: 767px) {
-            gap: 1.6rem;
+            gap: var(--offset-s);
         }
     }
 

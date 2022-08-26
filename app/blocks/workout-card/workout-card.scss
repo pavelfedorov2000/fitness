@@ -1,14 +1,12 @@
 .workout-card {
     $this: &;
 
-    --col-gap: 4rem;
-
     background-color: #fff;
     border: var(--offset-xxs) solid var(--pink);
     border-radius: $brs;
     display: grid;
-    grid-template-columns: var(--col-gap) 1fr var(--col-gap) 50%;
-    grid-template-rows: var(--col-gap) max-content var(--offset-l) max-content var(--offset-l) max-content 5.7rem max-content 4.8rem max-content var(--offset-l);
+    grid-template-columns: var(--offset-xls) 1fr var(--offset-xls) 50%;
+    grid-template-rows: var(--offset-xls) max-content var(--offset-l) max-content var(--offset-l) max-content 5.7rem max-content 4.8rem max-content var(--offset-l);
 
     @media (min-width: 1025px) {
         grid-template-areas:
@@ -45,7 +43,7 @@
 
     &__years {
         position: relative;
-        padding-left: 4rem;
+        padding-left: var(--offset-xls);
         @extend %text-17;
         color: var(--dark-gray);
 
@@ -54,8 +52,8 @@
             position: absolute;
             @extend %pos-center-y;
             left: 0rem;
-            width: 3.2rem;
-            height: 3.2rem;
+            width: var(--offset-l);
+            height: var(--offset-l);
             background-image: url(../images/icons/ico-kid.svg);
             @extend %bg-contain;
         }
@@ -149,7 +147,7 @@
 
     &__item {
         margin: 0.5rem 2rem;
-        @include row-grid(0.8rem);
+        @include row-grid(var(--offset-xxs));
         justify-items: start;
     }
 
@@ -162,7 +160,7 @@
 }
 
 .instructor {
-    @include row-grid(2.4rem);
+    @include row-grid(var(--offset-m));
 
     // .children-instructor__info
 
@@ -170,8 +168,8 @@
         @extend %text-14;
         display: grid;
         grid-template-rows: 1fr max-content 0.5rem max-content 1fr;
-        grid-template-columns: 5.6rem max-content;
-        column-gap: 2.4rem;
+        grid-template-columns: var(--offset-xxl) max-content;
+        column-gap: var(--offset-m);
         grid-template-areas:
             'ava .'
             'ava name'
@@ -209,7 +207,7 @@
     &__bio {
         display: grid;
         grid-template-columns: 1fr max-content;
-        gap: 2.4rem;
+        gap: var(--offset-m);
         align-items: flex-start;
     }
 

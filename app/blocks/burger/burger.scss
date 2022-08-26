@@ -23,7 +23,7 @@
         span {
             &:nth-child(1) {
                 transform: rotate(45deg);
-                margin-top: 1.2rem;
+                margin-top: var(--offset-xs);
             }
 
             &:nth-child(2) {
@@ -32,7 +32,7 @@
 
             &:nth-child(3) {
                 transform: rotate(-45deg);
-                margin-bottom: 1.2rem;
+                margin-bottom: var(--offset-xs);
             }
         }
     }

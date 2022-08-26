@@ -4,7 +4,7 @@
 
     @media (max-width: 1024px) {
         --pt: 5.8rem;
-        --pb: 1.6rem;
+        --pb: var(--offset-s);
     }
 
     position: relative;
@@ -76,7 +76,7 @@
         @media (max-width: 767px) {
             min-height: 100%;
             grid-template-rows: calc(var(--header-height) + var(--pt)) max-content 1fr max-content 6rem max-content var(--pb);
-            grid-template-columns: var(--mob-padding) 1fr max-content 0.4rem 0.8rem;
+            grid-template-columns: var(--mob-padding) 1fr max-content calc(var(--offset-xxs) / 2) var(--offset-xxs);
             grid-template-areas:
                 '. . . . .'
                 '. title marquee marquee .'
@@ -97,7 +97,7 @@
             max-width: 24rem;
             font-size: 2rem;
             line-height: 2.8rem;
-            padding-bottom: 1.6rem;
+            padding-bottom: var(--offset-s);
         }
 
         span {

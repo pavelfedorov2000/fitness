@@ -44,8 +44,8 @@
         #{$this}__slider-nav {
             top: auto;
             right: auto;
-            bottom: 4rem;
-            left: 4rem;
+            bottom: var(--offset-xls);
+            left: var(--offset-xls);
             height: var(--nav);
         }
 

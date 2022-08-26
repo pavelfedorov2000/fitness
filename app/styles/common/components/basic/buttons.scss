@@ -68,12 +68,12 @@
     // .arrow-btn__svg
 
     &__svg {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: var(--offset-m);
+        height: var(--offset-m);
 
         @media (max-width: 767px) {
-            width: 1.6rem;
-            height: 1.6rem;
+            width: var(--offset-s);
+            height: var(--offset-s);
         }
     }
 

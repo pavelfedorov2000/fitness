@@ -21,16 +21,15 @@
     // .coach-included__content
 
     &__content {
-        --row-gap: 5.6rem;
         display: grid;
         grid-template-columns: 1fr calc(var(--title) - var(--text)) var(--text);
         grid-template-areas:
             '. title title'
             '. . text'
         ;
-        row-gap: var(--row-gap);
+        row-gap: var(--offset-xxl);
         align-content: center;
-        @include padding-y(var(--row-gap));
+        @include padding-y(var(--offset-xxl));
     }
 
     // .coach-included__title

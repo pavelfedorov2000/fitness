@@ -118,7 +118,7 @@
 
     &__form-body {
         width: 32rem;
-        @include row-grid(3.2rem);
+        @include row-grid(var(--offset-l));
     }
 
     // .success-stories__form-input
@@ -145,7 +145,7 @@
 .success-story {
     position: relative;
     height: 69.4rem;
-    padding: 4rem 5.6rem 4.8rem;
+    padding: var(--offset-xls) var(--offset-xxl) var(--arrow-btn);
     @extend %flex-col;
     justify-content: space-between;
     border-top: 0.1rem solid rgba(#fff, 0.1);
@@ -186,7 +186,7 @@
 
         sub {
             @extend %text-18;
-            margin-left: 1.2rem;
+            margin-left: var(--offset-xs);
         }
     }
 
@@ -237,8 +237,8 @@
                 position: absolute;
                 @extend %pos-center-y;
                 left: 0rem;
-                width: 2.4rem;
-                height: 2.4rem;
+                width: var(--offset-m);
+                height: var(--offset-m);
                 background-image: url(../images/icons/ico-right.svg);
                 @extend %bg-contain;
             }

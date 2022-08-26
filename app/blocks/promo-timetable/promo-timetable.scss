@@ -4,7 +4,6 @@
     --select: 7.2rem;
     --title: 27.2rem;
     --text: 34.4rem;
-    --offset: 4rem;
     --pb: 10.4rem;
 
     position: relative;
@@ -32,7 +31,7 @@
 
     &__content {
         display: grid;
-        grid-template-columns: var(--img--offset) 1fr calc(var(--title) - var(--offset)) var(--offset) calc(var(--text) - var(--offset));
+        grid-template-columns: var(--img--offset) 1fr calc(var(--title) - var(--offset-xls)) var(--offset-xls) calc(var(--text) - var(--offset-xls));
         grid-template-rows: repeat(2, var(--header-height)) max-content 7.9rem max-content 1fr var(--select) var(--pb);
 
         @media (min-width: 1025px) {

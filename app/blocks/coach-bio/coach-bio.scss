@@ -1,3 +1,171 @@
 .coach-bio {
-  // your code
+    $this: &;
+
+    position: relative;
+    @include padding-y(var(--section-padding-xl));
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(top, left, 0, 0, 100%, var(--beige));
+        }
+    }
+
+    // .coach-bio__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: max-content var(--offset-l) max-content 4rem max-content var(--offset-l) max-content var(--offset-xxl) max-content;
+        grid-template-areas:
+            '. title'
+            '. .'
+            '. text'
+            '. .'
+            '. sliderTop'
+            '. .'
+            'slider slider'
+            '. .'
+            '. dl'
+        ;
+    }
+
+    // .coach-bio__title
+
+    &__title {
+        @media(min-width: 1025px) {
+            grid-area: title;
+        }
+    }
+
+    // .coach-bio__text
+
+    &__text {
+        @media(min-width: 1025px) {
+            grid-area: text;
+        }
+    }
+
+    // .coach-bio__slider-top
+
+    &__slider-top {
+        @extend %flex-row-center;
+
+        @media(min-width: 1025px) {
+            grid-area: sliderTop;
+        }
+
+        .swiper-button {
+
+            &-prev,
+            &-next {
+                position: static;
+                margin: 0;
+                width: var(--arrow-btn);
+                height: var(--arrow-btn);
+                background-color: var(--black);
+                @extend %grid-center;
+                transition: .3s background-color;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        background-color: var(--yellow);
+                    }
+                }
+
+                &::after {
+                    display: none;
+                }
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+
+    // .coach-bio__slider-title
+
+    &__slider-title {
+        @extend .title;
+        @extend %text-14;
+        font-weight: 700;
+    }
+
+    // .coach-bio__slider-arrows
+
+    &__slider-arrows {
+        display: flex;
+    }
+
+    // .coach-bio__slider
+
+    &__slider {
+        @media(min-width: 1025px) {
+            width: calc(100vw - var(--gap) * 4);
+            grid-area: slider;
+        }
+    }
+
+    // .coach-bio__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--offset-l);
+
+        @media(min-width: 1025px) {
+            grid-area: dl;
+        }
+    }
+
+    // .coach-bio__list-item
+
+    &__list-item {
+        @include row-grid(var(--offset-xxs));
+        align-content: start;
+
+        dt {
+            @extend #{$this}__slider-title;
+        }
+
+        dd {
+            @extend %text-14;
+        }
+    }
+}
+
+.coach-music-slider {
+    $this: &;
+
+    padding-bottom: var(--offset-m);
+
+    &__player {
+        position: absolute;
+        @extend %pos-center-xy;
+        opacity: 0;
+        transition: .3s opacity;
+    }
+
+    // .coach-music-slider__item
+
+    &__item {
+        &:nth-child(odd) {
+            transform: translateY(var(--offset-m));
+        }
+
+        img {
+            @extend %cover;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                #{this} {
+                    &__player {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }

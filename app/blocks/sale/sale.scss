@@ -3,8 +3,7 @@
     --slider-offset: 9.5rem;
     --slider-content: 53.6rem;
     --decor-dots: 23.4rem;
-    --decor-dots-pos: 5.6rem;
-    --mobile-gap: 2.4rem;
+    --decor-dots-pos: var(--offset-xxl);
 
     //min-height: 80rem;
     // .sale__grid
@@ -80,7 +79,7 @@
     &__slider {
         @media(max-width: 767px) {
             display: grid;
-            row-gap: var(--mobile-gap);
+            row-gap: var(--offset-m);
         }
     }
 
@@ -109,7 +108,6 @@
     // .sale__rightside-img
 
     &__rightside-img {
-
         img {
             @extend %cover;
         }
@@ -132,7 +130,7 @@
         display: grid;
 
         @media(max-width: 767px) {
-            row-gap: var(--mobile-gap);
+            row-gap: var(--offset-m);
         }
 
         @media(min-width: 768px) {
@@ -169,7 +167,7 @@
         display: grid;
 
         @media(max-width: 1024px) {
-            row-gap: 2.4rem;
+            row-gap: var(--offset-m);
             @include padding-x(var(--mob-padding));
         }
 
@@ -177,7 +175,7 @@
             grid-column: 2 / 4;
             grid-row: 1 / 2;
             grid-template-columns: repeat(2, var(--slider-offset)) max-content 1fr;
-            grid-template-rows: max-content 5.6rem max-content 6.4rem max-content;
+            grid-template-rows: max-content var(--offset-xxl) max-content var(--offset-xxxl) max-content;
             grid-template-areas: 'title title title .'
                 '. . . .'
                 '. . text text'

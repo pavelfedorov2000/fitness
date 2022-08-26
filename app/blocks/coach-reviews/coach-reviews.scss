@@ -1,3 +1,52 @@
 .coach-reviews {
-  // your code
+    --title: 44rem;
+
+    position: relative;
+    grid-template-rows: var(--section-padding-xl) max-content var(--section-padding);
+
+    @media(min-width: 1025px) {
+        &:before {
+            @include rect(bottom, right, 0, 0, var(--gap), #fff);
+        }
+    }
+
+    // .clients-reviews__bg
+
+    &__bg {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+    }
+
+    // .clients-reviews__content
+
+    &__content {
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-rows: max-content 1fr var(--gap) 6rem max-content;
+        grid-template-columns: var(--title) 1fr var(--gap) 1fr calc(var(--offset-xxxl) + 38rem);
+        grid-template-areas:
+            '. . . . rating'
+            '. . . . .'
+            '. . player . .'
+            '. . . . .'
+            'title . . . .'
+        ;
+    }
+
+    &__rating {
+        grid-area: rating;
+    }
+
+    // .clients-reviews__title
+
+    &__title {
+        color: #fff;
+        grid-area: title;
+    }
+
+    // .clients-reviews__player
+
+    &__player {
+        grid-area: player;
+    }
 }

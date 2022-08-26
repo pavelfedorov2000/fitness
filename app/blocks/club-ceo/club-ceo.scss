@@ -1,16 +1,19 @@
 .club-ceo {
     position: relative;
+
     @media (min-width: 1025px) {
         background-image: url(../images/decor/lifter.svg);
         background-size: 54.6rem 57.2rem;
         background-position: left bottom;
         background-repeat: no-repeat;
     }
+
     @media (min-width: 1025px) {
         &:before {
             @include rect(top, right, 0, 0, 100%, var(--beige));
         }
     }
+
     // .club-ceo__grid
 
     &__grid {
@@ -32,10 +35,12 @@
         height: 63.8rem;
         display: flex;
         align-items: flex-end;
+
         @media (min-width: 1025px) {
             grid-row: 2 / 3;
             grid-column: 4 / -2;
         }
+
         &::before {
             content: '';
             position: absolute;
@@ -65,6 +70,7 @@
             'title title title'
             '. . .'
             'soc . text';
+
         @media (min-width: 1025px) {
             width: 63.2rem;
             grid-row: 2 / 3;
@@ -83,6 +89,7 @@
 
     &__title {
         grid-area: title;
+
         span {
             display: block;
         }
@@ -91,7 +98,7 @@
     // .club-ceo__social
 
     &__social {
-        gap: 2.4rem;
+        gap: var(--offset-m);
         grid-area: soc;
     }
 

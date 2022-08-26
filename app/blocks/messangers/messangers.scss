@@ -7,12 +7,14 @@
     // .messanger__icon
 
     &__icon {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: var(--offset-m);
+        height: var(--offset-m);
+
         @media (max-width: 767px) {
             width: 2rem;
             height: 2rem;
         }
+
         path {
             transition: 0.3s fill;
         }

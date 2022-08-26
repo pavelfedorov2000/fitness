@@ -1,11 +1,8 @@
 .events-slider {
-
     background-color: #fff;
     border-top: 0.1rem solid var(--line-color);
     border-bottom: 0.1rem solid var(--line-color);
     @include padding-x(6rem);
-
-    &__inner {}
 
     // .events-slider__item
 
@@ -19,7 +16,7 @@
 
         > * {
             &:not(:last-child) {
-                margin-bottom: 0.4rem;
+                margin-bottom: calc(var(--offset-xxs) / 2);
             }
         }
 

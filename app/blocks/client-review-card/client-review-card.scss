@@ -1,0 +1,90 @@
+.client-review-card {
+    --quote-pl: 5.8rem;
+    --quote-text: 29.6rem;
+
+    width: 72.8rem;
+    height: 40rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, #020818 -2.47%, rgba(2, 8, 24, 0) 100%);
+    }
+
+    // .client-review-card__inner
+
+    &__inner {
+        display: grid;
+        height: 100%;
+    }
+
+    &__bg,
+    &__content {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    // .client-review-card__bg
+
+    &__bg {
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .client-review-card__content
+
+    &__content {
+        position: relative;
+        display: grid;
+        grid-template-rows: 4rem max-content 1fr max-content;
+        grid-template-columns: var(--offset-l) calc(var(--offset-l) + var(--quote-pl) + var(--quote-text)) 1fr;
+        grid-template-areas:
+            '. . .'
+            '. quote .'
+            '. . .'
+            'client client .'
+        ;
+        color: #fff;
+        text-shadow: $bsh;
+    }
+
+    // .client-review-card__quote
+
+    &__quote {
+        @extend %text-18;
+        font-weight: 700;
+        grid-area: quote;
+        position: relative;
+        padding-left: calc(var(--offset-l) + var(--quote-pl));
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--offset-l);
+            height: var(--offset-l);
+            background-image: url(../images/icons/quote.svg);
+            @extend %bg-contain;
+        }
+    }
+
+    // .client-review-card__person
+
+    &__person {
+        grid-area: client;
+    }
+
+    // .client-review-card__player
+
+    &__player {
+        position: absolute;
+        @extend %pos-center-xy;
+    }
+}

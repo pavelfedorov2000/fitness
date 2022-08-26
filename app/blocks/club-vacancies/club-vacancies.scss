@@ -1,12 +1,10 @@
 .club-vacancies {
-    --row-gap: 2.4rem;
-
     @include padding-y(var(--section-padding));
 
     &__body {
         @media (max-width: 1024px) {
             display: grid;
-            gap: var(--row-gap);
+            gap: var(--offset-m);
         }
     }
 
@@ -36,7 +34,7 @@
         @media (min-width: 1025px) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 4rem;
+            gap: var(--offset-xls);
         }
     }
 

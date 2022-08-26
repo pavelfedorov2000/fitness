@@ -8,6 +8,8 @@
         app.articleAside.init();
         app.faq.init();
         app.childrenSections.init();
+        app.clubReviews.init();
+        app.coachBio.init();
         //app.burger.init();
         //app.slider.init();
         //app.menu.init();
@@ -32,7 +34,33 @@
         //const totalIndex = saleSlider.Components.Controller.getEnd() + 1;
         //saleSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${totalIndex}`;
 
-        // Update the bar width:
+        if (document.querySelectorAll('.coach-photos-slider').length) {
+            const coachPhotosSlider = new Splide('.coach-photos-slider', {
+                //type: 'loop',
+                perPage: 3,
+                gap: '8rem',
+                classes: {
+                    arrows: 'splide__arrows slider-nav__arrows',
+                    arrow: 'splide__arrow slider-nav__arrow',
+                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
+                    next: 'splide__arrow--next slider-nav__arrow--next',
+                    //pagination: 'slider-nav__pagination'
+                },
+                pagination: false
+            });
+
+            const coachPhotosSliderBar = coachPhotosSlider.root.querySelector('.slider-nav__progress-bar');
+
+            coachPhotosSlider.on('mounted move', function () {
+                const end = coachPhotosSlider.Components.Controller.getEnd() + 1;
+                //console.log(end);
+                coachPhotosSliderBar.style.width = String(100 * (coachPhotosSlider.index + 1) / end) + '%';
+                coachPhotosSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${coachPhotosSlider.index + 1}`;
+                coachPhotosSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
+            });
+
+            coachPhotosSlider.mount();
+        }
 
         if (document.querySelectorAll('.article-page-slider').length) {
             const articlePageSlider = new Splide('.article-page-slider', {

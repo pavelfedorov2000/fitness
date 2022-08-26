@@ -26,7 +26,7 @@
             'title . .'
             'contacts . box'
         ;
-        gap: 6.4rem;
+        gap: var(--offset-xxxl);
 
         @media(min-width: 1025px) {
             grid-area: content;

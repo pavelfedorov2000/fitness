@@ -12,10 +12,10 @@
 
         > * {
             &:not(:last-child) {
-                margin-bottom: 1.6rem;
+                margin-bottom: var(--offset-s);
 
                 @media (max-width: 767px) {
-                    margin-bottom: 0.4rem;
+                    margin-bottom: calc(var(--offset-xxs) / 2);
                 }
             }
         }

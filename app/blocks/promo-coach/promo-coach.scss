@@ -11,7 +11,7 @@
     color: #fff;
     display: grid;
     grid-template-columns: repeat(2, var(--gap)) 1fr repeat(2, var(--img-half-w)) 1fr repeat(2, var(--gap));
-    grid-template-rows: calc(var(--header-height) + 6.4rem) var(--content-mt) max-content 1fr var(--gap);
+    grid-template-rows: calc(var(--header-height) + var(--offset-xxxl)) var(--content-mt) max-content 1fr var(--gap);
 
     @media(min-width: 1025px) {
         &:before {
@@ -35,7 +35,7 @@
 
     &__position {
         @extend %text-16;
-        margin-bottom: 1.6rem;
+        margin-bottom: var(--offset-s);
     }
 
     // .promo-coach__title
@@ -52,7 +52,7 @@
     // .promo-coach__social
 
     &__social {
-        column-gap: 1.6rem;
+        column-gap: var(--offset-s);
     }
 
     // .promo-coach__player

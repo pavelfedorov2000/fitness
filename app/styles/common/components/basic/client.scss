@@ -1,0 +1,32 @@
+.client {
+
+    display: grid;
+    grid-template-columns: var(--offset-xxxl) max-content;
+    column-gap: var(--offset-l);
+    // .client__avatar
+
+    &__avatar {
+        height: var(--offset-xxxl);
+    }
+
+    // .client__info
+
+    &__info {
+        @extend %text-14;
+        @include row-grid(0.4rem);
+        align-content: start;
+    }
+
+    // .client__name
+
+    &__name {
+        font-weight: 500;
+    }
+
+    // .client__descr
+
+    &__descr {
+        @extend %text-14;
+        opacity: .7;
+    }
+}

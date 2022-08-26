@@ -1,5 +1,4 @@
 .free-training {
-    --pt: 8rem;
     --pb: 10.7rem;
     --img: 34.8rem;
     --img-offset: 2.7rem;
@@ -21,10 +20,13 @@
     // .unique-concept__inner
 
     position: relative;
+
     @media (max-width: 1024px) {
-        padding: 2.4rem 0 3.2rem;
+        padding: var(--offset-m) 0 var(--offset-l);
     }
+
     @media (min-width: 1025px) {
+
         //background-position: right bottom;
         //background-size: var(--bg-width) 88rem;
         //background-repeat: no-repeat;
@@ -51,22 +53,21 @@
 
     &__content {
         display: grid;
+
         @media (max-width: 1024px) {
-            row-gap: 3.2rem;
+            row-gap: var(--offset-l);
         }
+
         @media (max-width: 767px) {
-            row-gap: 2.4rem;
+            row-gap: var(--offset-m);
         }
+
         @media (min-width: 1025px) {
             grid-template-rows:
-                var(--pt) var(--title-offset-top) max-content var(--title-mb) max-content 6.6rem 10.2rem - 6.6rem minmax(
-                    var(--video-height),
-                    max-content
-                )
-                var(--pb);
+                var(--section-padding) var(--title-offset-top) max-content var(--title-mb) max-content 6.6rem 10.2rem - 6.6rem minmax(var(--video-height),
+                    max-content) var(--pb);
             grid-template-columns:
-                var(--list) 7.7rem 4rem calc(var(--title) - var(--text)) 1fr calc(var(--img) - var(--img-offset))
-                var(--img-offset) 6rem;
+                var(--list) 7.7rem var(--offset-xls) calc(var(--title) - var(--text)) 1fr calc(var(--img) - var(--img-offset)) var(--img-offset) 6rem;
             grid-template-areas:
                 '. . . . . . . .'
                 '. . . . . img img .'
@@ -101,6 +102,7 @@
             position: relative;
             grid-area: text;
             padding-bottom: var(--text-pb);
+
             &::before {
                 content: '';
                 position: absolute;
@@ -111,9 +113,10 @@
                 background-color: var(--yellow);
             }
         }
+
         &:not(:last-child) {
             @media (max-width: 767px) {
-                margin-bottom: 0.8rem;
+                margin-bottom: var(--offset-xxs);
             }
         }
     }
@@ -122,6 +125,7 @@
 
     &__img {
         display: none;
+
         @media (min-width: 1025px) {
             display: block;
             grid-area: img;
@@ -141,32 +145,38 @@
     &__list-title {
         @extend %text-18;
         font-weight: 700;
-        margin-bottom: 4rem;
+        margin-bottom: var(--offset-xls);
+
         @media (max-width: 1024px) {
-            margin-bottom: 3.2rem;
+            margin-bottom: var(--offset-l);
         }
+
         @media (max-width: 767px) {
-            margin-bottom: 1.6rem;
+            margin-bottom: var(--offset-s);
         }
     }
 
     // .free-training__list
 
     &__list {
-        row-gap: 4.8rem;
+        row-gap: var(--arrow-btn);
+
         @media (max-width: 1024px) {
-            row-gap: 2.4rem;
+            row-gap: var(--offset-m);
         }
+
         @media (max-width: 767px) {
-            row-gap: 1.6rem;
+            row-gap: var(--offset-s);
         }
     }
 
     &__video {
         position: relative;
+
         @media (min-width: 1025px) {
             grid-area: video;
         }
+
         &::before {
             @media (min-width: 1025px) {
                 content: '';

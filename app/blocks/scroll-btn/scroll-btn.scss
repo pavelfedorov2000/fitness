@@ -14,8 +14,8 @@
         // .scroll-btn__arrow
 
         &__arrow {
-            width: 2.4rem;
-            height: 2.4rem;
+            width: var(--offset-m);
+            height: var(--offset-m);
 
             path {
                 fill: #fff;

@@ -8,8 +8,8 @@
 
     &__label {
         position: absolute;
-        top: 1.6rem;
-        left: 1.6rem;
+        top: var(--offset-s);
+        left: var(--offset-s);
     }
 
     // .aside-article__arrow
@@ -23,7 +23,7 @@
     // .aside-article__content
 
     &__content {
-        padding-top: 1.6rem;
+        padding-top: var(--offset-s);
     }
 
     // .aside-article__text

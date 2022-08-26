@@ -26,7 +26,7 @@
     // .info-block__socials
 
     &__socials {
-        column-gap: 1.6rem;
+        column-gap: var(--offset-s);
         grid-area: soc;
         align-self: flex-end;
         justify-self: end;
@@ -43,14 +43,14 @@
         'icon descr'
     ;
     align-items: center;
-    column-gap: 2.4rem;
+    column-gap: var(--offset-m);
 
     // .capacity__icon
 
     &__icon {
         grid-area: icon;
-        width: 5.6rem;
-        height: 5.6rem;
+        width: var(--offset-xxl);
+        height: var(--offset-xxl);
         border-radius: 50%;
         border: 0.3rem solid var(--green);
     }
@@ -76,14 +76,14 @@
 .contact-info-item {
 
     display: grid;
-    grid-template-columns: 2.4rem max-content;
-    grid-template-rows: 2.4rem max-content;
+    grid-template-columns: var(--offset-m) max-content;
+    grid-template-rows: var(--offset-m) max-content;
     grid-template-areas:
         'icon title'
         'value value'
     ;
     align-items: center;
-    gap: 0.8rem;
+    gap: var(--offset-xxs);
 
     // .contact-info-item__icon
 

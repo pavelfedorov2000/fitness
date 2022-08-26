@@ -6,15 +6,15 @@
     // .social__item
 
     &__item {
-        width: 4rem;
-        height: 4rem;
+        width: var(--offset-xls);
+        height: var(--offset-xls);
         background-color: #fff;
         border: 0.1rem solid var(--dark);
         transition: 0.3s background-color, 0.3s border-color;
 
         svg {
-            width: 1.7rem;
-            height: 1.6rem;
+            width: var(--offset-s);
+            height: var(--offset-s);
 
             path {
                 transition: 0.3s all;

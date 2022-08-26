@@ -20,7 +20,7 @@
         &::after {
             content: '';
             position: absolute;
-            bottom: 4rem;
+            bottom: var(--offset-xls);
             left: 14.7rem;
             width: 75.7rem;
             height: 49.2rem;

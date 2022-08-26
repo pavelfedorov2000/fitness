@@ -107,7 +107,7 @@
     // .event-block__list
 
     &__list {
-        @include row-grid(2.4rem);
+        @include row-grid(var(--offset-m));
     }
 
     // .event-block__list-item
@@ -116,16 +116,16 @@
         display: grid;
         grid-template-columns: minmax(8.9rem, max-content) 1fr;
         align-items: center;
-        column-gap: 4rem;
+        column-gap: var(--offset-xls);
 
         dt {
-            font-size: 1.3rem;
+            @extend %text-13;
             line-height: 2rem;
             color: var(--dark-gray);
         }
 
         dd {
-            font-size: 1.4rem;
+            @extend %text-14;
             line-height: 2.4rem;
             font-weight: 500;
         }
@@ -137,6 +137,6 @@
         grid-row: -2 / -1;
         grid-column: -2 / -1;
         justify-self: end;
-        @include padding-x(2.4rem);
+        @include padding-x(var(--offset-m));
     }
 }

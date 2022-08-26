@@ -3,11 +3,11 @@
     // .estimate__btn
 
     &__btn {
-        width: 3.2rem;
-        height: 3.2rem;
+        width: var(--offset-l);
+        height: var(--offset-l);
 
         svg {
-            width: 1.2rem;
+            width: var(--offset-xs);
             height: 1.4rem;
         }
     }
@@ -17,6 +17,6 @@
     &__value {
         @extend %text-14;
         color: var(--green);
-        @include padding-x(1.6rem);
+        @include padding-x(var(--offset-s));
     }
 }

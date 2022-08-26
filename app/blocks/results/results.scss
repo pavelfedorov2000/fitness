@@ -46,16 +46,15 @@
         --title: 48rem;
         --text: 34.4rem;
         --pl: 7.6rem;
-        --gap: 5.6rem;
 
         display: grid;
-        row-gap: var(--gap);
+        row-gap: var(--offset-xxl);
         grid-auto-columns: var(--pl) calc(var(--title) - var(--text)) 1fr;
         grid-template-areas:
             '. title title'
             '. . text';
         align-content: center;
-        padding: var(--gap) 0;
+        padding: var(--offset-xxl) 0;
 
         @media (min-width: 1025px) {
             grid-area: content;

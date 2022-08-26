@@ -5,7 +5,7 @@
 
     &__list {
         @extend %grid-row;
-        gap: 1.6rem;
+        gap: var(--offset-s);
     }
 
     // .pagination__link

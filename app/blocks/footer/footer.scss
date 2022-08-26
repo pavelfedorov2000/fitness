@@ -1,6 +1,4 @@
 .footer {
-    --row-gap: 2.4rem;
-
     position: relative;
 
     @media (min-width: 1025px) {
@@ -17,7 +15,7 @@
 
         @media (min-width: 768px) {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: max-content max-content max-content 2.4rem max-content 2.4rem max-content 3.2rem max-content;
+            grid-template-rows: max-content max-content max-content var(--offset-m) max-content var(--offset-m) max-content var(--offset-l) max-content;
             grid-template-areas:
                 'menu-1 menu-1 menu-1'
                 'menu-2 menu-2 menu-2'
@@ -34,7 +32,7 @@
             justify-content: space-between;
             align-items: flex-start;
             grid-template-columns: repeat(4, max-content);
-            grid-template-rows: max-content 5.6rem max-content 5.9rem max-content;
+            grid-template-rows: max-content var(--offset-xxl) max-content 5.9rem max-content;
             grid-template-areas:
                 'menu-1 menu-2 menu-3 contacts'
                 '. . . .'
@@ -45,7 +43,7 @@
 
         @media (max-width: 1024px) {
             padding-top: 0;
-            padding-bottom: 2.4rem;
+            padding-bottom: var(--offset-m);
         }
 
         @media (max-width: 767px) {
@@ -81,7 +79,7 @@
             }
 
             @media (max-width: 767px) {
-                margin-top: calc(var(--row-gap) * (-1));
+                margin-top: calc(var(--offset-m) * (-1));
             }
         }
 
@@ -91,7 +89,7 @@
             }
 
             @media (max-width: 767px) {
-                margin-top: calc(var(--row-gap) * (-1));
+                margin-top: calc(var(--offset-m) * (-1));
             }
         }
     }
@@ -125,7 +123,7 @@
         @media (max-width: 1024px) {
             display: none;
             background-color: var(--light-blue);
-            padding: 0 var(--mob-padding) 1.6rem;
+            padding: 0 var(--mob-padding) var(--offset-s);
         }
 
         li {
@@ -195,7 +193,7 @@
     // .footer__social
 
     &__social {
-        gap: 1.6rem;
+        gap: var(--offset-s);
 
         @media (min-width: 768px) and (max-width: 1024px) {
             justify-self: end;
@@ -209,7 +207,7 @@
     // .footer__apps
 
     &__apps {
-        gap: 2.4rem;
+        gap: var(--offset-m);
 
         @media (min-width: 768px) {
             grid-area: apps;
@@ -294,7 +292,7 @@
         }
 
         dd {
-            margin-left: 0.8rem;
+            margin-left: var(--offset-xxs);
             font-weight: 500;
             transition: 0.3s color;
 

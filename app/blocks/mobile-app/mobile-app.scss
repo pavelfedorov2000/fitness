@@ -7,7 +7,6 @@
     --title-offset: 13.4rem;
     --iphone-width: 43.5rem;
     --iphone-height: 87rem;
-    --row-gap: 3.2rem;
 
     @media (max-width: 1024px) {
         --padding: 5rem;
@@ -19,7 +18,7 @@
     }
 
     @media (max-width: 767px) {
-        --title-offset: 3.2rem;
+        --title-offset: var(--offset-l);
     }
 
     position: relative;
@@ -72,20 +71,18 @@
         display: grid;
         grid-row: 1 / -1;
 
-        @media (max-width: 1024px) {
-        }
+        @media (max-width: 1024px) {}
 
         @media (max-width: 767px) {
             grid-row: 2 / -1;
-            row-gap: var(--row-gap);
+            row-gap: var(--offset-l);
             justify-items: center;
         }
 
         @media (min-width: 768px) {
             grid-template-columns: 34.4rem 1fr var(--iphone-width);
             grid-template-rows:
-                var(--top-offset) var(--title-offset) max-content var(--title-offset) calc(var(--top-offset) + 1rem)
-                max-content var(--padding) max-content;
+                var(--top-offset) var(--title-offset) max-content var(--title-offset) calc(var(--top-offset) + 1rem) max-content var(--padding) max-content;
             grid-template-areas:
                 '. . iphone'
                 '. . iphone'
@@ -144,7 +141,7 @@
 
     &__download {
         @media (min-width: 501px) {
-            gap: 4rem;
+            gap: var(--offset-xls);
         }
 
         @media (min-width: 768px) {

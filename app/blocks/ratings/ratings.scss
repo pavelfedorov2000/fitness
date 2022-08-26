@@ -4,7 +4,7 @@
 
 .rating-box {
     @include row-grid(0.9rem);
-    padding: 1.6rem;
+    padding: var(--offset-s);
     // .rating-box__logo
 
     &__logo {
