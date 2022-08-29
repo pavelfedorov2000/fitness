@@ -5,10 +5,12 @@
     border: var(--offset-xxs) solid var(--pink);
     border-radius: $brs;
     display: grid;
-    grid-template-columns: var(--offset-xls) 1fr var(--offset-xls) 50%;
-    grid-template-rows: var(--offset-xls) max-content var(--offset-l) max-content var(--offset-l) max-content 5.7rem max-content 4.8rem max-content var(--offset-l);
+    grid-template-columns: repeat(2, 1fr);
+    //display: grid;
+    //grid-template-columns: var(--offset-xls) 1fr var(--offset-xls) 50%;
+    //grid-template-rows: var(--offset-xls) max-content var(--offset-l) 1fr var(--offset-l) max-content 5.7rem max-content 4.8rem max-content var(--offset-l);
 
-    @media (min-width: 1025px) {
+    /* @media (min-width: 1025px) {
         grid-template-areas:
             '. . . img'
             '. top . img'
@@ -21,6 +23,17 @@
             '. . . img'
             '. btn . img'
             '. . . img';
+    } */
+
+    &__content {
+        @extend %flex-col;
+        padding: var(--offset-l) var(--offset-xls);
+
+        > * {
+            &:not(:last-child) {
+                margin-bottom: var(--offset-l);
+            }
+        }
     }
 
     // .children-section__top
@@ -28,9 +41,9 @@
     &__top {
         @extend %flex-row-center;
 
-        @media (min-width: 1025px) {
+        /* @media (min-width: 1025px) {
             grid-area: top;
-        }
+        } */
     }
 
     // .children-section__title
@@ -63,26 +76,33 @@
 
     &__text {
         color: var(--dark-gray);
+        flex-grow: 1;
 
-        @media (min-width: 1025px) {
-            grid-area: text;
+        p {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
         }
+
+        /* @media (min-width: 1025px) {
+            grid-area: text;
+        } */
     }
 
     // .children-section__timetable
 
     &__timetable {
-        @media (min-width: 1025px) {
+        /* @media (min-width: 1025px) {
             grid-area: timetable;
-        }
+        } */
     }
 
     // .children-section__img
 
     &__img {
-        @media (min-width: 1025px) {
+        /* @media (min-width: 1025px) {
             grid-area: img;
-        }
+        } */
 
         img {
             @extend %cover;
@@ -96,19 +116,24 @@
     // .children-section__instructor
 
     &__instructor {
-        @media (min-width: 1025px) {
-            grid-area: instructor;
+        &:not(:last-child) {
+            margin-bottom: var(--arrow-btn);
         }
+
+        /* @media (min-width: 1025px) {
+            grid-area: instructor;
+        } */
     }
 
     // .children-section__btn
 
     &__btn {
         @include padding-x(2.8rem);
+        margin-top: auto;
 
-        @media (min-width: 1025px) {
+        /* @media (min-width: 1025px) {
             grid-area: btn;
-        }
+        } */
     }
 
     &--light-blue {
@@ -116,6 +141,12 @@
 
         .label {
             background-color: #fff;
+        }
+
+        #{$this} {
+            &__btn {
+                align-self: end;
+            }
         }
     }
 
@@ -134,6 +165,77 @@
 
             &__btn {
                 border-radius: 0;
+            }
+        }
+    }
+
+    &--grid {
+        grid-template-columns: var(--offset-xls) 1fr var(--offset-xls) 50%;
+        grid-template-rows: var(--offset-xls) max-content var(--offset-l) 1fr var(--offset-l) max-content 5.7rem max-content var(--arrow-btn) max-content var(--offset-l);
+
+        @media (min-width: 1025px) {
+            grid-template-areas:
+                '. . . img'
+                '. top . img'
+                '. . . img'
+                '. text . img'
+                '. . . img'
+                '. timetable . img'
+                '. . . img'
+                '. instructor . img'
+                '. . . img'
+                '. btn . img'
+                '. . . img';
+        }
+
+        #{$this} {
+            &__top {
+                @media(min-width: 1025px) {
+                    grid-area: top;
+                }
+            }
+
+            &__text {
+
+                @media (min-width: 1025px) {
+                    grid-area: text;
+                }
+            }
+
+            // .children-section__timetable
+
+            &__timetable {
+                @media (min-width: 1025px) {
+                    grid-area: timetable;
+                }
+            }
+
+            // .children-section__img
+
+            &__img {
+                @media (min-width: 1025px) {
+                    grid-area: img;
+                }
+            }
+
+            // .children-section__instructor
+
+            &__instructor {
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+
+                @media (min-width: 1025px) {
+                    grid-area: instructor;
+                }
+            }
+
+            // .children-section__btn
+
+            &__btn {
+                @media (min-width: 1025px) {
+                    grid-area: btn;
+                }
             }
         }
     }

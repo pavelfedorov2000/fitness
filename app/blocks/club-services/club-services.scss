@@ -1,5 +1,4 @@
 .club-services {
-
     position: relative;
 
     @media(min-width: 1025px) {
@@ -7,14 +6,6 @@
             @include rect(top, right, 0, 0, 28.5rem, var(--ocean));
         }
     }
-
-    // .club-services__grid
-
-    &__grid {}
-
-    // .club-services__content
-
-    &__content {}
 
     // .club-services__title
 
@@ -40,32 +31,5 @@
 
     &__tabs-content {
         grid-column: 1 / -1;
-    }
-
-    .workout-card {
-        &__btn {
-            justify-self: end;
-        }
-    }
-}
-
-.tab {
-    position: relative;
-    text-align: left;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 0.6rem;
-        background-color: var(--yellow);
-    }
-
-    &.active {
-        &:after {
-            width: 100%;
-        }
     }
 }

@@ -5,6 +5,7 @@
         --border-width: var(--offset-xs);
     }
 
+    box-sizing: border-box;
     @include padding-y(10.4rem);
     border: var(--border-width) solid var(--yellow);
     background-image: url(../images/elements/free-training-elements.svg);

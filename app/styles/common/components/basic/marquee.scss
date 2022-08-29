@@ -82,7 +82,7 @@
         display: flex;
 
         &:not(:last-child) {
-            margin-bottom: 0.8rem;
+            margin-bottom: var(--offset-xxs);
         }
     }
 
@@ -98,7 +98,7 @@
             -webkit-text-stroke-width: initial;
             -webkit-text-stroke-color: initial;
             color: var(--yellow);
-            margin: 0 0.8rem;
+            margin: 0 var(--offset-xxs);
         }
     }
 

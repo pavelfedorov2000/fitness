@@ -12,22 +12,18 @@
         height: auto;
     }
 
-    .swiper-wrapper {
+    > .swiper-wrapper {
         @media (max-width: 1024px) {
             display: block;
             height: auto;
             transform: none !important;
         }
 
-        /* > * {
-            @media (min-width: 1025px) {
-                height: 100vh;
+        > .swiper-slide {
+            @media(min-width: 1025px) {
+                min-height: 100vh;
             }
-        } */
-    }
-
-    .swiper-slide {
-        min-height: 100vh;
+        }
     }
 }
 

@@ -14,7 +14,13 @@ app.clubsCompre = {
                     next: 'splide__arrow--next slider-nav__arrow--next',
                     //pagination: 'slider-nav__pagination'
                 },
-                pagination: false
+                pagination: false,
+                breakpoints: {
+                    1024: {
+                        perPage: 'auto',
+                        gap: `${getComputedStyle(document.documentElement).getPropertyValue('--offset-m')}`
+                    },
+                },
             });
 
             const clubsCompareSliderBar = clubsCompareSlider.root.querySelector('.slider-nav__progress-bar');

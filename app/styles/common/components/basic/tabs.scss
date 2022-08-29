@@ -1,0 +1,20 @@
+.tab {
+    position: relative;
+    text-align: left;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 0.6rem;
+        background-color: var(--yellow);
+    }
+
+    &.active {
+        &:after {
+            width: 100%;
+        }
+    }
+}

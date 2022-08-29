@@ -24,7 +24,7 @@
 
         svg {
             flex-shrink: 0;
-            margin-right: 0.8rem;
+            margin-right: var(--offset-xxs);
             width: 2rem;
             height: 2rem;
             fill: var(--gray);
@@ -52,6 +52,7 @@
         color: #fff;
         transition: 0.3s color;
     }
+
     // .region-btn__title
 
     &__title {

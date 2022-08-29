@@ -92,7 +92,7 @@
     background-color: #fff;
     color: var(--black);
     border-radius: $brs;
-    padding: 0.1rem 0.8rem;
+    padding: 0.1rem var(--offset-xxs);
     transition: .3s background-color;
 
     &--blue {

@@ -14,36 +14,68 @@
         }
     }
 
+    @media(max-width: 1024px) {
+        @include padding-y(var(--offset-l));
+    }
+
     // .clubs-compare__content
 
     &__content {
         display: grid;
         row-gap: 11.5rem;
-        justify-items: end;
+
+        @media(min-width: 1025px) {
+            justify-items: end;
+        }
+
+        @media(max-width: 1024px) {
+            row-gap: 2.2rem;
+        }
     }
 
     // .clubs-compare__title
 
     &__title {
-        text-align: right;
+        @media(min-width: 1025px) {
+            text-align: right;
+        }
     }
 
     // .clubs-compare__slider
 
     &__slider {
-        width: var(--container);
         padding-bottom: calc(12.8rem + var(--arrow-btn));
+
+        @media(max-width: 1024px) {
+            padding-bottom: calc(var(--offset-l) + var(--arrow-btn));
+        }
+
+        @media(min-width: 1025px) {
+            width: var(--container);
+        }
+
+        .splide__slide {
+            @media(max-width: 1024px) {
+                width: 20.8rem;
+            }
+        }
     }
 
     &__slider-nav {
         position: absolute;
         @extend %pos-center-x;
         bottom: 0;
+
+        @media(max-width: 1024px) {
+            //width: 100%;
+            display: none;
+        }
     }
 }
 
 .clubs-compare-item {
     @include row-grid(var(--offset-l));
+    align-content: start;
 
     &__top {
         @extend %flex-row-center;
@@ -55,17 +87,37 @@
         @extend .title;
         @extend %text-16;
         max-width: 17rem;
+
+        @media(max-width: 1024px) {
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+        }
     }
 
     &__num {
         @extend .title;
         @extend %text-32;
-        margin-right: 5rem;
+
+        @media(min-width: 1025px) {
+            margin-right: 5rem;
+        }
+
+        @media(max-width: 1024px) {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
     }
 
     &__plus,
     &__minus {
         --icon: var(--offset-m);
+
+        @media(max-width: 1024px) {
+            --icon: 2rem;
+
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
 
         position: relative;
         padding-left: calc(var(--icon) * 2);

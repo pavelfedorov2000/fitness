@@ -1,14 +1,21 @@
 .coach-included {
-
     --title: 53.3rem;
     --text: 38.4rem;
 
+    position: relative;
     display: grid;
     background-color: var(--black);
     color: #fff;
-    // .coach-included__body
 
-    &__body {}
+    @media(max-width: 1024px) {
+        min-height: 100vh;
+    }
+
+    &:before {
+        @include rect(top, left, 0, 0, 100%, linear-gradient(180deg, rgba(2, 8, 24, 0.2) 0%, rgba(2, 8, 24, 0.75) 100%));
+        width: 100%;
+        z-index: 1;
+    }
 
     // .coach-included__bg
 
@@ -21,26 +28,45 @@
     // .coach-included__content
 
     &__content {
+        position: relative;
+        z-index: 2;
         display: grid;
-        grid-template-columns: 1fr calc(var(--title) - var(--text)) var(--text);
-        grid-template-areas:
-            '. title title'
-            '. . text'
-        ;
         row-gap: var(--offset-xxl);
         align-content: center;
         @include padding-y(var(--offset-xxl));
+
+        @media(min-width: 1025px) {
+            grid-template-columns: 1fr calc(var(--title) - var(--text)) var(--text);
+            grid-template-areas:
+                '. title title'
+                '. . text'
+            ;
+        }
+
+        @media(max-width: 1024px) {
+            text-align: center;
+            row-gap: var(--offset-l);
+        }
     }
 
     // .coach-included__title
 
     &__title {
-        grid-area: title;
+        @media(min-width: 1025px) {
+            grid-area: title;
+        }
     }
 
     // .coach-included__text
 
     &__text {
-        grid-area: text;
+        @media(min-width: 1025px) {
+            grid-area: text;
+        }
+
+        @media(max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
     }
 }

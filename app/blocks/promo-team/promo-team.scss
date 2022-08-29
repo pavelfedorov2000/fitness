@@ -101,7 +101,7 @@
 
 .team-grid {
     padding-top: var(--input-height);
-    padding-bottom: calc(var(--section-padding) + 0.8rem);
+    padding-bottom: calc(var(--section-padding) + var(--offset-xxs));
     position: relative;
 
     @media (min-width: 1025px) {

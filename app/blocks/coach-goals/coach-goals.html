@@ -70,6 +70,30 @@
                     </div>
                 </div>
             </div>
+
+            <div class="workout-section workout-section--without-top">
+                <div class="splide business-classes-slider coach-goals__slider">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            @@include('blocks/workout-card/coach.html', {
+                            "blue": true,
+                            "brsWithout": true,
+                            })
+                            @@include('blocks/workout-card/coach.html', {
+                            "blue": true,
+                            "brsWithout": true,
+                            })
+                            @@include('blocks/workout-card/coach.html', {
+                            "blue": true,
+                            "brsWithout": true
+                            })
+                        </div>
+                    </div>
+                    @@include('blocks/slider-nav/slider-nav.html', {
+                    "class": "workout-section"
+                    })
+                </div>
+            </div>
         </div>
     </div>
 </section>

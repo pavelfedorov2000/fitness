@@ -92,7 +92,7 @@
 .timetable-card {
     $this: &;
 
-    --coach: 8rem;
+    --coach: var(--section-padding);
     --people: 16.3rem;
 
     display: grid;

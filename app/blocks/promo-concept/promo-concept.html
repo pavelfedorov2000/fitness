@@ -22,7 +22,7 @@
                      loading="lazy">
             </picture>
         </div>
-        <div class="promo-marquee vertical-marquee">
+        <div class="promo-marquee vertical-marquee promo-concept__marquee">
             <p>
                 <span class="ttu">Fitnession.</span> Эффективно
             </p>
@@ -58,6 +58,8 @@
                 прямо сейчас
             </p>
         </div>
-        @@include('blocks/scroll-btn/scroll-btn.html')
+        @@include('blocks/scroll-btn/scroll-btn.html', {
+        "class": "promo-concept"
+        })
     </div>
 </section>

@@ -45,7 +45,7 @@
         @extend %text-48;
 
         &:not(:last-child) {
-            margin-bottom: 4.8rem;
+            margin-bottom: var(--arrow-btn);
         }
     }
 

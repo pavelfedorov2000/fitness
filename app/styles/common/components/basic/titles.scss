@@ -58,6 +58,11 @@
     transform: rotate(-180deg);
     background-color: var(--yellow);
     color: #fff;
+    display: none;
+
+    @media(min-width: 1025px) {
+        display: flex;
+    }
 
     &--ocean {
         background-color: var(--ocean);

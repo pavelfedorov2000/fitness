@@ -18,7 +18,7 @@
     // .blog-section__body
 
     &__body {
-        padding-top: 8rem;
+        padding-top: var(--section-padding);
 
         @media (min-width: 1025px) {
             background-color: var(--light-blue);

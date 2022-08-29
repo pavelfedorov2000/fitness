@@ -10,6 +10,7 @@
         app.childrenSections.init();
         app.clubReviews.init();
         app.coachBio.init();
+        app.cardServices.init();
         //app.burger.init();
         //app.slider.init();
         //app.menu.init();

@@ -9,6 +9,11 @@ ol.counter,
         position: relative;
         padding-left: calc(var(--offset-s) + var(--counter-num));
 
+        @media(max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+
         &:before {
             position: absolute;
             top: 0;

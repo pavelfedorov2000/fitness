@@ -4,11 +4,38 @@
     background-color: var(--black);
     color: #fff;
 
-    @media (min-width: 1025px) {
-        &:before {
-            @include rect(top, right, 0, 0, var(--gap), var(--ocean));
+    @media(max-width: 1024px) {
+        min-height: 100vh;
+    }
+
+    &:before {
+        @include rect(top, right, 0, 0, var(--gap), var(--ocean));
+        z-index: 3;
+
+        @media(max-width: 1024px) {
+            width: 9.2rem;
+            height: 9.2rem;
         }
     }
+
+    &::after {
+        @media(max-width: 1024px) {
+            @include rect(top, left, 0, 0, 100%, linear-gradient(180deg, rgba(2, 8, 24, 0.2) 0%, rgba(2, 8, 24, 0.75) 100%));
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+    &__bg {
+        width: 100%;
+
+        img {
+            @media(max-width: 1024px) {
+                object-position: 30%;
+            }
+        }
+    }
+
     // .fitness-app__content
 
     &__content {
@@ -16,26 +43,45 @@
         --title: 53.2rem;
         --text: 34.4rem;
 
+        position: relative;
+        z-index: 2;
         width: var(--title);
         display: grid;
-        grid-template-columns: calc(var(--title) - var(--text)) 1fr;
-        grid-template-areas:
-            'title title'
-            '. text';
         row-gap: var(--gap);
         align-content: center;
-        @include padding-y(var(--gap));
+
+        @media(max-width: 1024px) {
+            width: 100%;
+            row-gap: var(--offset-l);
+            text-align: center;
+        }
+
+        @media(min-width: 1025px) {
+            @include padding-y(var(--gap));
+            grid-template-columns: calc(var(--title) - var(--text)) 1fr;
+            grid-template-areas: 'title title'
+                '. text';
+        }
     }
 
     // .fitness-app__title
 
     &__title {
-        grid-area: title;
+        @media(min-width: 1025px) {
+            grid-area: title;
+        }
     }
 
     // .fitness-app__text
 
     &__text {
-        grid-area: text;
+        @media(min-width: 1025px) {
+            grid-area: text;
+        }
+
+        @media(max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
     }
 }

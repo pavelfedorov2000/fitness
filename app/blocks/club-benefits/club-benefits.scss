@@ -6,6 +6,10 @@
 
     position: relative;
 
+    @media(max-width: 1024px) {
+        @include padding-y(var(--offset-m));
+    }
+
     @media (min-width: 1025px) {
         &:before {
             @include rect(bottom, left, 0, 0, var(--gap), var(--yellow));
@@ -25,7 +29,10 @@
     }
 
     &__img {
+        display: none;
+
         @media (min-width: 1025px) {
+            display: block;
             grid-row: 1 / -1;
             grid-column: 1 / span 3;
         }
@@ -38,13 +45,15 @@
     &__content {
         display: grid;
 
+        @media(max-width: 1024px) {
+            row-gap: var(--offset-l);
+        }
+
         @media (min-width: 1025px) {
             grid-row: 2 / 3;
             grid-column: 3 / 5;
             grid-template-rows: max-content 10.4rem max-content var(--circle-text);
-            grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text) - var(--offset)) var(
-                    --offset
-                ) 1fr;
+            grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text) - var(--offset)) var(--offset) 1fr;
             grid-template-areas:
                 'title title title .'
                 '. . . .'
@@ -64,7 +73,10 @@
     // .club-benefits__circle-text
 
     &__circle-text {
+        display: none;
+
         @media (min-width: 1025px) {
+            display: grid;
             grid-area: circle;
         }
     }
@@ -72,9 +84,16 @@
     // .club-benefits__list
 
     &__list {
-        grid-auto-flow: column;
         grid-template-rows: repeat(4, max-content);
         gap: var(--offset-xxxl) 4.2rem;
+
+        @media(max-width: 1024px) {
+            gap: var(--offset-l);
+        }
+
+        @media(min-width: 768px) {
+            grid-auto-flow: column;
+        }
 
         @media (min-width: 1025px) {
             grid-area: ol;
@@ -82,7 +101,10 @@
     }
 
     &__marquee {
+        display: none;
+
         @media (min-width: 1025px) {
+            display: flex;
             position: absolute;
             top: 0;
             right: 6rem;

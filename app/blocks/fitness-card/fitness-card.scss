@@ -14,10 +14,6 @@
     &__grid {
         @media (min-width: 1025px) {
             grid-template-rows: var(--section-padding-xl) max-content var(--section-padding);
-            grid-template-areas:
-                '. . . . aside'
-                '. . body . aside'
-                '. . . . .';
         }
     }
 
@@ -38,7 +34,7 @@
             'btn btn btn btn btn btn';
 
         @media (min-width: 1025px) {
-            grid-area: body;
+            grid-row: 2 / -2;
         }
     }
 
@@ -134,7 +130,7 @@
 
     &__aside-client {
         @media (min-width: 1025px) {
-            grid-area: aside;
+            grid-column: -2 / -1;
         }
     }
 }

@@ -107,7 +107,9 @@ img {
 }
 
 .section {
-    min-height: var(--section-mh);
+    @media(min-width: 1025px) {
+        min-height: var(--section-mh);
+    }
 }
 
 .section-body {
@@ -159,6 +161,14 @@ img {
         }
     }
 }
+
+/* .promo-aside {
+    display: none;
+
+    @media(min-width: 1025px) {
+        display: block;
+    }
+} */
 
 /* .visually-hidden {
 	position: absolute;

@@ -152,4 +152,8 @@
             text-transform: none;
         }
     }
+
+    &__slider {
+        width: calc(100vw - var(--gap) * 4);
+    }
 }

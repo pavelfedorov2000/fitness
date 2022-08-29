@@ -1,12 +1,24 @@
 .regular-measurements {
     --title: 31rem;
     --circle-text: 40rem;
+    --circle-text-text: 26.8rem;
+    --circle-text-img: 22.3rem;
     --half-circle: calc(var(--circle-text) / 2);
+
+    @media(max-width: 767px) {
+        --circle-text: 23.2rem;
+        --circle-text-text: 100%;
+        --circle-text-img: 19.3rem;
+    }
 
     @include padding-y(var(--section-padding-xl));
     background-color: var(--black);
     position: relative;
     color: #fff;
+
+    @media(max-width: 1024px) {
+        padding: var(--offset-l) 0 calc(var(--offset-l) + var(--half-circle));
+    }
 
     &:before {
         @extend %pos-center-x;
@@ -17,28 +29,47 @@
         width: 69.3rem;
         height: 69.3rem;
         background: radial-gradient(50% 50% at 50% 50%, rgba(24, 129, 226, 0.46) 0%, rgba(17, 53, 123, 0) 100%);
+
+        @media(max-width: 767px) {
+            top: 0;
+            bottom: 0;
+            width: 66.6rem;
+            height: 100%;
+        }
     }
 
     // .regular-measurements__grid
 
     &__grid {
+        position: relative;
+        z-index: 2;
         display: grid;
-        grid-template-rows: max-content 1fr max-content;
-        grid-template-columns: repeat(2, var(--gap)) var(--gap) calc(var(--title) - var(--gap)) 4.5rem repeat(
-                2,
-                var(--half-circle)
-            ) 1fr repeat(2, var(--gap));
+        grid-template-columns: repeat(2, var(--gap)) var(--gap) calc(var(--title) - var(--gap)) 4.5rem repeat(2,
+                var(--half-circle)) 1fr repeat(2, var(--gap));
 
         @media (min-width: 1025px) {
+            grid-template-rows: max-content 1fr max-content;
             min-height: calc(100vh - var(--section-padding-xl) * 2);
+        }
+
+        @media(max-width: 1024px) {
+            grid-template-columns: var(--mob-padding) 1fr var(--gap) var(--mob-padding);
+            row-gap: var(--offset-m);
+        }
+
+        @media(max-width: 767px) {
+            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
         }
     }
 
     // .regular-measurements__title
 
     &__title {
-        @media (min-width: 1025px) {
-            grid-column: 3 / span 2;
+        grid-column: 3 / span 2;
+        padding-right: var(--offset-m);
+
+        @media(max-width: 1024px) {
+            grid-column: 2 / 3;
         }
     }
 
@@ -49,19 +80,26 @@
         position: relative;
         z-index: 25;
 
-        @media (min-width: 1025px) {
+        @media(min-width: 1025px) {
             grid-column: 6 / span 2;
             grid-row: 1 / -1;
         }
 
+        @media(max-width: 1024px) {
+            position: absolute;
+            bottom: calc(var(--half-circle) * (-1));
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
         &-text {
-            width: 26.8rem;
-            height: 26.8rem;
+            width: var(--circle-text-text);
+            height: var(--circle-text-text);
         }
 
         &-img {
-            width: 22.3rem;
-            height: 22.3rem;
+            width: var(--circle-text-img);
+            height: var(--circle-text-img);
         }
 
         p {
@@ -71,7 +109,22 @@
 
     &__box-link {
         grid-column: 3 / 4;
-        grid-row: -2 / -1;
+
+        @media(max-width: 767px) {
+            grid-column: 2 / 3;
+        }
+
+        @media(min-width: 768px) {
+            grid-row: 1 / 2;
+        }
+
+        @media(min-width: 1025px) {
+            grid-row: -2 / -1;
+        }
+
+        @media(max-width: 1024px) {
+            margin-bottom: calc(var(--offset-l) - var(--offset-m));
+        }
     }
 
     // .regular-measurements__img
@@ -79,14 +132,25 @@
     &__img {
         position: relative;
         z-index: 10;
+        grid-column: 7 / -1;
 
-        @media (min-width: 1025px) {
+        @media(min-width: 1025px) {
             grid-row: 1 / -1;
-            grid-column: 7 / -1;
+        }
+
+        @media(max-width: 1024px) {
+            grid-column: 1 / -1;
+            height: 40rem;
+        }
+
+        @media(max-width: 767px) {
+            height: 20.8rem;
         }
 
         img {
-            @extend %cover;
+            &:not(.circle-text__img) {
+                @extend %cover;
+            }
         }
     }
 }

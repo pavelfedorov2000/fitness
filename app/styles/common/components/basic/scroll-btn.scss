@@ -1,0 +1,37 @@
+.scroll-btn {
+    $this: &;
+
+    display: none;
+    place-items: center;
+    align-content: center;
+    background-color: var(--black);
+
+    &__arrow {
+        width: var(--offset-m);
+        height: var(--offset-m);
+
+        path {
+            fill: #fff;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        display: grid;
+        width: var(--gap);
+        height: var(--gap);
+        grid-area: scroll;
+        // .scroll-btn__arrow
+    }
+
+    &--yellow {
+        background-color: var(--yellow);
+
+        #{$this} {
+            &__arrow {
+                path {
+                    fill: var(--black);
+                }
+            }
+        }
+    }
+}

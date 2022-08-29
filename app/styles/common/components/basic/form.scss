@@ -15,8 +15,8 @@
 
 .check-box:checked + .check-style:before {
     content: '';
-    width: 0.8rem;
-    height: 0.8rem;
+    width: var(--offset-xxs);
+    height: var(--offset-xxs);
     //background-image: url(../images/icons/check.svg);
     position: absolute;
     @extend %pos-center-xy;
@@ -133,7 +133,7 @@ input[type='number']:focus {
     display: grid;
 
     @media (max-width: 1024px) {
-        row-gap: var(--gap);
+        row-gap: var(--offset-l);
     }
 
     @media (min-width: 1025px) {
