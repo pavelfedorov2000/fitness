@@ -7,12 +7,21 @@
         @extend %flex-row-center;
         background-color: #fff;
         padding-right: var(--offset-xxs);
+
+        @media(max-width: 767px) {
+            padding: var(--offset-xxs) var(--offset-xxs) var(--offset-xs);
+        }
     }
 
     // .coach-rating__avatar
 
     &__avatar {
-        width: var(--offset-xxxl);
+        display: none;
+
+        @media(min-width: 768px) {
+            display: block;
+            width: var(--offset-xxxl);
+        }
 
         img {
             @extend %cover;
@@ -22,8 +31,15 @@
     // .coach-rating__head-info
 
     &__head-info {
-        margin-left: var(--offset-l);
         margin-right: auto;
+
+        @media(min-width: 768px) {
+            margin-left: var(--offset-l);
+        }
+
+        @media(max-width: 767px) {
+            max-width: 14.2rem;
+        }
 
         > * {
             &:not(:last-child) {
@@ -45,6 +61,10 @@
     &__head-descr {
         @extend %text-12;
         color: var(--dark-gray);
+
+        @media(max-width: 767px) {
+            display: none;
+        }
     }
 
     // .coach-rating__average
@@ -68,6 +88,10 @@
         right: 0;
         background-color: #fff;
         padding: calc(var(--offset-l) / 2) var(--offset-l) var(--offset-l);
+        display: none;
+    }
+
+    &__inner {
         @include row-grid(var(--offset-s));
     }
 

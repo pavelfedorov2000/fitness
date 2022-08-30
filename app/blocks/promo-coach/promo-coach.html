@@ -1,6 +1,7 @@
 <section class="promo-coach">
     @@include('blocks/scroll-btn/scroll-btn.html', {
-    "modifier": "yellow"
+    "modifier": "yellow",
+    "class": "promo-coach"
     })
     <div class="promo-coach__content">
         <div class="promo-coach__position">Управляющий клуба в Можайске</div>
@@ -8,7 +9,8 @@
             Андрей
             Лисица
         </h1>
-        <ul class="social promo-coach__social">
+        <ul class="social promo-coach__social"
+            data-da=".promo-coach__wrap, 1024, first">
             <li class="social__item social__item--vk social__item--white">
                 <a class="social__link"
                    href="#">
@@ -45,10 +47,12 @@
                 </a>
             </li>
         </ul>
+        <div class="promo-coach__wrap"></div>
     </div>
     <button class="player-circle-wrap promo-coach__player"
             type="button"
-            aria-label="Смотреть видео">
+            aria-label="Смотреть видео"
+            data-da=".promo-coach__wrap, 1024, last">
         <div class="player-btn player-btn--round player-btn--ocean">
             <svg viewBox="0 0 22 22"
                  fill="none"
@@ -81,6 +85,12 @@
         </picture>
     </div>
     <nav class="promo-coach__nav promo-nav">
+        <div class="promo-nav__mobile">
+            Разделы страницы
+            <svg>
+                <use xlink:href="assets/images/sprite.svg#dots"></use>
+            </svg>
+        </div>
         <ul class="promo-nav__list">
             <li class="promo-nav__item"
                 data-section="bio">

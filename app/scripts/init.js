@@ -10,7 +10,7 @@
         app.childrenSections.init();
         app.clubReviews.init();
         app.coachBio.init();
-        app.cardServices.init();
+        //app.cardServices.init();
         //app.burger.init();
         //app.slider.init();
         //app.menu.init();
@@ -47,7 +47,17 @@
                     next: 'splide__arrow--next slider-nav__arrow--next',
                     //pagination: 'slider-nav__pagination'
                 },
-                pagination: false
+                pagination: false,
+                /* breakpoints: {
+                    1024: {
+                        perPage: 2,
+                        gap: '2.4rem',
+                    },
+                    640: {
+                        perPage: 1,
+                        gap: '1.6rem',
+                    },
+                }, */
             });
 
             const coachPhotosSliderBar = coachPhotosSlider.root.querySelector('.slider-nav__progress-bar');
@@ -244,7 +254,16 @@
                     next: 'splide__arrow--next slider-nav__arrow--next',
                     //pagination: 'slider-nav__pagination'
                 },
-                pagination: false
+                pagination: false,
+                breakpoints: {
+                    1024: {
+                        perPage: 2,
+                        gap: '1.6rem',
+                    },
+                    640: {
+                        perPage: 1
+                    },
+                },
             });
 
             const successStoriesSliderBar = successStoriesSlider.root.querySelector('.slider-nav__progress-bar');

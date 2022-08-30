@@ -1,16 +1,26 @@
 .coach-photos {
     position: relative;
-    @include padding-y(12.4rem);
 
     @media(min-width: 1025px) {
+        @include padding-y(12.4rem);
+
         &:before {
             @include rect(top, left, 0, 0, 100%, var(--yellow));
         }
     }
 
+    &__body {
+        @media(max-width: 1024px) {
+            grid-column: 1 / -1;
+        }
+    }
+
     &__slider {
-        @media(min-width: 1025px) {
-            width: calc(100vw - var(--gap) * 4);
+        width: calc(100vw - var(--gap) * 4);
+
+        @media(max-width: 1024px) {
+            width: 100vw;
+            padding-bottom: var(--arrow-btn);
         }
     }
 
@@ -19,49 +29,47 @@
         left: calc(var(--gap) + 3.4rem);
         bottom: 0;
         width: max-content;
+
+        @media(max-width: 1024px) {
+            left: 0;
+            width: 100%;
+        }
     }
 }
 
 .coach-photos-slider {
     .splide {
-
-        // .splide__track
-
-        &__track {}
-
-        // .splide__list
-
-        &__list {}
-
         // .splide__slide
 
         &__slide {
-            width: var(--gap) !important;
-            height: var(--gap);
-            opacity: 0;
-            transition: .3s opacity;
+            @media(min-width: 1025px) {
+                width: var(--gap) !important;
+                height: var(--gap);
+                opacity: 0;
+                transition: .3s opacity;
 
-            &.is-active {
-                align-self: start;
-                margin-top: 18rem - 12.4rem;
-            }
-
-            &.is-next {
-                width: 55.3rem !important;
-                height: 55.3rem;
-            }
-
-            &.is-next {
-                & + .splide__slide {
-                    align-self: end;
-                    margin-bottom: 18rem - 12.4rem;
+                &.is-active {
+                    align-self: start;
+                    margin-top: 18rem - 12.4rem;
                 }
-            }
 
-            &.is-active,
-            &.is-next,
-            &.is-next + .splide__slide {
-                opacity: 1;
+                &.is-next {
+                    width: 55.3rem !important;
+                    height: 55.3rem;
+                }
+
+                &.is-next {
+                    & + .splide__slide {
+                        align-self: end;
+                        margin-bottom: 18rem - 12.4rem;
+                    }
+                }
+
+                &.is-active,
+                &.is-next,
+                &.is-next + .splide__slide {
+                    opacity: 1;
+                }
             }
 
             img {

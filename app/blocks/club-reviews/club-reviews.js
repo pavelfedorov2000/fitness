@@ -1,7 +1,7 @@
-app.yourScriptName = {
-  name: 'yourScriptName',
+/* app.clubReviews = {
+  name: 'clubReviews',
   description: 'your script description',
   init() {
     // your code
   },
-};
+}; */

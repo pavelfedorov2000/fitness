@@ -5,10 +5,19 @@
 .rating-box {
     @include row-grid(0.9rem);
     padding: var(--offset-s);
+
+    @media(max-width: 767px) {
+        padding: var(--offset-xxs);
+    }
+
     // .rating-box__logo
 
     &__logo {
         height: 2rem;
+
+        @media(max-width: 767px) {
+            height: var(--offset-s);
+        }
     }
 
     // .rating-box__rate
@@ -24,12 +33,22 @@
         @extend .title;
         @extend %text-20;
         color: #fff;
+
+        @media(max-width: 767px) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
     }
 
     // .rating-box__total-rate
 
     &__total-rate {
         @extend %text-12;
+
+        @media(max-width: 767px) {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
     }
 
     &__total-rate,
@@ -41,6 +60,11 @@
 
     &__title {
         @extend %text-12;
+
+        @media(max-width: 767px) {
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
     }
 
     &--gray {

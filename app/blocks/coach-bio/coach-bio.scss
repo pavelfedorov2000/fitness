@@ -4,9 +4,23 @@
     position: relative;
     @include padding-y(var(--section-padding-xl));
 
+    @media(max-width: 1024px) {
+        padding: var(--offset-xls) 0 var(--offset-xl);
+    }
+
+    @media(max-width: 767px) {
+        padding: var(--offset-m) 0 var(--offset-l);
+    }
+
     @media(min-width: 1025px) {
         &:before {
             @include rect(top, left, 0, 0, 100%, var(--beige));
+        }
+    }
+
+    &__container {
+        @media(max-width: 1024px) {
+            grid-template-columns: unset;
         }
     }
 
@@ -14,19 +28,33 @@
 
     &__body {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: max-content var(--offset-l) max-content 4rem max-content var(--offset-l) max-content var(--offset-xxl) max-content;
-        grid-template-areas:
-            '. title'
-            '. .'
-            '. text'
-            '. .'
-            '. sliderTop'
-            '. .'
-            'slider slider'
-            '. .'
-            '. dl'
-        ;
+
+        @media(min-width: 1025px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: max-content var(--offset-l) max-content 4rem max-content var(--offset-l) max-content var(--offset-xxl) max-content;
+            grid-template-areas:
+                '. title'
+                '. .'
+                '. text'
+                '. .'
+                '. sliderTop'
+                '. .'
+                'slider slider'
+                '. .'
+                '. dl'
+            ;
+        }
+
+        @media(max-width: 1024px) {
+            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+            row-gap: var(--offset-s);
+        }
+
+        > * {
+            @media(max-width: 1024px) {
+                grid-column: 2 / 3;
+            }
+        }
     }
 
     // .coach-bio__title
@@ -42,6 +70,12 @@
     &__text {
         @media(min-width: 1025px) {
             grid-area: text;
+        }
+
+        @media(max-width: 1024px) {
+            &:not(:last-child) {
+                margin-bottom: calc(var(--offset-m) - var(--offset-s));
+            }
         }
     }
 
@@ -105,14 +139,30 @@
             width: calc(100vw - var(--gap) * 4);
             grid-area: slider;
         }
+
+        @media(max-width: 1024px) {
+            width: 100vw;
+            grid-column: 1 / -1;
+
+            &:not(:last-child) {
+                margin-bottom: calc(var(--offset-l) - var(--offset-s));
+            }
+        }
     }
 
     // .coach-bio__list
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: var(--offset-l);
+
+        @media(max-width: 767px) {
+            gap: var(--offset-m);
+        }
+
+        @media(min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         @media(min-width: 1025px) {
             grid-area: dl;
@@ -138,20 +188,37 @@
 .coach-music-slider {
     $this: &;
 
-    padding-bottom: var(--offset-m);
+    @media(min-width: 1025px) {
+        padding-bottom: var(--offset-m);
+    }
 
     &__player {
         position: absolute;
         @extend %pos-center-xy;
-        opacity: 0;
-        transition: .3s opacity;
+
+        @media(min-width: 1025px) {
+            opacity: 0;
+            transition: .3s opacity;
+        }
     }
 
     // .coach-music-slider__item
 
     &__item {
         &:nth-child(odd) {
-            transform: translateY(var(--offset-m));
+            @media(min-width: 1025px) {
+                transform: translateY(var(--offset-m));
+            }
+        }
+
+        @media(max-width: 1024px) {
+            width: var(--gap);
+            height: var(--gap);
+        }
+
+        @media(max-width: 767px) {
+            width: 11.4rem;
+            height: 11.4rem;
         }
 
         img {
@@ -160,7 +227,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                #{this} {
+                #{$this} {
                     &__player {
                         opacity: 1;
                     }

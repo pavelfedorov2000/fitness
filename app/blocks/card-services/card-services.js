@@ -9,8 +9,8 @@ app.cardServices = {
         const cs = getComputedStyle(cardServices);
         let progressBarWidth = cs.getPropertyValue('--white-rect');
         const progressBarDelta = cs.getPropertyValue('--white-rect-delta');
-        console.log(progressBarWidth);
-        console.log(progressBarDelta);
+        //console.log(progressBarWidth);
+        //console.log(progressBarDelta);
 
         const cardServicesSlider = new Swiper('.card-services-slider', {
             loop: true,

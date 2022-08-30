@@ -8,7 +8,9 @@
     }
 
     &__container {
-        grid-template-columns: var(--mob-padding) calc(100vw - var(--mob-padding) * 2) var(--mob-padding);
+        @media(max-width: 1024px) {
+           grid-template-columns: var(--mob-padding) calc(100vw - var(--mob-padding) * 2) var(--mob-padding);
+        }
     }
 
     // .footer__body

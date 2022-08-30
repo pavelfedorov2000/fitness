@@ -1,8 +1,16 @@
 .coach-reviews {
     --title: 44rem;
+    --player: 18.4rem;
 
     position: relative;
-    grid-template-rows: var(--section-padding-xl) max-content var(--section-padding);
+
+    @media(min-width: 1025px) {
+        grid-template-rows: var(--section-padding-xl) max-content var(--section-padding);
+    }
+
+    @media(max-width: 1024px) {
+        grid-template-rows: var(--offset-l) max-content var(--offset-l);
+    }
 
     @media(min-width: 1025px) {
         &:before {
@@ -15,6 +23,14 @@
     &__bg {
         grid-column: 1 / -1;
         grid-row: 1 / -1;
+
+        img {
+            @extend %cover;
+
+            @media(max-width: 1024px) {
+                object-position: 73%;
+            }
+        }
     }
 
     // .clients-reviews__content
@@ -31,6 +47,19 @@
             '. . . . .'
             'title . . . .'
         ;
+
+        @media(max-width: 1024px) {
+            min-height: 100vh;
+            grid-template-columns: 1fr var(--player) 1fr;
+            grid-template-rows: max-content 7.6rem var(--player) 1fr max-content;
+            grid-template-areas:
+                '. title .'
+                '. . .'
+                '. player .'
+                '. . .'
+                'rating rating rating'
+            ;
+        }
     }
 
     &__rating {
@@ -42,6 +71,10 @@
     &__title {
         color: #fff;
         grid-area: title;
+
+        @media(max-width: 1024px) {
+            text-align: center;
+        }
     }
 
     // .clients-reviews__player

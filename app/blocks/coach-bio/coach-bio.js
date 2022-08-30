@@ -4,7 +4,7 @@ app.coachBio = {
     init() {
         new Swiper('.coach-music-slider', {
             loop: true,
-            slidesPerView: 6,
+            slidesPerView: 'auto',
             //spaceBetween: 30,
             speed: 1000,
             /* autoplay: {
@@ -15,9 +15,6 @@ app.coachBio = {
                 prevEl: '.swiper-button-prev',
             },
             breakpoints: {
-                576: {
-                    slidesPerView: 2,
-                },
                 1025: {
                     slidesPerView: 6,
                 }

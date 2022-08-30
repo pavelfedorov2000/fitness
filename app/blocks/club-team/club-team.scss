@@ -1,13 +1,22 @@
 .club-team {
     padding-top: var(--section-padding);
-    // .club-team__grid
 
-    &__grid {}
+    @media(max-width: 1024px) {
+        padding-top: var(--offset-l);
+    }
 
     // .club-team__top
 
     &__top {
         margin-bottom: var(--offset-xxxl);
+
+        @media(max-width: 1024px) {
+            margin-bottom: var(--offset-l);
+        }
+
+        @media(max-width: 767px) {
+            margin-bottom: var(--offset-m);
+        }
     }
 
     &__suptitle {
@@ -24,37 +33,81 @@
 
     &__slider {
         grid-column: 1 / -1;
+
+        @media(max-width: 1024px) {
+            visibility: visible;
+            width: 100vw;
+            //padding-bottom: calc(var(--arrow-btn) + var(--offset-m));
+        }
+    }
+
+    &__card {
+        @media(min-width: 1025px) {
+            height: 100%;
+        }
     }
 
     &__slider-nav {
-        position: absolute;
-        top: calc((var(--section-padding) + var(--nav)) * (-1));
-        right: calc(var(--gap) * 2);
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: grid;
+            position: absolute;
+            top: calc((var(--section-padding) + var(--nav)) * (-1));
+            right: calc(var(--gap) * 2);
+        }
     }
 
     &__slider-item {
+        @media(min-width: 1025px) {
+            width: 20% !important;
+        }
+
+        @media(max-width: 1024px) {
+            display: none;
+        }
 
         &--grid,
         &--grid_reverse {
-            display: grid;
-            grid-template-rows: repeat(2, 1fr);
-            grid-template-columns: repeat(2, 1fr);
+            @media(min-width: 1025px) {
+                width: 40% !important;
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         &--grid {
             > * {
                 &:first-child {
-                    grid-column: span 2;
+                    @media(min-width: 1025px) {
+                        grid-column: span 2;
+                    }
                 }
             }
 
             &_reverse {
                 > * {
                     &:last-child {
-                        grid-column: span 2;
+                        @media(min-width: 1025px) {
+                            grid-column: span 2;
+                        }
                     }
                 }
             }
+        }
+    }
+}
+
+.club-team-slider {
+    &__list {
+        @media(max-width: 1024px) {
+            display: grid;
+            grid-auto-rows: minmax(30.8rem, max-content);
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }

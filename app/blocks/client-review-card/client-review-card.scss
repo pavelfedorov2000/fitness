@@ -2,9 +2,16 @@
     --quote-pl: 5.8rem;
     --quote-text: 29.6rem;
 
-    width: 72.8rem;
-    height: 40rem;
     position: relative;
+
+    @media(min-width: 768px) {
+        width: 72.8rem;
+        height: 40rem;
+    }
+
+    @media(max-width: 1024px) {
+        min-height: 32rem;
+    }
 
     &::before {
         content: '';
@@ -52,6 +59,11 @@
         ;
         color: #fff;
         text-shadow: $bsh;
+
+        @media(max-width: 1024px) {
+            grid-template-rows: var(--offset-s) max-content 1fr max-content;
+            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+        }
     }
 
     // .client-review-card__quote
@@ -61,7 +73,16 @@
         font-weight: 700;
         grid-area: quote;
         position: relative;
-        padding-left: calc(var(--offset-l) + var(--quote-pl));
+
+        @media(min-width: 768px) {
+            padding-left: calc(var(--offset-l) + var(--quote-pl));
+        }
+
+        @media(max-width: 767px) {
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+            padding-top: calc(var(--mob-padding) + var(--offset-m));
+        }
 
         &::before {
             content: '';
@@ -72,6 +93,11 @@
             height: var(--offset-l);
             background-image: url(../images/icons/quote.svg);
             @extend %bg-contain;
+
+            @media(max-width: 767px) {
+                width: var(--offset-m);
+                height: var(--offset-m);
+            }
         }
     }
 

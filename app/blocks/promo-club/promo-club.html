@@ -1,74 +1,99 @@
 <section class="promo-club">
-	<div class="promo-club__bg">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/promo/promo-club.webp">
-			<img src="assets/images/content/promo/promo-club.jpg" alt="фитнес парень и девушка" width="1920"
-				height="960">
-		</picture>
-	</div>
-	<div class="promo-club__body container">
-		@@include('blocks/scroll-btn/scroll-btn.html')
-		<div class="promo-club__content">
-			<h1 class="section-title promo-club__title">
-				Фитнес–клуБ
-				FITNESSON
-				<span>в Электростале</span>
-			</h1>
-			@@include('blocks/box-link/box-link.html', {
-			"class": "promo-club__box-link",
-			"text": "Подарочная персональная тренировка"
-			})
-			@@include('blocks/ratings/ratings.html', {
-			"class": "promo-club"
-			})
-			@@include('blocks/info-box/info-box.html', {
-			"class": "promo-club"
-			})
-			<nav class="promo-club__nav promo-nav">
-				<div class="promo-nav__mobile">
-					Разделы страницы
-				</div>
-				<ul class="promo-nav__list">
-					<li class="promo-nav__item" data-section="sale">
-						<a href="#" class="promo-nav__link">Акции</a>
-					</li>
-					<li class="promo-nav__item" data-section="club-video">
-						<a href="#" class="promo-nav__link">Видео о клубе</a>
-					</li>
-					<li class="promo-nav__item" data-section="photos">
-						<a href="#" class="promo-nav__link">Фото</a>
-					</li>
-					<li class="promo-nav__item" data-section="timetable">
-						<a href="#" class="promo-nav__link">Раписание</a>
-					</li>
-					<li class="promo-nav__item" data-section="card">
-						<a href="#" class="promo-nav__link">Карта</a>
-					</li>
-					<li class="promo-nav__item" data-section="success-stories">
-						<a href="#" class="promo-nav__link">Истории успеха</a>
-					</li>
-					<li class="promo-nav__item" data-section="team">
-						<a href="#" class="promo-nav__link">Команда</a>
-					</li>
-					<li class="promo-nav__item" data-section="blog">
-						<a href="#" class="promo-nav__link">Блог</a>
-					</li>
-					<li class="promo-nav__item" data-section="events">
-						<a href="#" class="promo-nav__link">Мероприятия</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<div class="promo-marquee vertical-marquee">
-			<p>
-				<span class="ttu">Fitnession.</span> Эффективно
-			</p>
-			<p>
-				<span class="ttu">Fitnession.</span> Эффективно
-			</p>
-			<p>
-				<span class="ttu">Fitnession.</span> Эффективно
-			</p>
-		</div>
-	</div>
+    <div class="promo-club__bg">
+        <picture>
+            <source type="image/webp"
+                    srcset="assets/images/content/promo/promo-club.webp">
+            <img src="assets/images/content/promo/promo-club.jpg"
+                 alt="фитнес парень и девушка"
+                 width="1920"
+                 height="960">
+        </picture>
+    </div>
+    <div class="promo-club__body container">
+        @@include('blocks/scroll-btn/scroll-btn.html')
+        <div class="promo-club__content section-body">
+            <h1 class="section-title promo-club__title">
+                Фитнес–клуБ
+                FITNESSON
+                <span>в Электростале</span>
+            </h1>
+            @@include('blocks/box-link/box-link.html', {
+            "class": "promo-club__box-link",
+            "text": "Подарочная персональная тренировка"
+            })
+            @@include('blocks/ratings/ratings.html', {
+            "class": "promo-club"
+            })
+            @@include('blocks/info-box/info-box.html', {
+            "class": "promo-club"
+            })
+            <nav class="promo-club__nav promo-nav"
+                 data-da=".promo-club, 1024, 2">
+                <div class="promo-nav__mobile">
+                    Разделы страницы
+                    <svg>
+                        <use xlink:href="assets/images/sprite.svg#dots"></use>
+                    </svg>
+                </div>
+                <ul class="promo-nav__list">
+                    <li class="promo-nav__item"
+                        data-section="sale">
+                        <a href="#"
+                           class="promo-nav__link">Акции</a>
+                    </li>
+                    <li class="promo-nav__item"
+                        data-section="club-video">
+                        <a href="#"
+                           class="promo-nav__link">Видео о клубе</a>
+                    </li>
+                    <li class="promo-nav__item"
+                        data-section="photos">
+                        <a href="#"
+                           class="promo-nav__link">Фото</a>
+                    </li>
+                    <li class="promo-nav__item"
+                        data-section="timetable">
+                        <a href="#"
+                           class="promo-nav__link">Раписание</a>
+                    </li>
+                    <li class="promo-nav__item"
+                        data-section="card">
+                        <a href="#"
+                           class="promo-nav__link">Карта</a>
+                    </li>
+                    <li class="promo-nav__item"
+                        data-section="success-stories">
+                        <a href="#"
+                           class="promo-nav__link">Истории успеха</a>
+                    </li>
+                    <li class="promo-nav__item"
+                        data-section="team">
+                        <a href="#"
+                           class="promo-nav__link">Команда</a>
+                    </li>
+                    <li class="promo-nav__item"
+                        data-section="blog">
+                        <a href="#"
+                           class="promo-nav__link">Блог</a>
+                    </li>
+                    <li class="promo-nav__item"
+                        data-section="events">
+                        <a href="#"
+                           class="promo-nav__link">Мероприятия</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="promo-marquee vertical-marquee promo-club__marquee">
+            <p>
+                <span class="ttu">Fitnession.</span> Эффективно
+            </p>
+            <p>
+                <span class="ttu">Fitnession.</span> Эффективно
+            </p>
+            <p>
+                <span class="ttu">Fitnession.</span> Эффективно
+            </p>
+        </div>
+    </div>
 </section>

@@ -1,11 +1,12 @@
 .club-reviews {
     position: relative;
-    @include padding-y(var(--section-padding));
 
     @media(min-width: 1025px) {
+        @include padding-y(var(--section-padding));
+
         &:before {
-            z-index: -1;
             @include rect(top, left, 0, 0, 60%, var(--yellow));
+            z-index: -1;
             width: 100%;
         }
     }
@@ -13,7 +14,9 @@
     // .club-reviews__grid
 
     &__grid {
-        row-gap: var(--offset-xxl);
+        @media(min-width: 1025px) {
+            row-gap: var(--offset-xxl);
+        }
     }
 
     // .club-reviews__title
@@ -22,6 +25,18 @@
         span {
             display: block;
             margin-left: 9.8rem;
+
+            @media(max-width: 1024px) {
+                margin-left: 0;
+            }
+        }
+
+        @media(max-width: 1024px) {
+            position: relative;
+            padding: var(--offset-l) 0 var(--offset-m);
+            background-color: var(--yellow);
+            @include margin-x(calc(var(--mob-padding) * (-1)));
+            @include padding-x(var(--mob-padding));
         }
     }
 
@@ -47,4 +62,8 @@
     width: 39.8rem;
     height: 0.8rem;
     left: calc(404 / 1920 * 100%);
+
+    @media(max-width: 1024px) {
+        left: 0;
+    }
 }

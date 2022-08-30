@@ -6,6 +6,11 @@
 
 .suptitle {
     @extend %text-17;
+
+    @media(max-width: 767px) {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
 }
 
 .section-title {
@@ -29,6 +34,10 @@
         span {
             display: inline-block;
             margin-left: var(--offset-s);
+
+            @media(max-width: 767px) {
+                margin-left: var(--offset-xxs);
+            }
         }
     }
 

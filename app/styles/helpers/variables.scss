@@ -61,6 +61,7 @@
     }
 
     @media (max-width: 767px) {
+        --rating: var(--section-padding);
         --card-height: 29.6rem;
         --arrow-btn: 4rem;
         --team-card-h: 29.6rem;

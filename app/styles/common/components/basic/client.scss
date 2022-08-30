@@ -3,6 +3,11 @@
     display: grid;
     grid-template-columns: var(--offset-xxxl) max-content;
     column-gap: var(--offset-l);
+
+    @media(max-width: 767px) {
+        column-gap: var(--offset-s);
+    }
+
     // .client__avatar
 
     &__avatar {

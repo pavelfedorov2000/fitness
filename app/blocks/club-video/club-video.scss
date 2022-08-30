@@ -1,6 +1,11 @@
 .club-video {
     --title: 44rem;
     --text: 34.4rem;
+    --player: var(--gap);
+
+    @media(max-width: 1024px) {
+        --player: 15.2rem;
+    }
 
     position: relative;
     min-height: --section-mh;
@@ -30,25 +35,32 @@
     &__content {
         @include padding-y(var(--section-padding));
         display: grid;
+        grid-template-columns: var(--title) var(--offset-s) var(--player) 1fr var(--text);
+        grid-template-rows: max-content 6rem var(--player) 7.2rem max-content;
+        grid-template-areas: 'title . . . .'
+            '. . . . .'
+            '. . player . .'
+            '. . . . .'
+            '. . . . text';
 
-        @media (min-width: 1025px) {
-            grid-template-columns: var(--title) var(--offset-s) var(--gap) 1fr var(--text);
-            grid-template-rows: max-content 6rem var(--gap) 7.2rem max-content;
+        @media(max-width: 1024px) {
+            @include padding-y(var(--offset-l));
+            //min-height: 100vh;
+            grid-template-columns: 1fr var(--player) 1fr;
+            grid-template-rows: max-content 8.6rem var(--player) 6.2rem max-content;
             grid-template-areas:
-                'title . . . .'
-                '. . . . .'
-                '. . player . .'
-                '. . . . .'
-                '. . . . text';
+                'title title title'
+                '. . .'
+                '. player .'
+                '. . .'
+                'text text text';
         }
     }
 
     // .club-video__title
 
     &__title {
-        @media (min-width: 1025px) {
-            grid-area: title;
-        }
+        grid-area: title;
     }
 
     // .club-video__player
@@ -57,19 +69,18 @@
         @extend %grid-center;
         border-radius: 50%;
         border: 0.1rem solid #fff;
-
-        @media (min-width: 1025px) {
-            grid-area: player;
-        }
+        grid-area: player;
     }
 
     // .club-video__text
 
     &__text {
         @extend %text-16;
+        grid-area: text;
 
-        @media (min-width: 1025px) {
-            grid-area: text;
+        @media(max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
         }
     }
 }

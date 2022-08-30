@@ -1,16 +1,27 @@
 .aims {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 33rem;
     gap: var(--offset-xxs);
 
+    @media(min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(min-width: 1025px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     &__item {
         &:nth-child(6n + 1) {
-            grid-column: span 2;
+            @media(min-width: 1025px) {
+                grid-column: span 2;
+            }
         }
 
         &:nth-child(6n + 2) {
-            grid-row: span 2;
+            @media(min-width: 1025px) {
+                grid-row: span 2;
+            }
         }
     }
 }

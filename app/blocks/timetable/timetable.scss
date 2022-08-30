@@ -6,6 +6,10 @@
 
     position: relative;
 
+    @media(max-width: 1024px) {
+        padding-top: var(--offset-l);
+    }
+
     @media (min-width: 1025px) {
         &:before {
             @include rect(top, right, calc(100% - var(--rect) - var(--pb)), 0, var(--rect), var(--beige));
@@ -15,20 +19,23 @@
     // .timetable-section__grid
 
     &__grid {
-        grid-template-rows: var(--pt) max-content var(--offset-xxl) minmax(var(--card-mh), max-content) max-content var(--pb);
-        grid-template-areas:
-            'asideClient . . . .'
-            'asideClient . head . .'
-            'asideClient . . . .'
-            'asideClient . timetable . stats'
-            'asideClient . timetable . .'
-            '. . . . .';
+        @media(min-width: 1025px) {
+            grid-template-rows: var(--pt) max-content var(--offset-xxl) minmax(var(--card-mh), max-content) max-content var(--pb);
+            grid-template-areas: 'asideClient . . . .'
+                'asideClient . head . .'
+                'asideClient . . . .'
+                'asideClient . timetable . stats'
+                'asideClient . timetable . .'
+                '. . . . .';
+        }
     }
 
     // .timetable-section__aside-client
 
     &__aside-client {
-        grid-area: asideClient;
+        @media(min-width: 1025px) {
+            grid-area: asideClient;
+        }
     }
 
     // .timetable-section__head
@@ -39,7 +46,20 @@
         grid-template-columns: max-content 53.3rem 1fr max-content;
         grid-template-areas: 'date title . btn';
         gap: var(--offset-xls);
-        grid-area: head;
+
+        @media(min-width: 1025px) {
+            grid-area: head;
+        }
+
+        @media(max-width: 1024px) {
+            grid-column: 2 / 3;
+            margin-bottom: var(--offset-m);
+            grid-template-columns: max-content 1fr;
+            gap: var(--offset-m) var(--offset-s);
+            grid-template-areas: 'date title'
+                'btn btn'
+            ;
+        }
     }
 
     // .timetable-section__date
@@ -52,6 +72,12 @@
 
     &__title {
         grid-area: title;
+
+        @media(max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            max-width: 13.2rem;
+        }
     }
 
     // .timetable-section__btn
@@ -65,7 +91,18 @@
     &__items {
         display: grid;
         gap: var(--offset-xls);
-        grid-area: timetable;
+
+        @media(min-width: 1025px) {
+            grid-area: timetable;
+        }
+
+        @media(max-width: 1024px) {
+            grid-column: 1 / -1;
+        }
+
+        @media(max-width: 767px) {
+            gap: var(--offset-xxs);
+        }
     }
 
     &__stats {
@@ -87,6 +124,22 @@
     color: #fff;
     width: 9.6rem;
     height: 9.6rem;
+
+    @media(max-width: 767px) {
+        width: var(--offset-xxxl);
+        height: var(--offset-xxxl);
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    &__day {
+        @extend .section-title;
+
+        @media(max-width: 767px) {
+            font-size: 2.6rem;
+            line-height: 3.6rem;
+        }
+    }
 }
 
 .timetable-card {
@@ -94,31 +147,53 @@
 
     --coach: var(--section-padding);
     --people: 16.3rem;
+    --white-info-box-w: 14.4rem;
+    --white-info-box-h: 6.2rem;
+    --img-h: 17.6rem;
+    --progressbar: 0.6rem;
+    --img-pb: 1.8rem;
+
+    @media(max-width: 1024px) {
+        --coach: var(--offset-xxl);
+    }
 
     display: grid;
     grid-template-rows: var(--offset-l) max-content var(--offset-m) max-content calc(var(--offset-l) / 2) max-content 1fr minmax(var(--coach),
-            max-content);
+        max-content);
     grid-template-columns: var(--offset-l) 31.5rem var(--offset-xls) var(--offset-xxl) 11.7rem 1fr 3rem calc(var(--people) - var(--coach)) var(--coach);
     background-color: var(--light-blue);
     position: relative;
 
+    @media(max-width: 1024px) {
+        grid-template-rows: max-content max-content max-content var(--offset-m) minmax(var(--white-info-box-h), max-content) calc(var(--img-h) - var(--white-info-box-h) - var(--progressbar) - var(--img-pb) - var(--offset-s)) var(--progressbar) calc(var(--img-pb) - var(--offset-s)) repeat(2, max-content);
+        grid-template-columns: var(--mob-padding) calc(var(--offset-s) - var(--mob-padding)) 1fr calc(var(--white-info-box-w) - var(--offset-s)) calc(var(--offset-s) - var(--mob-padding)) var(--mob-padding);
+        row-gap: var(--offset-s);
+        @include padding-y(var(--offset-s));
+    }
+
     &::before,
     &::after {
-        content: '';
-        position: absolute;
-        left: var(--coach);
-        bottom: var(--coach);
-        background-color: rgba(var(--dark-gray), 0.3);
+        @media(min-width: 1025px) {
+            content: '';
+            position: absolute;
+            left: var(--coach);
+            bottom: var(--coach);
+            background-color: rgba(var(--dark-gray), 0.3);
+        }
     }
 
     &::before {
-        width: 0.1rem;
-        top: 0;
+        @media(min-width: 1025px) {
+            width: 0.1rem;
+            top: 0;
+        }
     }
 
     &::after {
-        width: calc(50% - var(--coach));
-        height: 0.1rem;
+        @media(min-width: 1025px) {
+            width: calc(50% - var(--coach));
+            height: 0.1rem;
+        }
     }
 
     // .timetable-card__labels
@@ -129,6 +204,11 @@
         margin: calc(var(--offset-xxs) * (-1));
         grid-row: 2 / 3;
         grid-column: 2 / 5;
+
+        @media(max-width: 1024px) {
+            grid-row: 1 / 2;
+            grid-column: 2 / -2;
+        }
     }
 
     // .timetable-card__label
@@ -148,12 +228,21 @@
         @extend %vertical-align;
         grid-row: 4 / 5;
         grid-column: 2 / 5;
+
+        @media(max-width: 1024px) {
+            grid-row: 2 / 3;
+            grid-column: 2 / -2;
+        }
     }
 
     // .timetable-card__time
 
     &__time {
         margin-left: var(--offset-l);
+
+        @media(max-width: 767px) {
+            margin-left: var(--offset-s);
+        }
     }
 
     // .timetable-card__text
@@ -161,6 +250,11 @@
     &__text {
         grid-row: 6 / 7;
         grid-column: 2 / 5;
+
+        @media(max-width: 1024px) {
+            grid-row: 3 / 4;
+            grid-column: 2 / -2;
+        }
     }
 
     // .timetable-card__coach
@@ -178,6 +272,13 @@
         gap: 0.5rem var(--offset-l);
         grid-row: -2 / -1;
         grid-column: 1 / 4;
+
+        @media(max-width: 1024px) {
+            column-gap: var(--offset-s);
+            grid-template-columns: var(--coach) 1fr;
+            grid-row: -3 / -2;
+            grid-column: 3 / -3;
+        }
     }
 
     // .timetable-card__coach-img
@@ -214,6 +315,11 @@
         grid-row: 1 / -1;
         grid-column: 6 / -1;
 
+        @media(max-width: 1024px) {
+            grid-row: 4 / span 5;
+            grid-column: 1 / -1;
+        }
+
         img {
             @extend %cover;
         }
@@ -223,12 +329,17 @@
 
     &__progress {
         position: relative;
+        height: var(--progressbar);
         background-color: #fff;
-        height: 0.6rem;
         border-radius: $brs;
         align-self: center;
         grid-row: -2 / -1;
         grid-column: 4 / 7;
+
+        @media(max-width: 1024px) {
+            grid-row: 7 / 8;
+            grid-column: 3 / -3;
+        }
 
         &::before {
             content: '';
@@ -253,11 +364,24 @@
         padding: var(--offset-m) var(--offset-m) 1.9rem;
         background-color: #fff;
 
+        @media(max-width: 1024px) {
+            grid-row: 4 / 5;
+            grid-column: -4 / -1;
+            padding: var(--offset-s);
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
+
         b {
             @extend %text-26;
             flex-shrink: 0;
             white-space: nowrap;
             margin-right: var(--offset-s);
+
+            @media(max-width: 1024px) {
+                font-size: 2rem;
+                line-height: 2.8rem;
+            }
         }
     }
 
@@ -269,8 +393,26 @@
         width: 100%;
         height: 100%;
 
+        @media(max-width: 1024px) {
+            grid-column: 2 / -2;
+        }
+
+        @media(min-width: 1025px) {
+            padding: 0;
+        }
+
         span {
             display: none;
+
+            @media(max-width: 1024px) {
+                display: block;
+            }
+        }
+
+        svg {
+            @media(max-width: 1024px) {
+                display: none;
+            }
         }
     }
 

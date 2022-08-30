@@ -1,10 +1,30 @@
 //@import './breadcrumbs';
 
 .promo-nav {
+
+    @media(max-width: 1024px) {
+        background-color: #fff;
+        color: var(--black);
+    }
+
     // .promo-nav__mobile
 
     &__mobile {
         display: none;
+
+        @media(max-width: 1024px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--arrow-btn);
+            padding: 0 var(--mob-padding);
+        }
+
+        svg {
+            width: var(--offset-l);
+            height: var(--offset-l);
+        }
     }
 
     // .promo-nav__list
@@ -13,6 +33,16 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0 -2rem;
+
+        @media(max-width: 1024px) {
+            display: none;
+        }
+
+        &.active {
+            @media(max-width: 1024px) {
+                display: flex;
+            }
+        }
     }
 
     // .promo-nav__item

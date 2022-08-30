@@ -9,6 +9,10 @@
         }
     }
 
+    @media(max-width: 1024px) {
+        @include padding-y(var(--offset-l));
+    }
+
     // .fitness-card__grid
 
     &__grid {
@@ -24,36 +28,58 @@
         --title: 28.8rem;
 
         display: grid;
-        grid-template-rows: max-content 1fr var(--circle-text) 7rem max-content;
-        grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text)) calc(var(--gap) * 2) 1fr var(--gap) 1fr;
-        grid-template-areas:
-            'title title . list-1 . list-2'
-            '. . . list-1 .list-2'
-            'circle circle . list-1 . list-2'
-            '. . . . . .'
-            'btn btn btn btn btn btn';
+
+        @media(max-width: 1024px) {
+            row-gap: var(--offset-m);
+        }
 
         @media (min-width: 1025px) {
             grid-row: 2 / -2;
+            grid-template-rows: max-content 1fr var(--circle-text) 7rem max-content;
+            grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text)) calc(var(--gap) * 2) 1fr var(--gap) 1fr;
+            grid-template-areas: 'title title . list-1 . list-2'
+                '. . . list-1 .list-2'
+                'circle circle . list-1 . list-2'
+                '. . . . . .'
+                'btn btn btn btn btn btn';
         }
     }
 
     // .fitness-card__title
 
     &__title {
-        grid-area: title;
+        @media(min-width: 1025px) {
+            grid-area: title;
+        }
+
+        @media(max-width: 1024px) {
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
+
+        @media(max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
     }
 
     // .fitness-card__circle-text
 
     &__circle-text {
-        grid-area: circle;
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: block;
+            grid-area: circle;
+        }
     }
 
     // .fitness-card__list-col--1
 
     &__list-col--1 {
-        grid-area: list-1;
+        @media(min-width: 1025px) {
+            grid-area: list-1;
+        }
 
         #{$this} {
             &__list-item {
@@ -64,6 +90,14 @@
 
             &__list-title {
                 @extend %text-20;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+
+                @media(max-width: 767px) {
+                    font-size: 1.4rem;
+                    line-height: 1.9rem;
+                }
 
                 span {
                     color: var(--yellow);
@@ -75,7 +109,9 @@
     // .fitness-card__list-col--2
 
     &__list-col--2 {
-        grid-area: list-2;
+        @media(min-width: 1025px) {
+            grid-area: list-2;
+        }
 
         #{$this} {
             &__list-item {
@@ -86,6 +122,13 @@
 
             &__list-title {
                 @extend %text-18;
+                font-weight: 500;
+                color: var(--dark-gray);
+
+                @media(max-width: 767px) {
+                    font-size: 1.4rem;
+                    line-height: 1.9rem;
+                }
             }
         }
     }
@@ -94,19 +137,45 @@
 
     &__list-title {
         margin-bottom: var(--offset-xls);
+
+        @media(max-width: 1024px) {
+            margin-bottom: var(--offset-m);
+        }
+
+        @media(max-width: 767px) {
+            margin-bottom: var(--offset-xxs);
+        }
     }
 
     // .fitness-card__list
 
     &__list {
         @include row-grid(calc(var(--offset-xls) + 0.2rem));
+
+        @media(max-width: 1024px) {
+            row-gap: var(--offset-m);
+        }
+
+        @media(max-width: 767px) {
+            row-gap: var(--offset-xs);
+        }
+
+        @media(min-width: 768px) and (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     // .fitness-card__list-item
 
     &__list-item {
         position: relative;
-        padding-left: 4.8rem;
+        padding-left: var(--arrow-btn);
+
+        @media(max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            padding-left: var(--offset-xls);
+        }
 
         &::before {
             content: '';
@@ -122,8 +191,13 @@
     // .fitness-card__btn
 
     &__btn {
-        grid-area: btn;
-        padding: 1.95rem;
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: block;
+            grid-area: btn;
+            padding: 1.95rem;
+        }
     }
 
     // .fitness-card__aside-img

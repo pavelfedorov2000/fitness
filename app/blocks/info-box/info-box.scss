@@ -1,43 +1,71 @@
 .info-block {
     background-color: #fff;
     color: var(--black);
-    padding: 4.5rem 4.8rem 5.2rem;
+    padding: 4.5rem var(--arrow-btn) 5.2rem;
     display: grid;
-    grid-template-areas:
-        'contacts capacity'
-        'contacts soc'
-    ;
-    justify-content: space-between;
+
+    @media(min-width: 1025px) {
+        grid-template-areas: 'contacts capacity'
+            'contacts soc'
+        ;
+        justify-content: space-between;
+    }
+
+    @media(max-width: 1024px) {
+        padding: var(--offset-l) var(--mob-padding);
+    }
+
+    @media(max-width: 767px) {
+        row-gap: var(--offset-m);
+    }
+
     // .info-block__capacity
 
     &__capacity {
-        grid-area: capacity;
+        @media(min-width: 1025px) {
+            grid-area: capacity;
+        }
     }
 
     // .info-block__contacts
 
     &__contacts {
-        grid-area: contacts;
         display: grid;
-        grid-template-columns: repeat(2, max-content);
         gap: 5.2rem 7.6rem;
+
+        @media(max-width: 1024px) {
+            gap: var(--offset-m);
+        }
+
+        @media(max-width: 767px) {
+            gap: var(--offset-s);
+        }
+
+        @media(min-width: 768px) {
+            grid-template-columns: repeat(2, max-content);
+        }
+
+        @media(min-width: 1025px) {
+            grid-area: contacts;
+        }
     }
 
     // .info-block__socials
 
     &__socials {
         column-gap: var(--offset-s);
-        grid-area: soc;
-        align-self: flex-end;
-        justify-self: end;
+
+        @media(min-width: 1025px) {
+            align-self: flex-end;
+            justify-self: end;
+            grid-area: soc;
+        }
     }
 }
 
 .capacity {
-
     display: grid;
     grid-template-columns: repeat(2, max-content);
-    //grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
         'icon percent'
         'icon descr'
@@ -74,7 +102,6 @@
 }
 
 .contact-info-item {
-
     display: grid;
     grid-template-columns: var(--offset-m) max-content;
     grid-template-rows: var(--offset-m) max-content;
@@ -84,6 +111,11 @@
     ;
     align-items: center;
     gap: var(--offset-xxs);
+
+    @media(max-width: 767px) {
+        grid-template-columns: var(--offset-m) 1fr;
+        row-gap: calc(var(--offset-xxs) / 2);
+    }
 
     // .contact-info-item__icon
 
@@ -103,6 +135,11 @@
     &__value {
         @extend %text-14;
         grid-area: value;
+
+        @media(max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
 
         b {
             font-weight: 500;

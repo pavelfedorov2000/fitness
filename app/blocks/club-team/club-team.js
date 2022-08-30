@@ -2,7 +2,7 @@ app.clubTeam = {
     name: 'clubTeam',
     description: 'your script description',
     init() {
-        if (document.querySelectorAll('.club-team-slider').length) {
+        if (document.querySelectorAll('.club-team-slider').length && $(window).width() > 1024) {
             const clubTeamSlider = new Splide('.club-team-slider', {
                 type: 'loop',
                 autoWidth: true,
@@ -15,7 +15,17 @@ app.clubTeam = {
                     next: 'splide__arrow--next slider-nav__arrow--next',
                     //pagination: 'slider-nav__pagination'
                 },
-                pagination: false
+                pagination: false,
+                breakpoints: {
+                    1024: {
+                        perPage: 2,
+                        gap: '2.4rem',
+                    },
+                    640: {
+                        perPage: 1,
+                        gap: '1.6rem',
+                    },
+                },
             });
 
             const clubTeamSliderBar = clubTeamSlider.root.querySelector('.slider-nav__progress-bar');

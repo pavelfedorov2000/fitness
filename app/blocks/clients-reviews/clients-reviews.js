@@ -3,8 +3,8 @@ app.clubReviews = {
     description: 'your script description',
     init() {
         new Swiper('.club-reviews-slider', {
-            //loop: true,
-            slidesPerView: 'auto',
+            loop: true,
+            slidesPerView: 1,
             //centerSlides: true,
             spaceBetween: 56,
             speed: 1000,
@@ -15,14 +15,11 @@ app.clubReviews = {
                 el: ".swiper-scrollbar",
                 draggable: true,
             },
-            /* breakpoints: {
-                576: {
-                    slidesPerView: 2,
+            breakpoints: {
+                768: {
+                    slidesPerView: 'auto',
                 },
-                992: {
-                    slidesPerView: 4,
-                }
-            }, */
+            },
         });
     },
 };
