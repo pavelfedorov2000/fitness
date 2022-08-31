@@ -1,22 +1,41 @@
 .club-map {
     --title: 36rem;
+    --map-h: 52rem;
 
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, var(--gap)) var(--title) 1fr 14.8rem repeat(2, var(--gap));
     grid-template-rows: var(--section-padding-xl) max-content 1fr max-content;
 
+    @media(max-width: 1024px) {
+        grid-template-rows: var(--rating) calc(var(--map-h) - var(--rating)) max-content;
+    }
+
     @media (min-width: 1025px) {
+        grid-template-columns: repeat(2, var(--gap)) var(--title) 1fr 14.8rem repeat(2, var(--gap));
+
         &:before {
             @include rect(top, left, 0, 0, var(--gap), var(--yellow));
+        }
+    }
+
+    > * {
+        @media(max-width: 1024px) {
+            grid-column: 1 / -1;
         }
     }
 
     // .club-map__map
 
     &__map {
-        grid-column: 1 / -2;
         grid-row: 1 / -1;
+
+        @media(max-width: 1024px) {
+            grid-row: 1 / span 2;
+        }
+
+        @media(min-width: 1025px) {
+            grid-column: 1 / -2;
+        }
 
         img {
             @extend %cover;
@@ -26,27 +45,48 @@
     // .club-map__title
 
     &__title {
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: block;
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
     }
 
     &__ratings {
-        grid-column: 4 / 6;
         grid-row: 2 / 3;
-        justify-self: end;
-        align-self: flex-start;
-        grid-template-columns: repeat(2, var(--rating));
+        grid-auto-columns: var(--rating);
+        grid-auto-flow: column;
+
+        @media(min-width: 1025px) {
+            grid-column: 4 / 6;
+            justify-self: end;
+            align-self: flex-start;
+        }
+
+        @media(max-width: 1024px) {
+            grid-row: 1 / 2;
+        }
     }
 
     &__info-box {
         grid-row: -2 / -1;
-        grid-column: 3 / 5;
+
+        @media(min-width: 1025px) {
+            grid-column: 3 / 5;
+        }
     }
 
     // .club-map__marquee
 
     &__marquee {
-        grid-row: 1 / -1;
-        grid-column: -2 / -1;
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: block;
+            grid-row: 1 / -1;
+            grid-column: -2 / -1;
+        }
     }
 }

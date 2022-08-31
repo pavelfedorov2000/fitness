@@ -10,6 +10,7 @@
         app.childrenSections.init();
         app.clubReviews.init();
         app.coachBio.init();
+        app.clubZones.init();
         //app.cardServices.init();
         //app.burger.init();
         //app.slider.init();
@@ -315,7 +316,16 @@
                     prev: 'splide__arrow--prev slider-nav__arrow--prev',
                     next: 'splide__arrow--next slider-nav__arrow--next',
                 },
-                pagination: false
+                pagination: false,
+                breakpoints: {
+                    1024: {
+                        perPage: 2,
+                        gap: '1.6rem',
+                    },
+                    640: {
+                        perPage: 1
+                    },
+                },
             });
 
             const servicesMoreSliderBar = servicesMoreSlider.root.querySelector('.slider-nav__progress-bar');
@@ -330,6 +340,19 @@
             servicesMoreSlider.mount();
         }
 
+        $('.tab').on('click', function (e) {
+            e.preventDefault();
+
+            const $tab = $(this);
+            const $tabNotActive = $(this).siblings();
+            const $tabsContent = $tab.closest('section').find('.tabs-content');
+
+            $($tabNotActive).removeClass('active');
+            $tabsContent.removeClass('tabs-content--active');
+            $tab.addClass('active');
+            $($tab.attr('href')).addClass('active');
+            //$('.slider').slick('setPosition'); // Инициализация слайдера
+        });
 
         // Custom jquery select
         $('.select__title').on('click', function () {

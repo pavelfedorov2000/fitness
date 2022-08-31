@@ -33,7 +33,14 @@
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, var(--gap)) var(--content) 10.9rem 1fr repeat(2, var(--gap));
-        grid-template-rows: 1fr max-content;
+
+        @media(min-width: 1025px) {
+            grid-template-rows: 1fr max-content;
+        }
+
+        @media(max-width: 1024px) {
+            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+        }
     }
 
     // .sport-food__content
@@ -41,10 +48,26 @@
     &__content {
         padding: 9.2rem 0 8.3rem;
         grid-column: 3 / 4;
-        grid-row: 1 / -1;
+
+        @media(min-width: 1025px) {
+            grid-row: 1 / -1;
+        }
+
+        @media(max-width: 1024px) {
+            grid-column: 2 / -2;
+            padding: var(--offset-m) 0 var(--offset-l);
+        }
 
         > * {
             margin-bottom: var(--arrow-btn);
+
+            @media(max-width: 1024px) {
+                margin-bottom: var(--offset-m);
+            }
+
+            @media(max-width: 767px) {
+                margin-bottom: var(--offset-s);
+            }
         }
     }
 
@@ -53,6 +76,18 @@
     &__title {
         position: relative;
         padding-bottom: var(--arrow-btn);
+
+        @media(max-width: 1024px) {
+            font-size: 2rem;
+            line-height: 2.8rem;
+            padding-bottom: var(--offset-m);
+        }
+
+        @media(max-width: 767px) {
+            padding-bottom: var(--offset-s);
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
 
         &::after {
             content: '';
@@ -74,6 +109,10 @@
     &__text {
         &:not(:last-child) {
             margin-bottom: 6.6rem;
+
+            @media(max-width: 1024px) {
+                margin-bottom: calc(var(--offset-s) + (var(--offset-m) - var(--offset-s)));
+            }
         }
     }
 
@@ -84,8 +123,16 @@
         flex-wrap: wrap;
         margin: calc(var(--offset-l) * (-1) / 2);
 
+        @media(max-width: 1024px) {
+            margin: calc(var(--offset-s) * (-1) / 2);
+        }
+
         > * {
             margin: calc(var(--offset-l) / 2);
+
+            @media(max-width: 1024px) {
+                margin: calc(var(--offset-s) / 2);
+            }
         }
     }
 
@@ -93,12 +140,32 @@
 
     &__img {
         grid-column: 5 / -1;
-        grid-row: 1 / -1;
+
+        @media(max-width: 1024px) {
+            grid-column: 1 / -1;
+        }
+
+        @media(min-width: 1025px) {
+            grid-row: 1 / -1;
+        }
     }
 
     &__decor-title {
-        grid-column: -2 / -1;
-        grid-row: -2 / -1;
         padding: 6.5rem 0;
+
+        @media(min-width: 1025px) {
+            grid-column: -2 / -1;
+            grid-row: -2 / -1;
+        }
+
+        @media(max-width: 1024px) {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 2rem;
+            line-height: 2.8rem;
+            padding: 3rem;
+        }
     }
 }

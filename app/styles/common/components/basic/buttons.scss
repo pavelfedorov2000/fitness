@@ -85,36 +85,3 @@
         background-color: var(--light-blue);
     }
 }
-
-.label {
-    @extend %text-13;
-    font-weight: 500;
-    background-color: #fff;
-    color: var(--black);
-    border-radius: $brs;
-    padding: 0.1rem var(--offset-xxs);
-    transition: .3s background-color;
-
-    &--blue {
-        background-color: var(--light-blue);
-    }
-
-    &--black {
-        background-color: var(--black);
-        color: #fff;
-    }
-
-    &--green {
-        background-color: var(--green);
-        color: #fff;
-    }
-
-    &--yellow {
-        background-color: var(--yellow);
-    }
-
-    &--transparent {
-        background-color: transparent;
-        color: var(--dark-gray);
-    }
-}

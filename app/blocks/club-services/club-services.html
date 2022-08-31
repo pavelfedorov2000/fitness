@@ -28,7 +28,7 @@
                    class="tab club-services__tab"
                    type="button">Мобильное<br>
                     приложение</a>
-                <a href="#sport-shop"
+                <a href="#sport-food"
                    class="tab club-services__tab"
                    type="button">Спорт.<br>
                     питание</a>
@@ -36,10 +36,91 @@
                    class="tab club-services__tab"
                    type="button">Еще</a>
             </div>
+            <div class="select club-services__select select--border">
+                <div class="select__title">Зоны клуба</div>
+                <div class="select__content">
+                    <input id="clubService0"
+                           class="select__input"
+                           type="radio"
+                           name="clubService" />
+                    <label for="clubService0"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="aims">Цели</label>
+                    <input id="clubService1"
+                           class="select__input"
+                           type="radio"
+                           name="clubService"
+                           checked />
+                    <label for="clubService1"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="club-zones">Зоны клуба</label>
+                    <input id="clubService2"
+                           class="select__input"
+                           type="radio"
+                           name="clubService" />
+                    <label for="clubService2"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="children-sections">Детские секции</label>
+                    <input id="clubService3"
+                           class="select__input"
+                           type="radio"
+                           name="clubService" />
+                    <label for="clubService3"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="business-classes">Бизнесс классы</label>
+                    <input id="clubService4"
+                           class="select__input"
+                           type="radio"
+                           name="clubService" />
+                    <label for="clubService4"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="individual-lessons">Индивидуальные занятия</label>
+                    <input id="clubService5"
+                           class="select__input"
+                           type="radio"
+                           name="clubService" />
+                    <label for="clubService5"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="test-workout">Пробная тренировка</label>
+                    <input id="clubService6"
+                           class="select__input"
+                           type="radio"
+                           name="clubService" />
+                    <label for="clubService6"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="mobile-app">Мобильное приложение</label>
+                    <input id="clubService7"
+                           class="select__input"
+                           type="radio"
+                           name="clubService" />
+                    <label for="clubService7"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="sport-food">Спорт. питание</label>
+                    <input id="clubService8"
+                           class="select__input"
+                           type="radio"
+                           name="clubService" />
+                    <label for="clubService8"
+                           tabindex="0"
+                           class="select__label"
+                           data-tab="more">Еще</label>
+                </div>
+            </div>
         </div>
         <div class="club-services__tabs-content">
             @@include('blocks/aims/aims.html', {
-            "class": "tabs-content active"
+            "class": "tabs-content"
+            })
+            @@include('blocks/club-zones/club-zones.html', {
+            "class": "tabs-content"
             })
             @@include('blocks/children-sections/children-sections.html', {
             "class": "tabs-content",
@@ -83,6 +164,9 @@
             "class": "tabs-content"
             })
             @@include('blocks/sport-food/sport-food.html', {
+            "class": "tabs-content"
+            })
+            @@include('blocks/test-workout/test-workout.html', {
             "class": "tabs-content"
             })
         </div>

@@ -1,8 +1,10 @@
 .individual-lessons {
     --slider: 73rem;
 
-    @include padding-y(var(--section-padding-xl));
-    position: relative;
+    @media(min-width: 1025px) {
+        position: relative;
+        @include padding-y(var(--section-padding-xl));
+    }
 
     &::before {
         @extend %contain;
@@ -28,27 +30,39 @@
     // .individual-lessons__inner
 
     &__inner {
-        @extend %flex-row;
-        align-items: flex-start;
+        @media(min-width: 1025px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        @media(max-width: 1024px) {
+            grid-column: 1 / -1;
+        }
     }
 
     // .individual-lessons__title
 
     &__title {
-        position: relative;
-        padding-top: var(--offset-l);
-        max-width: 28rem;
         @extend %text-20;
         @extend .title;
+        display: none;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: var(--section-padding);
-            height: 0.2rem;
-            background-color: var(--yellow);
+        @media(min-width: 1025px) {
+            display: block;
+            position: relative;
+            padding-top: var(--offset-l);
+            max-width: 28rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: var(--section-padding);
+                height: 0.2rem;
+                background-color: var(--yellow);
+            }
         }
     }
 
@@ -57,14 +71,23 @@
     &__slider {
         width: var(--slider);
 
+        @media(max-width: 1024px) {
+            width: 100vw;
+            padding-bottom: var(--arrow-btn);
+        }
+
         .splide {
             &__track {
-                overflow: visible;
+                @media(min-width: 1025px) {
+                    overflow: visible;
+                }
             }
 
             &__slide {
                 &.is-prev {
-                    opacity: 0;
+                    @media(min-width: 1025px) {
+                        opacity: 0;
+                    }
                 }
             }
         }
@@ -74,5 +97,10 @@
         position: absolute;
         bottom: 0;
         left: calc((100vw - var(--gap) * 2) - var(--slider) * (-1));
+
+        @media(max-width: 1024px) {
+            left: 0;
+            right: 0;
+        }
     }
 }

@@ -9,7 +9,7 @@
 
     &__container {
         @media(max-width: 1024px) {
-           grid-template-columns: var(--mob-padding) calc(100vw - var(--mob-padding) * 2) var(--mob-padding);
+            grid-template-columns: var(--mob-padding) calc(100vw - var(--mob-padding) * 2) var(--mob-padding);
         }
     }
 
@@ -74,6 +74,10 @@
         }
 
         &--1 {
+            @media(max-width: 1024px) {
+                border-top: 0.1rem solid var(--black);
+            }
+
             @media (min-width: 768px) {
                 grid-area: menu-1;
             }
@@ -307,6 +311,12 @@
                     color: var(--yellow);
                 }
             }
+        }
+    }
+
+    .double-marquee {
+        @media(max-width: 767px) {
+            @include padding-y(var(--offset-xxs));
         }
     }
 }

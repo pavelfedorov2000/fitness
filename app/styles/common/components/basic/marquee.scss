@@ -74,9 +74,16 @@
 
 .double-marquee {
     @include padding-y(var(--marquee-padding));
-    border-top: 0.1rem solid var(--black);
-    border-bottom: 0.1rem solid var(--black);
     overflow: hidden;
+
+    &--with {
+        &_border {
+            @media(min-width: 768px) {
+                border-top: 0.1rem solid var(--black);
+                border-bottom: 0.1rem solid var(--black);
+            }
+        }
+    }
 
     > * {
         display: flex;
@@ -89,7 +96,7 @@
     p {
         display: flex;
         @extend .section-title;
-        margin: 0 0.8rem;
+        margin: 0 var(--offset-xxs);
         white-space: nowrap;
         @include border-text(var(--gray), transparent);
 

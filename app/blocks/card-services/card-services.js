@@ -4,7 +4,7 @@ app.cardServices = {
     init() {
         const progressBar = document.querySelector('.card-services__progress-rect');
         const cardServices = progressBar.closest('.card-services');
-        const cardServicesTexts= cardServices.querySelector('.card-services__text').querySelectorAll('p');
+        const cardServicesTexts = cardServices.querySelector('.card-services__text').querySelectorAll('p');
         const sliderPaginationItems = cardServices.querySelectorAll('.slider-pagination__item');
         const cs = getComputedStyle(cardServices);
         let progressBarWidth = cs.getPropertyValue('--white-rect');
@@ -26,7 +26,7 @@ app.cardServices = {
                 type: 'progressbar'
             },
             on: {
-                slideChange: function(swiper) {
+                slideChange: function (swiper) {
                     console.log(swiper.realIndex);
                     cardServices.querySelector('.card-services__text').querySelector('p.active').classList.remove('active');
                     cardServicesTexts[swiper.realIndex].classList.add('active');
@@ -35,7 +35,7 @@ app.cardServices = {
                     progressBarWidth += progressBarDelta;
                     progressBar.style.setProperty('width', progressBarWidth);
                 }
-            } 
+            }
         });
     },
 };

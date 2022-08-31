@@ -1,4 +1,5 @@
-<div class="test-workout">
+<div id="test-workout"
+     class="test-workout@@if(context.class){ @@class}">
     <div class="test-workout__grid container">
         <div class="section-body test-workout__content">
             <div class="test-workout__title">
@@ -28,23 +29,23 @@
                     type="button">Хочу попробовать</button>
             <small class="test-workout__subbtn-text">Пробная тренировка бесплатная</small>
             <figure class="test-workout__video video">
-                <div class="circle-text test-workout__circle-text">
-                    <img class="circle-text__img"
-                         src="assets/images/circle-text.svg"
-                         alt="фото"
-                         width="220"
-                         height="220"
-                         loading="lazy">
-                </div>
                 <div class="video__body test-workout__video-body">
+                    <div class="circle-text test-workout__circle-text">
+                        <img class="circle-text__img"
+                             src="assets/images/circle-text.svg"
+                             alt="фото"
+                             width="220"
+                             height="220"
+                             loading="lazy">
+                    </div>
                     <div class="video__bg">
                         <picture>
                             <source type="image/webp"
-                                    srcset="assets/images/content/unique-concept/video.webp">
-                            <img src="assets/images/content/unique-concept/video.jpg"
+                                    srcset="assets/images/content/free-training/video.webp">
+                            <img src="assets/images/content/free-training/video.jpg"
                                  alt="фото"
-                                 width="632"
-                                 height="382"
+                                 width="672"
+                                 height="379"
                                  loading="lazy">
                         </picture>
                     </div>
@@ -63,7 +64,7 @@
                         </svg>
                     </button>
                 </div>
-                <figcaption class="video__info">
+                <figcaption class="video__info video__info--vertical">
                     <span>Длительность видео</span>
                     <span>2 мин 14 сек</span>
                 </figcaption>

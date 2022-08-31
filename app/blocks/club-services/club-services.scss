@@ -16,9 +16,35 @@
     // .club-services__tabs
 
     &__tabs {
-        @extend %flex-row;
-        flex-wrap: wrap;
-        @include padding-y(3rem);
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @include padding-y(3rem);
+        }
+    }
+
+    &__select {
+        display: none;
+
+        @media(max-width: 1024px) {
+            display: block;
+            margin-bottom: var(--offset-l);
+            margin-left: calc(var(--mob-padding) * (-1));
+            width: 100vw;
+
+            .select__title {
+                border-color: var(--line-color);
+                border-left: none;
+                border-right: none;
+            }
+        }
+
+        @media(max-width: 767px) {
+            margin-bottom: var(--offset-s);
+        }
     }
 
     // .club-services__tab

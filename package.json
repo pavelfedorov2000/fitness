@@ -110,6 +110,7 @@
     "jquery.maskedinput": "^1.4.1",
     "sass": "^1.45.1",
     "sticky-sidebar-v2": "^1.1.1",
+    "svg4everybody": "^2.1.9",
     "swiper": "^7.4.1",
     "wowjs": "^1.1.3"
   }

@@ -28,7 +28,7 @@ app.burger = {
 		});
 
         // native js
-		const body = document.querySelector('body');
+		/* const body = document.querySelector('body');
 		const burgerBtn = document.querySelector('.burger-btn');
 		const burgerMenu = document.querySelector('.burger-menu');
 		const burgerMenuClose = document.querySelector('.burger-menu__close');
@@ -56,6 +56,6 @@ app.burger = {
 				burgerBtn.classList.remove('burger-btn--active');
 				burgerMenu.classList.remove('burger-menu--active');
 			});
-		});
+		}); */
 	},
 };

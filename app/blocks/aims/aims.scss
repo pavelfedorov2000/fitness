@@ -1,7 +1,10 @@
 .aims {
-    display: grid;
     grid-auto-rows: 33rem;
     gap: var(--offset-xxs);
+
+    &.active {
+        display: grid;
+    }
 
     @media(min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
@@ -9,6 +12,10 @@
 
     @media(min-width: 1025px) {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media(max-width: 767px) {
+        grid-auto-rows: minmax(22.8rem, max-content);
     }
 
     &__item {

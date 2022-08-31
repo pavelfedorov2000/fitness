@@ -1,5 +1,5 @@
 // COUNTER LIST
-ol.counter,
+.counter,
 .mark-list {
     --counter-num: var(--offset-m);
 
@@ -28,7 +28,7 @@ ol.counter,
     }
 }
 
-ol.counter {
+.counter {
     counter-reset: num;
 
     li {

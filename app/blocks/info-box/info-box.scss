@@ -97,7 +97,10 @@
         @extend %text-14;
         color: var(--dark-gray);
         grid-area: descr;
-        margin-top: -3rem;
+
+        @media(min-width: 1025px) {
+            margin-top: -3rem;
+        }
     }
 }
 

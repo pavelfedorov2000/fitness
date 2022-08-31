@@ -73,11 +73,26 @@
         --nav: var(--arrow-btn);
 
         #{$this}__slider-nav {
-            top: auto;
-            right: auto;
-            bottom: var(--offset-xls);
-            left: var(--offset-xls);
-            height: var(--nav);
+            @media(min-width: 1025px) {
+                top: auto;
+                right: auto;
+                bottom: var(--offset-xls);
+                left: var(--offset-xls);
+                height: var(--nav);
+            }
+
+            @media(max-width: 1024px) {
+                left: 0;
+                right: 0;
+            }
+        }
+
+        .workout-card {
+            &__btn {
+                @media(min-width: 1025px) {
+                    justify-self: end;
+                }
+            }
         }
 
         .slider-nav {

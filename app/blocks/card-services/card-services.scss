@@ -122,49 +122,13 @@
             @extend %cover;
         }
     }
-}
 
-.slider-pagination {
-    @extend %flex-row;
-    counter-reset: pagination;
-    // .slider-pagination__item
+    .swiper-pagination-progressbar {
+        height: var(--progressbar);
+        background: var(--light-gray);
 
-    &__item {
-        width: 33.3333%;
-        max-width: 21rem;
-        font-weight: 700;
-        position: relative;
-        padding-left: calc(var(--offset-l) + var(--offset-m));
-
-        &::before {
-            content: counter(pagination);
-            counter-increment: pagination;
-            position: absolute;
-            @extend %pos-center-y;
-            left: 0;
-            width: 3.1rem;
-            text-align: center;
-            @extend .label;
-            padding: 0;
-            background-color: #fff;
+        .swiper-pagination-progressbar-fill {
+            background: var(--black);
         }
-
-        &.active {
-            color: var(--black);
-
-            &::before {
-                background-color: var(--black);
-                color: #fff;
-            }
-        }
-    }
-}
-
-.swiper-pagination-progressbar {
-    height: var(--progressbar);
-    background: var(--light-gray);
-
-    .swiper-pagination-progressbar-fill {
-        background: var(--black);
     }
 }

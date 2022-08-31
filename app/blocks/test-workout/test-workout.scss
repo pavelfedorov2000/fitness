@@ -1,6 +1,16 @@
 .test-workout {
     --title-mb: 5.3rem;
 
+    @media(max-width: 1024px) {
+        --title-mb: var(--offset-l);
+
+        padding-bottom: var(--offset-l);
+    }
+
+    @media(max-width: 767px) {
+        padding-bottom: var(--offset-s);
+    }
+
     position: relative;
 
     @media(min-width: 1025px) {
@@ -17,7 +27,6 @@
 
     &__content {
         display: grid;
-        grid-template-columns: 27.2rem 7.5rem 1fr;
         grid-template-rows: max-content var(--title-mb) max-content 3.5rem max-content var(--offset-xs) max-content;
         grid-template-areas: 'title title title'
             '. . .'
@@ -27,20 +36,70 @@
             '. . video'
             'small . video'
         ;
+
+        @media(min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media(min-width: 768px) and (max-width: 1024px) {
+            column-gap: var(--offset-m);
+        }
+
+        @media(min-width: 1025px) {
+            grid-template-columns: 27.2rem 7.5rem 1fr;
+        }
+
+        @media(max-width: 1024px) {
+            grid-template-areas:
+                'title title'
+                '. .'
+                'ol video'
+                '. video'
+                'btn video'
+                '. video'
+                'small video'
+            ;
+        }
+
+        @media(max-width: 767px) {
+            grid-template-rows: max-content var(--offset-m) max-content var(--offset-l) max-content var(--offset-m) max-content var(--offset-s) max-content;
+            grid-template-areas:
+                'title'
+                '.'
+                'ol'
+                '.'
+                'video'
+                '.'
+                'btn'
+                '.'
+                'small'
+            ;
+        }
     }
 
     // .test-workout__title
 
     &__title {
-        max-width: 35rem;
+        @extend .title;
+        @extend %text-20;
+        max-width: 36rem;
         grid-area: title;
+
+        @media(max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
     }
 
     // .test-workout__list
 
     &__list {
-        @include row-grid(var(--offset-l));
         grid-area: ol;
+        row-gap: var(--offset-l);
+
+        @media(max-width: 1024px) {
+            row-gap: var(--offset-s);
+        }
     }
 
     // .test-workout__btn
@@ -56,6 +115,10 @@
         @extend %text-12;
         color: var(--dark-gray);
         grid-area: small;
+
+        @media(max-width: 767px) {
+            text-align: center;
+        }
     }
 
     // .test-workout__video
@@ -68,12 +131,13 @@
     // .test-workout__circle-text
 
     &__circle-text {
-        position: absolute;
-        top: calc(var(--half-circle) * (-1));
-        right: calc(var(--half-circle) * (-1));
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: block;
+            position: absolute;
+            top: calc(var(--half-circle) * (-1));
+            right: calc(var(--half-circle) * (-1));
+        }
     }
-
-    // .test-workout__video-body
-
-    &__video-body {}
 }

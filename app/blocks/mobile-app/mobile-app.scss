@@ -10,9 +10,9 @@
 
     @media (max-width: 1024px) {
         --padding: 5rem;
-        --top-offset: var(--row-gap);
-        --title-offset: 5rem;
-        --bg-height: 24rem;
+        //--top-offset: var(--offset-l);
+        --title-offset: var(--offset-l);
+        --bg-height: 20rem;
         --iphone-width: 24rem;
         --iphone-height: 40rem;
     }
@@ -48,6 +48,10 @@
 
     &__container {
         grid-template-rows: var(--top-offset) var(--bg-height) auto;
+
+        @media(max-width: 1024px) {
+            grid-template-rows: var(--title-offset) calc(var(--bg-height) - var(--title-offset)) auto;
+        }
     }
 
     // .mobile-app__bg

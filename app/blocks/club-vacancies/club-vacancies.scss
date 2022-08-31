@@ -1,6 +1,11 @@
 .club-vacancies {
     @include padding-y(var(--section-padding));
 
+    @media(max-width: 1024px) {
+        padding-top: var(--offset-l);
+        padding-bottom: 0;
+    }
+
     &__body {
         @media (max-width: 1024px) {
             display: grid;
@@ -24,7 +29,9 @@
         }
 
         @media (max-width: 1024px) {
-            width: calc(100vw - var(--mob-padding) * 2);
+            width: 100vw;
+            margin-left: calc(var(--mob-padding) * (-1));
+            padding-bottom: calc(var(--arrow-btn) + var(--offset-m));
         }
     }
 
@@ -44,8 +51,11 @@
         display: none;
 
         @media (max-width: 1024px) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
             display: grid;
-            margin-top: var(--row-gap);
         }
     }
 }

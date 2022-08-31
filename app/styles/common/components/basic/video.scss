@@ -160,6 +160,12 @@
                 color: #fff;
             }
         }
+
+        &--vertical {
+            @media(min-width: 1025px) {
+                transform: rotate(-90deg);
+            }
+        }
     }
 }
 
