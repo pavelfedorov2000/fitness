@@ -2,7 +2,7 @@ app.articleAside = {
     name: 'articleAside',
     description: 'your script description',
     init() {
-        function fixSidebar() {
+        function fixArticleSidebar() {
             if ($('.article-page').length && $(window).width() > 1024) {
                 new StickySidebar('.article-page__sidebar', {
                     topSpacing: 0,
@@ -20,10 +20,10 @@ app.articleAside = {
             }
         }
 
-        fixSidebar();
+        fixArticleSidebar();
 
         window.addEventListener('resize', () => {
-            fixSidebar();
+            fixArticleSidebar();
         });
     },
 };

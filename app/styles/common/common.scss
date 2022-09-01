@@ -24,6 +24,11 @@ body {
     font-weight: 400;
     color: $color-default;
 
+    @media(max-width: 767px) {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
     &._lock {
         overflow-y: hidden;
     }

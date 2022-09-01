@@ -5,7 +5,7 @@
         width: var(--header-height);
         height: var(--header-height);
         background-color: #fff;
-        border: 0.1rem solid var(--line-color);
+        border: $border;
         display: grid;
         place-items: center;
         cursor: pointer;

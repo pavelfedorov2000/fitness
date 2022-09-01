@@ -94,7 +94,13 @@
     // .clubs-page__content
 
     &__content {
+        position: relative;
         padding: var(--offset-xxxl) 0 var(--section-padding);
+
+        &:before {
+            @include rect(bottom, left, 0, calc(var(--gap) * (-2)), 100%, var(--light-blue));
+            z-index: -1;
+        }
     }
 
     // .clubs-page__title
@@ -111,12 +117,17 @@
     // .clubs-page__inner
 
     &__inner {
-        display: grid;
-
         @media (min-width: 1025px) {
-            grid-template-columns: max-content 1fr;
+            display: flex;
+            justify-content: flex-end;
             align-items: flex-start;
         }
+    }
+
+    &__regions {
+        width: calc((864 + 78) / 1112 * 100%);
+        padding-left: 7.8rem;
+        margin-left: auto;
     }
 
     // .clubs-page__nav
@@ -124,6 +135,15 @@
     &__nav {
         display: none;
 
+        @media(min-width: 1025px) {
+            display: block;
+            width: max-content;
+            min-width: max-content;
+            margin-right: auto;
+        }
+    }
+
+    &__nav-inner {
         @media (min-width: 1025px) {
             @include row-grid(var(--offset-m));
         }
@@ -150,6 +170,13 @@
         @extend %text-12;
         font-weight: 500;
         color: var(--dark-gray);
+        transition: .3s color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--black);
+            }
+        }
 
         span {
             margin-right: 1.7rem;
@@ -165,14 +192,6 @@
                 background-color: var(--black);
                 color: #fff;
             }
-        }
-    }
-
-    // .clubs-page__regions
-
-    &__regions {
-        @media (min-width: 1025px) {
-            padding-left: 7.8rem;
         }
     }
 

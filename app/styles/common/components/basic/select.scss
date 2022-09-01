@@ -12,11 +12,11 @@
     $this: &;
 
     position: relative;
+    @extend %text-14;
     color: var(--black);
 
     &__title {
         @extend %vertical-align;
-        @extend %text-14;
         font-weight: 500;
         height: var(--input-height);
         @include padding-x(var(--offset-s));
@@ -44,14 +44,6 @@
 
             @media (max-width: 1024px) {
                 top: 1.4rem;
-            }
-        }
-
-        &--small {
-            height: var(--arrow-btn);
-
-            &::after {
-                top: 1.5rem;
             }
         }
 
@@ -87,17 +79,42 @@
     }
 
     &__label {
-        @extend %text-14;
         cursor: pointer;
         overflow: hidden;
         display: block;
-        width: 100%;
         padding: var(--offset-xxs) var(--offset-s);
         transition: 0.3s background-color;
 
         @media (any-hover: hover) {
             &:hover {
                 background-color: var(--light-blue);
+            }
+        }
+    }
+
+    &--size {
+        &_xs {
+            @media(max-width: 1024px) {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+            }
+
+            #{$this} {
+                &__title {
+                    height: var(--arrow-btn);
+
+                    &::after {
+                        top: 1.5rem;
+
+                        @media(max-width: 1024px) {
+                            top: 1.1rem;
+                        }
+                    }
+                }
+
+                &__content {
+                    top: var(--arrow-btn);
+                }
             }
         }
     }
@@ -119,6 +136,24 @@
             @media (any-hover: hover) {
                 &:hover {
                     border-color: var(--light-blue);
+                }
+            }
+        }
+    }
+
+    &--touch-border {
+        @media(max-width: 1024px) {
+            #{$this}__title {
+                border: 0.1rem solid var(--black);
+
+                &.active {
+                    border-color: var(--yellow);
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        border-color: var(--light-blue);
+                    }
                 }
             }
         }

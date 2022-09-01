@@ -1,5 +1,10 @@
 .numbers {
     @extend %flex-row;
+
+    @media(max-width: 767px) {
+        flex-direction: column;
+    }
+
     // .numbers__item
 
     &__item {
@@ -8,6 +13,12 @@
 
         @media (max-width: 1024px) {
             max-width: 19.8rem;
+        }
+
+        @media(max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: var(--offset-m);
+            }
         }
 
         > * {
@@ -24,9 +35,8 @@
     // .numbers__item-num
 
     &__item-num {
-        font-size: 3.2rem;
+        @extend %text-32;
         font-weight: 700;
-        line-height: calc(42 / 32 * 100%);
 
         @media (max-width: 767px) {
             font-size: 1.6rem;

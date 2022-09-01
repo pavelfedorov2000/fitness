@@ -14,15 +14,26 @@
         @media(min-width: 1025px) {
             align-self: center;
         }
+
+        @media(max-width: 1024px) {
+            @include padding-y(var(--offset-l));
+            gap: var(--offset-l);
+        }
     }
 
     // .promo-contacts-end__form
 
     &__form {
-        grid-template-columns: repeat(2, 1fr) repeat(2, max-content);
-        grid-template-areas:
-            'name tel email email'
-            'textarea textarea textarea btn'
-        ;
+        @media(min-width: 768px) {
+            grid-template-rows: repeat(2, var(--input-height));
+            grid-template-columns: repeat(2, 1fr) repeat(2, max-content);
+            grid-template-areas: 'name tel email email'
+                'textarea textarea textarea btn'
+            ;
+        }
+    }
+
+    .form-agree {
+        color: #fff;
     }
 }

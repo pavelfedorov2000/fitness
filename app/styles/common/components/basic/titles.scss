@@ -21,15 +21,6 @@
     @extend .title;
     @extend %text-38;
 
-    @media (max-width: 1024px) {
-        font-size: 3.2rem;
-    }
-
-    @media (max-width: 767px) {
-        font-size: 2rem;
-        line-height: 2.8rem;
-    }
-
     span {
         color: var(--yellow);
     }
@@ -101,36 +92,29 @@ h {
     &6 {
         @extend .title;
         margin: 0;
-        font-size: inherit;
     }
 
     &1 {
-        font-size: 3.8rem;
-        line-height: 5.3rem;
+        @extend %text-38;
     }
 
     &2 {
-        font-size: 3.2rem;
-        line-height: 4.5rem;
+        @extend %text-32;
     }
 
     &3 {
-        font-size: 2.6rem;
-        line-height: 3.6rem;
+        @extend %text-26;
     }
 
     &4 {
-        font-size: 2rem;
-        line-height: 2.8rem;
+        @extend %text-20;
     }
 
     &5 {
-        font-size: 1.4rem;
-        line-height: 2rem;
+        @extend %text-14;
     }
 
     &6 {
-        font-size: 1.3rem;
-        line-height: 1.8rem;
+        @extend %text-13;
     }
 }

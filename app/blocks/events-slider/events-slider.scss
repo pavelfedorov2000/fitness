@@ -1,7 +1,7 @@
 .events-slider {
     background-color: #fff;
-    border-top: 0.1rem solid var(--line-color);
-    border-bottom: 0.1rem solid var(--line-color);
+    border-top: $border;
+    border-bottom: $border;
     @include padding-x(6rem);
 
     // .events-slider__item

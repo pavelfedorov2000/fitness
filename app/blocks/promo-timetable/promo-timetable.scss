@@ -168,7 +168,7 @@
 
             @media(max-width: 1024px) {
                 height: var(--input-height);
-                border: 0.1rem solid var(--line-color);
+                border: $border;
             }
         }
     }

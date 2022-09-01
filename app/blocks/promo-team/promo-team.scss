@@ -84,7 +84,7 @@
         grid-area: select;
 
         .select__title {
-            border-bottom: 0.1rem solid var(--line-color);
+            border-bottom: $border;
         }
     }
 

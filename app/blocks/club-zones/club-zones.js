@@ -3,7 +3,7 @@ app.clubZones = {
     description: 'your script description',
     init() {
         const clubZones = document.querySelector('.club-zones');
-        const sliderPaginationItems = clubZones.querySelectorAll('.slider-pagination__item');
+        const sliderPaginationItems = clubZones && clubZones.querySelectorAll('.slider-pagination__item');
 
         new Swiper('.club-zones-slider', {
             loop: true,
