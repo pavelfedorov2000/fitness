@@ -17,18 +17,4 @@
         width: var(--header-height);
         height: var(--header-height);
     }
-
-    span {
-        @media (max-width: 500px) {
-            display: none;
-        }
-
-        &.mob {
-            display: none;
-
-            @media (max-width: 500px) {
-                display: block;
-            }
-        }
-    }
 }

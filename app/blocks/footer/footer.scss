@@ -110,15 +110,17 @@
         @extend %text-17;
         font-weight: 700;
         color: var(--dark);
+        padding: 0;
 
         &::before {
+            display: none;
+
             @media (max-width: 1024px) {
-                content: '';
+                display: block;
             }
         }
 
         @media (max-width: 1024px) {
-            position: relative;
             padding: 1.4rem var(--mob-padding);
         }
 
@@ -130,20 +132,14 @@
     // .footer__menu-list
 
     &__menu-list {
-        @media (max-width: 1024px) {
-            display: none;
-            background-color: var(--light-blue);
-            padding: 0 var(--mob-padding) var(--offset-s);
+        @media(min-width: 1025px) {
+            display: block;
+            background-color: transparent;
+            padding: 0;
         }
 
-        li {
-            &:not(:last-child) {
-                margin-bottom: 2rem;
-
-                @media(max-width: 767px) {
-                    margin-bottom: 1.8rem;
-                }
-            }
+        @media (max-width: 1024px) {
+            display: none;
         }
     }
 

@@ -1,8 +1,28 @@
 .accordeon {
+    $this: &;
+
+    border: 0.1rem solid var(--black);
+    border-bottom: none;
+
+    &:last-child {
+        border-bottom: 0.1rem solid var(--black);
+    }
+
     &-title {
+        position: relative;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding: 1.4rem var(--mob-padding);
         transition: 0.3s background-color;
 
+        @media(max-width: 1024px) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            font-weight: 500;
+        }
+
         &:before {
+            content: '';
             position: absolute;
             top: 1.5rem;
             right: var(--mob-padding);
@@ -18,6 +38,33 @@
 
             &:before {
                 transform: rotate(180deg);
+            }
+        }
+    }
+
+    &-content {
+        display: none;
+        background-color: var(--light-blue);
+        padding: 0 var(--mob-padding) var(--offset-s);
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+
+                @media(max-width: 767px) {
+                    margin-bottom: 1.8rem;
+                }
+            }
+        }
+    }
+
+    &-link {
+        @extend %text-13;
+        transition: .3s color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--yellow);
             }
         }
     }

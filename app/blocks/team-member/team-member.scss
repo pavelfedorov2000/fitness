@@ -58,7 +58,7 @@
     &__role {
         @extend %text-14;
         grid-area: role;
-        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.16);
+        text-shadow: $tsh;
         margin-bottom: 1rem;
     }
 
@@ -68,7 +68,7 @@
         @extend .title;
         @extend %text-16;
         grid-area: name;
-        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.16);
+        text-shadow: $tsh;
     }
 
     // .team-member__arrow

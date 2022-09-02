@@ -11,22 +11,88 @@
         grid-template-columns: unset;
     }
 
+    &__select {
+        display: none;
+        grid-column: 1 / -1;
+
+        @media(max-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &__selects {
+        @media(max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__tape {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        border: $border;
+        grid-column: 1 / -1;
+
+        .swiper-button {
+
+            &-prev,
+            &-next {
+                position: static;
+                width: 2rem;
+                height: 2rem;
+
+                svg {
+                    flex-shrink: 0;
+                    width: 2rem;
+                    height: 2rem;
+
+                    path {
+                        transition: .3s fill;
+                    }
+                }
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    svg path {
+                        fill: var(--yellow);
+                    }
+                }
+            }
+
+            &-prev {
+                margin-right: 7rem;
+            }
+
+            &-next {
+                margin-left: 7rem;
+            }
+        }
+    }
+
+    &__tape-inner {
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100vw - var(--gap) * 4);
+        }
+    }
+
     // .timetable-calendar__body
 
     &__body {
         padding: var(--arrow-btn) 0 var(--section-padding);
         @include row-grid(var(--offset-xls));
 
+        @media(max-width: 1024px) {
+            padding: var(--offset-xxs) 0 var(--offset-l);
+        }
+
         @media(max-width: 767px) {
             grid-column: unset;
-        }
-    }
-
-    // .timetable-calendar__select
-
-    &__select {
-        &.mob-visible {
-            display: none;
         }
     }
 }

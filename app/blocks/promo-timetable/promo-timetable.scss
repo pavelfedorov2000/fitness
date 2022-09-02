@@ -1,7 +1,6 @@
 .promo-timetable {
     --img-w: 74.8rem;
     --img--offset: calc(var(--img-w) - var(--gap) * 2);
-    --select: 7.2rem;
     --title: 27.2rem;
     --text: 34.4rem;
     --pb: 10.4rem;
@@ -32,7 +31,7 @@
     &__content {
         display: grid;
         grid-template-columns: var(--img--offset) 1fr calc(var(--title) - var(--offset-xls)) var(--offset-xls) calc(var(--text) - var(--offset-xls));
-        grid-template-rows: repeat(2, var(--header-height)) max-content 7.9rem max-content 1fr var(--select) var(--pb);
+        grid-template-rows: repeat(2, var(--header-height)) max-content 7.9rem max-content 1fr var(--select-height-xl) var(--pb);
 
         @media (min-width: 1025px) {
             grid-row: 1 / -1;
@@ -158,14 +157,6 @@
         }
 
         .select__title {
-            height: var(--select);
-
-            &:after {
-                @media(min-width: 1025px) {
-                    top: 2.5rem;
-                }
-            }
-
             @media(max-width: 1024px) {
                 height: var(--input-height);
                 border: $border;

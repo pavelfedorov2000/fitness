@@ -1,6 +1,8 @@
 (function ($) {
     $(document).ready(function () {
         //new WOW().init();
+        app.burger.init();
+        app.asidePopup.init();
         app.blog.init();
         app.clubPhotos.init();
         app.clubTeam.init();
@@ -11,8 +13,8 @@
         app.clubReviews.init();
         app.coachBio.init();
         app.clubZones.init();
+        app.timetableCalendar.init();
         //app.cardServices.init();
-        //app.burger.init();
         //app.slider.init();
         //app.menu.init();
         //app.popup.init();

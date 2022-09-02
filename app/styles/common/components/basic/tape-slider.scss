@@ -9,6 +9,8 @@
         text-align: center;
         color: var(--dark-gray);
         position: relative;
+        padding-bottom: calc(var(--offset-l) - 0.1rem);
+        white-space: nowrap;
 
         &::after {
             content: '';
@@ -30,22 +32,13 @@
             color: var(--black);
 
             &::after {
-                width: 74 / 66 * 100%;
+                width: calc(74 / 66 * 100%);
             }
 
             #{$this} {
                 &__item-day {
                     font-weight: 700;
                 }
-            }
-        }
-
-        .swiper-button {
-
-            &-prev,
-            &-next {
-                width: 2rem;
-                height: 2rem;
             }
         }
     }

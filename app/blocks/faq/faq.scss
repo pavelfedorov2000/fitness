@@ -76,14 +76,17 @@
     // .faq-body__aside-client
 
     &__aside-client {
-        &--left {
-            align-self: flex-end;
-            grid-column: 1 / 2;
-            grid-row: 1 / -1;
-        }
+        &--position {
+            &_left {
+                align-self: end;
+                align-items: end;
+                grid-column: 1 / 2;
+                grid-row: 1 / -1;
+            }
 
-        &--right {
-            grid-column: -2 / -1;
+            &_right {
+                grid-column: -2 / -1;
+            }
         }
     }
 

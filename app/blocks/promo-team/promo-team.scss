@@ -5,20 +5,33 @@
     background-color: var(--yellow);
     display: grid;
     grid-template-columns: repeat(2, var(--gap)) var(--select) var(--text) var(--input-height) 1fr repeat(2, var(--gap));
-    grid-template-rows:
-        var(--header-height) var(--input-height) calc(var(--gap) - var(--header-height) - var(--input-height)) max-content 1rem max-content repeat(3, var(--input-height));
-    grid-template-areas:
-        'aside . . . . . . .'
-        'aside . . . . img img .'
-        'aside . title . . img img .'
-        '. . title . . img img .'
-        '. . . . . img img .'
-        '. . . text . img img .'
-        '. . . . . img img .'
-        '. . select . . img img .'
-        '. . . search search search . .';
 
-    &::before,
+    @media(max-width: 1024px) {
+        //padding-top: calc(var(--header-height) + var(--offset-m));
+        padding-top: var(--offset-m);
+        grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+        row-gap: var(--offset-m);
+    }
+
+    > * {
+        @media(max-width: 1024px) {
+            grid-column: 2 / -2;
+        }
+    }
+
+    @media(min-width: 1025px) {
+        grid-template-rows: var(--header-height) var(--input-height) calc(var(--gap) - var(--header-height) - var(--input-height)) max-content 1rem max-content repeat(3, var(--input-height));
+        grid-template-areas: 'aside . . . . . . .'
+            'aside . . . . img img .'
+            'aside . title . . img img .'
+            '. . title . . img img .'
+            '. . . . . img img .'
+            '. . . text . img img .'
+            '. . . . . img img .'
+            '. . select . . img img .'
+            '. . . search search search . .';
+    }
+
     &::after {
         @media (min-width: 1025px) {
             content: '';
@@ -27,13 +40,24 @@
     }
 
     &::before {
-        @extend %pos-center-y;
+        content: '';
+        position: absolute;
 
         @media (min-width: 1025px) {
+            top: 50%;
+            transform: translateY(-50%);
             right: 6rem;
             width: 159.2rem;
             height: 20.5rem;
             background-image: url(../images/elements/promo-team.svg);
+        }
+
+        @media(max-width: 1024px) {
+            left: calc(var(--mob-padding) * (-1));
+            right: calc(var(--mob-padding) * (-1));
+            bottom: 0;
+            height: calc(var(--input-height) + var(--offset-m));
+            background-color: #fff;
         }
     }
 
@@ -51,7 +75,12 @@
     // .promo-team__aside-img
 
     &__aside-img {
-        grid-area: aside;
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: block;
+            grid-area: aside;
+        }
 
         img {
             @extend %cover;
@@ -61,13 +90,23 @@
     // .promo-team__title
 
     &__title {
-        grid-area: title;
+        @media(min-width: 1025px) {
+            grid-area: title;
+        }
     }
 
     // .promo-team__text
 
     &__text {
-        grid-area: text;
+        @media(min-width: 1025px) {
+            grid-area: text;
+        }
+
+        &:not(:last-child) {
+            @media(max-width: 1024px) {
+                margin-bottom: calc(var(--offset-l) - var(--offset-m));
+            }
+        }
     }
 
     // .promo-team__search
@@ -75,13 +114,24 @@
     &__search {
         position: relative;
         z-index: 10;
-        grid-area: search;
         padding-left: var(--offset-m);
         padding-right: 5rem;
+
+        @media(min-width: 1025px) {
+            grid-area: search;
+        }
     }
 
     &__select {
-        grid-area: select;
+        @media(min-width: 1025px) {
+            grid-area: select;
+        }
+
+        &:not(:last-child) {
+            @media(max-width: 1024px) {
+                margin-bottom: calc(var(--offset-l) - var(--offset-m));
+            }
+        }
 
         .select__title {
             border-bottom: $border;
@@ -91,7 +141,13 @@
     // .promo-team__img
 
     &__img {
-        grid-area: img;
+        @media(min-width: 1025px) {
+            grid-area: img;
+        }
+
+        @media(max-width: 1024px) {
+            grid-column: 1 / -1;
+        }
 
         img {
             @extend %cover;
@@ -103,6 +159,11 @@
     padding-top: var(--input-height);
     padding-bottom: calc(var(--section-padding) + var(--offset-xxs));
     position: relative;
+
+    @media(max-width: 1024px) {
+        padding-top: var(--offset-m);
+        padding-bottom: var(--offset-l);
+    }
 
     @media (min-width: 1025px) {
         &:before {

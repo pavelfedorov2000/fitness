@@ -7,6 +7,11 @@
     font-weight: 700;
     transition: 0.3s color;
 
+    @media(max-width: 767px) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
     @media (any-hover: hover) {
         &:hover {
             color: var(--yellow);

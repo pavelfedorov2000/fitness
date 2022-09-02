@@ -218,6 +218,8 @@ input[type='number']:focus {
     // .free-training-recording__btn
 
     &__btn {
+        @include row-grid(var(--offset-s));
+
         @media (min-width: 768px) {
             grid-area: btn;
         }

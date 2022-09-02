@@ -86,6 +86,20 @@ body {
     }
 }
 
+.timetable-page {
+    .header {
+        &__logo-img {
+            path {
+                &:first-child {
+                    @media(max-width: 1024px) {
+                        fill: var(--black);
+                    }
+                }
+            }
+        }
+    }
+}
+
 .page {
     position: relative;
     flex: 1 0 auto; // Footer at bottom

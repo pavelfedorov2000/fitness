@@ -40,6 +40,11 @@
     &__logo-img {
         width: 15.7rem;
         height: var(--offset-m);
+
+        @media(max-width: 767px) {
+            width: 10.8rem;
+            height: var(--offset-s);
+        }
     }
 
     // .header__menu

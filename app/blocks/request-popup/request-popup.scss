@@ -1,0 +1,80 @@
+.request-popup {
+    display: none;
+    padding: 7.2rem calc(var(--offset-l) - 7.2rem);
+    border: var(--offset-m) solid var(--yellow);
+
+    @media(max-width: 1024px) {
+        padding: var(--offset-l) calc(var(--offset-l) - var(--mob-padding)) var(--offset-xls);
+        border-width: var(--mob-padding);
+    }
+
+    @media(min-width: 1025px) {
+        display: grid;
+        place-items: center;
+    }
+
+    // .request-popup__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: 1025px) {
+            justify-content: center;
+        }
+
+        > * {
+            &:not(:last-child) {
+                margin-bottom: var(--offset-xxxl);
+
+                @media(max-width: 1024px) {
+                    margin-bottom: var(--offset-xls);
+                }
+            }
+        }
+    }
+
+    // .request-popup__title
+
+    &__title {
+        @extend %text-26;
+        max-width: 32rem;
+
+        @media(max-width: 1024px) {
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
+    }
+
+    // .request-popup__form
+
+    &__form {
+        display: grid;
+        gap: var(--offset-l);
+
+        @media(max-width: 1024px) {
+            gap: var(--offset-m);
+        }
+
+        @media(max-width: 767px) {
+            gap: var(--offset-s);
+        }
+
+        @media(min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                'select select'
+                'name tel'
+                'btn btn'
+            ;
+        }
+
+        @media(min-width: 1025px) {
+            grid-area: unset;
+        }
+
+        @media(max-width: 1024px) {
+            flex-grow: 1;
+        }
+    }
+}

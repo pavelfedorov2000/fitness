@@ -4,6 +4,10 @@
 
     @media(min-width: 768px) {
         grid-template-columns: repeat(3, 1fr);
+        gap: var(--offset-m);
+    }
+
+    @media(min-width: 1025px) {
         gap: var(--offset-xls);
     }
 }
@@ -17,6 +21,7 @@
 
     &__title {
         @extend %vertical-align;
+        gap: var(--offset-s);
         font-weight: 500;
         height: var(--input-height);
         @include padding-x(var(--offset-s));
@@ -114,6 +119,24 @@
 
                 &__content {
                     top: var(--arrow-btn);
+                }
+            }
+        }
+
+        &_xl {
+            #{$this} {
+                &__title {
+                    height: var(--select-height-xl);
+
+                    &:after {
+                        @media(min-width: 1025px) {
+                            top: 2.5rem;
+                        }
+                    }
+                }
+
+                &__content {
+                    top: var(--select-height-xl);
                 }
             }
         }

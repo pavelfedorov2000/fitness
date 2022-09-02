@@ -31,6 +31,7 @@
     --half-circle: calc(var(--circle-text) / 2);
     --marquee-padding: 4.9rem;
     --input-height: 5.6rem;
+    --select-height-xl: 7.2rem;
     --section-mh: 80rem;
     --section-padding: 8rem;
     --section-padding-xl: 8.8rem;
@@ -73,7 +74,8 @@ $fz: 15;
 $ff: 'Gotham Pro',
 sans-serif;
 $color-default: var(--black);
-$bsh: 0rem var(--offset-xxs) var(--offset-m) rgba(0, 0, 0, 0.2);
+$bsh: 0 var(--offset-xxs) var(--offset-m) rgba(0, 0, 0, 0.2);
+$tsh: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.16);
 $brs: var(--offset-l);
 $border: 0.1rem solid var(--line-color);
 
@@ -164,10 +166,10 @@ $border: 0.1rem solid var(--line-color);
         line-height: rem(28);
     }
 
-    @media(max-width: 767px) {
+    /* @media(max-width: 767px) {
         font-size: 1.6rem;
         line-height: 2.2rem;
-    }
+    } */
 }
 
 %text-36 {

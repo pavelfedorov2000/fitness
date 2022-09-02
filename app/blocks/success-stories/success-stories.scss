@@ -3,6 +3,15 @@
     padding-bottom: var(--section-padding);
     position: relative;
 
+    @media(max-width: 1024px) {
+        padding-bottom: var(--offset-xxl);
+    }
+
+    @media(max-width: 767px) {
+        padding-top: 0;
+        padding-bottom: var(--offset-l);
+    }
+
     @media(min-width: 1025px) {
         &:before {
             @include rect(top, right, 0, 0, 100%, var(--beige));
@@ -13,6 +22,10 @@
 
     &__filter {
         margin-bottom: var(--arrow-btn);
+
+        @media(max-width: 1024px) {
+            grid-column: 1 / -1;
+        }
     }
 
     &__select {
