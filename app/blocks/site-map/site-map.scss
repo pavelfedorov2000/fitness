@@ -1,4 +1,5 @@
 .site-map {
+    cursor: pointer;
     @extend %grid-center;
     @extend %text-11;
     width: var(--section-padding);

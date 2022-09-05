@@ -14,6 +14,7 @@
         app.coachBio.init();
         app.clubZones.init();
         app.timetableCalendar.init();
+        app.clubsMap.init();
         //app.cardServices.init();
         //app.slider.init();
         //app.menu.init();

@@ -1,57 +1,128 @@
 <div class="aside-popup info-workout-popup">
-    <div class="info-workout-popup__head">
-        <div class="info-workout-popup__title">Йога</div>
-        <div class="info-workout-popup__club">FITNESSON Электросталь</div>
-    </div>
-    <p class="info-workout-popup__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur mi at varius laoreet. Nunc ultrices laoreet neque eget bibendum. Aliquam volutpat nec metus id egestas. Nam pharetra ullamcorper libero, ut pharetra nisi pharetra nec.
-    </p>
-    <button class="btn info-workout-popup__btn js-workout-popup-form"
-            type="button">Хочу попробовать йогу</button>
-    <div class="info-workout-popup__coaches">
-        <div class="info-workout-popup__coach">
-            <div class="instructor">
-                <div class="instructor__info">
-                    <div class="instructor__avatar">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/instructor-avatar.webp">
-                            <img src="assets/images/content/instructor-avatar.png"
-                                 alt="фото"
-                                 width="56"
-                                 height="56"
-                                 loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="instructor__name">Екатерина Гарибальди</div>
-                    <div class="instructor__descr">Тренер групповых программ</div>
-                </div>
-            </div>
-            <ul class="workout-timetable">
-                <li class="workout-timetable__item">
-                    <div class="workout-timetable__item-day">Понедельник</div>
-                    <span class="label label--blue">9:00 — 9:50</span>
-                </li>
-                <li class="workout-timetable__item">
-                    <div class="workout-timetable__item-day">Среда</div>
-                    <span class="label label--blue">12:00 — 12:50</span>
-                </li>
-                <li class="workout-timetable__item">
-                    <div class="workout-timetable__item-day">Пятница</div>
-                    <span class="label label--blue">11:00 — 11:50</span>
-                </li>
-            </ul>
+    <button class="aside-popup__close-btn"
+            type="button"
+            aria-label="Закрыть попап">
+        <img src="assets/images/icons/close.svg"
+             alt="image"
+             loading="lazy"
+             width="24"
+             height="24">
+    </button>
+    <div class="info-workout-popup__inner">
+        <div class="info-workout-popup__head">
+            <div class="title aside-popup__title">Йога</div>
+            <div class="info-workout-popup__club">FITNESSON Электросталь</div>
         </div>
-    </div>
-    <div class="info-workout-popup__video">
-        <picture>
-            <source type="image/webp"
-                    srcset="assets/images/content/.webp">
-            <img src="assets/images/content/.jpg"
-                 alt="фото"
-                 width="652"
-                 height="315"
-                 loading="lazy">
-        </picture>
+        <p class="section-text info-workout-popup__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur mi at varius laoreet. Nunc ultrices laoreet neque eget bibendum. Aliquam volutpat nec metus id egestas. Nam pharetra ullamcorper libero, ut pharetra nisi pharetra nec.
+        </p>
+        <div class="info-workout-popup__form-wrap">
+            <button class="btn info-workout-popup__btn"
+                    type="button">Хочу попробовать йогу</button>
+            <form action="#"
+                  class="info-workout-popup__form">
+                <div class="info-workout-popup__form-inner">
+                    <input class="input form-block__input form-block__input--name input--light-blue"
+                           name="name"
+                           placeholder="Имя"
+                           required>
+                    <input class="input form-block__input form-block__input--tel input--light-blue"
+                           type="tel"
+                           name="phone"
+                           placeholder="Телефон"
+                           required>
+                    <div class="form-block__btn">
+                        <button class="btn btn--black"
+                                type="submit">Отправить заявку</button>
+                        <p class="form-agree">
+                            Отправляя заявку вы соглашаетесь с&nbsp;условиями обработки персональных&nbsp;данных.
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="info-workout-popup__coaches">
+            <div class="info-workout-popup__coach">
+                <div class="instructor">
+                    <div class="instructor__info">
+                        <div class="instructor__avatar">
+                            <picture>
+                                <source type="image/webp"
+                                        srcset="assets/images/content/avatar.webp">
+                                <img src="assets/images/content/avatar.jpg"
+                                     alt="фото"
+                                     width="56"
+                                     height="56"
+                                     loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="instructor__name">Екатерина Гарибальди</div>
+                        <div class="instructor__descr">Тренер групповых программ</div>
+                    </div>
+                </div>
+                <ul class="workout-timetable">
+                    <li class="workout-timetable__item">
+                        <div class="workout-timetable__item-day">Понедельник</div>
+                        <span class="label label--blue">9:00 — 9:50</span>
+                    </li>
+                    <li class="workout-timetable__item">
+                        <div class="workout-timetable__item-day">Среда</div>
+                        <span class="label label--blue">12:00 — 12:50</span>
+                    </li>
+                    <li class="workout-timetable__item">
+                        <div class="workout-timetable__item-day">Пятница</div>
+                        <span class="label label--blue">11:00 — 11:50</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-workout-popup__coach">
+                <div class="instructor">
+                    <div class="instructor__info">
+                        <div class="instructor__avatar"></div>
+                        <div class="instructor__name">Дмитрий Б.</div>
+                        <div class="instructor__descr">Тренер групповых программ</div>
+                    </div>
+                </div>
+                <ul class="workout-timetable">
+                    <li class="workout-timetable__item">
+                        <div class="workout-timetable__item-day">Понедельник</div>
+                        <span class="label label--blue">9:00 — 9:50</span>
+                    </li>
+                    <li class="workout-timetable__item">
+                        <div class="workout-timetable__item-day">Среда</div>
+                        <span class="label label--blue">12:00 — 12:50</span>
+                    </li>
+                    <li class="workout-timetable__item">
+                        <div class="workout-timetable__item-day">Пятница</div>
+                        <span class="label label--blue">11:00 — 11:50</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <figure class="video info-workout-popup__video video--without_caption">
+            <div class="video__body info-workout-popup__video-body">
+                <div class="video__bg">
+                    <picture>
+                        <source type="image/webp"
+                                srcset="assets/images/content/unique-concept/video.webp">
+                        <img src="assets/images/content/unique-concept/video.jpg"
+                             alt="фото"
+                             width="652"
+                             height="315"
+                             loading="lazy">
+                    </picture>
+                </div>
+                <button class="video__box video__box--icon-only video__box--round"
+                        type="button">
+                    <svg class="video__player"
+                         viewBox="0 0 32 32"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z"
+                              fill="#020818" />
+                    </svg>
+                </button>
+            </div>
+        </figure>
     </div>
 </div>

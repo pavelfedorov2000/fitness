@@ -53,6 +53,17 @@
         }
     }
 
+    &--white {
+        background-color: #fff;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--black);
+                color: #fff;
+            }
+        }
+    }
+
     &--radius {
         border-radius: 4.8rem;
     }

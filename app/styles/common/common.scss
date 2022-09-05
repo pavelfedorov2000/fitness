@@ -13,6 +13,12 @@ html {
     @media (max-width: 500px) {
         font-size: calc(100vw / 320 * 10);
     }
+
+    &.disable-fix {
+        @media (min-width: 1025px) {
+            padding-right: 17px;
+        }
+    }
 }
 
 body {

@@ -108,6 +108,8 @@
             grid-column: 3 / -1;
             grid-template-columns: 1fr 4.7rem max-content;
         }
+
+        @media (min-width: 1025px) {}
     }
 
     &__video-body {

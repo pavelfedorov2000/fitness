@@ -1,7 +1,8 @@
 .request-popup {
-    display: none;
     padding: 7.2rem calc(var(--offset-l) - 7.2rem);
     border: var(--offset-m) solid var(--yellow);
+    overflow-x: hidden;
+    overflow-y: auto;
 
     @media(max-width: 1024px) {
         padding: var(--offset-l) calc(var(--offset-l) - var(--mob-padding)) var(--offset-xls);
@@ -9,7 +10,7 @@
     }
 
     @media(min-width: 1025px) {
-        display: grid;
+        //display: grid;
         place-items: center;
     }
 
@@ -37,13 +38,7 @@
     // .request-popup__title
 
     &__title {
-        @extend %text-26;
         max-width: 32rem;
-
-        @media(max-width: 1024px) {
-            font-size: 2rem;
-            line-height: 2.8rem;
-        }
     }
 
     // .request-popup__form
