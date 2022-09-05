@@ -1,0 +1,68 @@
+.map-balloon {
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%);
+    left: var(--offset-l) !important;
+    width: 24rem;
+    box-sizing: border-box;
+    padding: var(--offset-s);
+    @include row-grid(var(--offset-s));
+    background: #fff;
+    box-shadow: $bsh;
+
+    @media (max-width: 500px) {
+        left: var(--mob-padding) !important;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        @extend %pos-center-y;
+        left: calc(var(--offset-xxs) * (-1));
+        width: var(--offset-xxs);
+        height: var(--offset-s);
+        background-color: #fff;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+    }
+
+    &__title {
+        @extend %text-14;
+        font-weight: 500;
+    }
+
+    &__item {
+        --icon: 2rem;
+
+        @extend %text-13;
+        position: relative;
+        padding-left: calc(var(--icon) + var(--offset-xxs));
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            width: var(--icon);
+            height: var(--icon);
+            @extend %bg-contain;
+        }
+
+        &--address {
+            &:before {
+                background-image: url(../images/icons/black-pin.svg);
+            }
+        }
+
+        &--time {
+            &:before {
+                background-image: url(../images/icons/black-clock.svg);
+            }
+        }
+
+        &--tel {
+            &:before {
+                background-image: url(../images/icons/black-phone.svg);
+            }
+        }
+    }
+}

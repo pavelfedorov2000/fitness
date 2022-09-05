@@ -3,7 +3,9 @@
 
     &__grid {
         @media (min-width: 1025px) {
-            grid-template-rows: var(--header-height) calc(var(--gap) - var(--header-height)) calc(var(--map-height) - (var(--gap) - var(--header-height)));
+            grid-template-rows: var(--header-height) calc(var(--gap) - var(--header-height)) calc(
+                    var(--map-height) - (var(--gap) - var(--header-height))
+                );
         }
     }
 
@@ -24,8 +26,10 @@
     // .promo-clubs__map
 
     &__map {
-        @media (min-width: 1025px) {
-            height: 100%;
+        height: 100%;
+
+        @media (max-width: 1024px) {
+            height: 56.8rem;
         }
 
         img {
@@ -36,6 +40,7 @@
     // .promo-clubs__select
 
     &__select {
+        display: none;
         @media (min-width: 1025px) {
             position: absolute;
             top: 6.5rem;
@@ -125,9 +130,11 @@
     }
 
     &__regions {
-        width: calc((864 + 78) / 1112 * 100%);
-        padding-left: 7.8rem;
-        margin-left: auto;
+        @media (min-width: 1025px) {
+            width: calc((864 + 78) / 1112 * 100%);
+            padding-left: 7.8rem;
+            margin-left: auto;
+        }
     }
 
     // .clubs-page__nav
@@ -135,7 +142,7 @@
     &__nav {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: block;
             width: max-content;
             min-width: max-content;
@@ -170,7 +177,7 @@
         @extend %text-12;
         font-weight: 500;
         color: var(--dark-gray);
-        transition: .3s color;
+        transition: 0.3s color;
 
         @media (any-hover: hover) {
             &:hover {
@@ -216,6 +223,13 @@
 
         &:last-child {
             padding-bottom: 0;
+        }
+    }
+
+    &__aside-client {
+        display: none;
+        @media (min-width: 1025px) {
+            display: block;
         }
     }
 }

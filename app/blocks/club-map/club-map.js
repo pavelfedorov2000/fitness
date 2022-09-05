@@ -41,10 +41,11 @@ app.clubsMap = {
 
                     // Создание макета балуна на основе Twitter Bootstrap.
                     let warehouseBalloonLayout = ymaps.templateLayoutFactory.createClass(
-                        `<div class="map-balloon" style="width: auto">
+                        `<div class="map-balloon">
                             $[properties.balloonTitle]
                             $[properties.balloonAddress]
                             $[properties.balloonWorkHours]
+                            $[properties.balloonTel]
                             <a class="btn map-balloon__btn" href="#">Подробнее о клубе</a>
                         </div>`
                     );
@@ -54,16 +55,16 @@ app.clubsMap = {
                     var GeoObjects = [];
                     for (let i = 0; i < clubsData.length; i++) {
                         let club = clubsData[i];
-                        console.log(club);
 
                         // Создание метки с пользовательским макетом балуна.
                         clubsPlacemarks[club.data.id] = new ymaps.Placemark(club.coordinates, {
                             balloonTitle: `<div class="map-balloon__title">${club.title.text}</div>`,
-                            balloonAddress: club.address_full && club.address_full !== '' && `<p>${club.address_full}</p>`,
+                            balloonAddress: club.address_full && club.address_full !== '' && `<p class="map-balloon__item map-balloon__item--address">${club.address_full}</p>`,
                             balloonWorkHours: club.work_hours && club.work_hours.items && club.work_hours.items.length > 0 ?
                                 `<div class="map-balloon__item map-balloon__item--time">
                                 Работаем ${club.work_hours.items.join(', ')}
                         </div>` : null,
+                            balloonTel: club.tel && club.tel !== '' && `<a class="map-balloon__item map-balloon__item--tel" href="tel:${club.tel.split('').map(item => item.split('').filter(el => el !== '' && el !== '(' && el !== ')' && el !== '-')).join('')}">${club.tel}</a>`,
                         }, {
                             iconImageHref: 'assets/images/icons/map-pin.svg',
                             iconLayout: "default#image",
@@ -97,16 +98,18 @@ app.clubsMap = {
                         zoom: 5
                     });
 
-                    $('body').on('click', '.map-info-table__item', function () {
-                        const $btn = $(this);
-                        const warehouse = clubsData && clubsData.filter(item => item.data.id == $(this).attr('data-id'))[0];
+                    $('body').on('click', '.region-btn', function () {
+                        const $regionBtn = $(this);
+                        const club = clubsData && clubsData.find(item => item.data.id == $regionBtn.attr('data-id'));
 
-                        $('.map-info-table__item.active').removeClass('active');
-                        $btn.addClass('active');
-                        clubsMap.setZoom(7);
-                        clubsMap.setCenter(warehouse.coordinates.map((coord, i) => i == 1 ? coord + 2 : coord));
-                        clubsPlacemarks[warehouse.data.id].balloon.open();
-                        clubsMap.geoObjects.remove(multiRoute);
+                        //clubsMap.setZoom(7);
+                        clubsMap.setCenter(club.coordinates);
+                        clubsPlacemarks[club.data.id].balloon.open();
+
+                        window.scrollTo({
+                            top: document.querySelector('#clubs-map').getBoundingClientRect().top,
+                            behavior: 'smooth'
+                        });
                     });
                 });
             }
