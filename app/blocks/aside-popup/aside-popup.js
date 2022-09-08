@@ -9,6 +9,13 @@ app.asidePopup = {
             $('.info-workout-popup').addClass('active');
         });
 
+        $(document).on('click', '.success-story-start__btn', function () {
+            $('body').addClass('_lock');
+            $('html').addClass('disable-fix');
+            $('.overlay').fadeIn('slow');
+            $('.request-popup').addClass('active');
+        });
+
         $(document).on('click', '.aside-popup__close-btn', function () {
             const $asidePopupCloseBtn = $(this);
             const $asidePopup = $asidePopupCloseBtn.closest('.aside-popup');
