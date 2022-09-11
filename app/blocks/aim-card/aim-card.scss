@@ -10,7 +10,7 @@
         height: 50%;
         background: linear-gradient(180deg, rgba(2, 8, 24, 0.6) 0%, rgba(2, 8, 24, 0) 102.25%);
         transform: rotate(-180deg);
-        transition: .3s opacity;
+        transition: 0.3s opacity;
     }
 
     @media (any-hover: hover) {
@@ -50,11 +50,11 @@
         @extend %flex-col;
         justify-content: flex-end;
         align-items: flex-start;
-        padding: 5.2rem var(--arrow-btn);
+        padding: 5.2rem var(--offset-xl);
         color: #fff;
 
-        @media(max-width: 767px) {
-            padding: var(--offset-s) var(--arrow-btn) var(--offset-s) var(--offset-s);
+        @media (max-width: 767px) {
+            padding: var(--offset-s) var(--offset-xl) var(--offset-s) var(--offset-s);
         }
     }
 
@@ -65,17 +65,9 @@
         @extend %text-20;
         max-width: 30.7rem;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.4rem;
             line-height: 2rem;
         }
-    }
-
-    // .aim-card__arrow
-
-    &__arrow {
-        position: absolute;
-        right: 0;
-        bottom: 0;
     }
 }

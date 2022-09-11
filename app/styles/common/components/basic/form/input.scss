@@ -2,28 +2,35 @@
     @extend %vertical-align;
     @extend %text-14;
     @include padding-x(1.6rem);
-    //width: 100%;
     height: var(--input-height);
     background-color: #fff;
     color: var(--black);
 
-    &--light-blue {
-        background-color: var(--light-blue);
+    &--style {
+        &_bg {
+            &-light-blue {
+                background-color: var(--light-blue);
+            }
+        }
     }
 
-    &--small {
-        height: var(--arrow-btn);
+    &--size {
+        &_s {
+            height: var(--arrow-btn);
+        }
     }
 
     &::placeholder {
         color: var(--black);
     }
 
-    &--search {
-        background-image: url(../images/icons/search.svg);
-        background-size: 2rem;
-        background-position: calc(100% - var(--offset-m)) 50%;
-        background-repeat: no-repeat;
+    &--type {
+        &_search {
+            background-image: url(../images/icons/search.svg);
+            background-size: 2rem;
+            background-position: calc(100% - var(--offset-m)) 50%;
+            background-repeat: no-repeat;
+        }
     }
 }
 

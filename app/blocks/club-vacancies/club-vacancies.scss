@@ -1,7 +1,7 @@
 .club-vacancies {
     @include padding-y(var(--section-padding));
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding-top: var(--offset-l);
         padding-bottom: 0;
     }
@@ -31,7 +31,7 @@
         @media (max-width: 1024px) {
             width: 100vw;
             margin-left: calc(var(--mob-padding) * (-1));
-            padding-bottom: calc(var(--arrow-btn) + var(--offset-m));
+            padding-bottom: calc(var(--offset-xl) + var(--offset-m));
         }
     }
 

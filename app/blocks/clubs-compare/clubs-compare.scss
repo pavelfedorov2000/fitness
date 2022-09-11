@@ -3,7 +3,7 @@
     background-color: var(--beige);
     @include padding-y(var(--section-padding));
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
             @include rect(top, left, 0, 0, var(--gap), var(--yellow));
         }
@@ -14,7 +14,7 @@
         }
     }
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         @include padding-y(var(--offset-l));
     }
 
@@ -24,11 +24,11 @@
         display: grid;
         row-gap: 11.5rem;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             justify-items: end;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             row-gap: 2.2rem;
         }
     }
@@ -36,7 +36,7 @@
     // .clubs-compare__title
 
     &__title {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             text-align: right;
         }
     }
@@ -44,18 +44,18 @@
     // .clubs-compare__slider
 
     &__slider {
-        padding-bottom: calc(12.8rem + var(--arrow-btn));
+        padding-bottom: calc(12.8rem + var(--offset-xl));
 
-        @media(max-width: 1024px) {
-            padding-bottom: calc(var(--offset-l) + var(--arrow-btn));
+        @media (max-width: 1024px) {
+            padding-bottom: calc(var(--offset-l) + var(--offset-xl));
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             width: var(--container);
         }
 
         .splide__slide {
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 width: 20.8rem;
             }
         }
@@ -66,7 +66,7 @@
         @extend %pos-center-x;
         bottom: 0;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             //width: 100%;
             display: none;
         }
@@ -88,7 +88,7 @@
         @extend %text-16;
         max-width: 17rem;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             font-size: 1.5rem;
             line-height: 2.2rem;
         }
@@ -98,11 +98,11 @@
         @extend .title;
         @extend %text-32;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             margin-right: 5rem;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             font-size: 1.6rem;
             line-height: 2.2rem;
         }
@@ -112,7 +112,7 @@
     &__minus {
         --icon: var(--offset-m);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             --icon: 2rem;
 
             font-size: 1.3rem;

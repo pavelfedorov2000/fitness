@@ -1,297 +1,159 @@
 <div class="timetable-calendar container">
-    <div class="select timetable-calendar__select">
-        <div class="select__title select__title--border">
-            <b>Сегодня</b>
-            <time datetime="2022-04-07">7 апреля</time>
-        </div>
-        <div class="select__content">
-            <input id="calendarDate0"
-                   class="select__input"
-                   type="radio"
-                   name="calendar_date"
-                   checked />
-            <label for="calendarDate0"
-                   tabindex="0"
-                   class="select__label"
-                   data-value="07.04.2022">7 апреля</label>
-            <input id="calendarDate1"
-                   class="select__input"
-                   type="radio"
-                   name="calendar_date" />
-            <label for="calendarDate1"
-                   tabindex="0"
-                   class="select__label"
-                   data-value="08.04.2022">8 апреля</label>
-            <input id="calendarDate2"
-                   class="select__input"
-                   type="radio"
-                   name="calendar_date" />
-            <label for="calendarDate2"
-                   tabindex="0"
-                   class="select__label"
-                   data-value="09.04.2022">9 апреля</label>
-            <input id="calendarDate3"
-                   class="select__input"
-                   type="radio"
-                   name="calendar_date" />
-            <label for="calendarDate3"
-                   tabindex="0"
-                   class="select__label"
-                   data-value="10.04.2022">10 апреля</label>
-            <input id="calendarDate4"
-                   class="select__input"
-                   type="radio"
-                   name="calendar_date" />
-            <label for="calendarDate4"
-                   tabindex="0"
-                   class="select__label"
-                   data-value="11.04.2022">11 апреля</label>
-            <input id="calendarDate5"
-                   class="select__input"
-                   type="radio"
-                   name="calendar_date" />
-            <label for="calendarDate5"
-                   tabindex="0"
-                   class="select__label"
-                   data-value="12.04.2022">12 апреля</label>
-            <input id="calendarDate6"
-                   class="select__input"
-                   type="radio"
-                   name="calendar_date" />
-            <label for="calendarDate6"
-                   tabindex="0"
-                   class="select__label"
-                   data-value="13.04.2022">13 апреля</label>
-        </div>
-    </div>
-    <div class="timetable-calendar__tape">
-        <div class="timetable-calendar__tape-inner">
-            <div class="swiper-button-prev">
-                <svg viewBox="0 0 20 20"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_1104_5733)">
-                        <path fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M8.22386 11.1527L15.833 11.1527L15.833 8.84706L8.22609 8.84706L11.487 5.60412L10.0415 4.16663L4.18665 9.98927L4.16634 10.0091L4.16654 10.0093L4.16634 10.0095L5.61179 11.447L5.61662 11.4422L10.0605 15.8333L11.5198 14.4096L8.22386 11.1527Z"
-                              fill="#020818" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_1104_5733">
-                            <rect width="20"
-                                  height="20"
-                                  fill="white" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </div>
-            <div class="swiper tape-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide tape-slider__item">
-                        <span class="tape-slider__item-day">Сегодня</span>
-                        <span class="tape-slider__item-date">1 ноября</span>
-                    </div>
-                    <div class="swiper-slide tape-slider__item">
-                        <span class="tape-slider__item-day">Понедельник</span>
-                        <span class="tape-slider__item-date">2 ноября</span>
-                    </div>
-                    <div class="swiper-slide tape-slider__item">
-                        <span class="tape-slider__item-day">Вторник</span>
-                        <span class="tape-slider__item-date">3 ноября</span>
-                    </div>
-                    <div class="swiper-slide tape-slider__item">
-                        <span class="tape-slider__item-day">Среда</span>
-                        <span class="tape-slider__item-date">4 ноября</span>
-                    </div>
-                    <div class="swiper-slide tape-slider__item">
-                        <span class="tape-slider__item-day">Четверг</span>
-                        <span class="tape-slider__item-date">5 ноября</span>
-                    </div>
-                    <div class="swiper-slide tape-slider__item">
-                        <span class="tape-slider__item-day">Пятница</span>
-                        <span class="tape-slider__item-date">6 ноября</span>
-                    </div>
-                    <div class="swiper-slide tape-slider__item">
-                        <span class="tape-slider__item-day">Суббота</span>
-                        <span class="tape-slider__item-date">7 ноября</span>
-                    </div>
-                    <div class="swiper-slide tape-slider__item">
-                        <span class="tape-slider__item-day">Воскресенье</span>
-                        <span class="tape-slider__item-date">8 ноября</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-next">
-                <svg viewBox="0 0 20 20"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M11.7761 8.84729L4.16699 8.84729L4.16699 11.1529L11.7739 11.1529L8.51302 14.3959L9.95848 15.8334L15.8134 10.0107L15.8337 9.99092L15.8335 9.99073L15.8337 9.99053L14.3882 8.55304L14.3834 8.55785L9.93954 4.16673L8.48016 5.59042L11.7761 8.84729Z"
-                          fill="#020818" />
-                </svg>
-            </div>
-        </div>
-    </div>
-    <div class="timetable-calendar__body section-body">
-        <div class="filter-selects timetable-calendar__selects">
-            <div class="select select--border">
-                <div class="select__title select__title--border">Тренер</div>
-                <div class="select__content">
-                    <input id="coach0"
-                           class="select__input"
-                           type="radio"
-                           name="coach"
-                           checked />
-                    <label for="coach0"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Тренер">Тренер</label>
-                    <input id="coach1"
-                           class="select__input"
-                           type="radio"
-                           name="coach" />
-                    <label for="coach1"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Анастасия Ерисова">Анастасия
-                        Ерисова</label>
-                    <input id="coach2"
-                           class="select__input"
-                           type="radio"
-                           name="coach" />
-                    <label for="coach2"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Ренат Якубов">Ренат
-                        Якубов</label>
-                    <input id="coach3"
-                           class="select__input"
-                           type="radio"
-                           name="coach" />
-                    <label for="coach3"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Ирина Садовская">Ирина
-                        Садовская</label>
-                    <input id="coach4"
-                           class="select__input"
-                           type="radio"
-                           name="coach" />
-                    <label for="coach4"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Вера Громова">Вера
-                        Громова</label>
-                </div>
-            </div>
-            <div class="select select--border">
-                <div class="select__title select__title--border">Тренировка</div>
-                <div class="select__content">
-                    <input id="training0"
-                           class="select__input"
-                           type="radio"
-                           name="training"
-                           checked />
-                    <label for="training0"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Тренер">Тренировка</label>
-                    <input id="training1"
-                           class="select__input"
-                           type="radio"
-                           name="training" />
-                    <label for="training1"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Групповая тренировка">Групповая
-                        тренировка</label>
-                    <input id="training2"
-                           class="select__input"
-                           type="radio"
-                           name="training" />
-                    <label for="training2"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="По записи">По записи</label>
-                    <input id="training3"
-                           class="select__input"
-                           type="radio"
-                           name="training" />
-                    <label for="training3"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Детская секция">Детская
-                        секция</label>
-                    <input id="training4"
-                           class="select__input"
-                           type="radio"
-                           name="training" />
-                    <label for="training4"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Бизнес–класс">Бизнес–класс</label>
-                </div>
-            </div>
-            <div class="select select--border">
-                <div class="select__title select__title--border">Цель тренировки</div>
-                <div class="select__content">
-                    <input id="trainingAim0"
-                           class="select__input"
-                           type="radio"
-                           name="training_aim"
-                           checked />
-                    <label for="trainingAim0"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Цель тренировки">Цель
-                        тренировки</label>
-                    <input id="trainingAim1"
-                           class="select__input"
-                           type="radio"
-                           name="training_aim" />
-                    <label for="trainingAim1"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Силовая тренировка">Силовая
-                        тренировка</label>
-                    <input id="trainingAim2"
-                           class="select__input"
-                           type="radio"
-                           name="training_aim" />
-                    <label for="trainingAim2"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="Йога в гамаках">Йога в
-                        гамаках</label>
-                    <input id="trainingAim3"
-                           class="select__input"
-                           type="radio"
-                           name="training_aim" />
-                    <label for="trainingAim3"
-                           tabindex="0"
-                           class="select__label"
-                           data-value="ОФП для детей (7-11 лет)">
-                        ОФП для детей (7-11 лет)
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="timetable-calendar__item calendar-item">
-            <div class="calendar-item__date calendar-date">
-                <time class="title calendar-date__num"
-                      datetime="2022-11-01">01.11</time>
-                <div class="calendar-date__day">Понедельник</div>
-            </div>
-            @@include('blocks/timetable-calendar/cards.html')
-        </div>
-        <div class="timetable-calendar__item calendar-item">
-            <div class="calendar-item__date calendar-date">
-                <time class="title calendar-date__num"
-                      datetime="2022-11-02">02.11</time>
-                <div class="calendar-date__day">Вторник</div>
-            </div>
-            @@include('blocks/timetable-calendar/cards.html')
-        </div>
-    </div>
+	<div class="select timetable-calendar__select">
+		<div class="select__title select__title--border">
+			<b>Сегодня</b>
+			<time datetime="2022-04-07">7 апреля</time>
+		</div>
+		<div class="select__content">
+			<input id="calendarDate0" class="select__input" type="radio" name="calendar_date" checked />
+			<label for="calendarDate0" tabindex="0" class="select__label" data-value="07.04.2022">7 апреля</label>
+			<input id="calendarDate1" class="select__input" type="radio" name="calendar_date" />
+			<label for="calendarDate1" tabindex="0" class="select__label" data-value="08.04.2022">8 апреля</label>
+			<input id="calendarDate2" class="select__input" type="radio" name="calendar_date" />
+			<label for="calendarDate2" tabindex="0" class="select__label" data-value="09.04.2022">9 апреля</label>
+			<input id="calendarDate3" class="select__input" type="radio" name="calendar_date" />
+			<label for="calendarDate3" tabindex="0" class="select__label" data-value="10.04.2022">10 апреля</label>
+			<input id="calendarDate4" class="select__input" type="radio" name="calendar_date" />
+			<label for="calendarDate4" tabindex="0" class="select__label" data-value="11.04.2022">11 апреля</label>
+			<input id="calendarDate5" class="select__input" type="radio" name="calendar_date" />
+			<label for="calendarDate5" tabindex="0" class="select__label" data-value="12.04.2022">12 апреля</label>
+			<input id="calendarDate6" class="select__input" type="radio" name="calendar_date" />
+			<label for="calendarDate6" tabindex="0" class="select__label" data-value="13.04.2022">13 апреля</label>
+		</div>
+	</div>
+	<div class="timetable-calendar__tape">
+		<div class="timetable-calendar__tape-inner">
+			<div class="swiper-button-prev">
+				<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_1104_5733)">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M8.22386 11.1527L15.833 11.1527L15.833 8.84706L8.22609 8.84706L11.487 5.60412L10.0415 4.16663L4.18665 9.98927L4.16634 10.0091L4.16654 10.0093L4.16634 10.0095L5.61179 11.447L5.61662 11.4422L10.0605 15.8333L11.5198 14.4096L8.22386 11.1527Z"
+							fill="#020818" />
+					</g>
+					<defs>
+						<clipPath id="clip0_1104_5733">
+							<rect width="20" height="20" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+			<div class="swiper tape-slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide tape-slider__item">
+						<span class="tape-slider__item-day">Сегодня</span>
+						<span class="tape-slider__item-date">1 ноября</span>
+					</div>
+					<div class="swiper-slide tape-slider__item">
+						<span class="tape-slider__item-day">Понедельник</span>
+						<span class="tape-slider__item-date">2 ноября</span>
+					</div>
+					<div class="swiper-slide tape-slider__item">
+						<span class="tape-slider__item-day">Вторник</span>
+						<span class="tape-slider__item-date">3 ноября</span>
+					</div>
+					<div class="swiper-slide tape-slider__item">
+						<span class="tape-slider__item-day">Среда</span>
+						<span class="tape-slider__item-date">4 ноября</span>
+					</div>
+					<div class="swiper-slide tape-slider__item">
+						<span class="tape-slider__item-day">Четверг</span>
+						<span class="tape-slider__item-date">5 ноября</span>
+					</div>
+					<div class="swiper-slide tape-slider__item">
+						<span class="tape-slider__item-day">Пятница</span>
+						<span class="tape-slider__item-date">6 ноября</span>
+					</div>
+					<div class="swiper-slide tape-slider__item">
+						<span class="tape-slider__item-day">Суббота</span>
+						<span class="tape-slider__item-date">7 ноября</span>
+					</div>
+					<div class="swiper-slide tape-slider__item">
+						<span class="tape-slider__item-day">Воскресенье</span>
+						<span class="tape-slider__item-date">8 ноября</span>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-button-next">
+				<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M11.7761 8.84729L4.16699 8.84729L4.16699 11.1529L11.7739 11.1529L8.51302 14.3959L9.95848 15.8334L15.8134 10.0107L15.8337 9.99092L15.8335 9.99073L15.8337 9.99053L14.3882 8.55304L14.3834 8.55785L9.93954 4.16673L8.48016 5.59042L11.7761 8.84729Z"
+						fill="#020818" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="timetable-calendar__body section-body">
+		<div class="filter-selects timetable-calendar__selects">
+			<div class="select select--with_border">
+				<div class="select__title select__title--border">Тренер</div>
+				<div class="select__content">
+					<input id="coach0" class="select__input" type="radio" name="coach" checked />
+					<label for="coach0" tabindex="0" class="select__label" data-value="Тренер">Тренер</label>
+					<input id="coach1" class="select__input" type="radio" name="coach" />
+					<label for="coach1" tabindex="0" class="select__label" data-value="Анастасия Ерисова">Анастасия
+						Ерисова</label>
+					<input id="coach2" class="select__input" type="radio" name="coach" />
+					<label for="coach2" tabindex="0" class="select__label" data-value="Ренат Якубов">Ренат
+						Якубов</label>
+					<input id="coach3" class="select__input" type="radio" name="coach" />
+					<label for="coach3" tabindex="0" class="select__label" data-value="Ирина Садовская">Ирина
+						Садовская</label>
+					<input id="coach4" class="select__input" type="radio" name="coach" />
+					<label for="coach4" tabindex="0" class="select__label" data-value="Вера Громова">Вера
+						Громова</label>
+				</div>
+			</div>
+			<div class="select select--with_border">
+				<div class="select__title select__title--border">Тренировка</div>
+				<div class="select__content">
+					<input id="training0" class="select__input" type="radio" name="training" checked />
+					<label for="training0" tabindex="0" class="select__label" data-value="Тренер">Тренировка</label>
+					<input id="training1" class="select__input" type="radio" name="training" />
+					<label for="training1" tabindex="0" class="select__label"
+						data-value="Групповая тренировка">Групповая
+						тренировка</label>
+					<input id="training2" class="select__input" type="radio" name="training" />
+					<label for="training2" tabindex="0" class="select__label" data-value="По записи">По записи</label>
+					<input id="training3" class="select__input" type="radio" name="training" />
+					<label for="training3" tabindex="0" class="select__label" data-value="Детская секция">Детская
+						секция</label>
+					<input id="training4" class="select__input" type="radio" name="training" />
+					<label for="training4" tabindex="0" class="select__label"
+						data-value="Бизнес–класс">Бизнес–класс</label>
+				</div>
+			</div>
+			<div class="select select--with_border">
+				<div class="select__title select__title--border">Цель тренировки</div>
+				<div class="select__content">
+					<input id="trainingAim0" class="select__input" type="radio" name="training_aim" checked />
+					<label for="trainingAim0" tabindex="0" class="select__label" data-value="Цель тренировки">Цель
+						тренировки</label>
+					<input id="trainingAim1" class="select__input" type="radio" name="training_aim" />
+					<label for="trainingAim1" tabindex="0" class="select__label" data-value="Силовая тренировка">Силовая
+						тренировка</label>
+					<input id="trainingAim2" class="select__input" type="radio" name="training_aim" />
+					<label for="trainingAim2" tabindex="0" class="select__label" data-value="Йога в гамаках">Йога в
+						гамаках</label>
+					<input id="trainingAim3" class="select__input" type="radio" name="training_aim" />
+					<label for="trainingAim3" tabindex="0" class="select__label" data-value="ОФП для детей (7-11 лет)">
+						ОФП для детей (7-11 лет)
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="timetable-calendar__item calendar-item">
+			<div class="calendar-item__date calendar-date">
+				<time class="title calendar-date__num" datetime="2022-11-01">01.11</time>
+				<div class="calendar-date__day">Понедельник</div>
+			</div>
+			@@include('blocks/timetable-calendar/cards.html')
+		</div>
+		<div class="timetable-calendar__item calendar-item">
+			<div class="calendar-item__date calendar-date">
+				<time class="title calendar-date__num" datetime="2022-11-02">02.11</time>
+				<div class="calendar-date__day">Вторник</div>
+			</div>
+			@@include('blocks/timetable-calendar/cards.html')
+		</div>
+	</div>
 </div>

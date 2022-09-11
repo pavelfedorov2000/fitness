@@ -4,7 +4,6 @@
     --img-offset: 2.7rem;
     --title: 51.2rem;
     --title-offset-top: 2rem;
-    --title-mb: 4.8rem;
     --text: 38.4rem;
     --text-pb: 7.3rem;
     --text-line-w: 23.2rem;
@@ -26,7 +25,6 @@
     }
 
     @media (min-width: 1025px) {
-
         //background-position: right bottom;
         //background-size: var(--bg-width) 88rem;
         //background-repeat: no-repeat;
@@ -64,10 +62,16 @@
 
         @media (min-width: 1025px) {
             grid-template-rows:
-                var(--section-padding) var(--title-offset-top) max-content var(--title-mb) max-content 6.6rem 10.2rem - 6.6rem minmax(var(--video-height),
-                    max-content) var(--pb);
+                var(--section-padding) var(--title-offset-top) max-content var(--offset-xl) max-content 6.6rem 10.2rem - 6.6rem minmax(
+                    var(--video-height),
+                    max-content
+                )
+                var(--pb);
             grid-template-columns:
-                var(--list) 7.7rem var(--offset-xls) calc(var(--title) - var(--text)) 1fr calc(var(--img) - var(--img-offset)) var(--img-offset) 6rem;
+                var(--list) 7.7rem var(--offset-xls) calc(var(--title) - var(--text)) 1fr calc(
+                    var(--img) - var(--img-offset)
+                )
+                var(--img-offset) 6rem;
             grid-template-areas:
                 '. . . . . . . .'
                 '. . . . . img img .'
@@ -159,7 +163,7 @@
     // .free-training__list
 
     &__list {
-        row-gap: var(--arrow-btn);
+        row-gap: var(--offset-xl);
 
         @media (max-width: 1024px) {
             row-gap: var(--offset-m);

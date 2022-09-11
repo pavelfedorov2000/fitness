@@ -1,45 +1,33 @@
 <div class="aside-popup request-popup">
-    <button class="aside-popup__close-btn"
-            type="button"
-            aria-label="Закрыть попап">
-        <img src="assets/images/icons/close.svg"
-             alt="image"
-             loading="lazy"
-             width="24"
-             height="24">
-    </button>
-    <div class="request-popup__body">
-        <div class="title aside-popup__title request-popup__title">
-            Начните свою
-            <span>историю успеха</span>
-        </div>
-        <form action="#"
-              class="request-popup__form">
-            @@include('blocks/select-club/select-club.html', {
-            "class": "form-block",
-            "modifier": "light-blue"
-            })
-            <input class="input form-block__input form-block__input--name input--light-blue"
-                   name="name"
-                   placeholder="Имя">
-            <input class="input form-block__input form-block__input--tel input--light-blue"
-                   type="tel"
-                   name="phone"
-                   placeholder="Телефон">
-            <div class="form-block__btn">
-                <button class="btn"
-                        type="submit">Отправить заявку</button>
-                <p class="form-agree">
-                    Отправляя заявку вы соглашаетесь с&nbsp;условиями обработки персональных&nbsp;данных.
-                </p>
-            </div>
-        </form>
-        <div class="request-popup__form-contacts contacts">
-            @@include('blocks/messangers/messangers.html', {
-            "class": "form-block"
-            })
-            <a href="tel:+74959467600"
-               class="contact form-block__contact">+7 495 946-76-00</a>
-        </div>
-    </div>
+	<button class="aside-popup__close-btn" type="button" aria-label="Закрыть попап">
+		<img src="assets/images/icons/close.svg" alt="image" loading="lazy" width="24" height="24">
+	</button>
+	<div class="request-popup__body">
+		<div class="title aside-popup__title request-popup__title">
+			Начните свою
+			<span>историю успеха</span>
+		</div>
+		<form action="#" class="request-popup__form">
+			@@include('blocks/select-club/select-club.html', {
+			"class": "form-block",
+			"bg": "light-blue"
+			})
+			<input class="input form-block__input form-block__input--name input--style_bg-light-blue" name="name"
+				placeholder="Имя">
+			<input class="input form-block__input form-block__input--tel input--style_bg-light-blue" type="tel"
+				name="phone" placeholder="Телефон">
+			<div class="form-block__btn">
+				<button class="btn" type="submit">Отправить заявку</button>
+				<p class="form-agree">
+					Отправляя заявку вы соглашаетесь с&nbsp;условиями обработки персональных&nbsp;данных.
+				</p>
+			</div>
+		</form>
+		<div class="request-popup__form-contacts contacts">
+			@@include('blocks/messangers/messangers.html', {
+			"class": "form-block"
+			})
+			<a href="tel:+74959467600" class="contact form-block__contact">+7 495 946-76-00</a>
+		</div>
+	</div>
 </div>

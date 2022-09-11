@@ -354,7 +354,6 @@
             $tabsContent.removeClass('tabs-content--active');
             $tab.addClass('active');
             $($tab.attr('href')).addClass('active');
-            //$('.slider').slick('setPosition'); // Инициализация слайдера
         });
 
         // Custom jquery select

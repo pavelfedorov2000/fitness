@@ -1,7 +1,7 @@
 .individual-lessons {
     --slider: 73rem;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         position: relative;
         @include padding-y(var(--section-padding-xl));
     }
@@ -10,7 +10,7 @@
         @extend %contain;
         @extend %pos-center-y;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             content: '';
             position: absolute;
             left: 15.3rem;
@@ -20,7 +20,7 @@
         }
     }
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         background-image: url(../images/decor/abbs.svg);
         background-size: 117rem 32.8rem;
         background-position: left bottom;
@@ -30,13 +30,13 @@
     // .individual-lessons__inner
 
     &__inner {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 1 / -1;
         }
     }
@@ -48,7 +48,7 @@
         @extend .title;
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: block;
             position: relative;
             padding-top: var(--offset-l);
@@ -71,21 +71,21 @@
     &__slider {
         width: var(--slider);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             width: 100vw;
-            padding-bottom: var(--arrow-btn);
+            padding-bottom: var(--offset-xl);
         }
 
         .splide {
             &__track {
-                @media(min-width: 1025px) {
+                @media (min-width: 1025px) {
                     overflow: visible;
                 }
             }
 
             &__slide {
                 &.is-prev {
-                    @media(min-width: 1025px) {
+                    @media (min-width: 1025px) {
                         opacity: 0;
                     }
                 }
@@ -98,7 +98,7 @@
         bottom: 0;
         left: calc((100vw - var(--gap) * 2) - var(--slider) * (-1));
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             left: 0;
             right: 0;
         }

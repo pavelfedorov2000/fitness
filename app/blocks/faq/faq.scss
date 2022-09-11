@@ -113,7 +113,7 @@
     }
 
     &::before {
-        content: '0'counter(faq-num);
+        content: '0' counter(faq-num);
         counter-increment: faq-num;
         position: absolute;
         top: 0;
@@ -178,6 +178,7 @@
             position: absolute;
             @extend %pos-center-y;
             background-color: var(--gray);
+            transition: 0.3s all;
         }
 
         &::before {
@@ -194,7 +195,6 @@
             left: calc((var(--offset-s) - 0.2rem) / 2 - 0.15rem);
             width: 0.3rem;
             height: calc(var(--offset-s) - 0.2rem);
-            transition: 0.3s transform, 0.3s opacity;
         }
 
         &[aria-expanded='true'] {
@@ -208,6 +208,17 @@
             &:after {
                 transform: rotate(-90deg);
                 opacity: 0;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--black);
+
+                &:before,
+                &:after {
+                    background-color: var(--black);
+                }
             }
         }
     }

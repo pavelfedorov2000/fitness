@@ -4,11 +4,10 @@
     position: relative;
     background-color: var(--light-blue);
     border: 0.1rem solid var(--light-blue);
-    padding: var(--offset-m) var(--offset-m) 2.8rem;
     min-height: 24.8rem;
-    transition: .3s all;
+    transition: 0.3s all;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         min-height: 18.1rem;
         padding: var(--offset-s) var(--mob-padding) 2.8rem;
     }
@@ -30,6 +29,12 @@
         }
     }
 
+    &__inner {
+        display: block;
+        height: 100%;
+        padding: var(--offset-m) var(--offset-m) 2.8rem;
+    }
+
     // .card__inner
 
     &__content {
@@ -41,7 +46,7 @@
             &:not(:last-child) {
                 margin-bottom: var(--offset-m);
 
-                @media(max-width: 767px) {
+                @media (max-width: 767px) {
                     margin-bottom: var(--offset-s);
                 }
             }
@@ -96,13 +101,5 @@
 
     &__text {
         @extend %text-14;
-    }
-
-    // .card__btn
-
-    &__btn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
     }
 }

@@ -1,15 +1,15 @@
 .promo-blog {
-    --bottom-offset: var(--arrow-btn);
+    --bottom-offset: var(--offset-xl);
     --article: 72.8rem;
 
     position: relative;
     background-color: var(--yellow);
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding: calc(var(--header-height) + var(--offset-m)) 0 var(--offset-l);
     }
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         padding-bottom: var(--offset-s);
     }
 
@@ -32,7 +32,7 @@
     // .promo-blog__grid
 
     &__grid {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-rows: var(--gap) 1fr;
         }
     }
@@ -43,14 +43,15 @@
         display: grid;
         gap: 0 var(--section-padding-xl);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             gap: var(--offset-m);
         }
 
         @media (min-width: 1025px) {
             padding-top: calc(var(--header-height) + var(--offset-l));
             grid-row: 1 / -1;
-            grid-template-areas: 'title article'
+            grid-template-areas:
+                'title article'
                 '. article'
                 'text article'
                 '. article';
@@ -109,81 +110,12 @@
     &__marquee {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: block;
             grid-area: unset;
             position: absolute;
             top: 0;
             right: 7.7rem;
         }
-    }
-}
-
-.blog-article {
-    min-height: 40rem;
-    // .blog-article__body
-
-    &__body {
-        display: grid;
-    }
-
-    // .blog-article__bg
-
-    &__bg {
-        img {
-            @extend %cover;
-        }
-    }
-
-    &__bg,
-    &__content {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-    }
-
-    // .blog-article__content
-
-    &__content {
-        position: relative;
-        //@extend %flex-col;
-        //align-items: flex-start
-        color: #fff;
-        display: grid;
-        grid-template-columns: var(--offset-m) 1fr var(--arrow-btn);
-        grid-template-rows: var(--offset-m) max-content 1fr max-content var(--arrow-btn);
-        gap: var(--offset-m);
-        justify-items: start;
-        grid-template-areas:
-            '. . .'
-            '. tags .'
-            '. . .'
-            '. title .'
-            '. views arrow';
-    }
-
-    &__tags {
-        grid-area: tags;
-    }
-
-    // .blog-article__title
-
-    &__title {
-        @extend .title;
-        @extend %text-20;
-        text-shadow: $bsh;
-        max-width: 29.6rem;
-        //margin-top: auto;
-        grid-area: title;
-    }
-
-    &__views {
-        grid-area: views;
-        align-self: center;
-    }
-
-    // .blog-article__arrow
-
-    &__arrow {
-        grid-area: arrow;
     }
 }

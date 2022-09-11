@@ -1,7 +1,7 @@
 .club-team {
     padding-top: var(--section-padding);
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding-top: var(--offset-l);
     }
 
@@ -10,11 +10,11 @@
     &__top {
         margin-bottom: var(--offset-xxxl);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             margin-bottom: var(--offset-l);
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             margin-bottom: var(--offset-m);
         }
     }
@@ -34,7 +34,7 @@
     &__slider {
         grid-column: 1 / -1;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             visibility: visible;
             width: 100vw;
             //padding-bottom: calc(var(--arrow-btn) + var(--offset-m));
@@ -42,7 +42,7 @@
     }
 
     &__card {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             height: 100%;
         }
     }
@@ -50,7 +50,7 @@
     &__slider-nav {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: grid;
             position: absolute;
             top: calc((var(--section-padding) + var(--nav)) * (-1));
@@ -59,28 +59,36 @@
     }
 
     &__slider-item {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             width: 20% !important;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: none;
         }
 
         &--grid,
         &--grid_reverse {
-            @media(min-width: 1025px) {
+            @media (min-width: 1025px) {
                 width: 40% !important;
                 display: grid;
                 grid-template-rows: repeat(2, 1fr);
                 grid-template-columns: repeat(2, 1fr);
+
+                .team-member__body {
+                    grid-template-rows: 41.6rem;
+
+                    > * {
+                        height: 100%;
+                    }
+                }
             }
         }
 
         &--grid {
             > * {
                 &:first-child {
-                    @media(min-width: 1025px) {
+                    @media (min-width: 1025px) {
                         grid-column: span 2;
                     }
                 }
@@ -89,7 +97,7 @@
             &_reverse {
                 > * {
                     &:last-child {
-                        @media(min-width: 1025px) {
+                        @media (min-width: 1025px) {
                             grid-column: span 2;
                         }
                     }
@@ -101,7 +109,7 @@
 
 .club-team-slider {
     &__list {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: grid;
             grid-auto-rows: minmax(30.8rem, max-content);
         }

@@ -1,28 +1,28 @@
 .info-block {
     background-color: #fff;
     color: var(--black);
-    padding: 4.5rem var(--arrow-btn) 5.2rem;
+    padding: 4.5rem var(--offset-xl) 5.2rem;
     display: grid;
 
-    @media(min-width: 1025px) {
-        grid-template-areas: 'contacts capacity'
-            'contacts soc'
-        ;
+    @media (min-width: 1025px) {
+        grid-template-areas:
+            'contacts capacity'
+            'contacts soc';
         justify-content: space-between;
     }
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding: var(--offset-l) var(--mob-padding);
     }
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         row-gap: var(--offset-m);
     }
 
     // .info-block__capacity
 
     &__capacity {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: capacity;
         }
     }
@@ -33,19 +33,19 @@
         display: grid;
         gap: 5.2rem 7.6rem;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             gap: var(--offset-m);
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             gap: var(--offset-s);
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, max-content);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: contacts;
         }
     }
@@ -55,7 +55,7 @@
     &__socials {
         column-gap: var(--offset-s);
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             align-self: flex-end;
             justify-self: end;
             grid-area: soc;
@@ -68,8 +68,7 @@
     grid-template-columns: repeat(2, max-content);
     grid-template-areas:
         'icon percent'
-        'icon descr'
-    ;
+        'icon descr';
     align-items: center;
     column-gap: var(--offset-m);
 
@@ -98,7 +97,7 @@
         color: var(--dark-gray);
         grid-area: descr;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             margin-top: -3rem;
         }
     }
@@ -110,12 +109,11 @@
     grid-template-rows: var(--offset-m) max-content;
     grid-template-areas:
         'icon title'
-        'value value'
-    ;
+        'value value';
     align-items: center;
     gap: var(--offset-xxs);
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         grid-template-columns: var(--offset-m) 1fr;
         row-gap: calc(var(--offset-xxs) / 2);
     }
@@ -139,7 +137,7 @@
         @extend %text-14;
         grid-area: value;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.3rem;
             line-height: 1.8rem;
         }
@@ -152,7 +150,7 @@
     // .contact-info-item__link
 
     &__link {
-        transition: .3s color;
+        transition: 0.3s color;
 
         @media (any-hover: hover) {
             &:hover {

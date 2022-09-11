@@ -8,6 +8,7 @@ app.faq = {
             const $faqSectionItemContent = $faqSectionItem.find('.faq-section__item-content');
 
             $faqSectionItemContent.slideToggle('300');
+
             if ($faqSectionItemToggle.attr('aria-expanded') === 'true') {
                 $faqSectionItemToggle.attr('aria-expanded', false);
             } else {

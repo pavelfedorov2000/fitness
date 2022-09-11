@@ -99,7 +99,9 @@ label {
         }
 
         &--textarea {
-            //padding-top: 1.8rem;
+            font-family: inherit;
+            padding-top: var(--offset-s);
+            height: auto;
 
             @media (min-width: 768px) {
                 grid-area: textarea;

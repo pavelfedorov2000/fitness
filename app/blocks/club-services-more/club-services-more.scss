@@ -1,7 +1,7 @@
 .club-services-more {
     position: relative;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         @include padding-y(var(--section-padding-xl));
         background-image: url(../images/elements/services-more.svg);
         background-size: 155.2rem 45.5rem;
@@ -20,27 +20,27 @@
         @extend .title;
         max-width: 30.4rem;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             position: absolute;
             left: 50%;
             transform: translate(-50%);
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             margin-bottom: var(--offset-m);
         }
     }
 
     &__body {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 1 / -1;
         }
     }
 
     &__slider {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             width: 100vw;
-            padding-bottom: calc(var(--arrow-btn) + var(--offset-m));
+            padding-bottom: calc(var(--offset-xl) + var(--offset-m));
         }
     }
 
@@ -49,7 +49,7 @@
         bottom: 0;
         left: 0;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             right: 0;
         }
     }
@@ -60,7 +60,7 @@
     align-content: start;
     justify-items: start;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         row-gap: var(--offset-s);
     }
 
@@ -70,7 +70,7 @@
         width: 100%;
         height: 28rem;
 
-        @media(max-width: 500px) {
+        @media (max-width: 500px) {
             height: 20.8rem;
         }
 
@@ -80,7 +80,7 @@
     }
 
     &__content {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             @include padding-x(var(--mob-padding));
         }
     }
@@ -92,15 +92,15 @@
         font-weight: 700;
         color: #000;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.4rem;
             line-height: 2rem;
         }
     }
 
     &.splide__slide {
-        @media(min-width: 1025px) {
-            transition: .3s padding-top;
+        @media (min-width: 1025px) {
+            transition: 0.3s padding-top;
 
             &.is-next {
                 padding-top: calc(8.4rem + var(--offset-xxl));

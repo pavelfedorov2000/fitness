@@ -45,7 +45,6 @@
     &__grid {
         --date: 2.6rem;
         --row-gap: 2.2rem;
-        --btn: 4.8rem;
 
         display: grid;
 
@@ -55,8 +54,7 @@
 
         @media (min-width: 1025px) {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows:
-                var(--date) var(--btn) var(--row-gap) 1fr var(--btn) var(--btn);
+            grid-template-rows: var(--date) var(--arrow-btn) var(--row-gap) 1fr var(--arrow-btn) var(--arrow-btn);
             grid-template-areas:
                 'slider slider .'
                 'slider slider allNews'
@@ -99,12 +97,6 @@
         }
     }
 
-    &__slider-item {
-        @media (max-width: 1024px) {
-            //width: calc(208 * 100vw / 320);
-        }
-    }
-
     // .blog-section__more
 
     &__more {
@@ -131,7 +123,7 @@
 
         @media (min-width: 1025px) {
             display: grid;
-            gap: var(--btn);
+            gap: var(--arrow-btn);
             grid-area: success;
         }
     }
@@ -156,17 +148,17 @@
     padding: var(--offset-xxl) 0 var(--offset-xxxl);
     position: relative;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding-top: 0;
     }
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         padding-bottom: var(--offset-l);
     }
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
-            @include rect(top, left, calc(var(--arrow-btn) * (-1)), 0, 65.7rem, var(--beige));
+            @include rect(top, left, calc(var(--offset-xl) * (-1)), 0, 65.7rem, var(--beige));
         }
 
         &:after {
@@ -179,10 +171,10 @@
     &__filters {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: flex;
             padding-bottom: var(--offset-s);
-            margin-bottom: var(--arrow-btn);
+            margin-bottom: var(--offset-xl);
             border-bottom: $border;
         }
     }
@@ -220,26 +212,26 @@
         display: grid;
         gap: var(--offset-xls);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             gap: var(--offset-l);
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             gap: var(--offset-s);
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-columns: repeat(3, 1fr);
         }
 
         &:not(:last-child) {
             margin-bottom: var(--offset-xxxl);
 
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 margin-bottom: var(--offset-l);
             }
         }
@@ -247,7 +239,7 @@
 
     &__card {
         &:first-child {
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 position: relative;
 
                 &::before {

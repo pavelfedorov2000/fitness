@@ -5,8 +5,8 @@
     display: grid;
     min-height: 100vh;
 
-    @media(max-width: 1024px) {
-        grid-template-rows: calc(100vh - var(--arrow-btn)) var(--arrow-btn) max-content;
+    @media (max-width: 1024px) {
+        grid-template-rows: calc(100vh - var(--offset-xl)) var(--offset-xl) max-content;
     }
 
     // .promo-club__bg
@@ -26,16 +26,18 @@
     // .promo-club__body
 
     &__body {
-        @media(min-width: 1025px) {
-            grid-template-rows: calc(var(--header-height) + var(--pt)) max-content calc(var(--gap) - var(--offset-xxl)) var(--offset-xxl);
-            grid-template-areas: '. . . . marquee'
+        @media (min-width: 1025px) {
+            grid-template-rows: calc(var(--header-height) + var(--pt)) max-content calc(var(--gap) - var(--offset-xxl)) var(
+                    --offset-xxl
+                );
+            grid-template-areas:
+                '. . . . marquee'
                 '. . content . marquee'
                 'scroll . content . marquee'
-                'scroll . . . marquee'
-            ;
+                'scroll . . . marquee';
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-template-columns: var(--mob-padding) calc(100vw - var(--mob-padding) * 2) var(--mob-padding);
         }
     }
@@ -50,17 +52,18 @@
             '. . . . .'
             'ratings . infoBox infoBox infoBox'
             '. . . . .'
-            'nav nav nav nav nav'
-        ;
+            'nav nav nav nav nav';
         color: #fff;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: content;
-            grid-template-columns: var(--rating) var(--offset-l) calc(var(--title) - var(--offset-l) - var(--rating)) 1fr var(--gap);
+            grid-template-columns: var(--rating) var(--offset-l) calc(var(--title) - var(--offset-l) - var(--rating)) 1fr var(
+                    --gap
+                );
         }
 
-        @media(max-width: 1024px) {
-            min-height: calc(100vh - var(--arrow-btn));
+        @media (max-width: 1024px) {
+            min-height: calc(100vh - var(--offset-xl));
             padding: calc(var(--header-height) + var(--offset-l)) 0 var(--offset-s);
             grid-template-rows: max-content 1fr var(--rating) var(--offset-l) max-content;
             grid-template-areas:
@@ -68,14 +71,13 @@
                 '.'
                 'ratings'
                 '.'
-                'box'
-            ;
+                'box';
         }
     }
 
     &__title,
     &__box-link {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             align-self: center;
         }
     }
@@ -85,7 +87,7 @@
     &__title {
         grid-area: title;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             max-width: 24rem;
         }
 
@@ -97,7 +99,7 @@
     &__box-link {
         grid-area: box;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             width: 100%;
         }
     }
@@ -105,23 +107,23 @@
     &__ratings {
         grid-area: ratings;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-auto-columns: var(--rating);
             grid-auto-flow: column;
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             row-gap: 3.4rem;
             grid-template-columns: unset;
         }
     }
 
     &__info-box {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: infoBox;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: -2 / -1;
         }
     }
@@ -129,17 +131,17 @@
     // .promo-club__nav
 
     &__nav {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: nav;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: 2 / 3;
         }
     }
 
     &__marquee {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-area: unset;
             position: absolute;
             top: calc(var(--header-height) + var(--offset-l));

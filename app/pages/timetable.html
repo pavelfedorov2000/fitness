@@ -1,7 +1,9 @@
 @@include("blocks/head/head.html", {"title": "Расписание"})
 <div class="wrapper timetable-page">
 	@@include('blocks/site-map/site-map.html')
-	@@include("blocks/header/header.html")
+	@@include("blocks/header/header.html", {
+	"dark": true
+	})
 	@@include('blocks/burger/burger.html')
 	<main class="page">
 		@@include("blocks/promo-timetable/promo-timetable.html")

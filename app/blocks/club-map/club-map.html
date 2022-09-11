@@ -1,35 +1,22 @@
 <section class="club-map section">
-    <div id="map"
-         class="club-map__map">
-        <picture>
-            <source type="image/webp"
-                    srcset="assets/images/content/map.webp">
-            <img src="assets/images/content/map.jpg"
-                 alt="фото"
-                 width=""
-                 height=""
-                 loading="lazy">
-        </picture>
-    </div>
-    <h2 class="section-title club-map__title">
-        FITNESS<span>ON</span>
-        ЭЛЕКТРОСТАЛь
-    </h2>
-    @@include('blocks/ratings/ratings.html', {
-    "class": "club-map"
-    })
-    @@include('blocks/info-box/info-box.html', {
-    "class": "club-map"
-    })
-    <div class="promo-marquee vertical-marquee club-map__marquee promo-marquee--gray">
-        <p>
-            <span class="ttu">Fitnession.</span> Эффективно
-        </p>
-        <p>
-            <span class="ttu">Fitnession.</span> Эффективно
-        </p>
-        <p>
-            <span class="ttu">Fitnession.</span> Эффективно
-        </p>
-    </div>
+	<div id="map" class="club-map__map">
+		<picture>
+			<source type="image/webp" srcset="assets/images/content/map.webp">
+			<img src="assets/images/content/map.jpg" alt="фото" width="" height="" loading="lazy">
+		</picture>
+	</div>
+	<h2 class="section-title club-map__title">
+		FITNESS<span>ON</span>
+		ЭЛЕКТРОСТАЛь
+	</h2>
+	@@include('blocks/ratings/ratings.html', {
+	"class": "club-map"
+	})
+	@@include('blocks/info-box/info-box.html', {
+	"class": "club-map"
+	})
+	@@include('blocks/marquee/promo-marquee.html', {
+	"class": "club-map",
+	"modifier": "gray"
+	})
 </section>

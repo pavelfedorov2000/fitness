@@ -1,11 +1,10 @@
 .promo-success {
-
     --title: 49.7rem;
     --text: 43.9rem;
     --bg: calc(748 * 100vw / 1920);
     --circle-text: 30.8rem;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         --title: 24rem;
         --bg: calc(80 * 100vw / 320);
         --circle-text: 20rem;
@@ -16,12 +15,12 @@
     min-height: 100vh;
 
     &:before {
-        @include rect(top, left, 0, 0, 100%, linear-gradient(270deg, #0AB3CA -2.14%, rgba(10, 179, 202, 0.82) 100%));
+        @include rect(top, left, 0, 0, 100%, linear-gradient(270deg, #0ab3ca -2.14%, rgba(10, 179, 202, 0.82) 100%));
         width: var(--bg);
         z-index: 1;
     }
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:after {
             @include rect(top, right, 0, 0, var(--gap), #fff);
         }
@@ -31,20 +30,20 @@
         position: relative;
         z-index: 2;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-rows: var(--header-height) calc(50% - var(--header-height)) 1fr var(--gap);
-            grid-template-areas: 'asideImg . . . marquee'
+            grid-template-areas:
+                'asideImg . . . marquee'
                 'asideImg . content . marquee'
                 '. . content . marquee'
-                'scroll . . . marquee'
-            ;
+                'scroll . . . marquee';
         }
     }
 
     &__aside-img {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: block;
             grid-area: asideImg;
         }
@@ -65,29 +64,28 @@
         grid-template-columns: var(--text) calc(var(--title) - var(--text)) 1fr max-content;
         grid-template-areas:
             'title title . box'
-            'text . . box'
-        ;
+            'text . . box';
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             align-items: center;
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             row-gap: 15rem;
             grid-area: content;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             padding: calc(var(--header-height) + 3rem) 0 var(--offset-s);
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             grid-template-columns: var(--title) 1fr;
             grid-template-rows: max-content 1fr max-content;
-            grid-template-areas: 'title .'
+            grid-template-areas:
+                'title .'
                 '. .'
-                'box box'
-            ;
+                'box box';
         }
 
         &::before,
@@ -95,7 +93,7 @@
             content: '';
             position: absolute;
             left: calc(var(--gap) * (-1));
-            background-color: rgba(#fff, .3);
+            background-color: rgba(#fff, 0.3);
         }
 
         &::before {
@@ -126,7 +124,7 @@
 
         grid-area: box;
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             display: grid;
             grid-template-columns: var(--left-offset) var(--box-left-offset) var(--box-right-offset);
             grid-template-rows: var(--top-offset) calc(var(--gap) - var(--box-bottom-offset)) var(--box-bottom-offset);
@@ -138,7 +136,7 @@
     &__text {
         display: none;
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             display: block;
             grid-area: text;
         }
@@ -147,12 +145,12 @@
     // .promo-success__circle-text
 
     &__circle-text {
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-row: 1 / 3;
             grid-column: 1 / 3;
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             position: absolute;
             top: calc(50% - var(--circle-text) / 2);
             right: calc(var(--circle-text) / (-2));
@@ -165,18 +163,18 @@
     }
 
     &__box-link {
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             width: 100%;
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-row: 2 / 4;
             grid-column: 2 / 4;
         }
     }
 
-    .promo-marquee {
-        @media(max-width: 1024px) {
+    &__marquee {
+        @media (max-width: 1024px) {
             display: none;
         }
     }

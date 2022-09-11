@@ -1,13 +1,13 @@
 .timetable-calendar {
     position: relative;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
             @include rect(top, left, 10.6rem, 0, 100%, var(--beige));
         }
     }
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         grid-template-columns: unset;
     }
 
@@ -15,13 +15,13 @@
         display: none;
         grid-column: 1 / -1;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: block;
         }
     }
 
     &__selects {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: none;
         }
     }
@@ -34,7 +34,6 @@
         grid-column: 1 / -1;
 
         .swiper-button {
-
             &-prev,
             &-next {
                 position: static;
@@ -47,7 +46,7 @@
                     height: 2rem;
 
                     path {
-                        transition: .3s fill;
+                        transition: 0.3s fill;
                     }
                 }
             }
@@ -73,7 +72,7 @@
     &__tape-inner {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -84,21 +83,21 @@
     // .timetable-calendar__body
 
     &__body {
-        padding: var(--arrow-btn) 0 var(--section-padding);
+        padding: var(--offset-xl) 0 var(--section-padding);
         @include row-grid(var(--offset-xls));
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             padding: var(--offset-xxs) 0 var(--offset-l);
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             grid-column: unset;
         }
     }
 }
 
 .calendar-item {
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         display: grid;
         gap: 1.5rem;
         grid-template-columns: max-content 1fr;
@@ -108,7 +107,7 @@
     &__date {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             @include row-grid(1.5rem);
             min-width: 8.9rem;
         }
@@ -120,15 +119,15 @@
         display: grid;
         gap: var(--offset-m);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             gap: var(--offset-xxs);
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-columns: repeat(3, 1fr);
         }
     }
@@ -151,7 +150,6 @@
 }
 
 .calendar-card {
-
     $this: &;
 
     position: relative;
@@ -213,15 +211,7 @@
 
     &__coach {
         @extend %text-13;
-        padding-right: var(--arrow-btn);
-    }
-
-    // .calendar-card__btn
-
-    &__btn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
+        padding-right: var(--offset-xl);
     }
 
     &.group {

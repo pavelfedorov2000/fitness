@@ -11,11 +11,11 @@
     // .promo-contacts-start__grid
 
     &__grid {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-rows: 1fr var(--gap);
-            grid-template-areas: '. . content . marquee'
-                'scroll . content . marquee'
-            ;
+            grid-template-areas:
+                '. . content . marquee'
+                'scroll . content . marquee';
         }
     }
 
@@ -25,16 +25,16 @@
         display: grid;
         gap: var(--offset-xxxl);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             padding: calc(var(--header-height) + var(--offset-xxl)) 0 var(--offset-s);
             gap: var(--offset-xxl);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-rows: repeat(2, max-content);
-            grid-template-areas: 'title . .'
-                'contacts . box'
-            ;
+            grid-template-areas:
+                'title . .'
+                'contacts . box';
             grid-template-columns: var(--title) 1fr var(--gap);
             grid-area: content;
             align-self: center;
@@ -44,15 +44,15 @@
     // .promo-contacts-start__title
 
     &__title {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: title;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             max-width: 50%;
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             max-width: 24rem;
         }
     }
@@ -61,43 +61,43 @@
 
     &__contacts {
         display: grid;
-        row-gap: var(--arrow-btn);
+        row-gap: var(--offset-xl);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             row-gap: var(--offset-l);
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             row-gap: var(--offset-s);
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, max-content);
             justify-content: space-between;
         }
 
         > * {
             &:first-child {
-                @media(min-width: 768px) {
+                @media (min-width: 768px) {
                     grid-column: span 2;
                 }
             }
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: contacts;
             align-self: center;
         }
     }
 
     &__box-link {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: box;
         }
     }
 
     &__marquee {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: block;
             position: absolute;
             top: calc(var(--header-height) + var(--offset-xxl));

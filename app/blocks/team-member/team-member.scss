@@ -34,7 +34,7 @@
         @extend %flex-col;
         align-items: flex-start;
         justify-content: flex-end;
-        padding: var(--offset) var(--arrow-btn) var(--offset) var(--offset);
+        padding: var(--offset) var(--offset-xl) var(--offset) var(--offset);
         color: #fff;
         position: relative;
         z-index: 1;
@@ -71,14 +71,6 @@
         text-shadow: $tsh;
     }
 
-    // .team-member__arrow
-
-    &__arrow {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-
     &--style {
         &_bg {
             &-pink {
@@ -105,9 +97,11 @@
 
     @media (any-hover: hover) {
         &:hover {
-            #{$this}__content {
-                &:before {
-                    opacity: 1;
+            #{$this} {
+                &__content {
+                    &:before {
+                        opacity: 1;
+                    }
                 }
             }
         }

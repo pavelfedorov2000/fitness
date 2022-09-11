@@ -1,7 +1,9 @@
 @@include("blocks/head/head.html", {"title": "Команда"})
-<div class="wrapper">
+<div class="wrapper wrapper--yellow-promo">
 	@@include('blocks/site-map/site-map.html')
-	@@include("blocks/header/header.html")
+	@@include("blocks/header/header.html", {
+	"dark": true
+	})
 	@@include('blocks/burger/burger.html')
 	<main class="page">
 		@@include('blocks/promo-team/promo-team.html')

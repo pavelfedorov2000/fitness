@@ -3,8 +3,7 @@
     // .estimate__btn
 
     &__btn {
-        width: var(--offset-l);
-        height: var(--offset-l);
+        position: static;
 
         svg {
             width: var(--offset-xs);

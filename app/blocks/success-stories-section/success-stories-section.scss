@@ -9,22 +9,23 @@
         }
     }
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding-top: var(--offset-l);
     }
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         padding-top: var(--offset-m);
     }
 
     // .success-stories__grid
 
     &__grid {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: grid;
             grid-template-columns: repeat(2, var(--gap)) 1fr 48rem;
             grid-template-rows: 7.2rem max-content 3.1rem max-content;
-            grid-template-areas: '. . . form'
+            grid-template-areas:
+                '. . . form'
                 '. . top form'
                 '. . . form'
                 'slider slider slider form';
@@ -38,7 +39,7 @@
             grid-area: top;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             margin-bottom: 2rem;
             @include padding-x(var(--mob-padding));
         }
@@ -47,7 +48,7 @@
             &:not(:last-child) {
                 margin-bottom: 0.6rem;
 
-                @media(max-width: 767px) {
+                @media (max-width: 767px) {
                     margin-bottom: 0.4rem;
                 }
             }
@@ -61,7 +62,7 @@
             opacity: 0.7;
 
             span {
-                @media(max-width: 767px) {
+                @media (max-width: 767px) {
                     display: none;
                 }
             }
@@ -79,13 +80,13 @@
     // .success-stories__slider
 
     &__slider {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: slider;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             width: 100%;
-            padding-bottom: var(--arrow-btn);
+            padding-bottom: var(--offset-xl);
         }
     }
 
@@ -93,11 +94,11 @@
         position: absolute;
         right: -7.5rem;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             top: -4.6rem - 5.6rem;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             bottom: 0;
             left: 0;
             right: 0;
@@ -125,7 +126,7 @@
     &__form {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: form;
             display: grid;
             justify-items: center;
@@ -207,16 +208,16 @@
 
     position: relative;
     height: 69.4rem;
-    padding: var(--offset-xls) var(--offset-xxl) var(--arrow-btn);
+    padding: var(--offset-xls) var(--offset-xxl) var(--offset-xl);
     @extend %flex-col;
     justify-content: space-between;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         border-top: 0.1rem solid rgba(#fff, 0.1);
         border-left: 0.1rem solid rgba(#fff, 0.1);
     }
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         height: 42.7rem;
         padding: 0 var(--mob-padding) var(--offset-m);
     }
@@ -243,7 +244,7 @@
         @extend %text-18;
         font-weight: 700;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             font-size: 1.5rem;
             line-height: 2.2rem;
         }
@@ -258,7 +259,7 @@
             font-size: 5.6rem;
             line-height: 8.4rem;
 
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 font-size: 3.8rem;
                 line-height: 5.3rem;
             }
@@ -268,7 +269,7 @@
             @extend %text-18;
             margin-left: var(--offset-xs);
 
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 margin-left: var(--offset-xxs);
             }
         }
@@ -282,11 +283,11 @@
         bottom: 0;
         display: flex;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             align-items: flex-end;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             max-height: 37.4rem;
         }
 

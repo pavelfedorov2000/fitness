@@ -1,7 +1,7 @@
 .coach-photos {
     position: relative;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         @include padding-y(12.4rem);
 
         &:before {
@@ -10,7 +10,7 @@
     }
 
     &__body {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 1 / -1;
         }
     }
@@ -18,9 +18,9 @@
     &__slider {
         width: calc(100vw - var(--gap) * 4);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             width: 100vw;
-            padding-bottom: var(--arrow-btn);
+            padding-bottom: var(--offset-xl);
         }
     }
 
@@ -30,7 +30,7 @@
         bottom: 0;
         width: max-content;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             left: 0;
             width: 100%;
         }
@@ -42,11 +42,11 @@
         // .splide__slide
 
         &__slide {
-            @media(min-width: 1025px) {
+            @media (min-width: 1025px) {
                 width: var(--gap) !important;
                 height: var(--gap);
                 opacity: 0;
-                transition: .3s opacity;
+                transition: 0.3s opacity;
 
                 &.is-active {
                     align-self: start;

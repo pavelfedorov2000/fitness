@@ -11,7 +11,7 @@
     // .article-page__decor-title
 
     &__decor-title {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             position: fixed;
             top: 0;
             right: 0;
@@ -25,7 +25,7 @@
         padding-bottom: var(--section-padding);
         border-top: $border;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             padding-bottom: var(--offset-l);
         }
     }
@@ -100,7 +100,7 @@
     &__content {
         @include row-grid(var(--offset-xls));
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             row-gap: var(--offset-l);
         }
     }
@@ -110,7 +110,7 @@
     &__part {
         @include row-grid(var(--offset-l));
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             row-gap: var(--offset-m);
         }
 
@@ -121,11 +121,11 @@
             background-color: var(--yellow);
             margin-top: var(--offset-xxs);
 
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 padding: var(--offset-l);
             }
 
-            @media(max-width: 767px) {
+            @media (max-width: 767px) {
                 font-size: 1.4rem;
                 line-height: 2rem;
                 padding: var(--offset-m);
@@ -151,7 +151,7 @@
     &__form-img {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: block;
         }
 
@@ -161,7 +161,7 @@
     }
 
     &__form {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             background-color: var(--yellow);
             padding: var(--offset-l) var(--offset-s);
         }
@@ -172,13 +172,13 @@
     &__form-title {
         margin-bottom: 5rem;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             max-width: 29rem;
             text-align: center;
             margin: 0 auto var(--offset-l);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             margin-left: 11rem;
         }
     }
@@ -186,7 +186,7 @@
     &__form-wrap {
         @extend %grid-center;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             padding: 6rem 0 var(--offset-xxxl);
             background-color: var(--yellow);
         }
@@ -197,11 +197,11 @@
     &__form-body {
         @include row-grid(var(--offset-m));
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             row-gap: var(--offset-s);
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             width: 32rem;
         }
     }
@@ -216,20 +216,20 @@
     // .article-page__bottom
 
     &__bottom {
-        @include row-grid(var(--arrow-btn));
+        @include row-grid(var(--offset-xl));
     }
 
     // .article-page__bottom-cards
 
     &__bottom-cards {
         display: grid;
-        gap: var(--arrow-btn);
+        gap: var(--offset-xl);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             gap: var(--offset-l);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -244,7 +244,7 @@
         left: 0;
         bottom: var(--figcaption--mh);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             width: 100%;
         }
     }
@@ -259,7 +259,7 @@
         margin: calc(var(--offset-s) / 2);
 
         &:last-child {
-            @media(min-width: 768px) {
+            @media (min-width: 768px) {
                 margin-left: auto;
             }
         }
@@ -300,7 +300,7 @@
             }
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             padding: var(--offset-m) var(--offset-s);
         }
     }
@@ -311,20 +311,12 @@
         @extend .title;
         @extend %text-16;
     }
-
-    // .article-aside-card__arrow
-
-    &__arrow {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
 }
 
 .subscribe-form {
     display: grid;
 
-    @media(min-width: 768px) {
+    @media (min-width: 768px) {
         grid-template-columns: 1fr max-content;
     }
 
@@ -360,7 +352,7 @@
         padding-top: var(--offset-s);
         min-height: var(--figcaption--mh);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.1rem;
             line-height: 1.5rem;
         }

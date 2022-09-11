@@ -1,18 +1,18 @@
 .success-stories {
-    padding-top: var(--arrow-btn);
+    padding-top: var(--offset-xl);
     padding-bottom: var(--section-padding);
     position: relative;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding-bottom: var(--offset-xxl);
     }
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         padding-top: 0;
         padding-bottom: var(--offset-l);
     }
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
             @include rect(top, right, 0, 0, 100%, var(--beige));
         }
@@ -21,9 +21,9 @@
     // .success-stories__filter
 
     &__filter {
-        margin-bottom: var(--arrow-btn);
+        margin-bottom: var(--offset-xl);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 1 / -1;
         }
     }
@@ -31,7 +31,7 @@
     &__select {
         &:not(:first-child) {
             .select__title {
-                @media(max-width: 767px) {
+                @media (max-width: 767px) {
                     border-top: none;
                 }
             }
@@ -49,18 +49,24 @@
         display: grid;
         gap: 0 var(--offset-xls);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             gap: var(--offset-m);
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: var(--top-offset) calc(var(--card-height) - var(--top-offset)) var(--arrow-btn) var(--row-gap-1) var(--arrow-btn) calc(var(--row-gap-2) - var(--arrow-btn)) calc(var(--card-height) - var(--row-gap-2) - var(--row-gap-1)) var(--row-gap-3) var(--arrow-btn);
-            grid-template-areas: '. item-2 .'
+            grid-template-rows:
+                var(--top-offset) calc(var(--card-height) - var(--top-offset)) var(--offset-xl) var(--row-gap-1)
+                var(--offset-xl) calc(var(--row-gap-2) - var(--offset-xl)) calc(
+                    var(--card-height) - var(--row-gap-2) - var(--row-gap-1)
+                )
+                var(--row-gap-3) var(--offset-xl);
+            grid-template-areas:
+                '. item-2 .'
                 'item-1 item-2 item-3'
                 'item-1 . item-3'
                 'item-1 item-5 item-3'
@@ -68,24 +74,22 @@
                 'item-4 item-5 .'
                 'item-4 item-5 item-6'
                 'item-4 . item-6'
-                '. pagination item-6'
-            ;
+                '. pagination item-6';
         }
     }
 
     // .success-stories__item
 
     &__pagination {
-
-        @media(min-width: 768px) and (max-width: 1024px) {
+        @media (min-width: 768px) and (max-width: 1024px) {
             grid-column: span 2;
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: pagination;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             margin-top: calc(var(--offset-l) - var(--offset-m));
         }
     }
@@ -93,7 +97,7 @@
     // .success-stories__item--1
 
     &__item--1 {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: item-1;
         }
     }
@@ -101,7 +105,7 @@
     // .success-stories__item--2
 
     &__item--2 {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: item-2;
         }
     }
@@ -109,7 +113,7 @@
     // .success-stories__item--3
 
     &__item--3 {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: item-3;
         }
     }
@@ -119,11 +123,11 @@
     &__item--4 {
         display: none;
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             display: block;
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: item-4;
         }
     }
@@ -133,11 +137,11 @@
     &__item--5 {
         display: none;
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             display: block;
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: item-5;
         }
     }
@@ -147,11 +151,11 @@
     &__item--6 {
         display: none;
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             display: block;
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: item-6;
         }
     }

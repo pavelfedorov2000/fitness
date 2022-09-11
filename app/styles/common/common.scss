@@ -30,7 +30,7 @@ body {
     font-weight: 400;
     color: $color-default;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         font-size: 1.3rem;
         line-height: 1.8rem;
     }
@@ -67,6 +67,32 @@ body {
                 .logo__text {
                     color: var(--black);
                 }
+
+                .menu-header {
+                    &__nav-link {
+                        @media (any-hover: hover) {
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    &__links-link {
+                        @media (any-hover: hover) {
+                            &:hover {
+                                color: var(--black);
+
+                                .menu-header {
+                                    &__links-icon {
+                                        path {
+                                            fill: var(--black);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -94,13 +120,24 @@ body {
 
 .timetable-page {
     .header {
-        &__logo-img {
-            path {
-                &:first-child {
-                    @media(max-width: 1024px) {
-                        fill: var(--black);
+        $this: &;
+        &--dark {
+            .header {
+                &__logo-img {
+                    path {
+                        &:first-child {
+                            fill: #fff;
+
+                            @media (max-width: 1024px) {
+                                fill: var(--black);
+                            }
+                        }
                     }
                 }
+            }
+
+            .logo__text {
+                color: rgba(#fff, 0.6);
             }
         }
     }
@@ -132,7 +169,7 @@ img {
 }
 
 .section {
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         min-height: var(--section-mh);
     }
 }
@@ -173,7 +210,6 @@ img {
 }
 
 .promo {
-
     &-body,
     &-bg {
         grid-row: 1 / 2;

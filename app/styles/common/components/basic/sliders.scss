@@ -71,19 +71,23 @@
         }
     }
 
-    &--white {
-        background-color: #fff;
-        color: var(--black);
+    &--style {
+        &_bg {
+            &-white {
+                background-color: #fff;
+                color: var(--black);
 
-        #{$this} {
-            &__arrow {
-                svg path {
-                    fill: var(--black);
+                #{$this} {
+                    &__arrow {
+                        svg path {
+                            fill: var(--black);
+                        }
+                    }
+
+                    &__progress-bar {
+                        background-color: var(--black);
+                    }
                 }
-            }
-
-            &__progress-bar {
-                background-color: var(--black);
             }
         }
     }

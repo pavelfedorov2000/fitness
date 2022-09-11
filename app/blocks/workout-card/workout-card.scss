@@ -15,7 +15,7 @@
             &:not(:last-child) {
                 margin-bottom: var(--offset-l);
 
-                @media(max-width: 767px) {
+                @media (max-width: 767px) {
                     margin-bottom: var(--offset-s);
                 }
             }
@@ -33,7 +33,7 @@
     &__title {
         @extend %text-20;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             max-width: 50%;
             font-size: 1.6rem;
             line-height: 2.2rem;
@@ -48,7 +48,7 @@
         @extend %text-17;
         color: var(--dark-gray);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.5rem;
             line-height: 2.2rem;
         }
@@ -83,7 +83,7 @@
     &__img {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: block;
         }
 
@@ -100,8 +100,8 @@
 
     &__instructor {
         &:not(:last-child) {
-            @media(min-width: 1025px) {
-                margin-bottom: var(--arrow-btn);
+            @media (min-width: 1025px) {
+                margin-bottom: var(--offset-xl);
             }
         }
     }
@@ -111,29 +111,33 @@
     &__btn {
         @include padding-x(2.8rem);
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             margin-top: auto;
         }
     }
 
-    &--light-blue {
-        background-color: var(--light-blue);
+    &--style {
+        &_bg {
+            &-light-blue {
+                background-color: var(--light-blue);
 
-        .label {
-            background-color: #fff;
-        }
-
-        #{$this} {
-            &__btn {
-                @media(min-width: 1025px) {
-                    align-self: end;
+                .label {
+                    background-color: #fff;
                 }
-            }
 
-            &__content {
-                @media(max-width: 1024px) {
-                    width: 100vw;
-                    padding: var(--offset-m) var(--mob-padding);
+                #{$this} {
+                    &__btn {
+                        @media (min-width: 1025px) {
+                            align-self: end;
+                        }
+                    }
+
+                    &__content {
+                        @media (max-width: 1024px) {
+                            width: 100vw;
+                            padding: var(--offset-m) var(--mob-padding);
+                        }
+                    }
                 }
             }
         }
@@ -146,7 +150,7 @@
         #{$this} {
             &__img {
                 img {
-                    @media(min-width: 1025px) {
+                    @media (min-width: 1025px) {
                         border-radius: 0;
                     }
                 }
@@ -161,14 +165,20 @@
     &--grid {
         grid-template-columns: var(--offset-xls) 1fr var(--offset-xls) 50%;
 
-        @media(max-width: 1024px) {
-            grid-template-columns: calc(var(--offset-m) - var(--offset-xxs)) 1fr calc(var(--offset-m) - var(--offset-xxs));
+        @media (max-width: 1024px) {
+            grid-template-columns: calc(var(--offset-m) - var(--offset-xxs)) 1fr calc(
+                    var(--offset-m) - var(--offset-xxs)
+                );
             row-gap: var(--offset-m);
             padding: var(--offset-m) 0 var(--offset-l);
         }
 
         @media (min-width: 1025px) {
-            grid-template-rows: var(--offset-xls) max-content var(--offset-l) 1fr var(--offset-l) max-content 5.7rem max-content var(--arrow-btn) max-content var(--offset-l);
+            grid-template-rows:
+                var(--offset-xls) max-content var(--offset-l) 1fr var(--offset-l) max-content 5.7rem max-content var(
+                    --offset-xl
+                )
+                max-content var(--offset-l);
             grid-template-areas:
                 '. . . img'
                 '. top . img'
@@ -184,14 +194,14 @@
         }
 
         > * {
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 grid-column: 2 / 3;
             }
         }
 
         #{$this} {
             &__top {
-                @media(min-width: 1025px) {
+                @media (min-width: 1025px) {
                     grid-area: top;
                 }
             }
@@ -217,12 +227,8 @@
                     grid-area: img;
                 }
 
-                @media(max-width: 1024px) {
+                @media (max-width: 1024px) {
                     grid-column: 1 / -1;
-                }
-
-                img {
-                    border-radius: 0;
                 }
             }
 
@@ -252,12 +258,12 @@
 .workout-timetable {
     display: flex;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         flex-wrap: wrap;
         margin: -0.5rem -2rem;
     }
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         white-space: nowrap;
         overflow-x: scroll;
         scrollbar-width: 0;
@@ -275,7 +281,7 @@
         @include row-grid(var(--offset-xxs));
         justify-items: start;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             margin: 0 var(--offset-s) 0 0;
         }
     }

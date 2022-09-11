@@ -37,8 +37,10 @@
         position: relative;
         border: 0.1rem solid #fff;
 
-        #{$this}__img {
-            position: absolute;
+        #{$this} {
+            &__img {
+                position: absolute;
+            }
         }
     }
 }

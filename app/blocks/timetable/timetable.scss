@@ -6,7 +6,7 @@
 
     position: relative;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding-top: var(--offset-l);
     }
 
@@ -19,9 +19,12 @@
     // .timetable-section__grid
 
     &__grid {
-        @media(min-width: 1025px) {
-            grid-template-rows: var(--pt) max-content var(--offset-xxl) minmax(var(--card-mh), max-content) max-content var(--pb);
-            grid-template-areas: 'asideClient . . . .'
+        @media (min-width: 1025px) {
+            grid-template-rows: var(--pt) max-content var(--offset-xxl) minmax(var(--card-mh), max-content) max-content var(
+                    --pb
+                );
+            grid-template-areas:
+                'asideClient . . . .'
                 'asideClient . head . .'
                 'asideClient . . . .'
                 'asideClient . timetable . stats'
@@ -33,7 +36,7 @@
     // .timetable-section__aside-client
 
     &__aside-client {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: asideClient;
         }
     }
@@ -47,18 +50,18 @@
         grid-template-areas: 'date title . btn';
         gap: var(--offset-xls);
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: head;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 2 / 3;
             margin-bottom: var(--offset-m);
             grid-template-columns: max-content 1fr;
             gap: var(--offset-m) var(--offset-s);
-            grid-template-areas: 'date title'
-                'btn btn'
-            ;
+            grid-template-areas:
+                'date title'
+                'btn btn';
         }
     }
 
@@ -73,7 +76,7 @@
     &__title {
         grid-area: title;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.6rem;
             line-height: 2.2rem;
             max-width: 13.2rem;
@@ -92,15 +95,15 @@
         display: grid;
         gap: var(--offset-xls);
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: timetable;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 1 / -1;
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             gap: var(--offset-xxs);
         }
     }
@@ -125,7 +128,7 @@
     width: 9.6rem;
     height: 9.6rem;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         width: var(--offset-xxxl);
         height: var(--offset-xxxl);
         font-size: 1.1rem;
@@ -135,7 +138,7 @@
     &__day {
         @extend .section-title;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 2.6rem;
             line-height: 3.6rem;
         }
@@ -153,27 +156,40 @@
     --progressbar: 0.6rem;
     --img-pb: 1.8rem;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         --coach: var(--offset-xxl);
     }
 
     display: grid;
-    grid-template-rows: var(--offset-l) max-content var(--offset-m) max-content calc(var(--offset-l) / 2) max-content 1fr minmax(var(--coach),
-        max-content);
-    grid-template-columns: var(--offset-l) 31.5rem var(--offset-xls) var(--offset-xxl) 11.7rem 1fr 3rem calc(var(--people) - var(--coach)) var(--coach);
+    grid-template-rows: var(--offset-l) max-content var(--offset-m) max-content calc(var(--offset-l) / 2) max-content 1fr minmax(
+            var(--coach),
+            max-content
+        );
+    grid-template-columns:
+        var(--offset-l) 31.5rem var(--offset-xls) var(--offset-xxl) 11.7rem 1fr 3rem calc(var(--people) - var(--coach))
+        var(--coach);
     background-color: var(--light-blue);
     position: relative;
 
-    @media(max-width: 1024px) {
-        grid-template-rows: max-content max-content max-content var(--offset-m) minmax(var(--white-info-box-h), max-content) calc(var(--img-h) - var(--white-info-box-h) - var(--progressbar) - var(--img-pb) - var(--offset-s)) var(--progressbar) calc(var(--img-pb) - var(--offset-s)) repeat(2, max-content);
-        grid-template-columns: var(--mob-padding) calc(var(--offset-s) - var(--mob-padding)) 1fr calc(var(--white-info-box-w) - var(--offset-s)) calc(var(--offset-s) - var(--mob-padding)) var(--mob-padding);
+    @media (max-width: 1024px) {
+        grid-template-rows:
+            max-content max-content max-content var(--offset-m) minmax(var(--white-info-box-h), max-content)
+            calc(var(--img-h) - var(--white-info-box-h) - var(--progressbar) - var(--img-pb) - var(--offset-s)) var(
+                --progressbar
+            )
+            calc(var(--img-pb) - var(--offset-s)) repeat(2, max-content);
+        grid-template-columns:
+            var(--mob-padding) calc(var(--offset-s) - var(--mob-padding)) 1fr calc(
+                var(--white-info-box-w) - var(--offset-s)
+            )
+            calc(var(--offset-s) - var(--mob-padding)) var(--mob-padding);
         row-gap: var(--offset-s);
         @include padding-y(var(--offset-s));
     }
 
     &::before,
     &::after {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             content: '';
             position: absolute;
             left: var(--coach);
@@ -183,14 +199,14 @@
     }
 
     &::before {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             width: 0.1rem;
             top: 0;
         }
     }
 
     &::after {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             width: calc(50% - var(--coach));
             height: 0.1rem;
         }
@@ -205,7 +221,7 @@
         grid-row: 2 / 3;
         grid-column: 2 / 5;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: 1 / 2;
             grid-column: 2 / -2;
         }
@@ -216,8 +232,8 @@
     &__label {
         margin: var(--offset-xxs);
 
-        &.label--green,
-        &.label--yellow {
+        &.label--style_bg-green,
+        &.label--style_bg-yellow {
             display: none;
         }
     }
@@ -229,7 +245,7 @@
         grid-row: 4 / 5;
         grid-column: 2 / 5;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: 2 / 3;
             grid-column: 2 / -2;
         }
@@ -240,7 +256,7 @@
     &__time {
         margin-left: var(--offset-l);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             margin-left: var(--offset-s);
         }
     }
@@ -251,7 +267,7 @@
         grid-row: 6 / 7;
         grid-column: 2 / 5;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: 3 / 4;
             grid-column: 2 / -2;
         }
@@ -273,7 +289,7 @@
         grid-row: -2 / -1;
         grid-column: 1 / 4;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             column-gap: var(--offset-s);
             grid-template-columns: var(--coach) 1fr;
             grid-row: -3 / -2;
@@ -315,7 +331,7 @@
         grid-row: 1 / -1;
         grid-column: 6 / -1;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: 4 / span 5;
             grid-column: 1 / -1;
         }
@@ -336,7 +352,7 @@
         grid-row: -2 / -1;
         grid-column: 4 / 7;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: 7 / 8;
             grid-column: 3 / -3;
         }
@@ -364,7 +380,7 @@
         padding: var(--offset-m) var(--offset-m) 1.9rem;
         background-color: #fff;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: 4 / 5;
             grid-column: -4 / -1;
             padding: var(--offset-s);
@@ -378,7 +394,7 @@
             white-space: nowrap;
             margin-right: var(--offset-s);
 
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 font-size: 2rem;
                 line-height: 2.8rem;
             }
@@ -393,37 +409,37 @@
         width: 100%;
         height: 100%;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 2 / -2;
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             padding: 0;
         }
 
         span {
             display: none;
 
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 display: block;
             }
         }
 
         svg {
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 display: none;
             }
         }
     }
 
     &.progress {
-        #{$this}__label.label--green {
+        #{$this}__label.label--style_bg-green {
             display: inline-block;
         }
     }
 
     &.planning {
-        #{$this}__label.label--yellow {
+        #{$this}__label.label--style_bg-yellow {
             display: inline-block;
         }
     }
