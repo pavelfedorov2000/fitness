@@ -1,11 +1,14 @@
 .box-link {
     box-sizing: border-box;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: relative;
     padding: var(--offset-m) var(--offset-xls) calc(var(--arrow-btn) + var(--offset-m)) var(--offset-m);
     min-height: var(--gap);
     background-color: var(--yellow);
     color: var(--black);
+    text-align: left;
     transition: 0.3s all;
 
     @media (min-width: 768px) {

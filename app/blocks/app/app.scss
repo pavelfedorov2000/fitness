@@ -9,6 +9,8 @@
     @media (max-width: 1024px) {
         padding: var(--offset-l) var(--mob-padding);
         row-gap: var(--offset-l);
+        justify-items: center;
+        text-align: center;
     }
 
     @media (min-width: 1025px) {
@@ -16,10 +18,9 @@
                 2,
                 var(--gap)
             );
-        grid-template-rows: var(--section-padding) max-content var(--offset-l) max-content 1fr max-content repeat(
-                2,
-                var(--offset-xl)
-            ) 9.6rem;
+        grid-template-rows:
+            var(--section-padding) max-content var(--offset-l) max-content 1fr max-content repeat(2, var(--offset-xl))
+            9.6rem;
         background-color: var(--light-blue);
         background-image: url(../images/decor/yoga-girl.svg);
         background-size: 45.4rem 36.4rem;

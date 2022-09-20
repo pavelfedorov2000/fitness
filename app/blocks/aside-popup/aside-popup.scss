@@ -6,7 +6,7 @@
     bottom: 0;
     left: 0;
     z-index: 101;
-    background-color: rgba(#000, .5);
+    background-color: rgba(#000, 0.5);
 }
 
 .aside-popup {
@@ -17,13 +17,13 @@
     background-color: #fff;
     height: 100%;
     opacity: 0;
-    transition: .3s all;
+    transition: 0.3s all;
 
-    @media(max-width: 1024px) {
-        left: -100%;
+    @media (max-width: 1024px) {
+        left: -250%;
     }
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         width: 65.2rem;
         right: -65.2rem;
     }
@@ -31,11 +31,11 @@
     &.active {
         opacity: 1;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             right: 0;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             left: 0;
             right: 0;
         }
@@ -61,7 +61,7 @@
     &__title {
         @extend %text-26;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             font-size: 2rem;
             line-height: 2.8rem;
         }

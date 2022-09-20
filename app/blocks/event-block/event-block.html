@@ -1,47 +1,41 @@
-<article class="events-section__content event-block @@activeClass">
-    <div class="event-block__img">
-        <picture>
-            <source type="image/webp"
-                    srcset="@@src.webp">
-            <img src="@@src.jpg"
-                 alt="фото"
-                 width="556"
-                 height="528"
-                 loading="lazy">
-        </picture>
-    </div>
-    <div class="event-block__content">
-        <div class="event-block__content-inner">
-            <h3 class="event-block__title title">
-                Проект по эффективному
-                похудению «Невесомость»
-            </h3>
-            <div class="section-text event-block__text">
-                Целью проекта «Невесомость» является помощь людям, не имеющим возможности самостоятельно справится
-                с проблемой излишнего веса.
-            </div>
-            <dl class="event-block__list">
-                <div class="event-block__list-item">
-                    <dt>Дата и время</dt>
-                    <dd><time datetime="2022-11-10 11:00">10 ноября 11:00</time></dd>
-                </div>
-                <div class="event-block__list-item">
-                    <dt>Телефон </dt>
-                    <dd>
-                        <a href="tel:+74959467607"
-                           class="phone">+7 (495) 946-76-07</a>
-                    </dd>
-                </div>
-                <div class="event-block__list-item">
-                    <dt>Адрес</dt>
-                    <dd>
-                        <span class="ttu">FITNESSON</span> Электросталь<br>
-                        г. Электросталь, пр-т. Ленина, д. 25а
-                    </dd>
-                </div>
-            </dl>
-        </div>
-    </div>
-    <a href="#"
-       class="btn event-block__btn">Подробнее</a>
+<article class="events-section__content event-block@@if(context.active){ active}">
+	<div class="event-block__img">
+		<picture>
+			<source type="image/webp" srcset="@@src.webp">
+			<img src="@@src.jpg" alt="фото" width="556" height="528" loading="lazy">
+		</picture>
+	</div>
+	<div class="event-block__content">
+		<div class="event-block__content-inner">
+			<h3 class="event-block__title title">
+				Проект по эффективному
+				похудению «Невесомость»
+			</h3>
+			<div class="section-text event-block__text">
+				Целью проекта «Невесомость» является помощь людям, не имеющим возможности самостоятельно справится
+				с проблемой излишнего веса.
+			</div>
+			<dl class="event-block__list">
+				<div class="event-block__list-item">
+					<dt>Дата и время</dt>
+					<dd><time datetime="2022-11-10 11:00">10 ноября 11:00</time></dd>
+				</div>
+				<div class="event-block__list-item">
+					<dt>Телефон </dt>
+					<dd>
+						<a href="tel:+74959467607" class="phone">+7 (495) 946-76-07</a>
+					</dd>
+				</div>
+				<div class="event-block__list-item">
+					<dt>Адрес</dt>
+					<dd>
+						<span class="ttu">FITNESSON</span> Электросталь<br>
+						г. Электросталь, пр-т. Ленина, д. 25а
+					</dd>
+				</div>
+			</dl>
+			<a href="#" class="btn event-block__btn">Подробнее</a>
+		</div>
+	</div>
+	<a href="#" class="btn event-block__btn">Подробнее</a>
 </article>

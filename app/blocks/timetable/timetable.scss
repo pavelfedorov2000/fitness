@@ -411,6 +411,7 @@
 
         @media (max-width: 1024px) {
             grid-column: 2 / -2;
+            position: static;
         }
 
         @media (min-width: 1025px) {
@@ -445,27 +446,8 @@
     }
 }
 
-.aside-nums {
-    // .aside-nums__item
-
-    &__item {
-        @extend %flex-col;
-        align-items: flex-start;
-    }
-
-    // .aside-nums__item-num
-
-    &__item-num {
-        @extend .title;
-        @extend %text-38;
-        @include border-text(var(--dark-gray), transparent);
-    }
-
-    // .aside-nums__item-descr
-
-    &__item-descr {
-        @extend %text-13;
-        color: var(--dark-gray);
-        max-width: 14.8rem;
+.timetable-tape {
+    .tape-slider__item {
+        white-space: nowrap;
     }
 }

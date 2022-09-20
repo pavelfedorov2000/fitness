@@ -1,99 +1,81 @@
-<section class="coach-goals">
-    <div class="container">
-        <div class="section-body">
-            <div class="coach-goals__main">
-                <div class="coach-goals__top">
-                    <div class="coach-goals__avatar">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/coach-avatar.webp">
-                            <img src="assets/images/content/coach-avatar.jpg"
-                                 alt="фото"
-                                 width="72"
-                                 height="72"
-                                 loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="coach-goals__descr section-text">
-                        Алексей Лисица.<br>
-                        Управляющий клуба в Можайске.
-                    </div>
-                </div>
-                <h2 class="section-title coach-goals__title">
-                    Помогу вам достичь
-                    фитнес–целей
-                </h2>
-                <div class="coach-goals__items">
-                    <div class="coach-goals__item">
-                        <img class="coach-goals__item-img"
-                             src="assets/images/icons/coach-goals/01.svg"
-                             alt=""
-                             width="85"
-                             height="80">
-                        <div class="coach-goals__item-title">Похудение</div>
-                    </div>
-                    <div class="coach-goals__item">
-                        <img class="coach-goals__item-img"
-                             src="assets/images/icons/coach-goals/02.svg"
-                             alt=""
-                             width="62"
-                             height="80">
-                        <div class="coach-goals__item-title">Попа как орех</div>
-                    </div>
-                    <div class="coach-goals__item">
-                        <img class="coach-goals__item-img"
-                             src="assets/images/icons/coach-goals/03.svg"
-                             alt=""
-                             width="70"
-                             height="80">
-                        <div class="coach-goals__item-title">Реабилитация</div>
-                    </div>
-                    <div class="coach-goals__item">
-                        <img class="coach-goals__item-img"
-                             src="assets/images/icons/coach-goals/04.svg"
-                             alt=""
-                             width="73"
-                             height="80">
-                        <div class="coach-goals__item-title">
-                            Набор
-                            мышечной
-                            массы
-                        </div>
-                    </div>
-                    <div class="coach-goals__item">
-                        <img class="coach-goals__item-img"
-                             src="assets/images/icons/coach-goals/05.svg"
-                             alt=""
-                             width="76"
-                             height="80">
-                        <div class="coach-goals__item-title">Здоровая спина</div>
-                    </div>
-                </div>
-            </div>
+<section id="coach-specialization" class="coach-goals">
+	<div class="container coach-goals__container">
+		<div class="section-body">
+			<div class="coach-goals__main">
+				<div class="coach-goals__top">
+					<div class="coach-goals__avatar">
+						<picture>
+							<source type="image/webp" srcset="assets/images/content/coach-avatar.webp">
+							<img src="assets/images/content/coach-avatar.jpg" alt="фото" width="72" height="72"
+								loading="lazy">
+						</picture>
+					</div>
+					<div class="coach-goals__descr section-text">
+						Алексей Лисица.<br>
+						Управляющий клуба в Можайске.
+					</div>
+				</div>
+				<h2 class="section-title coach-goals__title">
+					Помогу вам достичь
+					фитнес–целей
+				</h2>
+				<div class="coach-goals__items">
+					<div class="coach-goals__item">
+						<img class="coach-goals__item-img" src="assets/images/icons/coach-goals/01.svg" alt=""
+							width="85" height="80">
+						<div class="coach-goals__item-title">Похудение</div>
+					</div>
+					<div class="coach-goals__item">
+						<img class="coach-goals__item-img" src="assets/images/icons/coach-goals/02.svg" alt=""
+							width="62" height="80">
+						<div class="coach-goals__item-title">Попа как орех</div>
+					</div>
+					<div class="coach-goals__item">
+						<img class="coach-goals__item-img" src="assets/images/icons/coach-goals/03.svg" alt=""
+							width="70" height="80">
+						<div class="coach-goals__item-title">Реабилитация</div>
+					</div>
+					<div class="coach-goals__item">
+						<img class="coach-goals__item-img" src="assets/images/icons/coach-goals/04.svg" alt=""
+							width="73" height="80">
+						<div class="coach-goals__item-title">
+							Набор
+							мышечной
+							массы
+						</div>
+					</div>
+					<div class="coach-goals__item">
+						<img class="coach-goals__item-img" src="assets/images/icons/coach-goals/05.svg" alt=""
+							width="76" height="80">
+						<div class="coach-goals__item-title">Здоровая спина</div>
+					</div>
+				</div>
+			</div>
 
-            <div class="workout-section workout-section--without-top">
-                <div class="splide business-classes-slider coach-goals__slider">
-                    <div class="splide__track">
-                        <div class="splide__list">
-                            @@include('blocks/workout-card/coach.html', {
-                            "blue": true,
-                            "brsWithout": true,
-                            })
-                            @@include('blocks/workout-card/coach.html', {
-                            "blue": true,
-                            "brsWithout": true,
-                            })
-                            @@include('blocks/workout-card/coach.html', {
-                            "blue": true,
-                            "brsWithout": true
-                            })
-                        </div>
-                    </div>
-                    @@include('blocks/slider-nav/slider-nav.html', {
-                    "class": "workout-section"
-                    })
-                </div>
-            </div>
-        </div>
-    </div>
+			<div class="workout-section coach-goals__timetable workout-section--without-top"
+				data-da=".coach-goals__container, 1024, last">
+				<div class="splide business-classes-slider coach-goals__slider">
+					<div class="splide__track">
+						<div class="splide__list">
+							@@include('blocks/workout-card/coach.html', {
+							"blue": true,
+							"brsWithout": true,
+							})
+							@@include('blocks/workout-card/coach.html', {
+							"blue": true,
+							"brsWithout": true,
+							})
+							@@include('blocks/workout-card/coach.html', {
+							"blue": true,
+							"brsWithout": true
+							})
+						</div>
+					</div>
+					@@include('blocks/slider-nav/slider-nav.html', {
+					"class": "workout-section"
+					})
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

@@ -7,6 +7,12 @@
         }
     }
 
+    &__timetable {
+        @media (max-width: 1024px) {
+            grid-column: 1 / -1;
+        }
+    }
+
     // .coach-goals__main
 
     &__main {
@@ -99,7 +105,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin: -2rem -3rem;
+        margin: -2rem -5rem;
 
         @media (max-width: 767px) {
             margin: calc(var(--offset-s) * (-1));
@@ -155,5 +161,10 @@
 
     &__slider {
         width: calc(100vw - var(--gap) * 4);
+
+        @media (max-width: 1024px) {
+            width: 100vw;
+            padding-bottom: var(--nav);
+        }
     }
 }

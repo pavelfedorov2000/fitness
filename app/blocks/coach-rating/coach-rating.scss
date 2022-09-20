@@ -8,7 +8,7 @@
         background-color: #fff;
         padding-right: var(--offset-xxs);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             padding: var(--offset-xxs) var(--offset-xxs) var(--offset-xs);
         }
     }
@@ -18,7 +18,7 @@
     &__avatar {
         display: none;
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             display: block;
             width: var(--offset-xxxl);
         }
@@ -33,11 +33,11 @@
     &__head-info {
         margin-right: auto;
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             margin-left: var(--offset-l);
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             max-width: 14.2rem;
         }
 
@@ -62,7 +62,7 @@
         @extend %text-12;
         color: var(--dark-gray);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             display: none;
         }
     }
@@ -86,9 +86,15 @@
         top: var(--offset-xxxl);
         left: var(--offset-xxxl);
         right: 0;
+        z-index: 25;
         background-color: #fff;
         padding: calc(var(--offset-l) / 2) var(--offset-l) var(--offset-l);
         display: none;
+
+        @media (max-width: 767px) {
+            left: 0;
+            padding: var(--offset-m) var(--offset-s);
+        }
     }
 
     &__inner {
@@ -104,8 +110,7 @@
         gap: 0.2rem 2rem;
         grid-template-areas:
             'text text'
-            'bar value'
-        ;
+            'bar value';
     }
 
     // .coach-rating__item-text

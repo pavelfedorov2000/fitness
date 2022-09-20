@@ -1,8 +1,18 @@
 .club-zones {
     --pagination-mh: 12.8rem;
 
+    @media (max-width: 1024px) {
+        padding-bottom: var(--offset-xl);
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: var(--offset-m);
+    }
+
     &__inner {
-        grid-template-rows: 1fr minmax(var(--pagination-mh), max-content);
+        @media (min-width: 1025px) {
+            grid-template-rows: 1fr minmax(var(--pagination-mh), max-content);
+        }
     }
 
     // .club-zones__slider
@@ -10,7 +20,11 @@
     &__slider {
         width: 100vw;
 
-        @media(min-width: 1025px) {
+        @media (max-width: 1024px) {
+            grid-column: 1 / -1;
+        }
+
+        @media (min-width: 1025px) {
             grid-row: 1 / -1;
         }
 
@@ -18,7 +32,7 @@
         .swiper-pagination-progressbar.swiper-pagination-horizontal {
             display: none;
 
-            @media(min-width: 1025px) {
+            @media (min-width: 1025px) {
                 display: block;
                 top: auto;
                 left: calc(var(--gap) * 2);
@@ -29,7 +43,7 @@
             }
 
             &::before {
-                @media(min-width: 1025px) {
+                @media (min-width: 1025px) {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -51,7 +65,7 @@
     &__slider-pagination {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: flex;
             align-items: center;
             grid-column: 3 / 4;
@@ -60,7 +74,7 @@
 
         .slider-pagination {
             &__item {
-                @media(min-width: 1025px) {
+                @media (min-width: 1025px) {
                     width: calc(100% / 7);
                     justify-content: center;
                 }
@@ -73,11 +87,11 @@
     // .club-zones-slider__item
 
     &__item {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             height: var(--section-mh);
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             width: calc(228 * 100vw / 320) !important;
         }
     }
@@ -85,7 +99,7 @@
     &__item-img {
         position: relative;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             height: 20.8rem;
         }
 
@@ -107,18 +121,19 @@
     &__item-title {
         display: none;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: flex;
             align-items: center;
             padding: var(--offset-m) var(--mob-padding) 0;
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.3rem;
             line-height: 1.8rem;
         }
 
         .label {
+            white-space: nowrap;
             margin-right: var(--mob-padding);
         }
     }

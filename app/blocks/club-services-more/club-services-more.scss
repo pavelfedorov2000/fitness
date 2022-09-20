@@ -31,14 +31,9 @@
         }
     }
 
-    &__body {
-        @media (max-width: 1024px) {
-            grid-column: 1 / -1;
-        }
-    }
-
     &__slider {
         @media (max-width: 1024px) {
+            grid-column: 1 / -1;
             width: 100vw;
             padding-bottom: calc(var(--offset-xl) + var(--offset-m));
         }

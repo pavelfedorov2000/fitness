@@ -10,7 +10,8 @@
         color: var(--dark-gray);
         position: relative;
         padding-bottom: calc(var(--offset-l) - 0.1rem);
-        white-space: nowrap;
+        //white-space: nowrap;
+        max-width: 19rem;
 
         &::after {
             content: '';
@@ -35,11 +36,19 @@
                 width: calc(74 / 66 * 100%);
             }
 
-            #{$this} {
-                &__item-day {
-                    font-weight: 700;
+            b {
+                &#{$this} {
+                    &__item-day {
+                        font-weight: 700;
+                    }
                 }
             }
+        }
+    }
+
+    b {
+        &#{$this}__item-day {
+            font-weight: 500;
         }
     }
 

@@ -26,7 +26,6 @@ app.clubsMap = {
                             preset: 'islands#invertedVioletClusterIcons',
                             clusterIconColor: '#FFCC48',
                             clusterIcons: [{
-                                //href: window.front.icons_path.cluster,
                                 size: [38, 38],
                                 offset: [-19, -19]
                             }],
@@ -46,7 +45,7 @@ app.clubsMap = {
                             $[properties.balloonAddress]
                             $[properties.balloonWorkHours]
                             $[properties.balloonTel]
-                            <a class="btn map-balloon__btn" href="#">Подробнее о клубе</a>
+                            <a class="btn map-balloon__btn" href="club.html">Подробнее о клубе</a>
                         </div>`
                     );
 

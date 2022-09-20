@@ -1,50 +1,35 @@
 <section class="promo">
-    <picture class="promo__bg promo-bg">
-        <source type="image/webp"
-                srcset="assets/images/content/promo/promo.webp">
-        <img src="assets/images/content/promo/promo.jpg"
-             alt="фитнес парень и девушка"
-             width="1920"
-             height="960">
-    </picture>
-    <div class="promo__body container promo-body">
-        @@include('blocks/scroll-btn/scroll-btn.html')
-        <div class="promo__content">
-            <h1 class="title section-title promo__title">
-                Мы создали
-                <span>уникальную концепцию</span>
-                фитнес клуба
-            </h1>
-            @@include('blocks/box-link/box-link.html', {
-            "class": "promo__box-link",
-            "text": "Подарочная персональная тренировка"
-            })
-            <div class="promo__nums numbers">
-                <div class="numbers__item">
-                    <div class="numbers__item-num">в 2 раза</div>
-                    <div class="numbers__item-descr">эффективнее классического фитнес клуба</div>
-                </div>
-                <div class="numbers__item mob-hidden">
-                    <div class="numbers__item-num">10 000</div>
-                    <div class="numbers__item-descr">ежемесячно выбирают наши&nbsp;фитнес клубы</div>
-                </div>
-                <div class="numbers__item mob-hidden">
-                    <div class="numbers__item-num">10</div>
-                    <div class="numbers__item-descr">лет<br> успешной работы</div>
-                </div>
-            </div>
-        </div>
-        <div class="promo-marquee vertical-marquee"
-             data-da=".promo__content, 1024, 1">
-            <p>
-                <span class="ttu">Fitnession.</span> Эффективно
-            </p>
-            <p>
-                <span class="ttu">Fitnession.</span> Эффективно
-            </p>
-            <p>
-                <span class="ttu">Fitnession.</span> Эффективно
-            </p>
-        </div>
-    </div>
+	<picture class="promo__bg promo-bg">
+		<source type="image/webp" srcset="assets/images/content/promo/promo.webp">
+		<img src="assets/images/content/promo/promo.jpg" alt="фитнес парень и девушка" width="1920" height="960">
+	</picture>
+	<div class="promo__body container promo-body">
+		@@include('blocks/scroll-btn/scroll-btn.html')
+		<div class="promo__content">
+			<h1 class="title section-title promo__title">
+				Мы создали
+				<span>уникальную концепцию</span>
+				фитнес клуба
+			</h1>
+			@@include('blocks/box-link/box-link.html', {
+			"href": "#free-training-recording",
+			"class": "promo__box-link",
+			"text": "Подарочная персональная тренировка"
+			})
+			@@include('blocks/numbers/numbers.html', {
+			"class": "promo__nums"
+			})
+		</div>
+		<div class="promo-marquee vertical-marquee" data-da=".promo__content, 1024, 1">
+			<p>
+				<span class="ttu">Fitnession.</span> Эффективно
+			</p>
+			<p>
+				<span class="ttu">Fitnession.</span> Эффективно
+			</p>
+			<p>
+				<span class="ttu">Fitnession.</span> Эффективно
+			</p>
+		</div>
+	</div>
 </section>

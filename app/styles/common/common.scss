@@ -38,13 +38,12 @@ body {
     &._lock {
         overflow-y: hidden;
     }
+}
 
-    /* &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 0;
-        height: 0;
-    } */
-    //&::-webkit-scrollbar-thumb {}
+button,
+input,
+textarea {
+    font-family: $ff;
 }
 
 .wrapper {

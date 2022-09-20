@@ -4,15 +4,15 @@
 
     position: relative;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         grid-template-rows: var(--section-padding-xl) max-content var(--section-padding);
     }
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         grid-template-rows: var(--offset-l) max-content var(--offset-l);
     }
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
             @include rect(bottom, right, 0, 0, var(--gap), #fff);
         }
@@ -27,7 +27,7 @@
         img {
             @extend %cover;
 
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 object-position: 73%;
             }
         }
@@ -45,20 +45,18 @@
             '. . . . .'
             '. . player . .'
             '. . . . .'
-            'title . . . .'
-        ;
+            'title . . . .';
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             min-height: 100vh;
             grid-template-columns: 1fr var(--player) 1fr;
-            grid-template-rows: max-content 7.6rem var(--player) 1fr max-content;
+            grid-template-rows: max-content 1fr var(--player) 1fr max-content;
             grid-template-areas:
-                '. title .'
+                'title title title'
                 '. . .'
                 '. player .'
                 '. . .'
-                'rating rating rating'
-            ;
+                'rating rating rating';
         }
     }
 
@@ -72,7 +70,7 @@
         color: #fff;
         grid-area: title;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             text-align: center;
         }
     }

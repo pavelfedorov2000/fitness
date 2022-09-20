@@ -9,7 +9,6 @@
 
     @media (max-width: 767px) {
         min-height: 18.1rem;
-        padding: var(--offset-s) var(--mob-padding) 2.8rem;
     }
 
     @media (any-hover: hover) {
@@ -33,6 +32,10 @@
         display: block;
         height: 100%;
         padding: var(--offset-m) var(--offset-m) 2.8rem;
+
+        @media (max-width: 767px) {
+            padding: var(--offset-s) var(--mob-padding) 2.8rem;
+        }
     }
 
     // .card__inner

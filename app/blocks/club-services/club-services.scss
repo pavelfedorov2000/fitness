@@ -1,7 +1,7 @@
 .club-services {
     position: relative;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
             @include rect(top, right, 0, 0, 28.5rem, var(--ocean));
         }
@@ -11,6 +11,18 @@
 
     &__title {
         margin-bottom: var(--offset-xxl);
+
+        @media (max-width: 1024px) {
+            margin-bottom: var(--offset-l);
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: var(--offset-m);
+        }
+
+        span {
+            margin-left: 0;
+        }
     }
 
     // .club-services__tabs
@@ -18,7 +30,7 @@
     &__tabs {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -29,7 +41,7 @@
     &__select {
         display: none;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: block;
             margin-bottom: var(--offset-l);
             margin-left: calc(var(--mob-padding) * (-1));
@@ -42,7 +54,7 @@
             }
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             margin-bottom: var(--offset-s);
         }
     }

@@ -26,6 +26,17 @@
 
     &__top {
         @extend %flex-row-center;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            > * {
+                &:not(:last-child) {
+                    margin-bottom: var(--offset-s);
+                }
+            }
+        }
     }
 
     // .children-section__title
@@ -257,13 +268,15 @@
 
 .workout-timetable {
     display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem -2rem;
 
-    @media (min-width: 1025px) {
+    /* @media (min-width: 1025px) {
         flex-wrap: wrap;
         margin: -0.5rem -2rem;
-    }
+    } */
 
-    @media (max-width: 1024px) {
+    /* @media (max-width: 1024px) {
         white-space: nowrap;
         overflow-x: scroll;
         scrollbar-width: 0;
@@ -272,7 +285,7 @@
             width: 0;
             -webkit-appearance: none;
         }
-    }
+    } */
 
     // .training-timetable__item
 
@@ -282,7 +295,7 @@
         justify-items: start;
 
         @media (max-width: 1024px) {
-            margin: 0 var(--offset-s) 0 0;
+            margin: calc(var(--offset-xxs) / 2) var(--offset-s);
         }
     }
 

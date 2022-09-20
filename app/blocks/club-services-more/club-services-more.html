@@ -1,84 +1,69 @@
-<section class="club-services-more@@if(context.class){ @@class}">
-    <div class="container">
-        <div class="section-body club-services-more__body">
-            <div class="club-services-more__title">
-                Все услуги уже входят
-                в стоимость клубной
-                карты
-            </div>
-            <div class="services-more-slider splide club-services-more__slider">
-                @@include('blocks/slider-nav/slider-nav.html', {
-                "class": "club-services-more"
-                })
-                <div class="splide__track">
-                    <div class="splide__list">
-                        <article class="splide__slide club-service-more">
-                            <div class="club-service-more__img">
-                                <picture>
-                                    <source type="image/webp"
-                                            srcset="assets/images/content/services-more/01.webp">
-                                    <img src="assets/images/content/services-more/01.jpg"
-                                         alt="фото"
-                                         width="344"
-                                         height="280"
-                                         loading="lazy">
-                                </picture>
-                            </div>
-                            <div class="club-service-more__content">
-                                <span class="club-service-more__title">Солярий</span>
-                            </div>
-                        </article>
-                        <article class="splide__slide club-service-more">
-                            <div class="club-service-more__img">
-                                <picture>
-                                    <source type="image/webp"
-                                            srcset="assets/images/content/services-more/02.webp">
-                                    <img src="assets/images/content/services-more/02.jpg"
-                                         alt="фото"
-                                         width="344"
-                                         height="280"
-                                         loading="lazy">
-                                </picture>
-                            </div>
-                            <div class="club-service-more__content">
-                                <span class="club-service-more__title">Шкафчики</span>
-                            </div>
-                        </article>
-                        <article class="splide__slide club-service-more">
-                            <div class="club-service-more__img">
-                                <picture>
-                                    <source type="image/webp"
-                                            srcset="assets/images/content/services-more/03.webp">
-                                    <img src="assets/images/content/services-more/03.jpg"
-                                         alt="фото"
-                                         width="344"
-                                         height="280"
-                                         loading="lazy">
-                                </picture>
-                            </div>
-                            <div class="club-service-more__content">
-                                <span class="club-service-more__title">Финская сауна</span>
-                            </div>
-                        </article>
-                        <article class="splide__slide club-service-more">
-                            <div class="club-service-more__img">
-                                <picture>
-                                    <source type="image/webp"
-                                            srcset="assets/images/content/services-more/01.webp">
-                                    <img src="assets/images/content/services-more/01.jpg"
-                                         alt="фото"
-                                         width="344"
-                                         height="280"
-                                         loading="lazy">
-                                </picture>
-                            </div>
-                            <div class="club-service-more__content">
-                                <span class="club-service-more__title">Солярий</span>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section id="more" class="club-services-more@@if(context.class){ @@class}">
+	<div class="container club-services-more__container">
+		<div class="section-body club-services-more__body">
+			<div class="club-services-more__title">
+				Все услуги уже входят
+				в стоимость клубной
+				карты
+			</div>
+			<div class="services-more-slider splide club-services-more__slider"
+				data-da=".club-services-more__container, 1024, last">
+				@@include('blocks/slider-nav/slider-nav.html', {
+				"class": "club-services-more"
+				})
+				<div class="splide__track">
+					<div class="splide__list">
+						<article class="splide__slide club-service-more">
+							<div class="club-service-more__img">
+								<picture>
+									<source type="image/webp" srcset="assets/images/content/services-more/01.webp">
+									<img src="assets/images/content/services-more/01.jpg" alt="фото" width="344"
+										height="280" loading="lazy">
+								</picture>
+							</div>
+							<div class="club-service-more__content">
+								<span class="club-service-more__title">Солярий</span>
+							</div>
+						</article>
+						<article class="splide__slide club-service-more">
+							<div class="club-service-more__img">
+								<picture>
+									<source type="image/webp" srcset="assets/images/content/services-more/02.webp">
+									<img src="assets/images/content/services-more/02.jpg" alt="фото" width="344"
+										height="280" loading="lazy">
+								</picture>
+							</div>
+							<div class="club-service-more__content">
+								<span class="club-service-more__title">Шкафчики</span>
+							</div>
+						</article>
+						<article class="splide__slide club-service-more">
+							<div class="club-service-more__img">
+								<picture>
+									<source type="image/webp" srcset="assets/images/content/services-more/03.webp">
+									<img src="assets/images/content/services-more/03.jpg" alt="фото" width="344"
+										height="280" loading="lazy">
+								</picture>
+							</div>
+							<div class="club-service-more__content">
+								<span class="club-service-more__title">Финская сауна</span>
+							</div>
+						</article>
+						<article class="splide__slide club-service-more">
+							<div class="club-service-more__img">
+								<picture>
+									<source type="image/webp" srcset="assets/images/content/services-more/01.webp">
+									<img src="assets/images/content/services-more/01.jpg" alt="фото" width="344"
+										height="280" loading="lazy">
+								</picture>
+							</div>
+							<div class="club-service-more__content">
+								<span class="club-service-more__title">Солярий</span>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

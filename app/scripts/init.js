@@ -15,26 +15,27 @@
         app.clubZones.init();
         app.timetableCalendar.init();
         app.clubsMap.init();
+        app.coachRating.init();
         //app.cardServices.init();
         //app.slider.init();
         //app.menu.init();
         //app.popup.init();
         //app.validation.init();
 
+        $("a[href^='#']").not("a[href='#']").not('.tab').click(function (e) {
+            e.preventDefault();
 
-        //smoooth scroll to section
-        /* document.querySelectorAll('.menu__link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({
-                    top: document.getElementById(link.getAttribute('data-section')).offsetTop,
-                    behavior: "smooth"
-                });
-                body.classList.remove('_lock');
-                burgerBtn.classList.remove('.is-active');
-                burgerMenu.classList.remove('.is-active');
-            });
-        }); */
+            const $scrollLink = $(this);
+            const href = $scrollLink.attr("href");
+
+            if ($scrollLink.hasClass('clubs-page__nav-btn')) {
+                $scrollLink.siblings().removeClass('active');
+                $scrollLink.addClass('active');
+            }
+
+            $("html, body").animate({ scrollTop: $(href).offset().top + "px" });
+            return false;
+        });
 
         //const totalIndex = saleSlider.Components.Controller.getEnd() + 1;
         //saleSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${totalIndex}`;
@@ -52,8 +53,9 @@
                     //pagination: 'slider-nav__pagination'
                 },
                 pagination: false,
-                /* breakpoints: {
+                breakpoints: {
                     1024: {
+                        type: 'loop',
                         perPage: 2,
                         gap: '2.4rem',
                     },
@@ -61,7 +63,7 @@
                         perPage: 1,
                         gap: '1.6rem',
                     },
-                }, */
+                },
             });
 
             const coachPhotosSliderBar = coachPhotosSlider.root.querySelector('.slider-nav__progress-bar');
@@ -106,6 +108,7 @@
 
         if (document.querySelectorAll('.sale-slider').length) {
             const saleSlider = new Splide('.sale-slider', {
+                speed: 1000,
                 type: 'loop',
                 classes: {
                     arrows: 'splide__arrows slider-nav__arrows',
@@ -250,6 +253,7 @@
         if (document.querySelectorAll('.success-stories-slider').length) {
             const successStoriesSlider = new Splide('.success-stories-slider', {
                 type: 'loop',
+                speed: 1000,
                 perPage: 3,
                 classes: {
                     arrows: 'splide__arrows slider-nav__arrows',
@@ -264,7 +268,7 @@
                         perPage: 2,
                         gap: '1.6rem',
                     },
-                    640: {
+                    767: {
                         perPage: 1
                     },
                 },

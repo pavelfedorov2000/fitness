@@ -2,7 +2,7 @@ app.asidePopup = {
     name: 'asidePopup',
     description: 'your script description',
     init() {
-        $(document).on('click', '.timetable-card__btn, .workout-card__btn', function () {
+        /* $(document).on('click', '.timetable-card__btn, .workout-card__btn', function () {
             $('body').addClass('_lock');
             $('html').addClass('disable-fix');
             $('.overlay').fadeIn('slow');
@@ -14,6 +14,16 @@ app.asidePopup = {
             $('html').addClass('disable-fix');
             $('.overlay').fadeIn('slow');
             $('.request-popup').addClass('active');
+        }); */
+
+        $('button[data-popup]').on('click', function () {
+            const $popupBtn = $(this);
+            console.log($popupBtn.attr('data-popup'));
+
+            $('body').addClass('_lock');
+            $('html').addClass('disable-fix');
+            $('.overlay').fadeIn('slow');
+            $(`#${$popupBtn.attr('data-popup')}`).addClass('active');
         });
 
         $(document).on('click', '.aside-popup__close-btn', function () {

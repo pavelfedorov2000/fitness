@@ -35,9 +35,13 @@
             }
         }
 
-        &--white {
-            background-color: #fff;
-            border-color: #fff;
+        &--style {
+            &_bg {
+                &-white {
+                    background-color: #fff;
+                    border-color: #fff;
+                }
+            }
         }
     }
 
@@ -45,7 +49,7 @@
         font-size: 1.1rem;
         line-height: 1;
         color: var(--dark-gray);
-        transition: .3s color;
+        transition: 0.3s color;
     }
 
     // .social__item--vk
