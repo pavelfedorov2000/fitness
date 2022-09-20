@@ -1,0 +1,32 @@
+.views {
+    $this: &;
+
+    @extend %vertical-align;
+
+    &__icon {
+        flex-shrink: 0;
+        margin-right: var(--offset-xxs);
+        width: 2rem;
+        height: 2rem;
+        fill: #fff;
+    }
+
+    &__value {
+        @extend %text-13;
+        line-height: 2rem;
+    }
+
+    &--style {
+        &_color {
+            &-gray {
+                color: var(--dark-gray);
+
+                #{$this} {
+                    &__icon {
+                        fill: var(--dark-gray);
+                    }
+                }
+            }
+        }
+    }
+}

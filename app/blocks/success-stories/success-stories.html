@@ -1,243 +1,294 @@
 <section class="success-stories container">
-	<div class="section-body">
-		<div class="success-stories__filter filter-selects" data-da=".success-stories, 767, first">
-			@@include('blocks/select-club/select-club.html', {
-			"class": "success-stories__select",
-			"with": "border"
-			})
-			<div class="select success-stories__select select--with_border">
-				<div class="select__title">Выберите тренера</div>
-				<div class="select__content">
-					<input id="coach0" class="select__input" type="radio" name="coach" checked />
-					<label for="coach0" tabindex="0" class="select__label" data-value="Выберите клуб">Выберите
-						тренера</label>
-					<input id="coach1" class="select__input" type="radio" name="coach" />
-					<label for="coach1" tabindex="0" class="select__label" data-value="Александр Лисица">Александр
-						Лисица</label>
-					<input id="coach2" class="select__input" type="radio" name="coach" />
-					<label for="coach2" tabindex="0" class="select__label" data-value="Ренат Якубов">Ренат
-						Якубов</label>
-					<input id="coach3" class="select__input" type="radio" name="coach" />
-					<label for="coach3" tabindex="0" class="select__label" data-value="Ирина Садовская">Ирина
-						Садовская</label>
-					<input id="coach4" class="select__input" type="radio" name="coach" />
-					<label for="coach4" tabindex="0" class="select__label" data-value="Вера громова">Вера
-						громова</label>
-					<input id="coach5" class="select__input" type="radio" name="coach" />
-					<label for="coach5" tabindex="0" class="select__label" data-value="Анастасия Ерисова">Анастасия
-						Ерисова</label>
-				</div>
-			</div>
-			<div class="select success-stories__select select--with_border">
-				<div class="select__title">Цель тренировок</div>
-				<div class="select__content">
-					<input id="aim0" class="select__input" type="radio" name="aim" checked />
-					<label for="aim0" tabindex="0" class="select__label" data-value="Цель тренировок">Цель
-						тренировок</label>
-					<input id="aim1" class="select__input" type="radio" name="aim" />
-					<label for="aim1" tabindex="0" class="select__label" data-value="Сбросить вес">Сбросить вес</label>
-					<input id="aim2" class="select__input" type="radio" name="aim" />
-					<label for="aim2" tabindex="0" class="select__label" data-value="Набрать мышечную массу">Набрать
-						мышечную массу</label>
-				</div>
-			</div>
-		</div>
-		<div class="success-stories__grid">
-			<article class="success-stories__item article-card success-stories__item--1">
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/03.webp">
-							<img src="assets/images/content/blog/03.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label label--style_bg-black">История успеха</span>
-						<span class="article-card__kg">-14</span>
-						<div class="article-card__title">
-							Баланова Елена
-						</div>
-						<div class="article-card__views views">
-							<svg class="views__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M12.4981 9.99172C12.4981 11.3158 11.3778 12.3891 9.9958 12.3891C8.6138 12.3891 7.49347 11.3158 7.49347 9.99172C7.49347 8.66767 8.6138 7.59433 9.9958 7.59433C11.3778 7.59432 12.4981 8.66768 12.4981 9.99172ZM10.0003 5C8.56942 5.00635 7.08624 5.35469 5.68221 6.02163C4.63974 6.53721 3.6238 7.26463 2.74191 8.16247C2.30877 8.62079 1.75631 9.28443 1.66699 9.9925C1.67755 10.6058 2.33546 11.3629 2.74191 11.8225C3.5689 12.6851 4.55838 13.3922 5.68221 13.9639C6.99153 14.5993 8.44077 14.9652 10.0003 14.9855C11.4326 14.9791 12.9154 14.6267 14.3179 13.9639C15.3604 13.4483 16.3768 12.7204 17.2587 11.8225C17.6919 11.3642 18.2443 10.7006 18.3337 9.9925C18.3231 9.37915 17.6652 8.62207 17.2587 8.16244C16.4318 7.29986 15.4417 6.59329 14.3179 6.0216C13.0093 5.38665 11.5565 5.02332 10.0003 5ZM9.99927 6.23956C12.1676 6.23956 13.9253 7.92003 13.9253 9.99304C13.9253 12.066 12.1676 13.7465 9.99927 13.7465C7.83095 13.7465 6.07323 12.066 6.07323 9.99304C6.07323 7.92003 7.83095 6.23956 9.99927 6.23956Z" />
-							</svg>
-							<span class="views__value">243</span>
-						</div>
-						<div class="arrow-btn article-card__arrow arrow-btn--style_bg-white">
-							<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-							</svg>
-						</div>
-					</div>
-				</a>
-			</article>
-			<article class="success-stories__item article-card success-stories__item--2">
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/04.webp">
-							<img src="assets/images/content/blog/04.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label label--style_bg-black">История успеха</span>
-						<span class="article-card__kg">+12</span>
-						<div class="article-card__title">
-							Владимир Березов
-						</div>
-						<div class="article-card__views views">
-							<svg class="views__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M12.4981 9.99172C12.4981 11.3158 11.3778 12.3891 9.9958 12.3891C8.6138 12.3891 7.49347 11.3158 7.49347 9.99172C7.49347 8.66767 8.6138 7.59433 9.9958 7.59433C11.3778 7.59432 12.4981 8.66768 12.4981 9.99172ZM10.0003 5C8.56942 5.00635 7.08624 5.35469 5.68221 6.02163C4.63974 6.53721 3.6238 7.26463 2.74191 8.16247C2.30877 8.62079 1.75631 9.28443 1.66699 9.9925C1.67755 10.6058 2.33546 11.3629 2.74191 11.8225C3.5689 12.6851 4.55838 13.3922 5.68221 13.9639C6.99153 14.5993 8.44077 14.9652 10.0003 14.9855C11.4326 14.9791 12.9154 14.6267 14.3179 13.9639C15.3604 13.4483 16.3768 12.7204 17.2587 11.8225C17.6919 11.3642 18.2443 10.7006 18.3337 9.9925C18.3231 9.37915 17.6652 8.62207 17.2587 8.16244C16.4318 7.29986 15.4417 6.59329 14.3179 6.0216C13.0093 5.38665 11.5565 5.02332 10.0003 5ZM9.99927 6.23956C12.1676 6.23956 13.9253 7.92003 13.9253 9.99304C13.9253 12.066 12.1676 13.7465 9.99927 13.7465C7.83095 13.7465 6.07323 12.066 6.07323 9.99304C6.07323 7.92003 7.83095 6.23956 9.99927 6.23956Z" />
-							</svg>
-							<span class="views__value">243</span>
-						</div>
-						<div class="arrow-btn article-card__arrow arrow-btn--style_bg-white">
-							<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-							</svg>
-						</div>
-					</div>
-				</a>
-			</article>
-			<article class="success-stories__item article-card success-stories__item--3">
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/05.webp">
-							<img src="assets/images/content/blog/05.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label label--style_bg-black">История успеха</span>
-						<span class="article-card__kg">-14</span>
-						<div class="article-card__title">
-							Баланова Елена
-						</div>
-						<div class="article-card__views views">
-							<svg class="views__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M12.4981 9.99172C12.4981 11.3158 11.3778 12.3891 9.9958 12.3891C8.6138 12.3891 7.49347 11.3158 7.49347 9.99172C7.49347 8.66767 8.6138 7.59433 9.9958 7.59433C11.3778 7.59432 12.4981 8.66768 12.4981 9.99172ZM10.0003 5C8.56942 5.00635 7.08624 5.35469 5.68221 6.02163C4.63974 6.53721 3.6238 7.26463 2.74191 8.16247C2.30877 8.62079 1.75631 9.28443 1.66699 9.9925C1.67755 10.6058 2.33546 11.3629 2.74191 11.8225C3.5689 12.6851 4.55838 13.3922 5.68221 13.9639C6.99153 14.5993 8.44077 14.9652 10.0003 14.9855C11.4326 14.9791 12.9154 14.6267 14.3179 13.9639C15.3604 13.4483 16.3768 12.7204 17.2587 11.8225C17.6919 11.3642 18.2443 10.7006 18.3337 9.9925C18.3231 9.37915 17.6652 8.62207 17.2587 8.16244C16.4318 7.29986 15.4417 6.59329 14.3179 6.0216C13.0093 5.38665 11.5565 5.02332 10.0003 5ZM9.99927 6.23956C12.1676 6.23956 13.9253 7.92003 13.9253 9.99304C13.9253 12.066 12.1676 13.7465 9.99927 13.7465C7.83095 13.7465 6.07323 12.066 6.07323 9.99304C6.07323 7.92003 7.83095 6.23956 9.99927 6.23956Z" />
-							</svg>
-							<span class="views__value">243</span>
-						</div>
-						<div class="arrow-btn article-card__arrow arrow-btn--style_bg-white">
-							<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-							</svg>
-						</div>
-					</div>
-				</a>
-			</article>
-			<article class="success-stories__item article-card success-stories__item--4">
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/06.webp">
-							<img src="assets/images/content/blog/06.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label label--style_bg-black">История успеха</span>
-						<span class="article-card__kg">-12</span>
-						<div class="article-card__title">
-							Дмитрий Бондаренко
-						</div>
-						<div class="article-card__views views">
-							<svg class="views__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M12.4981 9.99172C12.4981 11.3158 11.3778 12.3891 9.9958 12.3891C8.6138 12.3891 7.49347 11.3158 7.49347 9.99172C7.49347 8.66767 8.6138 7.59433 9.9958 7.59433C11.3778 7.59432 12.4981 8.66768 12.4981 9.99172ZM10.0003 5C8.56942 5.00635 7.08624 5.35469 5.68221 6.02163C4.63974 6.53721 3.6238 7.26463 2.74191 8.16247C2.30877 8.62079 1.75631 9.28443 1.66699 9.9925C1.67755 10.6058 2.33546 11.3629 2.74191 11.8225C3.5689 12.6851 4.55838 13.3922 5.68221 13.9639C6.99153 14.5993 8.44077 14.9652 10.0003 14.9855C11.4326 14.9791 12.9154 14.6267 14.3179 13.9639C15.3604 13.4483 16.3768 12.7204 17.2587 11.8225C17.6919 11.3642 18.2443 10.7006 18.3337 9.9925C18.3231 9.37915 17.6652 8.62207 17.2587 8.16244C16.4318 7.29986 15.4417 6.59329 14.3179 6.0216C13.0093 5.38665 11.5565 5.02332 10.0003 5ZM9.99927 6.23956C12.1676 6.23956 13.9253 7.92003 13.9253 9.99304C13.9253 12.066 12.1676 13.7465 9.99927 13.7465C7.83095 13.7465 6.07323 12.066 6.07323 9.99304C6.07323 7.92003 7.83095 6.23956 9.99927 6.23956Z" />
-							</svg>
-							<span class="views__value">243</span>
-						</div>
-						<div class="arrow-btn article-card__arrow arrow-btn--style_bg-white">
-							<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-							</svg>
-						</div>
-					</div>
-				</a>
-			</article>
-			<article class="success-stories__item article-card success-stories__item--5">
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/07.webp">
-							<img src="assets/images/content/blog/07.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label label--style_bg-black">История успеха</span>
-						<span class="article-card__kg">-25</span>
-						<div class="article-card__title">
-							Виктория Водянова
-						</div>
-						<div class="article-card__views views">
-							<svg class="views__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M12.4981 9.99172C12.4981 11.3158 11.3778 12.3891 9.9958 12.3891C8.6138 12.3891 7.49347 11.3158 7.49347 9.99172C7.49347 8.66767 8.6138 7.59433 9.9958 7.59433C11.3778 7.59432 12.4981 8.66768 12.4981 9.99172ZM10.0003 5C8.56942 5.00635 7.08624 5.35469 5.68221 6.02163C4.63974 6.53721 3.6238 7.26463 2.74191 8.16247C2.30877 8.62079 1.75631 9.28443 1.66699 9.9925C1.67755 10.6058 2.33546 11.3629 2.74191 11.8225C3.5689 12.6851 4.55838 13.3922 5.68221 13.9639C6.99153 14.5993 8.44077 14.9652 10.0003 14.9855C11.4326 14.9791 12.9154 14.6267 14.3179 13.9639C15.3604 13.4483 16.3768 12.7204 17.2587 11.8225C17.6919 11.3642 18.2443 10.7006 18.3337 9.9925C18.3231 9.37915 17.6652 8.62207 17.2587 8.16244C16.4318 7.29986 15.4417 6.59329 14.3179 6.0216C13.0093 5.38665 11.5565 5.02332 10.0003 5ZM9.99927 6.23956C12.1676 6.23956 13.9253 7.92003 13.9253 9.99304C13.9253 12.066 12.1676 13.7465 9.99927 13.7465C7.83095 13.7465 6.07323 12.066 6.07323 9.99304C6.07323 7.92003 7.83095 6.23956 9.99927 6.23956Z" />
-							</svg>
-							<span class="views__value">243</span>
-						</div>
-						<div class="arrow-btn article-card__arrow arrow-btn--style_bg-white">
-							<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-							</svg>
-						</div>
-					</div>
-				</a>
-			</article>
-			<article class="success-stories__item article-card success-stories__item--6">
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/04.webp">
-							<img src="assets/images/content/blog/04.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label label--style_bg-black">История успеха</span>
-						<span class="article-card__kg">+12</span>
-						<div class="article-card__title">
-							Владимир Березов
-						</div>
-						<div class="article-card__views views">
-							<svg class="views__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M12.4981 9.99172C12.4981 11.3158 11.3778 12.3891 9.9958 12.3891C8.6138 12.3891 7.49347 11.3158 7.49347 9.99172C7.49347 8.66767 8.6138 7.59433 9.9958 7.59433C11.3778 7.59432 12.4981 8.66768 12.4981 9.99172ZM10.0003 5C8.56942 5.00635 7.08624 5.35469 5.68221 6.02163C4.63974 6.53721 3.6238 7.26463 2.74191 8.16247C2.30877 8.62079 1.75631 9.28443 1.66699 9.9925C1.67755 10.6058 2.33546 11.3629 2.74191 11.8225C3.5689 12.6851 4.55838 13.3922 5.68221 13.9639C6.99153 14.5993 8.44077 14.9652 10.0003 14.9855C11.4326 14.9791 12.9154 14.6267 14.3179 13.9639C15.3604 13.4483 16.3768 12.7204 17.2587 11.8225C17.6919 11.3642 18.2443 10.7006 18.3337 9.9925C18.3231 9.37915 17.6652 8.62207 17.2587 8.16244C16.4318 7.29986 15.4417 6.59329 14.3179 6.0216C13.0093 5.38665 11.5565 5.02332 10.0003 5ZM9.99927 6.23956C12.1676 6.23956 13.9253 7.92003 13.9253 9.99304C13.9253 12.066 12.1676 13.7465 9.99927 13.7465C7.83095 13.7465 6.07323 12.066 6.07323 9.99304C6.07323 7.92003 7.83095 6.23956 9.99927 6.23956Z" />
-							</svg>
-							<span class="views__value">243</span>
-						</div>
-						<div class="arrow-btn article-card__arrow arrow-btn--style_bg-white">
-							<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-							</svg>
-						</div>
-					</div>
-				</a>
-			</article>
-			@@include('blocks/pagination/pagination.html', {
-			"class": "success-stories"
-			})
-		</div>
-	</div>
+    <div class="section-body">
+        <div class="success-stories__filter filter-selects"
+             data-da=".success-stories, 767, first">
+            @@include('blocks/select-club/select-club.html', {
+            "class": "success-stories__select",
+            "with": "border"
+            })
+            <div class="select success-stories__select select--with_border">
+                <div class="select__title">Выберите тренера</div>
+                <div class="select__content">
+                    <input id="coach0"
+                           class="select__input"
+                           type="radio"
+                           name="coach"
+                           checked />
+                    <label for="coach0"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Выберите клуб">Выберите
+                        тренера</label>
+                    <input id="coach1"
+                           class="select__input"
+                           type="radio"
+                           name="coach" />
+                    <label for="coach1"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Александр Лисица">Александр
+                        Лисица</label>
+                    <input id="coach2"
+                           class="select__input"
+                           type="radio"
+                           name="coach" />
+                    <label for="coach2"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Ренат Якубов">Ренат
+                        Якубов</label>
+                    <input id="coach3"
+                           class="select__input"
+                           type="radio"
+                           name="coach" />
+                    <label for="coach3"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Ирина Садовская">Ирина
+                        Садовская</label>
+                    <input id="coach4"
+                           class="select__input"
+                           type="radio"
+                           name="coach" />
+                    <label for="coach4"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Вера громова">Вера
+                        громова</label>
+                    <input id="coach5"
+                           class="select__input"
+                           type="radio"
+                           name="coach" />
+                    <label for="coach5"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Анастасия Ерисова">Анастасия
+                        Ерисова</label>
+                </div>
+            </div>
+            <div class="select success-stories__select select--with_border">
+                <div class="select__title">Цель тренировок</div>
+                <div class="select__content">
+                    <input id="aim0"
+                           class="select__input"
+                           type="radio"
+                           name="aim"
+                           checked />
+                    <label for="aim0"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Цель тренировок">Цель
+                        тренировок</label>
+                    <input id="aim1"
+                           class="select__input"
+                           type="radio"
+                           name="aim" />
+                    <label for="aim1"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Сбросить вес">Сбросить вес</label>
+                    <input id="aim2"
+                           class="select__input"
+                           type="radio"
+                           name="aim" />
+                    <label for="aim2"
+                           tabindex="0"
+                           class="select__label"
+                           data-value="Набрать мышечную массу">Набрать
+                        мышечную массу</label>
+                </div>
+            </div>
+        </div>
+        <div class="success-stories__grid">
+            <article class="success-stories__item article-card success-stories__item--1">
+                <a href="#"
+                   class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/03.webp">
+                            <img src="assets/images/content/blog/03.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label label--style_bg-black">История успеха</span>
+                        <span class="article-card__kg">-14</span>
+                        <div class="article-card__title">
+                            Баланова Елена
+                        </div>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "243"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white",
+                        "class": "article-card__arrow"
+                        })
+                    </div>
+                </a>
+            </article>
+            <article class="success-stories__item article-card success-stories__item--2">
+                <a href="#"
+                   class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/04.webp">
+                            <img src="assets/images/content/blog/04.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label label--style_bg-black">История успеха</span>
+                        <span class="article-card__kg">+12</span>
+                        <div class="article-card__title">
+                            Владимир Березов
+                        </div>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "243"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white",
+                        "class": "article-card__arrow"
+                        })
+                    </div>
+                </a>
+            </article>
+            <article class="success-stories__item article-card success-stories__item--3">
+                <a href="#"
+                   class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/05.webp">
+                            <img src="assets/images/content/blog/05.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label label--style_bg-black">История успеха</span>
+                        <span class="article-card__kg">-14</span>
+                        <div class="article-card__title">
+                            Баланова Елена
+                        </div>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "243"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white",
+                        "class": "article-card__arrow"
+                        })
+                    </div>
+                </a>
+            </article>
+            <article class="success-stories__item article-card success-stories__item--4">
+                <a href="#"
+                   class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/06.webp">
+                            <img src="assets/images/content/blog/06.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label label--style_bg-black">История успеха</span>
+                        <span class="article-card__kg">-12</span>
+                        <div class="article-card__title">
+                            Дмитрий Бондаренко
+                        </div>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "243"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white",
+                        "class": "article-card__arrow"
+                        })
+                    </div>
+                </a>
+            </article>
+            <article class="success-stories__item article-card success-stories__item--5">
+                <a href="#"
+                   class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/07.webp">
+                            <img src="assets/images/content/blog/07.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label label--style_bg-black">История успеха</span>
+                        <span class="article-card__kg">-25</span>
+                        <div class="article-card__title">
+                            Виктория Водянова
+                        </div>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "243"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white",
+                        "class": "article-card__arrow"
+                        })
+                    </div>
+                </a>
+            </article>
+            <article class="success-stories__item article-card success-stories__item--6">
+                <a href="#"
+                   class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/04.webp">
+                            <img src="assets/images/content/blog/04.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label label--style_bg-black">История успеха</span>
+                        <span class="article-card__kg">+12</span>
+                        <div class="article-card__title">
+                            Владимир Березов
+                        </div>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "243"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white",
+                        "class": "article-card__arrow"
+                        })
+                    </div>
+                </a>
+            </article>
+            @@include('blocks/pagination/pagination.html', {
+            "class": "success-stories"
+            })
+        </div>
+    </div>
 </section>

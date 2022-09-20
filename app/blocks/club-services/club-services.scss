@@ -44,8 +44,7 @@
         @media (max-width: 1024px) {
             display: block;
             margin-bottom: var(--offset-l);
-            margin-left: calc(var(--mob-padding) * (-1));
-            width: 100vw;
+            grid-column: 1 / -1;
 
             .select__title {
                 border-color: var(--line-color);

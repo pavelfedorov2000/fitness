@@ -17,8 +17,11 @@ app.clubsCompre = {
                 pagination: false,
                 breakpoints: {
                     1024: {
-                        perPage: 'auto',
+                        perPage: 2,
                         gap: `${getComputedStyle(document.documentElement).getPropertyValue('--offset-m')}`
+                    },
+                    500: {
+                        perPage: 1
                     },
                 },
             });

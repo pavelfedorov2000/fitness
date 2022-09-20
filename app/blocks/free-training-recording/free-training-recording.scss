@@ -6,20 +6,23 @@
     }
 
     box-sizing: border-box;
-    @include padding-y(10.4rem);
     border: var(--border-width) solid var(--yellow);
-    background-image: url(../images/elements/free-training-elements.svg);
-    background-size: 164.6rem 42.9rem;
-    background-position: 50% 12.5rem;
-    background-repeat: no-repeat;
+    @include padding-y(10.4rem);
+
+    @media(min-width: 1025px) {
+        background-image: url(../images/elements/free-training-elements.svg);
+        background-size: 164.6rem 42.9rem;
+        background-position: 50% 12.5rem;
+        background-repeat: no-repeat;
+    }
 
     @media (max-width: 1024px) {
-        @include padding-y(var(--offset-xls));
+        padding: var(--offset-xls) calc(var(--offset-l) - var(--border-width));
     }
 
     &__container {
         @media (max-width: 1024px) {
-            grid-template-columns: calc(var(--offset-l) - var(--border-width)) 1fr calc(var(--offset-l) - var(--border-width));
+            grid-template-columns: unset;
         }
     }
 

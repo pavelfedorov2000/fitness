@@ -62,6 +62,8 @@
     // .success-story-start__content
 
     &__content {
+        position: relative;
+        z-index: 25;
         @extend %grid-center;
         align-content: center;
         text-align: center;

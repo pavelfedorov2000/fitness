@@ -20,7 +20,9 @@
     }
 
     &__grid {
-        min-height: 100vh;
+        @media(max-width: 1024px) {
+            min-height: 100vh;
+        }
     }
 
     // .clients-reviews__bg

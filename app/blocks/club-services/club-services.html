@@ -1,109 +1,181 @@
 <section class="club-services">
-	<div class="container club-services__grid">
-		<div class="section-body club-services__content">
-			<h2 class="section-title club-services__title section-title--stroke">Услуги <span>клуба</span></h2>
-			<div class="club-services__tabs">
-				<a href="#aims" class="tab club-services__tab active">Цели</a>
-				<a href="#club-zones" class="tab club-services__tab" type="button">Зоны клуба</a>
-				<a href="#children-sections" class="tab club-services__tab" type="button">Детские<br>
-					секции</a>
-				<a href="#business-classes" class="tab club-services__tab" type="button">Бизнесс<br>
-					классы</a>
-				<a href="#individual-lessons" class="tab club-services__tab" type="button">Индивидуальные<br>
-					занятия</a>
-				<a href="#test-workout" class="tab club-services__tab" type="button">Пробная<br>
-					тренировка</a>
-				<a href="#mobile-app" class="tab club-services__tab" type="button">Мобильное<br>
-					приложение</a>
-				<a href="#sport-food" class="tab club-services__tab" type="button">Спорт.<br>
-					питание</a>
-				<a href="#more" class="tab club-services__tab" type="button">Еще</a>
-			</div>
-			<div class="select club-services__select select--with_border">
-				<div class="select__title">Зоны клуба</div>
-				<div class="select__content">
-					<input id="clubService0" class="select__input" type="radio" name="clubService" />
-					<label for="clubService0" tabindex="0" class="select__label" data-tab="aims">Цели</label>
-					<input id="clubService1" class="select__input" type="radio" name="clubService" checked />
-					<label for="clubService1" tabindex="0" class="select__label" data-tab="club-zones">Зоны
-						клуба</label>
-					<input id="clubService2" class="select__input" type="radio" name="clubService" />
-					<label for="clubService2" tabindex="0" class="select__label" data-tab="children-sections">Детские
-						секции</label>
-					<input id="clubService3" class="select__input" type="radio" name="clubService" />
-					<label for="clubService3" tabindex="0" class="select__label" data-tab="business-classes">Бизнесс
-						классы</label>
-					<input id="clubService4" class="select__input" type="radio" name="clubService" />
-					<label for="clubService4" tabindex="0" class="select__label"
-						data-tab="individual-lessons">Индивидуальные занятия</label>
-					<input id="clubService5" class="select__input" type="radio" name="clubService" />
-					<label for="clubService5" tabindex="0" class="select__label" data-tab="test-workout">Пробная
-						тренировка</label>
-					<input id="clubService6" class="select__input" type="radio" name="clubService" />
-					<label for="clubService6" tabindex="0" class="select__label" data-tab="mobile-app">Мобильное
-						приложение</label>
-					<input id="clubService7" class="select__input" type="radio" name="clubService" />
-					<label for="clubService7" tabindex="0" class="select__label" data-tab="sport-food">Спорт.
-						питание</label>
-					<input id="clubService8" class="select__input" type="radio" name="clubService" />
-					<label for="clubService8" tabindex="0" class="select__label" data-tab="more">Еще</label>
-				</div>
-			</div>
-		</div>
-		<div class="club-services__tabs-content">
-			@@include('blocks/aims/aims.html', {
-			"class": "tabs-content"
-			})
-			@@include('blocks/club-zones/club-zones.html', {
-			"class": "tabs-content"
-			})
-			@@include('blocks/children-sections/children-sections.html', {
-			"class": "tabs-content",
-			"withoutTop": true
-			})
-			<section id="business-classes"
-				class="tabs-content workout-section business-classes workout-section--without-top">
-				<div class="container">
-					<div class="section-body">
-						<div class="splide business-classes-slider workout-section__slider">
-							<div class="splide__track">
-								<div class="splide__list">
-									@@include('blocks/workout-card/workout-card.html', {
-									"blue": true,
-									"brsWithout": true,
-									"title": "Йога"
-									})
-									@@include('blocks/workout-card/workout-card.html', {
-									"blue": true,
-									"brsWithout": true,
-									"title": "Йога"
-									})
-									@@include('blocks/workout-card/workout-card.html', {
-									"blue": true,
-									"brsWithout": true,
-									"title": "Йога"
-									})
-								</div>
-							</div>
-							@@include('blocks/slider-nav/slider-nav.html', {
-							"class": "workout-section"
-							})
-						</div>
-					</div>
-				</div>
-			</section>
-			@@include('blocks/individual-lessons/individual-lessons.html', {
-			"class": "tabs-content"
-			})
-			@@include('blocks/club-services-more/club-services-more.html', {
-			"class": "tabs-content"
-			})
-			@@include('blocks/sport-food/sport-food.html', {
-			"class": "tabs-content"
-			})
-			@@include('blocks/test-workout/test-workout.html', {
-			"class": "tabs-content"
-			})
-		</div>
-	</div>
+    <div class="container club-services__grid">
+        <div class="section-body club-services__content">
+            <h2 class="section-title club-services__title section-title--stroke">Услуги <span>клуба</span>
+            </h2>
+            <div class="club-services__tabs">
+                <a href="#aims"
+                   class="tab club-services__tab active">Цели</a>
+                <a href="#club-zones"
+                   class="tab club-services__tab"
+                   type="button">Зоны клуба</a>
+                <a href="#children-sections"
+                   class="tab club-services__tab"
+                   type="button">Детские<br>
+                    секции</a>
+                <a href="#business-classes"
+                   class="tab club-services__tab"
+                   type="button">Бизнесс<br>
+                    классы</a>
+                <a href="#individual-lessons"
+                   class="tab club-services__tab"
+                   type="button">Индивидуальные<br>
+                    занятия</a>
+                <a href="#test-workout"
+                   class="tab club-services__tab"
+                   type="button">Пробная<br>
+                    тренировка</a>
+                <a href="#mobile-app"
+                   class="tab club-services__tab"
+                   type="button">Мобильное<br>
+                    приложение</a>
+                <a href="#sport-food"
+                   class="tab club-services__tab"
+                   type="button">Спорт.<br>
+                    питание</a>
+                <a href="#more"
+                   class="tab club-services__tab"
+                   type="button">Еще</a>
+            </div>
+        </div>
+        <div class="select club-services__select select--with_border">
+            <div class="select__title">Зоны клуба</div>
+            <div class="select__content">
+                <input id="clubService0"
+                       class="select__input"
+                       type="radio"
+                       name="clubService" />
+                <label for="clubService0"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="aims">Цели</label>
+                <input id="clubService1"
+                       class="select__input"
+                       type="radio"
+                       name="clubService"
+                       checked />
+                <label for="clubService1"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="club-zones">Зоны
+                    клуба</label>
+                <input id="clubService2"
+                       class="select__input"
+                       type="radio"
+                       name="clubService" />
+                <label for="clubService2"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="children-sections">Детские
+                    секции</label>
+                <input id="clubService3"
+                       class="select__input"
+                       type="radio"
+                       name="clubService" />
+                <label for="clubService3"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="business-classes">Бизнесс
+                    классы</label>
+                <input id="clubService4"
+                       class="select__input"
+                       type="radio"
+                       name="clubService" />
+                <label for="clubService4"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="individual-lessons">Индивидуальные занятия</label>
+                <input id="clubService5"
+                       class="select__input"
+                       type="radio"
+                       name="clubService" />
+                <label for="clubService5"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="test-workout">Пробная
+                    тренировка</label>
+                <input id="clubService6"
+                       class="select__input"
+                       type="radio"
+                       name="clubService" />
+                <label for="clubService6"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="mobile-app">Мобильное
+                    приложение</label>
+                <input id="clubService7"
+                       class="select__input"
+                       type="radio"
+                       name="clubService" />
+                <label for="clubService7"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="sport-food">Спорт.
+                    питание</label>
+                <input id="clubService8"
+                       class="select__input"
+                       type="radio"
+                       name="clubService" />
+                <label for="clubService8"
+                       tabindex="0"
+                       class="select__label"
+                       data-tab="more">Еще</label>
+            </div>
+        </div>
+        <div class="club-services__tabs-content">
+            @@include('blocks/aims/aims.html', {
+            "class": "tabs-content"
+            })
+            @@include('blocks/club-zones/club-zones.html', {
+            "class": "tabs-content"
+            })
+            @@include('blocks/children-sections/children-sections.html', {
+            "class": "tabs-content",
+            "withoutTop": true
+            })
+            <section id="business-classes"
+                     class="tabs-content workout-section business-classes workout-section--without-top">
+                <div class="container">
+                    <div class="section-body">
+                        <div class="splide business-classes-slider workout-section__slider">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    @@include('blocks/workout-card/workout-card.html', {
+                                    "blue": true,
+                                    "brsWithout": true,
+                                    "title": "Йога"
+                                    })
+                                    @@include('blocks/workout-card/workout-card.html', {
+                                    "blue": true,
+                                    "brsWithout": true,
+                                    "title": "Йога"
+                                    })
+                                    @@include('blocks/workout-card/workout-card.html', {
+                                    "blue": true,
+                                    "brsWithout": true,
+                                    "title": "Йога"
+                                    })
+                                </div>
+                            </div>
+                            @@include('blocks/slider-nav/slider-nav.html', {
+                            "class": "workout-section"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('blocks/individual-lessons/individual-lessons.html', {
+            "class": "tabs-content"
+            })
+            @@include('blocks/club-services-more/club-services-more.html', {
+            "class": "tabs-content"
+            })
+            @@include('blocks/sport-food/sport-food.html', {
+            "class": "tabs-content"
+            })
+            @@include('blocks/test-workout/test-workout.html', {
+            "class": "tabs-content"
+            })
+        </div>
+    </div>
 </section>
