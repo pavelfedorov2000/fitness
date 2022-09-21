@@ -3,7 +3,7 @@
 	@@include('blocks/site-map/site-map.html')
 	@@include("blocks/header/header.html")
 	@@include('blocks/burger/burger.html')
-	<main class="page">
+	<main data-club="3" class="page">
 		@@include("blocks/promo-club/promo-club.html")
 		@@include("blocks/sale/sale.html")
 		@@include("blocks/club-video/club-video.html")
@@ -34,4 +34,77 @@
 </div>
 @@include("blocks/link/link.html")
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script>
+	$.ajax({
+		url: 'assets/clubs.json',
+		method: 'GET',
+		contentType: 'application/json',
+		dataType: 'json'
+	}).done(response => {
+		const clubsData = response.clubs.filter(club => club.data.id == $('main').attr('data-club')); // 3
+		const clubData = clubsData.find(club => club.data.id == $('main').attr('data-club'));
+
+		ymaps.ready(function () {
+			// Создание экземпляра карты и его привязка к созданному контейнеру.
+			let clubMap = new ymaps.Map('club-map', {
+				center: clubData.coordinates,
+				zoom: 15,
+				controls: [],
+				//balloonOffset: [38, 38]
+			}, {
+				searchControlProvider: 'yandex#search',
+				//suppressMapOpenBlock: true
+			});
+
+			clubMap.behaviors.disable('scrollZoom');
+
+			// Создание макета балуна на основе Twitter Bootstrap.
+			let warehouseBalloonLayout = ymaps.templateLayoutFactory.createClass(
+				`<div class="map-balloon">
+			$[properties.balloonTitle]
+			$[properties.balloonAddress]
+			$[properties.balloonWorkHours]
+			$[properties.balloonTel]
+			<a class="btn map-balloon__btn" href="club.html">Подробнее о клубе</a>
+		</div>`
+			);
+
+			//let warehousePlacemark;
+			let clubPlacemarks = {};
+			var GeoObjects = [];
+			let club = clubData; // Создание метки с пользовательским макетом
+			clubPlacemarks[club.data.id] = new ymaps.Placemark(club.coordinates, {
+				balloonTitle: `<div class="map-balloon__title">${club.title.text}</div>`,
+				balloonAddress: club.address_full && club.address_full !== '' && `<p
+				class="map-balloon__item map-balloon__item--address">${club.address_full}</p>`,
+				balloonWorkHours: club.work_hours && club.work_hours.items && club
+					.work_hours.items.length > 0 ?
+					`<div class="map-balloon__item map-balloon__item--time">
+				Работаем ${club.work_hours.items.join(', ')}
+			</div>` : null,
+				balloonTel: club.tel && club.tel !== '' &&
+					`<a class="map-balloon__item map-balloon__item--tel"
+				href="tel:${club.tel.split('').map(item => item.split('').filter(el => el !== '' && el !== '(' && el !== ')' && el !== '-')).join('')}">${club.tel}</a>`,
+			}, {
+				iconImageHref: 'assets/images/icons/map-pin.svg',
+				iconLayout: "default#image",
+				iconImageSize: [48, 56],
+				iconImageOffset: [-24, -56],
+				balloonShadow: false,
+				balloonLayout: warehouseBalloonLayout,
+				balloonPanelMaxMapArea: 0
+			});
+			clubMap.geoObjects.add(clubPlacemarks[club.data.id]);
+
+			GeoObjects[0] = clubPlacemarks[club.data.id];
+		});
+
+		if (response.error) {
+			$('.warehouse').remove();
+		}
+	}).fail(function (response) {
+		console.error(`HTTP error ${response.status}`);
+	});
+
+</script>
 </body>

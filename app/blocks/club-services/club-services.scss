@@ -44,8 +44,7 @@
         @media (max-width: 1024px) {
             display: block;
             margin-bottom: var(--offset-l);
-            margin-left: calc(var(--mob-padding) * (-1));
-            width: 100vw;
+            grid-column: 1 / -1;
 
             .select__title {
                 border-color: var(--line-color);
@@ -63,11 +62,21 @@
 
     &__tab {
         min-height: 3.6rem;
+
+        &:after {
+            bottom: -2.3rem;
+        }
     }
 
     // .club-services__tabs-content
 
     &__tabs-content {
         grid-column: 1 / -1;
+    }
+
+    .children-sections {
+        @media (max-width: 767px) {
+            @include padding-y(var(--offset-m));
+        }
     }
 }

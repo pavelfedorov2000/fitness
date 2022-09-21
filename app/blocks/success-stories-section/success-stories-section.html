@@ -115,8 +115,8 @@
 						</div>
 						<div class="success-story__img">
 							<picture>
-								<source type="image/webp" srcset="assets/images/content/success-stories/04.webp">
-								<img src="assets/images/content/success-stories/04.png" alt="фото" width="194"
+								<source type="image/webp" srcset="assets/images/content/success-stories/01.webp">
+								<img src="assets/images/content/success-stories/01.png" alt="фото" width="194"
 									height="540" loading="lazy">
 							</picture>
 						</div>
@@ -145,8 +145,8 @@
 						</div>
 						<div class="success-story__img">
 							<picture>
-								<source type="image/webp" srcset="assets/images/content/success-stories/01.webp">
-								<img src="assets/images/content/success-stories/01.png" alt="фото" width="194"
+								<source type="image/webp" srcset="assets/images/content/success-stories/02.webp">
+								<img src="assets/images/content/success-stories/02.png" alt="фото" width="194"
 									height="540" loading="lazy">
 							</picture>
 						</div>
@@ -177,24 +177,9 @@
 					Приходи в FITNESSON
 				</div>
 				<form action="#" class="success-stories-section__form-body">
-					<div class="select success-stories-section__form-select">
-						<div class="select__title">Выберите клуб</div>
-						<div class="select__content">
-							<input id="club0" class="select__input" type="radio" name="club" checked />
-							<label for="club0" tabindex="0" class="select__label" data-value="Выберите клуб">Выберите
-								клуб</label>
-							<input id="club1" class="select__input" type="radio" name="club" />
-							<label for="club1" tabindex="0" class="select__label"
-								data-value="Электросталь">Электросталь</label>
-							<input id="club2" class="select__input" type="radio" name="club" />
-							<label for="club2" tabindex="0" class="select__label" data-value="Можайск">Можайск</label>
-							<input id="club3" class="select__input" type="radio" name="club" />
-							<label for="club3" tabindex="0" class="select__label"
-								data-value="Звенигород">Звенигород</label>
-							<input id="club4" class="select__input" type="radio" name="club" />
-							<label for="club4" tabindex="0" class="select__label" data-value="Клин">Клин</label>
-						</div>
-					</div>
+					@@include('blocks/select-club/select-club.html', {
+					"class": "success-stories-section__form-select"
+					})
 					<label class="form-field success-stories-section__form-field">
 						<input class="input success-stories-section__form-input" name="name" placeholder="Имя">
 						<!-- <span>Имя</span> -->

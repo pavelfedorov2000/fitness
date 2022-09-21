@@ -6,21 +6,23 @@
     &:before {
         @include rect(bottom, right, 0, 0, var(--gap), #fff);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             width: var(--section-padding);
             height: var(--section-padding);
         }
     }
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:after {
-            @include rect(top, right, 0, var(--gap), 100%, rgba(#fff, .5));
+            @include rect(top, right, 0, var(--gap), 100%, rgba(#fff, 0.5));
             width: 0.1rem;
         }
     }
 
     &__grid {
-        min-height: 100vh;
+        @media (max-width: 1024px) {
+            min-height: 100vh;
+        }
     }
 
     // .clients-reviews__bg
@@ -28,12 +30,12 @@
     &__bg {
         grid-column: 2 / -1;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column-start: 1;
         }
 
         img {
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 object-position: 0%;
             }
         }
@@ -46,18 +48,18 @@
         grid-row: 1 / 2;
         color: #fff;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: grid;
             grid-template-columns: 1fr var(--gap) 1.5rem var(--title);
             grid-template-rows: max-content 6rem var(--gap) 1fr;
-            grid-template-areas: '. . . title'
+            grid-template-areas:
+                '. . . title'
                 '. . . .'
                 '. player . .'
-                '. . . .'
-            ;
+                '. . . .';
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             @include padding-y(var(--offset-l));
         }
     }
@@ -65,11 +67,11 @@
     // .clients-reviews__title
 
     &__title {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: title;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             text-align: center;
         }
     }
@@ -77,11 +79,11 @@
     // .clients-reviews__player
 
     &__player {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: player;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             position: absolute;
             top: 50%;
             left: 50%;

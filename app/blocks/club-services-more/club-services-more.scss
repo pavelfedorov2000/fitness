@@ -43,6 +43,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        z-index: 20;
 
         @media (max-width: 1024px) {
             right: 0;

@@ -6,7 +6,7 @@
 
     position: relative;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         @include padding-y(var(--offset-m));
     }
 
@@ -22,7 +22,7 @@
         display: grid;
 
         @media (min-width: 1025px) {
-            min-height: 100vh;
+            //min-height: 100vh;
             grid-template-columns: repeat(2, var(--gap)) calc(var(--img) - var(--gap) * 2) 1fr repeat(2, var(--gap));
             grid-template-rows: var(--section-padding-xl) 1fr 12.3rem;
         }
@@ -45,7 +45,7 @@
     &__content {
         display: grid;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             row-gap: var(--offset-l);
         }
 
@@ -53,7 +53,9 @@
             grid-row: 2 / 3;
             grid-column: 3 / 5;
             grid-template-rows: max-content 10.4rem max-content var(--circle-text);
-            grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text) - var(--offset)) var(--offset) 1fr;
+            grid-template-columns: var(--circle-text) calc(var(--title) - var(--circle-text) - var(--offset)) var(
+                    --offset
+                ) 1fr;
             grid-template-areas:
                 'title title title .'
                 '. . . .'
@@ -87,11 +89,11 @@
         grid-template-rows: repeat(4, max-content);
         gap: var(--offset-xxxl) 4.2rem;
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             gap: var(--offset-l);
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-auto-flow: column;
         }
 

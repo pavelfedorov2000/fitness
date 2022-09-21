@@ -13,18 +13,18 @@
 					занятия</a>
 				<a href="#test-workout" class="tab club-services__tab" type="button">Пробная<br>
 					тренировка</a>
-				<a href="#mobile-app" class="tab club-services__tab" type="button">Мобильное<br>
-					приложение</a>
+				<!-- <a href="#mobile-app" class="tab club-services__tab" type="button">Мобильное<br>
+					приложение</a> -->
 				<a href="#sport-food" class="tab club-services__tab" type="button">Спорт.<br>
 					питание</a>
 				<a href="#more" class="tab club-services__tab" type="button">Еще</a>
 			</div>
-			<div class="select club-services__select select--with_border">
-				<div class="select__title">Зоны клуба</div>
+			<div class="select club-services__select select--with_border" data-da=".club-services__grid, 1024, 1">
+				<div class="select__title">Цели</div>
 				<div class="select__content">
-					<input id="clubService0" class="select__input" type="radio" name="clubService" />
+					<input id="clubService0" class="select__input" type="radio" name="clubService" checked />
 					<label for="clubService0" tabindex="0" class="select__label" data-tab="aims">Цели</label>
-					<input id="clubService1" class="select__input" type="radio" name="clubService" checked />
+					<input id="clubService1" class="select__input" type="radio" name="clubService" />
 					<label for="clubService1" tabindex="0" class="select__label" data-tab="club-zones">Зоны
 						клуба</label>
 					<input id="clubService2" class="select__input" type="radio" name="clubService" />
@@ -39,9 +39,9 @@
 					<input id="clubService5" class="select__input" type="radio" name="clubService" />
 					<label for="clubService5" tabindex="0" class="select__label" data-tab="test-workout">Пробная
 						тренировка</label>
-					<input id="clubService6" class="select__input" type="radio" name="clubService" />
+					<!-- <input id="clubService6" class="select__input" type="radio" name="clubService" />
 					<label for="clubService6" tabindex="0" class="select__label" data-tab="mobile-app">Мобильное
-						приложение</label>
+						приложение</label> -->
 					<input id="clubService7" class="select__input" type="radio" name="clubService" />
 					<label for="clubService7" tabindex="0" class="select__label" data-tab="sport-food">Спорт.
 						питание</label>
@@ -58,6 +58,7 @@
 			"class": "tabs-content"
 			})
 			@@include('blocks/children-sections/children-sections.html', {
+			"id": "children-sections",
 			"class": "tabs-content",
 			"withoutTop": true
 			})

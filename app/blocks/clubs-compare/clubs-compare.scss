@@ -15,7 +15,7 @@
     }
 
     @media (max-width: 1024px) {
-        @include padding-y(var(--offset-l));
+        padding: var(--offset-l) 0 0;
     }
 
     // .clubs-compare__content
@@ -29,6 +29,10 @@
         }
 
         @media (max-width: 1024px) {
+            row-gap: var(--offset-xl);
+        }
+
+        @media (max-width: 767px) {
             row-gap: 2.2rem;
         }
     }
@@ -44,20 +48,12 @@
     // .clubs-compare__slider
 
     &__slider {
+        width: var(--container);
         padding-bottom: calc(12.8rem + var(--offset-xl));
 
         @media (max-width: 1024px) {
+            width: calc(100vw - (var(--mob-padding) * 2));
             padding-bottom: calc(var(--offset-l) + var(--offset-xl));
-        }
-
-        @media (min-width: 1025px) {
-            width: var(--container);
-        }
-
-        .splide__slide {
-            @media (max-width: 1024px) {
-                width: 20.8rem;
-            }
         }
     }
 
@@ -67,8 +63,9 @@
         bottom: 0;
 
         @media (max-width: 1024px) {
-            //width: 100%;
-            display: none;
+            left: calc(var(--mob-padding) * (-1));
+            right: calc(var(--mob-padding) * (-1));
+            transform: none;
         }
     }
 }
@@ -88,7 +85,7 @@
         @extend %text-16;
         max-width: 17rem;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 767px) {
             font-size: 1.5rem;
             line-height: 2.2rem;
         }
@@ -102,7 +99,7 @@
             margin-right: 5rem;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 767px) {
             font-size: 1.6rem;
             line-height: 2.2rem;
         }
@@ -112,7 +109,7 @@
     &__minus {
         --icon: var(--offset-m);
 
-        @media (max-width: 1024px) {
+        @media (max-width: 767px) {
             --icon: 2rem;
 
             font-size: 1.3rem;

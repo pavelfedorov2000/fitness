@@ -172,6 +172,7 @@
     // .fitness-card__list-item
 
     &__list-item {
+        display: none;
         position: relative;
         padding-left: var(--offset-xl);
 

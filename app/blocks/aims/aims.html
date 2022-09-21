@@ -1,39 +1,33 @@
-<div id="aims"
-     class="aims@@if(context.class){ @@class}">
-    @@include('blocks/aim-card/aim-card.html', {
-    "src": "assets/images/content/services/01",
-    "width": "960",
-    "height": "330",
-    "title": "Хочу<br>похудеть"
-    })
-    @@include('blocks/aim-card/aim-card.html', {
-    "src": "assets/images/content/services/02",
-    "width": "480",
-    "height": "656",
-    "title": "Хочу чувствовать себя на&nbsp;100%"
-    })
-    @@include('blocks/aim-card/aim-card.html', {
-    "src": "assets/images/content/services/03",
-    "width": "480",
-    "height": "330",
-    "title": "ФИтнес — лекарство от&nbsp;стресса"
-    })
-    @@include('blocks/aim-card/aim-card.html', {
-    "src": "assets/images/content/services/04",
-    "width": "480",
-    "height": "330",
-    "title": "Хочу набрать мышечную массу"
-    })
-    @@include('blocks/aim-card/aim-card.html', {
-    "src": "assets/images/content/services/05",
-    "width": "480",
-    "height": "330",
-    "title": "Хочу здоровую спину"
-    })
-    @@include('blocks/aim-card/aim-card.html', {
-    "src": "assets/images/content/services/06",
-    "width": "480",
-    "height": "330",
-    "title": "Хочу подтянутый орех"
-    })
+<div id="aims" class="aims@@if(context.class){ @@class}">
+	@@loop('blocks/aim-card/aim-card.html', [{
+	"src": "assets/images/content/services/01",
+	"width": "960",
+	"height": "330",
+	"title": "Хочу<br>похудеть"
+	}, {
+	"src": "assets/images/content/services/02",
+	"width": "480",
+	"height": "656",
+	"title": "Хочу чувствовать себя на&nbsp;100%"
+	}, {
+	"src": "assets/images/content/services/03",
+	"width": "480",
+	"height": "330",
+	"title": "ФИтнес — лекарство от&nbsp;стресса"
+	}, {
+	"src": "assets/images/content/services/04",
+	"width": "480",
+	"height": "330",
+	"title": "Хочу набрать мышечную массу"
+	}, {
+	"src": "assets/images/content/services/05",
+	"width": "480",
+	"height": "330",
+	"title": "Хочу здоровую спину"
+	}, {
+	"src": "assets/images/content/services/06",
+	"width": "480",
+	"height": "330",
+	"title": "Хочу подтянутый орех"
+	}])
 </div>

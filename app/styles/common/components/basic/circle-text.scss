@@ -35,7 +35,10 @@
     &--text {
         @extend %grid-center;
         position: relative;
-        border: 0.1rem solid #fff;
+
+        @media (min-width: 768px) {
+            border: 0.1rem solid #fff;
+        }
 
         #{$this} {
             &__img {

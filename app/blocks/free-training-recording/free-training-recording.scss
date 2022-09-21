@@ -19,7 +19,8 @@
 
     &__container {
         @media (max-width: 1024px) {
-            grid-template-columns: calc(var(--offset-l) - var(--border-width)) 1fr calc(var(--offset-l) - var(--border-width));
+            grid-template-columns: unset;
+            @include padding-x(calc(var(--offset-l) - var(--border-width)));
         }
     }
 

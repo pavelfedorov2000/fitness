@@ -76,6 +76,7 @@
             &__item {
                 @media (min-width: 1025px) {
                     width: calc(100% / 7);
+                    display: flex;
                     justify-content: center;
                 }
             }

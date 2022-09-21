@@ -6,7 +6,7 @@
     display: grid;
     grid-template-rows: var(--section-padding-xl) max-content 1fr max-content;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         grid-template-rows: var(--rating) calc(var(--map-h) - var(--rating)) max-content;
     }
 
@@ -15,11 +15,12 @@
 
         &:before {
             @include rect(top, left, 0, 0, var(--gap), var(--yellow));
+            z-index: 20;
         }
     }
 
     > * {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 1 / -1;
         }
     }
@@ -28,17 +29,19 @@
 
     &__map {
         grid-row: 1 / -1;
+        height: var(--section-mh);
 
-        @media(max-width: 1024px) {
+        > * {
+            height: 100% !important;
+        }
+
+        @media (max-width: 1024px) {
             grid-row: 1 / span 2;
+            height: var(--map-h);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-column: 1 / -2;
-        }
-
-        img {
-            @extend %cover;
         }
     }
 
@@ -47,7 +50,9 @@
     &__title {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
+            position: relative;
+            z-index: 10;
             display: block;
             grid-column: 3 / 4;
             grid-row: 2 / 3;
@@ -55,17 +60,19 @@
     }
 
     &__ratings {
+        position: relative;
+        z-index: 10;
         grid-row: 2 / 3;
         grid-auto-columns: var(--rating);
         grid-auto-flow: column;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-column: 4 / 6;
             justify-self: end;
             align-self: flex-start;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-row: 1 / 2;
         }
     }
@@ -73,7 +80,9 @@
     &__info-box {
         grid-row: -2 / -1;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
+            position: relative;
+            z-index: 10;
             grid-column: 3 / 5;
         }
     }
@@ -83,10 +92,11 @@
     &__marquee {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: block;
             grid-row: 1 / -1;
             grid-column: -2 / -1;
+            height: var(--section-mh);
         }
     }
 }
