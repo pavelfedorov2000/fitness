@@ -16,8 +16,14 @@
     // .club-vacancies__title
 
     &__title {
-        @media (min-width: 1025px) {
-            margin-bottom: var(--offset-xxl);
+        margin-bottom: var(--offset-xxl);
+
+        @media (max-width: 1024px) {
+            margin-bottom: var(--offset-xl);
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: var(--offset-m);
         }
     }
 
@@ -31,6 +37,7 @@
         @media (max-width: 1024px) {
             grid-column: 1 / -1;
             width: 100vw;
+            grid-column: 1 / -1;
             padding-bottom: calc(var(--offset-xl) + var(--offset-m));
         }
     }

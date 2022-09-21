@@ -17,6 +17,14 @@
         height: var(--arrow-btn);
         background-color: var(--light-blue);
         border: 0.1rem solid var(--light-blue);
+        transition: 0.3s all;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--yellow);
+                border-color: var(--yellow);
+            }
+        }
 
         &.active {
             font-weight: 700;

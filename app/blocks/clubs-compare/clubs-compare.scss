@@ -15,7 +15,7 @@
     }
 
     @media (max-width: 1024px) {
-        @include padding-y(var(--offset-l));
+        padding: var(--offset-l) 0 0;
     }
 
     // .clubs-compare__content
@@ -28,11 +28,11 @@
             justify-items: end;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             row-gap: var(--offset-xl);
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 767px) {
             row-gap: 2.2rem;
         }
     }
@@ -48,6 +48,7 @@
     // .clubs-compare__slider
 
     &__slider {
+        width: var(--container);
         padding-bottom: calc(12.8rem + var(--offset-xl));
         width: var(--container);
 
@@ -69,8 +70,9 @@
         bottom: 0;
 
         @media (max-width: 1024px) {
-            //width: 100%;
-            display: none;
+            left: calc(var(--mob-padding) * (-1));
+            right: calc(var(--mob-padding) * (-1));
+            transform: none;
         }
     }
 }

@@ -50,6 +50,7 @@
         position: absolute;
         top: calc(var(--offset-xxl) * (-2));
         right: 0;
+        z-index: 30;
 
         @media (max-width: 1024px) {
             top: auto;
@@ -77,7 +78,7 @@
                 @media (min-width: 1025px) {
                     top: auto;
                     right: auto;
-                    bottom: var(--offset-xls);
+                    bottom: var(--offset-l);
                     left: var(--offset-xls);
                     height: var(--nav);
                 }

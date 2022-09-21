@@ -61,6 +61,12 @@
             &::after {
                 transform: rotate(180deg);
             }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-color: var(--yellow);
+                }
+            }
         }
     }
 

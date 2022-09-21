@@ -97,6 +97,22 @@
         }
     }
 
+    &__success-item {
+        &.article-card {
+            &--style {
+                &_bg {
+                    &-ocean {
+                        .article-card {
+                            &__body {
+                                background-color: var(--ocean);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     // .blog-section__more
 
     &__more {

@@ -1,12 +1,6 @@
 .free-training-recording {
-    --border-width: var(--offset-m);
-
-    @media (max-width: 1024px) {
-        --border-width: var(--offset-xs);
-    }
-
     box-sizing: border-box;
-    border: var(--border-width) solid var(--yellow);
+    border: var(--offset-m) solid var(--yellow);
     @include padding-y(10.4rem);
 
     @media(min-width: 1025px) {
@@ -17,12 +11,13 @@
     }
 
     @media (max-width: 1024px) {
-        padding: var(--offset-xls) calc(var(--offset-l) - var(--border-width));
+        padding: var(--offset-xls) calc(var(--offset-l) - var(--offset-xs));
     }
 
     &__container {
         @media (max-width: 1024px) {
             grid-template-columns: unset;
+            @include padding-x(calc(var(--offset-l) - var(--offset-xs)));
         }
     }
 

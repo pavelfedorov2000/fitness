@@ -1,19 +1,21 @@
 .test-workout {
     --title-mb: 5.3rem;
 
-    @media(max-width: 1024px) {
+    @include padding-y(var(--section-padding));
+
+    @media (max-width: 1024px) {
         --title-mb: var(--offset-l);
 
         padding-bottom: var(--offset-l);
     }
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         padding-bottom: var(--offset-s);
     }
 
     position: relative;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
         &:before {
             @include rect(top, right, 0, 0, var(--gap), var(--ocean));
         }
@@ -28,28 +30,28 @@
     &__content {
         display: grid;
         grid-template-rows: max-content var(--title-mb) max-content 3.5rem max-content var(--offset-xs) max-content;
-        grid-template-areas: 'title title title'
+        grid-template-areas:
+            'title title title'
             '. . .'
             'ol . video'
             '. . video'
             'btn . video'
             '. . video'
-            'small . video'
-        ;
+            'small . video';
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media(min-width: 768px) and (max-width: 1024px) {
+        @media (min-width: 768px) and (max-width: 1024px) {
             column-gap: var(--offset-m);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-columns: 27.2rem 7.5rem 1fr;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-template-areas:
                 'title title'
                 '. .'
@@ -57,12 +59,15 @@
                 '. video'
                 'btn video'
                 '. video'
-                'small video'
-            ;
+                'small video';
         }
 
-        @media(max-width: 767px) {
-            grid-template-rows: max-content var(--offset-m) max-content var(--offset-l) max-content var(--offset-m) max-content var(--offset-s) max-content;
+        @media (max-width: 767px) {
+            grid-template-rows:
+                max-content var(--offset-m) max-content var(--offset-l) max-content var(--offset-m) max-content var(
+                    --offset-s
+                )
+                max-content;
             grid-template-areas:
                 'title'
                 '.'
@@ -72,8 +77,7 @@
                 '.'
                 'btn'
                 '.'
-                'small'
-            ;
+                'small';
         }
     }
 
@@ -85,7 +89,7 @@
         max-width: 36rem;
         grid-area: title;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.6rem;
             line-height: 2.2rem;
         }
@@ -97,7 +101,7 @@
         grid-area: ol;
         row-gap: var(--offset-l);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             row-gap: var(--offset-s);
         }
     }
@@ -116,7 +120,7 @@
         color: var(--dark-gray);
         grid-area: small;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             text-align: center;
         }
     }
@@ -133,7 +137,7 @@
     &__circle-text {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: block;
             position: absolute;
             top: calc(var(--half-circle) * (-1));

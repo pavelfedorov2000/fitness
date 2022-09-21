@@ -38,7 +38,15 @@
     // .article-card__img
 
     &__img {
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+
         img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
             @extend %cover;
         }
     }
@@ -50,7 +58,8 @@
     }
 
     &__kg {
-        //@extend %flex-row-center;
+        @extend %flex-row-center;
+        width: 100%;
         font-size: 8rem;
         line-height: 7.7rem;
         font-weight: 900;
@@ -61,6 +70,13 @@
         @media (max-width: 767px) {
             font-size: 3.8rem;
             line-height: 5.3rem;
+        }
+
+        span {
+            &:last-child {
+                position: relative;
+                z-index: 1;
+            }
         }
     }
 
@@ -130,6 +146,22 @@
                     background-color: var(--red);
                     @include padding-x(var(--offset-xxs));
                 }
+            }
+        }
+    }
+
+    &--style {
+        &_bg {
+            &-light-blue {
+                background-color: #8acdd5;
+            }
+
+            &-pink {
+                background-color: #f289b6;
+            }
+
+            &-yellow {
+                background-color: #ffe099;
             }
         }
     }

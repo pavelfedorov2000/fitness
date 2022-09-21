@@ -4,18 +4,20 @@
         app.burger.init();
         app.asidePopup.init();
         app.blog.init();
-        app.clubPhotos.init();
-        app.clubTeam.init();
-        app.clubsCompre.init();
+        //app.clubPhotos.init();
+        //app.clubTeam.init();
+        //app.clubsCompre.init();
         app.articleAside.init();
         app.faq.init();
-        app.childrenSections.init();
+        //app.childrenSections.init();
         app.clubReviews.init();
         app.coachBio.init();
         app.clubZones.init();
         app.timetableCalendar.init();
-        app.clubsMap.init();
+        //app.clubsMap.init();
         app.coachRating.init();
+        app.sliders.init();
+        app.fitnessCard.init();
         //app.cardServices.init();
         //app.slider.init();
         //app.menu.init();
@@ -40,322 +42,15 @@
         //const totalIndex = saleSlider.Components.Controller.getEnd() + 1;
         //saleSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${totalIndex}`;
 
-        if (document.querySelectorAll('.coach-photos-slider').length) {
-            const coachPhotosSlider = new Splide('.coach-photos-slider', {
-                //type: 'loop',
-                perPage: 3,
-                gap: '8rem',
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                    //pagination: 'slider-nav__pagination'
-                },
-                pagination: false,
-                breakpoints: {
-                    1024: {
-                        type: 'loop',
-                        perPage: 2,
-                        gap: '2.4rem',
-                    },
-                    640: {
-                        perPage: 1,
-                        gap: '1.6rem',
-                    },
-                },
-            });
-
-            const coachPhotosSliderBar = coachPhotosSlider.root.querySelector('.slider-nav__progress-bar');
-
-            coachPhotosSlider.on('mounted move', function () {
-                const end = coachPhotosSlider.Components.Controller.getEnd() + 1;
-                //console.log(end);
-                coachPhotosSliderBar.style.width = String(100 * (coachPhotosSlider.index + 1) / end) + '%';
-                coachPhotosSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${coachPhotosSlider.index + 1}`;
-                coachPhotosSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            coachPhotosSlider.mount();
-        }
-
-        if (document.querySelectorAll('.article-page-slider').length) {
-            const articlePageSlider = new Splide('.article-page-slider', {
-                type: 'loop',
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                    //pagination: 'slider-nav__pagination'
-                },
-                pagination: false
-            });
-
-            const articlePageSliderBar = articlePageSlider.root.querySelector('.slider-nav__progress-bar');
-
-            articlePageSlider.on('mounted move', function () {
-                const end = articlePageSlider.Components.Controller.getEnd() + 1;
-                //console.log(end);
-                articlePageSliderBar.style.width = String(100 * (articlePageSlider.index + 1) / end) + '%';
-                articlePageSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${articlePageSlider.index + 1}`;
-                articlePageSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            articlePageSlider.mount();
-        }
-
-
-        if (document.querySelectorAll('.sale-slider').length) {
-            const saleSlider = new Splide('.sale-slider', {
-                speed: 1000,
-                type: 'loop',
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                    //pagination: 'slider-nav__pagination'
-                },
-                pagination: false
-            });
-
-            const saleSliderBar = saleSlider.root.querySelector('.slider-nav__progress-bar');
-
-            saleSlider.on('mounted move', function () {
-                const end = saleSlider.Components.Controller.getEnd() + 1;
-                //console.log(end);
-                saleSliderBar.style.width = String(100 * (saleSlider.index + 1) / end) + '%';
-                saleSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${saleSlider.index + 1}`;
-                saleSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            saleSlider.mount();
-        }
-
-        if (document.querySelectorAll('.blog-slider').length) {
-            const blogSlider = new Splide('.blog-slider', {
-                //type: 'loop',
-                perPage: 2,
-                gap: 16,
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                    //pagination: 'slider-nav__pagination'
-                },
-                pagination: false,
-                breakpoints: {
-                    575: {
-                        perPage: 1,
-                    },
-                },
-            });
-
-            const blogSliderBar = blogSlider.root.querySelector('.slider-nav__progress-bar');
-
-            //const totalIndex = saleSlider.Components.Controller.getEnd() + 1;
-            //saleSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${totalIndex}`;
-
-            // Update the bar width:
-            blogSlider.on('mounted move', function () {
-                const end = blogSlider.Components.Controller.getEnd() + 1;
-                //console.log(end);
-                blogSliderBar.style.width = String(100 * (blogSlider.index + 1) / end) + '%';
-                blogSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${blogSlider.index + 1}`;
-                blogSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            if ($(window).width() <= 1024) {
-                blogSlider.mount();
-            }
-        }
-
-        if (document.querySelectorAll('.events-slider').length) {
-            const eventsSlider = new Splide('.events-slider', {
-                perPage: 5,
-                gap: '9.4rem',
-                classes: {
-                    //arrow: 'splide__arrow',
-                    //prev: 'splide__arrow--prev',
-                    //next: 'splide__arrow--next',
-                    //pagination: 'slider-nav__pagination'
-                },
-                pagination: false
-            });
-
-            /* const activeSlide = document.querySelector('.events-slider__item.is-active');
-            console.log(activeSlide); */ // null
-            const eventsSectionContentActive = document.querySelector('.events-section__content.active');
-            const eventSliderSlides = document.querySelectorAll('.events-slider__item');
-
-            eventsSlider.on('mounted move', function () {
-                eventsSectionContentActive.classList.remove('active');
-                //const slideId = activeSlide.getAttribute('id').split('-')[1].split('').slice(-1)[0];
-                //console.log(saleSlider.index);
-                //document.querySelector('.events-slider__item.is-active').classList.add('active');
-                document.querySelectorAll('.events-section__content')[eventsSlider.index].classList.add('active');
-                eventSliderSlides.forEach(slide => slide.classList.remove('active'));
-                eventSliderSlides[eventsSlider.index].classList.add('active');
-            });
-
-            eventSliderSlides.forEach(slide => {
-                slide.addEventListener('click', () => {
-                    const slideId = slide.getAttribute('id').split('-')[1].split('').slice(-1)[0];
-                    eventsSectionContentActive.classList.remove('active');
-                    document.querySelector('.events-slider__item.active').classList.remove('active');
-                    eventSliderSlides[slideId - 1].classList.add('active');
-                    document.querySelectorAll('.events-section__content')[slideId - 1].classList.add('active');
-                    eventsSlider.go(slideId - 1);
-                });
-            });
-
-            eventsSlider.mount();
-        }
-
-        if (document.querySelectorAll('.club-vacancies-slider').length) {
-            const clubVacanciesSlider = new Splide('.club-vacancies-slider', {
-                type: 'loop',
-                perPage: 2,
-                gap: '2.4rem',
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                    //pagination: 'slider-nav__pagination'
-                },
-                pagination: false,
-                breakpoints: {
-                    575: {
-                        perPage: 1,
-                        gap: '1.7rem',
-                    },
-                },
-            });
-
-            const clubVacanciesSliderBar = clubVacanciesSlider.root.querySelector('.slider-nav__progress-bar');
-
-            clubVacanciesSlider.on('mounted move', function () {
-                const end = clubVacanciesSlider.Components.Controller.getEnd() + 1;
-                //console.log(end);
-                clubVacanciesSliderBar.style.width = String(100 * (clubVacanciesSlider.index + 1) / end) + '%';
-                clubVacanciesSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${clubVacanciesSlider.index + 1}`;
-                clubVacanciesSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            if ($(window).width() <= 1024) {
-                clubVacanciesSlider.mount();
-            }
-        }
-
-        if (document.querySelectorAll('.success-stories-slider').length) {
-            const successStoriesSlider = new Splide('.success-stories-slider', {
-                type: 'loop',
-                speed: 1000,
-                perPage: 3,
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                    //pagination: 'slider-nav__pagination'
-                },
-                pagination: false,
-                breakpoints: {
-                    1024: {
-                        perPage: 2,
-                        gap: '1.6rem',
-                    },
-                    767: {
-                        perPage: 1
-                    },
-                },
-            });
-
-            const successStoriesSliderBar = successStoriesSlider.root.querySelector('.slider-nav__progress-bar');
-
-            successStoriesSlider.on('mounted move', function () {
-                const end = successStoriesSlider.Components.Controller.getEnd() + 1;
-                //console.log(end);
-                successStoriesSliderBar.style.width = String(100 * (successStoriesSlider.index + 1) / end) + '%';
-                successStoriesSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${successStoriesSlider.index + 1}`;
-                successStoriesSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            successStoriesSlider.mount();
-        }
-
-        if (document.querySelectorAll('.individual-lessons-slider').length) {
-            const individualLessonsSlider = new Splide('.individual-lessons-slider', {
-                type: 'loop',
-                gap: '6.4rem',
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                },
-                pagination: false
-            });
-
-            const individualLessonsSliderBar = individualLessonsSlider.root.querySelector('.slider-nav__progress-bar');
-
-            individualLessonsSlider.on('mounted move', function () {
-                const end = individualLessonsSlider.Components.Controller.getEnd() + 1;
-                individualLessonsSliderBar.style.width = String(100 * (individualLessonsSlider.index + 1) / end) + '%';
-                individualLessonsSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${individualLessonsSlider.index + 1}`;
-                individualLessonsSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            individualLessonsSlider.mount();
-        }
-
-        if (document.querySelectorAll('.services-more-slider').length) {
-            const servicesMoreSlider = new Splide('.services-more-slider', {
-                type: 'loop',
-                perPage: 3,
-                gap: '4rem',
-                classes: {
-                    arrows: 'splide__arrows slider-nav__arrows',
-                    arrow: 'splide__arrow slider-nav__arrow',
-                    prev: 'splide__arrow--prev slider-nav__arrow--prev',
-                    next: 'splide__arrow--next slider-nav__arrow--next',
-                },
-                pagination: false,
-                breakpoints: {
-                    1024: {
-                        perPage: 2,
-                        gap: '1.6rem',
-                    },
-                    640: {
-                        perPage: 1
-                    },
-                },
-            });
-
-            const servicesMoreSliderBar = servicesMoreSlider.root.querySelector('.slider-nav__progress-bar');
-
-            servicesMoreSlider.on('mounted move', function () {
-                const end = servicesMoreSlider.Components.Controller.getEnd() + 1;
-                servicesMoreSliderBar.style.width = String(100 * (servicesMoreSlider.index + 1) / end) + '%';
-                servicesMoreSlider.root.querySelector('.slider-nav__counter--current').textContent = `0${servicesMoreSlider.index + 1}`;
-                servicesMoreSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${end}`;
-            });
-
-            servicesMoreSlider.mount();
-        }
-
         $('.tab').on('click', function (e) {
             e.preventDefault();
 
             const $tab = $(this);
-            const $tabNotActive = $(this).siblings();
+            const $tabNotActive = $tab.siblings();
             const $tabsContent = $tab.closest('section').find('.tabs-content');
 
             $($tabNotActive).removeClass('active');
-            $tabsContent.removeClass('tabs-content--active');
+            $tabsContent.removeClass('active');
             $tab.addClass('active');
             $($tab.attr('href')).addClass('active');
         });
