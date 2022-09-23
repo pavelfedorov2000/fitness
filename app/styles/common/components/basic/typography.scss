@@ -1,0 +1,251 @@
+.typography {
+
+    // .typography__section
+
+    &__section {
+        @include padding-y(var(--section-padding));
+
+        &:nth-child(odd) {
+            background-color: #EDF3F9;
+        }
+    }
+
+    // .typography__container
+
+    &__container {
+        @media(min-width: 1025px) {
+            width: 105.4rem;
+        }
+    }
+
+    // .typography__title
+
+    &__title {
+        @extend .title;
+        @extend %text-26;
+        position: relative;
+        padding-top: 2.1rem;
+        margin-bottom: 5.9rem;
+
+        @media(max-width: 1024px) {
+            margin-bottom: var(--offset-l);
+        }
+
+        &::before {
+            content: 'Typography';
+            position: absolute;
+            top: 0;
+            left: 0;
+            @extend %text-14;
+            font-weight: 400;
+            color: var(--dark-gray);
+            text-transform: none;
+        }
+    }
+
+    // .typography__grid
+
+    &__grid {
+        margin-bottom: calc(var(--section-padding) * (-1));
+
+        @media(max-width: 1024px) {
+            width: 100%;
+        }
+
+        //@include row-grid(var(--section-padding));
+
+        @media(min-width: 1025px) {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            //grid-template-columns: repeat(auto-fill, minmax(48.8rem, 1fr));
+            //grid-template-columns: repeat(2, 42.9rem);
+        }
+    }
+
+    &__item {
+        width: 100%;
+        margin-bottom: var(--section-padding);
+
+        @media(max-width: 767px) {
+            margin-bottom: var(--offset-l);
+        }
+    }
+}
+
+.typography-item {
+    $this: &;
+    @include row-grid(var(--offset-l));
+
+    @media(min-width: 1025px) {
+        width: 42.9rem;
+    }
+
+    // .typography-item__title
+
+    &__title {
+        @extend .title;
+
+        &--size {
+            &_xs {
+                @extend %text-14;
+            }
+
+            &_s {
+                @extend %text-16;
+            }
+
+            &_m {
+                @extend %text-20;
+            }
+
+            &_l {
+                @extend %text-26;
+            }
+
+            &_xl {
+                @extend %text-32;
+            }
+
+            &_xxl {
+                @extend %text-38;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+
+        &--size {
+            &_s {
+                @extend %text-14;
+            }
+
+            &_m {
+                @extend %text-15;
+            }
+
+            &_l {
+                @extend %text-16;
+            }
+
+            &_xl {
+                @extend %text-17;
+            }
+
+            &_xxl {
+                @extend %text-18;
+            }
+        }
+    }
+
+    &__text {
+        &--size {
+            &_xxs {
+                @extend %text-12;
+            }
+
+            &_xs {
+                @extend %text-13;
+            }
+
+            &_s {
+                @extend %text-14;
+            }
+
+            &_m {
+                @extend %text-15;
+            }
+
+            &_l {
+                @extend %text-16;
+            }
+
+            &_xl {
+                @extend %text-17;
+            }
+
+            &_xxl {
+                @extend %text-18;
+            }
+        }
+    }
+
+    // .typography-item__list
+
+    &__list {
+        display: flex;
+        margin-left: -5rem;
+        margin-bottom: calc(var(--offset-s) * (-1));
+
+        @media(max-width: 767px) {
+            flex-wrap: wrap;
+            margin-left: calc(var(--offset-s) * (-1));
+        }
+    }
+
+    // .typography-item__list-item
+
+    &__list-item {
+        @extend %text-14;
+        margin-left: 5rem;
+        margin-bottom: var(--offset-s);
+
+        @media(max-width: 767px) {
+            width: calc(50% - var(--offset-s));
+            margin-left: var(--offset-s);
+        }
+
+        &:first-child {
+            @media(min-width: 1025px) {
+                flex-grow: 1;
+            }
+        }
+
+        dt {
+            color: var(--dark-gray);
+            margin-bottom: 0.4rem;
+        }
+    }
+
+    &--style {
+        &_text {
+            gap: var(--offset-xl) var(--offset-xxxl);
+
+            @media(min-width: 768px) {
+                grid-template-columns: max-content 1fr;
+                grid-template-areas: 'title dl'
+                    'text text'
+                ;
+            }
+
+            @media(min-width: 1025px) {
+                width: 48.8rem;
+            }
+
+            @media(max-width: 767px) {
+                gap: var(--offset-m);
+            }
+
+            #{$this} {
+                &__title {
+                    @media(min-width: 768px) {
+                        grid-area: title;
+                    }
+                }
+
+                &__dl {
+                    @media(min-width: 768px) {
+                        grid-area: dl;
+                    }
+                }
+
+                &__text {
+                    @media(min-width: 768px) {
+                        grid-area: text;
+                    }
+                }
+            }
+        }
+    }
+}

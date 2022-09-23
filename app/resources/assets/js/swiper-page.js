@@ -1,5 +1,5 @@
 $(function () {
-    if (document.querySelectorAll('.page-slider').length) {
+    if (document.querySelectorAll('.page-slider').length && document.querySelectorAll('.footer').length) {
         document.querySelector('.footer').classList.add('swiper-slide');
     }
 
@@ -24,7 +24,7 @@ $(function () {
                 parallax: true,
                 on: {
                     init: function (swiper) {
-                        document.querySelector('.swiper-slide-active').classList.remove('active');	
+                        document.querySelector('.swiper-slide-active').classList.remove('active');
                     },
                     slideChange: function (swiper) {
                         if (!document.querySelector('.swiper-slide-active').classList.contains('active')) {
@@ -42,7 +42,7 @@ $(function () {
                     },
                 }
             });
-        
+
             pageSlider.init();
         } else if (window.innerWidth < 1024 && document.querySelector(".page-slider").classList.contains("swiper-initialized")) {
             pageSlider.destroy(true, true);

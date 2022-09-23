@@ -14,6 +14,17 @@
         app.sliders.init();
         app.fitnessCard.init();
 
+        const scrollBtn = document.querySelector('.scroll-btn');
+        const scrollBtnSection = scrollBtn.closest('section');
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: scrollBtnSection.getBoundingClientRect().height,
+                behavior: 'smooth'
+            });
+        });
+
+
         $("a[href^='#']").not("a[href='#']").not('.tab').click(function (e) {
             e.preventDefault();
 
