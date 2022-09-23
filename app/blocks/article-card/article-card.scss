@@ -1,5 +1,7 @@
 .article-card {
     $this: &;
+
+    overflow: hidden;
     // .article-card__date
 
     &__date {
@@ -162,6 +164,14 @@
 
             &-yellow {
                 background-color: #ffe099;
+            }
+
+            &-ocean {
+                #{$this} {
+                    &__body {
+                        background-color: var(--ocean);
+                    }
+                }
             }
         }
     }

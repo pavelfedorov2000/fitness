@@ -53,17 +53,19 @@
         }
     }
 
-    &__menus {
-        @media (max-width: 1024px) {
-            grid-column: 1 / -1;
-        }
-    }
-
     &__menu-col {
         @media (max-width: 1024px) {
             border: 0.1rem solid var(--black);
             border-top: none;
             padding-right: 0;
+            margin-left: calc(var(--mob-padding) * (-1));
+            margin-right: calc(var(--mob-padding) * (-1));
+        }
+
+        &:not(:first-of-type) {
+            @media (max-width: 767px) {
+                margin-top: calc(var(--offset-m) * (-1));
+            }
         }
 
         &--1 {

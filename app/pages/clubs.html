@@ -1,168 +1,159 @@
 @@include("blocks/head/head.html", {"title": "Клубы"})
 <div class="wrapper clubs-page">
-    @@include('blocks/site-map/site-map.html')
-    @@include("blocks/header/header.html", {
-    "dark": true
-    })
-    @@include('blocks/burger/burger.html')
-    <main class="page">
-        @@include('blocks/promo-clubs/promo-clubs.html')
+	@@include('blocks/site-map/site-map.html')
+	@@include("blocks/header/header.html", {
+	"dark": true
+	})
+	@@include('blocks/burger/burger.html')
+	<main class="page">
+		@@include('blocks/promo-clubs/promo-clubs.html')
 
-        <div class="clubs-page container">
-            <div class="clubs-page__aside-client">
-                <figure class="aside-client aside-client--light-blue">
-                    <div class="aside-client__img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/aside-clients/man.webp">
-                            <img src="assets/images/content/aside-clients/man.jpg"
-                                 alt="фото"
-                                 width="200"
-                                 height="480"
-                                 loading="lazy">
-                        </picture>
-                    </div>
-                    <figcaption class="aside-client__descr">
-                        Постоянный клиент клуба<br>
-                        Дмитрий Борисов.
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="section-body clubs-page__content">
-                <h1 class="section-title clubs-page__title">40 клубов по россии</h1>
-                <div class="clubs-page__inner">
-                    <div class="clubs-page__nav">
-                        <div class="clubs-page__nav-inner">
-                            <div class="clubs-page__nav-title">Регионы</div>
-                            <div class="clubs-page__nav-btns">
-                                <a class="clubs-page__nav-btn active"
-                                   href="#moscow">
-                                    <span>8</span>
-                                    Московская
-                                </a>
-                                <a class="clubs-page__nav-btn"
-                                   href="#leningrad">
-                                    <span>2</span>
-                                    Ленинградская
-                                </a>
-                                <a class="clubs-page__nav-btn"
-                                   href="#bashkortostan">
-                                    <span>3</span>
-                                    Башкортостан
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clubs-page__regions">
-                        <section id="moscow"
-                                 class="clubs-page__region region">
-                            <h2 class="region__title">Московская область</h2>
-                            <div class="region__items">
-                                @@loop('blocks/region-item/region-item.html', [{
-                                "id": "0",
-                                "abbr": "vl",
-                                "city": "Владимир",
-                                "address": "г. Владимир, октябрьский проспект, д. 10, 4-5 этажи",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "1",
-                                "abbr": "kl",
-                                "city": "Клин",
-                                "address": "г. Клин, ул. Карла Маркса, д.6, стр. 7, ТЦ «Клинский», 3 этаж",
-                                "timetable": "Пн—Пт с 07:00 до 24:00,<br>Сб—Вс 09:00 до 21:00",
-                                }, {
-                                "id": "2",
-                                "abbr": "sl",
-                                "city": "Солнечногорск",
-                                "address": "г. Солнечногорск, ул. Красная, д. 120",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "3",
-                                "abbr": "el",
-                                "city": "Электросталь",
-                                "address": "г. Электросталь, пр-т. Ленина, д. 25а",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "4",
-                                "abbr": "oz",
-                                "city": "Орехово–зуево",
-                                "address": "г. Орехово-Зуево, ул. Ленина, д. 121, ТЦ Остров",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "5",
-                                "abbr": "zv",
-                                "city": "Звенигород",
-                                "address": "г. Звенигород, ул. Московская, дом 12",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "6",
-                                "abbr": "kz",
-                                "city": "Краснознаменск",
-                                "address": "г. Краснознаменск, ул. Краснознаменная, 23",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "7",
-                                "abbr": "go",
-                                "city": "Голицыно",
-                                "address": "Московская область, Большие Вяземы, пос. Школьный, 12 А",
-                                "timetable": "Пн—Пт с 07:00 до 24:00,<br>Сб—Вс 09:00 до 22:00",
-                                }])
-                            </div>
-                        </section>
-                        <section id="leningrad"
-                                 class="clubs-page__region region">
-                            <h2 class="region__title">Ленинградская область</h2>
-                            <div class="region__items">
-                                @@loop('blocks/region-item/region-item.html', [{
-                                "id": "3",
-                                "abbr": "el",
-                                "city": "Электросталь",
-                                "address": "г. Электросталь, пр-т. Ленина, д. 25а",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "4",
-                                "abbr": "oz",
-                                "city": "Орехово–зуево",
-                                "address": "г. Орехово-Зуево, ул. Ленина, д. 121, ТЦ Остров",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }])
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+		<div class="clubs-page container">
+			<div class="clubs-page__aside-client">
+				<figure class="aside-client aside-client--light-blue">
+					<div class="aside-client__img">
+						<picture>
+							<source type="image/webp" srcset="assets/images/content/aside-clients/man.webp">
+							<img src="assets/images/content/aside-clients/man.jpg" alt="фото" width="200" height="480"
+								loading="lazy">
+						</picture>
+					</div>
+					<figcaption class="aside-client__descr">
+						Постоянный клиент клуба<br>
+						Дмитрий Борисов.
+					</figcaption>
+				</figure>
+			</div>
+			<div class="section-body clubs-page__content">
+				<h1 class="section-title clubs-page__title">40 клубов по россии</h1>
+				<div class="clubs-page__inner">
+					<div class="clubs-page__nav">
+						<div class="clubs-page__nav-inner">
+							<div class="clubs-page__nav-title">Регионы</div>
+							<div class="clubs-page__nav-btns">
+								<a class="clubs-page__nav-btn active" href="#moscow">
+									<span>8</span>
+									Московская
+								</a>
+								<a class="clubs-page__nav-btn" href="#leningrad">
+									<span>2</span>
+									Ленинградская
+								</a>
+								<a class="clubs-page__nav-btn" href="#bashkortostan">
+									<span>3</span>
+									Башкортостан
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="clubs-page__regions">
+						<section id="moscow" class="clubs-page__region region">
+							<h2 class="region__title">Московская область</h2>
+							<div class="region__items">
+								@@loop('blocks/region-item/region-item.html', [{
+								"id": "0",
+								"abbr": "vl",
+								"city": "Владимир",
+								"address": "г. Владимир, октябрьский проспект, д. 10, 4-5 этажи",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "1",
+								"abbr": "kl",
+								"city": "Клин",
+								"address": "г. Клин, ул. Карла Маркса, д.6, стр. 7, ТЦ «Клинский», 3 этаж",
+								"timetable": "Пн—Пт с 07:00 до 24:00,<br>Сб—Вс 09:00 до 21:00",
+								}, {
+								"id": "2",
+								"abbr": "sl",
+								"city": "Солнечногорск",
+								"address": "г. Солнечногорск, ул. Красная, д. 120",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "3",
+								"abbr": "el",
+								"city": "Электросталь",
+								"address": "г. Электросталь, пр-т. Ленина, д. 25а",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "4",
+								"abbr": "oz",
+								"city": "Орехово–зуево",
+								"address": "г. Орехово-Зуево, ул. Ленина, д. 121, ТЦ Остров",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "5",
+								"abbr": "zv",
+								"city": "Звенигород",
+								"address": "г. Звенигород, ул. Московская, дом 12",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "6",
+								"abbr": "kz",
+								"city": "Краснознаменск",
+								"address": "г. Краснознаменск, ул. Краснознаменная, 23",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "7",
+								"abbr": "go",
+								"city": "Голицыно",
+								"address": "Московская область, Большие Вяземы, пос. Школьный, 12 А",
+								"timetable": "Пн—Пт с 07:00 до 24:00,<br>Сб—Вс 09:00 до 22:00",
+								}])
+							</div>
+						</section>
+						<section id="leningrad" class="clubs-page__region region">
+							<h2 class="region__title">Ленинградская область</h2>
+							<div class="region__items">
+								@@loop('blocks/region-item/region-item.html', [{
+								"id": "3",
+								"abbr": "el",
+								"city": "Электросталь",
+								"address": "г. Электросталь, пр-т. Ленина, д. 25а",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "4",
+								"abbr": "oz",
+								"city": "Орехово–зуево",
+								"address": "г. Орехово-Зуево, ул. Ленина, д. 121, ТЦ Остров",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}])
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="./assets/libs/js/sticky-sidebar.min.js"></script>
 <script>
-    function fixClubsPageAside() {
-        if ($('.clubs-page').length && $(window).width() > 1024) {
-            new StickySidebar('.clubs-page__aside-client', {
-                topSpacing: 0,
-                bottomSpacing: 0,
-                containerSelector: '.clubs-page',
-                innerWrapperSelector: '.clubs-page__aside-client .aside-client'
-            });
+	function fixClubsPageAside() {
+		if ($('.clubs-page').length && $(window).width() > 1024) {
+			new StickySidebar('.clubs-page__aside-client', {
+				topSpacing: 0,
+				bottomSpacing: 0,
+				containerSelector: '.clubs-page',
+				innerWrapperSelector: '.clubs-page__aside-client .aside-client'
+			});
 
-            new StickySidebar('.clubs-page__nav', {
-                topSpacing: 0,
-                bottomSpacing: 0,
-                containerSelector: '.clubs-page__inner',
-                innerWrapperSelector: '.clubs-page__nav-inner'
-            });
-        }
-    }
+			new StickySidebar('.clubs-page__nav', {
+				topSpacing: 0,
+				bottomSpacing: 0,
+				containerSelector: '.clubs-page__inner',
+				innerWrapperSelector: '.clubs-page__nav-inner'
+			});
+		}
+	}
 
-    fixClubsPageAside();
+	fixClubsPageAside();
 
-    window.addEventListener('resize', () => {
-        fixClubsPageAside();
-    });
+	window.addEventListener('resize', () => {
+		fixClubsPageAside();
+	});
 
 	$.ajax({
 		url: 'assets/clubs.json',
@@ -200,7 +191,7 @@
 						hasBalloon: false
 					});
 
-				clubMaps.behaviors.disable('scrollZoom');
+				clubsMap.behaviors.disable('scrollZoom');
 
 				// Создание макета балуна на основе Twitter Bootstrap.
 				let warehouseBalloonLayout = ymaps.templateLayoutFactory.createClass(
@@ -218,7 +209,7 @@
 				var GeoObjects = [];
 				for (let i = 0; i < clubsData.length; i++) {
 					let club = clubsData[i]; // Создание метки с пользовательским макетом
-					балуна.clubsPlacemarks[club.data.id] = new ymaps.Placemark(club.coordinates, {
+					clubsPlacemarks[club.data.id] = new ymaps.Placemark(club.coordinates, {
 						balloonTitle: `<div
     	class="map-balloon__title">${club.title.text}</div>`,
 						balloonAddress: club.address_full && club.address_full !== '' && `<p

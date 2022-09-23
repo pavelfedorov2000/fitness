@@ -1,16 +1,16 @@
 @@include("blocks/head/head.html", {"title": "Блог"})
 <div class="wrapper wrapper--yellow-promo">
-    @@include('blocks/site-map/site-map.html')
-    @@include("blocks/header/header.html", {
-    "dark": true
-    })
-    @@include('blocks/burger/burger.html')
-    <main class="page">
-        @@include('blocks/promo-blog/promo-blog.html')
-        <section class="blog-page">
-            <div class="container">
-                <div class="section-body">
-                    <div class="blog-page__filters tabs">
+	@@include('blocks/site-map/site-map.html')
+	@@include("blocks/header/header.html", {
+	"dark": true
+	})
+	@@include('blocks/burger/burger.html')
+	<main class="page">
+		@@include('blocks/promo-blog/promo-blog.html')
+		<section class="blog-page">
+			<div class="container">
+				<div class="section-body">
+					<!-- <div class="blog-page__filters tabs">
                         <button class="tab blog-page__filter active"
                                 type="button">Все категории</button>
                         <button class="tab blog-page__filter"
@@ -27,151 +27,113 @@
                                 type="button">Питание</button>
                         <button class="tab blog-page__filter"
                                 type="button">Истории успеха</button>
-                    </div>
+                    </div> -->
 
-                    <div class="blog-page__cards">
-                        <article class="article-card blog-page__card">
-                            <time class="date article-card__date"
-                                  datetime="2020-09-08">08.09.2020</time>
-                            <a href="#"
-                               class="article-card__body">
-                                <div class="article-card__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                srcset="assets/images/content/blog/01.webp">
-                                        <img src="assets/images/content/blog/01.jpg"
-                                             alt="фото"
-                                             width="344"
-                                             height="440"
-                                             loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="article-card__content">
-                                    <span class="label article-card__label">Тренировки</span>
-                                    <div class="article-card__title">Советы по домашним тренировкам
-                                        от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
-                                    </div>
-                                    @@include('blocks/views/views.html', {
-                                    "class": "article-card__views",
-                                    "value": "1 200"
-                                    })
-                                    @@include('blocks/arrow-btn/arrow-btn.html', {
-                                    "class": "article-card__arrow",
-                                    "bg": "white"
-                                    })
-                                </div>
-                            </a>
-                        </article>
-                        <article class="article-card blog-page__card sale">
-                            <time class="date article-card__date"
-                                  datetime="2020-09-08">08.09.2020</time>
-                            <a href="#"
-                               class="article-card__body">
-                                <div class="article-card__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                srcset="assets/images/content/blog/02.webp">
-                                        <img src="assets/images/content/blog/02.jpg"
-                                             alt="фото"
-                                             width="344"
-                                             height="440"
-                                             loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="article-card__content">
-                                    <span class="label article-card__label">Акции</span>
-                                    <div class="article-card__title">
-                                        <span>Осенние скидки</span>
-                                        <span>от 17% до 33%</span>
-                                    </div>
-                                    @@include('blocks/views/views.html', {
-                                    "class": "article-card__views",
-                                    "value": "542"
-                                    })
-                                    @@include('blocks/arrow-btn/arrow-btn.html', {
-                                    "class": "article-card__arrow",
-                                    "bg": "white"
-                                    })
-                                </div>
-                            </a>
-                        </article>
-                        <article class="article-card blog-page__card">
-                            <time class="date article-card__date"
-                                  datetime="2020-09-08">08.09.2020 </time>
-                            <a href="#"
-                               class="article-card__body">
-                                <div class="article-card__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                srcset="assets/images/content/blog/08.webp">
-                                        <img src="assets/images/content/blog/08.jpg"
-                                             alt="фото"
-                                             width="344"
-                                             height="440"
-                                             loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="article-card__content">
-                                    <span class="label article-card__label">Тренировки</span>
-                                    <div class="article-card__title">
-                                        Как определить оптимальную
-                                        программу тренировок?
-                                    </div>
-                                    @@include('blocks/views/views.html', {
-                                    "class": "article-card__views",
-                                    "value": "1 200"
-                                    })
-                                    @@include('blocks/arrow-btn/arrow-btn.html', {
-                                    "class": "article-card__arrow",
-                                    "bg": "white"
-                                    })
-                                </div>
-                            </a>
-                        </article>
-                        <article class="article-card blog-page__card sale">
-                            <time class="date article-card__date"
-                                  datetime="2020-09-08">08.09.2020 </time>
-                            <a href="#"
-                               class="article-card__body">
-                                <div class="article-card__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                srcset="assets/images/content/blog/10.webp">
-                                        <img src="assets/images/content/blog/10.jpg"
-                                             alt="фото"
-                                             width="344"
-                                             height="440"
-                                             loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="article-card__content">
-                                    <span class="label article-card__label">Акции</span>
-                                    <div class="article-card__title">
-                                        <span>Безумные</span>
-                                        <span>зимние скидки до 50%</span>
-                                    </div>
-                                    @@include('blocks/views/views.html', {
-                                    "class": "article-card__views",
-                                    "value": "542"
-                                    })
-                                    @@include('blocks/arrow-btn/arrow-btn.html', {
-                                    "class": "article-card__arrow",
-                                    "bg": "white"
-                                    })
-                                </div>
-                            </a>
-                        </article>
-                    </div>
+					<div class="blog-page__cards">
+						@@loop('blocks/article-card/article-card.html', [{
+						"class": "blog-page__card",
+						"date": {
+						"datetime": "2020-09-08",
+						"text": "08.09.2020"
+						},
+						"src": {
+						"webp": "assets/images/content/blog/01.webp",
+						"default": "assets/images/content/blog/01.jpg"
+						},
+						"label": {
+						"text": "Тренировки"
+						},
+						"title": "Советы по домашним тренировкам от&nbsp;тренера&nbsp; FITNESSON"
+						}, {
+						"class": "blog-page__card",
+						"sale": true,
+						"date": {
+						"datetime": "2020-09-08",
+						"text": "08.09.2020"
+						},
+						"src": {
+						"webp": "assets/images/content/blog/02.webp",
+						"default": "assets/images/content/blog/02.jpg"
+						},
+						"label": {
+						"text": "Акции"
+						},
+						"title": "<span>Осенние скидки</span><span>от 17% до 33%</span>"
+						}, {
+						"bg": "ocean",
+						"class": "blog-page__card",
+						"date": {
+						"datetime": "2020-09-08",
+						"text": "08.09.2020"
+						},
+						"src": {
+						"webp": "assets/images/content/blog/03.webp",
+						"default": "assets/images/content/blog/03.png"
+						},
+						"label": {
+						"text": "История успеха",
+						"bg": "black"
+						},
+						"kg": "-14",
+						"title": "Баланова Елена"
+						}, {
+						"class": "blog-page__card",
+						"date": {
+						"datetime": "2020-09-08",
+						"text": "08.09.2020"
+						},
+						"src": {
+						"webp": "assets/images/content/blog/08.webp",
+						"default": "assets/images/content/blog/08.jpg"
+						},
+						"label": {
+						"text": "Тренировки"
+						},
+						"title": "Как определить оптимальную программу тренировок?"
+						}, {
+						"bg": "ocean",
+						"class": "blog-page__card",
+						"date": {
+						"datetime": "2020-09-08",
+						"text": "08.09.2020"
+						},
+						"src": {
+						"webp": "assets/images/content/blog/04.webp",
+						"default": "assets/images/content/blog/04.png"
+						},
+						"label": {
+						"text": "История успеха",
+						"bg": "black"
+						},
+						"kg": "+12",
+						"title": "Березов Владимир"
+						}, {
+						"class": "blog-page__card",
+						"sale": true,
+						"date": {
+						"datetime": "2020-09-08",
+						"text": "08.09.2020"
+						},
+						"src": {
+						"webp": "assets/images/content/blog/10.webp",
+						"default": "assets/images/content/blog/10.jpg"
+						},
+						"label": {
+						"text": "Акции"
+						},
+						"title": "<span>Безумные</span><span>зимние скидки до 50%</span>"
+						}])
+					</div>
 
-                    @@include('blocks/pagination/pagination.html', {
-                    "class": "blog-page"
-                    })
-                </div>
-            </div>
-        </section>
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+					@@include('blocks/pagination/pagination.html', {
+					"class": "blog-page"
+					})
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
 </body>

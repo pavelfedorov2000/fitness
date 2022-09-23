@@ -16,8 +16,9 @@ app.sliders = {
 
         if (document.querySelectorAll('.coach-photos-slider').length) {
             const coachPhotosSlider = new Splide('.coach-photos-slider', {
-                //type: 'loop',
+                type: 'loop',
                 perPage: 3,
+                perMove: 1,
                 gap: `${getComputedStyle(document.documentElement).getPropertyValue('--section-padding')}`,
                 classes: {
                     arrows: 'splide__arrows slider-nav__arrows',

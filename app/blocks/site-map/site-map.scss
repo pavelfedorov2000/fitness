@@ -1,5 +1,9 @@
 .site-map {
     cursor: pointer;
+    position: fixed;
+    top: 28.4rem;
+    left: 0;
+    z-index: 200;
     @extend %grid-center;
     @extend %text-11;
     width: var(--section-padding);
@@ -7,14 +11,10 @@
     background-color: var(--purple);
     color: #fff;
 
-    @media (min-width: 1025px) {
-        position: fixed;
-        top: 28.4rem;
-        left: 0;
-        z-index: 200;
-    }
-
     @media (max-width: 1024px) {
+        top: 0;
+        left: auto;
+        right: var(--header-height);
         width: var(--header-height);
         height: var(--header-height);
     }

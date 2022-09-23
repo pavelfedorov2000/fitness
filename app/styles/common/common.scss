@@ -23,6 +23,7 @@ html {
 
 body {
     min-width: 320px;
+    overflow-x: hidden;
     font-style: normal;
     font-family: $ff;
     font-size: rem($fz);
@@ -54,6 +55,8 @@ textarea {
 
     &--yellow-promo {
         .header {
+            background-color: var(--yellow);
+
             &__logo-img {
                 path {
                     &:last-child {

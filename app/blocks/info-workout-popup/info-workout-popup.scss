@@ -1,13 +1,9 @@
 .info-workout-popup {
     --gap: var(--offset-xl);
 
-    @media(max-width: 1024px) {
-        --gap: var(--mob-padding);
-    }
-
     padding-top: var(--offset-xl);
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         padding-top: var(--offset-s);
     }
 
@@ -15,12 +11,23 @@
         height: 100%;
         display: grid;
         grid-template-columns: var(--gap) 1fr var(--gap);
+        align-content: start;
         overflow-x: hidden;
         overflow-y: auto;
 
-        @media(min-width: 1025px) {
-            grid-template-rows: max-content 2rem max-content var(--offset-l) max-content var(--offset-xls) max-content minmax(var(--offset-xls), 1fr) max-content;
-            grid-template-areas: '. head .'
+        @media (max-width: 1024px) {
+            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+        }
+
+        @media (min-width: 1025px) {
+            grid-template-rows:
+                max-content 2rem max-content var(--offset-l) max-content var(--offset-xls) max-content minmax(
+                    var(--offset-xls),
+                    1fr
+                )
+                max-content;
+            grid-template-areas:
+                '. head .'
                 '. . .'
                 '. text .'
                 '. . .'
@@ -28,16 +35,15 @@
                 '. . .'
                 '. coaches .'
                 '. . .'
-                'video video video'
-            ;
+                'video video video';
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             row-gap: var(--offset-m);
         }
 
         > * {
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 grid-column: 2 / -2;
             }
         }
@@ -55,23 +61,23 @@
     // .info-workout-popup__head
 
     &__head {
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: head;
         }
 
         > * {
             &:not(:last-child) {
-                @media(min-width: 768px) {
+                @media (min-width: 768px) {
                     margin-right: 3.2rem;
                 }
 
-                @media(max-width: 767px) {
+                @media (max-width: 767px) {
                     margin-bottom: calc(var(--offset-xxs) / 2);
                 }
             }
@@ -89,7 +95,7 @@
     &__club {
         @extend %text-17;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.3rem;
             line-height: 1.8rem;
         }
@@ -98,7 +104,7 @@
     // .info-workout-popup__text
 
     &__text {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: text;
         }
     }
@@ -113,7 +119,11 @@
         display: grid;
         grid-template-columns: var(--gap) 1fr var(--gap);
 
-        @media(min-width: 1025px) {
+        @media (max-width: 1024px) {
+            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+        }
+
+        @media (min-width: 1025px) {
             grid-area: form;
         }
     }
@@ -125,7 +135,7 @@
 
     &__form-wrap,
     &__video {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 1 / -1;
         }
     }
@@ -138,16 +148,15 @@
         background-color: var(--yellow);
         padding: var(--offset-l) var(--offset-xl);
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             @include padding-x(var(--mob-padding));
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
                 'name tel'
-                'btn btn'
-            ;
+                'btn btn';
         }
     }
 
@@ -157,18 +166,18 @@
         @include row-grid(var(--offset-xls));
         position: relative;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             row-gap: var(--offset-m);
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: coaches;
         }
 
         &::before {
             @extend %bg-contain;
 
-            @media(min-width: 1025px) {
+            @media (min-width: 1025px) {
                 content: '';
                 position: absolute;
                 top: 3rem;
@@ -185,7 +194,7 @@
     &__coach {
         @include row-grid(var(--offset-m));
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             row-gap: var(--offset-s);
         }
     }
@@ -193,7 +202,7 @@
     // .info-workout-popup__video
 
     &__video {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: video;
         }
     }

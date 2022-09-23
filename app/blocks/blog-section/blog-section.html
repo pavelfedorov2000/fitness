@@ -8,7 +8,44 @@
 			<div class="blog-section__grid">
 				<a href="blog.html" class="btn blog-section__link-btn btn--with_border">читать весь блог</a>
 				@@include('blocks/blog-section/slider.html')
-				@@include('blocks/blog-section/success.html')
+				<div class="blog-section__success">
+					@@loop('blocks/article-card/article-card.html', [{
+					"bg": "ocean",
+					"class": "blog-section__success-item",
+					"date": {
+					"datetime": "2020-09-08",
+					"text": "08.09.2020"
+					},
+					"src": {
+					"webp": "assets/images/content/blog/03.webp",
+					"default": "assets/images/content/blog/03.png"
+					},
+					"label": {
+					"text": "История успеха",
+					"bg": "black"
+					},
+					"kg": "-14",
+					"title": "Баланова Елена"
+					}, {
+					"bg": "ocean",
+					"class": "blog-section__success-item",
+					"date": {
+					"datetime": "2020-09-08",
+					"text": "08.09.2020"
+					},
+					"src": {
+					"webp": "assets/images/content/blog/03.webp",
+					"default": "assets/images/content/blog/03.png"
+					},
+					"format": "png",
+					"label": {
+					"text": "История успеха",
+					"bg": "black"
+					},
+					"kg": "-14",
+					"title": "Баланова Елена"
+					}])
+				</div>
 				<button class="btn blog-section__more btn--style_bg-black" type="button">Показать еще</button>
 			</div>
 		</div>

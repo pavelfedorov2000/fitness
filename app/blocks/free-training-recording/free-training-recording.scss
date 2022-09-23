@@ -3,21 +3,26 @@
     border: var(--offset-m) solid var(--yellow);
     @include padding-y(10.4rem);
 
-    @media(min-width: 1025px) {
+    @media (max-width: 1024px) {
+        @include padding-y(4rem);
+        border-width: var(--mob-padding);
+    }
+
+    @media (min-width: 1025px) {
         background-image: url(../images/elements/free-training-elements.svg);
         background-size: 164.6rem 42.9rem;
         background-position: 50% 12.5rem;
         background-repeat: no-repeat;
     }
 
-    @media (max-width: 1024px) {
+    /* @media (max-width: 1024px) {
         padding: var(--offset-xls) calc(var(--offset-l) - var(--offset-xs));
-    }
+    } */
 
     &__container {
         @media (max-width: 1024px) {
             grid-template-columns: unset;
-            @include padding-x(calc(var(--offset-l) - var(--offset-xs)));
+            @include padding-x(calc(var(--offset-l) - var(--mob-padding)));
         }
     }
 

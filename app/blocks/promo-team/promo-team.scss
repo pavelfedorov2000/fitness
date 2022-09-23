@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(2, var(--gap)) var(--select) var(--text) var(--input-height) 1fr repeat(2, var(--gap));
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         //padding-top: calc(var(--header-height) + var(--offset-m));
         padding-top: var(--offset-m);
         grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
@@ -14,14 +14,17 @@
     }
 
     > * {
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 2 / -2;
         }
     }
 
-    @media(min-width: 1025px) {
-        grid-template-rows: var(--header-height) var(--input-height) calc(var(--gap) - var(--header-height) - var(--input-height)) max-content 1rem max-content repeat(3, var(--input-height));
-        grid-template-areas: 'aside . . . . . . .'
+    @media (min-width: 1025px) {
+        grid-template-rows:
+            var(--header-height) var(--input-height) calc(var(--gap) - var(--header-height) - var(--input-height))
+            max-content 1rem max-content repeat(3, var(--input-height));
+        grid-template-areas:
+            'aside . . . . . . .'
             'aside . . . . img img .'
             'aside . title . . img img .'
             '. . title . . img img .'
@@ -52,7 +55,7 @@
             background-image: url(../images/elements/promo-team.svg);
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             left: calc(var(--mob-padding) * (-1));
             right: calc(var(--mob-padding) * (-1));
             bottom: 0;
@@ -77,7 +80,9 @@
     &__aside-img {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
+            position: relative;
+            z-index: 101;
             display: block;
             grid-area: aside;
         }
@@ -90,7 +95,7 @@
     // .promo-team__title
 
     &__title {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: title;
         }
     }
@@ -98,12 +103,12 @@
     // .promo-team__text
 
     &__text {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: text;
         }
 
         &:not(:last-child) {
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 margin-bottom: calc(var(--offset-l) - var(--offset-m));
             }
         }
@@ -117,18 +122,18 @@
         padding-left: var(--offset-m);
         padding-right: 5rem;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: search;
         }
     }
 
     &__select {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: select;
         }
 
         &:not(:last-child) {
-            @media(max-width: 1024px) {
+            @media (max-width: 1024px) {
                 margin-bottom: calc(var(--offset-l) - var(--offset-m));
             }
         }
@@ -141,11 +146,11 @@
     // .promo-team__img
 
     &__img {
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-area: img;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             grid-column: 1 / -1;
         }
 
@@ -160,7 +165,7 @@
     padding-bottom: calc(var(--section-padding) + var(--offset-xxs));
     position: relative;
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         padding-top: var(--offset-m);
         padding-bottom: var(--offset-l);
     }

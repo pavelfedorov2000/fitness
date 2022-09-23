@@ -4,6 +4,7 @@
     &__grid {
         @media (min-width: 1025px) {
             align-items: flex-end;
+            grid-template-rows: var(--section-mh);
         }
 
         @media (max-width: 1024px) {

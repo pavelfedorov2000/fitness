@@ -4,7 +4,9 @@
     --form-mh: 59.6rem;
 
     .header {
-        position: static;
+        @media (min-width: 1025px) {
+            position: static;
+        }
     }
 
     position: relative;
@@ -26,6 +28,7 @@
         border-top: $border;
 
         @media (max-width: 1024px) {
+            padding-top: var(--header-height);
             padding-bottom: var(--offset-l);
         }
     }

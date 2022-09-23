@@ -4,6 +4,13 @@
 
     &__item {
         height: var(--offset-xls);
+        transition: 0.3s box-shadow;
+
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: $bsh;
+            }
+        }
 
         &--radius {
             border-radius: 0.4rem;

@@ -63,14 +63,6 @@
         text-align: center;
     }
 
-    // .region-btn__arrow
-
-    &__arrow {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-
     @media (any-hover: hover) {
         &:hover {
             background-color: #fff;
@@ -80,10 +72,8 @@
                 color: var(--light-blue);
             }
 
-            #{$this} {
-                &__arrow {
-                    background-color: var(--yellow);
-                }
+            .arrow-btn {
+                background-color: var(--yellow);
             }
         }
     }

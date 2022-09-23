@@ -9,18 +9,19 @@
         border: $border;
         display: grid;
         place-items: center;
-        transition: .3s background-color, .3s border-color;
+        align-content: center;
+        transition: 0.3s background-color, 0.3s border-color;
     }
 
     .js {
         &-close {
             opacity: 0;
             transform: translateX(1rem);
-            transition: .3s transform, .3s opacity;
+            transition: 0.3s transform, 0.3s opacity;
         }
 
         &-open {
-            transition: .3s opacity;
+            transition: 0.3s opacity;
         }
 
         &-close,
@@ -69,8 +70,7 @@
             '. contacts .'
             '. soc .'
             '. . .'
-            '. apps .'
-        ;
+            '. apps .';
     }
 
     &.active {
@@ -106,12 +106,12 @@
         grid-area: apps;
         column-gap: var(--mob-padding);
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-auto-columns: 14.2rem;
             grid-auto-flow: column;
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             grid-template-columns: repeat(2, 1fr);
         }
     }

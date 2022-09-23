@@ -16,9 +16,9 @@ app.asidePopup = {
             $('.request-popup').addClass('active');
         }); */
 
-        $('button[data-popup]').on('click', function () {
+        $('[data-popup]').on('click', function (e) {
+            e.preventDefault();
             const $popupBtn = $(this);
-            console.log($popupBtn.attr('data-popup'));
 
             $('body').addClass('_lock');
             $('html').addClass('disable-fix');

@@ -1,32 +1,28 @@
 <div class="region-item">
-    <button class="region-item__btn region-btn"
-            type="button"
-            data-region="@@abbr"
-            data-id="@@id">
-        <span class="region-btn__title">@@city</span>
-        @@include('blocks/arrow-btn/arrow-btn.html', {
-        "class": "region-btn",
-        "bg": "white"
-        })
-    </button>
-    <ul class="region-item__info">
-        <li class="region-item__info-item">
-            <svg>
-                <use xlink:href="assets/images/sprite.svg#pin"></use>
-            </svg>
-            @@address
-        </li>
-        <li class="region-item__info-item">
-            <svg>
-                <use xlink:href="assets/images/sprite.svg#time"></use>
-            </svg>
-            @@timetable
-        </li>
-        <li class="region-item__info-item">
-            <svg>
-                <use xlink:href="assets/images/sprite.svg#phone"></use>
-            </svg>
-            <a href="tel:+74959467609">+7 (495) 946–76–09</a>
-        </li>
-    </ul>
+	<button class="region-item__btn region-btn" type="button" data-region="@@abbr" data-id="@@id">
+		<span class="region-btn__title">@@city</span>
+		@@include('blocks/arrow-btn/arrow-btn.html', {
+		"bg": "white"
+		})
+	</button>
+	<ul class="region-item__info">
+		<li class="region-item__info-item">
+			<svg>
+				<use xlink:href="assets/images/sprite.svg#pin"></use>
+			</svg>
+			@@address
+		</li>
+		<li class="region-item__info-item">
+			<svg>
+				<use xlink:href="assets/images/sprite.svg#time"></use>
+			</svg>
+			@@timetable
+		</li>
+		<li class="region-item__info-item">
+			<svg>
+				<use xlink:href="assets/images/sprite.svg#phone"></use>
+			</svg>
+			<a href="tel:+74959467609">+7 (495) 946–76–09</a>
+		</li>
+	</ul>
 </div>

@@ -1,5 +1,5 @@
 @@include("blocks/head/head.html", {"title": "Контакты"})
-<div class="wrapper">
+<div class="wrapper contacts-page">
 	@@include('blocks/site-map/site-map.html')
 	@@include("blocks/header/header.html")
 	@@include('blocks/burger/burger.html')
@@ -15,4 +15,116 @@
 </div>
 @@include("blocks/link/link.html")
 <script src="assets/js/swiper-page.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script>
+	$.ajax({
+		url: 'assets/clubs.json',
+		method: 'GET',
+		contentType: 'application/json',
+		dataType: 'json'
+	}).done(response => {
+		const clubsData = response.clubs;
+
+		if ($('.contacts-page').length) {
+			ymaps.ready(function () {
+				// Создание экземпляра карты и его привязка к созданному контейнеру.
+				let clubsMap = new ymaps.Map('clubs-map', {
+						center: clubsData[0].coordinates,
+						zoom: 5,
+						controls: [],
+						//balloonOffset: [38, 38]
+					}, {
+						searchControlProvider: 'yandex#search',
+						//suppressMapOpenBlock: true
+					}),
+					clusterer = new ymaps.Clusterer({
+						preset: 'islands#invertedVioletClusterIcons',
+						clusterIconColor: '#FFCC48',
+						clusterIcons: [{
+							size: [38, 38],
+							offset: [-19, -19]
+						}],
+						maxZoom: 5,
+						gridSize: 38,
+						groupByCoordinates: false,
+						clusterDisableClickZoom: false,
+						clusterHideIconOnBalloonOpen: false,
+						geoObjectHideIconOnBalloonOpen: false,
+						hasBalloon: false
+					});
+
+				clubsMap.behaviors.disable('scrollZoom');
+
+				// Создание макета балуна на основе Twitter Bootstrap.
+				let warehouseBalloonLayout = ymaps.templateLayoutFactory.createClass(
+					`<div class="map-balloon">
+    	$[properties.balloonTitle]
+    	$[properties.balloonAddress]
+    	$[properties.balloonWorkHours]
+    	$[properties.balloonTel]
+    	<a class="btn map-balloon__btn" href="club.html">Подробнее о клубе</a>
+    </div>`
+				);
+
+				//let warehousePlacemark;
+				let clubsPlacemarks = {};
+				var GeoObjects = [];
+				for (let i = 0; i < clubsData.length; i++) {
+					let club = clubsData[i]; // Создание метки с пользовательским макетом
+					clubsPlacemarks[club.data.id] = new ymaps.Placemark(club.coordinates, {
+						balloonTitle: `<div
+    	class="map-balloon__title">${club.title.text}</div>`,
+						balloonAddress: club.address_full && club.address_full !== '' && `<p
+    		class="map-balloon__item map-balloon__item--address">${club.address_full}</p>`,
+						balloonWorkHours: club.work_hours && club.work_hours.items && club
+							.work_hours.items.length > 0 ?
+							`<div class="map-balloon__item map-balloon__item--time">
+    		Работаем ${club.work_hours.items.join(', ')}
+    	</div>` : null,
+						balloonTel: club.tel && club.tel !== '' &&
+							`<a class="map-balloon__item map-balloon__item--tel"
+    		href="tel:${club.tel.split('').map(item => item.split('').filter(el => el !== '' && el !== '(' && el !== ')' && el !== '-')).join('')}">${club.tel}</a>`,
+					}, {
+						iconImageHref: 'assets/images/icons/map-pin.svg',
+						iconLayout: "default#image",
+						iconImageSize: [48, 56],
+						iconImageOffset: [-24, -56],
+						balloonShadow: false,
+						balloonLayout: warehouseBalloonLayout,
+						balloonPanelMaxMapArea: 0
+					});
+					clubsMap.geoObjects.add(clubsPlacemarks[club.data.id]);
+
+					GeoObjects[i] = clubsPlacemarks[club.data.id];
+
+					clubsMap.geoObjects.events.add('click', function (e) {
+						//clubsMap.setZoom(5);
+						const target = e.get('target');
+						clubsMap.setCenter(target.geometry._coordinates);
+					});
+
+					clubsMap.events.add('click', function (e) {
+						clubsMap.balloon.close();
+					});
+				}
+
+				clusterer.add(GeoObjects);
+				clubsMap.geoObjects.add(clusterer);
+
+				clubsMap.setBounds(clusterer.getBounds(), {
+					checkZoomRange: true,
+					zoomMargin: 38,
+					zoom: 5
+				});
+			});
+		}
+
+		if (response.error) {
+			$('.warehouse').remove();
+		}
+	}).fail(function (response) {
+		console.error(`HTTP error ${response.status}`);
+	});
+
+</script>
 </body>

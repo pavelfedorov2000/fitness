@@ -4,25 +4,15 @@
         app.burger.init();
         app.asidePopup.init();
         app.blog.init();
-        //app.clubPhotos.init();
-        //app.clubTeam.init();
-        //app.clubsCompre.init();
         app.articleAside.init();
         app.faq.init();
-        //app.childrenSections.init();
         app.clubReviews.init();
         app.coachBio.init();
         app.clubZones.init();
         app.timetableCalendar.init();
-        //app.clubsMap.init();
         app.coachRating.init();
         app.sliders.init();
         app.fitnessCard.init();
-        //app.cardServices.init();
-        //app.slider.init();
-        //app.menu.init();
-        //app.popup.init();
-        //app.validation.init();
 
         $("a[href^='#']").not("a[href='#']").not('.tab').click(function (e) {
             e.preventDefault();
@@ -38,9 +28,6 @@
             $("html, body").animate({ scrollTop: $(href).offset().top + "px" });
             return false;
         });
-
-        //const totalIndex = saleSlider.Components.Controller.getEnd() + 1;
-        //saleSlider.root.querySelector('.slider-nav__counter--total').textContent = `0${totalIndex}`;
 
         $('.tab').on('click', function (e) {
             e.preventDefault();
@@ -245,6 +232,9 @@
         };
 
         const da = new DynamicAdapt("max");
-        da.init();
+
+        if (!$('.promo-team').length) {
+            da.init();
+        }
     });
 })(jQuery)

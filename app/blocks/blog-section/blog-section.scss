@@ -97,22 +97,6 @@
         }
     }
 
-    &__success-item {
-        &.article-card {
-            &--style {
-                &_bg {
-                    &-ocean {
-                        .article-card {
-                            &__body {
-                                background-color: var(--ocean);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     // .blog-section__more
 
     &__more {
@@ -184,7 +168,7 @@
 
     // .blog-page__filters
 
-    &__filters {
+    /* &__filters {
         display: none;
 
         @media (min-width: 1025px) {
@@ -222,7 +206,7 @@
                 width: 100%;
             }
         }
-    }
+    } */
 
     &__cards {
         display: grid;
@@ -257,6 +241,7 @@
         &:first-child {
             @media (max-width: 1024px) {
                 position: relative;
+                overflow: visible;
             }
 
             &::before {
