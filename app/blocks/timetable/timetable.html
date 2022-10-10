@@ -1,118 +1,111 @@
 <section id="timetable" class="timetable-section">
-	<div class="container timetable-section__grid">
-		<figure class="aside-client timetable-section__aside-client">
-			<div class="aside-client__img">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/aside-clients/man.webp">
-					<img src="assets/images/content/aside-clients/man.jpg" alt="фото" width="200" height="480"
-						loading="lazy">
-				</picture>
-			</div>
-			<figcaption class="aside-client__descr">
-				Постоянный клиент клуба<br>
-				Дмитрий Борисов.
-			</figcaption>
-		</figure>
-		<div class="timetable-section__head">
-			<time class="date-box timetable-section__date" datetime="2022-12-10">
-				<b class="date-box__day">10</b>
-				декабря
-			</time>
-			<h2 class="section-title timetable-section__title">
-				Расписание занятий
-				на&nbsp;сегодня
-			</h2>
-			<a href="timetable.html" class="btn timetable-section__btn">Все расписание</a>
-		</div>
-		<div class="timetable-section__items">
-			<article class="timetable-card progress">
-				<div class="timetable-card__labels">
-					<span class="label timetable-card__label label--style_bg-green">в процессе</span>
-					<span class="label timetable-card__label">групповая тренировка</span>
-					<span class="label timetable-card__label label--style_bg-yellow">Планируется</span>
-				</div>
-				<div class="timetable-card__wrap">
-					<h3 class="timetable-card__title title">Пилатес</h3>
-					<div class="timetable-card__time">8:00 — 8:50</div>
-				</div>
-				<div class="section-text timetable-card__text">
-					Силовая тренировка. Занятие направлено на общее укрепление мышечной системы.
-				</div>
-				<div class="timetable-card__coach">
-					<picture class="timetable-card__coach-img">
-						<source type="image/webp" srcset="assets/images/content/timetable/01/coach.webp">
-						<img src="assets/images/content/timetable/01/coach.jpg" alt="фото тренера" width="80"
-							height="80" loading="lazy">
-					</picture>
-					<div class="timetable-card__coach-name">Светлана Альпина</div>
-					<div class="timetable-card__coach-specialization">Тренер групповых программ</div>
-				</div>
-				<picture class="timetable-card__img">
-					<source type="image/webp" srcset="assets/images/content/timetable/01/img.webp">
-					<img src="assets/images/content/timetable/01/img.jpg" alt="фото" width="556" height="336"
-						loading="lazy">
-				</picture>
-				<span class="timetable-card__progress" style="--progress: 50%;"></span>
-				<div class="timetable-card__people">
-					<b class="title">12</b>
-					Человек
-					на&nbsp;занятии
-				</div>
-				<button data-popup="info-workout-popup" type="button" class="btn arrow-btn timetable-card__btn">
-					<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-					</svg>
-					<span>Подробнее</span>
-				</button>
-			</article>
-			<article class="timetable-card planning">
-				<div class="timetable-card__labels">
-					<span class="label timetable-card__label label--style_bg-green">в процессе</span>
-					<span class="label timetable-card__label label--style_bg-yellow">Планируется</span>
-					<span class="label timetable-card__label">Индивидуальная тренировка</span>
-				</div>
-				<div class="timetable-card__wrap">
-					<h3 class="timetable-card__title title">Йога</h3>
-					<div class="timetable-card__time">10:00 — 10:50</div>
-				</div>
-				<div class="section-text timetable-card__text">
-					Совокупность физической практики, которая направлена на управление физиологическими
-					и&nbsp;психическими функциями организма.
-				</div>
-				<div class="timetable-card__coach">
-					<picture class="timetable-card__coach-img">
-						<source type="image/webp" srcset="assets/images/content/timetable/02/coach.webp">
-						<img src="assets/images/content/timetable/02/coach.jpg" alt="фото тренера" width="80"
-							height="80" loading="lazy">
-					</picture>
-					<div class="timetable-card__coach-name">Екатерина Гарибальди</div>
-					<div class="timetable-card__coach-specialization">Тренер групповых программ</div>
-				</div>
-				<picture class="timetable-card__img">
-					<source type="image/webp" srcset="assets/images/content/timetable/02/img.webp">
-					<img src="assets/images/content/timetable/02/img.jpg" alt="фото" width="556" height="336"
-						loading="lazy">
-				</picture>
-				<div class="timetable-card__progress" data-progress="0">
-					<span></span>
-				</div>
-				<div class="timetable-card__people">
-					<b class="title">12</b>
-					Человек
-					на&nbsp;занятии
-				</div>
-				<button data-popup="info-workout-popup" type="button" class="btn arrow-btn timetable-card__btn">
-					<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-					</svg>
-					<span>Подробнее</span>
-				</button>
-			</article>
-		</div>
-		@@include('blocks/aside-nums/aside-nums.html', {
-		"class": "timetable-section__stats"
-		})
-	</div>
+    <div class="container timetable-section__grid">
+        @@include('blocks/aside-client/aside-client.html', {
+        "direction": "reverse",
+        "class": "timetable-section",
+        "name": "Дмитрий Борисов.",
+        "src": "assets/images/content/aside-clients/man"
+        })
+        <div class="timetable-section__head">
+            <time class="date-box timetable-section__date" datetime="2022-12-10">
+                <b class="date-box__day">10</b>
+                декабря
+            </time>
+            <h2 class="section-title timetable-section__title">
+                Расписание занятий
+                на&nbsp;сегодня
+            </h2>
+            <a href="timetable.html" class="btn timetable-section__btn">Все расписание</a>
+        </div>
+        <div class="timetable-section__items">
+            <article class="timetable-card progress">
+                <div class="timetable-card__labels">
+                    <span class="label timetable-card__label label--style_bg-green">в процессе</span>
+                    <span class="label timetable-card__label">групповая тренировка</span>
+                    <span class="label timetable-card__label label--style_bg-yellow">Планируется</span>
+                </div>
+                <div class="timetable-card__wrap">
+                    <h3 class="timetable-card__title title">Пилатес</h3>
+                    <div class="timetable-card__time">8:00 — 8:50</div>
+                </div>
+                <div class="section-text timetable-card__text">
+                    Силовая тренировка. Занятие направлено на общее укрепление мышечной системы.
+                </div>
+                <div class="timetable-card__coach">
+                    <picture class="timetable-card__coach-img">
+                        <source type="image/webp" srcset="assets/images/content/timetable/01/coach.webp">
+                        <img src="assets/images/content/timetable/01/coach.jpg" alt="фото тренера" width="80"
+                            height="80" loading="lazy">
+                    </picture>
+                    <div class="timetable-card__coach-name">Светлана Альпина</div>
+                    <div class="timetable-card__coach-specialization">Тренер групповых программ</div>
+                </div>
+                <picture class="timetable-card__img">
+                    <source type="image/webp" srcset="assets/images/content/timetable/01/img.webp">
+                    <img src="assets/images/content/timetable/01/img.jpg" alt="фото" width="556" height="336"
+                        loading="lazy">
+                </picture>
+                <span class="timetable-card__progress" style="--progress: 50%;"></span>
+                <div class="timetable-card__people">
+                    <b class="title">12</b>
+                    Человек
+                    на&nbsp;занятии
+                </div>
+                <button data-popup="info-workout-popup" type="button" class="btn arrow-btn timetable-card__btn">
+                    <svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
+                    </svg>
+                    <span>Подробнее</span>
+                </button>
+            </article>
+            <article class="timetable-card planning">
+                <div class="timetable-card__labels">
+                    <span class="label timetable-card__label label--style_bg-green">в процессе</span>
+                    <span class="label timetable-card__label label--style_bg-yellow">Планируется</span>
+                    <span class="label timetable-card__label">Индивидуальная тренировка</span>
+                </div>
+                <div class="timetable-card__wrap">
+                    <h3 class="timetable-card__title title">Йога</h3>
+                    <div class="timetable-card__time">10:00 — 10:50</div>
+                </div>
+                <div class="section-text timetable-card__text">
+                    Совокупность физической практики, которая направлена на управление физиологическими
+                    и&nbsp;психическими функциями организма.
+                </div>
+                <div class="timetable-card__coach">
+                    <picture class="timetable-card__coach-img">
+                        <source type="image/webp" srcset="assets/images/content/timetable/02/coach.webp">
+                        <img src="assets/images/content/timetable/02/coach.jpg" alt="фото тренера" width="80"
+                            height="80" loading="lazy">
+                    </picture>
+                    <div class="timetable-card__coach-name">Екатерина Гарибальди</div>
+                    <div class="timetable-card__coach-specialization">Тренер групповых программ</div>
+                </div>
+                <picture class="timetable-card__img">
+                    <source type="image/webp" srcset="assets/images/content/timetable/02/img.webp">
+                    <img src="assets/images/content/timetable/02/img.jpg" alt="фото" width="556" height="336"
+                        loading="lazy">
+                </picture>
+                <div class="timetable-card__progress" data-progress="0">
+                    <span></span>
+                </div>
+                <div class="timetable-card__people">
+                    <b class="title">12</b>
+                    Человек
+                    на&nbsp;занятии
+                </div>
+                <button data-popup="info-workout-popup" type="button" class="btn arrow-btn timetable-card__btn">
+                    <svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
+                    </svg>
+                    <span>Подробнее</span>
+                </button>
+            </article>
+        </div>
+        @@include('blocks/aside-nums/aside-nums.html', {
+        "class": "timetable-section__stats"
+        })
+    </div>
 </section>

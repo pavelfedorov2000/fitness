@@ -141,7 +141,7 @@
     &__row {
         @media (min-width: 1025px) {
             position: relative;
-            z-index: 102;
+            z-index: 99;
             grid-column: 1 / -1;
             display: grid;
             grid-template-columns: repeat(2, 1fr);

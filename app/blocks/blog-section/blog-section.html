@@ -1,66 +1,59 @@
 <section id="blog" class="blog-section">
-	<div class="container">
-		<div class="section-body blog-section__body">
-			<div class="section-top blog-section__top">
-				<div class="section-suptitle">Новости, полезные материалы, мотивация</div>
-				<h2 class="section-title blog-section__title">Блог</h2>
-			</div>
-			<div class="blog-section__grid">
-				<a href="blog.html" class="btn blog-section__link-btn btn--with_border">читать весь блог</a>
-				@@include('blocks/blog-section/slider.html')
-				<div class="blog-section__success">
-					@@loop('blocks/article-card/article-card.html', [{
-					"bg": "ocean",
-					"class": "blog-section__success-item",
-					"date": {
-					"datetime": "2020-09-08",
-					"text": "08.09.2020"
-					},
-					"src": {
-					"webp": "assets/images/content/blog/03.webp",
-					"default": "assets/images/content/blog/03.png"
-					},
-					"label": {
-					"text": "История успеха",
-					"bg": "black"
-					},
-					"kg": "-14",
-					"title": "Баланова Елена"
-					}, {
-					"bg": "ocean",
-					"class": "blog-section__success-item",
-					"date": {
-					"datetime": "2020-09-08",
-					"text": "08.09.2020"
-					},
-					"src": {
-					"webp": "assets/images/content/blog/03.webp",
-					"default": "assets/images/content/blog/03.png"
-					},
-					"format": "png",
-					"label": {
-					"text": "История успеха",
-					"bg": "black"
-					},
-					"kg": "-14",
-					"title": "Баланова Елена"
-					}])
-				</div>
-				<button class="btn blog-section__more btn--style_bg-black" type="button">Показать еще</button>
-			</div>
-		</div>
-		<div class="aside-client blog-section__aside-client">
-			<div class="aside-client__descr">
-				Постоянный клиент клуба<br>
-				Екатерина Гарибальди.
-			</div>
-			<div class="aside-client__img">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/aside-clients/woman.webp">
-					<img src="assets/images/content/aside-clients/woman.jpg" alt="фото" width="200" height="480"
-						loading="lazy">
-				</picture>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="section-body blog-section__body">
+            <div class="section-top blog-section__top">
+                <div class="section-suptitle">Новости, полезные материалы, мотивация</div>
+                <h2 class="section-title blog-section__title">Блог</h2>
+            </div>
+            <div class="blog-section__grid">
+                <a href="blog.html" class="btn blog-section__link-btn btn--with_border">читать весь блог</a>
+                @@include('blocks/blog-section/slider.html')
+                <div class="blog-section__success">
+                    @@loop('blocks/article-card/article-card.html', [{
+                    "bg": "ocean",
+                    "class": "blog-section__success-item",
+                    "date": {
+                    "datetime": "2020-09-08",
+                    "text": "08.09.2020"
+                    },
+                    "src": {
+                    "webp": "assets/images/content/blog/03.webp",
+                    "default": "assets/images/content/blog/03.png"
+                    },
+                    "label": {
+                    "text": "История успеха",
+                    "bg": "black"
+                    },
+                    "kg": "-14",
+                    "title": "Баланова Елена"
+                    }, {
+                    "bg": "ocean",
+                    "class": "blog-section__success-item",
+                    "date": {
+                    "datetime": "2020-09-08",
+                    "text": "08.09.2020"
+                    },
+                    "src": {
+                    "webp": "assets/images/content/blog/03.webp",
+                    "default": "assets/images/content/blog/03.png"
+                    },
+                    "format": "png",
+                    "label": {
+                    "text": "История успеха",
+                    "bg": "black"
+                    },
+                    "kg": "-14",
+                    "title": "Баланова Елена"
+                    }])
+                </div>
+                <button class="btn blog-section__more btn--style_bg-black" type="button">Показать еще</button>
+            </div>
+        </div>
+        @@include('blocks/aside-client/aside-client.html', {
+        "position": "right",
+        "class": "blog-section",
+        "name": "Екатерина Гарибальди.",
+        "src": "assets/images/content/aside-clients/woman"
+        })
+    </div>
 </section>

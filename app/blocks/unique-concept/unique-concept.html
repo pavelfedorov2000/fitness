@@ -1,90 +1,83 @@
 <section class="unique-concept">
-	<div class="container unique-concept__inner">
-		<figure class="aside-client">
-			<div class="aside-client__img">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/aside-clients/man.webp">
-					<img src="assets/images/content/aside-clients/man.jpg" alt="фото" width="200" height="480"
-						loading="lazy">
-				</picture>
-			</div>
-			<figcaption class="aside-client__descr">
-				Постоянный клиент клуба<br>
-				Дмитрий Борисов.
-			</figcaption>
-		</figure>
-		<div class="section-body unique-concept__body">
-			<h2 class="section-title unique-concept__title">Уникальная концепция <span class="ttu">FITNESSON</span></h2>
-			<div class="section-text unique-concept__text">
-				<p>
-					Мы поняли, что классические фитнес клубы отлично зарабатывают деньги владельцу, но забывают
-					о результатах клиентов, поэтому неэффективны.
-				</p>
-				<p>
-					Мы изменили подход, придумали фитнес клуб заново.
-					Создали концепцию, где наши клиенты добиваются результатов и обретают желанную форму. В каждую карту
-					включен тренер наставник. Диагностируем, составляем план тренировок и питания. Следим за успехами и
-					корректируем цели клиентов. Разработали собственное фитнес приложение.
-				</p>
-				<p>
-					<span class="ttu">FITNESSON</span> — это уникальный фитнес клуб,
-					аналогов которому нет в России.
-				</p>
-			</div>
-			<div class="unique-concept__img">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/unique-concept/img.webp">
-					<img src="assets/images/content/unique-concept/img.jpg" alt="фото" width="480" height="631"
-						loading="lazy">
-				</picture>
-				<div class="circle-text unique-concept__circle-text">
-					<img class="circle-text__img" src="assets/images/circle-text.svg" alt="фото" width="220"
-						height="220" loading="lazy">
-				</div>
-			</div>
-			<figure class="unique-concept__video video">
-				<a class="video__body unique-concept__video-body" href="https://www.youtube.com/watch?v=TxZYXAAvPvo"
-					target="_blank" aria-label="Смотреть видео">
-					<div class="video__bg">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/unique-concept/video.webp">
-							<img src="assets/images/content/unique-concept/video.jpg" alt="фото" width="632"
-								height="382" loading="lazy">
-						</picture>
-					</div>
-					<span class="video__box video__box--icon-only" type="button">
-						<svg class="video__player" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z"
-								fill="#020818" />
-						</svg>
-					</span>
-				</a>
-				<figcaption class="video__info">
-					<span>Видео</span>
-					<span>2 минуты,</span>
-					<span>12 секунд</span>
-				</figcaption>
-			</figure>
-			<form action="#" class="form unique-concept__form">
-				<div class="form__title">
-					Узнайте больше
-					о&nbsp;фитнес&nbsp;клубе <span class="ttu">FITNESSON</span>
-				</div>
-				<div class="form__body">
-					<label>
-						<input class="input input--style_bg-light-blue" name="name" placeholder="Имя">
-					</label>
-					<label>
-						<input class="input input--style_bg-light-blue" type="tel" name="phone" placeholder="Телефон">
-					</label>
-					<button class="btn form__btn" type="submit">Отправить заявку</button>
-				</div>
-				<p class="form-agree">
-					Отправляя заявку вы соглашаетесь
-					с условиями обработки персональных данных
-				</p>
-			</form>
-		</div>
-	</div>
+    <div class="container unique-concept__inner">
+        @@include('blocks/aside-client/aside-client.html', {
+        "direction": "reverse",
+        "name": "Дмитрий Борисов.",
+        "src": "assets/images/content/aside-clients/man"
+        })
+        <div class="section-body unique-concept__body">
+            <h2 class="section-title unique-concept__title">Уникальная концепция <span class="ttu">FITNESSON</span></h2>
+            <div class="section-text unique-concept__text">
+                <p>
+                    Мы поняли, что классические фитнес клубы отлично зарабатывают деньги владельцу, но забывают
+                    о результатах клиентов, поэтому неэффективны.
+                </p>
+                <p>
+                    Мы изменили подход, придумали фитнес клуб заново.
+                    Создали концепцию, где наши клиенты добиваются результатов и обретают желанную форму. В каждую карту
+                    включен тренер наставник. Диагностируем, составляем план тренировок и питания. Следим за успехами и
+                    корректируем цели клиентов. Разработали собственное фитнес приложение.
+                </p>
+                <p>
+                    <span class="ttu">FITNESSON</span> — это уникальный фитнес клуб,
+                    аналогов которому нет в России.
+                </p>
+            </div>
+            <div class="unique-concept__img">
+                <picture>
+                    <source type="image/webp" srcset="assets/images/content/unique-concept/img.webp">
+                    <img src="assets/images/content/unique-concept/img.jpg" alt="фото" width="480" height="631"
+                        loading="lazy">
+                </picture>
+                <div class="circle-text unique-concept__circle-text">
+                    <img class="circle-text__img" src="assets/images/circle-text.svg" alt="фото" width="220"
+                        height="220" loading="lazy">
+                </div>
+            </div>
+            <figure class="unique-concept__video video">
+                <a class="video__body unique-concept__video-body" href="https://www.youtube.com/watch?v=TxZYXAAvPvo"
+                    target="_blank" aria-label="Смотреть видео">
+                    <div class="video__bg">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/content/unique-concept/video.webp">
+                            <img src="assets/images/content/unique-concept/video.jpg" alt="фото" width="632"
+                                height="382" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="video__box video__box--icon-only" type="button">
+                        <svg class="video__player" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z"
+                                fill="#020818" />
+                        </svg>
+                    </span>
+                </a>
+                <figcaption class="video__info">
+                    <span>Видео</span>
+                    <span>2 минуты,</span>
+                    <span>12 секунд</span>
+                </figcaption>
+            </figure>
+            <form action="#" class="form unique-concept__form">
+                <div class="form__title">
+                    Узнайте больше
+                    о&nbsp;фитнес&nbsp;клубе <span class="ttu">FITNESSON</span>
+                </div>
+                <div class="form__body">
+                    <label>
+                        <input class="input input--style_bg-light-blue" name="name" placeholder="Имя" required>
+                    </label>
+                    <label>
+                        <input class="input input--style_bg-light-blue" type="tel" name="phone" placeholder="Телефон"
+                            required>
+                    </label>
+                    <button class="btn form__btn" type="submit">Отправить заявку</button>
+                </div>
+                <p class="form-agree">
+                    Отправляя заявку вы соглашаетесь
+                    с условиями обработки персональных данных
+                </p>
+            </form>
+        </div>
+    </div>
 </section>

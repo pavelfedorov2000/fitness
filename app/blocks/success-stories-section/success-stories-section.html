@@ -1,143 +1,108 @@
-<section id="success-stories"
-         class="success-stories-section">
-    <div class="success-stories-section__grid">
-        <div class="success-stories-section__top">
-            <div class="success-stories-section__suptitle suptitle">
-                8 из 10 наших клиентов <span>добиваются <span>своих фитнес-</span>целей</span>
-            </div>
-            <h2 class="section-title success-stories-section__title section-title--border">
-                Истории
-                <span>успеха</span>
-            </h2>
-        </div>
-        <div class="splide success-stories-section__slider success-stories-slider">
-            <div class="splide__track">
-                <div class="splide__list">
-                    @@loop('blocks/success-story/success-story.html', [{
-                    "splide": true,
-                    "name": "Дмитрий<br>Бондаренко",
-                    "kg": "-12",
-                    "src": "assets/images/content/success-stories/01",
-                    "before": "82",
-                    "after": "70",
-                    "duration": "6 месяцев"
-                    }, {
-                    "splide": true,
-                    "name": "Балабанова<br>Елена",
-                    "kg": "-15",
-                    "src": "assets/images/content/success-stories/02",
-                    "before": "64",
-                    "after": "49",
-                    "duration": "7 месяцев"
-                    }, {
-                    "splide": true,
-                    "name": "Водянова<br>Виктория",
-                    "kg": "-25",
-                    "src": "assets/images/content/success-stories/03",
-                    "before": "80",
-                    "after": "65",
-                    "duration": "5 месяцев"
-                    }, {
-                    "splide": true,
-                    "name": "Дмитрий<br>Бондаренко",
-                    "kg": "-12",
-                    "src": "assets/images/content/success-stories/01",
-                    "before": "82",
-                    "after": "70",
-                    "duration": "6 месяцев"
-                    }, {
-                    "splide": true,
-                    "name": "Балабанова<br>Елена",
-                    "kg": "-15",
-                    "src": "assets/images/content/success-stories/02",
-                    "before": "64",
-                    "after": "49",
-                    "duration": "7 месяцев"
-                    }])
-                </div>
-            </div>
-            @@include('blocks/slider-nav/slider-nav.html', {
-            "class": "success-stories-section",
-            "bg": "white"
-            })
-        </div>
-        <div class="success-stories-section__form">
-            <div class="success-stories-section__form-inner">
-                <div class="success-stories-section__form-title title">
-                    Тут может быть
-                    <span>твоя история успеха.</span>
-                    Приходи в FITNESSON
-                </div>
-                <form action="#"
-                      class="success-stories-section__form-body">
-                    <div class="select success-stories-section__form-select">
-                        <div class="select__title">Выберите клуб</div>
-                        <div class="select__content">
-                            <input id="club0"
-                                   class="select__input"
-                                   type="radio"
-                                   name="club"
-                                   checked />
-                            <label for="club0"
-                                   tabindex="0"
-                                   class="select__label"
-                                   data-value="Выберите клуб">Выберите
-                                клуб</label>
-                            <input id="club1"
-                                   class="select__input"
-                                   type="radio"
-                                   name="club" />
-                            <label for="club1"
-                                   tabindex="0"
-                                   class="select__label"
-                                   data-value="Электросталь">Электросталь</label>
-                            <input id="club2"
-                                   class="select__input"
-                                   type="radio"
-                                   name="club" />
-                            <label for="club2"
-                                   tabindex="0"
-                                   class="select__label"
-                                   data-value="Можайск">Можайск</label>
-                            <input id="club3"
-                                   class="select__input"
-                                   type="radio"
-                                   name="club" />
-                            <label for="club3"
-                                   tabindex="0"
-                                   class="select__label"
-                                   data-value="Звенигород">Звенигород</label>
-                            <input id="club4"
-                                   class="select__input"
-                                   type="radio"
-                                   name="club" />
-                            <label for="club4"
-                                   tabindex="0"
-                                   class="select__label"
-                                   data-value="Клин">Клин</label>
-                        </div>
-                    </div>
-                    <label class="form-field success-stories-section__form-field">
-                        <input class="input success-stories-section__form-input"
-                               name="name"
-                               placeholder="Имя">
-                        <!-- <span>Имя</span> -->
-                    </label>
-                    <label class="form-field success-stories-section__form-field success-stories-section__form-field--phone">
-                        <input class="input success-stories-section__form-input"
-                               type="tel"
-                               name="phone"
-                               placeholder="Телефон">
-                        <!-- <span>Телефон</span> -->
-                    </label>
-                    <button class="btn success-stories-section__form-btn"
-                            type="submit">Отправить заявку</button>
-                    <div class="form-agree success-stories-section__form-agree">
-                        Отправляя заявку вы соглашаетесь
-                        с&nbsp;условиями обработки персональных данных
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+<section id="success-stories" class="success-stories-section">
+	<div class="success-stories-section__grid">
+		<div class="success-stories-section__top">
+			<div class="success-stories-section__suptitle suptitle">
+				8 из 10 наших клиентов <span>добиваются <span>своих фитнес-</span>целей</span>
+			</div>
+			<h2 class="section-title success-stories-section__title section-title--border">
+				Истории
+				<span>успеха</span>
+			</h2>
+		</div>
+		<div class="splide success-stories-section__slider success-stories-slider">
+			<div class="splide__track">
+				<div class="splide__list">
+					@@loop('blocks/success-story/success-story.html', [{
+					"splide": true,
+					"name": "Дмитрий<br>Бондаренко",
+					"kg": "-12",
+					"src": "assets/images/content/success-stories/01",
+					"before": "82",
+					"after": "70",
+					"duration": "6 месяцев"
+					}, {
+					"splide": true,
+					"name": "Балабанова<br>Елена",
+					"kg": "-15",
+					"src": "assets/images/content/success-stories/02",
+					"before": "64",
+					"after": "49",
+					"duration": "7 месяцев"
+					}, {
+					"splide": true,
+					"name": "Водянова<br>Виктория",
+					"kg": "-25",
+					"src": "assets/images/content/success-stories/03",
+					"before": "80",
+					"after": "65",
+					"duration": "5 месяцев"
+					}, {
+					"splide": true,
+					"name": "Дмитрий<br>Бондаренко",
+					"kg": "-12",
+					"src": "assets/images/content/success-stories/01",
+					"before": "82",
+					"after": "70",
+					"duration": "6 месяцев"
+					}, {
+					"splide": true,
+					"name": "Балабанова<br>Елена",
+					"kg": "-15",
+					"src": "assets/images/content/success-stories/02",
+					"before": "64",
+					"after": "49",
+					"duration": "7 месяцев"
+					}])
+				</div>
+			</div>
+			@@include('blocks/slider-nav/slider-nav.html', {
+			"class": "success-stories-section",
+			"bg": "white"
+			})
+		</div>
+		<div class="success-stories-section__form">
+			<div class="success-stories-section__form-inner">
+				<div class="success-stories-section__form-title title">
+					Тут может быть
+					<span>твоя история успеха.</span>
+					Приходи в FITNESSON
+				</div>
+				<form action="#" class="success-stories-section__form-body">
+					<div class="select success-stories-section__form-select">
+						<div class="select__title">Выберите клуб</div>
+						<div class="select__content">
+							<input id="club0" class="select__input" type="radio" name="club" checked />
+							<label for="club0" tabindex="0" class="select__label" data-value="Выберите клуб">Выберите
+								клуб</label>
+							<input id="club1" class="select__input" type="radio" name="club" />
+							<label for="club1" tabindex="0" class="select__label"
+								data-value="Электросталь">Электросталь</label>
+							<input id="club2" class="select__input" type="radio" name="club" />
+							<label for="club2" tabindex="0" class="select__label" data-value="Можайск">Можайск</label>
+							<input id="club3" class="select__input" type="radio" name="club" />
+							<label for="club3" tabindex="0" class="select__label"
+								data-value="Звенигород">Звенигород</label>
+							<input id="club4" class="select__input" type="radio" name="club" />
+							<label for="club4" tabindex="0" class="select__label" data-value="Клин">Клин</label>
+						</div>
+					</div>
+					<label class="form-field success-stories-section__form-field">
+						<input class="input success-stories-section__form-input" name="name" placeholder="Имя" required>
+						<!-- <span>Имя</span> -->
+					</label>
+					<label
+						class="form-field success-stories-section__form-field success-stories-section__form-field--phone">
+						<input class="input success-stories-section__form-input" type="tel" name="phone"
+							placeholder="Телефон" required>
+						<!-- <span>Телефон</span> -->
+					</label>
+					<button class="btn success-stories-section__form-btn" type="submit">Отправить заявку</button>
+					<div class="form-agree success-stories-section__form-agree">
+						Отправляя заявку вы соглашаетесь
+						с&nbsp;условиями обработки персональных данных
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </section>

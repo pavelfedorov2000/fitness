@@ -10,6 +10,7 @@
     height: var(--section-padding);
     background-color: var(--purple);
     color: #fff;
+    display: none;
 
     @media (max-width: 1024px) {
         top: 0;

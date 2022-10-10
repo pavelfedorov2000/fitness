@@ -1,24 +1,18 @@
 <article class="team-member@@if(context.class){ @@class}@@if(context.color){ team-member--style_bg-@@color}"
-         data-da="@@if(context.da){@@da}">
-    <a href="#"
-       class="team-member__body">
-        <div class="team-member__img">
-            <picture>
-                <source type="image/webp"
-                        srcset="@@src.webp">
-                <img src="@@src.png"
-                     alt="фото"
-                     width="@@width"
-                     height="@@height"
-                     loading="lazy">
-            </picture>
-        </div>
-        <div class="team-member__content">
-            <div class="team-member__role">@@role</div>
-            <div class="team-member__name">@@name</div>
-            @@include('blocks/arrow-btn/arrow-btn.html', {
-            "class": "team-member__arrow"
-            })
-        </div>
-    </a>
+	data-da="@@if(context.da){@@da}">
+	<a href="coach.html" class="team-member__body">
+		<div class="team-member__img">
+			<picture>
+				<source type="image/webp" srcset="@@src.webp">
+				<img src="@@src.png" alt="фото" width="@@width" height="@@height" loading="lazy">
+			</picture>
+		</div>
+		<div class="team-member__content">
+			<div class="team-member__role">@@role</div>
+			<div class="team-member__name">@@name</div>
+			@@include('blocks/arrow-btn/arrow-btn.html', {
+			"class": "team-member__arrow"
+			})
+		</div>
+	</a>
 </article>

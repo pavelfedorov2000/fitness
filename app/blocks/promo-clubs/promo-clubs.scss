@@ -29,7 +29,7 @@
         height: 100%;
 
         @media (max-width: 1024px) {
-            height: 56.8rem;
+            height: 45rem;
         }
     }
 
@@ -97,6 +97,10 @@
     &__content {
         position: relative;
         padding: var(--offset-xxxl) 0 var(--section-padding);
+
+        @media (max-width: 767px) {
+            padding: var(--offset-m) 0 var(--offset-l);
+        }
 
         &:before {
             @include rect(bottom, left, 0, calc(var(--gap) * (-2)), 100%, var(--light-blue));

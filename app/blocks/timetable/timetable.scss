@@ -38,6 +38,7 @@
     &__aside-client {
         @media (min-width: 1025px) {
             grid-area: asideClient;
+            justify-content: flex-end;
         }
     }
 

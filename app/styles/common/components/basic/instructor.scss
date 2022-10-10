@@ -26,6 +26,10 @@
         column-gap: var(--offset-s);
         background-color: var(--ocean);
 
+        &--round {
+            border-radius: 50%;
+        }
+
         img {
             @extend %cover;
             /* border-radius: 50%; */
@@ -45,7 +49,7 @@
         grid-area: position;
         opacity: 0.7;
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             font-size: 1.3rem;
             line-height: 1.8rem;
         }
@@ -56,7 +60,7 @@
     &__bio {
         display: none;
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             display: grid;
             grid-template-columns: 1fr max-content;
             gap: var(--offset-m);

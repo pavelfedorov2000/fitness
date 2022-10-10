@@ -2,15 +2,17 @@
     display: none;
 
     @media (min-width: 1025px) {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         gap: var(--offset-xxxl);
-        grid-template-rows: 48rem max-content;
     }
 
     // .aside-client__img
 
     &__img {
+        height: 48rem;
+
         img {
             @extend %cover;
         }
@@ -28,7 +30,33 @@
         transform: rotate(-180deg);
     }
 
-    &--light-blue {
-        background-color: var(--light-blue);
+    &--style {
+        &_bg {
+            &-light-blue {
+                background-color: var(--light-blue);
+            }
+        }
+    }
+
+    &--position {
+        &_left {
+            @media (min-width: 1025px) {
+                align-self: end;
+                grid-column: 1 / 2;
+                grid-row: 1 / -1;
+            }
+        }
+
+        &_right {
+            @media (min-width: 1025px) {
+                grid-column: -2 / -1;
+            }
+        }
+    }
+
+    &--reverse {
+        @media (min-width: 1025px) {
+            flex-direction: column-reverse;
+        }
     }
 }

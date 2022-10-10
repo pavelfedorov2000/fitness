@@ -36,6 +36,18 @@ app.asidePopup = {
             $('html').removeClass('disable-fix');
         });
 
+        $(document).on('mouseup', function (e) {
+            //const $overlay = $(this);
+            const $asidePopup = $('.aside-popup');
+
+            if (!$asidePopup.is(e.target) && $asidePopup.has(e.target).length === 0) {
+                $asidePopup.removeClass('active');
+                $('.overlay').fadeOut();
+                $('body').removeClass('_lock');
+                $('html').removeClass('disable-fix');
+            }
+        });
+
         $(document).on('click', '.info-workout-popup__btn', function () {
             const $infoWorkoutPopupBtn = $(this);
             const $infoWorkoutPopupForm = $infoWorkoutPopupBtn.closest('.aside-popup').find('.info-workout-popup__form');
@@ -58,7 +70,28 @@ app.asidePopup = {
 
             $asidePopup.removeClass('active');
             $('.success-popup').addClass('active');
-            $asidePopupForm.find('input').each(function (index, input) {
+            $asidePopupForm.find('.input').each(function (index, input) {
+                $(input).val('');
+            });
+            return false;
+        });
+
+        $('form:not(.info-workout-popup__form):not(.subscribe-form)').on('submit', function (e, data) {
+            e.preventDefault();
+
+            const $form = $(this);
+
+            $.ajax({
+                type: "POST",
+                url: "",
+                data: data, // data - объект
+            });
+
+            $('body').addClass('_lock');
+            $('html').addClass('disable-fix');
+            $('.overlay').fadeIn();
+            $('.success-popup').addClass('active');
+            $form.find('.input').each(function (index, input) {
                 $(input).val('');
             });
             return false;

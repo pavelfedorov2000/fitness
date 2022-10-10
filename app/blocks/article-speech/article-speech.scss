@@ -1,3 +1,104 @@
 .article-speech {
-  // your code
+    --line-width: 0.1rem;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--section-padding-xl) 1fr var(--section-padding-xl);
+    grid-template-rows: var(--offset-xl) max-content var(--offset-xl) minmax(var(--section-padding-xl), max-content);
+    grid-template-areas:
+        '. . .'
+        '. speech .'
+        '. . .'
+        '. author photo';
+    background-color: var(--black);
+    color: #fff;
+
+    @media (min-width: 768px) {
+        column-gap: var(--offset-xxl);
+    }
+
+    @media (max-width: 767px) {
+        padding-left: var(--offset-s);
+        grid-template-columns: 1fr var(--offset-s) calc(var(--offset-xxxl) - var(--offset-s)) var(--offset-s);
+        grid-template-rows: calc(4.8rem + var(--offset-m)) max-content var(--offset-l) minmax(
+                var(--offset-xxxl),
+                max-content
+            );
+        grid-template-areas:
+            '. . . .'
+            'speech speech speech .'
+            '. . . .'
+            'author . photo photo';
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0;
+    }
+
+    &::before {
+        content: '';
+        left: 0;
+        width: var(--section-padding-xl);
+        height: var(--section-padding-xl);
+        background-color: #ffcc48;
+        background-image: url(../images/icons/ico-quote.svg);
+        background-position: center;
+        background-size: var(--offset-m) var(--offset-m);
+        background-repeat: no-repeat;
+
+        @media (max-width: 767px) {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        &::after {
+            left: calc(var(--section-padding-xl) - var(--line-width));
+            bottom: 0;
+            width: var(--line-width);
+            background-color: rgba(#fff, 0.2);
+        }
+    }
+    // .speech__text
+
+    &__text {
+        @extend %text-17;
+        font-weight: 700;
+        grid-area: speech;
+
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+
+    // .speech__author
+
+    &__author {
+        @extend %text-14;
+        grid-area: author;
+        align-self: center;
+
+        @media (max-width: 767px) {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    // .speech__photo
+
+    &__photo {
+        width: 100%;
+        height: var(--section-padding-xl);
+        object-fit: cover;
+        grid-area: photo;
+        //align-self: flex-end;
+
+        @media (max-width: 767px) {
+            height: var(--offset-xxxl);
+        }
+    }
 }

@@ -42,15 +42,15 @@
         gap: var(--offset-l);
         grid-auto-rows: 28rem;
 
-        @media(min-width: 501px) {
+        @media (min-width: 501px) {
             grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
             grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
         }
 
-        @media(min-width: 1025px) {
+        @media (min-width: 1025px) {
             grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
         }
     }
@@ -61,6 +61,7 @@
     padding: var(--offset-l);
     @extend %flex-col;
     justify-content: space-between;
+    transition: 0.3s box-shadow;
     // .color-item__title
 
     &__title {
@@ -130,7 +131,7 @@
 
             &-white {
                 background-color: #fff;
-                border: 0.1rem solid #DFDFDF;
+                border: 0.1rem solid #dfdfdf;
             }
 
             &-green {
@@ -158,6 +159,12 @@
             &-red {
                 color: #fff;
             }
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: $bsh;
         }
     }
 }

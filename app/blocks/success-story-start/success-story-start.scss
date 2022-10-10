@@ -17,13 +17,6 @@
         }
     }
 
-    &__aside-client {
-        @media (min-width: 1025px) {
-            grid-column: 1 / 2;
-            align-items: flex-end;
-        }
-    }
-
     // .success-story-start__body
 
     &__body {

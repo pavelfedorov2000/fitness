@@ -122,6 +122,9 @@
 
     &__icon {
         grid-area: icon;
+        width: var(--offset-m);
+        height: var(--offset-m);
+        fill: var(--gray);
     }
 
     // .contact-info-item__title

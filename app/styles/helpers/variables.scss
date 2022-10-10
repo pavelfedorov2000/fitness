@@ -26,7 +26,6 @@
     --gap: 20rem;
     --container: calc(100vw - var(--gap) * 4);
     --header-height: 9.6rem;
-    --arrow-btn: 4.8rem;
     --circle-text: 22rem;
     --half-circle: calc(var(--circle-text) / 2);
     --marquee-padding: 4.9rem;
@@ -48,12 +47,14 @@
     --offset-xxxl: 6.4rem;
     --offset-xxl: 5.6rem;
     --offset-xls: 4rem;
-    --offset-xl: var(--arrow-btn);
+    --offset-xl: 4.8rem;
     --offset-l: 3.2rem;
     --offset-m: 2.4rem;
     --offset-s: 1.6rem;
     --offset-xs: var(--mob-padding);
     --offset-xxs: 0.8rem;
+
+    --arrow-btn: var(--offset-xl);
 
     @media (max-width: 1024px) {
         --header-height: 4.8rem;

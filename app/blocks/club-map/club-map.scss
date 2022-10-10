@@ -1,6 +1,6 @@
 .club-map {
     --title: 36rem;
-    --map-h: 52rem;
+    --map-h: 42rem;
 
     position: relative;
     display: grid;
@@ -101,10 +101,10 @@
     }
 }
 
-.ymaps-layers-pane {
+/* .ymaps-layers-pane {
     filter: hue-rotate(180deg);
     -ms-filter: hue-rotate(180deg);
     -webkit-filter: hue-rotate(180deg);
     -moz-filter: hue-rotate(180deg);
     -o-filter: hue-rotate(180deg);
-}
+} */
