@@ -65,8 +65,8 @@
         display: grid;
 
         @media (min-width: 1025px) {
-            grid-template-columns: var(--pl) 1fr var(--pl) var(--play) var(--pr);
-            grid-template-rows: var(--pt) max-content 0.3rem var(--play) var(--pb);
+            grid-template-columns: var(--pl) 1fr var(--pl) max-content var(--pr);
+            grid-template-rows: var(--pt) max-content 0.3rem max-content var(--pb);
             grid-template-areas:
                 '. . . . .'
                 '. text . . .'
@@ -143,13 +143,11 @@
     }
 
     &__player {
+        width: var(--play);
+        height: var(--play);
+
         @media (min-width: 1025px) {
             grid-area: player;
-        }
-
-        @media (max-width: 1024px) {
-            width: var(--play);
-            height: var(--play);
         }
     }
 

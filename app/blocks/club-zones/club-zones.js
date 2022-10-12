@@ -2,8 +2,11 @@ app.clubZones = {
     name: 'clubZones',
     description: 'your script description',
     init() {
-        const clubZones = document.querySelector('.club-zones');
-        const sliderPaginationItems = clubZones && clubZones.querySelectorAll('.slider-pagination__item');
+        const clubZones = document.querySelector('#club-zones');
+
+        if (!clubZones) return;
+
+        const sliderPaginationItems = clubZones.querySelectorAll('.slider-pagination__item');
 
         new Swiper('.club-zones-slider', {
             loop: true,
@@ -28,7 +31,7 @@ app.clubZones = {
                     sliderPaginationItems[swiper.realIndex].classList.add('active');
 
                     if (swiper.realIndex === 0) {
-                        clubZones.querySelectorAll('.slider-pagination__item.active').forEach(slide => slide.classList.remove('active'));
+                        clubZones && clubZones.querySelectorAll('.slider-pagination__item.active').forEach(slide => slide.classList.remove('active'));
                         sliderPaginationItems[swiper.realIndex].classList.add('active');
                     }
                 }

@@ -41,8 +41,9 @@
 		contentType: 'application/json',
 		dataType: 'json'
 	}).done(response => {
-		const clubsData = response.clubs.filter(club => club.data.id == $('main').attr('data-club')); // 3
-		const clubData = clubsData.find(club => club.data.id == $('main').attr('data-club'));
+        const clubId = $('main').attr('data-club');
+		const clubsData = response.clubs.filter(club => club.data.id === clubId); // 3
+		const clubData = clubsData.find(club => club.data.id == clubId);
 
 		ymaps.ready(function () {
 			// Создание экземпляра карты и его привязка к созданному контейнеру.
