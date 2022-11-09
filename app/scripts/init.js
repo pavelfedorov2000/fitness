@@ -4,7 +4,6 @@
         app.burger.init();
         app.asidePopup.init();
         app.blog.init();
-        app.articleAside.init();
         app.faq.init();
         app.clubReviews.init();
         app.coachBio.init();

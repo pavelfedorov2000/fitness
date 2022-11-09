@@ -1,7 +1,13 @@
 .aside-client {
+    $this: &;
+
     display: none;
 
     @media (min-width: 1025px) {
+        display: block;
+    }
+
+    &__body {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -62,12 +68,17 @@
 
     &--reverse {
         @media (min-width: 1025px) {
-            flex-direction: column-reverse;
+            padding-bottom: var(--offset-xl);
+            #{$this} {
+                &__body {
+                    flex-direction: column-reverse;
 
-            >* {
-                &:not(:last-child) {
-                    margin-bottom: 0;
-                    margin-top: var(--offset-xxxl);
+                    >* {
+                        &:not(:last-child) {
+                            margin-bottom: 0;
+                            margin-top: var(--offset-xxxl);
+                        }
+                    }
                 }
             }
         }

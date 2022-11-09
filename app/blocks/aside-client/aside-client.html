@@ -1,15 +1,17 @@
-<figure
-    class="aside-client@@if(context.class){ @@class__aside-client}@@if(context.direction){ aside-client--@@direction}@@if(context.bg){ aside-client--style_bg-@@bg}@@if(context.position){ aside-client--position_@@position}">
-    @@if(context.name){
-    <figcaption class="aside-client__descr">
-        Постоянный клиент клуба<br>
-        @@name
-    </figcaption>
-    }
-    <div class="aside-client__img">
-        <picture>
-            <source type="image/webp" srcset="@@src.webp">
-            <img src="@@src.jpg" alt="фото" width="200" height="480" loading="lazy">
-        </picture>
-    </div>
-</figure>
+<@@if(context.notAside){div}@@if(!context.notAside){aside}
+	class="aside-client@@if(context.class){ @@class__aside-client}@@if(context.direction){ aside-client--@@direction}@@if(context.bg){ aside-client--style_bg-@@bg}@@if(context.position){ aside-client--position_@@position}">
+	<figure class="aside-client__body">
+		@@if(context.name){
+		<figcaption class="aside-client__descr">
+			Постоянный клиент клуба<br>
+			@@name
+		</figcaption>
+		}
+		<div class="aside-client__img">
+			<picture>
+				<source type="image/webp" srcset="@@src.webp">
+				<img src="@@src.jpg" alt="фото" width="200" height="480" loading="lazy">
+			</picture>
+		</div>
+	</figure>
+</@@if(context.notAside){div}@@if(!context.notAside){aside}>

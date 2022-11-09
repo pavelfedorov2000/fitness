@@ -66,6 +66,10 @@
     &--dark {
         color: var(--black);
 
+        @media(max-width: 1024px) {
+           background-color: #fff;
+        }
+
         #{$this} {
             &__logo {
                 path {

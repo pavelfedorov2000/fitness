@@ -15,6 +15,7 @@
 		@@include("blocks/fitness-card/fitness-card.html")
 		@@include("blocks/success-stories-section/success-stories-section.html")
 		@@include("blocks/club-team/club-team.html")
+		@@include('blocks/marquee/marquee.html')
 		@@include("blocks/blog-section/blog-section.html")
 		@@include("blocks/events/events.html")
 		@@include('blocks/club-services/club-services.html')
@@ -41,7 +42,7 @@
 		contentType: 'application/json',
 		dataType: 'json'
 	}).done(response => {
-        const clubId = $('main').attr('data-club');
+		const clubId = $('main').attr('data-club');
 		const clubsData = response.clubs.filter(club => club.data.id === clubId); // 3
 		const clubData = clubsData.find(club => club.data.id == clubId);
 

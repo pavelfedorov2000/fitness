@@ -12,11 +12,8 @@
     }
 
     @media (max-width: 1024px) {
-        padding: var(--offset-l) var(--mob-padding);
-    }
-
-    @media (max-width: 767px) {
         row-gap: var(--offset-m);
+        padding: var(--offset-l) var(--mob-padding);
     }
 
     // .info-block__capacity

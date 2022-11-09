@@ -115,9 +115,7 @@
         display: none;
 
         @media (min-width: 1025px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            display: block;
             grid-area: stats;
         }
     }

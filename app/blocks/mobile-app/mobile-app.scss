@@ -167,6 +167,10 @@
     &__img {
         width: var(--iphone-width);
 
+        @media(max-width: 500px) {
+           width: 100%;
+        }
+
         img {
             @extend %contain;
         }

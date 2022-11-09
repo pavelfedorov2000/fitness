@@ -31,6 +31,12 @@
     -webkit-text-stroke-color: $color;
 }
 
+@mixin sticky($top) {
+    position: sticky;
+    top: $top;
+    height: fit-content;
+}
+
 // Примесь для очистки поток
 @mixin clearfix() {
     &::after {

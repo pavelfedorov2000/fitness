@@ -23,13 +23,16 @@ html {
 
 body {
     min-width: 320px;
-    overflow-x: hidden;
     font-style: normal;
     font-family: $ff;
     font-size: rem($fz);
     line-height: 2.2rem;
     font-weight: 400;
     color: $color-default;
+
+    @media(max-width: 1024px) {
+       overflow-x: hidden;
+    }
 
     @media (max-width: 767px) {
         font-size: 1.3rem;
@@ -41,6 +44,10 @@ body {
     }
 }
 
+address {
+    font-style: normal;
+}
+
 button,
 input,
 textarea {
@@ -49,9 +56,12 @@ textarea {
 
 .wrapper {
     position: relative;
-    overflow-x: hidden;
     @extend %flex-col;
     min-height: 100vh;
+
+    @media(max-width: 1024px) {
+       overflow-x: hidden;
+    }
 
     &--yellow-promo {
         .header {

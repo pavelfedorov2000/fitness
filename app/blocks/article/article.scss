@@ -2,6 +2,7 @@
     --sidebar: 24.8rem;
     --sidebar-pl: var(--offset-xxl);
     --form-mh: 59.6rem;
+    --footer-h: 7.3rem;
 
     .header {
         @media (min-width: 1025px) {
@@ -14,22 +15,24 @@
 
     &__decor-title {
         @media (min-width: 1025px) {
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 101;
-            width: var(--gap);
+            //position: fixed;
+            //top: 0;
+            @include sticky(0rem);
+            grid-column: -2 / -1;
+            margin-top: calc(var(--header-height) * (-1));
+            margin-bottom: var(--footer-h);
+            //right: 0;
+            //z-index: 101;
+            //width: var(--gap);
             height: 48rem;
         }
     }
 
     &__container {
-        padding-bottom: var(--section-padding);
         border-top: $border;
 
         @media (max-width: 1024px) {
             padding-top: var(--header-height);
-            padding-bottom: var(--offset-l);
         }
     }
 
@@ -37,9 +40,8 @@
         display: none;
 
         @media (min-width: 1025px) {
+            @include sticky(0rem);
             display: grid;
-            top: 0;
-            left: 0;
             align-self: flex-start;
             grid-column: 2 / 3;
             padding-top: 9.5rem;
@@ -55,24 +57,18 @@
 
     &__inner {
         position: relative;
-        display: grid;
-        row-gap: 5.6rem;
-
-        @media (min-width: 1025px) {
-            grid-template-columns: 1fr calc(var(--sidebar) + var(--sidebar-pl));
-
-            &:before {
-                @include rect(top, right, 0, calc(var(--gap) * (-1)), 100%, var(--beige));
-                width: calc(var(--sidebar) + var(--sidebar-pl) + var(--gap));
-            }
-        }
+        @include row-grid(var(--offset-xls));
     }
 
     // .article-page__body
 
-    &__body {
+    &__article {
+        /* @media (min-width: 1025px) {
+            padding-right: var(--section-padding);
+        } */
         @media (min-width: 1025px) {
-            padding-right: 8rem;
+            display: grid;
+            grid-template-columns: 1fr var(--section-padding) calc(var(--sidebar) + var(--sidebar-pl));
         }
     }
 
@@ -81,15 +77,32 @@
 
         @media (min-width: 1025px) {
             display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: var(--footer-h);
+            width: calc(var(--sidebar) + var(--sidebar-pl));
+            padding: 7.7rem 0 calc(var(--form-mh) + var(--offset-xls)) var(--sidebar-pl);
+
+            &:before {
+                @include rect(top, left, 0, 0, 100%, var(--beige));
+                z-index: -1;
+                width: calc(var(--sidebar) + var(--sidebar-pl) + var(--gap));
+            }
         }
     }
 
-    &__sidebar-inner {
-        @media (min-width: 1025px) {
-            padding: 7.7rem 0 var(--form-mh) var(--sidebar-pl);
+    &__sidebar-body {
+        @media(min-width: 1025px) {
+            @include sticky(7.7rem);
             @include row-grid(var(--offset-xls));
             align-content: start;
         }
+    }
+
+    &__header,
+    &__content {
+        grid-column: 1 / 2;
     }
 
     // .article-page__header
@@ -102,6 +115,7 @@
 
     &__content {
         @include row-grid(var(--offset-xls));
+        padding-bottom: var(--offset-xls);
 
         @media (max-width: 1024px) {
             row-gap: var(--offset-l);
@@ -138,11 +152,10 @@
 
     // .article-page__row
 
-    &__row {
+    &__form-row {
         @media (min-width: 1025px) {
             position: relative;
-            z-index: 99;
-            grid-column: 1 / -1;
+            //grid-column: 1 / -1;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             align-items: flex-end;
@@ -210,31 +223,22 @@
         }
     }
 
+    &__form-row,
+    &__footer {
+        grid-column: 1 / -1;
+    }
+
     // .article-page__footer
 
     &__footer {
-        padding-top: calc(var(--offset-xls) - var(--offset-s) / 2);
-        padding-bottom: calc(var(--offset-xls) + 0.7rem - var(--offset-s) / 2);
-    }
-
-    // .article-page__bottom
-
-    &__bottom {
-        @include row-grid(var(--offset-xl));
-    }
-
-    // .article-page__bottom-cards
-
-    &__bottom-cards {
-        display: grid;
-        gap: var(--offset-xl);
-
-        @media (max-width: 1024px) {
-            gap: var(--offset-l);
+        @media(min-width: 1025px) {
+            display: flex;
+            align-items: flex-end;
+            min-height: var(--footer-h);
         }
-
-        @media (min-width: 1025px) {
-            grid-template-columns: repeat(2, 1fr);
+        
+        @media(max-width: 1024px) {
+            padding-top: calc(var(--offset-xls) - var(--offset-s) / 2);
         }
     }
 
@@ -250,6 +254,29 @@
 
         @media (max-width: 767px) {
             width: 100%;
+        }
+    }
+}
+
+.aside-article-bottom {
+    padding-top: var(--offset-xl);
+    padding-bottom: var(--section-padding);
+
+    @media (max-width: 1024px) {
+        padding-top: calc(var(--offset-xl) - var(--offset-s) / 2);
+        padding-bottom: var(--offset-xl);
+    }
+
+    &__cards {
+        display: grid;
+        gap: var(--offset-xl);
+
+        @media (max-width: 1024px) {
+            gap: var(--offset-l);
+        }
+
+        @media (min-width: 1025px) {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
@@ -273,12 +300,7 @@
 .article-aside-card {
     position: relative;
     min-height: var(--gap);
-    // .article-aside-card__body
-
-    &__body {
-        display: grid;
-        height: 100%;
-    }
+    display: grid;
 
     &__bg,
     &__content {
@@ -314,6 +336,15 @@
     &__title {
         @extend .title;
         @extend %text-16;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
     }
 }
 

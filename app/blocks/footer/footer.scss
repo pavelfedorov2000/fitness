@@ -21,8 +21,12 @@
 
         @media (min-width: 768px) {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: var(--offset-m) max-content var(--offset-m) max-content var(--offset-l) max-content;
+            grid-template-rows: var(--offset-m) repeat(3, max-content) var(--offset-m) max-content var(--offset-m) max-content var(--offset-l) max-content;
             grid-template-areas:
+                '. . .'
+                'menu-1 menu-1 menu-1'
+                'menu-2 menu-2 menu-2'
+                'menu-3 menu-3 menu-3'
                 '. . .'
                 'contacts contacts contacts'
                 '. . .'
@@ -73,19 +77,19 @@
                 border-top: 0.1rem solid var(--black);
             }
 
-            @media (min-width: 1025px) {
+            @media (min-width: 768px) {
                 grid-area: menu-1;
             }
         }
 
         &--2 {
-            @media (min-width: 1025px) {
+            @media (min-width: 768px) {
                 grid-area: menu-2;
             }
         }
 
         &--3 {
-            @media (min-width: 1025px) {
+            @media (min-width: 768px) {
                 grid-area: menu-3;
             }
         }

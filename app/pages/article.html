@@ -1,6 +1,5 @@
 @@include("blocks/head/head.html", {"title": "Текстовая"})
 <div class="wrapper article-page">
-	<div class="decor-title article-page__decor-title">Blog</div>
 	@@include('blocks/site-map/site-map.html')
 	@@include("blocks/header/header.html", {
 	"dark": true
@@ -8,43 +7,40 @@
 	@@include('blocks/burger/burger.html')
 	<main class="container article-page__container">
 		@@include('blocks/article/social.html')
-		<article class="article-page__wrapper section-body">
-			<div class="article-page__main">
-				<div class="article-page__inner">
-					<div class="article-page__body">
-						<div class="article-page__article">
-							@@include('blocks/article/header.html')
-							<div class="article-page__content">
-								@@include('blocks/article/heading.html')
-								@@include('blocks/article/figure.html')
-								<section class="article-page__part">
-									<h2>Подзаголовок</h2>
-									@@include('blocks/article/paragraph.html')
-									<aside>
-										Sed metus dolor, sagittis id magna eget, posuere egestas magna. Integer blandit
-										tempor tincidunt. Ut eget elementum nulla. Suspendisse potenti. Cras id quam
-										aliquet, tempor velit a, ultricies eros. Integer fermentum neque id cursus
-										vestibulum. Nulla porttitor molestie tincidunt.
-									</aside>
-									@@include('blocks/article/paragraph.html')
-									@@include('blocks/article/slider.html')
-									@@include('blocks/article/paragraph.html')
-									@@include('blocks/article-speech/article-speech.html')
-									@@include('blocks/article/paragraph.html')
-									@@include('blocks/article/numbers.html')
-								</section>
-								@@include('blocks/article/lists.html')
-							</div>
-						</div>
+		<div class="article-page__wrapper section-body">
+			<div class="article-page__inner">
+				<article class="article-page__article">
+					@@include('blocks/article/header.html')
+					<div class="article-page__content">
+						@@include('blocks/article/heading.html')
+						@@include('blocks/article/figure.html')
+						<section class="article-page__part">
+							<h2>Подзаголовок</h2>
+							@@include('blocks/article/paragraph.html')
+							<aside>
+								Sed metus dolor, sagittis id magna eget, posuere egestas magna. Integer blandit
+								tempor tincidunt. Ut eget elementum nulla. Suspendisse potenti. Cras id quam
+								aliquet, tempor velit a, ultricies eros. Integer fermentum neque id cursus
+								vestibulum. Nulla porttitor molestie tincidunt.
+							</aside>
+							@@include('blocks/article/paragraph.html')
+							@@include('blocks/article/slider.html')
+							@@include('blocks/article/paragraph.html')
+							@@include('blocks/article-speech/article-speech.html')
+							@@include('blocks/article/paragraph.html')
+							@@include('blocks/article/numbers.html')
+						</section>
+						@@include('blocks/article/lists.html')
 					</div>
-					@@include('blocks/article-aside/article-aside.html')
 					@@include('blocks/article/form.html')
-				</div>
+					@@include('blocks/article/footer.html')
+				</article>
+				@@include('blocks/article-aside/article-aside.html')
 			</div>
-			@@include('blocks/article/footer.html')
-			@@include('blocks/article/bottom.html')
-		</article>
+		</div>
+		<div class="decor-title article-page__decor-title">Blog</div>
 	</main>
+	@@include('blocks/article/bottom.html')
 	@@include("blocks/footer/footer.html")
 </div>
 <div class="overlay">

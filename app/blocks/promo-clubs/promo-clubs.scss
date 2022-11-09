@@ -143,16 +143,11 @@
         display: none;
 
         @media (min-width: 1025px) {
-            display: block;
+            @include sticky(2rem);
+            @include row-grid(var(--offset-m));
             width: max-content;
             min-width: max-content;
             margin-right: auto;
-        }
-    }
-
-    &__nav-inner {
-        @media (min-width: 1025px) {
-            @include row-grid(var(--offset-m));
         }
     }
 
@@ -228,7 +223,9 @@
 
     &__aside-client {
         display: none;
+
         @media (min-width: 1025px) {
+            @include sticky(0rem);
             display: block;
         }
     }

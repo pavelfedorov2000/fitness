@@ -1,278 +1,249 @@
 @@include("blocks/head/head.html", {"title": "Клубы"})
 <div class="wrapper clubs-page">
-    @@include('blocks/site-map/site-map.html')
-    @@include("blocks/header/header.html", {
-    "dark": true
-    })
-    @@include('blocks/burger/burger.html')
-    <main class="page">
-        @@include('blocks/promo-clubs/promo-clubs.html')
-
-        <div class="clubs-page container">
-            <div class="clubs-page__aside-client">
-                @@include('blocks/aside-client/aside-client.html', {
-                "direction": "reverse",
-                "bg": "light-blue",
-                "name": "Дмитрий Борисов.",
-                "src": "assets/images/content/aside-clients/man"
-                })
-            </div>
-            <div class="section-body clubs-page__content">
-                <h1 class="section-title clubs-page__title">40 клубов по россии</h1>
-                <div class="clubs-page__inner">
-                    <div class="clubs-page__nav">
-                        <div class="clubs-page__nav-inner">
-                            <div class="clubs-page__nav-title">Регионы</div>
-                            <div class="clubs-page__nav-btns">
-                                <a class="clubs-page__nav-btn active" href="#moscow">
-                                    <span>8</span>
-                                    Московская
-                                </a>
-                                <a class="clubs-page__nav-btn" href="#leningrad">
-                                    <span>2</span>
-                                    Ленинградская
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clubs-page__regions">
-                        <section id="moscow" class="clubs-page__region region">
-                            <h2 class="region__title">Московская область</h2>
-                            <div class="region__items">
-                                @@loop('blocks/region-item/region-item.html', [{
-                                "id": "0",
-                                "abbr": "vl",
-                                "city": "Владимир",
-                                "address": "г. Владимир, октябрьский проспект, д. 10, 4-5 этажи",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "1",
-                                "abbr": "kl",
-                                "city": "Клин",
-                                "address": "г. Клин, ул. Карла Маркса, д.6, стр. 7, ТЦ «Клинский», 3 этаж",
-                                "timetable": "Пн—Пт с 07:00 до 24:00,<br>Сб—Вс 09:00 до 21:00",
-                                }, {
-                                "id": "2",
-                                "abbr": "sl",
-                                "city": "Солнечногорск",
-                                "address": "г. Солнечногорск, ул. Красная, д. 120",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "3",
-                                "abbr": "el",
-                                "city": "Электросталь",
-                                "address": "г. Электросталь, пр-т. Ленина, д. 25а",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "4",
-                                "abbr": "oz",
-                                "city": "Орехово–зуево",
-                                "address": "г. Орехово-Зуево, ул. Ленина, д. 121, ТЦ Остров",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "5",
-                                "abbr": "zv",
-                                "city": "Звенигород",
-                                "address": "г. Звенигород, ул. Московская, дом 12",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "6",
-                                "abbr": "kz",
-                                "city": "Краснознаменск",
-                                "address": "г. Краснознаменск, ул. Краснознаменная, 23",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "7",
-                                "abbr": "go",
-                                "city": "Голицыно",
-                                "address": "Московская область, Большие Вяземы, пос. Школьный, 12 А",
-                                "timetable": "Пн—Пт с 07:00 до 24:00,<br>Сб—Вс 09:00 до 22:00",
-                                }])
-                            </div>
-                        </section>
-                        <section id="leningrad" class="clubs-page__region region">
-                            <h2 class="region__title">Ленинградская область</h2>
-                            <div class="region__items">
-                                @@loop('blocks/region-item/region-item.html', [{
-                                "id": "3",
-                                "abbr": "el",
-                                "city": "Электросталь",
-                                "address": "г. Электросталь, пр-т. Ленина, д. 25а",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }, {
-                                "id": "4",
-                                "abbr": "oz",
-                                "city": "Орехово–зуево",
-                                "address": "г. Орехово-Зуево, ул. Ленина, д. 121, ТЦ Остров",
-                                "timetable": "Пн—Вс с 10:00 до 21:00",
-                                }])
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    <!-- @@include("blocks/popups/popups.html") -->
+	@@include('blocks/site-map/site-map.html')
+	@@include("blocks/header/header.html", {
+	"dark": true
+	})
+	@@include('blocks/burger/burger.html')
+	<main class="page">
+		@@include('blocks/promo-clubs/promo-clubs.html')
+		<div class="clubs-page container">
+			@@include('blocks/aside-client/aside-client.html', {
+			"class": "clubs-page",
+			"direction": "reverse",
+			"bg": "light-blue",
+			"name": "Дмитрий Борисов.",
+			"src": "assets/images/content/aside-clients/man"
+			})
+			<div class="section-body clubs-page__content">
+				<h1 class="section-title clubs-page__title">40 клубов по россии</h1>
+				<div class="clubs-page__inner">
+					<div class="clubs-page__nav">
+						<div class="clubs-page__nav-title">Регионы</div>
+						<div class="clubs-page__nav-btns">
+							<a class="clubs-page__nav-btn active" href="#moscow">
+								<span>8</span>
+								Московская
+							</a>
+							<a class="clubs-page__nav-btn" href="#leningrad">
+								<span>2</span>
+								Ленинградская
+							</a>
+						</div>
+					</div>
+					<div class="clubs-page__regions">
+						<section id="moscow" class="clubs-page__region region">
+							<h2 class="region__title">Московская область</h2>
+							<ul class="region__items">
+								@@loop('blocks/region-item/region-item.html', [{
+								"id": "0",
+								"abbr": "vl",
+								"city": "Владимир",
+								"address": "г. Владимир, октябрьский проспект, д. 10, 4-5 этажи",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "1",
+								"abbr": "kl",
+								"city": "Клин",
+								"address": "г. Клин, ул. Карла Маркса, д.6, стр. 7, ТЦ «Клинский», 3 этаж",
+								"timetable": "Пн—Пт с 07:00 до 24:00,<br>Сб—Вс 09:00 до 21:00",
+								}, {
+								"id": "2",
+								"abbr": "sl",
+								"city": "Солнечногорск",
+								"address": "г. Солнечногорск, ул. Красная, д. 120",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "3",
+								"abbr": "el",
+								"city": "Электросталь",
+								"address": "г. Электросталь, пр-т. Ленина, д. 25а",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "4",
+								"abbr": "oz",
+								"city": "Орехово–зуево",
+								"address": "г. Орехово-Зуево, ул. Ленина, д. 121, ТЦ Остров",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "5",
+								"abbr": "zv",
+								"city": "Звенигород",
+								"address": "г. Звенигород, ул. Московская, дом 12",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "6",
+								"abbr": "kz",
+								"city": "Краснознаменск",
+								"address": "г. Краснознаменск, ул. Краснознаменная, 23",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "7",
+								"abbr": "go",
+								"city": "Голицыно",
+								"address": "Московская область, Большие Вяземы, пос. Школьный, 12 А",
+								"timetable": "Пн—Пт с 07:00 до 24:00,<br>Сб—Вс 09:00 до 22:00",
+								}])
+							</ul>
+						</section>
+						<section id="leningrad" class="clubs-page__region region">
+							<h2 class="region__title">Ленинградская область</h2>
+							<ul class="region__items">
+								@@loop('blocks/region-item/region-item.html', [{
+								"id": "3",
+								"abbr": "el",
+								"city": "Электросталь",
+								"address": "г. Электросталь, пр-т. Ленина, д. 25а",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}, {
+								"id": "4",
+								"abbr": "oz",
+								"city": "Орехово–зуево",
+								"address": "г. Орехово-Зуево, ул. Ленина, д. 121, ТЦ Остров",
+								"timetable": "Пн—Вс с 10:00 до 21:00",
+								}])
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 <div class="overlay">
-    @@include('blocks/request-popup/request-popup.html')
-    @@include('blocks/info-workout-popup/info-workout-popup.html')
-    @@include('blocks/success-popup/success-popup.html')
+	@@include('blocks/request-popup/request-popup.html')
+	@@include('blocks/info-workout-popup/info-workout-popup.html')
+	@@include('blocks/success-popup/success-popup.html')
 </div>
 @@include("blocks/link/link.html")
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-<script src="./assets/libs/js/sticky-sidebar.min.js"></script>
 <script>
-    function fixClubsPageAside() {
-        if ($('.clubs-page').length && $(window).width() > 1024) {
-            new StickySidebar('.clubs-page__aside-client', {
-                topSpacing: 0,
-                bottomSpacing: 0,
-                containerSelector: '.clubs-page',
-                innerWrapperSelector: '.clubs-page__aside-client .aside-client'
-            });
+	$.ajax({
+		url: 'assets/clubs.json',
+		method: 'GET',
+		contentType: 'application/json',
+		dataType: 'json'
+	}).done(response => {
+		const clubsData = response.clubs;
 
-            new StickySidebar('.clubs-page__nav', {
-                topSpacing: 0,
-                bottomSpacing: 0,
-                containerSelector: '.clubs-page__inner',
-                innerWrapperSelector: '.clubs-page__nav-inner'
-            });
-        }
-    }
+		if ($('.clubs-page').length) {
+			ymaps.ready(function () {
+				// Создание экземпляра карты и его привязка к созданному контейнеру.
+				let clubsMap = new ymaps.Map('clubs-map', {
+						center: clubsData[0].coordinates,
+						zoom: 5,
+						controls: [],
+						//balloonOffset: [38, 38]
+					}, {
+						searchControlProvider: 'yandex#search',
+						//suppressMapOpenBlock: true
+					}),
+					clusterer = new ymaps.Clusterer({
+						preset: 'islands#invertedVioletClusterIcons',
+						clusterIconColor: '#FFCC48',
+						clusterIcons: [{
+							size: [38, 38],
+							offset: [-19, -19]
+						}],
+						maxZoom: 5,
+						gridSize: 38,
+						groupByCoordinates: false,
+						clusterDisableClickZoom: false,
+						clusterHideIconOnBalloonOpen: false,
+						geoObjectHideIconOnBalloonOpen: false,
+						hasBalloon: false
+					});
 
-    fixClubsPageAside();
+				clubsMap.behaviors.disable('scrollZoom');
 
-    window.addEventListener('resize', () => {
-        fixClubsPageAside();
-    });
-
-    $.ajax({
-        url: 'assets/clubs.json',
-        method: 'GET',
-        contentType: 'application/json',
-        dataType: 'json'
-    }).done(response => {
-        const clubsData = response.clubs;
-
-        if ($('.clubs-page').length) {
-            ymaps.ready(function () {
-                // Создание экземпляра карты и его привязка к созданному контейнеру.
-                let clubsMap = new ymaps.Map('clubs-map', {
-                    center: clubsData[0].coordinates,
-                    zoom: 5,
-                    controls: [],
-                    //balloonOffset: [38, 38]
-                }, {
-                    searchControlProvider: 'yandex#search',
-                    //suppressMapOpenBlock: true
-                }),
-                    clusterer = new ymaps.Clusterer({
-                        preset: 'islands#invertedVioletClusterIcons',
-                        clusterIconColor: '#FFCC48',
-                        clusterIcons: [{
-                            size: [38, 38],
-                            offset: [-19, -19]
-                        }],
-                        maxZoom: 5,
-                        gridSize: 38,
-                        groupByCoordinates: false,
-                        clusterDisableClickZoom: false,
-                        clusterHideIconOnBalloonOpen: false,
-                        geoObjectHideIconOnBalloonOpen: false,
-                        hasBalloon: false
-                    });
-
-                clubsMap.behaviors.disable('scrollZoom');
-
-                // Создание макета балуна на основе Twitter Bootstrap.
-                let warehouseBalloonLayout = ymaps.templateLayoutFactory.createClass(
-                    `<div class="map-balloon">
+				// Создание макета балуна на основе Twitter Bootstrap.
+				let warehouseBalloonLayout = ymaps.templateLayoutFactory.createClass(
+					`<div class="map-balloon">
     	$[properties.balloonTitle]
     	$[properties.balloonAddress]
     	$[properties.balloonWorkHours]
     	$[properties.balloonTel]
     	<a class="btn map-balloon__btn" href="club.html">Подробнее о клубе</a>
     </div>`
-                );
+				);
 
-                //let warehousePlacemark;
-                let clubsPlacemarks = {};
-                var GeoObjects = [];
-                for (let i = 0; i < clubsData.length; i++) {
-                    let club = clubsData[i]; // Создание метки с пользовательским макетом
-                    clubsPlacemarks[club.data.id] = new ymaps.Placemark(club.coordinates, {
-                        balloonTitle: `<div
+				//let warehousePlacemark;
+				let clubsPlacemarks = {};
+				var GeoObjects = [];
+				for (let i = 0; i < clubsData.length; i++) {
+					let club = clubsData[i]; // Создание метки с пользовательским макетом
+					clubsPlacemarks[club.data.id] = new ymaps.Placemark(club.coordinates, {
+						balloonTitle: `<div
     	class="map-balloon__title">${club.title.text}</div>`,
-                        balloonAddress: club.address_full && club.address_full !== '' && `<p
+						balloonAddress: club.address_full && club.address_full !== '' && `<p
     		class="map-balloon__item map-balloon__item--address">${club.address_full}</p>`,
-                        balloonWorkHours: club.work_hours && club.work_hours.items && club
-                            .work_hours.items.length > 0 ?
-                            `<div class="map-balloon__item map-balloon__item--time">
+						balloonWorkHours: club.work_hours && club.work_hours.items && club
+							.work_hours.items.length > 0 ?
+							`<div class="map-balloon__item map-balloon__item--time">
     		Работаем ${club.work_hours.items.join(', ')}
     	</div>` : null,
-                        balloonTel: club.tel && club.tel !== '' &&
-                            `<a class="map-balloon__item map-balloon__item--tel"
+						balloonTel: club.tel && club.tel !== '' &&
+							`<a class="map-balloon__item map-balloon__item--tel"
     		href="tel:${club.tel.split('').map(item => item.split('').filter(el => el !== '' && el !== '(' && el !== ')' && el !== '-')).join('')}">${club.tel}</a>`,
-                    }, {
-                        iconImageHref: 'assets/images/icons/map-pin.svg',
-                        iconLayout: "default#image",
-                        iconImageSize: [48, 56],
-                        iconImageOffset: [-24, -56],
-                        balloonShadow: false,
-                        balloonLayout: warehouseBalloonLayout,
-                        balloonPanelMaxMapArea: 0
-                    });
-                    clubsMap.geoObjects.add(clubsPlacemarks[club.data.id]);
+					}, {
+						iconImageHref: 'assets/images/icons/map-pin.svg',
+						iconLayout: "default#image",
+						iconImageSize: [48, 56],
+						iconImageOffset: [-24, -56],
+						balloonShadow: false,
+						balloonLayout: warehouseBalloonLayout,
+						balloonPanelMaxMapArea: 0
+					});
+					clubsMap.geoObjects.add(clubsPlacemarks[club.data.id]);
 
-                    GeoObjects[i] = clubsPlacemarks[club.data.id];
+					GeoObjects[i] = clubsPlacemarks[club.data.id];
 
-                    clubsMap.geoObjects.events.add('click', function (e) {
-                        //clubsMap.setZoom(5);
-                        const target = e.get('target');
-                        clubsMap.setCenter(target.geometry._coordinates);
-                    });
+					clubsMap.geoObjects.events.add('click', function (e) {
+						//clubsMap.setZoom(5);
+						const target = e.get('target');
+						clubsMap.setCenter(target.geometry._coordinates);
+					});
 
-                    clubsMap.events.add('click', function (e) {
-                        clubsMap.balloon.close();
-                    });
-                }
+					clubsMap.events.add('click', function (e) {
+						clubsMap.balloon.close();
+					});
+				}
 
-                clusterer.add(GeoObjects);
-                clubsMap.geoObjects.add(clusterer);
+				clusterer.add(GeoObjects);
+				clubsMap.geoObjects.add(clusterer);
 
-                clubsMap.setBounds(clusterer.getBounds(), {
-                    checkZoomRange: true,
-                    zoomMargin: 38,
-                    zoom: 5
-                });
+				clubsMap.setBounds(clusterer.getBounds(), {
+					checkZoomRange: true,
+					zoomMargin: 38,
+					zoom: 5
+				});
 
-                $('body').on('click', '.region-btn', function () {
-                    const $regionBtn = $(this);
-                    const club = clubsData && clubsData.find(item => item.data.id == $regionBtn
-                        .attr('data-id'));
+				$('body').on('click', '.region-btn', function () {
+					const $regionBtn = $(this);
+					const club = clubsData && clubsData.find(item => item.data.id == $regionBtn
+						.attr('data-id'));
 
-                    //clubsMap.setZoom(7);
-                    clubsMap.setCenter(club.coordinates);
-                    clubsPlacemarks[club.data.id].balloon.open();
+					//clubsMap.setZoom(7);
+					clubsMap.setCenter(club.coordinates);
+					clubsPlacemarks[club.data.id].balloon.open();
 
-                    window.scrollTo({
-                        top: document.querySelector('#clubs-map').getBoundingClientRect()
-                            .top,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        }
+					window.scrollTo({
+						top: document.querySelector('#clubs-map').getBoundingClientRect()
+							.top,
+						behavior: 'smooth'
+					});
+				});
+			});
+		}
 
-        if (response.error) {
-            $('.warehouse').remove();
-        }
-    }).fail(function (response) {
-        console.error(`HTTP error ${response.status}`);
-    });
+		if (response.error) {
+			$('.warehouse').remove();
+		}
+	}).fail(function (response) {
+		console.error(`HTTP error ${response.status}`);
+	});
 
 </script>
 </body>

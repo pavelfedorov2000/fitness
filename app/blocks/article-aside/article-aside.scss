@@ -4,6 +4,10 @@
     &__img {
         position: relative;
         height: 24.8rem;
+
+        img {
+            @extend %cover;
+        }
     }
 
     &__label {
