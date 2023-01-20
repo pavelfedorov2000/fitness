@@ -1,105 +1,27 @@
 @@include("blocks/head/head.html", {"title": "Команда"})
 <div class="wrapper wrapper--yellow-promo">
-	@@include('blocks/site-map/site-map.html')
-	@@include("blocks/header/header.html", {
-	"dark": true
-	})
-	@@include('blocks/burger/burger.html')
-	<main class="page">
-		@@include('blocks/promo-team/promo-team.html')
-		<div class="container team-grid">
-			<div class="section-body team-grid__items">
-				@@include('blocks/team-member/team-member.html', {
-				"color": "yellow",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/06",
-				"width": "370",
-				"height": "416",
-				"role": "Инструктор<br>групповых программ",
-				"name": "Анастасия Ерисова"
-				})
-				@@include('blocks/team-member/team-member.html', {
-				"color": "ocean",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/02",
-				"width": "742",
-				"height": "416",
-				"role": "Персональный<br>тренер–наставник",
-				"name": "Ренат якубов"
-				})
-				@@include('blocks/team-member/team-member.html', {
-				"color": "pink",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/04",
-				"width": "370",
-				"height": "416",
-				"role": "Инструктор<br>детских секций",
-				"name": "Ирина садовская"
-				})
-				@@include('blocks/team-member/team-member.html', {
-				"color": "yellow",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/05",
-				"width": "370",
-				"height": "416",
-				"role": "Персональный<br>тренер–наставник",
-				"name": "Вера Громова"
-				})
-				@@include('blocks/team-member/team-member.html', {
-				"color": "ocean",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/06",
-				"width": "370",
-				"height": "416",
-				"role": "Инструктор<br>групповых программ",
-				"name": "Анастасия Ерисова"
-				})
-				@@include('blocks/team-member/team-member.html', {
-				"color": "green",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/09",
-				"width": "742",
-				"height": "416",
-				"role": "Инструктор<br>групповых программ",
-				"name": "Анастасия Ерисова"
-				})
-				@@include('blocks/team-member/team-member.html', {
-				"color": "ocean",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/08",
-				"width": "370",
-				"height": "832",
-				"role": "Персональный<br>тренер–наставник",
-				"name": "Вера Громова"
-				})
-				@@include('blocks/team-member/team-member.html', {
-				"color": "yellow",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/04",
-				"width": "370",
-				"height": "416",
-				"role": "Инструктор<br>детских секций",
-				"name": "Ирина садовская"
-				})
-				@@include('blocks/team-member/team-member.html', {
-				"color": "pink",
-				"class": "team-grid__card",
-				"src": "assets/images/content/team/10",
-				"width": "370",
-				"height": "416",
-				"role": "Персональный<br>тренер–наставник",
-				"name": "Ренат якубов"
-				})
-			</div>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	<!-- @@include("blocks/popups/popups.html") -->
+    @@include('blocks/site-map/site-map.html')
+    @@include("blocks/header/header.html", {
+    "dark": true
+    })
+    @@include('blocks/burger/burger.html')
+    <main class="page">
+        @@include('blocks/promo-team/promo-team.html')
+        <div class="team-grid">
+            <div class="container">
+                <div class="section-body">
+                    @@include('blocks/team-grid/team-grid.html')
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    <!-- @@include("blocks/popups/popups.html") -->
 </div>
 <div class="overlay">
-	@@include('blocks/request-popup/request-popup.html')
-	@@include('blocks/info-workout-popup/info-workout-popup.html')
-	@@include('blocks/success-popup/success-popup.html')
+    @@include('blocks/request-popup/request-popup.html')
+    @@include('blocks/info-workout-popup/info-workout-popup.html')
+    @@include('blocks/success-popup/success-popup.html')
 </div>
 @@include("blocks/link/link.html")
 </body>

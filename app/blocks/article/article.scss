@@ -63,6 +63,7 @@
     // .article-page__body
 
     &__article {
+
         /* @media (min-width: 1025px) {
             padding-right: var(--section-padding);
         } */
@@ -236,7 +237,7 @@
             align-items: flex-end;
             min-height: var(--footer-h);
         }
-        
+
         @media(max-width: 1024px) {
             padding-top: calc(var(--offset-xls) - var(--offset-s) / 2);
         }
@@ -315,8 +316,8 @@
     }
 
     &__content {
-        padding: var(--offset-l) var(--offset-l) var(--offset-xls);
         @extend %flex-col;
+        padding: var(--offset-l) var(--offset-l) var(--offset-xls);
         justify-content: space-between;
         color: #fff;
 

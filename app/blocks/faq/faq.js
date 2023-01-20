@@ -2,17 +2,17 @@ app.faq = {
     name: 'faq',
     description: 'your script description',
     init() {
-        $('.faq-section__item-toggle').on('click', function () {
+        $('.faq-item__toggle').on('click', function () {
             const $faqSectionItemToggle = $(this);
-            const $faqSectionItem = $faqSectionItemToggle.closest('.faq-section__item');
-            const $faqSectionItemContent = $faqSectionItem.find('.faq-section__item-content');
+            const $faqSectionItem = $faqSectionItemToggle.closest('.faq-item');
+            const $faqSectionItemContent = $faqSectionItem.find('.faq-item__content');
 
             $faqSectionItemContent.slideToggle('300');
 
-            if ($faqSectionItemToggle.attr('aria-expanded') === 'true') {
-                $faqSectionItemToggle.attr('aria-expanded', false);
-            } else {
+            if ($faqSectionItemToggle.attr('aria-expanded') === 'false') {
                 $faqSectionItemToggle.attr('aria-expanded', true);
+            } else {
+                $faqSectionItemToggle.attr('aria-expanded', false);
             }
         });
     },

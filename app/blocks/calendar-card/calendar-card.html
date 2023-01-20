@@ -1,33 +1,36 @@
-<article class="calendar-card @@category" data-training-category="@@category">
-	<a data-popup="info-workout-popup" href="#" class="calendar-card__inner">
-		<div class="calendar-card__top">
-			<span class="calendar-card__time">@@time</span>
-			<div class="calendar-card__category">
-				@@if(context.category == 'group') {
-				<span class="label label--style_bg-transparent">Групповая
-					тренировка</span>
-				}
-				@@if(context.category == 'appointment') {
-				<span class="label label--style_bg-yellow">По записи</span>
-				<span class="label">Мест: 2</span>
-				}
-				@@if(context.category == 'children') {
-				<span class="label">Детская
-					секция</span>
-				}
-				@@if(context.category == 'business') {
-				<span class="label">Бизнес–класс</span>
-				}
-
-			</div>
-		</div>
-		<div class="calendar-card__middle">
-			<h3 class="title calendar-card__title">@@title</h3>
-			<div class="calendar-card__place">@@place</div>
-		</div>
-		<div class="calendar-card__coach">@@coach</div>
-		@@include('blocks/arrow-btn/arrow-btn.html', {
-		"bg": "white"
-		})
-	</a>
-</article>
+<li>
+    <article class="calendar-card @@category"
+             data-training-category="@@category">
+        <div class="calendar-card__top">
+            <span class="calendar-card__time">@@time</span>
+            <div class="calendar-card__category">
+                @@if(context.category == 'group') {
+                <span class="label label--style_bg-transparent">Групповая
+                    тренировка</span>
+                }
+                @@if(context.category == 'appointment') {
+                <span class="label label--style_bg-yellow">По записи</span>
+                <span class="label">Мест: 2</span>
+                }
+                @@if(context.category == 'children') {
+                <span class="label">Детская
+                    секция</span>
+                }
+                @@if(context.category == 'business') {
+                <span class="label">Бизнес–класс</span>
+                }
+            </div>
+        </div>
+        <div class="calendar-card__middle">
+            <h3 class="title calendar-card__title">@@title</h3>
+            <div class="calendar-card__place">@@place</div>
+        </div>
+        <div class="calendar-card__coach">@@coach</div>
+        @@include('blocks/arrow-btn/arrow-btn.html', {
+        "class": "calendar-card",
+        "fullLink": true,
+        "dataPopup": "info-workout-popup",
+        "bg": "white"
+        })
+    </article>
+</li>

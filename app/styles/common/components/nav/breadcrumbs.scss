@@ -8,7 +8,7 @@
         color: #828282;
         padding-right: var(--offset-s);
         margin-right: 1rem;
-        transition: .3s color;
+        transition: $transition color;
 
         @media (any-hover: hover) {
             &:hover {

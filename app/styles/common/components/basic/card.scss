@@ -2,13 +2,15 @@
     $this: &;
 
     position: relative;
+    padding: var(--offset-m) var(--offset-m) 2.8rem;
     background-color: var(--light-blue);
     border: 0.1rem solid var(--light-blue);
     min-height: 24.8rem;
-    transition: 0.3s all;
+    transition: $transition all;
 
     @media (max-width: 767px) {
         min-height: 18.1rem;
+        padding: var(--offset-s) var(--mob-padding) 2.8rem;
     }
 
     @media (any-hover: hover) {
@@ -25,16 +27,6 @@
             .arrow-btn {
                 background-color: var(--yellow);
             }
-        }
-    }
-
-    &__inner {
-        display: block;
-        height: 100%;
-        padding: var(--offset-m) var(--offset-m) 2.8rem;
-
-        @media (max-width: 767px) {
-            padding: var(--offset-s) var(--mob-padding) 2.8rem;
         }
     }
 

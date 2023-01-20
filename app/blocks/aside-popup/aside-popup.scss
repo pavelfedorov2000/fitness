@@ -17,7 +17,7 @@
     background-color: #fff;
     height: 100%;
     opacity: 0;
-    transition: 0.3s all;
+    transition: $transition all;
 
     @media (max-width: 1024px) {
         left: -250%;

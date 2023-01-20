@@ -1,7 +1,8 @@
 .social {
     $this: &;
 
-    @extend %grid-row;
+    display: flex;
+    flex-wrap: wrap;
 
     // .social__item
 
@@ -10,14 +11,14 @@
         height: var(--offset-xls);
         background-color: #fff;
         border: 0.1rem solid var(--dark);
-        transition: 0.3s background-color, 0.3s border-color;
+        transition: $transition background-color, $transition border-color;
 
         svg {
             width: var(--offset-s);
             height: var(--offset-s);
 
             path {
-                transition: 0.3s all;
+                transition: $transition all;
             }
         }
 
@@ -49,7 +50,7 @@
         font-size: 1.1rem;
         line-height: 1;
         color: var(--dark-gray);
-        transition: 0.3s color;
+        transition: $transition color;
     }
 
     // .social__item--vk
@@ -80,48 +81,46 @@
 
     // .social__item--youtube
 
-    &__item--youtube {
-        svg {
-            width: 1.9rem;
-            height: 1.3rem;
-        }
+    &__item {
+        &--youtube {
+            svg {
+                width: 1.9rem;
+                height: 1.3rem;
+            }
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: var(--youtube);
-                border-color: var(--youtube);
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: var(--youtube);
+                    border-color: var(--youtube);
+                }
             }
         }
-    }
 
-    // .social__item--fb
+        &--fb {
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: var(--fb);
+                    border-color: var(--fb);
 
-    &__item--fb {
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: var(--fb);
-                border-color: var(--fb);
+                    svg path {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
 
-                svg path {
-                    stroke: #fff;
+        &--inst {
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: var(--inst);
+                    border-color: var(--inst);
                 }
             }
         }
     }
 
-    // .social__item--inst
-
-    &__item--inst {
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: var(--inst);
-                border-color: var(--inst);
-            }
-        }
-    }
-
     &--col {
-        grid-auto-flow: row;
+        flex-direction: column;
 
         #{$this} {
             &__item {

@@ -51,10 +51,10 @@
     --offset-l: 3.2rem;
     --offset-m: 2.4rem;
     --offset-s: 1.6rem;
-    --offset-xs: var(--mob-padding);
+    --offset-xs: 1.2rem;
     --offset-xxs: 0.8rem;
 
-    --arrow-btn: var(--offset-xl);
+    --arrow-btn: 4.8rem;
 
     @media (max-width: 1024px) {
         --header-height: 4.8rem;
@@ -65,7 +65,6 @@
 
     @media (max-width: 767px) {
         --rating: var(--section-padding);
-        //--card-height: 29.6rem;
         --card-height: 36rem;
         --arrow-btn: 4rem;
         --team-card-h: 29.6rem;
@@ -73,12 +72,20 @@
 }
 
 $fz: 15;
-$ff: 'Gotham Pro', sans-serif;
+$ff: 'Gotham Pro',
+sans-serif;
 $color-default: var(--black);
-$bsh: 0 var(--offset-xxs) var(--offset-m) rgba(0, 0, 0, 0.2);
+$bsh: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.2);
 $tsh: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.16);
-$brs: var(--offset-l);
+$brs: 3.2rem;
 $border: 0.1rem solid var(--line-color);
+
+$transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+$duration: 0.3s; // указывать только в секундах!
+$duration--long: 1s; // указывать только в секундах!
+$delay: $duration;
+$transition: $duration $transition-timing;
+
 
 %text-10 {
     font-size: rem(10);

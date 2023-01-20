@@ -139,7 +139,7 @@
     &__link {
         @extend %text-14;
         color: var(--dark-gray);
-        transition: 0.3s color;
+        transition: $transition color;
 
         @media (any-hover: hover) {
             &:hover {
@@ -291,7 +291,7 @@
         dd {
             margin-left: var(--offset-xxs);
             font-weight: 500;
-            transition: 0.3s color;
+            transition: $transition color;
 
             @media (any-hover: hover) {
                 &:hover {

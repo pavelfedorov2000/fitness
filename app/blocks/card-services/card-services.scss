@@ -20,20 +20,17 @@
     &__grid {
         min-height: 100vh;
         grid-template-rows:
-            minmax(var(--title-mh), 1fr) var(--white-part-offset) max-content var(--offset-xl) max-content calc(
-                var(--section-padding-xl) - var(--progressbar)
-            )
-            var(--progressbar);
+            minmax(var(--title-mh), 1fr) var(--white-part-offset) max-content var(--offset-xl) max-content calc(var(--section-padding-xl) - var(--progressbar)) var(--progressbar);
         grid-template-columns: repeat(2, var(--gap)) var(--text) 1fr repeat(2, var(--gap));
     }
 
     // .card-services__title
 
     &__title {
+        @extend %vertical-align;
         position: relative;
         z-index: 10;
         min-height: var(--title-mh);
-        @extend %vertical-align;
 
         @media (min-width: 1025px) {
             grid-column: 3 / 5;
@@ -63,7 +60,7 @@
             grid-row: 1 / 2;
             grid-column: 1 / 2;
             opacity: 0;
-            transition: 0.3s opacity;
+            transition: $transition opacity;
 
             &.active {
                 opacity: 1;
@@ -76,7 +73,7 @@
         grid-column: 1 / span 4;
         width: var(--white-rect);
         background-color: #fff;
-        transition: 0.3s width;
+        transition: $transition width;
     }
 
     // .card-services__slider

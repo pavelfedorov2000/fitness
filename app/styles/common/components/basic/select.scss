@@ -28,7 +28,7 @@
         background-color: #fff;
         border: 0.1rem solid #fff;
         cursor: pointer;
-        transition: 0.3s background-color, 0.3s border-color;
+        transition: $transition background-color, $transition border-color;
 
         @media (any-hover: hover) {
             &:hover {
@@ -46,7 +46,7 @@
             height: 2rem;
             background-image: url(../images/icons/drop.svg);
             @extend %bg-contain;
-            transition: transform 0.3s ease-out;
+            transition: transform $transition ease-out;
 
             @media (max-width: 1024px) {
                 top: 1.4rem;
@@ -95,7 +95,7 @@
         overflow: hidden;
         display: block;
         padding: var(--offset-xxs) var(--offset-s);
-        transition: 0.3s background-color;
+        transition: $transition background-color;
 
         @media (any-hover: hover) {
             &:hover {

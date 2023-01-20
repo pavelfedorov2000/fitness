@@ -3,15 +3,12 @@
 
     --offset: var(--offset-l);
 
+    position: relative;
+    display: grid;
+    height: 100%;
+
     @media (max-width: 767px) {
         --offset: var(--offset-s);
-    }
-
-    // .team-member__body
-
-    &__body {
-        display: grid;
-        height: 100%;
     }
 
     &__img,
@@ -49,7 +46,7 @@
             height: 50%;
             background: linear-gradient(180deg, rgba(2, 8, 24, 0) 0%, rgba(2, 8, 24, 0.58) 100%);
             opacity: 0;
-            transition: 0.3s opacity;
+            transition: $transition opacity;
         }
     }
 

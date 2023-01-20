@@ -5,7 +5,7 @@
     color: var(--black);
     border-radius: $brs;
     padding: 0.1rem var(--offset-xxs);
-    transition: 0.3s background-color;
+    transition: $transition background-color;
 
     &--style {
         &_bg {

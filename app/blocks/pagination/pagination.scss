@@ -17,7 +17,7 @@
         height: var(--arrow-btn);
         background-color: var(--light-blue);
         border: 0.1rem solid var(--light-blue);
-        transition: 0.3s all;
+        transition: $transition all;
 
         @media (any-hover: hover) {
             &:hover {

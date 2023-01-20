@@ -80,7 +80,7 @@
         display: none;
 
         @media (min-width: 1025px) {
-            display: block;
+            display: grid;
             position: relative;
             z-index: 10;
             grid-area: article;

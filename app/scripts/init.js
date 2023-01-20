@@ -2,6 +2,7 @@
     $(document).ready(function () {
         //new WOW().init();
         app.burger.init();
+        app.accordion.init();
         app.asidePopup.init();
         app.blog.init();
         app.faq.init();
@@ -75,19 +76,6 @@
             $selectTitle.text($selectOption.text());
             $selectTitle.removeClass('active');
             $selectContent.slideUp('300');
-        });
-
-        $('.accordeon-title').on('click', function () {
-            const $accordeonTitle = $(this);
-            const $accordeonContent = $accordeonTitle.next();
-            const $accordeonItemNotActive = $accordeonTitle.parent().siblings();
-            const $accordeonItemNotActiveSummary = $accordeonItemNotActive.find('.accordeon-title');
-            const $accordeonItemNotActiveContent = $accordeonItemNotActive.find('.accordeon-content');
-
-            $accordeonItemNotActiveSummary.removeClass('active');
-            $accordeonItemNotActiveContent.slideUp('300');
-            $accordeonTitle.toggleClass('active');
-            $accordeonContent.slideToggle('300');
         });
 
         function DynamicAdapt(type) {

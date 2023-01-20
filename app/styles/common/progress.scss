@@ -20,7 +20,7 @@
     margin-bottom: 10px;
     font-weight: 700;
     color: #222;
-    transition: opacity 0.3s;
+    transition: opacity $transition;
 
     @media (any-hover: hover) {
         &:hover {

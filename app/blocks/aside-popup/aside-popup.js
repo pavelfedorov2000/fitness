@@ -2,20 +2,6 @@ app.asidePopup = {
     name: 'asidePopup',
     description: 'your script description',
     init() {
-        /* $(document).on('click', '.timetable-card__btn, .workout-card__btn', function () {
-            $('body').addClass('_lock');
-            $('html').addClass('disable-fix');
-            $('.overlay').fadeIn('slow');
-            $('.info-workout-popup').addClass('active');
-        });
-
-        $(document).on('click', '.success-story-start__btn', function () {
-            $('body').addClass('_lock');
-            $('html').addClass('disable-fix');
-            $('.overlay').fadeIn('slow');
-            $('.request-popup').addClass('active');
-        }); */
-
         $('[data-popup]').on('click', function (e) {
             e.preventDefault();
             const $popupBtn = $(this);
@@ -23,6 +9,7 @@ app.asidePopup = {
             $('body').addClass('_lock');
             $('html').addClass('disable-fix');
             $('.overlay').fadeIn('slow');
+            $popupBtn.attr('aria-expanded', true);
             $(`#${$popupBtn.attr('data-popup')}`).addClass('active');
         });
 
@@ -31,17 +18,18 @@ app.asidePopup = {
             const $asidePopup = $asidePopupCloseBtn.closest('.aside-popup');
 
             $asidePopup.removeClass('active');
+            $(`[data-popup="${$asidePopup.attr('id')}"]`).attr('aria-expanded', false);
             $('.overlay').fadeOut();
             $('body').removeClass('_lock');
             $('html').removeClass('disable-fix');
         });
 
         $(document).on('mouseup', function (e) {
-            //const $overlay = $(this);
-            const $asidePopup = $('.aside-popup');
+            const $asidePopup = $('.aside-popup.active');
 
             if (!$asidePopup.is(e.target) && $asidePopup.has(e.target).length === 0) {
                 $asidePopup.removeClass('active');
+                $(`[data-popup="${$asidePopup.attr('id')}"]`).attr('aria-expanded', false);
                 $('.overlay').fadeOut();
                 $('body').removeClass('_lock');
                 $('html').removeClass('disable-fix');
@@ -65,7 +53,7 @@ app.asidePopup = {
             $.ajax({
                 type: "POST",
                 url: "",
-                data: data, // data - объект
+                data: data,
             });
 
             $asidePopup.removeClass('active');
@@ -84,7 +72,7 @@ app.asidePopup = {
             $.ajax({
                 type: "POST",
                 url: "",
-                data: data, // data - объект
+                data: data,
             });
 
             $('body').addClass('_lock');

@@ -1,0 +1,60 @@
+.team-grid {
+    padding-top: var(--offset-xxl);
+    padding-bottom: var(--section-padding-xl);
+    position: relative;
+
+    @media (max-width: 1024px) {
+        padding-top: var(--offset-m);
+        padding-bottom: var(--offset-l);
+    }
+
+    @media (min-width: 1025px) {
+        &:before {
+            @include rect(top, left, calc(var(--input-height) + var(--team-card-h)), 0, 64rem, var(--beige));
+        }
+
+        &:after {
+            @include rect(top, right, calc(var(--input-height) * (-1)), 0, 67.2rem, var(--beige));
+            z-index: 2;
+        }
+    }
+
+    // .team-grid__list
+
+    &__list {
+        display: grid;
+        grid-auto-rows: minmax(var(--team-card-h), max-content);
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1025px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 767px) {
+            gap: var(--offset-s);
+        }
+
+        > * {
+            &:nth-child(9n + 2) {
+                @media (min-width: 1025px) {
+                    grid-column: span 2;
+                }
+            }
+
+            &:nth-child(9n + 6) {
+                @media (min-width: 1025px) {
+                    grid-column: span 2;
+                }
+            }
+
+            &:nth-child(9n + 7) {
+                @media (min-width: 1025px) {
+                    grid-row: span 2;
+                }
+            }
+        }
+    }
+}

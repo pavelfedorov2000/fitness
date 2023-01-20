@@ -61,7 +61,7 @@
     padding: var(--offset-l);
     @extend %flex-col;
     justify-content: space-between;
-    transition: 0.3s box-shadow;
+    transition: $transition box-shadow;
     // .color-item__title
 
     &__title {

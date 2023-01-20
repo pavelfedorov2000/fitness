@@ -1,17 +1,15 @@
 <article class="card certificates__item">
-    <a href="#"
-       class="card__inner">
-        <div class="card__content">
-            <h4 class="title card__title">
-                FPA. Fitness professional association
-            </h4>
-            <div class="card__text">
-                Сертификат персонального фитнес–тренера
-            </div>
-            <span class="label card__label label--style_bg-white">Сертификат</span>
+    <div class="card__content">
+        <h4 class="title card__title">
+            FPA. Fitness professional association
+        </h4>
+        <div class="card__text">
+            Сертификат персонального фитнес–тренера
         </div>
-        @@include('blocks/arrow-btn/arrow-btn.html', {
-        "bg": "white"
-        })
-    </a>
+        <span class="label card__label label--style_bg-white">Сертификат</span>
+    </div>
+    @@include('blocks/arrow-btn/arrow-btn.html', {
+    "fullLink": "true",
+    "bg": "white"
+    })
 </article>

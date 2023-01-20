@@ -150,7 +150,7 @@
     // .contact-info-item__link
 
     &__link {
-        transition: 0.3s color;
+        transition: $transition color;
 
         @media (any-hover: hover) {
             &:hover {

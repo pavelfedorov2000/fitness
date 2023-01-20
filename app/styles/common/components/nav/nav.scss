@@ -57,7 +57,7 @@
         @extend %text-12;
         color: #fff;
         text-transform: uppercase;
-        transition: .3s color;
+        transition: $transition color;
 
         @media (any-hover: hover) {
             &:hover {

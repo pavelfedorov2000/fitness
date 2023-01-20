@@ -1,111 +1,135 @@
 <div class="splide blog-section__slider blog-slider">
-	<div class="splide__track">
-		<div class="splide__list blog-section__slider-inner">
-			<article class="splide__slide article-card blog-section__slider-item">
-				<time class="date article-card__date" datetime="2020-09-08">08.09.2020</time>
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/01.webp">
-							<img src="assets/images/content/blog/01.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label">Тренировки</span>
-						<div class="article-card__title">Советы по домашним тренировкам
-							от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
-						</div>
-						@@include('blocks/views/views.html', {
-						"class": "article-card__views",
-						"value": "1 200"
-						})
-						@@include('blocks/arrow-btn/arrow-btn.html', {
-						"bg": "white"
-						})
-					</div>
-				</a>
-			</article>
-			<article class="splide__slide article-card sale blog-section__slider-item">
-				<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/02.webp">
-							<img src="assets/images/content/blog/02.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label">Акции</span>
-						<div class="article-card__title">
-							<span>Осенние скидки</span>
-							<span>от 17% до 33%</span>
-						</div>
-						@@include('blocks/views/views.html', {
-						"class": "article-card__views",
-						"value": "542"
-						})
-						@@include('blocks/arrow-btn/arrow-btn.html', {
-						"bg": "white"
-						})
-					</div>
-				</a>
-			</article>
-			<article class="splide__slide article-card blog-section__slider-item">
-				<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/01.webp">
-							<img src="assets/images/content/blog/01.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label">Тренировки</span>
-						<div class="article-card__title">Советы по домашним тренировкам
-							от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
-						</div>
-						@@include('blocks/views/views.html', {
-						"class": "article-card__views",
-						"value": "1 200"
-						})
-						@@include('blocks/arrow-btn/arrow-btn.html', {
-						"bg": "white"
-						})
-					</div>
-				</a>
-			</article>
-			<article class="splide__slide article-card sale blog-section__slider-item">
-				<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
-				<a href="#" class="article-card__body">
-					<div class="article-card__img">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/blog/02.webp">
-							<img src="assets/images/content/blog/02.jpg" alt="фото" width="344" height="440"
-								loading="lazy">
-						</picture>
-					</div>
-					<div class="article-card__content">
-						<span class="label article-card__label">Акции</span>
-						<div class="article-card__title">
-							<span>Осенние скидки</span>
-							<span>от 17% до 33%</span>
-						</div>
-						@@include('blocks/views/views.html', {
-						"class": "article-card__views",
-						"value": "542"
-						})
-						@@include('blocks/arrow-btn/arrow-btn.html', {
-						"bg": "white"
-						})
-					</div>
-				</a>
-			</article>
-		</div>
-	</div>
-	@@include('blocks/slider-nav/slider-nav.html', {
-	"class": "blog-slider"
-	})
+    <div class="splide__track">
+        <div class="splide__list blog-section__slider-inner">
+            <article class="splide__slide article-card blog-section__slider-item">
+                <time class="date article-card__date"
+                      datetime="2020-09-08">08.09.2020</time>
+                <div class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/01.webp">
+                            <img src="assets/images/content/blog/01.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label">Тренировки</span>
+                        <a href="#"
+                           class="full-link article-card__title">Советы по домашним тренировкам
+                            от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
+                        </a>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "1 200"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white"
+                        })
+                    </div>
+                </div>
+            </article>
+            <article class="splide__slide article-card sale blog-section__slider-item">
+                <time class="date article-card__date"
+                      datetime="2020-09-08">08.09.2020 </time>
+                <div class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/02.webp">
+                            <img src="assets/images/content/blog/02.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label">Акции</span>
+                        <a href="#"
+                           class="article-card__title">
+                            <span>Осенние скидки</span>
+                            <span>от 17% до 33%</span>
+                        </a>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "542"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white"
+                        })
+                    </div>
+                </div>
+            </article>
+            <article class="splide__slide article-card blog-section__slider-item">
+                <time class="date article-card__date"
+                      datetime="2020-09-08">08.09.2020 </time>
+                <div class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/01.webp">
+                            <img src="assets/images/content/blog/01.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label">Тренировки</span>
+                        <a href="#"
+                           class="article-card__title">Советы по домашним тренировкам
+                            от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
+                        </a>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "1 200"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white"
+                        })
+                    </div>
+                </div>
+            </article>
+            <article class="splide__slide article-card sale blog-section__slider-item">
+                <time class="date article-card__date"
+                      datetime="2020-09-08">08.09.2020 </time>
+                <div class="article-card__body">
+                    <div class="article-card__img">
+                        <picture>
+                            <source type="image/webp"
+                                    srcset="assets/images/content/blog/02.webp">
+                            <img src="assets/images/content/blog/02.jpg"
+                                 alt="фото"
+                                 width="344"
+                                 height="440"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="label article-card__label">Акции</span>
+                        <a href="#"
+                           class="article-card__title">
+                            <span>Осенние скидки</span>
+                            <span>от 17% до 33%</span>
+                        </a>
+                        @@include('blocks/views/views.html', {
+                        "class": "article-card__views",
+                        "value": "542"
+                        })
+                        @@include('blocks/arrow-btn/arrow-btn.html', {
+                        "bg": "white"
+                        })
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    @@include('blocks/slider-nav/slider-nav.html', {
+    "class": "blog-slider"
+    })
 </div>

@@ -72,15 +72,18 @@
                 border-top: 0.1rem solid var(--line-color);
                 border-bottom: 0.1rem solid var(--line-color);
             }
+
             &::before {
                 left: calc(var(--gap) * (-2));
             }
+
             &::after {
                 right: calc(var(--gap) * (-2));
             }
         }
 
         .swiper-button {
+
             &-prev,
             &-next {
                 position: static;
@@ -93,7 +96,7 @@
                     height: 2rem;
 
                     path {
-                        transition: 0.3s fill;
+                        transition: $transition fill;
                     }
                 }
             }
@@ -166,6 +169,7 @@
         grid-template-rows: 7.2rem minmax(var(--content-mh), max-content) max-content;
         grid-template-columns: repeat(2, calc(var(--img-width) / 2)) 1fr;
     }
+
     // .event-block__img
 
     &__img {

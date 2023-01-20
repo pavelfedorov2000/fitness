@@ -96,7 +96,7 @@
 
     &.splide__slide {
         @media (min-width: 1025px) {
-            transition: 0.3s padding-top;
+            transition: $transition padding-top;
 
             &.is-next {
                 padding-top: calc(8.4rem + var(--offset-xxl));

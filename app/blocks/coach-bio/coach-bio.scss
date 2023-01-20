@@ -92,13 +92,13 @@
 
             &-prev,
             &-next {
+                @extend %grid-center;
                 position: static;
                 margin: 0;
                 width: var(--arrow-btn);
                 height: var(--arrow-btn);
                 background-color: var(--black);
-                @extend %grid-center;
-                transition: .3s background-color;
+                transition: $transition background-color;
 
                 @media (any-hover: hover) {
                     &:hover {
@@ -198,7 +198,7 @@
 
         @media(min-width: 1025px) {
             opacity: 0;
-            transition: .3s opacity;
+            transition: $transition opacity;
         }
     }
 

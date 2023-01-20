@@ -38,28 +38,28 @@
     position: relative;
     background-color: var(--light-blue);
     border: 0.1rem solid var(--light-blue);
-    transition: 0.3s all;
+    transition: $transition all;
 
     &::before {
+        @extend %pos-center-xy;
+        @extend .title;
         content: attr(data-region);
         position: absolute;
         z-index: 1;
-        @extend %pos-center-xy;
-        @extend .title;
         font-size: 10rem;
         line-height: 140%;
         white-space: nowrap;
         color: #fff;
-        transition: 0.3s color;
+        transition: $transition color;
     }
 
     // .region-btn__title
 
     &__title {
-        position: relative;
-        z-index: 2;
         @extend .title;
         @extend %text-20;
+        position: relative;
+        z-index: 2;
         text-align: center;
     }
 

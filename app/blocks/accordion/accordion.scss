@@ -1,4 +1,4 @@
-.accordeon {
+.accordion {
     $this: &;
 
     border: 0.1rem solid var(--black);
@@ -10,10 +10,12 @@
 
     &-title {
         position: relative;
+        padding: 1.4rem var(--mob-padding);
+        width: 100%;
         font-size: 1.4rem;
         line-height: 2rem;
-        padding: 1.4rem var(--mob-padding);
-        transition: 0.3s background-color;
+        text-align: left;
+        transition: $transition background-color;
 
         @media(max-width: 1024px) {
             font-size: 1.4rem;
@@ -30,10 +32,10 @@
             height: 2rem;
             background-image: url(../images/icons/drop.svg);
             @extend %bg-contain;
-            transition: 0.3s transform;
+            transition: $transition transform;
         }
 
-        &.active {
+        &[aria-expanded="true"] {
             background-color: var(--light-blue);
 
             &:before {
@@ -60,7 +62,7 @@
 
     &-link {
         @extend %text-13;
-        transition: .3s color;
+        transition: $transition color;
 
         @media (any-hover: hover) {
             &:hover {

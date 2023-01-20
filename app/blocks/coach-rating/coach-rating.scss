@@ -3,10 +3,12 @@
     // .coach-rating__head
 
     &__head {
-        cursor: pointer;
         @extend %flex-row-center;
+        width: 100%;
         background-color: #fff;
         padding-right: var(--offset-xxs);
+        text-align: left;
+        cursor: pointer;
 
         @media (max-width: 767px) {
             padding: var(--offset-xxs) var(--offset-xxs) var(--offset-xs);

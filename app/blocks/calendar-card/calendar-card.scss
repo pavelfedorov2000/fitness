@@ -2,7 +2,19 @@
     $this: &;
 
     position: relative;
-    transition: 0.3s box-shadow;
+    display: grid;
+    grid-template-columns: var(--offset-s) 1fr var(--offset-s) calc(var(--arrow-btn) - var(--offset-s));
+    grid-template-rows: var(--offset-s) auto 1fr auto 1fr auto;
+    grid-template-areas:
+        '. . . . .'
+        '. top top top .'
+        '. . . . .'
+        '. middle middle middle .'
+        '. . . . .'
+        '. coach . arrow arrow'
+    ;
+    min-height: 17.2rem;
+    transition: $transition box-shadow;
 
     @media (any-hover: hover) {
         &:hover {
@@ -13,19 +25,12 @@
             }
         }
     }
-    // .calendar-card__inner
-
-    &__inner {
-        @extend %flex-col;
-        justify-content: space-between;
-        min-height: 17.2rem;
-        padding: var(--offset-s);
-    }
 
     // .calendar-card__top
 
     &__top {
         @extend %flex-row-center;
+        grid-area: top;
     }
 
     // .calendar-card__time
@@ -39,17 +44,20 @@
 
     &__category {
         display: flex;
-        margin: calc(var(--offset-xxs) / (-2));
-
-        > * {
-            margin: calc(var(--offset-xxs) / 2);
-        }
+        flex-wrap: wrap;
+        gap: var(--offset-xxs);
     }
 
     // .calendar-card__middle
 
     &__middle {
         @extend %flex-row;
+        grid-area: middle;
+    }
+
+    &__bottom {
+        @extend %flex-row-center;
+        grid-area: bottom;
     }
 
     // .calendar-card__title
@@ -71,7 +79,13 @@
 
     &__coach {
         @extend %text-13;
-        padding-right: var(--offset-xl);
+        grid-area: coach;
+        align-self: center;
+    }
+
+    &__arrow {
+        position: static;
+        grid-area: arrow;
     }
 
     &.group {

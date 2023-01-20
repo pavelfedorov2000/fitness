@@ -10,18 +10,18 @@
         display: grid;
         place-items: center;
         align-content: center;
-        transition: 0.3s background-color, 0.3s border-color;
+        transition: $transition background-color, $transition border-color;
     }
 
     .js {
         &-close {
             opacity: 0;
             transform: translateX(1rem);
-            transition: 0.3s transform, 0.3s opacity;
+            transition: $transition transform, $transition opacity;
         }
 
         &-open {
-            transition: 0.3s opacity;
+            transition: $transition opacity;
         }
 
         &-close,
@@ -31,7 +31,7 @@
         }
     }
 
-    &.active {
+    &[aria-expanded="true"] {
         background-color: var(--light-blue);
         border-color: var(--light-blue);
 

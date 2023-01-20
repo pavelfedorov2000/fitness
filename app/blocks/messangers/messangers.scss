@@ -9,21 +9,17 @@
     &__icon {
         width: var(--offset-m);
         height: var(--offset-m);
+        fill: var(--black);
+        transition: $transition fill;
 
         @media (max-width: 767px) {
             width: 2rem;
             height: 2rem;
         }
 
-        path {
-            transition: 0.3s fill;
-        }
-
         @media (any-hover: hover) {
             &:hover {
-                path {
-                    fill: var(--dark-yellow);
-                }
+                fill: var(--dark-yellow);
             }
         }
     }

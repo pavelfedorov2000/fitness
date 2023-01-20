@@ -21,8 +21,7 @@
 
     @media (min-width: 1025px) {
         grid-template-rows:
-            var(--header-height) var(--input-height) calc(var(--gap) - var(--header-height) - var(--input-height))
-            max-content 1rem max-content repeat(3, var(--input-height));
+            var(--header-height) var(--offset-xxl) calc(var(--gap) - var(--header-height) - var(--offset-xxl)) max-content 1rem max-content var(--offset-xxl) repeat(2, var(--input-height));
         grid-template-areas:
             'aside . . . . . . .'
             'aside . . . . img img .'
@@ -156,67 +155,6 @@
 
         img {
             @extend %cover;
-        }
-    }
-}
-
-.team-grid {
-    padding-top: var(--input-height);
-    padding-bottom: calc(var(--section-padding) + var(--offset-xxs));
-    position: relative;
-
-    @media (max-width: 1024px) {
-        padding-top: var(--offset-m);
-        padding-bottom: var(--offset-l);
-    }
-
-    @media (min-width: 1025px) {
-        &:before {
-            @include rect(top, left, calc(var(--input-height) + var(--team-card-h)), 0, 64rem, var(--beige));
-        }
-
-        &:after {
-            @include rect(top, right, calc(var(--input-height) * (-1)), 0, 67.2rem, var(--beige));
-            z-index: 2;
-        }
-    }
-
-    // .team-grid__items
-
-    &__items {
-        display: grid;
-        grid-auto-rows: minmax(var(--team-card-h), max-content);
-
-        @media (min-width: 768px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (min-width: 1025px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        @media (max-width: 767px) {
-            gap: var(--offset-s);
-        }
-    }
-
-    &__card {
-        &:nth-child(9n + 2) {
-            @media (min-width: 1025px) {
-                grid-column: span 2;
-            }
-        }
-
-        &:nth-child(9n + 6) {
-            @media (min-width: 1025px) {
-                grid-column: span 2;
-            }
-        }
-
-        &:nth-child(9n + 7) {
-            @media (min-width: 1025px) {
-                grid-row: span 2;
-            }
         }
     }
 }

@@ -99,66 +99,6 @@
         }
     }
 
-    // .coach-goals__items
-
-    &__items {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: -2rem -5rem;
-
-        @media (max-width: 767px) {
-            margin: calc(var(--offset-s) * (-1));
-        }
-
-        @media (min-width: 768px) {
-            width: 61.5rem;
-        }
-    }
-
-    // .coach-goals__item
-
-    &__item {
-        width: 33.3333%;
-        justify-items: center;
-        align-content: center;
-        padding: 2rem 5rem;
-        @include row-grid(3.2rem);
-
-        @media (max-width: 767px) {
-            width: 50%;
-            row-gap: 2rem;
-            padding: var(--offset-s);
-        }
-    }
-
-    // .coach-goals__item-img
-
-    &__item-img {
-        max-width: 8.5rem;
-        max-height: var(--section-paading);
-
-        @media (max-width: 767px) {
-            max-width: 6.8rem;
-            max-height: var(--offset-xxxl);
-        }
-    }
-
-    // .coach-goals__item-title
-
-    &__item-title {
-        @extend .title;
-        @extend %text-14;
-        font-weight: 700;
-        max-width: 13.2rem;
-
-        @media (max-width: 767px) {
-            font-size: 1.5rem;
-            line-height: 2.2rem;
-            text-transform: none;
-        }
-    }
-
     &__slider {
         width: calc(100vw - var(--gap) * 4);
 

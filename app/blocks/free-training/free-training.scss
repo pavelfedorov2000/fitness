@@ -1,5 +1,5 @@
 .free-training {
-    --pb: 10.7rem;
+    --padding-bottom: 10.7rem;
     --img: 34.8rem;
     --img-offset: 2.7rem;
     --title: 51.2rem;
@@ -16,15 +16,17 @@
     --decor-height: 35.4rem;
     --decor-top-offset: 1rem;
     --decor-left-offset: 0.5rem;
-    // .unique-concept__inner
 
     position: relative;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--padding-bottom);
 
     @media (max-width: 1024px) {
         padding: var(--offset-m) 0 var(--offset-l);
     }
 
     @media (min-width: 1025px) {
+
         //background-position: right bottom;
         //background-size: var(--bg-width) 88rem;
         //background-repeat: no-repeat;
@@ -61,19 +63,11 @@
         }
 
         @media (min-width: 1025px) {
-            grid-template-rows:
-                var(--section-padding) var(--title-offset-top) max-content var(--offset-xl) max-content 6.6rem 10.2rem - 6.6rem minmax(
-                    var(--video-height),
-                    max-content
-                )
-                var(--pb);
+            grid-template-rows: var(--title-offset-top) max-content var(--offset-xl) max-content 6.6rem 10.2rem - 6.6rem minmax(var(--video-height),
+                    max-content);
             grid-template-columns:
-                var(--list) 7.7rem var(--offset-xls) calc(var(--title) - var(--text)) 1fr calc(
-                    var(--img) - var(--img-offset)
-                )
-                var(--img-offset) 6rem;
+                var(--list) 7.7rem var(--offset-xls) calc(var(--title) - var(--text)) 1fr calc(var(--img) - var(--img-offset)) var(--img-offset) 6rem;
             grid-template-areas:
-                '. . . . . . . .'
                 '. . . . . img img .'
                 'title title title title . img img .'
                 '. . . . . img img .'

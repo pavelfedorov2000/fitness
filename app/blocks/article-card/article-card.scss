@@ -85,13 +85,13 @@
     // .article-card__content
 
     &__content {
-        z-index: 10;
         @extend %flex-col;
         justify-content: space-between;
         align-items: flex-start;
         padding: var(--offset-m);
         color: #fff;
         text-shadow: $bsh;
+        z-index: 10;
 
         @media (max-width: 767px) {
             padding: var(--offset-s);

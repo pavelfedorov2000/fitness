@@ -5,11 +5,17 @@
             <div class="splide club-vacancies__slider club-vacancies-slider"
                  data-da=".club-vacancies__container, 1024, last">
                 <div class="splide__track">
-                    <div class="splide__list club-vacancies__cards">
-                        @@include('blocks/vacancy-card/vacancy-card.html')
-                        @@include('blocks/vacancy-card/vacancy-card.html')
-                        @@include('blocks/vacancy-card/vacancy-card.html')
-                    </div>
+                    <ul class="splide__list club-vacancies__cards">
+                        <li>
+                            @@include('blocks/vacancy-card/vacancy-card.html')
+                        </li>
+                        <li>
+                            @@include('blocks/vacancy-card/vacancy-card.html')
+                        </li>
+                        <li>
+                            @@include('blocks/vacancy-card/vacancy-card.html')
+                        </li>
+                    </ul>
                 </div>
                 @@include('blocks/slider-nav/slider-nav.html', {
                 "class": "club-vacancies"

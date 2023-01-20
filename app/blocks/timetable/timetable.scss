@@ -21,9 +21,7 @@
     &__grid {
         @media (min-width: 1025px) {
             align-content: start;
-            grid-template-rows: var(--pt) max-content var(--offset-xxl) minmax(var(--card-mh), max-content) max-content var(
-                    --pb
-                );
+            grid-template-rows: var(--pt) max-content var(--offset-xxl) minmax(var(--card-mh), max-content) max-content var(--pb);
             grid-template-areas:
                 'asideClient . . . .'
                 'asideClient . head . .'
@@ -137,28 +135,17 @@
     }
 
     display: grid;
-    grid-template-rows: var(--offset-l) max-content var(--offset-m) max-content calc(var(--offset-l) / 2) max-content 1fr minmax(
-            var(--coach),
-            max-content
-        );
-    grid-template-columns:
-        var(--offset-l) 31.5rem var(--offset-xls) var(--offset-xxl) 11.7rem 1fr 3rem calc(var(--people) - var(--coach))
-        var(--coach);
+    grid-template-rows: var(--offset-l) max-content var(--offset-m) max-content calc(var(--offset-l) / 2) max-content 1fr minmax(var(--coach),
+        max-content);
+    grid-template-columns: var(--offset-l) 31.5rem var(--offset-xls) var(--offset-xxl) 11.7rem 1fr 3rem calc(var(--people) - var(--coach)) var(--coach);
     background-color: var(--light-blue);
     position: relative;
 
     @media (max-width: 1024px) {
         grid-template-rows:
-            max-content max-content max-content var(--offset-m) minmax(var(--white-info-box-h), max-content)
-            calc(var(--img-h) - var(--white-info-box-h) - var(--progressbar) - var(--img-pb) - var(--offset-s)) var(
-                --progressbar
-            )
-            calc(var(--img-pb) - var(--offset-s)) repeat(2, max-content);
+            max-content max-content max-content var(--offset-m) minmax(var(--white-info-box-h), max-content) calc(var(--img-h) - var(--white-info-box-h) - var(--progressbar) - var(--img-pb) - var(--offset-s)) var(--progressbar) calc(var(--img-pb) - var(--offset-s)) repeat(2, max-content);
         grid-template-columns:
-            var(--mob-padding) calc(var(--offset-s) - var(--mob-padding)) 1fr calc(
-                var(--white-info-box-w) - var(--offset-s)
-            )
-            calc(var(--offset-s) - var(--mob-padding)) var(--mob-padding);
+            var(--mob-padding) calc(var(--offset-s) - var(--mob-padding)) 1fr calc(var(--white-info-box-w) - var(--offset-s)) calc(var(--offset-s) - var(--mob-padding)) var(--mob-padding);
         row-gap: var(--offset-s);
         @include padding-y(var(--offset-s));
     }
@@ -193,7 +180,7 @@
     &__labels {
         display: flex;
         flex-wrap: wrap;
-        margin: calc(var(--offset-xxs) * (-1));
+        gap: var(--offset-s);
         grid-row: 2 / 3;
         grid-column: 2 / 5;
 
@@ -206,7 +193,6 @@
     // .timetable-card__label
 
     &__label {
-        margin: var(--offset-xxs);
 
         &.label--style_bg-green,
         &.label--style_bg-yellow {

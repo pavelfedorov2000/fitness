@@ -6,7 +6,13 @@ app.coachRating = {
             const $coachRatingHead = $(this);
             const $coachRatingBody = $coachRatingHead.closest('.coach-rating').find('.coach-rating__body');
 
-            $coachRatingBody.slideToggle();
+            if ($coachRatingHead.attr('aria-expanded') === 'false') {
+                $coachRatingHead.attr('aria-expanded', true);
+                $coachRatingBody.slideDown();
+            } else {
+                $coachRatingHead.attr('aria-expanded', false);
+                $coachRatingBody.slideUp();
+            }
         });
 
         $(document).on('mouseup', function (e) {
@@ -14,6 +20,7 @@ app.coachRating = {
             const $coachRating = $coachRatingHead.closest('.coach-rating');
 
             if (!$coachRating.is(e.target) && $coachRating.has(e.target).length === 0) {
+                $coachRatingHead.attr('aria-expanded', false);
                 $coachRating.find('.coach-rating__body').slideUp();
             }
         });

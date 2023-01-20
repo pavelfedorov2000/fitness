@@ -1,25 +1,29 @@
 <article class="blog-article@@if(context.class){ @@class}">
-    <a href="#" class="blog-article__body">
-        <div class="blog-article__bg">
-            <picture>
-                <source type="image/webp" srcset="assets/images/content/blog-article.webp">
-                <img src="assets/images/content/blog-article.jpg" alt="фото" width="728" height="400" loading="lazy">
-            </picture>
+    <div class="blog-article__bg">
+        <picture>
+            <source type="image/webp"
+                    srcset="assets/images/content/blog-article.webp">
+            <img src="assets/images/content/blog-article.jpg"
+                 alt="фото"
+                 width="728"
+                 height="400"
+                 loading="lazy">
+        </picture>
+    </div>
+    <div class="blog-article__content">
+        @@include('blocks/arrow-btn/arrow-btn.html', {
+        "bg": "white"
+        })
+        <div class="blog-article__tags">
+            <span class="label">Новости</span>
         </div>
-        <div class="blog-article__content">
-            @@include('blocks/arrow-btn/arrow-btn.html', {
-            "bg": "white"
-            })
-            <div class="blog-article__tags">
-                <span class="label">Новости</span>
-            </div>
-            <div class="blog-article__title">
-                Советы по домашним тренировкам
-                от&nbsp;тренера&nbsp;FITNESSON
-            </div>
-            @@include('blocks/views/views.html', {
-            "value": "1200"
-            })
-        </div>
-    </a>
+        <a href="#"
+           class="full-link blog-article__title">
+            Советы по домашним тренировкам
+            от&nbsp;тренера&nbsp;FITNESSON
+        </a>
+        @@include('blocks/views/views.html', {
+        "value": "1200"
+        })
+    </div>
 </article>

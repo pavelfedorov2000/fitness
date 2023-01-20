@@ -10,9 +10,9 @@
     // .faq-body__content
 
     &__content {
+        @include row-grid(var(--offset-xxxl));
         counter-reset: faq-num;
         grid-row: 2 / 3;
-        @include row-grid(var(--offset-xxxl));
 
         @media (max-width: 767px) {
             row-gap: var(--offset-l);
@@ -30,7 +30,7 @@
     }
 
     &::before {
-        content: '0' counter(faq-num);
+        content: '0'counter(faq-num);
         counter-increment: faq-num;
         position: absolute;
         top: 0;
@@ -69,19 +69,21 @@
     &__list {
         @include row-grid(var(--offset-m));
     }
+}
 
-    // .faq-section__item-toggle
+.faq-item {
+    // .faq-item__toggle
 
-    &__item-toggle {
-        font-family: 'Gotham Pro', sans-serif;
+    &__toggle {
         @extend %text-16;
+        font-family: 'Gotham Pro', sans-serif;
         font-weight: 500;
         color: var(--dark-gray);
         text-align: left;
         margin-left: 0.7rem;
         position: relative;
         padding-left: calc(var(--offset-s) + 2.2rem);
-        transition: 0.3s color;
+        transition: $transition color;
 
         @media (max-width: 767px) {
             font-size: 1.4rem;
@@ -95,7 +97,7 @@
             position: absolute;
             @extend %pos-center-y;
             background-color: var(--gray);
-            transition: 0.3s all;
+            transition: $transition all;
         }
 
         &::before {
@@ -140,9 +142,9 @@
         }
     }
 
-    // .faq-section__item-content
+    // .faq-item__content
 
-    &__item-content {
+    &__content {
         display: none;
         padding-top: var(--offset-s);
 

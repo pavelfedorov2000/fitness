@@ -31,7 +31,7 @@ body {
     color: $color-default;
 
     @media(max-width: 1024px) {
-       overflow-x: hidden;
+        overflow-x: hidden;
     }
 
     @media (max-width: 767px) {
@@ -60,7 +60,7 @@ textarea {
     min-height: 100vh;
 
     @media(max-width: 1024px) {
-       overflow-x: hidden;
+        overflow-x: hidden;
     }
 
     &--yellow-promo {
@@ -133,6 +133,7 @@ textarea {
 .timetable-page {
     .header {
         $this: &;
+
         &--dark {
             .header {
                 &__logo-img {
@@ -222,6 +223,7 @@ img {
 }
 
 .promo {
+
     &-body,
     &-bg {
         grid-row: 1 / 2;
@@ -235,50 +237,13 @@ img {
     }
 }
 
-/* .promo-aside {
-    display: none;
-
-    @media(min-width: 1025px) {
-        display: block;
-    }
-} */
-
-/* .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	border: 0;
-	clip: rect(0 0 0 0);
-}
-
 .full-link {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 20;
-} */
-
-/* @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
-    background: #fff;
-    backdrop-filter: blur(31px);
-} */
-
-// text border
-/* .border-text {
-	color: black;
-	-webkit-text-fill-color: white;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 }
-
-// gradient-text
-.gradient-text {
-	background: -webkit-linear-gradient(#eee, #333);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-} */

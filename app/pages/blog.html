@@ -1,16 +1,16 @@
 @@include("blocks/head/head.html", {"title": "Блог"})
 <div class="wrapper wrapper--yellow-promo">
-	@@include('blocks/site-map/site-map.html')
-	@@include("blocks/header/header.html", {
-	"dark": true
-	})
-	@@include('blocks/burger/burger.html')
-	<main class="page">
-		@@include('blocks/promo-blog/promo-blog.html')
-		<section class="blog-page">
-			<div class="container">
-				<div class="section-body">
-					<!-- <div class="blog-page__filters tabs">
+    @@include('blocks/site-map/site-map.html')
+    @@include("blocks/header/header.html", {
+    "dark": true
+    })
+    @@include('blocks/burger/burger.html')
+    <main class="page">
+        @@include('blocks/promo-blog/promo-blog.html')
+        <section class="blog-page">
+            <div class="container">
+                <div class="section-body">
+                    <!-- <div class="blog-page__filters tabs">
                         <button class="tab blog-page__filter active"
                                 type="button">Все категории</button>
                         <button class="tab blog-page__filter"
@@ -29,115 +29,109 @@
                                 type="button">Истории успеха</button>
                     </div> -->
 
-					<div class="blog-page__cards">
-						@@loop('blocks/article-card/article-card.html', [{
-						"class": "blog-page__card",
-						"date": {
-						"datetime": "2020-09-08",
-						"text": "08.09.2020"
-						},
-						"src": {
-						"webp": "assets/images/content/blog/01.webp",
-						"default": "assets/images/content/blog/01.jpg"
-						},
-						"label": {
-						"text": "Тренировки"
-						},
-						"title": "Советы по домашним тренировкам от&nbsp;тренера&nbsp; FITNESSON"
-						}, {
-						"class": "blog-page__card",
-						"sale": true,
-						"date": {
-						"datetime": "2020-09-08",
-						"text": "08.09.2020"
-						},
-						"src": {
-						"webp": "assets/images/content/blog/02.webp",
-						"default": "assets/images/content/blog/02.jpg"
-						},
-						"label": {
-						"text": "Акции"
-						},
-						"title": "<span>Осенние скидки</span><span>от 17% до 33%</span>"
-						}, {
-						"bg": "ocean",
-						"class": "blog-page__card",
-						"date": {
-						"datetime": "2020-09-08",
-						"text": "08.09.2020"
-						},
-						"src": {
-						"webp": "assets/images/content/blog/03.webp",
-						"default": "assets/images/content/blog/03.png"
-						},
-						"label": {
-						"text": "История успеха",
-						"bg": "black"
-						},
-						"kg": "-14",
-						"title": "Баланова Елена"
-						}, {
-						"class": "blog-page__card",
-						"date": {
-						"datetime": "2020-09-08",
-						"text": "08.09.2020"
-						},
-						"src": {
-						"webp": "assets/images/content/blog/08.webp",
-						"default": "assets/images/content/blog/08.jpg"
-						},
-						"label": {
-						"text": "Тренировки"
-						},
-						"title": "Как определить оптимальную программу тренировок?"
-						}, {
-						"bg": "ocean",
-						"class": "blog-page__card",
-						"date": {
-						"datetime": "2020-09-08",
-						"text": "08.09.2020"
-						},
-						"src": {
-						"webp": "assets/images/content/blog/04.webp",
-						"default": "assets/images/content/blog/04.png"
-						},
-						"label": {
-						"text": "История успеха",
-						"bg": "black"
-						},
-						"kg": "+12",
-						"title": "Березов Владимир"
-						}, {
-						"class": "blog-page__card",
-						"sale": true,
-						"date": {
-						"datetime": "2020-09-08",
-						"text": "08.09.2020"
-						},
-						"src": {
-						"webp": "assets/images/content/blog/10.webp",
-						"default": "assets/images/content/blog/10.jpg"
-						},
-						"label": {
-						"text": "Акции"
-						},
-						"title": "<span>Безумные</span><span>зимние скидки до 50%</span>"
-						}])
-					</div>
+                    <div class="blog-grid">
+                        @@loop('blocks/article-card/article-card.html', [{
+                        "date": {
+                        "datetime": "2020-09-08",
+                        "text": "08.09.2020"
+                        },
+                        "src": {
+                        "webp": "assets/images/content/blog/01.webp",
+                        "default": "assets/images/content/blog/01.jpg"
+                        },
+                        "label": {
+                        "text": "Тренировки"
+                        },
+                        "title": "Советы по домашним тренировкам от&nbsp;тренера&nbsp; FITNESSON"
+                        }, {
+                        "sale": true,
+                        "date": {
+                        "datetime": "2020-09-08",
+                        "text": "08.09.2020"
+                        },
+                        "src": {
+                        "webp": "assets/images/content/blog/02.webp",
+                        "default": "assets/images/content/blog/02.jpg"
+                        },
+                        "label": {
+                        "text": "Акции"
+                        },
+                        "title": "<span>Осенние скидки</span><span>от 17% до 33%</span>"
+                        }, {
+                        "bg": "ocean",
+                        "date": {
+                        "datetime": "2020-09-08",
+                        "text": "08.09.2020"
+                        },
+                        "src": {
+                        "webp": "assets/images/content/blog/03.webp",
+                        "default": "assets/images/content/blog/03.png"
+                        },
+                        "label": {
+                        "text": "История успеха",
+                        "bg": "black"
+                        },
+                        "kg": "-14",
+                        "title": "Баланова Елена"
+                        }, {
+                        "date": {
+                        "datetime": "2020-09-08",
+                        "text": "08.09.2020"
+                        },
+                        "src": {
+                        "webp": "assets/images/content/blog/08.webp",
+                        "default": "assets/images/content/blog/08.jpg"
+                        },
+                        "label": {
+                        "text": "Тренировки"
+                        },
+                        "title": "Как определить оптимальную программу тренировок?"
+                        }, {
+                        "bg": "ocean",
+                        "date": {
+                        "datetime": "2020-09-08",
+                        "text": "08.09.2020"
+                        },
+                        "src": {
+                        "webp": "assets/images/content/blog/04.webp",
+                        "default": "assets/images/content/blog/04.png"
+                        },
+                        "label": {
+                        "text": "История успеха",
+                        "bg": "black"
+                        },
+                        "kg": "+12",
+                        "title": "Березов Владимир"
+                        }, {
+                        "sale": true,
+                        "date": {
+                        "datetime": "2020-09-08",
+                        "text": "08.09.2020"
+                        },
+                        "src": {
+                        "webp": "assets/images/content/blog/10.webp",
+                        "default": "assets/images/content/blog/10.jpg"
+                        },
+                        "label": {
+                        "text": "Акции"
+                        },
+                        "title": "<span>Безумные</span><span>зимние скидки до 50%</span>"
+                        }])
+                    </div>
 
-					@@include('blocks/pagination/pagination.html', {
-					"class": "blog-page"
-					})
-				</div>
-			</div>
-		</section>
-	</main>
-	@@include("blocks/footer/footer.html")
+                    @@include('blocks/pagination/pagination.html', {
+                    "class": "blog-page"
+                    })
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include("blocks/footer/footer.html")
 </div>
 <div class="overlay">
-	@@include('blocks/request-popup/request-popup.html')
-	@@include('blocks/info-workout-popup/info-workout-popup.html')
-	@@include('blocks/success-popup/success-popup.html')
+    @@include('blocks/request-popup/request-popup.html')
+    @@include('blocks/info-workout-popup/info-workout-popup.html')
+    @@include('blocks/success-popup/success-popup.html')
 </div>
 @@include("blocks/link/link.html")
 </body>

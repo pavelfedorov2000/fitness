@@ -18,7 +18,7 @@
         grid-auto-rows: minmax(22.8rem, max-content);
     }
 
-    &__item {
+    > * {
         &:nth-child(6n + 1) {
             @media(min-width: 1025px) {
                 grid-column: span 2;

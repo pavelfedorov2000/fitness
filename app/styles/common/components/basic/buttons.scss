@@ -1,12 +1,11 @@
 .btn {
     @extend %grid-center;
+    @extend %text-12;
     padding: 1.55rem;
     background-color: var(--yellow);
-    @extend %text-12;
     font-weight: 500;
     text-transform: uppercase;
-    text-align: center;
-    transition: 0.3s background-color;
+    transition: $transition background-color;
 
     @media (any-hover: hover) {
         &:hover {
@@ -18,11 +17,6 @@
         background-color: var(--gray);
         pointer-events: none;
     }
-
-    /* &:active,
-    &:focus {
-        background-color: var(--dark-yellow);
-    } */
 
     &--style {
         &_bg {

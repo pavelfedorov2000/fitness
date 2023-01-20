@@ -121,18 +121,10 @@
     &__labels {
         display: flex;
         flex-wrap: wrap;
-        margin: calc(var(--offset-l) * (-1) / 2);
+        gap: var(--offset-l);
 
         @media (max-width: 1024px) {
-            margin: calc(var(--offset-s) * (-1) / 2);
-        }
-
-        > * {
-            margin: calc(var(--offset-l) / 2);
-
-            @media (max-width: 1024px) {
-                margin: calc(var(--offset-s) / 2);
-            }
+            gap: var(--offset-s);
         }
     }
 
