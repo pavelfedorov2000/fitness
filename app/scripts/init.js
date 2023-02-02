@@ -1,6 +1,5 @@
 (function ($) {
-    $(document).ready(function () {
-        //new WOW().init();
+    $(function () {
         app.burger.init();
         app.accordion.init();
         app.asidePopup.init();
@@ -13,17 +12,7 @@
         app.coachRating.init();
         app.sliders.init();
         app.fitnessCard.init();
-
-        if ($('.scroll-btn').length) {
-            const scrollBtn = document.querySelector('.scroll-btn');
-            const scrollBtnSection = scrollBtn.closest('section');
-            scrollBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: scrollBtnSection.getBoundingClientRect().height,
-                    behavior: 'smooth'
-                });
-            });
-        }
+        app.scrollBtn.init();
 
         $("a[href^='#']").not("a[href='#']").not('.tab').click(function (e) {
             e.preventDefault();

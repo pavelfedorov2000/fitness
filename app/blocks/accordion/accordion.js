@@ -9,6 +9,8 @@ app.accordion = {
             const $accordionItemNotActiveSummary = $accordionItemNotActive.find('.accordion-title');
             const $accordionItemNotActiveContent = $accordionItemNotActive.find('.accordion-content');
 
+            if ($accordionTitle.hasClass('footer__title') && $(window).width() > 1024) return;
+
             $accordionItemNotActiveSummary.removeClass('active');
             $accordionItemNotActiveContent.slideUp('300');
             $accordionTitle.toggleClass('active');

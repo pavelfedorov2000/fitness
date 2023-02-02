@@ -1,72 +1,73 @@
 .aim-card {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr var(--arrow-btn);
-    grid-template-rows: 1fr var(--arrow-btn);
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr var(--arrow-btn);
+	grid-template-rows: 1fr var(--arrow-btn);
+	height: 100%;
 
-    &::before {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 50%;
-        background: linear-gradient(180deg, rgba(2, 8, 24, 0.6) 0%, rgba(2, 8, 24, 0) 102.25%);
-        transform: rotate(-180deg);
-        transition: $transition opacity;
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 50%;
+		background: linear-gradient(180deg, rgba(2, 8, 24, 0.6) 0%, rgba(2, 8, 24, 0) 102.25%);
+		transform: rotate(-180deg);
+		transition: $transition opacity;
+	}
 
-    @media (any-hover: hover) {
-        &:hover {
-            &:before {
-                opacity: 0;
-            }
-        }
-    }
+	@media (any-hover: hover) {
+		&:hover {
+			&:before {
+				opacity: 0;
+			}
+		}
+	}
 
-    &__bg,
-    &__content {
-        grid-column: 1 / -1;
-        grid-row: 1 / -1;
-    }
+	&__bg,
+	&__content {
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+	}
 
-    &__arrow {
-        grid-column: -2 / -1;
-        grid-row: -2 / -1;
-    }
+	&__arrow {
+		grid-column: -2 / -1;
+		grid-row: -2 / -1;
+	}
 
-    // .aim-card__bg
+	// .aim-card__bg
 
-    &__bg {
-        img {
-            @extend %cover;
-        }
-    }
+	&__bg {
+		img {
+			@extend %cover;
+		}
+	}
 
-    // .aim-card__content
+	// .aim-card__content
 
-    &__content {
-        @extend %flex-col;
-        justify-content: flex-end;
-        align-items: flex-start;
-        padding: 5.2rem var(--offset-xl);
-        color: #fff;
+	&__content {
+		@extend %flex-col;
+		justify-content: flex-end;
+		align-items: flex-start;
+		padding: 5.2rem var(--offset-xl);
+		color: #fff;
 
-        @media (max-width: 767px) {
-            padding: var(--offset-s) var(--offset-xl) var(--offset-s) var(--offset-s);
-        }
-    }
+		@media (max-width: 767px) {
+			padding: var(--offset-s) var(--offset-xl) var(--offset-s) var(--offset-s);
+		}
+	}
 
-    // .aim-card__title
+	// .aim-card__title
 
-    &__title {
-        @extend .title;
-        @extend %text-20;
-        max-width: 30.7rem;
+	&__title {
+		@extend .title;
+		@extend %text-20;
+		max-width: 30.7rem;
 
-        @media (max-width: 767px) {
-            font-size: 1.4rem;
-            line-height: 2rem;
-        }
-    }
+		@media (max-width: 767px) {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+	}
 }

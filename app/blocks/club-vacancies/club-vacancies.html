@@ -1,26 +1,26 @@
 <section class="club-vacancies">
-    <div class="container club-vacancies__container">
-        <div class="section-body club-vacancies__body">
-            <h2 class="section-title club-vacancies__title">Вакансии в&nbsp;Электростали</h2>
-            <div class="splide club-vacancies__slider club-vacancies-slider"
-                 data-da=".club-vacancies__container, 1024, last">
-                <div class="splide__track">
-                    <ul class="splide__list club-vacancies__cards">
-                        <li>
-                            @@include('blocks/vacancy-card/vacancy-card.html')
-                        </li>
-                        <li>
-                            @@include('blocks/vacancy-card/vacancy-card.html')
-                        </li>
-                        <li>
-                            @@include('blocks/vacancy-card/vacancy-card.html')
-                        </li>
-                    </ul>
-                </div>
-                @@include('blocks/slider-nav/slider-nav.html', {
-                "class": "club-vacancies"
-                })
-            </div>
-        </div>
-    </div>
+	<div class="container club-vacancies__container">
+		<div class="section-body club-vacancies__body">
+			<h2 class="section-title club-vacancies__title">Вакансии в&nbsp;Электростали</h2>
+			<div class="splide club-vacancies__slider club-vacancies-slider"
+				data-da=".club-vacancies__container, 1024, last">
+				<div class="splide__track">
+					<ul class="splide__list club-vacancies__list">
+						<li class="splide__slide">
+							@@include('blocks/vacancy-card/vacancy-card.html')
+						</li>
+						<li class="splide__slide">
+							@@include('blocks/vacancy-card/vacancy-card.html')
+						</li>
+						<li class="splide__slide">
+							@@include('blocks/vacancy-card/vacancy-card.html')
+						</li>
+					</ul>
+				</div>
+				@@include('blocks/slider-nav/slider-nav.html', {
+				"class": "club-vacancies"
+				})
+			</div>
+		</div>
+	</div>
 </section>

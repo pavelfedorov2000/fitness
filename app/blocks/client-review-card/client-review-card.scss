@@ -1,116 +1,110 @@
 .client-review-card {
-    --quote-pl: 5.8rem;
-    --quote-text: 29.6rem;
+	--quote-pl: 5.8rem;
+	--quote-text: 29.6rem;
 
-    position: relative;
+	position: relative;
 
-    @media(min-width: 1025px) {
-        width: 72.8rem;
-        height: 40rem;
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(90deg, #020818 -2.47%, rgba(2, 8, 24, 0) 100%);
+	}
 
-    @media(max-width: 1024px) {
-        min-height: 32rem;
-    }
+	// .client-review-card__inner
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(90deg, #020818 -2.47%, rgba(2, 8, 24, 0) 100%);
-    }
+	&__inner {
+		display: grid;
 
-    // .client-review-card__inner
+		@media(max-width: 1024px) {
+			min-height: 32rem;
+		}
+	}
 
-    &__inner {
-        display: grid;
-        height: 100%;
-    }
+	&__bg,
+	&__content {
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+	}
 
-    &__bg,
-    &__content {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-    }
+	// .client-review-card__bg
 
-    // .client-review-card__bg
+	&__bg {
+		img {
+			@extend %cover;
+		}
+	}
 
-    &__bg {
-        img {
-            @extend %cover;
-        }
-    }
+	// .client-review-card__content
 
-    // .client-review-card__content
+	&__content {
+		position: relative;
+		display: grid;
+		grid-template-rows: 4rem max-content 1fr max-content;
+		grid-template-columns: var(--offset-l) calc(var(--offset-l) + var(--quote-pl) + var(--quote-text)) 1fr;
+		grid-template-areas:
+			'. . .'
+			'. quote .'
+			'. . .'
+			'client client .'
+		;
+		color: #fff;
+		text-shadow: $bsh;
 
-    &__content {
-        position: relative;
-        display: grid;
-        grid-template-rows: 4rem max-content 1fr max-content;
-        grid-template-columns: var(--offset-l) calc(var(--offset-l) + var(--quote-pl) + var(--quote-text)) 1fr;
-        grid-template-areas:
-            '. . .'
-            '. quote .'
-            '. . .'
-            'client client .'
-        ;
-        color: #fff;
-        text-shadow: $bsh;
+		@media(max-width: 767px) {
+			grid-template-rows: var(--offset-s) max-content 1fr max-content;
+			grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+		}
+	}
 
-        @media(max-width: 767px) {
-            grid-template-rows: var(--offset-s) max-content 1fr max-content;
-            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
-        }
-    }
+	// .client-review-card__quote
 
-    // .client-review-card__quote
+	&__quote {
+		@extend %text-18;
+		font-weight: 700;
+		grid-area: quote;
+		position: relative;
 
-    &__quote {
-        @extend %text-18;
-        font-weight: 700;
-        grid-area: quote;
-        position: relative;
+		@media(min-width: 768px) {
+			padding-left: calc(var(--offset-l) + var(--quote-pl));
+		}
 
-        @media(min-width: 768px) {
-            padding-left: calc(var(--offset-l) + var(--quote-pl));
-        }
+		@media(max-width: 767px) {
+			font-size: 1.5rem;
+			line-height: 2.2rem;
+			padding-top: calc(var(--mob-padding) + var(--offset-m));
+		}
 
-        @media(max-width: 767px) {
-            font-size: 1.5rem;
-            line-height: 2.2rem;
-            padding-top: calc(var(--mob-padding) + var(--offset-m));
-        }
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: var(--offset-l);
+			height: var(--offset-l);
+			background-image: url(../images/icons/quote.svg);
+			@extend %bg-contain;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: var(--offset-l);
-            height: var(--offset-l);
-            background-image: url(../images/icons/quote.svg);
-            @extend %bg-contain;
+			@media(max-width: 767px) {
+				width: var(--offset-m);
+				height: var(--offset-m);
+			}
+		}
+	}
 
-            @media(max-width: 767px) {
-                width: var(--offset-m);
-                height: var(--offset-m);
-            }
-        }
-    }
+	// .client-review-card__person
 
-    // .client-review-card__person
+	&__person {
+		grid-area: client;
+	}
 
-    &__person {
-        grid-area: client;
-    }
+	// .client-review-card__player
 
-    // .client-review-card__player
-
-    &__player {
-        position: absolute;
-        @extend %pos-center-xy;
-    }
+	&__player {
+		position: absolute;
+		@extend %pos-center-xy;
+	}
 }

@@ -1,0 +1,32 @@
+.aside-article {
+	// .aside-article__img
+
+	&__img {
+		position: relative;
+		height: 24.8rem;
+
+		img {
+			@extend %cover;
+		}
+	}
+
+	&__label {
+		position: absolute;
+		top: var(--offset-s);
+		left: var(--offset-s);
+	}
+
+	// .aside-article__content
+
+	&__content {
+		padding-top: var(--offset-s);
+	}
+
+	// .aside-article__text
+
+	&__title {
+		@extend %text-15;
+		font-weight: 700;
+		text-transform: none;
+	}
+}

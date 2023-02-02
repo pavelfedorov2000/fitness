@@ -1,31 +1,28 @@
-<article class="success-story splide__slide@@if(context.splide){ splide__slide}">
-    <div class="success-story__top">
-        <div class="success-story__name">@@name</div>
-        <div class="success-story__result">
-            <span>@@kg</span>
-            <sub>кг</sub>
-        </div>
-    </div>
-    <div class="success-story__img">
-        <picture>
-            <source type="image/webp"
-                    srcset="@@src.webp">
-            <img src="@@src.png"
-                 alt="фото"
-                 width="194"
-                 height="540"
-                 loading="lazy">
-        </picture>
-    </div>
-    <div class="success-story__bottom">
-        <div class="success-story__transformation">
-            <div class="success-story__transformation-kg">
-                <b>@@before</b> кг
-            </div>
-            <div class="success-story__transformation-kg">
-                <b>@@after</b> кг
-            </div>
-        </div>
-        <div class="success-story__months">@@duration</div>
-    </div>
-</article>
+<li @@if(context.splide){ class="splide__slide" }>
+	<article class="success-story">
+		<div class="success-story__top">
+			<div class="success-story__name">@@name</div>
+			<div class="success-story__result">
+				<span>@@kg</span>
+				<sub>кг</sub>
+			</div>
+		</div>
+		<div class="success-story__img">
+			<picture>
+				<source type="image/webp" srcset="@@src.webp">
+				<img src="@@src.png" alt="фото" width="194" height="540" loading="lazy">
+			</picture>
+		</div>
+		<div class="success-story__bottom">
+			<div class="success-story__transformation">
+				<div class="success-story__transformation-kg">
+					<b>@@before</b> кг
+				</div>
+				<div class="success-story__transformation-kg">
+					<b>@@after</b> кг
+				</div>
+			</div>
+			<div class="success-story__months">@@duration</div>
+		</div>
+	</article>
+</li>

@@ -1,230 +1,123 @@
 .sale {
-    --slider-height: 80rem;
-    --slider-offset: 9.5rem;
-    --slider-content: 53.6rem;
-    --decor-dots: 23.4rem;
-    --decor-dots-pos: var(--offset-xxl);
+	--slider-height: 80rem;
+	--slider-offset: 9.5rem;
+	--slider-content: 53.6rem;
+	--decor-dots: 23.4rem;
+	--decor-dots-pos: var(--offset-xxl);
 
-    //min-height: 80rem;
-    // .sale__grid
+	//min-height: 80rem;
+	// .sale__grid
 
-    &__grid {
-        @media(min-width: 1025px) {
-            grid-template-areas: 'marquee body body body aside'
-            ;
-        }
+	&__grid {
+		@media(min-width: 1025px) {
+			grid-template-areas: 'marquee body body body aside'
+			;
+		}
 
-        @media(max-width: 1024px) {
-            grid-template-columns: 100vw;
-        }
-    }
+		@media(max-width: 1024px) {
+			grid-template-columns: 100vw;
+		}
+	}
 
-    // .sale__marquee
+	// .sale__marquee
 
-    &__marquee {
-        display: none;
+	&__marquee {
+		display: none;
 
-        @media(min-width: 1025px) {
-            display: flex;
-            font-size: 4.8rem;
-            line-height: 4.6rem;
-            color: var(--yellow);
-            text-transform: uppercase;
-            max-height: var(--slider-height);
-        }
-    }
+		@media(min-width: 1025px) {
+			display: flex;
+			font-size: 4.8rem;
+			line-height: 4.6rem;
+			color: var(--yellow);
+			text-transform: uppercase;
+			max-height: var(--slider-height);
+		}
+	}
 
-    // .sale__body
+	// .sale__body
 
-    &__body {
-        position: relative;
+	&__body {
+		position: relative;
 
-        @media(min-width: 1025px) {
-            grid-area: body;
-        }
+		@media(min-width: 1025px) {
+			grid-area: body;
+		}
 
-        &::before,
-        &::after {
-            @extend %bg-contain;
+		&::before,
+		&::after {
+			@extend %bg-contain;
 
-            @media(min-width: 1025px) {
-                content: '';
-                position: absolute;
-            }
+			@media(min-width: 1025px) {
+				content: '';
+				position: absolute;
+			}
 
-        }
+		}
 
-        &::before {
-            @media(min-width: 1025px) {
-                bottom: 5.9rem;
-                right: 10.1rem;
-                width: 53.2rem;
-                height: 59.9rem;
-                background-image: url(../images/elements/sale.svg);
-            }
+		&::before {
+			@media(min-width: 1025px) {
+				bottom: 5.9rem;
+				right: 10.1rem;
+				width: 53.2rem;
+				height: 59.9rem;
+				background-image: url(../images/elements/sale.svg);
+			}
 
-        }
+		}
 
-        &::after {
-            top: var(--decor-dots-pos);
-            right: var(--decor-dots-pos);
-            width: var(--decor-dots);
-            height: var(--decor-dots);
-            background-image: url(../images/elements/sale-dots.svg);
-        }
-    }
+		&::after {
+			top: var(--decor-dots-pos);
+			right: var(--decor-dots-pos);
+			width: var(--decor-dots);
+			height: var(--decor-dots);
+			background-image: url(../images/elements/sale-dots.svg);
+		}
+	}
 
-    // .sale__slider
+	// .sale__slider
 
-    &__slider {
-        @media(max-width: 767px) {
-            display: grid;
-            row-gap: var(--offset-m);
-        }
-    }
+	&__slider {
+		@media(max-width: 767px) {
+			display: grid;
+			row-gap: var(--offset-m);
+		}
+	}
 
-    // .sale__slider-nav
+	// .sale__slider-nav
 
-    &__slider-nav {
-        @media(min-width: 768px) {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-    }
+	&__slider-nav {
+		@media(min-width: 768px) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
 
-    // .sale__rightside
+	// .sale__rightside
 
-    &__rightside {
-        display: none;
+	&__rightside {
+		display: none;
 
-        @media(min-width: 1025px) {
-            display: block;
-            position: relative;
-            grid-area: aside;
-        }
-    }
+		@media(min-width: 1025px) {
+			display: block;
+			position: relative;
+			grid-area: aside;
+		}
+	}
 
-    // .sale__rightside-img
+	// .sale__rightside-img
 
-    &__rightside-img {
-        img {
-            @extend %cover;
-        }
-    }
+	&__rightside-img {
+		img {
+			@extend %cover;
+		}
+	}
 
-    // .sale__rightside-btn
+	// .sale__rightside-btn
 
-    &__rightside-btn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-}
-
-.sale-slider {
-
-    // .sale-slider__item
-
-    &__item {
-        display: grid;
-
-        @media(max-width: 767px) {
-            row-gap: var(--offset-m);
-        }
-
-        @media(min-width: 768px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media(min-width: 1025px) {
-            grid-template-columns: 1fr var(--slider-offset) var(--slider-content) var(--slider-offset) var(--gap);
-            height: var(--slider-height);
-        }
-    }
-
-    // .sale-slider__img
-
-    &__img {
-        @media(min-width: 1025px) {
-            grid-column: 1 / 3;
-            grid-row: 1 / 2;
-        }
-
-        @media(max-width: 500px) {
-            height: 26.2rem;
-        }
-
-        img {
-            @extend %cover;
-        }
-    }
-
-    // .sale-slider__content
-
-    &__content {
-        align-self: center;
-        display: grid;
-
-        @media(max-width: 1024px) {
-            row-gap: var(--offset-m);
-            @include padding-x(var(--mob-padding));
-        }
-
-        @media(min-width: 1025px) {
-            grid-column: 2 / 4;
-            grid-row: 1 / 2;
-            grid-template-columns: repeat(2, var(--slider-offset)) max-content 1fr;
-            grid-template-rows: max-content var(--offset-xxl) max-content var(--offset-xxxl) max-content;
-            grid-template-areas: 'title title title .'
-                '. . . .'
-                '. . text text'
-                '. . . .'
-                '. . btn .'
-            ;
-        }
-    }
-
-    // .sale-slider__title
-
-    &__title {
-        @media(min-width: 1025px) {
-            grid-area: title;
-        }
-
-        @media(max-width: 767px) {
-            font-size: 1.6rem;
-            line-height: 2.2rem;
-        }
-
-        span {
-            display: block;
-            color: var(--ocean);
-        }
-    }
-
-    // .sale-slider__text
-
-    &__text {
-        @media(min-width: 1025px) {
-            grid-area: text;
-        }
-
-        @media(max-width: 767px) {
-            font-size: 1.3rem;
-            line-height: 1.8rem;
-        }
-    }
-
-    // .sale-slider__btn
-
-    &__btn {
-        @media(min-width: 1025px) {
-            grid-area: btn;
-        }
-
-        @media(max-width: 767px) {
-            width: 100%;
-        }
-    }
+	&__rightside-btn {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
 }

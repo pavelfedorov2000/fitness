@@ -1,0 +1,19 @@
+<article class="aside-article">
+	<div class="aside-article__img">
+		<span class="label aside-article__label">@@label</span>
+		<picture>
+			<source type="image/webp" srcset="@@src.webp">
+			<img src="@@src.jpg" alt="фото" width="248" height="248" loading="lazy">
+		</picture>
+		@@include('blocks/arrow-btn/arrow-btn.html', {
+		"span": true,
+		"bg": "white"
+		})
+	</div>
+	<div class="aside-article__content">
+		<time class="date aside-article__date" datetime="2020-09-08">08.09.2020</time>
+		<h4 class="aside-article__title">
+			<a href="#" class="full-link">@@title</a>
+		</h4>
+	</div>
+</article>

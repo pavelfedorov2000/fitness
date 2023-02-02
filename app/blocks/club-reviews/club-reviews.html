@@ -1,27 +1,27 @@
 <section class="club-reviews">
-    <div class="container club-reviews__grid">
-        <div class="section-body">
-            <h2 class="section-title club-reviews__title section-title--stroke">
-                Отзывы
-                <span>о клубе FITNESSON</span>
-            </h2>
-        </div>
-        <div class="swiper club-reviews__slider club-reviews-slider">
-            <div class="swiper-wrapper">
-                @@include('blocks/client-review-card/client-review-card.html', {
-                "swiper": true
-                })
-                @@include('blocks/client-review-card/client-review-card.html', {
-                "swiper": true
-                })
-                @@include('blocks/client-review-card/client-review-card.html', {
-                "swiper": true
-                })
-                @@include('blocks/client-review-card/client-review-card.html', {
-                "swiper": true
-                })
-            </div>
-            <div class="swiper-scrollbar"></div>
-        </div>
-    </div>
+	<div class="container club-reviews__grid">
+		<div class="section-body">
+			<h2 class="section-title club-reviews__title section-title--stroke">
+				Отзывы
+				<span>о клубе FITNESSON</span>
+			</h2>
+		</div>
+		<div class="swiper club-reviews__slider club-reviews-slider">
+			<ul class="swiper-wrapper">
+				@@include('blocks/client-review-card/client-review-card.html', {
+				"swiper": true
+				})
+				@@include('blocks/client-review-card/client-review-card.html', {
+				"swiper": true
+				})
+				@@include('blocks/client-review-card/client-review-card.html', {
+				"swiper": true
+				})
+				@@include('blocks/client-review-card/client-review-card.html', {
+				"swiper": true
+				})
+			</ul>
+			<div class="swiper-scrollbar"></div>
+		</div>
+	</div>
 </section>

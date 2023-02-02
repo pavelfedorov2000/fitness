@@ -1,12 +1,8 @@
-<@@if(!context.dataPopup){span}@@if(context.dataPopup){button} @@if(context.dataPopup){data-popup="@@dataPopup"
-                                                               }
-                                                               class="arrow-btn@@if(context.class){ @@class__arrow}@@if(context.bg){ arrow-btn--style_bg-@@bg}@@if(context.fullLink){ full-link}">
-    <svg class="arrow-btn__svg"
-         viewBox="0 0 24 24"
-         fill="none"
-         xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
-    </svg>
-</@@if(!context.dataPopup){span}@@if(context.dataPopup){button}>
+<@@if(context.href){a href="@@href" }@@if(context.dataPopup){button}@@if(context.span){span}@@if(context.dataPopup){
+	data-popup="@@dataPopup" }
+	class="arrow-btn@@if(context.class){ @@class__arrow}@@if(context.bg){ arrow-btn--style_bg-@@bg}@@if(context.fullLink){ full-link}">
+	<svg class="arrow-btn__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M12.5287 9.51496L6.07211 15.9715L8.02852 17.9279L14.4832 11.4732L14.468 16.9919L16.9142 16.9852L16.9416 7.07594L16.942 7.04244L16.9417 7.04244L16.9417 7.0421L14.4954 7.04886L14.4954 7.05704L6.99868 7.10177L6.9684 9.54814L12.5287 9.51496Z" />
+	</svg>
+	</@@if(context.href){a}@@if(context.dataPopup){button}@@if(context.span){span}>

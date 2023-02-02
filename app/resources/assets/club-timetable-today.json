@@ -1,0 +1,37 @@
+[{
+    "status": {
+        "code": "progress",
+        "bg": "green",
+        "text": "в процессе"
+    },
+    "category": "групповая тренировка",
+    "title": "Пилатес",
+    "time": "8:00 — 8:50",
+    "description": "Силовая тренировка. Занятие направлено на общее укрепление мышечной системы.",
+    "picture": "assets/images/content/timetable/01/img",
+    "coach": {
+        "avatar": "assets/images/content/timetable/01/coach",
+        "name": "Светлана Альпина",
+        "position": "Тренер групповых программ"
+    },
+    "attendance": "12",
+    "progress": "50%"
+}, {
+    "status": {
+        "code": "planning",
+        "bg": "yellow",
+        "text": "Планируется"
+    },
+    "category": "Индивидуальная тренировка",
+    "title": "Йога",
+    "time": "10:00 — 10:50",
+    "description": "Совокупность физической практики, которая направлена на управление физиологическими и&nbsp;психическими функциями организма.",
+    "picture": "assets/images/content/timetable/01/img",
+    "coach": {
+        "avatar": "assets/images/content/timetable/02/coach",
+        "name": "Екатерина Гарибальди",
+        "position": "Тренер групповых программ"
+    },
+    "attendance": "10",
+    "progress": "30%"
+}]

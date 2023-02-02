@@ -1,0 +1,40 @@
+.section {
+	@media (min-width: 1025px) {
+		min-height: var(--section-mh);
+	}
+
+	&-body {
+		grid-column: 3 / 4;
+
+		@media (max-width: 1024px) {
+			grid-column: 2 / 3;
+		}
+	}
+
+	&-top {
+		>* {
+			&:not(:last-child) {
+				margin-bottom: 0.6rem;
+
+				@media (max-width: 767px) {
+					margin-bottom: calc(var(--offset-xxs) / 2);
+				}
+			}
+		}
+	}
+
+	&-text {
+		@extend %text-14;
+
+		@media (max-width: 767px) {
+			font-size: 1.3rem;
+			line-height: 1.8rem;
+		}
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}

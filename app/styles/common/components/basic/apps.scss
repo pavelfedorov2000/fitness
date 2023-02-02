@@ -1,35 +1,35 @@
 .apps {
-    @extend %grid-row;
-    // .apps__item
+	display: flex;
+	// .apps__item
 
-    &__item {
-        height: var(--offset-xls);
-        transition: $transition box-shadow;
+	&__item {
+		height: var(--offset-xls);
+		transition: $transition box-shadow;
 
-        @media (any-hover: hover) {
-            &:hover {
-                box-shadow: $bsh;
-            }
-        }
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: $bsh;
+			}
+		}
 
-        &--radius {
-            border-radius: 0.4rem;
+		&--radius {
+			border-radius: 0.4rem;
 
-            img {
-                border-radius: 0.4rem;
-            }
-        }
+			img {
+				border-radius: 0.4rem;
+			}
+		}
 
-        &--appstore {
-            width: 12.8rem;
-        }
+		&--appstore {
+			width: 12.8rem;
+		}
 
-        &--googleplay {
-            width: 13.5rem;
-        }
+		&--googleplay {
+			width: 13.5rem;
+		}
 
-        img {
-            @extend %cover;
-        }
-    }
+		img {
+			@extend %cover;
+		}
+	}
 }

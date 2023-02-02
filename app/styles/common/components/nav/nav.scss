@@ -2,67 +2,61 @@
 
 .promo-nav {
 
-    @media(max-width: 1024px) {
-        background-color: #fff;
-        color: var(--black);
-    }
+	@media(max-width: 1024px) {
+		background-color: #fff;
+		color: var(--black);
+	}
 
-    // .promo-nav__mobile
+	// .promo-nav__mobile
 
-    &__mobile {
-        display: none;
+	&__mobile {
+		display: none;
 
-        @media(max-width: 1024px) {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: var(--arrow-btn);
-            padding: 0 var(--mob-padding);
-        }
+		@media(max-width: 1024px) {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: var(--arrow-btn);
+			padding: 0 var(--mob-padding);
+		}
 
-        svg {
-            width: var(--offset-l);
-            height: var(--offset-l);
-        }
-    }
+		svg {
+			width: var(--offset-l);
+			height: var(--offset-l);
+		}
+	}
 
-    // .promo-nav__list
+	// .promo-nav__list
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -2rem;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--offset-l);
 
-        @media(max-width: 1024px) {
-            display: none;
-        }
+		@media(max-width: 1024px) {
+			display: none;
+		}
 
-        &.active {
-            @media(max-width: 1024px) {
-                display: flex;
-            }
-        }
-    }
+		&.active {
+			@media(max-width: 1024px) {
+				display: flex;
+			}
+		}
+	}
 
-    // .promo-nav__item
+	// .promo-nav__link
 
-    &__item {
-        margin: 0 2rem;
-    }
+	&__link {
+		@extend %text-12;
+		color: #fff;
+		text-transform: uppercase;
+		transition: $transition color;
 
-    // .promo-nav__link
-
-    &__link {
-        @extend %text-12;
-        color: #fff;
-        text-transform: uppercase;
-        transition: $transition color;
-
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--yellow);
-            }
-        }
-    }
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--yellow);
+			}
+		}
+	}
 }

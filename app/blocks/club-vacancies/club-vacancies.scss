@@ -1,68 +1,68 @@
 .club-vacancies {
-    @include padding-y(var(--section-padding));
+	@include padding-y(var(--section-padding));
 
-    @media (max-width: 1024px) {
-        padding-top: var(--offset-l);
-        padding-bottom: 0;
-    }
+	@media (max-width: 1024px) {
+		padding-top: var(--offset-l);
+		padding-bottom: 0;
+	}
 
-    &__body {
-        @media (max-width: 1024px) {
-            display: grid;
-            gap: var(--offset-m);
-        }
-    }
+	&__body {
+		@media (max-width: 1024px) {
+			display: grid;
+			gap: var(--offset-m);
+		}
+	}
 
-    // .club-vacancies__title
+	// .club-vacancies__title
 
-    &__title {
-        margin-bottom: var(--offset-xxl);
+	&__title {
+		margin-bottom: var(--offset-xxl);
 
-        @media (max-width: 1024px) {
-            margin-bottom: var(--offset-xl);
-        }
+		@media (max-width: 1024px) {
+			margin-bottom: var(--offset-xl);
+		}
 
-        @media (max-width: 767px) {
-            margin-bottom: var(--offset-m);
-        }
-    }
+		@media (max-width: 767px) {
+			margin-bottom: var(--offset-m);
+		}
+	}
 
-    // .club-vacancies__slider
+	// .club-vacancies__slider
 
-    &__slider {
-        @media (min-width: 1025px) {
-            visibility: visible;
-        }
+	&__slider {
+		@media (min-width: 1025px) {
+			visibility: visible;
+		}
 
-        @media (max-width: 1024px) {
-            grid-column: 1 / -1;
-            width: 100vw;
-            grid-column: 1 / -1;
-            padding-bottom: calc(var(--offset-xl) + var(--offset-m));
-        }
-    }
+		@media (max-width: 1024px) {
+			grid-column: 1 / -1;
+			width: 100vw;
+			grid-column: 1 / -1;
+			padding-bottom: calc(var(--offset-xl) + var(--offset-m));
+		}
+	}
 
-    // .club-vacancies__cards
+	// .club-vacancies__cards
 
-    &__cards {
-        @media (min-width: 1025px) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--offset-xls);
-        }
-    }
+	&__list {
+		@media (min-width: 1025px) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: var(--offset-xls);
+		}
+	}
 
-    // .club-vacancies__slider-nav
+	// .club-vacancies__slider-nav
 
-    &__slider-nav {
-        display: none;
+	&__slider-nav {
+		display: none;
 
-        @media (max-width: 1024px) {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: grid;
-        }
-    }
+		@media (max-width: 1024px) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: grid;
+		}
+	}
 }

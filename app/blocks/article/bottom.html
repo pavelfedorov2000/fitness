@@ -10,14 +10,16 @@
 			</div>
 			<div class="article-aside-card__content">
 				<h3 class="article-aside-card__title">
-					<a href="#">
+					<a href="#" class="full-link">
 						Магазин<br>
 						спортивного<br>
 						питания
 					</a>
 				</h3>
 			</div>
-			@@include('blocks/arrow-btn/arrow-btn.html')
+			@@include('blocks/arrow-btn/arrow-btn.html', {
+			"span": true
+			})
 		</article>
 		<div class="article-aside-card">
 			<div class="article-aside-card__bg">

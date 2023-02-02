@@ -1,73 +1,74 @@
 .accordion {
-    $this: &;
+	$this: &;
 
-    border: 0.1rem solid var(--black);
-    border-bottom: none;
+	border: 0.1rem solid var(--black);
+	border-bottom: none;
 
-    &:last-child {
-        border-bottom: 0.1rem solid var(--black);
-    }
+	&:last-child {
+		border-bottom: 0.1rem solid var(--black);
+	}
 
-    &-title {
-        position: relative;
-        padding: 1.4rem var(--mob-padding);
-        width: 100%;
-        font-size: 1.4rem;
-        line-height: 2rem;
-        text-align: left;
-        transition: $transition background-color;
+	&-title {
+		position: relative;
+		padding: 1.4rem var(--mob-padding);
+		width: 100%;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		text-align: left;
+		transition: $transition background-color;
 
-        @media(max-width: 1024px) {
-            font-size: 1.4rem;
-            line-height: 2rem;
-            font-weight: 500;
-        }
+		@media(max-width: 1024px) {
+			font-size: 1.4rem;
+			line-height: 2rem;
+			font-weight: 500;
+		}
 
-        &:before {
-            content: '';
-            position: absolute;
-            top: 1.5rem;
-            right: var(--mob-padding);
-            width: 2rem;
-            height: 2rem;
-            background-image: url(../images/icons/drop.svg);
-            @extend %bg-contain;
-            transition: $transition transform;
-        }
+		&:before {
+			content: '';
+			position: absolute;
+			top: 1.5rem;
+			right: var(--mob-padding);
+			width: 2rem;
+			height: 2rem;
+			background-image: url(../images/icons/drop.svg);
+			@extend %bg-contain;
+			transition: $transition transform;
+		}
 
-        &[aria-expanded="true"] {
-            background-color: var(--light-blue);
+		&[aria-expanded="true"],
+		&.active {
+			background-color: var(--light-blue);
 
-            &:before {
-                transform: rotate(180deg);
-            }
-        }
-    }
+			&:before {
+				transform: rotate(180deg);
+			}
+		}
+	}
 
-    &-content {
-        display: none;
-        background-color: var(--light-blue);
-        padding: 0 var(--mob-padding) var(--offset-s);
+	&-content {
+		display: none;
+		background-color: var(--light-blue);
+		padding: 0 var(--mob-padding) var(--offset-s);
 
-        li {
-            &:not(:last-child) {
-                margin-bottom: 2rem;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 2rem;
 
-                @media(max-width: 767px) {
-                    margin-bottom: 1.8rem;
-                }
-            }
-        }
-    }
+				@media(max-width: 767px) {
+					margin-bottom: 1.8rem;
+				}
+			}
+		}
+	}
 
-    &-link {
-        @extend %text-13;
-        transition: $transition color;
+	&-link {
+		@extend %text-13;
+		transition: $transition color;
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--yellow);
-            }
-        }
-    }
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--yellow);
+			}
+		}
+	}
 }

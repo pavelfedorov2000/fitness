@@ -11,7 +11,7 @@
 		</div>
 		<div class="splide success-stories-section__slider success-stories-slider">
 			<div class="splide__track">
-				<div class="splide__list">
+				<ul class="splide__list">
 					@@loop('blocks/success-story/success-story.html', [{
 					"splide": true,
 					"name": "Дмитрий<br>Бондаренко",
@@ -53,7 +53,7 @@
 					"after": "49",
 					"duration": "7 месяцев"
 					}])
-				</div>
+				</ul>
 			</div>
 			@@include('blocks/slider-nav/slider-nav.html', {
 			"class": "success-stories-section",

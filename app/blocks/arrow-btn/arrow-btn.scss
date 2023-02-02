@@ -1,46 +1,46 @@
 .arrow-btn {
-    @extend %grid-center;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: var(--arrow-btn);
-    height: var(--arrow-btn);
-    background-color: var(--yellow);
-    transition: $transition background-color;
+	@extend %grid-center;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: var(--arrow-btn);
+	height: var(--arrow-btn);
+	background-color: var(--yellow);
+	transition: $transition background-color;
 
-    .full-link {
-        position: static;
-    }
+	&.full-link {
+		position: static;
+	}
 
-    // .arrow-btn__svg
+	// .arrow-btn__svg
 
-    &__svg {
-        width: var(--offset-m);
-        height: var(--offset-m);
-        fill: var(--black);
+	&__svg {
+		width: var(--offset-m);
+		height: var(--offset-m);
+		fill: var(--black);
 
-        @media (max-width: 767px) {
-            width: var(--offset-s);
-            height: var(--offset-s);
-        }
-    }
+		@media (max-width: 767px) {
+			width: var(--offset-s);
+			height: var(--offset-s);
+		}
+	}
 
-    &--style {
-        &_bg {
-            &-white {
-                background-color: #fff;
-            }
+	&--style {
+		&_bg {
+			&-white {
+				background-color: #fff;
+			}
 
-            &-light-blue {
-                background-color: var(--light-blue);
-            }
-        }
-    }
+			&-light-blue {
+				background-color: var(--light-blue);
+			}
+		}
+	}
 
-    &--size {
-        &_l {
-            width: var(--offset-l);
-            height: var(--offset-l);
-        }
-    }
+	&--size {
+		&_l {
+			width: var(--offset-l);
+			height: var(--offset-l);
+		}
+	}
 }

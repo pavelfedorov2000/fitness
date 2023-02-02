@@ -1,13 +1,14 @@
-<article class="client-review-card@@if(context.swiper){ swiper-slide}">
-	<a href="https://www.youtube.com/watch?v=NmxCy0wMV9A" target="_blank">
+<li @@if(context.swiper){ class="swiper-slide" }>
+	<article class="client-review-card">
 		<figure class="client-review-card__inner">
-			<div class="client-review-card__bg">
+			<a class="full-link client-review-card__bg" href="https://www.youtube.com/watch?v=NmxCy0wMV9A"
+				target="_blank">
 				<picture>
 					<source type="image/webp" srcset="assets/images/content/client-review.webp">
 					<img src="assets/images/content/client-review.jpg" alt="фото" width="728" height="400"
 						loading="lazy">
 				</picture>
-			</div>
+			</a>
 			<div class="client-review-card__content">
 				<blockquote class="client-review-card__quote">
 					Фитнес–клуб, который заботится о клиентах и его результатах
@@ -36,5 +37,5 @@
 				</div>
 			</div>
 		</figure>
-	</a>
-</article>
+	</article>
+</li>

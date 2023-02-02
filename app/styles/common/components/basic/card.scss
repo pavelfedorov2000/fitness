@@ -1,100 +1,114 @@
 .card {
-    $this: &;
+	$this: &;
 
-    position: relative;
-    padding: var(--offset-m) var(--offset-m) 2.8rem;
-    background-color: var(--light-blue);
-    border: 0.1rem solid var(--light-blue);
-    min-height: 24.8rem;
-    transition: $transition all;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr var(--arrow-btn);
+	grid-template-rows: 1fr var(--arrow-btn);
+	grid-template-areas:
+		'content .'
+		'content arrow'
+	;
+	background-color: var(--light-blue);
+	border: 0.1rem solid var(--light-blue);
+	min-height: 24.8rem;
+	transition: $transition all;
 
-    @media (max-width: 767px) {
-        min-height: 18.1rem;
-        padding: var(--offset-s) var(--mob-padding) 2.8rem;
-    }
+	@media (max-width: 767px) {
+		min-height: 18.1rem;
+	}
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: #fff;
-            border-color: var(--black);
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #fff;
+			border-color: var(--black);
 
-            #{$this} {
-                &__label {
-                    background-color: var(--light-blue);
-                }
-            }
+			#{$this} {
+				&__label {
+					background-color: var(--light-blue);
+				}
+			}
 
-            .arrow-btn {
-                background-color: var(--yellow);
-            }
-        }
-    }
+			.arrow-btn {
+				background-color: var(--yellow);
+			}
+		}
+	}
 
-    // .card__inner
+	&__arrow {
+		grid-area: arrow;
+	}
 
-    &__content {
-        @extend %flex-col;
-        align-items: flex-start;
-        min-height: 100%;
+	// .card__inner
 
-        > * {
-            &:not(:last-child) {
-                margin-bottom: var(--offset-m);
+	&__content {
+		@extend %flex-col;
+		align-items: flex-start;
+		grid-area: content;
+		padding: var(--offset-m) var(--offset-m) 2.8rem;
 
-                @media (max-width: 767px) {
-                    margin-bottom: var(--offset-s);
-                }
-            }
+		@media(max-width: 767px) {
+			padding: var(--offset-s) var(--mob-padding) 2.8rem;
+		}
 
-            &:last-child {
-                margin-top: auto;
-            }
-        }
-    }
+		>* {
+			&:not(:last-child) {
+				margin-bottom: var(--offset-m);
 
-    // .card__title
+				@media (max-width: 767px) {
+					margin-bottom: var(--offset-s);
+				}
+			}
 
-    &__title {
-        @extend %text-16;
+			&:last-child {
+				margin-top: auto;
+			}
+		}
+	}
 
-        @media (max-width: 767px) {
-            font-size: 1.4rem;
-            line-height: 2rem;
-        }
-    }
+	// .card__title
 
-    &__address {
-        @extend %text-14;
-        position: relative;
-        padding-left: 2.8rem;
-        color: var(--dark-gray);
+	&__title {
+		@extend %text-16;
 
-        @media (max-width: 767px) {
-            font-size: 1.3rem;
-            line-height: 1.8rem;
-        }
+		@media (max-width: 767px) {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+	}
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0rem;
-            left: 0rem;
-            width: 2rem;
-            height: 2rem;
-            background-image: url(../images/icons/ico-pin.svg);
-            @extend %bg-contain;
-        }
+	&__address {
+		@extend %text-14;
+		position: relative;
+		padding-left: 2.8rem;
+		color: var(--dark-gray);
 
-        b {
-            display: block;
-            font-weight: 500;
-            color: var(--black);
-        }
-    }
+		@media (max-width: 767px) {
+			font-size: 1.3rem;
+			line-height: 1.8rem;
+		}
 
-    // .card__text
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0rem;
+			left: 0rem;
+			width: 2rem;
+			height: 2rem;
+			background-image: url(../images/icons/ico-pin.svg);
+			@extend %bg-contain;
+		}
 
-    &__text {
-        @extend %text-14;
-    }
+		b {
+			display: block;
+			font-weight: 500;
+			color: var(--black);
+		}
+	}
+
+	// .card__text
+
+	&__text {
+		@extend %text-14;
+	}
 }

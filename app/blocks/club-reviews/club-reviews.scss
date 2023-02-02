@@ -1,69 +1,76 @@
 .club-reviews {
-    position: relative;
+	position: relative;
 
-    @media(min-width: 1025px) {
-        @include padding-y(var(--section-padding));
+	@media(min-width: 1025px) {
+		@include padding-y(var(--section-padding));
 
-        &:before {
-            @include rect(top, left, 0, 0, 60%, var(--yellow));
-            z-index: -1;
-            width: 100%;
-        }
-    }
+		&:before {
+			@include rect(top, left, 0, 0, 60%, var(--yellow));
+			z-index: -1;
+			width: 100%;
+		}
+	}
 
-    // .club-reviews__grid
+	// .club-reviews__grid
 
-    &__grid {
-        @media(min-width: 1025px) {
-            row-gap: var(--offset-xxl);
-        }
-    }
+	&__grid {
+		@media(min-width: 1025px) {
+			row-gap: var(--offset-xxl);
+		}
+	}
 
-    // .club-reviews__title
+	// .club-reviews__title
 
-    &__title {
-        span {
-            display: block;
-            margin-left: 9.8rem;
+	&__title {
+		span {
+			display: block;
+			margin-left: 9.8rem;
 
-            @media(max-width: 1024px) {
-                margin-left: 0;
-            }
-        }
+			@media(max-width: 1024px) {
+				margin-left: 0;
+			}
+		}
 
-        @media(max-width: 1024px) {
-            position: relative;
-            padding: var(--offset-l) 0 var(--offset-m);
-            background-color: var(--yellow);
-            @include margin-x(calc(var(--mob-padding) * (-1)));
-            @include padding-x(var(--mob-padding));
-        }
-    }
+		@media(max-width: 1024px) {
+			position: relative;
+			padding: var(--offset-l) 0 var(--offset-m);
+			background-color: var(--yellow);
+			@include margin-x(calc(var(--mob-padding) * (-1)));
+			@include padding-x(var(--mob-padding));
+		}
+	}
 
-    // .club-reviews__slider
+	// .club-reviews__slider
 
-    &__slider {
-        width: 100vw;
-        grid-column: 1 / -1;
-        padding-bottom: var(--offset-xxl);
-    }
+	&__slider {
+		width: 100vw;
+		grid-column: 1 / -1;
+		padding-bottom: var(--offset-xxl);
+
+		.swiper-slide {
+			@media(min-width: 1025px) {
+				width: 72.8rem;
+				height: 40rem;
+			}
+		}
+	}
 }
 
 .swiper-scrollbar {
-    background: #fff;
+	background: #fff;
 
-    &-drag {
-        background: var(--black);
-        border-radius: $brs;
-    }
+	&-drag {
+		background: var(--black);
+		border-radius: $brs;
+	}
 }
 
-.swiper-horizontal > .swiper-scrollbar {
-    width: 39.8rem;
-    height: 0.8rem;
-    left: calc(404 / 1920 * 100%);
+.swiper-horizontal>.swiper-scrollbar {
+	width: 39.8rem;
+	height: 0.8rem;
+	left: calc(404 / 1920 * 100%);
 
-    @media(max-width: 1024px) {
-        left: 0;
-    }
+	@media(max-width: 1024px) {
+		left: 0;
+	}
 }
