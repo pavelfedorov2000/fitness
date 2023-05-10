@@ -1,5 +1,18 @@
 # Fitness On Web
 
+<img src="https://github.com/pavelfedorov2000/fitness/assets/66357864/f349497f-db0c-4bed-a27d-bb0044e2e203" />
+
+<img src="https://github.com/pavelfedorov2000/fitness/assets/66357864/d39daa1a-1717-4520-9ee6-a883bb0adec6" />
+
+<img src="https://github.com/pavelfedorov2000/fitness/assets/66357864/6bf98d21-c7bf-4db8-a9c8-43e1530bb00d" />
+
+<img src="https://github.com/pavelfedorov2000/fitness/assets/66357864/24610afd-7ee8-443c-ac5a-a500ff07313f" />
+
+<img src="https://github.com/pavelfedorov2000/fitness/assets/66357864/ee2ddf48-eefd-42fa-98d3-e5c2c7e7b0fe" />
+
+<img src="https://github.com/pavelfedorov2000/fitness/assets/66357864/52ea4a38-6749-4c1e-953d-09261cea8f35" />
+
+<img src="https://github.com/pavelfedorov2000/fitness/assets/66357864/2292b3b7-2da3-4e89-9ee4-1ae4da44cb33" />
 
 ## Структура папок и файлов
 ```
@@ -12,6 +25,7 @@
 │   │   ├── footer/                   # Футер сайта
 │   │   │    ├── footer.html          # Начальная разметка футера сайта
 │   │   │    └── footer.scss          # Начальные стили футера сайта
+
 │   │   ├── head/                     # Секция head
 │   │   │    └── head.html            # Разметка секции head и открывающие тэги документа
 │   │   ├── header/                   # Шапка сайта
