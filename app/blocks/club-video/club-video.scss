@@ -8,12 +8,12 @@
     }
 
     position: relative;
-    min-height: --section-mh;
-    color: #fff;
+    min-height: --section-height;
+    color: var(--white);
 
     @media (min-width: 1025px) {
         &:before {
-            @include rect(bottom, right, 0, 0, var(--gap), #fff);
+            @include rect(bottom, right, 0, 0, var(--gap), var(--white));
         }
     }
 
@@ -68,7 +68,7 @@
     &__player {
         @extend %grid-center;
         border-radius: 50%;
-        border: 0.1rem solid #fff;
+        border: 0.1rem solid var(--white);
         grid-area: player;
     }
 

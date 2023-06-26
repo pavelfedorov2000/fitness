@@ -29,7 +29,7 @@
 	}
 
 	&__container {
-		border-top: $border;
+		border-top: var(--border);
 
 		@media (max-width: 1024px) {
 			padding-top: var(--header-height);
@@ -251,7 +251,7 @@
 		width: max-content;
 		position: absolute;
 		left: 0;
-		bottom: var(--figcaption--mh);
+		bottom: var(--figcaption-height);
 
 		@media (max-width: 767px) {
 			width: 100%;
@@ -317,7 +317,7 @@
 		@extend %flex-col;
 		padding: var(--offset-l) var(--offset-l) var(--offset-xls);
 		justify-content: space-between;
-		color: #fff;
+		color: var(--white);
 
 		>* {
 			&:not(:last-child) {
@@ -375,7 +375,7 @@
 		@extend %text-13;
 		color: var(--dark-gray);
 		padding-top: var(--offset-s);
-		min-height: var(--figcaption--mh);
+		min-height: var(--figcaption-height);
 
 		@media (max-width: 767px) {
 			font-size: 1.1rem;

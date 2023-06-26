@@ -3,15 +3,15 @@
 
     position: relative;
     display: grid;
-    grid-template-columns: var(--section-padding-xl) 1fr var(--section-padding-xl);
-    grid-template-rows: var(--offset-xl) max-content var(--offset-xl) minmax(var(--section-padding-xl), max-content);
+    grid-template-columns: var(--section-padding_xl) 1fr var(--section-padding_xl);
+    grid-template-rows: var(--offset-xl) max-content var(--offset-xl) minmax(var(--section-padding_xl), max-content);
     grid-template-areas:
         '. . .'
         '. speech .'
         '. . .'
         '. author photo';
     background-color: var(--black);
-    color: #fff;
+    color: var(--white);
 
     @media (min-width: 768px) {
         column-gap: var(--offset-xxl);
@@ -40,8 +40,8 @@
     &::before {
         content: '';
         left: 0;
-        width: var(--section-padding-xl);
-        height: var(--section-padding-xl);
+        width: var(--section-padding_xl);
+        height: var(--section-padding_xl);
         background-color: #ffcc48;
         background-image: url(../images/icons/ico-quote.svg);
         background-position: center;
@@ -56,10 +56,10 @@
 
     @media (min-width: 768px) {
         &::after {
-            left: calc(var(--section-padding-xl) - var(--line-width));
+            left: calc(var(--section-padding_xl) - var(--line-width));
             bottom: 0;
             width: var(--line-width);
-            background-color: rgba(#fff, 0.2);
+            background-color: rgba(var(--white), 0.2);
         }
     }
     // .speech__text
@@ -92,7 +92,7 @@
 
     &__photo {
         width: 100%;
-        height: var(--section-padding-xl);
+        height: var(--section-padding_xl);
         object-fit: cover;
         grid-area: photo;
         //align-self: flex-end;

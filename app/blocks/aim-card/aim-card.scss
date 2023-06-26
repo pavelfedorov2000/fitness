@@ -14,7 +14,7 @@
 		height: 50%;
 		background: linear-gradient(180deg, rgba(2, 8, 24, 0.6) 0%, rgba(2, 8, 24, 0) 102.25%);
 		transform: rotate(-180deg);
-		transition: $transition opacity;
+		transition: var(--transition) opacity;
 	}
 
 	@media (any-hover: hover) {
@@ -51,7 +51,7 @@
 		justify-content: flex-end;
 		align-items: flex-start;
 		padding: 5.2rem var(--offset-xl);
-		color: #fff;
+		color: var(--white);
 
 		@media (max-width: 767px) {
 			padding: var(--offset-s) var(--offset-xl) var(--offset-s) var(--offset-s);

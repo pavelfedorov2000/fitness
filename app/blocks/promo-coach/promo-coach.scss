@@ -17,7 +17,7 @@
     position: relative;
     height: 100vh;
     background-color: var(--black);
-    color: #fff;
+    color: var(--white);
 
     @media(min-width: 1025px) {
         display: grid;
@@ -25,7 +25,7 @@
         grid-template-rows: calc(var(--header-height) + var(--offset-xxxl)) var(--content-mt) max-content 1fr var(--gap);
 
         &:before {
-            @include rect(top, left, 0, 0, 50%, #fff);
+            @include rect(top, left, 0, 0, 50%, var(--white));
         }
 
         &:after {
@@ -52,7 +52,7 @@
         @media(max-width: 1024px) {
             position: relative;
             z-index: 10;
-            padding: calc(var(--header-height) + var(--offset-l)) var(--mob-padding) 3.6rem;
+            padding: calc(var(--header-height) + var(--offset-l)) var(--container-padding) 3.6rem;
             flex-grow: 1;
         }
     }
@@ -199,7 +199,7 @@
                 content: '';
                 position: absolute;
                 left: calc(var(--gap) * (-1));
-                background-color: rgba(#fff, .4);
+                background-color: rgba(var(--color-white-rgb), 0.4);
             }
         }
 

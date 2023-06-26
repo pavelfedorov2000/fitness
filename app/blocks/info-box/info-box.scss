@@ -1,8 +1,8 @@
 .info-block {
-    background-color: #fff;
-    color: var(--black);
     padding: 4.5rem var(--offset-xl) 5.2rem;
     display: grid;
+    background-color: var(--white);
+    color: var(--black);
 
     @media (min-width: 1025px) {
         grid-template-areas:
@@ -13,7 +13,7 @@
 
     @media (max-width: 1024px) {
         row-gap: var(--offset-m);
-        padding: var(--offset-l) var(--mob-padding);
+        padding: var(--offset-l) var(--container-padding);
     }
 
     // .info-block__capacity
@@ -150,7 +150,7 @@
     // .contact-info-item__link
 
     &__link {
-        transition: $transition color;
+        transition: var(--transition) color;
 
         @media (any-hover: hover) {
             &:hover {

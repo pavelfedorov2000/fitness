@@ -3,7 +3,7 @@
         min-height: 100vh;
         padding-top: var(--offset-xxl);
         padding-bottom: 10.8rem;
-        @include padding-x(var(--mob-padding));
+        @include padding-x(var(--container-padding));
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -13,7 +13,7 @@
         }
 
         @media (min-width: 1025px) {
-            width: calc(106.5rem + var(--mob-padding) * 2);
+            width: calc(106.5rem + var(--container-padding) * 2);
         }
     }
     // .icons-page__section

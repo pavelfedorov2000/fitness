@@ -17,7 +17,7 @@
         height: var(--arrow-btn);
         background-color: var(--light-blue);
         border: 0.1rem solid var(--light-blue);
-        transition: $transition all;
+        transition: var(--transition) all;
 
         @media (any-hover: hover) {
             &:hover {
@@ -29,7 +29,7 @@
         &.active {
             font-weight: 700;
             border-color: var(--black);
-            background-color: #fff;
+            background-color: var(--white);
         }
     }
 }

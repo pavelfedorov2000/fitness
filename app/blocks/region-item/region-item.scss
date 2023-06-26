@@ -38,19 +38,18 @@
     position: relative;
     background-color: var(--light-blue);
     border: 0.1rem solid var(--light-blue);
-    transition: $transition all;
+    transition: var(--transition) all;
 
     &::before {
-        @extend %pos-center-xy;
+        @include position-center-xy;
         @extend .title;
         content: attr(data-region);
-        position: absolute;
         z-index: 1;
         font-size: 10rem;
         line-height: 140%;
         white-space: nowrap;
-        color: #fff;
-        transition: $transition color;
+        color: var(--white);
+        transition: var(--transition) color;
     }
 
     // .region-btn__title
@@ -65,7 +64,7 @@
 
     @media (any-hover: hover) {
         &:hover {
-            background-color: #fff;
+            background-color: var(--white);
             border-color: var(--line-color);
 
             &:before {

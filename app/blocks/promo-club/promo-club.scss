@@ -39,7 +39,7 @@
         }
 
         @media (max-width: 1024px) {
-            grid-template-columns: var(--mob-padding) calc(100vw - var(--mob-padding) * 2) var(--mob-padding);
+            grid-template-columns: var(--container-padding) calc(100vw - var(--container-padding) * 2) var(--container-padding);
         }
     }
 
@@ -54,7 +54,7 @@
             'ratings . infoBox infoBox infoBox'
             '. . . . .'
             'nav nav nav nav nav';
-        color: #fff;
+        color: var(--white);
 
         @media (min-width: 1025px) {
             grid-area: content;
@@ -64,7 +64,6 @@
         }
 
         @media (max-width: 1024px) {
-            //min-height: calc(100vh - var(--offset-xl));
             min-height: 100vh;
             padding: calc(var(--header-height) + var(--offset-l)) 0 var(--offset-s);
             grid-template-rows: max-content 1fr var(--rating) var(--offset-l) max-content;

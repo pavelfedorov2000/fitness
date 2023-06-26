@@ -1,0 +1,14 @@
+@@if(!context.picture){
+    <picture @@if(context.class){class="@@class" }>
+        <source type="image/webp" srcset="@@src.webp">
+        <img class="@@if(context.cover){img-cover}@@if(context.contain){img-contain}"
+            src="@@src.@@if(context.format){@@format}@@if(!context.format){jpg}"
+            alt="@@if(context.alt){@@alt}@@if(!context.alt){фото}" width="@@width" height="@@height" loading="lazy">
+    </picture>
+}
+
+@@if(context.picture){
+    <img class="@@if(context.class){@@class}@@if(context.cover){img-cover}@@if(context.contain){img-contain}"
+        src="@@src.svg" alt="@@if(context.alt){@@alt}@@if(!context.alt){фото}" width="@@width" height="@@height"
+        loading="lazy">
+}

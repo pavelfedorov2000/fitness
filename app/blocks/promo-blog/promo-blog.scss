@@ -20,11 +20,11 @@
         background-repeat: no-repeat;
 
         &:before {
-            @include rect(bottom, left, 0, 0, var(--gap), #fff);
+            @include rect(bottom, left, 0, 0, var(--gap), var(--white));
         }
 
         &:after {
-            @include rect(bottom, left, 0, var(--gap), var(--bottom-offset), #fff);
+            @include rect(bottom, left, 0, var(--gap), var(--bottom-offset), var(--white));
             width: 100%;
         }
     }
@@ -41,7 +41,7 @@
 
     &__content {
         display: grid;
-        gap: 0 var(--section-padding-xl);
+        gap: 0 var(--section-padding_xl);
 
         @media (max-width: 1024px) {
             gap: var(--offset-m);

@@ -9,7 +9,7 @@
         }
 
         &:after {
-            @include rect(top, right, 0, 0, 100%, #fff);
+            @include rect(top, right, 0, 0, 100%, var(--white));
             z-index: 10;
         }
     }
@@ -53,7 +53,7 @@
         width: var(--container);
 
         @media (max-width: 1024px) {
-            width: calc(100vw - (var(--mob-padding) * 2));
+            width: calc(100vw - (var(--container-padding) * 2));
             padding-bottom: calc(var(--offset-l) + var(--offset-xl));
         }
 
@@ -65,13 +65,12 @@
     }
 
     &__slider-nav {
-        position: absolute;
-        @extend %pos-center-x;
+        @include position-center-x;
         bottom: 0;
 
         @media (max-width: 1024px) {
-            left: calc(var(--mob-padding) * (-1));
-            right: calc(var(--mob-padding) * (-1));
+            left: calc(var(--container-padding) * (-1));
+            right: calc(var(--container-padding) * (-1));
             transform: none;
         }
     }

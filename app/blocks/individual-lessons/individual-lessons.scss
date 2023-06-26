@@ -3,16 +3,15 @@
 
     @media (min-width: 1025px) {
         position: relative;
-        @include padding-y(var(--section-padding-xl));
+        @include padding-y(var(--section-padding_xl));
     }
 
     &::before {
         @extend %contain;
-        @extend %pos-center-y;
 
         @media (min-width: 1025px) {
             content: '';
-            position: absolute;
+            @include position-center-y;
             left: 15.3rem;
             width: 138.2rem;
             height: 60rem;

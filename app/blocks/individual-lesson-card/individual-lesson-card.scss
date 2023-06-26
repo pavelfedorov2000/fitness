@@ -5,12 +5,12 @@
     --btn: calc(var(--half-card) - var(--offset-xls));
     --btn-offset: calc(var(--btn-full) - var(--btn));
 
-    color: #fff;
+    color: var(--white);
     display: grid;
     grid-template-columns: var(--offset-xls) 1fr var(--offset-xls) var(--btn-offset) 1fr;
 
     @media(max-width: 1024px) {
-        grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+        grid-template-columns: var(--container-padding) 1fr var(--container-padding);
         row-gap: var(--offset-m);
         padding-top: var(--offset-m);
     }
@@ -84,9 +84,9 @@
 
         @media(max-width: 1024px) {
             position: absolute;
-            left: var(--mob-padding);
+            left: var(--container-padding);
             bottom: var(--offset-m);
-            right: var(--mob-padding);
+            right: var(--container-padding);
         }
     }
 

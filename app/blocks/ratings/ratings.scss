@@ -32,7 +32,7 @@
     &__current-rate {
         @extend .title;
         @extend %text-20;
-        color: #fff;
+        color: var(--white);
 
         @media(max-width: 767px) {
             font-size: 1.4rem;

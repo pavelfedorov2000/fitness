@@ -1,9 +1,9 @@
 .workout-card {
     $this: &;
 
-    background-color: #fff;
+    background-color: var(--white);
     border: var(--offset-xxs) solid var(--pink);
-    border-radius: $brs;
+    border-radius: var(--border-radius);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
@@ -66,8 +66,7 @@
 
         &::before {
             content: '';
-            position: absolute;
-            @extend %pos-center-y;
+            @include position-center-y;
             left: 0rem;
             width: var(--offset-l);
             height: var(--offset-l);
@@ -102,7 +101,7 @@
             @extend %cover;
 
             @media (min-width: 1025px) {
-                border-radius: 0 $brs $brs 0;
+                border-radius: 0 var(--border-radius) var(--border-radius) 0;
             }
         }
     }
@@ -133,7 +132,7 @@
                 background-color: var(--light-blue);
 
                 .label {
-                    background-color: #fff;
+                    background-color: var(--white);
                 }
 
                 #{$this} {
@@ -146,7 +145,7 @@
                     &__content {
                         @media (max-width: 1024px) {
                             width: 100vw;
-                            padding: var(--offset-m) var(--mob-padding);
+                            padding: var(--offset-m) var(--container-padding);
                         }
                     }
                 }

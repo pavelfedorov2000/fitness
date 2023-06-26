@@ -6,7 +6,7 @@
 	width: var(--arrow-btn);
 	height: var(--arrow-btn);
 	background-color: var(--yellow);
-	transition: $transition background-color;
+	transition: var(--transition) background-color;
 
 	&.full-link {
 		position: static;
@@ -28,7 +28,7 @@
 	&--style {
 		&_bg {
 			&-white {
-				background-color: #fff;
+				background-color: var(--white);
 			}
 
 			&-light-blue {

@@ -7,8 +7,8 @@
     --white-rect-delta: calc(100vw - var(--gap) * 2 - var(--container));
 
     position: relative;
-    background-color: #fff;
-    color: #fff;
+    background-color: var(--white);
+    color: var(--white);
 
     @media (min-width: 1025px) {
         &:before {
@@ -20,7 +20,7 @@
     &__grid {
         min-height: 100vh;
         grid-template-rows:
-            minmax(var(--title-mh), 1fr) var(--white-part-offset) max-content var(--offset-xl) max-content calc(var(--section-padding-xl) - var(--progressbar)) var(--progressbar);
+            minmax(var(--title-mh), 1fr) var(--white-part-offset) max-content var(--offset-xl) max-content calc(var(--section-padding_xl) - var(--progressbar)) var(--progressbar);
         grid-template-columns: repeat(2, var(--gap)) var(--text) 1fr repeat(2, var(--gap));
     }
 
@@ -60,7 +60,7 @@
             grid-row: 1 / 2;
             grid-column: 1 / 2;
             opacity: 0;
-            transition: $transition opacity;
+            transition: var(--transition) opacity;
 
             &.active {
                 opacity: 1;
@@ -72,8 +72,8 @@
         grid-row: 2 / -1;
         grid-column: 1 / span 4;
         width: var(--white-rect);
-        background-color: #fff;
-        transition: $transition width;
+        background-color: var(--white);
+        transition: var(--transition) width;
     }
 
     // .card-services__slider

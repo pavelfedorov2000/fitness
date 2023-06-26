@@ -1,27 +1,26 @@
 .map-balloon {
+    box-sizing: border-box;
     position: absolute;
     top: 50% !important;
     transform: translateY(-50%);
     left: var(--offset-l) !important;
-    width: 24rem;
-    box-sizing: border-box;
-    padding: var(--offset-s);
     @include row-grid(var(--offset-s));
-    background: #fff;
-    box-shadow: $bsh;
+    width: 24rem;
+    padding: var(--offset-s);
+    background: var(--white);
+    box-shadow: var(--shadow);
 
     @media (max-width: 500px) {
-        left: var(--mob-padding) !important;
+        left: var(--container-padding) !important;
     }
 
     &::after {
         content: '';
-        position: absolute;
-        @extend %pos-center-y;
+        @include position-center-y;
         left: calc(var(--offset-xxs) * (-1));
         width: var(--offset-xxs);
         height: var(--offset-s);
-        background-color: #fff;
+        background-color: var(--white);
         clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
     }
 

@@ -26,10 +26,6 @@
     }
 
     @media (min-width: 1025px) {
-
-        //background-position: right bottom;
-        //background-size: var(--bg-width) 88rem;
-        //background-repeat: no-repeat;
         &:before {
             @include rect(top, left, 18.7rem, 0, 38.9rem, var(--beige));
         }
@@ -79,8 +75,8 @@
 
         > * {
             @media (max-width: 1024px) {
-                width: calc(100vw - var(--mob-padding));
-                padding-right: var(--mob-padding);
+                width: calc(100vw - var(--container-padding));
+                padding-right: var(--container-padding);
             }
         }
     }
@@ -195,7 +191,7 @@
     &__video-body {
         @media (max-width: 1024px) {
             width: 100vw;
-            margin-left: calc(var(--mob-padding) * (-1));
+            margin-left: calc(var(--container-padding) * (-1));
         }
     }
 }

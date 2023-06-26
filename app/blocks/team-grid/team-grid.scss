@@ -1,7 +1,9 @@
 .team-grid {
-    padding-top: var(--offset-xxl);
-    padding-bottom: var(--section-padding-xl);
+    --team-card-height: 41.6rem;
+    
     position: relative;
+    padding-top: var(--offset-xxl);
+    padding-bottom: var(--section-padding_xl);
 
     @media (max-width: 1024px) {
         padding-top: var(--offset-m);
@@ -10,7 +12,7 @@
 
     @media (min-width: 1025px) {
         &:before {
-            @include rect(top, left, calc(var(--input-height) + var(--team-card-h)), 0, 64rem, var(--beige));
+            @include rect(top, left, calc(var(--input-height) + var(--team-card-height)), 0, 64rem, var(--beige));
         }
 
         &:after {
@@ -23,7 +25,7 @@
 
     &__list {
         display: grid;
-        grid-auto-rows: minmax(var(--team-card-h), max-content);
+        grid-auto-rows: minmax(var(--team-card-height), max-content);
 
         @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);

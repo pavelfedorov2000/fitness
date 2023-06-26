@@ -1,11 +1,11 @@
 .label {
     @extend %text-13;
     font-weight: 500;
-    background-color: #fff;
+    background-color: var(--white);
     color: var(--black);
-    border-radius: $brs;
+    border-radius: var(--border-radius);
     padding: 0.1rem var(--offset-xxs);
-    transition: $transition background-color;
+    transition: var(--transition) background-color;
 
     &--style {
         &_bg {
@@ -15,12 +15,12 @@
 
             &-black {
                 background-color: var(--black);
-                color: #fff;
+                color: var(--white);
             }
 
             &-green {
                 background-color: var(--green);
-                color: #fff;
+                color: var(--white);
             }
 
             &-yellow {

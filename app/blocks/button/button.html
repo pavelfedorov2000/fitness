@@ -1,0 +1,103 @@
+@@if(context.listItem){
+    <li @@if(context.listItemClass){class="@@listItemClass" }>
+        <@@if(!context.href){button}@@if(context.href){a href="@@href" } class="btn@@if(context.class){ @@class}@@if(context.style){ btn--style_@@style}@@if(context.transparent){ btn--transparent}@@if(context.primary){ btn--primary}" @@if(!context.href){type="@@if(context.type ==
+                'submit'){submit}@@if(context.type == 'reset'){reset}@@if(!context.type){button}" }
+            @@if(context.isDisabled){disabled}@@if(context.fancybox){data-fancybox} @@if(context.target){target="@@target" }
+            @@if(context.expanded){ aria-expanded="@@expanded" } @@if(context.ariaLabel){aria-label="@@ariaLabel" }
+            @@if(context.ariaControls){aria-controls="@@ariaControls" } @@if(context.style=='tab' ){role="tab" }>
+            @@if(!context.icon_position_right) {
+                @@if(context.icon){
+                    @@include('blocks/icons/@@icon.html')
+                }
+                @@if(context.sprite){
+                    <svg class="icon btn__icon">
+                        <use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+                    </svg>
+                }
+                @@if(context.img){
+                    @@include('blocks/img/img.html', {
+                        "picture": "false",
+                        "class": "icon btn__icon",
+                        "src": "@@img.src",
+                        "format": "svg",
+                        "contain": true,
+                        "width": "@@img.width",
+                        "height": "@@img.height",
+                    })
+                }
+            }
+            @@if(context.text){
+                <span class="btn__text">@@text</span>
+            }
+            @@if(context.icon_position_right){
+                @@if(context.icon){
+                    @@include('blocks/icons/@@icon.html')
+                }
+                @@if(context.sprite){
+                    <svg class="icon">
+                        <use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+                    </svg>
+                }
+                @@if(context.img){
+                    @@include('blocks/img/img.html', {
+                        "picture": "false",
+                        "class": "icon btn__icon",
+                        "src": "@@img.src",
+                        "format": "svg",
+                        "contain": true,
+                        "width": "@@img.width",
+                        "height": "@@img.height",
+                    })
+                }
+            }
+        </@@if(!context.href){button}@@if(context.href){a}>
+    </li>
+}
+
+@@if(!context.listItem){
+    <@@if(!context.href){button}@@if(context.href){a href="@@href" } @@if(context.target){target="@@target" } class="btn@@if(context.class){ @@class}@@if(context.style){ btn--style_@@style}@@if(context.transparent){
+            btn--transparent}@@if(context.primary){ btn--primary}" @@if(!context.href){type="@@if(context.type ==
+            'submit'){submit}@@if(context.type ==
+            'reset'){reset}@@if(!context.type){button}" }
+        @@if(context.isDisabled){disabled}@@if(context.fancybox){data-fancybox}>
+        @@if(!context.icon_position_right) {
+            @@if(context.icon){
+                @@include('blocks/icons/@@icon.html')
+            }
+            @@if(context.img){
+                @@include('blocks/img/img.html', {
+                    "class": "img-cover",
+                    "picture": "@@img.picture",
+                    "src": "@@img.src",
+                    "contain": true,
+                    "width": "@@img.width",
+                    "height": "@@img.height",
+                    "alt": "@@img.alt"
+                })
+            }
+            @@if(context.sprite){
+                <svg class="icon">
+                    <use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+                </svg>
+            }
+        }
+        @@if(context.text){
+            <span class="btn__text">@@text</span>
+        }
+        @@if(context.dropdown){
+            @@include('blocks/dropdown/dropdown.html', {
+            "class": "@@dropdownClass"
+            })
+        }
+        @@if(context.icon_position_right){
+            @@if(context.icon){
+                @@include('blocks/icons/@@icon.html')
+            }
+            @@if(context.sprite){
+                <svg class="icon">
+                    <use xlink:href="assets/images/sprite.svg#@@sprite"></use>
+                </svg>
+            }
+        }
+	</@@if(!context.href){button}@@if(context.href){a}>
+}

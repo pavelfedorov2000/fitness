@@ -16,7 +16,7 @@
         overflow-y: auto;
 
         @media (max-width: 1024px) {
-            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+            grid-template-columns: var(--container-padding) 1fr var(--container-padding);
         }
 
         @media (min-width: 1025px) {
@@ -50,7 +50,7 @@
 
         &::-webkit-scrollbar {
             width: 0.8rem;
-            background-color: #fff;
+            background-color: var(--white);
         }
 
         &::-webkit-scrollbar-thumb {
@@ -120,7 +120,7 @@
         grid-template-columns: var(--gap) 1fr var(--gap);
 
         @media (max-width: 1024px) {
-            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+            grid-template-columns: var(--container-padding) 1fr var(--container-padding);
         }
 
         @media (min-width: 1025px) {
@@ -149,7 +149,7 @@
         padding: var(--offset-l) var(--offset-xl);
 
         @media (max-width: 1024px) {
-            @include padding-x(var(--mob-padding));
+            @include padding-x(var(--container-padding));
         }
 
         @media (min-width: 768px) {

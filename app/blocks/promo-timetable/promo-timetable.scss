@@ -33,7 +33,7 @@
         grid-template-columns: var(--img--offset) 1fr calc(var(--title) - var(--offset-xls)) var(--offset-xls) calc(
                 var(--text) - var(--offset-xls)
             );
-        grid-template-rows: repeat(2, var(--header-height)) max-content 7.9rem max-content 1fr var(--select-height-xl) var(
+        grid-template-rows: repeat(2, var(--header-height)) max-content 7.9rem max-content 1fr var(--select-height_xl) var(
                 --pb
             );
 
@@ -54,7 +54,7 @@
 
         @media (max-width: 1024px) {
             padding-top: var(--header-height);
-            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+            grid-template-columns: var(--container-padding) 1fr var(--container-padding);
             grid-template-rows: var(--offset-m) max-content var(--offset-m) max-content 3.4rem var(--offset-xl) max-content 2rem max-content var(
                     --offset-xl
                 ) max-content;
@@ -90,7 +90,7 @@
         @extend .title;
         font-size: 8rem;
         line-height: 7.7rem;
-        color: #fff;
+        color: var(--white);
 
         @media (max-width: 1024px) {
             grid-row: 7 / 8;
@@ -122,7 +122,7 @@
     &__descr {
         @extend .title;
         @extend %text-26;
-        color: #fff;
+        color: var(--white);
 
         @media (max-width: 1024px) {
             grid-row: 9 / 10;
@@ -166,7 +166,7 @@
         .select__title {
             @media (max-width: 1024px) {
                 height: var(--input-height);
-                border: $border;
+                border: var(--border);
             }
         }
     }

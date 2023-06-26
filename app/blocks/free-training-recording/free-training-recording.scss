@@ -5,7 +5,7 @@
 
     @media (max-width: 1024px) {
         @include padding-y(4rem);
-        border-width: var(--mob-padding);
+        border-width: var(--container-padding);
     }
 
     @media (min-width: 1025px) {
@@ -15,14 +15,10 @@
         background-repeat: no-repeat;
     }
 
-    /* @media (max-width: 1024px) {
-        padding: var(--offset-xls) calc(var(--offset-l) - var(--offset-xs));
-    } */
-
     &__container {
         @media (max-width: 1024px) {
             grid-template-columns: unset;
-            @include padding-x(calc(var(--offset-l) - var(--mob-padding)));
+            @include padding-x(calc(var(--offset-l) - var(--container-padding)));
         }
     }
 

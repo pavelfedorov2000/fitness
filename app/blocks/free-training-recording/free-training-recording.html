@@ -1,5 +1,4 @@
-<aside id="free-training-recording"
-       class="free-training-recording@@if(context.swiper){ swiper-slide}">
+<aside id="free-training-recording" class="free-training-recording@@if(context.swiper){ swiper-slide}">
     <div class="container free-training-recording__container">
         <div class="section-body">
             <h2 class="section-title free-training-recording__title">
@@ -14,8 +13,8 @@
                 <form action="#"
                       class="form-block__form free-training-recording__form">
                     @@include('blocks/select-club/select-club.html', {
-                    "class": "form-block",
-                    "bg": "light-blue"
+                        "class": "form-block",
+                        "bg": "light-blue"
                     })
                     <input class="input form-block__input form-block__input--name input--style_bg-light-blue"
                            name="name"
@@ -26,18 +25,21 @@
                            name="phone"
                            placeholder="Телефон"
                            required>
-                    <button class="btn form-block__btn btn--style_bg-black"
-                            type="submit">Записаться</button>
+                    @@include("blocks/button/button.html", {
+                        "type": "submit",
+                        "style": "bg-black",
+                        "class": "form-block__btn",
+                        "text": "Записаться",
+                    })
                 </form>
                 <p class="form-block__form-agree form-agree">
                     Отправляя заявку вы соглашаетесь с&nbsp;условиями обработки персональных&nbsp;данных.
                 </p>
                 <div class="form-block__contacts contacts">
                     @@include('blocks/messangers/messangers.html', {
-                    "class": "form-block"
+                        "class": "form-block"
                     })
-                    <a href="tel:+74959467600"
-                       class="contact form-block__contact">+7 495 946-76-00</a>
+                    <a href="tel:+74959467600" class="contact form-block__contact">+7 495 946-76-00</a>
                 </div>
             </div>
         </div>

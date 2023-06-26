@@ -3,8 +3,8 @@
     --pb: 10.4rem;
 
     @media (min-width: 1025px) {
-        min-height: var(--section-mh);
-        color: #fff;
+        min-height: var(--section-height);
+        color: var(--white);
     }
 
     @media (max-width: 1024px) {
@@ -88,7 +88,7 @@
         }
 
         @media (min-width: 1025px) {
-            height: var(--section-mh);
+            height: var(--section-height);
         }
     }
 }

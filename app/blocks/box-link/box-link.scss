@@ -9,7 +9,7 @@
     background-color: var(--yellow);
     color: var(--black);
     text-align: left;
-    transition: $transition all;
+    transition: var(--transition) all;
 
     @media (min-width: 768px) {
         width: var(--gap);

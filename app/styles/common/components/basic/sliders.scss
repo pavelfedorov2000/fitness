@@ -12,7 +12,7 @@
     height: var(--nav);
     padding-right: var(--offset-s);
     background-color: var(--black);
-    color: #fff;
+    color: var(--white);
 
     @media (max-width: 1024px) {
         grid-template-columns: calc(var(--nav) * 2) 1fr max-content var(--proressbar-width) max-content;
@@ -28,7 +28,7 @@
         @extend %grid-center;
         width: var(--nav);
         height: var(--nav);
-        transition: $transition background-color;
+        transition: var(--transition) background-color;
 
         /* &:focus,
         &:active {
@@ -54,7 +54,7 @@
         top: 0;
         bottom: 0;
         left: 0;
-        background-color: #fff;
+        background-color: var(--white);
     }
 
     &__counter {
@@ -74,7 +74,7 @@
     &--style {
         &_bg {
             &-white {
-                background-color: #fff;
+                background-color: var(--white);
                 color: var(--black);
 
                 #{$this} {
@@ -93,16 +93,16 @@
     }
 
     &--brs {
-        border-radius: $brs;
+        border-radius: var(--border-radius);
 
         #{$this} {
             &__arrow {
                 &--prev {
-                    border-radius: $brs 0 0 $brs;
+                    border-radius: var(--border-radius) 0 0 var(--border-radius);
                 }
 
                 &--next {
-                    border-radius: 0 $brs $brs 0;
+                    border-radius: 0 var(--border-radius) var(--border-radius) 0;
                 }
             }
         }
@@ -130,7 +130,7 @@
     &__item {
         max-width: 21rem;
         font-weight: 700;
-        color: #fff;
+        color: var(--white);
 
         &.active {
             color: var(--black);
@@ -152,7 +152,7 @@
     &__item-num {
         @extend .label;
         background-color: transparent;
-        color: #fff;
+        color: var(--white);
         padding: 0;
     }
 

@@ -4,11 +4,11 @@
 
 	&__item {
 		height: var(--offset-xls);
-		transition: $transition box-shadow;
+		transition: var(--transition) box-shadow;
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: $bsh;
+				box-shadow: var(--shadow);
 			}
 		}
 

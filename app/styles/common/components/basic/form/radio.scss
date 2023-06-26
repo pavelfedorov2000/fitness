@@ -1,4 +1,3 @@
-// ===================== RADIO ===================== //
 .radio-box {
     width: 1px;
     height: 1px;
@@ -15,10 +14,9 @@
 }
 
 .radio-box:checked + .radio-style:before {
-    @extend %pos-center-xy;
+    @include position-center-xy;
     content: '';
     width: var(--offset-xxs);
     height: var(--offset-xxs);
     border-radius: 50%;
-    position: absolute;
 }

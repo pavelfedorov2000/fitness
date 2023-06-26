@@ -17,15 +17,14 @@
 .scroll-btn {
     $this: &;
 
-    display: none;
-    place-items: center;
+    @extend %grid-center;
     align-content: center;
     background-color: var(--black);
 
     &__arrow {
         width: var(--offset-m);
         height: var(--offset-m);
-        fill: #fff;
+        fill: var(--white);
         animation-name: scroll-btn;
         animation-duration: 2s;
         animation-iteration-count: infinite;

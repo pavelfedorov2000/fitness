@@ -2,7 +2,7 @@
     position: relative;
 
     @media (min-width: 1025px) {
-        @include padding-y(var(--section-padding-xl));
+        @include padding-y(var(--section-padding_xl));
         background-image: url(../images/elements/services-more.svg);
         background-size: 155.2rem 45.5rem;
         background-position: calc(100% - var(--section-padding)) var(--offset-xxl);
@@ -77,7 +77,7 @@
 
     &__content {
         @media (max-width: 1024px) {
-            @include padding-x(var(--mob-padding));
+            @include padding-x(var(--container-padding));
         }
     }
 
@@ -96,7 +96,7 @@
 
     &.splide__slide {
         @media (min-width: 1025px) {
-            transition: $transition padding-top;
+            transition: var(--transition) padding-top;
 
             &.is-next {
                 padding-top: calc(8.4rem + var(--offset-xxl));

@@ -17,6 +17,5 @@
     content: '';
     width: var(--offset-xxs);
     height: var(--offset-xxs);
-    position: absolute;
-    @extend %pos-center-xy;
+    @include position-center-xy;
 }

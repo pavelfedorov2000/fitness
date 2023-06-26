@@ -1,6 +1,6 @@
 .promo-marquee {
     @extend %text-64;
-    @include border-text(rgba(#fff, 0.8), transparent);
+    @include border-text(rgba(var(--color-white-rgb), 0.8), transparent);
     height: 100vh;
 
     @media (max-width: 1024px) {
@@ -10,7 +10,6 @@
 
     @media (max-width: 767px) {
         height: auto;
-        //height: calc(100vh - var(--header-height) - var(--pt) - var(--pb) - 6rem - 8rem);
         font-size: 2rem;
         line-height: 2.8rem;
     }
@@ -57,7 +56,7 @@
         animation: marquee 7s linear infinite;
 
         @media (max-width: 767px) {
-            margin: var(--mob-padding) 0;
+            margin: var(--offset-xs) 0;
         }
     }
 }
@@ -95,18 +94,18 @@
     }
 
     p {
-        display: flex;
         @extend .section-title;
-        margin: 0 var(--offset-xxs);
-        white-space: nowrap;
         @include border-text(var(--gray), transparent);
+        display: flex;
+        @include margin-x(var(--offset-xxs));
+        white-space: nowrap;
 
         span {
+            @include margin-x(var(--offset-xxs));
             -webkit-text-fill-color: initial;
             -webkit-text-stroke-width: initial;
             -webkit-text-stroke-color: initial;
             color: var(--yellow);
-            margin: 0 var(--offset-xxs);
         }
     }
 

@@ -2,7 +2,7 @@
     display: grid;
     position: relative;
     background-color: var(--black);
-    color: #fff;
+    color: var(--white);
 
     @media(max-width: 1024px) {
         min-height: 100vh;

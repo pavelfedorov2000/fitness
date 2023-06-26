@@ -14,11 +14,11 @@
         '. coach . arrow arrow'
     ;
     min-height: 17.2rem;
-    transition: $transition box-shadow;
+    transition: var(--transition) box-shadow;
 
     @media (any-hover: hover) {
         &:hover {
-            box-shadow: $bsh;
+            box-shadow: var(--shadow);
 
             .arrow-btn {
                 background-color: var(--yellow);
@@ -106,11 +106,11 @@
 
     &.business-class,
     &.children {
-        color: #fff;
+        color: var(--white);
 
         #{$this} {
             &__place {
-                color: #fff;
+                color: var(--white);
             }
         }
     }

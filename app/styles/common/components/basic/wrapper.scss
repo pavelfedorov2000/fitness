@@ -11,7 +11,7 @@
 			&__logo-img {
 				path {
 					&:last-child {
-						fill: #fff;
+						fill: var(--white);
 					}
 				}
 			}
@@ -25,7 +25,7 @@
 					&__nav-link {
 						@media (any-hover: hover) {
 							&:hover {
-								color: #fff;
+								color: var(--white);
 							}
 						}
 					}
@@ -57,7 +57,7 @@
 					&__logo-img {
 						path {
 							&:first-child {
-								fill: #fff;
+								fill: var(--white);
 
 								@media(max-width: 1024px) {
 									fill: var(--black);
@@ -68,7 +68,7 @@
 				}
 
 				.logo__text {
-					color: #fff;
+					color: var(--white);
 				}
 			}
 		}

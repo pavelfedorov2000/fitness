@@ -23,8 +23,7 @@
 
         &::before {
             content: '';
-            position: absolute;
-            @extend %pos-center-xy;
+            @include position-center-xy;
             width: 119.2rem;
             height: 55rem;
             background-image: url(../images/elements/coach-goals.svg);
@@ -49,8 +48,7 @@
 
         &::after {
             content: '';
-            position: absolute;
-            @extend %pos-center-x;
+            @include position-center-x;
             bottom: 0;
             width: 8rem;
             height: 0.2rem;
@@ -91,7 +89,7 @@
         max-width: 56rem;
 
         &:not(:last-child) {
-            margin-bottom: var(--section-padding-xl);
+            margin-bottom: var(--section-padding_xl);
 
             @media (max-width: 1024px) {
                 margin-bottom: 5.3rem;

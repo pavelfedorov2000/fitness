@@ -5,23 +5,23 @@
         cursor: pointer;
         width: var(--header-height);
         height: var(--header-height);
-        background-color: #fff;
-        border: $border;
+        background-color: var(--white);
+        border: var(--border);
         display: grid;
         place-items: center;
         align-content: center;
-        transition: $transition background-color, $transition border-color;
+        transition: var(--transition) background-color, var(--transition) border-color;
     }
 
     .js {
         &-close {
             opacity: 0;
             transform: translateX(1rem);
-            transition: $transition transform, $transition opacity;
+            transition: var(--transition) transform, var(--transition) opacity;
         }
 
         &-open {
-            transition: $transition opacity;
+            transition: var(--transition) opacity;
         }
 
         &-close,
@@ -59,11 +59,11 @@
         width: 100%;
         height: calc(100% - var(--header-height));
         padding-bottom: var(--offset-xxl);
-        background-color: #fff;
+        background-color: var(--white);
         transition: 0.5s right;
         overflow: auto;
         @include row-grid(var(--offset-m));
-        grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+        grid-template-columns: var(--container-padding) 1fr var(--container-padding);
         grid-template-rows: repeat(3, max-content) 1fr max-content;
         grid-template-areas:
             'menu menu menu'
@@ -104,7 +104,7 @@
 
     &__apps {
         grid-area: apps;
-        column-gap: var(--mob-padding);
+        column-gap: var(--container-padding);
 
         @media (min-width: 768px) {
             grid-auto-columns: 14.2rem;

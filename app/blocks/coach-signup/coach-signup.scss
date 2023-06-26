@@ -1,6 +1,6 @@
 .coach-signup {
     background-color: var(--black);
-    color: #fff;
+    color: var(--white);
     position: relative;
 
     @media(min-width: 1025px) {
@@ -14,7 +14,7 @@
         }
 
         &:after {
-            @include rect(top, right, 0, 0, var(--gap), #fff);
+            @include rect(top, right, 0, 0, var(--gap), var(--white));
         }
     }
 
@@ -39,7 +39,7 @@
         align-content: center;
         gap: var(--section-padding);
         position: relative;
-        padding: var(--offset-l) var(--mob-padding);
+        padding: var(--offset-l) var(--container-padding);
 
         @media(max-width: 767px) {
             gap: var(--offset-l);

@@ -5,7 +5,7 @@
     background-color: var(--yellow);
     font-weight: 500;
     text-transform: uppercase;
-    transition: $transition background-color;
+    transition: var(--transition) background-color;
 
     @media (any-hover: hover) {
         &:hover {
@@ -22,7 +22,7 @@
         &_bg {
             &-black {
                 background-color: var(--black);
-                color: #fff;
+                color: var(--white);
 
                 @media (any-hover: hover) {
                     &:hover {
@@ -37,12 +37,12 @@
             }
 
             &-white {
-                background-color: #fff;
+                background-color: var(--white);
 
                 @media (any-hover: hover) {
                     &:hover {
                         background-color: var(--black);
-                        color: #fff;
+                        color: var(--white);
                     }
                 }
             }

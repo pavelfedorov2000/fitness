@@ -46,7 +46,7 @@
 
             @media (min-width: 1025px) {
                 opacity: 0;
-                transition: $transition all;
+                transition: var(--transition) all;
 
                 /* &.is-prev {
                     margin-right: 0 !important;

@@ -115,7 +115,7 @@
     // .mobile-app__title
 
     &__title {
-        color: #fff;
+        color: var(--white);
 
         @media (min-width: 768px) {
             grid-area: title;

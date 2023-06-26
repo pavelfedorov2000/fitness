@@ -83,7 +83,7 @@
         margin-left: 0.7rem;
         position: relative;
         padding-left: calc(var(--offset-s) + 2.2rem);
-        transition: $transition color;
+        transition: var(--transition) color;
 
         @media (max-width: 767px) {
             font-size: 1.4rem;
@@ -94,10 +94,9 @@
         &::before,
         &::after {
             content: '';
-            position: absolute;
-            @extend %pos-center-y;
+            @include position-center-y;
             background-color: var(--gray);
-            transition: $transition all;
+            transition: var(--transition) all;
         }
 
         &::before {
@@ -116,7 +115,7 @@
             height: calc(var(--offset-s) - 0.2rem);
         }
 
-        &[aria-expanded='true'] {
+        &[aria-expanded="true"] {
             color: var(--black);
 
             &:before,

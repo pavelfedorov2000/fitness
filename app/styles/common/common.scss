@@ -24,11 +24,11 @@ html {
 body {
 	min-width: 320px;
 	font-style: normal;
-	font-family: $ff;
-	font-size: rem($fz);
+	font-family: var(--font-family);
+	font-size: var(--base-font);
 	line-height: 2.2rem;
 	font-weight: 400;
-	color: $color-default;
+	color: var(--color-default);
 	overflow-x: hidden;
 
 	@media (max-width: 767px) {
@@ -60,7 +60,7 @@ address {
 button,
 input,
 textarea {
-	font-family: $ff;
+	font-family: var(--font-family);
 }
 
 .timetable-page {
@@ -72,7 +72,7 @@ textarea {
 				&__logo-img {
 					path {
 						&:first-child {
-							fill: #fff;
+							fill: var(--white);
 
 							@media (max-width: 1024px) {
 								fill: var(--black);
@@ -83,7 +83,7 @@ textarea {
 			}
 
 			.logo__text {
-				color: rgba(#fff, 0.6);
+				color: rgba(var(--color-white-rgb), 0.6);
 			}
 		}
 	}
@@ -99,7 +99,7 @@ textarea {
 	grid-template-columns: repeat(2, var(--gap)) 1fr repeat(2, var(--gap));
 
 	@media (max-width: 1024px) {
-		grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+		grid-template-columns: var(--container-padding) 1fr var(--container-padding);
 	}
 }
 

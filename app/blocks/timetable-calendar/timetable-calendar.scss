@@ -29,8 +29,8 @@
     &__tape {
         display: flex;
         justify-content: center;
-        background-color: #fff;
-        border: $border;
+        background-color: var(--white);
+        border: var(--border);
         grid-column: 1 / -1;
 
         .swiper-button {
@@ -45,7 +45,7 @@
                     flex-shrink: 0;
                     width: 2rem;
                     height: 2rem;
-                    transition: $transition fill;
+                    transition: var(--transition) fill;
                 }
             }
 

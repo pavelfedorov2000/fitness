@@ -55,8 +55,8 @@
         @media (max-width: 1024px) {
             top: auto;
             bottom: 0;
-            left: var(--mob-padding);
-            right: var(--mob-padding);
+            left: var(--container-padding);
+            right: var(--container-padding);
         }
     }
 
@@ -65,7 +65,7 @@
 
         @media (max-width: 1024px) {
             width: 100vw;
-            margin-left: calc(var(--mob-padding) * (-1));
+            margin-left: calc(var(--container-padding) * (-1));
             padding-bottom: calc(var(--offset-m) + var(--offset-xl));
         }
     }

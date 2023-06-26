@@ -2,9 +2,9 @@
     @include padding-y(var(--offset-xxl));
 
     &__container {
-        width: calc(126.1rem + var(--mob-padding) * 2);
+        width: calc(126.1rem + var(--container-padding) * 2);
         max-width: 100%;
-        @include padding-x(var(--mob-padding));
+        @include padding-x(var(--container-padding));
         margin: 0 auto;
     }
 
@@ -61,7 +61,7 @@
     padding: var(--offset-l);
     @extend %flex-col;
     justify-content: space-between;
-    transition: $transition box-shadow;
+    transition: var(--transition) box-shadow;
     // .color-item__title
 
     &__title {
@@ -130,7 +130,7 @@
             }
 
             &-white {
-                background-color: #fff;
+                background-color: var(--white);
                 border: 0.1rem solid #dfdfdf;
             }
 
@@ -157,14 +157,14 @@
             &-gray,
             &-green,
             &-red {
-                color: #fff;
+                color: var(--white);
             }
         }
     }
 
     @media (any-hover: hover) {
         &:hover {
-            box-shadow: $bsh;
+            box-shadow: var(--shadow);
         }
     }
 }

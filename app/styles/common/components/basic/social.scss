@@ -9,16 +9,16 @@
     &__item {
         width: var(--offset-xls);
         height: var(--offset-xls);
-        background-color: #fff;
+        background-color: var(--white);
         border: 0.1rem solid var(--dark);
-        transition: $transition background-color, $transition border-color;
+        transition: var(--transition) background-color, var(--transition) border-color;
 
         svg {
             width: var(--offset-s);
             height: var(--offset-s);
 
             path {
-                transition: $transition all;
+                transition: var(--transition) all;
             }
         }
 
@@ -26,12 +26,12 @@
             &:hover {
                 svg {
                     path {
-                        fill: #fff;
+                        fill: var(--white);
                     }
                 }
 
                 #{$this}__num {
-                    color: #fff;
+                    color: var(--white);
                 }
             }
         }
@@ -39,8 +39,8 @@
         &--style {
             &_bg {
                 &-white {
-                    background-color: #fff;
-                    border-color: #fff;
+                    background-color: var(--white);
+                    border-color: var(--white);
                 }
             }
         }
@@ -50,7 +50,7 @@
         font-size: 1.1rem;
         line-height: 1;
         color: var(--dark-gray);
-        transition: $transition color;
+        transition: var(--transition) color;
     }
 
     // .social__item--vk
@@ -103,7 +103,7 @@
                     border-color: var(--fb);
 
                     svg path {
-                        stroke: #fff;
+                        stroke: var(--white);
                     }
                 }
             }

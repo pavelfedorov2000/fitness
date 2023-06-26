@@ -42,7 +42,7 @@
         align-items: flex-start;
         position: relative;
         z-index: 2;
-        color: #fff;
+        color: var(--white);
         padding: var(--offset-m);
 
         > * {
@@ -57,7 +57,7 @@
     &__title {
         @extend .title;
         @extend %text-20;
-        text-shadow: $bsh;
+        text-shadow: var(--shadow);
         max-width: 29.6rem;
         margin-top: auto;
     }

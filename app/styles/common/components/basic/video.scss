@@ -23,8 +23,7 @@
 
             #{$this} {
                 &__box {
-                    position: absolute;
-                    @extend %pos-center-xy;
+                    @include position-center-xy;
                 }
             }
         }
@@ -173,7 +172,7 @@
 
         &--white {
             @media (min-width: 1025px) {
-                color: #fff;
+                color: var(--white);
             }
         }
 
@@ -187,7 +186,7 @@
 
 .player-circle-wrap {
     @extend %grid-center;
-    border: 0.1rem solid #fff;
+    border: 0.1rem solid var(--white);
     border-radius: 50%;
 }
 

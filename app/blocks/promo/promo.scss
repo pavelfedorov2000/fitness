@@ -21,7 +21,7 @@
             bottom: var(--gap);
             left: calc(var(--gap) - var(--line-width));
             width: var(--line-width);
-            background-color: rgba(#fff, 0.3);
+            background-color: rgba(var(--color-white-rgb), 0.3);
         }
     }
 
@@ -45,7 +45,7 @@
     // .promo__content
 
     &__content {
-        color: #fff;
+        color: var(--white);
         display: grid;
         grid-template-columns: 1fr var(--gap);
         grid-template-areas:
@@ -62,7 +62,7 @@
             grid-template-rows:
                 calc(var(--header-height) + var(--pt)) max-content 3rem minmax(var(--gap), max-content) minmax(3rem,
                     1fr) max-content var(--pb);
-            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding) max-content var(--mob-padding);
+            grid-template-columns: var(--container-padding) 1fr var(--container-padding) max-content var(--container-padding);
             grid-template-areas:
                 '. . . . .'
                 '. title . marquee .'
@@ -76,7 +76,7 @@
         @media (max-width: 767px) {
             min-height: 100%;
             grid-template-rows: calc(var(--header-height) + var(--pt)) max-content 1fr max-content 6rem max-content var(--pb);
-            grid-template-columns: var(--mob-padding) 1fr max-content calc(var(--offset-xxs) / 2) var(--offset-xxs);
+            grid-template-columns: var(--container-padding) 1fr max-content calc(var(--offset-xxs) / 2) var(--offset-xxs);
             grid-template-areas:
                 '. . . . .'
                 '. title marquee marquee .'

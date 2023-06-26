@@ -1,7 +1,7 @@
 .success-stories-section {
     position: relative;
     background-color: var(--black);
-    color: #fff;
+    color: var(--white);
 
     @media (min-width: 1025px) {
         &:before {
@@ -41,7 +41,7 @@
 
         @media (max-width: 1024px) {
             margin-bottom: 2rem;
-            @include padding-x(var(--mob-padding));
+            @include padding-x(var(--container-padding));
         }
 
         > * {
@@ -73,7 +73,7 @@
 
     &__title {
         span {
-            @include border-text(#fff, transparent);
+            @include border-text(var(--white), transparent);
         }
     }
 
@@ -132,19 +132,17 @@
             justify-items: center;
             align-items: flex-end;
             padding-bottom: 7.2rem;
-            border-left: 0.1rem solid rgba(#fff, 0.1);
+            border-left: 0.1rem solid rgba(var(--color-white-rgb), 0.1);
             position: relative;
         }
 
         &::before {
-            @extend %pos-center-x;
             @extend %bg-contain;
         }
 
         @media (min-width: 1025px) {
             &::before {
                 content: '';
-                position: absolute;
                 z-index: 1;
                 top: 4.3rem;
                 width: 47.9rem;
@@ -199,6 +197,6 @@
     // .success-stories__form-agree
 
     &__form-agree {
-        color: rgba(#fff, 0.7);
+        color: rgba(var(--color-white-rgb), 0.7);
     }
 }

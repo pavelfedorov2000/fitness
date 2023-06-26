@@ -35,8 +35,8 @@
 			position: relative;
 			padding: var(--offset-l) 0 var(--offset-m);
 			background-color: var(--yellow);
-			@include margin-x(calc(var(--mob-padding) * (-1)));
-			@include padding-x(var(--mob-padding));
+			@include margin-x(calc(var(--container-padding) * (-1)));
+			@include padding-x(var(--container-padding));
 		}
 	}
 
@@ -57,11 +57,11 @@
 }
 
 .swiper-scrollbar {
-	background: #fff;
+	background: var(--white);
 
 	&-drag {
 		background: var(--black);
-		border-radius: $brs;
+		border-radius: var(--border-radius);
 	}
 }
 

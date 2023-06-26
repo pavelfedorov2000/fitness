@@ -8,13 +8,13 @@
 	z-index: 100;
 	@extend %vertical-align;
 	min-height: var(--header-height);
-	color: #fff;
+	color: var(--white);
 	padding: 2rem 0;
 
 	@media (max-width: 1024px) {
 		position: fixed;
-		border-bottom: $border;
-		padding: 0 0 0 var(--mob-padding);
+		border-bottom: var(--border);
+		padding: 0 0 0 var(--container-padding);
 	}
 
 	&.mob-fixed {
@@ -32,7 +32,7 @@
 		margin: 0 auto;
 
 		@media (min-width: 1025px) {
-			width: calc(var(--container) + var(--mob-padding) * 2);
+			width: calc(var(--container) + var(--container-padding) * 2);
 		}
 	}
 
@@ -67,7 +67,7 @@
 		color: var(--black);
 
 		@media(max-width: 1024px) {
-			background-color: #fff;
+			background-color: var(--white);
 		}
 
 		#{$this} {
@@ -106,7 +106,7 @@
 			&__nav-link {
 				span {
 					background-color: var(--black);
-					color: #fff;
+					color: var(--white);
 				}
 			}
 		}
@@ -127,8 +127,8 @@
 		@extend %text-10;
 		font-weight: 500;
 		text-transform: uppercase;
-		color: rgba(#fff, 0.5);
-		transition: $transition color;
+		color: rgba(var(--white-color-rgb), 0.5);
+		transition: var(--transition) color;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -150,8 +150,8 @@
 		margin-right: var(--offset-xxs);
 
 		path {
-			fill: rgba(#fff, 0.5);
-			transition: $transition fill;
+			fill: rgba(var(--white), 0.5);
+			transition: var(--transition) fill;
 		}
 	}
 
@@ -169,7 +169,7 @@
 		@extend %text-12;
 		font-weight: 500;
 		text-transform: uppercase;
-		transition: $transition color;
+		transition: var(--transition) color;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -180,8 +180,8 @@
 		span {
 			margin-left: var(--offset-xxs);
 			padding: 0.2rem 0.6rem;
-			background-color: #fff;
-			border-radius: $brs;
+			background-color: var(--white);
+			border-radius: var(--border-radius);
 			color: var(--black);
 		}
 	}

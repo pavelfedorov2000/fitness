@@ -39,7 +39,7 @@
         }
 
         @media (max-width: 1024px) {
-            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+            grid-template-columns: var(--container-padding) 1fr var(--container-padding);
         }
     }
 

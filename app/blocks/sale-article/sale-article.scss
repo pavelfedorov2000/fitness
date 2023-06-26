@@ -39,7 +39,7 @@
 
 		@media(max-width: 1024px) {
 			row-gap: var(--offset-m);
-			@include padding-x(var(--mob-padding));
+			@include padding-x(var(--container-padding));
 		}
 
 		@media(min-width: 1025px) {

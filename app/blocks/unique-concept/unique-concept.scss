@@ -36,8 +36,8 @@
 
         > * {
             @media (max-width: 1024px) {
-                width: calc(100vw - var(--mob-padding));
-                padding-right: var(--mob-padding);
+                width: calc(100vw - var(--container-padding));
+                padding-right: var(--container-padding);
             }
         }
     }
@@ -118,7 +118,7 @@
     &__video-body {
         @media (max-width: 1024px) {
             width: 100vw;
-            margin-left: calc(var(--mob-padding) * (-1));
+            margin-left: calc(var(--container-padding) * (-1));
         }
 
         @media (max-width: 500px) {

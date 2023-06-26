@@ -51,12 +51,12 @@
 			'. . .'
 			'client client .'
 		;
-		color: #fff;
-		text-shadow: $bsh;
+		color: var(--white);
+		text-shadow: var(--shadow);
 
 		@media(max-width: 767px) {
 			grid-template-rows: var(--offset-s) max-content 1fr max-content;
-			grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+			grid-template-columns: var(--container-padding) 1fr var(--container-padding);
 		}
 	}
 
@@ -75,7 +75,7 @@
 		@media(max-width: 767px) {
 			font-size: 1.5rem;
 			line-height: 2.2rem;
-			padding-top: calc(var(--mob-padding) + var(--offset-m));
+			padding-top: calc(var(--container-padding) + var(--offset-m));
 		}
 
 		&::before {
@@ -104,7 +104,6 @@
 	// .client-review-card__player
 
 	&__player {
-		position: absolute;
-		@extend %pos-center-xy;
+		@include position-center-xy;
 	}
 }

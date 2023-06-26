@@ -10,7 +10,7 @@
         width: var(--offset-m);
         height: var(--offset-m);
         fill: var(--black);
-        transition: $transition fill;
+        transition: var(--transition) fill;
 
         @media (max-width: 767px) {
             width: 2rem;

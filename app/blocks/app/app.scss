@@ -7,7 +7,7 @@
     display: grid;
 
     @media (max-width: 1024px) {
-        padding: var(--offset-l) var(--mob-padding);
+        padding: var(--offset-l) var(--container-padding);
         row-gap: var(--offset-l);
     }
 

@@ -9,6 +9,7 @@
 
     &__text {
         display: none;
+        
         @media (min-width: 1025px) {
             display: block;
             font-size: 1rem;
@@ -16,7 +17,7 @@
             letter-spacing: 0.19em;
             text-transform: uppercase;
             font-weight: 500;
-            color: rgba(#fff, 0.6);
+            color: rgba(var(--color-white-rgb), 0.6);
         }
     }
 }

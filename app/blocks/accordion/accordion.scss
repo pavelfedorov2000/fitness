@@ -10,12 +10,12 @@
 
 	&-title {
 		position: relative;
-		padding: 1.4rem var(--mob-padding);
+		padding: 1.4rem var(--container-padding);
 		width: 100%;
 		font-size: 1.4rem;
 		line-height: 2rem;
 		text-align: left;
-		transition: $transition background-color;
+		transition: var(--transition) background-color;
 
 		@media(max-width: 1024px) {
 			font-size: 1.4rem;
@@ -27,12 +27,12 @@
 			content: '';
 			position: absolute;
 			top: 1.5rem;
-			right: var(--mob-padding);
+			right: var(--container-padding);
 			width: 2rem;
 			height: 2rem;
 			background-image: url(../images/icons/drop.svg);
 			@extend %bg-contain;
-			transition: $transition transform;
+			transition: var(--transition) transform;
 		}
 
 		&[aria-expanded="true"],
@@ -48,7 +48,7 @@
 	&-content {
 		display: none;
 		background-color: var(--light-blue);
-		padding: 0 var(--mob-padding) var(--offset-s);
+		padding: 0 var(--container-padding) var(--offset-s);
 
 		li {
 			&:not(:last-child) {
@@ -63,7 +63,7 @@
 
 	&-link {
 		@extend %text-13;
-		transition: $transition color;
+		transition: var(--transition) color;
 
 		@media (any-hover: hover) {
 			&:hover {

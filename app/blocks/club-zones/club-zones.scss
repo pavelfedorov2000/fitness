@@ -50,13 +50,13 @@
                     left: calc(var(--gap) * (-2));
                     width: calc(var(--gap) * 2);
                     height: 100%;
-                    background-color: #fff;
+                    background-color: var(--white);
                 }
             }
         }
 
         .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-            background: #fff;
+            background: var(--white);
         }
     }
 
@@ -89,7 +89,7 @@
 
     &__item {
         @media (min-width: 1025px) {
-            height: var(--section-mh);
+            height: var(--section-height);
         }
 
         @media (max-width: 1024px) {
@@ -125,7 +125,7 @@
         @media (max-width: 1024px) {
             display: flex;
             align-items: center;
-            padding: var(--offset-m) var(--mob-padding) 0;
+            padding: var(--offset-m) var(--container-padding) 0;
         }
 
         @media (max-width: 767px) {
@@ -135,7 +135,7 @@
 
         .label {
             white-space: nowrap;
-            margin-right: var(--mob-padding);
+            margin-right: var(--container-padding);
         }
     }
 }

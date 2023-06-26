@@ -3,7 +3,7 @@
 .promo-nav {
 
 	@media(max-width: 1024px) {
-		background-color: #fff;
+		background-color: var(--white);
 		color: var(--black);
 	}
 
@@ -18,7 +18,7 @@
 			justify-content: space-between;
 			align-items: center;
 			height: var(--arrow-btn);
-			padding: 0 var(--mob-padding);
+			@include padding-x(var(--container-padding));
 		}
 
 		svg {
@@ -49,9 +49,9 @@
 
 	&__link {
 		@extend %text-12;
-		color: #fff;
+		color: var(--white);
 		text-transform: uppercase;
-		transition: $transition color;
+		transition: var(--transition) color;
 
 		@media (any-hover: hover) {
 			&:hover {

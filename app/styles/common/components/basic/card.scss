@@ -12,7 +12,7 @@
 	background-color: var(--light-blue);
 	border: 0.1rem solid var(--light-blue);
 	min-height: 24.8rem;
-	transition: $transition all;
+	transition: var(--transition) all;
 
 	@media (max-width: 767px) {
 		min-height: 18.1rem;
@@ -20,7 +20,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: #fff;
+			background-color: var(--white);
 			border-color: var(--black);
 
 			#{$this} {
@@ -48,7 +48,7 @@
 		padding: var(--offset-m) var(--offset-m) 2.8rem;
 
 		@media(max-width: 767px) {
-			padding: var(--offset-s) var(--mob-padding) 2.8rem;
+			padding: var(--offset-s) var(--container-padding) 2.8rem;
 		}
 
 		>* {

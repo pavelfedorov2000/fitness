@@ -4,7 +4,7 @@
     position: relative;
 
     &:before {
-        @include rect(bottom, right, 0, 0, var(--gap), #fff);
+        @include rect(bottom, right, 0, 0, var(--gap), var(--white));
 
         @media (max-width: 1024px) {
             width: var(--section-padding);
@@ -14,7 +14,7 @@
 
     @media (min-width: 1025px) {
         &:after {
-            @include rect(top, right, 0, var(--gap), 100%, rgba(#fff, 0.5));
+            @include rect(top, right, 0, var(--gap), 100%, rgba(var(--white-color-rgb), 0.5));
             width: 0.1rem;
         }
     }
@@ -46,7 +46,7 @@
     &__content {
         @include padding-y(var(--section-padding));
         grid-row: 1 / 2;
-        color: #fff;
+        color: var(--white);
 
         @media (min-width: 1025px) {
             display: grid;

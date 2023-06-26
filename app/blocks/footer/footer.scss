@@ -9,7 +9,7 @@
 
 	&__container {
 		@media (max-width: 1024px) {
-			grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+			grid-template-columns: var(--container-padding) 1fr var(--container-padding);
 		}
 	}
 
@@ -62,8 +62,8 @@
 			border: 0.1rem solid var(--black);
 			border-top: none;
 			padding-right: 0;
-			margin-left: calc(var(--mob-padding) * (-1));
-			margin-right: calc(var(--mob-padding) * (-1));
+			margin-left: calc(var(--container-padding) * (-1));
+			margin-right: calc(var(--container-padding) * (-1));
 		}
 
 		&:not(:first-of-type) {
@@ -112,7 +112,7 @@
 		}
 
 		@media (max-width: 1024px) {
-			padding: 1.4rem var(--mob-padding);
+			padding: 1.4rem var(--container-padding);
 		}
 
 		@media (min-width: 1025px) {
@@ -139,7 +139,7 @@
 	&__link {
 		@extend %text-14;
 		color: var(--dark-gray);
-		transition: $transition color;
+		transition: var(--transition) color;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -291,7 +291,7 @@
 		dd {
 			margin-left: var(--offset-xxs);
 			font-weight: 500;
-			transition: $transition color;
+			transition: var(--transition) color;
 
 			@media (any-hover: hover) {
 				&:hover {

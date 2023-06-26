@@ -1,7 +1,7 @@
 .events-slider {
-    background-color: #fff;
-    border-top: $border;
-    border-bottom: $border;
+    background-color: var(--white);
+    border-top: var(--border);
+    border-bottom: var(--border);
     @include padding-x(6rem);
 
     // .events-slider__item
@@ -50,8 +50,7 @@
 
     .splide {
         &__arrow {
-            position: absolute;
-            @extend %pos-center-y;
+            @include position-center-y;
 
             &--prev {
                 left: 0;

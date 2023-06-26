@@ -4,7 +4,7 @@
 
     position: relative;
     display: grid;
-    grid-template-rows: var(--section-padding-xl) max-content 1fr max-content;
+    grid-template-rows: var(--section-padding_xl) max-content 1fr max-content;
 
     @media (max-width: 1024px) {
         grid-template-rows: var(--rating) calc(var(--map-h) - var(--rating)) max-content;
@@ -29,7 +29,7 @@
 
     &__map {
         grid-row: 1 / -1;
-        height: var(--section-mh);
+        height: var(--section-height);
 
         > * {
             height: 100% !important;
@@ -96,7 +96,7 @@
             display: block;
             grid-row: 1 / -1;
             grid-column: -2 / -1;
-            height: var(--section-mh);
+            height: var(--section-height);
         }
     }
 }

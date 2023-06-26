@@ -8,13 +8,13 @@
     justify-content: space-between;
 
     @media (min-width: 1025px) {
-        border-top: 0.1rem solid rgba(#fff, 0.1);
-        border-left: 0.1rem solid rgba(#fff, 0.1);
+        border-top: 0.1rem solid rgba(var(--color-white-rgb), 0.1);
+        border-left: 0.1rem solid rgba(var(--color-white-rgb), 0.1);
     }
 
     @media (max-width: 1024px) {
         height: 42.7rem;
-        padding: 0 var(--mob-padding) var(--offset-m);
+        padding: 0 var(--container-padding) var(--offset-m);
     }
 
     &::before {
@@ -73,8 +73,7 @@
     // .success-story__img
 
     &__img {
-        position: absolute;
-        @extend %pos-center-x;
+        @include position-center-x;
         bottom: 0;
         display: flex;
 
@@ -122,8 +121,7 @@
 
                 &::before {
                     content: '';
-                    position: absolute;
-                    @extend %pos-center-y;
+                    @include position-center-y;
                     left: 0rem;
                     width: var(--offset-m);
                     height: var(--offset-m);

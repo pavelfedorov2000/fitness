@@ -2,7 +2,7 @@
     $this: &;
 
     position: relative;
-    @include padding-y(var(--section-padding-xl));
+    @include padding-y(var(--section-padding_xl));
 
     @media(max-width: 1024px) {
         padding: var(--offset-xls) 0 var(--offset-xl);
@@ -46,7 +46,7 @@
         }
 
         @media(max-width: 1024px) {
-            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+            grid-template-columns: var(--container-padding) 1fr var(--container-padding);
             row-gap: var(--offset-s);
         }
 
@@ -98,7 +98,7 @@
                 width: var(--arrow-btn);
                 height: var(--arrow-btn);
                 background-color: var(--black);
-                transition: $transition background-color;
+                transition: var(--transition) background-color;
 
                 @media (any-hover: hover) {
                     &:hover {
@@ -193,12 +193,11 @@
     }
 
     &__player {
-        position: absolute;
-        @extend %pos-center-xy;
+        @include position-center-xy;
 
         @media(min-width: 1025px) {
             opacity: 0;
-            transition: $transition opacity;
+            transition: var(--transition) opacity;
         }
     }
 

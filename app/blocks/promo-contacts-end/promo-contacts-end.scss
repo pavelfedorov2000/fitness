@@ -3,7 +3,7 @@
 
     @media (min-width: 1025px) {
         &:before {
-            @include rect(top, right, 0, 0, var(--gap), #fff);
+            @include rect(top, right, 0, 0, var(--gap), var(--white));
         }
     }
 
@@ -37,6 +37,6 @@
     }
 
     .form-agree {
-        color: #fff;
+        color: var(--white);
     }
 }

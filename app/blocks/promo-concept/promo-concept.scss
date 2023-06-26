@@ -78,7 +78,7 @@
         @extend .title;
         @extend %text-48;
         line-height: 6.7rem;
-        color: #fff;
+        color: var(--white);
         grid-area: title;
 
         @media (max-width: 1024px) {
@@ -99,7 +99,7 @@
         @extend %grid-center;
         height: var(--video);
         border-radius: 50%;
-        border: 0.1rem solid #fff;
+        border: 0.1rem solid var(--white);
         position: relative;
 
         &::before {

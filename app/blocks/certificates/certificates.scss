@@ -1,5 +1,4 @@
 .certificates {
-
     position: relative;
     padding: var(--section-padding) 0 7.7rem;
 
@@ -32,7 +31,7 @@
 
         @media(max-width: 767px) {
             grid-column: unset;
-            grid-template-columns: var(--mob-padding) 1fr var(--mob-padding);
+            grid-template-columns: var(--container-padding) 1fr var(--container-padding);
         }
     }
 

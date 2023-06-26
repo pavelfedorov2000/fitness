@@ -17,7 +17,7 @@
 
     &__grid {
         @media (min-width: 1025px) {
-            grid-template-rows: var(--section-padding-xl) max-content var(--section-padding);
+            grid-template-rows: var(--section-padding_xl) max-content var(--section-padding);
         }
     }
 

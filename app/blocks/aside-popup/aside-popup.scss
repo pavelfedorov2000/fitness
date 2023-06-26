@@ -14,10 +14,10 @@
     top: 0;
     bottom: 0;
     z-index: 102;
-    background-color: #fff;
+    background-color: var(--white);
     height: 100%;
     opacity: 0;
-    transition: $transition all;
+    transition: var(--transition) all;
 
     @media (max-width: 1024px) {
         left: -250%;

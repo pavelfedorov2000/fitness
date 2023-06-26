@@ -3,7 +3,7 @@
     @extend %text-14;
     @include padding-x(1.6rem);
     height: var(--input-height);
-    background-color: #fff;
+    background-color: var(--white);
     color: var(--black);
 
     &--style {

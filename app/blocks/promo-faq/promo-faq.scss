@@ -2,7 +2,7 @@
     position: relative;
 
     @media (min-width: 1025px) {
-        border-bottom: $border;
+        border-bottom: var(--border);
         grid-template-rows: calc(var(--header-height) + var(--offset-xxl)) max-content var(--offset-xxxl);
     }
 
