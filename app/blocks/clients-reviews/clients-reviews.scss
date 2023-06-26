@@ -14,7 +14,7 @@
 
     @media (min-width: 1025px) {
         &:after {
-            @include rect(top, right, 0, var(--gap), 100%, rgba(var(--white-color-rgb), 0.5));
+            @include rect(top, right, 0, var(--gap), 100%, var(--white-opacity-50));
             width: 0.1rem;
         }
     }

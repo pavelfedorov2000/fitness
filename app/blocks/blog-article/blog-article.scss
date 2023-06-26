@@ -17,15 +17,7 @@
 
         @media (min-width: 1025px) {
             opacity: 0;
-            transition: 0.5s opacity;
-        }
-    }
-
-    // .blog-article__bg
-
-    &__bg {
-        img {
-            @extend %cover;
+            transition: var(--transition) opacity;
         }
     }
 

@@ -1,10 +1,11 @@
 <article class="events-section__content event-block@@if(context.active){ active}">
-	<div class="event-block__img">
-		<picture>
-			<source type="image/webp" srcset="@@src.webp">
-			<img src="@@src.jpg" alt="фото" width="556" height="528" loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "event-block__img",
+        "cover": true,
+        "src": "@@src",
+        "width": "556",
+        "height": "528",
+    })
 	<div class="event-block__content">
 		<div class="event-block__content-inner">
 			<h3 class="event-block__title title">
@@ -34,8 +35,16 @@
 					</dd>
 				</div>
 			</dl>
-			<a href="#" class="btn event-block__btn">Подробнее</a>
+			@@include("blocks/button/button.html", {
+                "href": "#",
+                "class": "event-block__btn",
+                "text": "Подробнее",
+            })
 		</div>
 	</div>
-	<a href="#" class="btn event-block__btn">Подробнее</a>
+	@@include("blocks/button/button.html", {
+        "href": "#",
+        "class": "event-block__btn",
+        "text": "Подробнее",
+    })
 </article>

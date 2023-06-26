@@ -1,11 +1,11 @@
 <section class="promo-contacts promo-contacts-start swiper-slide">
-	<div class="promo-bg">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/promo/promo-contacts.webp">
-			<img src="assets/images/content/promo/promo-contacts.jpg" alt="фото" width="1920" height="960"
-				loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "promo-bg",
+        "cover": true,
+        "src": "assets/images/content/promo/promo-contacts",
+        "width": "1920",
+        "height": "960",
+    })
 	<div class="promo-body promo-contacts-start__grid container">
 		@@include('blocks/scroll-btn/scroll-btn.html')
 		<div class="promo-contacts-start__content section-body">
@@ -53,9 +53,9 @@
 				</li>
 			</ul>
 			@@include('blocks/box-link/box-link.html', {
-			"href": "clubs.html",
-			"class": "promo-contacts-start__box-link",
-			"text": "Перейти на&nbsp;страницу клубов"
+                "href": "clubs.html",
+                "class": "promo-contacts-start__box-link",
+                "text": "Перейти на&nbsp;страницу клубов"
 			})
 		</div>
 		<div class="promo-marquee vertical-marquee promo-contacts-start__marquee">

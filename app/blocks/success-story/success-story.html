@@ -7,12 +7,13 @@
 				<sub>кг</sub>
 			</div>
 		</div>
-		<div class="success-story__img">
-			<picture>
-				<source type="image/webp" srcset="@@src.webp">
-				<img src="@@src.png" alt="фото" width="194" height="540" loading="lazy">
-			</picture>
-		</div>
+        @@include("blocks/img/img.html", {
+            "class": "success-story__img",
+            "contain": true,
+            "src": "@@src",
+            "width": "194",
+            "height": "540",
+        })
 		<div class="success-story__bottom">
 			<div class="success-story__transformation">
 				<div class="success-story__transformation-kg">

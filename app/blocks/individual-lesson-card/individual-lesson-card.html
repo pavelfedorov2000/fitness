@@ -5,11 +5,19 @@
 		consequat nec. Cras nibh metus, dapibus vitae aliquet sit amet, tincidunt vitae diam.
 	</p>
 	<p class="individual-lesson-card__info-text">Пробная тренировка бесплатная</p>
-	<div class="individual-lesson-card__img">
-		<picture>
-			<source type="image/webp" srcset="@@src.webp">
-			<img src="@@src.jpg" alt="фото" width="354" height="480" loading="lazy">
-		</picture>
-	</div>
-	<button class="btn individual-lesson-card__btn" data-popup="request-popup" type="button">Хочу попробовать</button>
+    @@include("blocks/img/img.html", {
+        "class": "individual-lesson-card__img",
+        "cover": true,
+        "src": "@@src",
+        "width": "354",
+        "height": "480",
+    })
+    @@include("blocks/button/button.html", {
+        "data": {
+            "attr": "popup",
+            "value": "request-popup"
+        },
+        "class": "individual-lesson-card__btn",
+        "text": "Хочу попробовать",
+    })
 </article>

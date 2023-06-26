@@ -22,7 +22,7 @@
 
         @media (min-width: 768px) {
             display: block;
-            width: var(--offset-xxxl);
+            width: var(--icon-size_xxxl);
         }
 
         img {
@@ -109,7 +109,7 @@
         display: grid;
         grid-template-columns: 1fr minmax(2.1rem, max-content);
         grid-template-rows: repeat(2, max-content);
-        gap: 0.2rem 2rem;
+        gap: var(--offset-xxxs) 2rem;
         grid-template-areas:
             'text text'
             'bar value';

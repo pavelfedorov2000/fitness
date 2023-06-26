@@ -1,9 +1,8 @@
-<section @@if(context.id){id="@@id" }
-	class="workout-section children-sections@@if(context.withoutTop){ workout-section--without-top}@@if(context.class){ @@class}">
+<section @@if(context.id){id="@@id" } class="workout-section children-sections@@if(context.withoutTop){ workout-section--without-top}@@if(context.class){ @@class}">
 	<div class="container children-sections__container">
 		<div class="section-body children-sections__body">
 			@@if(context.title) {
-			<h2 class="section-title children-sections__title">@@title</h2>
+			    <h2 class="section-title children-sections__title">@@title</h2>
 			}
 			@@include('blocks/children-sections/slider.html')
 		</div>

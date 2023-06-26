@@ -59,7 +59,7 @@
 
 	&__menu-col {
 		@media (max-width: 1024px) {
-			border: 0.1rem solid var(--black);
+			border: var(--border-black);
 			border-top: none;
 			padding-right: 0;
 			margin-left: calc(var(--container-padding) * (-1));
@@ -74,7 +74,7 @@
 
 		&--1 {
 			@media (max-width: 1024px) {
-				border-top: 0.1rem solid var(--black);
+				border-top: var(--border-black);
 			}
 
 			@media (min-width: 768px) {
@@ -112,7 +112,7 @@
 		}
 
 		@media (max-width: 1024px) {
-			padding: 1.4rem var(--container-padding);
+			padding: var(--offset-sx) var(--container-padding);
 		}
 
 		@media (min-width: 1025px) {
@@ -162,7 +162,7 @@
 
 	&__contacts {
 		display: grid;
-		gap: 1.4rem;
+		gap: var(--offset-sx);
 
 		@media (min-width: 768px) {
 			grid-area: contacts;
@@ -284,7 +284,7 @@
 			display: flex;
 
 			&:not(:last-child) {
-				margin-bottom: 0.2rem;
+				margin-bottom: var(--offset-xxxs);
 			}
 		}
 

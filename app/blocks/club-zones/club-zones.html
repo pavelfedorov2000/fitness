@@ -1,122 +1,93 @@
-<section id="club-zones"
-         class="club-zones@@if(context.class){ @@class}">
+<section id="club-zones" class="club-zones@@if(context.class){ @@class}">
     <div class="club-zones__inner container">
         <div class="swiper club-zones-slider club-zones__slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide club-zones-slider__item">
-                    <div class="club-zones-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/club-zones.webp">
-                            <img src="assets/images/content/club-zones.jpg"
-                                 alt="фото"
-                                 width="1920"
-                                 height="655"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "club-zones-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/club-zones",
+                        "width": "1920",
+                        "height": "655",
+                    })
                     <div class="club-zones-slider__item-title">
                         <span class="label label--style_bg-black">01</span>
                         Бассейн
                     </div>
                 </div>
                 <div class="swiper-slide club-zones-slider__item">
-                    <div class="club-zones-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/club-video.webp">
-                            <img src="assets/images/content/club-video.jpg"
-                                 alt="фото"
-                                 width="1920"
-                                 height="655"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "club-zones-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/club-video",
+                        "width": "1920",
+                        "height": "655",
+                    })
                     <div class="club-zones-slider__item-title">
                         <span class="label label--style_bg-black">02</span>
                         Зона отдыха
                     </div>
                 </div>
                 <div class="swiper-slide club-zones-slider__item">
-                    <div class="club-zones-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/club-photo.webp">
-                            <img src="assets/images/content/club-photo.jpg"
-                                 alt="фото"
-                                 width="1920"
-                                 height="655"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "club-zones-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/club-photo",
+                        "width": "1920",
+                        "height": "655",
+                    })
                     <div class="club-zones-slider__item-title">
                         <span class="label label--style_bg-black">03</span>
                         Тренажерный зал
                     </div>
                 </div>
                 <div class="swiper-slide club-zones-slider__item">
-                    <div class="club-zones-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/promo/promo-concept.webp">
-                            <img src="assets/images/content/promo/promo-concept.jpg"
-                                 alt="фото"
-                                 width="1920"
-                                 height="655"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "club-zones-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/promo/promo-concept",
+                        "width": "1920",
+                        "height": "655",
+                    })
                     <div class="club-zones-slider__item-title">
                         <span class="label label--style_bg-black">04</span>
                         Зона кардио
                     </div>
                 </div>
                 <div class="swiper-slide club-zones-slider__item">
-                    <div class="club-zones-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/promo/promo-contacts.webp">
-                            <img src="assets/images/content/promo/promo-contacts.jpg"
-                                 alt="фото"
-                                 width="1920"
-                                 height="655"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "club-zones-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/promo/promo-contacts",
+                        "width": "1920",
+                        "height": "655",
+                    })
                     <div class="club-zones-slider__item-title">
                         <span class="label label--style_bg-black">05</span>
                         Зал боевых искусств
                     </div>
                 </div>
                 <div class="swiper-slide club-zones-slider__item">
-                    <div class="club-zones-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/coach-reviews.webp">
-                            <img src="assets/images/content/coach-reviews.jpg"
-                                 alt="фото"
-                                 width="1920"
-                                 height="655"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "club-zones-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/coach-reviews",
+                        "width": "1920",
+                        "height": "655",
+                    })
                     <div class="club-zones-slider__item-title">
                         <span class="label label--style_bg-black">06</span>
                         Раздевалка и душевые
                     </div>
                 </div>
                 <div class="swiper-slide club-zones-slider__item">
-                    <div class="club-zones-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/success-story.webp">
-                            <img src="assets/images/content/success-story.jpg"
-                                 alt="фото"
-                                 width="1920"
-                                 height="655"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "club-zones-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/success-story",
+                        "width": "1920",
+                        "height": "655",
+                    })
                     <div class="club-zones-slider__item-title">
                         <span class="label label--style_bg-black">07</span>
                         Зал групповых программ

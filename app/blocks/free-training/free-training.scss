@@ -14,7 +14,7 @@
     --bg-width: 65.2rem;
     --decor-width: 47.5rem;
     --decor-height: 35.4rem;
-    --decor-top-offset: 1rem;
+    --decor-top-offset: var(--offset-x);
     --decor-left-offset: 0.5rem;
 
     position: relative;

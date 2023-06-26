@@ -6,54 +6,58 @@
                 <h2 class="section-title blog-section__title">Блог</h2>
             </div>
             <div class="blog-section__grid">
-                <a href="blog.html" class="btn blog-section__link-btn btn--with_border">читать весь блог</a>
+                @@include("blocks/button/button.html", {
+                    "href": "blog.html",
+                    "style": "link",
+                    "with": "border",
+                    "class": "blog-section__link-btn",
+                    "text": "Читать весь блог",
+                })
                 @@include('blocks/blog-section/slider.html')
                 <div class="blog-section__success">
                     @@loop('blocks/article-card/article-card.html', [{
-                    "bg": "ocean",
-                    "class": "blog-section__success-item",
-                    "date": {
-                    "datetime": "2020-09-08",
-                    "text": "08.09.2020"
-                    },
-                    "src": {
-                    "webp": "assets/images/content/blog/03.webp",
-                    "default": "assets/images/content/blog/03.png"
-                    },
-                    "label": {
-                    "text": "История успеха",
-                    "bg": "black"
-                    },
-                    "kg": "-14",
-                    "title": "Баланова Елена"
+                        "bg": "ocean",
+                        "class": "blog-section__success-item",
+                        "date": {
+                        "datetime": "2020-09-08",
+                        "text": "08.09.2020"
+                        },
+                        "src": "assets/images/content/blog/03",
+                        "label": {
+                            "text": "История успеха",
+                            "bg": "black"
+                        },
+                        "kg": "-14",
+                        "title": "Баланова Елена"
                     }, {
-                    "bg": "ocean",
-                    "class": "blog-section__success-item",
-                    "date": {
-                    "datetime": "2020-09-08",
-                    "text": "08.09.2020"
-                    },
-                    "src": {
-                    "webp": "assets/images/content/blog/03.webp",
-                    "default": "assets/images/content/blog/03.png"
-                    },
-                    "format": "png",
-                    "label": {
-                    "text": "История успеха",
-                    "bg": "black"
-                    },
-                    "kg": "-14",
-                    "title": "Баланова Елена"
+                        "bg": "ocean",
+                        "class": "blog-section__success-item",
+                        "date": {
+                            "datetime": "2020-09-08",
+                            "text": "08.09.2020"
+                        },
+                        "src": "assets/images/content/blog/03",
+                        "format": "png",
+                        "label": {
+                            "text": "История успеха",
+                            "bg": "black"
+                        },
+                        "kg": "-14",
+                        "title": "Баланова Елена"
                     }])
                 </div>
-                <button class="btn blog-section__more btn--style_bg-black" type="button">Показать еще</button>
+                @@include("blocks/button/button.html", {
+                    "style": "bg-black",
+                    "class": "blog-section__more",
+                    "text": "Показать еще",
+                })
             </div>
         </div>
         @@include('blocks/aside-client/aside-client.html', {
-        "position": "right",
-        "class": "blog-section",
-        "name": "Екатерина Гарибальди.",
-        "src": "assets/images/content/aside-clients/woman"
+            "position": "right",
+            "class": "blog-section",
+            "name": "Екатерина Гарибальди.",
+            "src": "assets/images/content/aside-clients/woman"
         })
     </div>
 </section>

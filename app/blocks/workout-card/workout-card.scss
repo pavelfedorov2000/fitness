@@ -67,9 +67,9 @@
         &::before {
             content: '';
             @include position-center-y;
-            left: 0rem;
-            width: var(--offset-l);
-            height: var(--offset-l);
+            left: 0;
+            width: var(--icon-size_l);
+            height: var(--icon-size_l);
             background-image: url(../images/icons/ico-kid.svg);
             @extend %bg-contain;
         }
@@ -263,7 +263,7 @@
 .workout-timetable {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem 4rem;
+    gap: var(--offset-x) 4rem;
 
     @media(max-width: 1024px) {
         gap: var(--offset-s) var(--offset-l);

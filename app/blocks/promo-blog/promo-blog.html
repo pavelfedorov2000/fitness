@@ -7,17 +7,18 @@
 				lobortis ut mauris ac, ultrices pretium diam. Quisque suscipit commodo quam et scelerisque.
 			</p>
 			@@include('blocks/blog-article/blog-article.html', {
-			"class": "promo-blog__article"
+			    "class": "promo-blog__article"
 			})
 		</div>
-		<div class="promo-blog__aside-img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/promo/promo-aside.webp">
-				<img src="assets/images/content/promo/promo-aside.jpg" alt="фото" width="20" height="20" loading="lazy">
-			</picture>
-		</div>
+        @@include("blocks/img/img.html", {
+            "class": "promo-blog__aside-img",
+            "cover": true,
+            "src": "assets/images/content/promo/promo-aside",
+            "width": "200",
+            "height": "200",
+        })
 	</div>
 	@@include('blocks/marquee/promo-marquee.html', {
-	"class": "promo-blog"
+	    "class": "promo-blog"
 	})
 </section>

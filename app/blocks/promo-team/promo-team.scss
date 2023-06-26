@@ -20,7 +20,7 @@
 
     @media (min-width: 1025px) {
         grid-template-rows:
-            var(--header-height) var(--offset-xxl) calc(var(--gap) - var(--header-height) - var(--offset-xxl)) max-content 1rem max-content var(--offset-xxl) repeat(2, var(--input-height));
+            var(--header-height) var(--offset-xxl) calc(var(--gap) - var(--header-height) - var(--offset-xxl)) max-content var(--offset-x) max-content var(--offset-xxl) repeat(2, var(--input-height));
         grid-template-areas:
             'aside . . . . . . .'
             'aside . . . . img img .'
@@ -84,10 +84,6 @@
             display: block;
             grid-area: aside;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     // .promo-team__title
@@ -150,10 +146,6 @@
 
         @media (max-width: 1024px) {
             grid-column: 1 / -1;
-        }
-
-        img {
-            @extend %cover;
         }
     }
 }

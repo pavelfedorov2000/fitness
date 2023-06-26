@@ -1,39 +1,39 @@
-<article
-	class="article-card@@if(context.class){ @@class}@@if(context.bg){ article-card--style_bg-@@bg}@@if(context.sale){ sale}">
+<article class="article-card@@if(context.class){ @@class}@@if(context.bg){ article-card--style_bg-@@bg}@@if(context.sale){ sale}">
 	@@if(context.date) {
-	<time class="date article-card__date" datetime="@@date.datetime">@@date.text</time>
+	    <time class="date article-card__date" datetime="@@date.datetime">@@date.text</time>
 	}
 	<div class="article-card__body">
 		@@if(context.src){
-		<div class="article-card__img">
-			<picture>
-				<source type="image/webp" srcset="@@src.webp">
-				<img src="@@src.default" alt="фото" width="344" height="440" loading="lazy">
-			</picture>
-		</div>
+            <div class="article-card__img">
+                @@include("blocks/img/img.html", {
+                    "cover": true,
+                    "src": "@@src",
+                    "width": "344",
+                    "height": "440",
+                })
+            </div>
 		}
 		<div class="article-card__content">
 			@@if(context.label) {
-			<span
-				class="label article-card__label@@if(context.label.bg){ label--style_bg-@@label.bg}">@@label.text</span>
+			    <span class="label article-card__label@@if(context.label.bg){ label--style_bg-@@label.bg}">@@label.text</span>
 			}
 			@@if(context.kg){
-			<div class="article-card__kg">
-				<span>@@kg</span>
-				<span>кг</span>
-			</div>
+                <div class="article-card__kg">
+                    <span>@@kg</span>
+                    <span>кг</span>
+                </div>
 			}
 			@@if(context.title){
-			<a href="#" class="full-link article-card__title">@@title</a>
+			    <a href="#" class="full-link article-card__title">@@title</a>
 			}
 			@@include('blocks/views/views.html', {
-			"class": "article-card__views",
-			"value": "243"
+                "class": "article-card__views",
+                "value": "243"
 			})
 			@@include('blocks/arrow-btn/arrow-btn.html', {
-			"span": true,
-			"bg": "white",
-			"class": "article-card__arrow"
+                "span": true,
+                "bg": "white",
+                "class": "article-card__arrow"
 			})
 		</div>
 	</div>

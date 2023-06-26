@@ -1,20 +1,15 @@
-<section id="coach-specialization"
-         class="coach-goals">
+<section id="coach-specialization" class="coach-goals">
     <div class="container coach-goals__container">
         <div class="section-body">
             <div class="coach-goals__main">
                 <div class="coach-goals__top">
-                    <div class="coach-goals__avatar">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/coach-avatar.webp">
-                            <img src="assets/images/content/coach-avatar.jpg"
-                                 alt="фото"
-                                 width="72"
-                                 height="72"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "coach-goals__avatar",
+                        "cover": true,
+                        "src": "assets/images/content/coach-avatar",
+                        "width": "72",
+                        "height": "72",
+                    })
                     <div class="coach-goals__descr section-text">
                         Алексей Лисица.<br>
                         Управляющий клуба в Можайске.
@@ -26,27 +21,24 @@
                 </h2>
                 @@include('blocks/coach-goals-list/coach-goals-list.html')
             </div>
-            <div class="workout-section coach-goals__timetable workout-section--without-top"
-                 data-da=".coach-goals__container, 1024, last">
+            <div class="workout-section coach-goals__timetable workout-section--without-top" data-da=".coach-goals__container, 1024, last">
                 <div class="splide business-classes-slider coach-goals__slider">
                     <div class="splide__track">
                         <div class="splide__list">
-                            @@include('blocks/workout-card/coach.html', {
-                            "blue": true,
-                            "brsWithout": true,
-                            })
-                            @@include('blocks/workout-card/coach.html', {
-                            "blue": true,
-                            "brsWithout": true,
-                            })
-                            @@include('blocks/workout-card/coach.html', {
-                            "blue": true,
-                            "brsWithout": true
-                            })
+                            @@loop('blocks/workout-card/coach.html', [{
+                                "blue": true,
+                                "brsWithout": true,
+                            }, {
+                                "blue": true,
+                                "brsWithout": true,
+                            }, {
+                                "blue": true,
+                                "brsWithout": true
+                            }])
                         </div>
                     </div>
                     @@include('blocks/slider-nav/slider-nav.html', {
-                    "class": "workout-section"
+                        "class": "workout-section"
                     })
                 </div>
             </div>

@@ -1,5 +1,5 @@
 @@if(!context.picture){
-    <picture @@if(context.class){class="@@class" }>
+    <picture @@if(context.class){class="@@class" } @@if(context.dataDa){data-da="@@dataDa"}>
         <source type="image/webp" srcset="@@src.webp">
         <img class="@@if(context.cover){img-cover}@@if(context.contain){img-contain}"
             src="@@src.@@if(context.format){@@format}@@if(!context.format){jpg}"

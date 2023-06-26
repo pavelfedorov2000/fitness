@@ -1,10 +1,11 @@
 <section class="sum-up-results section">
-	<div class="sum-up-results__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/results.webp">
-			<img src="assets/images/content/results.jpg" alt="фото" width="960" height="800" loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "sum-up-results__img",
+        "cover": true,
+        "src": "assets/images/content/results",
+        "width": "960",
+        "height": "800",
+    })
 	<div class="sum-up-results__content">
 		<h2 class="sum-up-results__title section-title">
 			Каждые 2 месяца подводим итоги!

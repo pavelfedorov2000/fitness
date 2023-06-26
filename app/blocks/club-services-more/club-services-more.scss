@@ -63,15 +63,12 @@
     // .club-service-more__img
 
     &__img {
+        display: block;
         width: 100%;
         height: 28rem;
 
         @media (max-width: 500px) {
             height: 20.8rem;
-        }
-
-        img {
-            @extend %cover;
         }
     }
 

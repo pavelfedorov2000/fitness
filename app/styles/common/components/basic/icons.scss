@@ -66,8 +66,8 @@
     // .icons-page__icon
 
     &__icon {
-        width: var(--offset-m);
-        height: var(--offset-m);
+        width: var(--icon-size);
+        height: var(--icon-size);
 
         @media (max-width: 1024px) {
             margin-left: var(--offset-m);

@@ -1,29 +1,21 @@
 <section class="promo-concept@@if(context.swiper){ swiper-slide}">
-    <div class="promo-concept__bg promo-bg">
-        <picture>
-            <source type="image/webp"
-                    srcset="assets/images/content/promo/promo-concept.webp">
-            <img src="assets/images/content/promo/promo-concept.jpg"
-                 alt="фото"
-                 width="1920"
-                 height="960"
-                 loading="lazy">
-        </picture>
-    </div>
+    @@include("blocks/img/img.html", {
+        "class": "promo-concept__bg promo-bg",
+        "cover": true,
+        "src": "assets/images/content/promo/promo-concept",
+        "width": "1920",
+        "height": "960",
+    })
     <div class="container promo-concept__body promo-body">
-        <div class="promo-concept__aside-img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/promo/promo-aside-man.webp">
-                <img src="assets/images/content/promo/promo-aside-man.jpg"
-                     alt="фото"
-                     width="200"
-                     height="480"
-                     loading="lazy">
-            </picture>
-        </div>
+        @@include("blocks/img/img.html", {
+            "class": "promo-concept__aside-img",
+            "cover": true,
+            "src": "assets/images/content/promo/promo-aside-man",
+            "width": "200",
+            "height": "480",
+        })
         @@include('blocks/marquee/promo-marquee.html', {
-        "class": "promo-concept",
+            "class": "promo-concept",
         })
         <div class="section-body promo-concept__content">
             <h1 class="promo-concept__title">

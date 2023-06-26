@@ -17,14 +17,6 @@
         z-index: 1;
     }
 
-    // .coach-included__bg
-
-    &__bg {
-        img {
-            @extend %cover;
-        }
-    }
-
     // .coach-included__content
 
     &__content {

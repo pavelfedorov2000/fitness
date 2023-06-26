@@ -111,8 +111,8 @@
                 }
 
                 svg {
-                    width: 2rem;
-                    height: 2rem;
+                    width: var(--icon-size_sm);
+                    height: var(--icon-size_sm);
                 }
             }
         }
@@ -218,10 +218,6 @@
         @media(max-width: 767px) {
             width: 11.4rem;
             height: 11.4rem;
-        }
-
-        img {
-            @extend %cover;
         }
 
         @media (any-hover: hover) {

@@ -73,10 +73,6 @@
         grid-row: 1 / -1;
         grid-column: 1 / span 3;
 
-        img {
-            @extend %cover;
-        }
-
         @media (max-width: 1024px) {
             height: 100%;
             grid-row: 6 / span 5;
@@ -192,10 +188,6 @@
             display: block;
             grid-row: 2 / 3;
             grid-column: -2 / -1;
-        }
-
-        img {
-            @extend %cover;
         }
     }
 }

@@ -28,17 +28,13 @@
                 </div>
             </div>
         </div>
-        <div class="promo-clubs__aside-img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/promo/promo-aside.webp">
-                <img src="assets/images/content/promo/promo-aside.jpg"
-                     alt="фото"
-                     width="20"
-                     height="20"
-                     loading="lazy">
-            </picture>
-        </div>
+        @@include("blocks/img/img.html", {
+            "class": "promo-clubs__aside-img",
+            "cover": true,
+            "src": "assets/images/content/promo/promo-aside",
+            "width": "200",
+            "height": "200",
+        })
         <div class="decor-title promo-clubs__decor-title decor-title--gray">
             FITNESS<span>ON</span>
         </div>

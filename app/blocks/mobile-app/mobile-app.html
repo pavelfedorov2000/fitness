@@ -1,15 +1,12 @@
 <section class="mobile-app">
     <div class="container mobile-app__container">
         <div class="mobile-app__bg">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/mobile-app/bg.webp">
-                <img src="assets/images/content/mobile-app/bg.jpg"
-                     alt="фото"
-                     width="1920"
-                     height="424"
-                     loading="lazy">
-            </picture>
+            @@include("blocks/img/img.html", {
+                "cover": true,
+                "src": "assets/images/content/mobile-app/bg",
+                "width": "1920",
+                "height": "424",
+            })
         </div>
         <div class="section-body mobile-app__content">
             <h2 class="section-title mobile-app__title">
@@ -17,17 +14,13 @@
                 приложение
                 <span class="ttu">FITNESSON</span>
             </h2>
-            <div class="mobile-app__img">
-                <picture>
-                    <source type="image/webp"
-                            srcset="assets/images/content/mobile-app/iphone.webp">
-                    <img src="assets/images/content/mobile-app/iphone.png"
-                         alt="фото"
-                         width="435"
-                         height="870"
-                         loading="lazy">
-                </picture>
-            </div>
+            @@include("blocks/img/img.html", {
+                "class": "mobile-app__img",
+                "contain": true,
+                "src": "assets/images/content/mobile-app/iphone",
+                "width": "435",
+                "height": "870",
+            })
             <div class="section-text mobile-app__text">
                 <p>
                     Мы сделали IT платформу для обычных людей. Мобильное приложение для клиентов и систему

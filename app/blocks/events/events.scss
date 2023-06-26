@@ -57,8 +57,8 @@
             justify-content: space-between;
             width: calc(100vw - var(--gap) * 4);
             background-color: var(--white);
-            border-top: 0.1rem solid var(--line-color);
-            border-bottom: 0.1rem solid var(--line-color);
+            border-top: var(--border);
+            border-bottom: var(--border);
             margin-bottom: var(--offset-xxl);
 
             &::before,
@@ -69,8 +69,8 @@
                 bottom: 0;
                 width: calc(var(--gap) * 2);
                 background-color: var(--white);
-                border-top: 0.1rem solid var(--line-color);
-                border-bottom: 0.1rem solid var(--line-color);
+                border-top: var(--border);
+                border-bottom: var(--border);
             }
 
             &::before {
@@ -83,17 +83,16 @@
         }
 
         .swiper-button {
-
             &-prev,
             &-next {
                 position: static;
-                width: 2rem;
-                height: 2rem;
+                width: var(--icon-size_sm);
+                height: var(--icon-size_sm);
 
                 svg {
                     flex-shrink: 0;
-                    width: 2rem;
-                    height: 2rem;
+                    width: var(--icon-size_sm);
+                    height: var(--icon-size_sm);
 
                     path {
                         transition: var(--transition) fill;

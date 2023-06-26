@@ -14,7 +14,7 @@
         top: 0;
         left: 0;
         bottom: -3.7rem;
-        width: calc(100% + 1rem);
+        width: calc(100% + var(--offset-x));
         background-image: url(../images/content/children-sections/bg.svg);
         background-position: center;
         background-size: cover;

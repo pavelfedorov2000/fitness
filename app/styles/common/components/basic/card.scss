@@ -10,7 +10,7 @@
 		'content arrow'
 	;
 	background-color: var(--light-blue);
-	border: 0.1rem solid var(--light-blue);
+	border: var(--border-light-blue);
 	min-height: 24.8rem;
 	transition: var(--transition) all;
 
@@ -91,10 +91,10 @@
 		&::before {
 			content: '';
 			position: absolute;
-			top: 0rem;
-			left: 0rem;
-			width: 2rem;
-			height: 2rem;
+			top: 0;
+			left: 0;
+			width: var(--icon-size_sm);
+			height: var(--icon-size_sm);
 			background-image: url(../images/icons/ico-pin.svg);
 			@extend %bg-contain;
 		}

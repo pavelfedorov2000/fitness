@@ -42,10 +42,6 @@
             grid-column: 1 / 2;
             grid-row: 1 / 3;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     // .promo-concept__content
@@ -99,7 +95,7 @@
         @extend %grid-center;
         height: var(--video);
         border-radius: 50%;
-        border: 0.1rem solid var(--white);
+        border: var(--border-white);
         position: relative;
 
         &::before {
@@ -152,8 +148,8 @@
             height: 12rem;
 
             .scroll-btn__arrow {
-                width: var(--offset-s);
-                height: var(--offset-s);
+                width: var(--icon-size_s);
+                height: var(--icon-size_s);
             }
         }
 

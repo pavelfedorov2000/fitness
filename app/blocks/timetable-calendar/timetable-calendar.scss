@@ -38,13 +38,13 @@
             &-prev,
             &-next {
                 position: static;
-                width: 2rem;
-                height: 2rem;
+                width: var(--icon-size_sm);
+                height: var(--icon-size_sm);
 
                 svg {
                     flex-shrink: 0;
-                    width: 2rem;
-                    height: 2rem;
+                    width: var(--icon-size_sm);
+                    height: var(--icon-size_sm);
                     transition: var(--transition) fill;
                 }
             }

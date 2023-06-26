@@ -15,13 +15,13 @@
 	// .arrow-btn__svg
 
 	&__svg {
-		width: var(--offset-m);
-		height: var(--offset-m);
+		width: var(--icon-size);
+		height: var(--icon-size);
 		fill: var(--black);
 
 		@media (max-width: 767px) {
-			width: var(--offset-s);
-			height: var(--offset-s);
+			width: var(--icon-size_s);
+			height: var(--icon-size_s);
 		}
 	}
 
@@ -39,8 +39,8 @@
 
 	&--size {
 		&_l {
-			width: var(--offset-l);
-			height: var(--offset-l);
+			width: var(--icon-size_l);
+			height: var(--icon-size_l);
 		}
 	}
 }

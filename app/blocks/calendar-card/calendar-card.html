@@ -1,23 +1,22 @@
 <li>
-    <article class="calendar-card @@category"
-             data-training-category="@@category">
+    <article class="calendar-card @@category" data-training-category="@@category">
         <div class="calendar-card__top">
             <span class="calendar-card__time">@@time</span>
             <div class="calendar-card__category">
                 @@if(context.category == 'group') {
-                <span class="label label--style_bg-transparent">Групповая
-                    тренировка</span>
+                    <span class="label label--style_bg-transparent">Групповая
+                        тренировка</span>
                 }
                 @@if(context.category == 'appointment') {
-                <span class="label label--style_bg-yellow">По записи</span>
-                <span class="label">Мест: 2</span>
+                    <span class="label label--style_bg-yellow">По записи</span>
+                    <span class="label">Мест: 2</span>
                 }
                 @@if(context.category == 'children') {
-                <span class="label">Детская
-                    секция</span>
+                    <span class="label">Детская
+                        секция</span>
                 }
                 @@if(context.category == 'business') {
-                <span class="label">Бизнес–класс</span>
+                    <span class="label">Бизнес–класс</span>
                 }
             </div>
         </div>
@@ -27,10 +26,10 @@
         </div>
         <div class="calendar-card__coach">@@coach</div>
         @@include('blocks/arrow-btn/arrow-btn.html', {
-        "class": "calendar-card",
-        "fullLink": true,
-        "dataPopup": "info-workout-popup",
-        "bg": "white"
+            "class": "calendar-card",
+            "fullLink": true,
+            "dataPopup": "info-workout-popup",
+            "bg": "white"
         })
     </article>
 </li>

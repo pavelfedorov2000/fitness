@@ -16,7 +16,7 @@
     .js {
         &-close {
             opacity: 0;
-            transform: translateX(1rem);
+            transform: translateX(var(--offset-x));
             transition: var(--transition) transform, var(--transition) opacity;
         }
 

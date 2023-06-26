@@ -116,11 +116,8 @@
     // .card-services-slider__item-img
 
     &__item-img {
+        display: block;
         height: 100%;
-
-        img {
-            @extend %cover;
-        }
     }
 
     .swiper-pagination {

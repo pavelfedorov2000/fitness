@@ -45,7 +45,6 @@
 
         @media(max-width: 1024px) {
             @include padding-y(var(--offset-l));
-            //min-height: 100vh;
             grid-template-columns: 1fr var(--player) 1fr;
             grid-template-rows: max-content 8.6rem var(--player) 6.2rem max-content;
             grid-template-areas:
@@ -68,7 +67,7 @@
     &__player {
         @extend %grid-center;
         border-radius: 50%;
-        border: 0.1rem solid var(--white);
+        border: var(--border-white);
         grid-area: player;
     }
 

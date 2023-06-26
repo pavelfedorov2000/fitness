@@ -1,16 +1,12 @@
 <section class="club-benefits section@@if(context.swiper){ swiper-slide}">
     <div class="container club-benefits__grid">
-        <div class="club-benefits__img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/club-benefits.webp">
-                <img src="assets/images/content/club-benefits.jpg"
-                     alt="фото"
-                     width="748"
-                     height="800"
-                     loading="lazy">
-            </picture>
-        </div>
+        @@include("blocks/img/img.html", {
+            "class": "club-benefits__img",
+            "cover": true,
+            "src": "assets/images/content/club-benefits",
+            "width": "748",
+            "height": "800",
+        })
         <div class="section-body club-benefits__content">
             <h2 class="section-title club-benefits__title">
                 Все это по цене

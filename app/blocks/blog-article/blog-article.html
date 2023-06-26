@@ -1,14 +1,16 @@
 <article class="blog-article@@if(context.class){ @@class}">
-	<div class="blog-article__bg">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/blog-article.webp">
-			<img src="assets/images/content/blog-article.jpg" alt="фото" width="728" height="400" loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "blog-article__bg",
+        "cover": true,
+        "src": "assets/images/content/blog-article",
+        "format": "png",
+        "width": "728",
+        "height": "400",
+    })
 	<div class="blog-article__content">
 		@@include('blocks/arrow-btn/arrow-btn.html', {
-		"span": true,
-		"bg": "white"
+            "span": true,
+            "bg": "white"
 		})
 		<div class="blog-article__tags">
 			<span class="label">Новости</span>
@@ -18,7 +20,7 @@
 			от&nbsp;тренера&nbsp;FITNESSON
 		</a>
 		@@include('blocks/views/views.html', {
-		"value": "1200"
+		    "value": "1200"
 		})
 	</div>
 </article>

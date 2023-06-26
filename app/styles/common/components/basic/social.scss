@@ -7,15 +7,15 @@
     // .social__item
 
     &__item {
-        width: var(--offset-xls);
-        height: var(--offset-xls);
+        width: var(--icon-size_xls);
+        height: var(--icon-size_xls);
         background-color: var(--white);
-        border: 0.1rem solid var(--dark);
+        border: var(--border-dark);
         transition: var(--transition) background-color, var(--transition) border-color;
 
         svg {
-            width: var(--offset-s);
-            height: var(--offset-s);
+            width: var(--icon-size_s);
+            height: var(--icon-size_s);
 
             path {
                 transition: var(--transition) all;
@@ -127,7 +127,7 @@
                 border-bottom: none;
 
                 &:last-child {
-                    border-bottom: 0.1rem solid var(--dark);
+                    border-bottom: var(--border-dark);
                 }
             }
         }

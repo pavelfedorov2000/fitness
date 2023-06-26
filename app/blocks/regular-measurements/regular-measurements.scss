@@ -49,7 +49,6 @@
 
         @media (min-width: 1025px) {
             grid-template-rows: max-content 1fr max-content;
-            //min-height: calc(100vh - var(--section-padding_xl) * 2);
         }
 
         @media (max-width: 1024px) {
@@ -148,12 +147,6 @@
 
         @media (max-width: 767px) {
             height: 20.8rem;
-        }
-
-        img {
-            &:not(.circle-text__img) {
-                @extend %cover;
-            }
         }
     }
 }

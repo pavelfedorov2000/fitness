@@ -1,14 +1,11 @@
 <section class="coach-included section@@if(context.swiper){ swiper-slide}">
-    <div class="coach-included__bg promo-bg">
-        <picture>
-            <source type="image/webp"
-                    srcset="assets/images/content/coach-included.webp">
-            <img src="assets/images/content/coach-included.jpg"
-                 alt="фото"
-                 width="1920"
-                 height="800"
-                 loading="lazy">
-        </picture>
+    <div class="promo-bg">
+        @@include("blocks/img/img.html", {
+            "cover": true,
+            "src": "assets/images/content/coach-included",
+            "width": "1920",
+            "height": "800",
+        })
     </div>
     <div class="container coach-included__body promo-body">
         <div class="section-body coach-included__content">

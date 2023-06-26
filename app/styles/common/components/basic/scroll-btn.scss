@@ -10,7 +10,7 @@
 
     100% {
         opacity: 0.3;
-        transform: translateY(-1rem);
+        transform: translateY(calc(var(--offset-x) * (-1)));
     }
 }
 
@@ -22,8 +22,8 @@
     background-color: var(--black);
 
     &__arrow {
-        width: var(--offset-m);
-        height: var(--offset-m);
+        width: var(--icon-size);
+        height: var(--icon-size);
         fill: var(--white);
         animation-name: scroll-btn;
         animation-duration: 2s;
@@ -44,7 +44,6 @@
         width: var(--gap);
         height: var(--gap);
         grid-area: scroll;
-        // .scroll-btn__arrow
     }
 
     &--yellow {

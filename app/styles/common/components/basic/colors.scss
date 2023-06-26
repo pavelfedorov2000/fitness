@@ -57,9 +57,9 @@
 }
 
 .color-item {
+    @extend %flex-col;
     cursor: pointer;
     padding: var(--offset-l);
-    @extend %flex-col;
     justify-content: space-between;
     transition: var(--transition) box-shadow;
     // .color-item__title
@@ -147,8 +147,8 @@
             }
 
             &-opacity {
-                background-color: rgba(255, 255, 255, 0.6);
-                border: 0.1rem solid var(--line-color);
+                color: var(--white-opacity-60);
+                border: var(--border);
             }
 
             &-ocean,

@@ -1,12 +1,13 @@
 <div class="promo-timetable">
 	<div class="promo-timetable__grid">
-		<div class="promo-timetable__img" data-da=".promo-timetable__content, 1024, 2">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/promo/promo-timetable.webp">
-				<img src="assets/images/content/promo/promo-timetable.jpg" alt="фото" width="748" height="800"
-					loading="lazy">
-			</picture>
-		</div>
+        @@include("blocks/img/img.html", {
+            "class": "promo-timetable__img",
+            "cover": true,
+            "dataDa": ".promo-timetable__content, 1024, 2",
+            "src": "assets/images/content/promo/promo-timetable",
+            "width": "748",
+            "height": "800",
+        })
 		<div class="promo-timetable__content">
 			<h1 class="section-title promo-timetable__title">
 				Раписание
@@ -28,17 +29,17 @@
 				в&nbsp;неделю
 			</div>
 			@@include('blocks/select-club/select-club.html', {
-			"class": "promo-timetable",
-			"size": "xl"
+                "class": "promo-timetable",
+                "size": "xl"
 			})
 		</div>
 		<div class="decor-title promo-timetable__decor-title decor-title--ocean">Timetable</div>
-		<div class="promo-timetable__aside-img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/promo/promo-client.webp">
-				<img src="assets/images/content/promo/promo-client.jpg" alt="фото" width="200" height="400"
-					loading="lazy">
-			</picture>
-		</div>
+        @@include("blocks/img/img.html", {
+            "class": "promo-timetable__aside-img",
+            "cover": true,
+            "src": "assets/images/content/promo/promo-client",
+            "width": "200",
+            "height": "400",
+        })
 	</div>
 </div>

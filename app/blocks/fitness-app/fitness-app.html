@@ -1,14 +1,11 @@
 <section class="swiper-slide section fitness-app@@if(context.swiper){ swiper-slide}">
     <div class="promo-bg fitness-app__bg">
-        <picture>
-            <source type="image/webp"
-                    srcset="assets/images/content/app.webp">
-            <img src="assets/images/content/app.jpg"
-                 alt="фото"
-                 width="1920"
-                 height="800"
-                 loading="lazy">
-        </picture>
+        @@include("blocks/img/img.html", {
+            "cover": true,
+            "src": "assets/images/content/app",
+            "width": "1920",
+            "height": "800",
+        })
     </div>
     <div class="promo-body container">
         <div class="section-body fitness-app__content">

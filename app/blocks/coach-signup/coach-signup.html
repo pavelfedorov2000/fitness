@@ -1,10 +1,11 @@
 <section class="coach-signup">
-	<div class="coach-signup__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/coach-signup.webp">
-			<img src="assets/images/content/coach-signup.jpg" alt="фото" width="960" height="800" loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "coach-signup__img",
+        "cover": true,
+        "src": "assets/images/content/coach-signup",
+        "width": "960",
+        "height": "800",
+    })
 	<div class="coach-signup__form-wrap">
 		<div class="coach-signup__title">
 			Запишитесь
@@ -23,11 +24,14 @@
 					<!-- <span>Имя</span> -->
 				</label>
 				<label class="form-field coach-signup__form-field coach-signup__form-field--phone">
-					<input class="input coach-signup__form-input" type="tel" name="phone" placeholder="Телефон"
-						required>
+					<input class="input coach-signup__form-input" type="tel" name="phone" placeholder="Телефон" required>
 					<!-- <span>Телефон</span> -->
 				</label>
-				<button class="btn coach-signup__form-btn" type="submit">Отправить заявку</button>
+                @@include("blocks/button/button.html", {
+                    "type": "submit",
+                    "class": "coach-signup__form-btn",
+                    "text": "Отправить заявку",
+                })
 				<div class="form-agree coach-signup__form-agree">
 					Отправляя заявку вы соглашаетесь
 					с&nbsp;условиями обработки персональных данных

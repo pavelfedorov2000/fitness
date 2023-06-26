@@ -1,10 +1,12 @@
 <section class="promo-club">
 	<div class="promo-club__bg">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/promo/promo-club.webp">
-			<img src="assets/images/content/promo/promo-club.jpg" alt="фитнес парень и девушка" width="1920"
-				height="960">
-		</picture>
+        @@include("blocks/img/img.html", {
+            "cover": true,
+            "src": "assets/images/content/promo/promo-club",
+            "width": "1920",
+            "height": "960",
+            "alt": "фитнес парень и девушка"
+        })
 	</div>
 	<div class="promo-club__body container">
 		@@include('blocks/scroll-btn/scroll-btn.html')
@@ -15,16 +17,16 @@
 				<span>в Электростале</span>
 			</h1>
 			@@include('blocks/box-link/box-link.html', {
-			"href": "#free-training-recording",
-			"class": "promo-club__box-link",
-			"text": "Подарочная персональная тренировка"
+                "href": "#free-training-recording",
+                "class": "promo-club__box-link",
+                "text": "Подарочная персональная тренировка"
 			})
 			@@include('blocks/ratings/ratings.html', {
-			"class": "promo-club"
+			    "class": "promo-club"
 			})
 			@@include('blocks/info-box/info-box.html', {
-			"da": ".promo-club, 1024, last",
-			"class": "promo-club"
+                "da": ".promo-club, 1024, last",
+                "class": "promo-club"
 			})
 			<nav class="promo-club__nav promo-nav" data-da=".promo-club, 1024, 2">
 				<!-- <div class="promo-nav__mobile">
@@ -65,7 +67,7 @@
 			</nav>
 		</div>
 		@@include('blocks/marquee/promo-marquee.html', {
-		"class": "promo-club",
+		    "class": "promo-club",
 		})
 	</div>
 </section>

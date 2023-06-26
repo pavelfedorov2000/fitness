@@ -59,7 +59,7 @@
             left: calc(var(--section-padding_xl) - var(--line-width));
             bottom: 0;
             width: var(--line-width);
-            background-color: rgba(var(--white), 0.2);
+            background-color: var(--white-opacity-20);
         }
     }
     // .speech__text
@@ -91,11 +91,10 @@
     // .speech__photo
 
     &__photo {
+        display: block;
         width: 100%;
-        height: var(--section-padding_xl);
-        object-fit: cover;
+        height: 8rem;
         grid-area: photo;
-        //align-self: flex-end;
 
         @media (max-width: 767px) {
             height: var(--offset-xxxl);

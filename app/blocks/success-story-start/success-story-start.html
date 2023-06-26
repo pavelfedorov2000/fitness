@@ -8,17 +8,23 @@
 		"src": "assets/images/content/aside-clients/woman"
 		})
 		<div class="success-story-start__body">
-			<div class="success-story-start__bg">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/success-story.webp">
-					<img src="assets/images/content/success-story.jpg" alt="фото" width="1720" height="800"
-						loading="lazy">
-				</picture>
-			</div>
+            @@include("blocks/img/img.html", {
+                "class": "success-story-start__bg",
+                "cover": true,
+                "src": "assets/images/content/success-story",
+                "width": "1720",
+                "height": "800",
+            })
 			<div class="success-story-start__content">
 				<h2 class="success-story-start__title">Начните свою историю фитнес–успеха</h2>
-				<button data-popup="request-popup" class="btn success-story-start__btn" type="button">Хочу
-					тренироваться</button>
+                @@include("blocks/button/button.html", {
+                    "data": {
+                        "attr": "popup",
+                        "value": "request-popup"
+                    },
+                    "class": "success-story-start__btn",
+                    "text": "Хочу тренироваться",
+                })
 			</div>
 		</div>
 		@@include('blocks/marquee/promo-marquee.html', {

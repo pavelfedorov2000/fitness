@@ -47,10 +47,6 @@
         @media(max-width: 500px) {
             height: 24rem;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     // .individual-lesson-card__title

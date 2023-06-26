@@ -9,43 +9,31 @@
         <div class="swiper card-services__slider card-services-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide card-services-slider__item">
-                    <div class="card-services-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/card-services.webp">
-                            <img src="assets/images/content/card-services.jpg"
-                                 alt="фото"
-                                 width="1172"
-                                 height="800"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "card-services-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/card-services",
+                        "width": "1172",
+                        "height": "800",
+                    })
                 </div>
                 <div class="swiper-slide card-services-slider__item">
-                    <div class="card-services-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/promo/promo-concept.webp">
-                            <img src="assets/images/content/promo/promo-concept.jpg"
-                                 alt="фото"
-                                 width="1172"
-                                 height="800"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "card-services-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/promo/promo-concept",
+                        "width": "1172",
+                        "height": "800",
+                    })
                 </div>
                 <div class="swiper-slide card-services-slider__item">
-                    <div class="card-services-slider__item-img">
-                        <picture>
-                            <source type="image/webp"
-                                    srcset="assets/images/content/promo/promo.webp">
-                            <img src="assets/images/content/promo/promo.jpg"
-                                 alt="фото"
-                                 width="1172"
-                                 height="800"
-                                 loading="lazy">
-                        </picture>
-                    </div>
+                    @@include("blocks/img/img.html", {
+                        "class": "card-services-slider__item-img",
+                        "cover": true,
+                        "src": "assets/images/content/promo/promo",
+                        "width": "1172",
+                        "height": "800",
+                    })
                 </div>
             </div>
         </div>

@@ -99,10 +99,6 @@
             grid-column: -2 / -1;
             grid-row: 1 / 2;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     // .promo-blog__marquee

@@ -26,10 +26,6 @@
         @media(min-width: 1025px) {
             display: block;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     // .coach-signup__form-wrap
@@ -118,7 +114,7 @@
     }
 
     &__form-agree {
-        color: rgba(255, 255, 255, 0.6);
+        color: var(--white-opacity-60);
 
         @media(max-width: 767px) {
             margin-top: var(--offset-s);

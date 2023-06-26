@@ -1,9 +1,7 @@
 .circle-text {
     $this: &;
 
-    width: var(--circle-text);
-    height: var(--circle-text);
-    border-radius: 50%;
+    @include round(var(--circle-text));
 
     &__img {
         animation: circleText 5s infinite ease-in-out;
@@ -36,7 +34,7 @@
         position: relative;
 
         @media(min-width: 768px) {
-            border: 0.1rem solid var(--white);
+            border: var(--border-white);
         }
 
         #{$this} {

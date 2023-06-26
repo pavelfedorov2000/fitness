@@ -1,8 +1,11 @@
 <section class="promo">
-	<picture class="promo__bg promo-bg">
-		<source type="image/webp" srcset="assets/images/content/promo/promo.webp">
-		<img src="assets/images/content/promo/promo.jpg" alt="фитнес парень и девушка" width="1920" height="960">
-	</picture>
+    @@include("blocks/img/img.html", {
+        "class": "promo__bg promo-bg",
+        "cover": true,
+        "src": "assets/images/content/promo/promo",
+        "width": "1920",
+        "height": "960",
+    })
 	<div class="promo__body container promo-body">
 		@@include('blocks/scroll-btn/scroll-btn.html')
 		<div class="promo__content">

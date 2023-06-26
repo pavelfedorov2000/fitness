@@ -26,10 +26,11 @@
 			с управляющим.
 		</p>
 	</div>
-	<div class="app__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/coach-signup.webp">
-			<img src="assets/images/content/coach-signup.jpg" alt="фото" width="818" height="692" loading="lazy">
-		</picture>
-	</div>
+	@@include("blocks/img/img.html", {
+        "class": "app__img",
+        "cover": true,
+        "src": "assets/images/content/coach-signup",
+        "width": "818",
+        "height": "692",
+    })
 </aside>

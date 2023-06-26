@@ -6,7 +6,6 @@
     min-height: 100vh;
 
     @media (max-width: 1024px) {
-        //grid-template-rows: calc(100vh - var(--offset-xl)) var(--offset-xl) max-content;
         grid-template-rows: 100vh max-content;
     }
 
@@ -16,12 +15,6 @@
     &__body {
         grid-row: 1 / 2;
         grid-column: 1 / 2;
-    }
-
-    &__bg {
-        img {
-            @extend %cover;
-        }
     }
 
     // .promo-club__body
@@ -151,10 +144,6 @@
             display: none;
             grid-area: nav;
         }
-
-        /* @media (max-width: 1024px) {
-            grid-row: 2 / 3;
-        } */
     }
 
     &__marquee {

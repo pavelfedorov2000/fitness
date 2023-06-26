@@ -112,8 +112,8 @@
 .splide {
     &__arrow {
         svg {
-            width: 2rem;
-            height: 2rem;
+            width: var(--icon-size_sm);
+            height: var(--icon-size_sm);
         }
     }
 }

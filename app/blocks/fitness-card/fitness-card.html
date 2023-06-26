@@ -7,8 +7,15 @@
                 Fitness<span>on</span>
             </h2>
             <div class="circle-text fitness-card__circle-text circle-text--dot">
-                <img class="circle-text__img" src="assets/images/circle-text.svg" alt="unique-concept" width="220"
-                    height="220" loading="lazy">
+                @@include("blocks/img/img.html", {
+                    "withoutPicture": true,
+                    "class": "circle-text__img",
+                    "src": "assets/images/circle-text",
+                    "format": "svg",
+                    "width": "220",
+                    "height": "220",
+                    "alt": "unique-concept"
+                })
             </div>
             <div class="fitness-card__list-col fitness-card__list-col--1">
                 <div class="fitness-card__list-title">В клубе Fitness<span>on</span>
@@ -86,11 +93,15 @@
                     </li>
                 </ul>
             </div>
-            <button class="btn fitness-card__btn btn--style_bg-black" type="button">Показать еще</button>
+            @@include("blocks/button/button.html", {
+                "style": "bg-black",
+                "class": "fitness-card__btn",
+                "text": "Показать еще",
+            })
         </div>
         @@include('blocks/aside-client/aside-client.html', {
-        "position": "right",
-        "src": "assets/images/content/aside-coach"
+            "position": "right",
+            "src": "assets/images/content/aside-coach"
         })
     </div>
 </section>

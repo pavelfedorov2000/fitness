@@ -55,15 +55,12 @@
 		</div>
 		<div class="club-services__tabs-content">
 			@@include('blocks/aims/aims.html', {
-			"class": "tabs-content"
+			    "class": "tabs-content"
 			})
-			<!-- @@include('blocks/club-zones/club-zones.html', {
-            "class": "tabs-content"
-            }) -->
 			@@include('blocks/children-sections/children-sections.html', {
-			"id": "children-sections",
-			"class": "tabs-content",
-			"withoutTop": true
+                "id": "children-sections",
+                "class": "tabs-content",
+                "withoutTop": true
 			})
 			<section id="business-classes"
 				class="tabs-content workout-section business-classes workout-section--without-top">
@@ -72,41 +69,39 @@
 						<div class="splide business-classes-slider workout-section__slider">
 							<div class="splide__track">
 								<div class="splide__list">
-									@@include('blocks/workout-card/workout-card.html', {
-									"blue": true,
-									"brsWithout": true,
-									"title": "Йога"
-									})
-									@@include('blocks/workout-card/workout-card.html', {
-									"blue": true,
-									"brsWithout": true,
-									"title": "Йога"
-									})
-									@@include('blocks/workout-card/workout-card.html', {
-									"blue": true,
-									"brsWithout": true,
-									"title": "Йога"
-									})
+									@@loop('blocks/workout-card/workout-card.html', [{
+                                        "blue": true,
+                                        "brsWithout": true,
+                                        "title": "Йога"
+									}, {
+                                        "blue": true,
+                                        "brsWithout": true,
+                                        "title": "Йога"
+									}, {
+                                        "blue": true,
+                                        "brsWithout": true,
+                                        "title": "Йога"
+									}])
 								</div>
 							</div>
 							@@include('blocks/slider-nav/slider-nav.html', {
-							"class": "workout-section"
+							    "class": "workout-section"
 							})
 						</div>
 					</div>
 				</div>
 			</section>
 			@@include('blocks/individual-lessons/individual-lessons.html', {
-			"class": "tabs-content"
+			    "class": "tabs-content"
 			})
 			@@include('blocks/club-services-more/club-services-more.html', {
-			"class": "tabs-content"
+			    "class": "tabs-content"
 			})
 			@@include('blocks/sport-food/sport-food.html', {
-			"class": "tabs-content"
+			    "class": "tabs-content"
 			})
 			@@include('blocks/test-workout/test-workout.html', {
-			"class": "tabs-content"
+			    "class": "tabs-content"
 			})
 		</div>
 	</div>

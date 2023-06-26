@@ -47,10 +47,6 @@
             display: block;
             grid-area: asideImg;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     // .promo-success__content
@@ -93,7 +89,7 @@
             content: '';
             position: absolute;
             left: calc(var(--gap) * (-1));
-            background-color: rgba(var(--color-white-rgb), 0.3);
+            background-color: var(--white-opacity-30);
         }
 
         &::before {

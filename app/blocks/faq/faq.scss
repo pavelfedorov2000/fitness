@@ -47,7 +47,7 @@
         @extend %text-16;
         position: relative;
         padding-right: var(--offset-l);
-        padding-bottom: 2rem;
+        padding-bottom: var(--offset-sm);
 
         @media (max-width: 767px) {
             padding-bottom: var(--offset-s);
@@ -101,18 +101,18 @@
 
         &::before {
             left: 0;
-            width: var(--offset-s);
+            width: var(--icon-size_s);
             height: 0.3rem;
 
             @media (max-width: 767px) {
-                width: calc(var(--offset-s) - 0.2rem);
+                width: calc(var(--icon-size_s) - var(--offset-xxxs));
             }
         }
 
         &::after {
-            left: calc((var(--offset-s) - 0.2rem) / 2 - 0.15rem);
+            left: calc((var(--icon-size_s) - var(--offset-xxxs)) / 2 - 0.15rem);
             width: 0.3rem;
-            height: calc(var(--offset-s) - 0.2rem);
+            height: calc(var(--icon-size_s) - var(--offset-xxxs));
         }
 
         &[aria-expanded="true"] {

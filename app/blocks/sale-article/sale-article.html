@@ -1,10 +1,12 @@
 <article class="splide__slide sale-article">
-	<div class="sale-article__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/sale.webp">
-			<img src="assets/images/content/sale.jpg" alt="фитнес чика" width="780" height="800" loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "sale-article__img",
+        "cover": true,
+        "src": "assets/images/content/sale",
+        "width": "780",
+        "height": "800",
+        "alt": "фитнес чика"
+    })
 	<div class="sale-article__content">
 		<h2 class="section-title sale-article__title">
 			Осенние скидки
@@ -15,6 +17,10 @@
 			радужная
 			атмосфера, энергичная обстановка и теплая сауна.
 		</p>
-		<a href="#" class="btn sale-article__btn">Подробнее об акции</a>
+        @@include("blocks/button/button.html", {
+            "href": "#",
+            "class": "sale-article__btn",
+            "text": "Подробнее об акции",
+        })
 	</div>
 </article>

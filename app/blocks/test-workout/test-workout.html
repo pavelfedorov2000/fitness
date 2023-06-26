@@ -32,13 +32,13 @@
 						<img class="circle-text__img" src="assets/images/circle-text.svg" alt="фото" width="220"
 							height="220" loading="lazy">
 					</div>
-					<div class="video__bg">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/free-training/video.webp">
-							<img src="assets/images/content/free-training/video.jpg" alt="фото" width="672" height="379"
-								loading="lazy">
-						</picture>
-					</div>
+                    @@include("blocks/img/img.html", {
+                        "class": "video__bg",
+                        "cover": true,
+                        "src": "assets/images/content/free-training/video",
+                        "width": "672",
+                        "height": "379",
+                    })
 					<button class="video__box" type="button">
 						<div class="video__text">
 							Посмотрите<br>

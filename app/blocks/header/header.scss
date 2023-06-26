@@ -1,6 +1,7 @@
 .header {
 	$this: &;
 
+    @include padding-y(var(--offset-sm));
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -9,7 +10,6 @@
 	@extend %vertical-align;
 	min-height: var(--header-height);
 	color: var(--white);
-	padding: 2rem 0;
 
 	@media (max-width: 1024px) {
 		position: fixed;
@@ -144,13 +144,13 @@
 	// .header-top-menu__icon
 
 	&__links-icon {
-		width: 2rem;
-		height: 2rem;
+		width: var(--icon-size_sm);
+		height: var(--icon-size_sm);
 		flex-shrink: 0;
 		margin-right: var(--offset-xxs);
 
 		path {
-			fill: rgba(var(--white), 0.5);
+			fill: var(--white-opacity-50);
 			transition: var(--transition) fill;
 		}
 	}
@@ -179,7 +179,7 @@
 
 		span {
 			margin-left: var(--offset-xxs);
-			padding: 0.2rem 0.6rem;
+			padding: var(--offset-xxxs) 0.6rem;
 			background-color: var(--white);
 			border-radius: var(--border-radius);
 			color: var(--black);

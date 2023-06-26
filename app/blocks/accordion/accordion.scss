@@ -1,16 +1,16 @@
 .accordion {
 	$this: &;
 
-	border: 0.1rem solid var(--black);
+	border: var(--border-black);
 	border-bottom: none;
 
 	&:last-child {
-		border-bottom: 0.1rem solid var(--black);
+		border-bottom: var(--border-black);
 	}
 
 	&-title {
 		position: relative;
-		padding: 1.4rem var(--container-padding);
+		padding: var(--offset-sx) var(--container-padding);
 		width: 100%;
 		font-size: 1.4rem;
 		line-height: 2rem;
@@ -28,8 +28,8 @@
 			position: absolute;
 			top: 1.5rem;
 			right: var(--container-padding);
-			width: 2rem;
-			height: 2rem;
+			width: var(--icon-size_sm);
+			height: var(--icon-size_sm);
 			background-image: url(../images/icons/drop.svg);
 			@extend %bg-contain;
 			transition: var(--transition) transform;
@@ -52,7 +52,7 @@
 
 		li {
 			&:not(:last-child) {
-				margin-bottom: 2rem;
+				margin-bottom: var(--offset-sm);
 
 				@media(max-width: 767px) {
 					margin-bottom: 1.8rem;

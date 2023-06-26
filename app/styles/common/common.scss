@@ -25,7 +25,7 @@ body {
 	min-width: 320px;
 	font-style: normal;
 	font-family: var(--font-family);
-	font-size: var(--base-font);
+	font-size: calc(var(--base-font) / 10 * 1rem);
 	line-height: 2.2rem;
 	font-weight: 400;
 	color: var(--color-default);
@@ -83,7 +83,7 @@ textarea {
 			}
 
 			.logo__text {
-				color: rgba(var(--color-white-rgb), 0.6);
+				color: var(--white-opacity-60);
 			}
 		}
 	}

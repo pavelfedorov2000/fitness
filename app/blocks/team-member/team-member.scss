@@ -56,7 +56,7 @@
         @extend %text-14;
         grid-area: role;
         text-shadow: var(--text-shadow);
-        margin-bottom: 1rem;
+        margin-bottom: var(--offset-x);
     }
 
     // .team-member__name

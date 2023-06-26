@@ -1,6 +1,6 @@
 .promo-marquee {
     @extend %text-64;
-    @include border-text(rgba(var(--color-white-rgb), 0.8), transparent);
+    @include border-text(var(--white-opacity-80), transparent);
     height: 100vh;
 
     @media (max-width: 1024px) {
@@ -50,9 +50,9 @@
     }
 
     p {
+        @include margin-y(var(--offset-sm));
         writing-mode: vertical-lr;
         white-space: nowrap;
-        margin: 2rem 0;
         animation: marquee 7s linear infinite;
 
         @media (max-width: 767px) {
@@ -77,10 +77,10 @@
 
     &--with {
         &_border {
-            border-top: 0.1rem solid var(--black);
+            border-top: var(--border-black);
 
             @media(min-width: 1025px) {
-                border-bottom: 0.1rem solid var(--black);
+                border-bottom: var(--border-black);
             }
         }
     }
@@ -95,9 +95,9 @@
 
     p {
         @extend .section-title;
+        @include margin-x(var(--offset-xxs));
         @include border-text(var(--gray), transparent);
         display: flex;
-        @include margin-x(var(--offset-xxs));
         white-space: nowrap;
 
         span {

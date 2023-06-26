@@ -13,7 +13,10 @@
 			libero, ut pharetra nisi pharetra nec.
 		</p>
 		<div class="info-workout-popup__form-wrap">
-			<button class="btn info-workout-popup__btn" type="button">Хочу попробовать йогу</button>
+            @@include("blocks/button/button.html", {
+                "class": "info-workout-popup__btn",
+                "text": "Хочу попробовать йогу",
+            })
 			<form action="#" class="info-workout-popup__form">
 				<div class="info-workout-popup__form-inner">
 					<input class="input form-block__input form-block__input--name input--style_bg-light-blue"
@@ -33,13 +36,13 @@
 			<div class="info-workout-popup__coach">
 				<div class="instructor">
 					<div class="instructor__info">
-						<div class="instructor__avatar">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/avatar.webp">
-								<img src="assets/images/content/avatar.jpg" alt="фото" width="56" height="56"
-									loading="lazy">
-							</picture>
-						</div>
+                        @@include("blocks/img/img.html", {
+                            "class": "instructor__avatar",
+                            "cover": true,
+                            "src": "assets/images/content/avatar",
+                            "width": "56",
+                            "height": "56",
+                        })
 						<div class="instructor__name">Екатерина Гарибальди</div>
 						<div class="instructor__descr">Тренер групповых программ</div>
 					</div>
@@ -95,9 +98,8 @@
 				</div>
 				<span class="video__box video__box--icon-only video__box--round" type="button">
 					<svg class="video__player" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z"
-							fill="#020818" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z" />
 					</svg>
 				</span>
 			</a>

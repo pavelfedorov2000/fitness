@@ -51,9 +51,9 @@
             const $selectContentNotActive = $selectItemNotActive.find('.select__content');
 
             $selectTitleNotActive.removeClass('active');
-            $selectContentNotActive.slideUp('300');
+            $selectContentNotActive.slideUp();
             $selectTitle.toggleClass('active');
-            $selectContent.slideToggle('300');
+            $selectContent.slideToggle();
         });
 
         $('.select__label').on('click', function () {
@@ -224,4 +224,4 @@
             da.init();
         }
     });
-})(jQuery)
+})(jQuery);

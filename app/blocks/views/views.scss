@@ -6,8 +6,8 @@
     &__icon {
         flex-shrink: 0;
         margin-right: var(--offset-xxs);
-        width: 2rem;
-        height: 2rem;
+        width: var(--icon-size_sm);
+        height: var(--icon-size_sm);
         fill: var(--white);
     }
 

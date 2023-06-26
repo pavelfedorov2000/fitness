@@ -7,14 +7,15 @@
     // .messanger__icon
 
     &__icon {
-        width: var(--offset-m);
-        height: var(--offset-m);
+        --size: var(--icon-size);
+
+        width: var(--size);
+        height: var(--size);
         fill: var(--black);
         transition: var(--transition) fill;
 
         @media (max-width: 767px) {
-            width: 2rem;
-            height: 2rem;
+            --size: var(--icon-size_sm);
         }
 
         @media (any-hover: hover) {

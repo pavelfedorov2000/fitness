@@ -1,11 +1,11 @@
 <section class="promo-contacts promo-contacts-end swiper-slide">
-	<div class="promo-bg">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/promo/promo-contacts.webp">
-			<img src="assets/images/content/promo/promo-contacts.jpg" alt="фото" width="1920" height="960"
-				loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "promo-bg",
+        "cover": true,
+        "src": "assets/images/content/promo/promo-contacts",
+        "width": "1920",
+        "height": "960",
+    })
 	<div class="promo-body promo-contacts-end__grid container">
 		<div class="promo-contacts-end__content section-body">
 			<div class="section-title promo-contacts-end__title">

@@ -50,14 +50,6 @@
 
     &__img {
         grid-area: img;
-
-        /* @media(max-width: 767px) {
-            height: 32rem;
-        } */
-
-        img {
-            @extend %cover;
-        }
     }
 
     // .results__content

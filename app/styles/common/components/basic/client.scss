@@ -1,5 +1,4 @@
 .client {
-
     display: grid;
     grid-template-columns: var(--offset-xxxl) max-content;
     column-gap: var(--offset-l);
@@ -32,6 +31,6 @@
 
     &__descr {
         @extend %text-14;
-        opacity: .7;
+        opacity: var(--opacity-70);
     }
 }

@@ -64,13 +64,9 @@
         margin-bottom: var(--offset-l);
 
         @media (max-width: 767px) {
-            width: var(--offset-xxl);
-            height: var(--offset-xxl);
+            width: var(--icon-size_xxl);
+            height: var(--icon-size_xxl);
             margin-bottom: var(--offset-s);
-        }
-
-        img {
-            @extend %cover;
         }
     }
 

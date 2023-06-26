@@ -1,10 +1,14 @@
 <div class="ratings @@if(context.class){@@class__ratings}">
     <div class="rating-box rating-box--black">
-        <img class="rating-box__logo"
-             src="assets/images/logo/yandex.svg"
-             alt="Яндекс"
-             width="52"
-             height="20">
+        @@include("blocks/img/img.html", {
+            "withoutPicture": true,
+            "class": "rating-box__logo",
+            "src": "assets/images/logo/yandex",
+            "format": "svg",
+            "width": "52",
+            "height": "20",
+            "alt": "Яндекс"
+        })
         <div class="rating-box__rate">
             <div class="rating-box__current-rate">4.7</div>
             <div class="rating-box__total-rate">/ 5</div>
@@ -12,11 +16,15 @@
         <div class="rating-box__title">Рейтинг</div>
     </div>
     <div class="rating-box rating-box--gray">
-        <img class="rating-box__logo"
-             src="assets/images/logo/google.svg"
-             alt="Яндекс"
-             width="52"
-             height="20">
+        @@include("blocks/img/img.html", {
+            "withoutPicture": true,
+            "class": "rating-box__logo",
+            "src": "assets/images/logo/google",
+            "format": "svg",
+            "width": "52",
+            "height": "20",
+            "alt": "Google"
+        })
         <div class="rating-box__rate">
             <div class="rating-box__current-rate">4.7</div>
             <div class="rating-box__total-rate">/ 5</div>

@@ -154,7 +154,7 @@
     // .fitness-card__list
 
     &__list {
-        @include row-grid(calc(var(--offset-xls) + 0.2rem));
+        @include row-grid(calc(var(--offset-xls) + var(--offset-xxxs)));
 
         @media (max-width: 1024px) {
             row-gap: var(--offset-m);
@@ -185,10 +185,10 @@
         &::before {
             content: '';
             position: absolute;
-            top: 0rem;
-            left: 0rem;
-            width: var(--offset-m);
-            height: var(--offset-m);
+            top: 0;
+            left: 0;
+            width: var(--icon-size);
+            height: var(--icon-size);
             @extend %bg-contain;
         }
     }

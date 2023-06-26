@@ -1,5 +1,4 @@
-<section id="individual-lessons"
-         class="individual-lessons@@if(context.class){ @@class}">
+<section id="individual-lessons" class="individual-lessons@@if(context.class){ @@class}">
     <div class="container">
         <div class="section-body individual-lessons__inner">
             <h4 class="individual-lessons__title">
@@ -11,20 +10,19 @@
             <div class="splide individual-lessons-slider individual-lessons__slider">
                 <div class="splide__track">
                     <div class="splide__list">
-                        @@include('blocks/individual-lesson-card/individual-lesson-card.html', {
-                        "src": "assets/images/content/yoga-workout",
-                        "bg": "ocean",
-                        "title": "Йога"
-                        })
-                        @@include('blocks/individual-lesson-card/individual-lesson-card.html', {
-                        "src": "assets/images/content/yoga-workout",
-                        "bg": "black",
-                        "title": "Силовая тренировка"
-                        })
+                        @@loop('blocks/individual-lesson-card/individual-lesson-card.html', [{
+                            "src": "assets/images/content/yoga-workout",
+                            "bg": "ocean",
+                            "title": "Йога"
+                        }, {
+                            "src": "assets/images/content/yoga-workout",
+                            "bg": "black",
+                            "title": "Силовая тренировка"
+                        }])
                     </div>
                 </div>
                 @@include('blocks/slider-nav/slider-nav.html', {
-                "class": "individual-lessons"
+                    "class": "individual-lessons"
                 })
             </div>
         </div>

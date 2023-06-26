@@ -142,9 +142,5 @@
             grid-row: 1 / -1;
             grid-column: 6 / -1;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 }

@@ -3,24 +3,24 @@
 		<div class="splide__list">
 			<div class="splide__slide">
 				<figure class="picture">
-					<picture>
-						<source type="image/webp" srcset="assets/images/content/text-page/picture-02.webp">
-						<img src="assets/images/content/text-page/picture-02.jpg" alt="фото" width="728" height="460"
-							loading="lazy">
-					</picture>
-					<figcaption class="picture__descr">Подпись к фотографии
-					</figcaption>
+                    @@include("blocks/img/img.html", {
+                        "cover": true,
+                        "src": "assets/images/content/text-page/picture-02",
+                        "width": "728",
+                        "height": "460",
+                    })
+					<figcaption class="picture__descr">Подпись к фотографии</figcaption>
 				</figure>
 			</div>
 			<div class="splide__slide">
 				<figure class="picture">
-					<picture>
-						<source type="image/webp" srcset="assets/images/content/text-page/picture-01.webp">
-						<img src="assets/images/content/text-page/picture-01.jpg" alt="фото" width="728" height="460"
-							loading="lazy">
-					</picture>
-					<figcaption class="picture__descr">Подпись к фотографии
-					</figcaption>
+					@@include("blocks/img/img.html", {
+                        "cover": true,
+                        "src": "assets/images/content/text-page/picture-01",
+                        "width": "728",
+                        "height": "460",
+                    })
+					<figcaption class="picture__descr">Подпись к фотографии</figcaption>
 				</figure>
 			</div>
 		</div>

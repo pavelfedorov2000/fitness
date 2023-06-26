@@ -15,13 +15,13 @@
         }
 
         &:before {
+            @extend %grid-center;
             position: absolute;
             top: 0;
             left: 0;
             width: var(--counter-num);
             height: var(--counter-num);
             border-radius: 50%;
-            @extend %grid-center;
             background-color: var(--black);
             color: var(--white);
         }
@@ -44,7 +44,7 @@
         &:before {
             content: '';
             background-image: url(../images/icons/check-mark.svg);
-            background-size: var(--offset-s);
+            background-size: var(--icon-size_s);
             background-position: center;
             background-repeat: no-repeat;
         }

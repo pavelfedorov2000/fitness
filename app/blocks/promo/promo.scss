@@ -21,7 +21,7 @@
             bottom: var(--gap);
             left: calc(var(--gap) - var(--line-width));
             width: var(--line-width);
-            background-color: rgba(var(--color-white-rgb), 0.3);
+            background-color: var(--white-opacity-30);
         }
     }
 

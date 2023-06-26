@@ -4,16 +4,18 @@
             <span>Регулярные замеры</span> Каждыe
             2&nbsp;недели. +&nbsp;фото замеры
         </h2>
-        <div class="regular-measurements__circle"
-             data-da=".regular-measurements__img, 1024, 0">
+        <div class="regular-measurements__circle" data-da=".regular-measurements__img, 1024, 0">
             <div class="circle-text circle-text--text">
                 <div class="circle-text__text regular-measurements__circle-text">
-                    <img class="circle-text__img regular-measurements__circle-img"
-                         src="assets/images/circle-text.svg"
-                         alt="фото"
-                         width="223"
-                         height="223"
-                         loading="lazy">
+                    @@include("blocks/img/img.html", {
+                        "withoutPicture": true,
+                        "class": "circle-text__img regular-measurements__circle-img",
+                        "cover": true,
+                        "src": "assets/images/circle-text",
+                        "format": "svg",
+                        "width": "223",
+                        "height": "223",
+                    })
                     <p>
                         <span class="ttu">WOW!</span> Вы будете проходить замер состава массы тела каждые 2 недели.
                     </p>
@@ -21,20 +23,16 @@
             </div>
         </div>
         @@include('blocks/box-link/box-link.html', {
-        "href": "#free-training-recording",
-        "class": "regular-measurements__box-link",
-        "text": "Подарочная персональная тренировка"
+            "href": "#free-training-recording",
+            "class": "regular-measurements__box-link",
+            "text": "Подарочная персональная тренировка"
         })
-        <div class="regular-measurements__img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/regular-measurements.webp">
-                <img src="assets/images/content/regular-measurements.jpg"
-                     alt="фото"
-                     width="960"
-                     height="624"
-                     loading="lazy">
-            </picture>
-        </div>
+        @@include("blocks/img/img.html", {
+            "class": "regular-measurements__img",
+            "cover": true,
+            "src": "assets/images/content/regular-measurements",
+            "width": "960",
+            "height": "624",
+        })
     </div>
 </section>

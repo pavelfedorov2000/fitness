@@ -83,14 +83,14 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: var(--offset-l);
-			height: var(--offset-l);
+			width: var(--icon-size_l);
+			height: var(--icon-size_l);
 			background-image: url(../images/icons/quote.svg);
 			@extend %bg-contain;
 
 			@media(max-width: 767px) {
-				width: var(--offset-m);
-				height: var(--offset-m);
+				width: var(--icon-size);
+				height: var(--icon-size);
 			}
 		}
 	}

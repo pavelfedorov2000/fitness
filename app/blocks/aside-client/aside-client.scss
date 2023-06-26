@@ -23,11 +23,8 @@
     // .aside-client__img
 
     &__img {
+        display: block;
         height: 48rem;
-
-        img {
-            @extend %cover;
-        }
     }
 
     // .aside-client__descr

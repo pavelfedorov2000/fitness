@@ -11,17 +11,13 @@
         </picture>
     </div>
     <div class="container promo-success__grid promo-body">
-        <div class="promo-success__aside-img">
-            <picture>
-                <source type="image/webp"
-                        srcset="assets/images/content/promo/promo-aside-man.webp">
-                <img src="assets/images/content/promo/promo-aside-man.jpg"
-                     alt="фото"
-                     width="200"
-                     height="480"
-                     loading="lazy">
-            </picture>
-        </div>
+        @@include("blocks/img/img.html", {
+            "class": "promo-success__aside-img",
+            "cover": true,
+            "src": "assets/images/content/promo/promo-aside-man",
+            "width": "200",
+            "height": "480",
+        })
         @@include('blocks/scroll-btn/scroll-btn.html')
         <div class="section-body promo-success__content">
             <h1 class="section-title promo-success__title">
@@ -30,12 +26,14 @@
             <div class="promo-success__box">
                 <div class="circle-text promo-success__circle-text"
                      data-da=".promo-success, 767, 0">
-                    <img class="circle-text__img"
-                         src="assets/images/white-circle-text.svg"
-                         alt="фото"
-                         width="220"
-                         height="220"
-                         loading="lazy">
+                    @@include("blocks/img/img.html", {
+                        "withoutPicture": true,
+                        "class": "circle-text__img",
+                        "src": "assets/images/white-circle-text",
+                        "format": "svg",
+                        "width": "220",
+                        "height": "220",
+                    })
                 </div>
                 @@include('blocks/box-link/box-link.html', {
                 "href": "#success-story-start",

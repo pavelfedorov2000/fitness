@@ -55,11 +55,7 @@
 }
 
 @@if(!context.listItem){
-    <@@if(!context.href){button}@@if(context.href){a href="@@href" } @@if(context.target){target="@@target" } class="btn@@if(context.class){ @@class}@@if(context.style){ btn--style_@@style}@@if(context.transparent){
-            btn--transparent}@@if(context.primary){ btn--primary}" @@if(!context.href){type="@@if(context.type ==
-            'submit'){submit}@@if(context.type ==
-            'reset'){reset}@@if(!context.type){button}" }
-        @@if(context.isDisabled){disabled}@@if(context.fancybox){data-fancybox}>
+    <@@if(!context.href){button}@@if(context.href){a href="@@href" } @@if(context.target){target="@@target" } class="btn@@if(context.class){ @@class}@@if(context.style){ btn--style_@@style}@@if(context.transparent){ btn--transparent}@@if(context.with){ btn--with_@@with}@@if(context.primary){ btn--primary}" @@if(!context.href){type="@@if(context.type == 'submit'){submit}@@if(context.type == 'reset'){reset}@@if(!context.type){button}" } @@if(context.isDisabled){disabled}@@if(context.fancybox){data-fancybox}>
         @@if(!context.icon_position_right) {
             @@if(context.icon){
                 @@include('blocks/icons/@@icon.html')

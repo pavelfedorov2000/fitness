@@ -1,11 +1,11 @@
 <section class="article-page__form-row">
-	<div class="article-page__form-img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/text-page/picture-03.webp">
-			<img src="assets/images/content/text-page/picture-03.jpg" alt="фото" width="556" height="596"
-				loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "article-page__form-img",
+        "cover": true,
+        "src": "assets/images/content/text-page/picture-03",
+        "width": "556",
+        "height": "596",
+    })
 	<div class="article-page__form">
 		<h4 class="article-page__form-title">
 			Тут может быть
@@ -39,8 +39,12 @@
 					<input class="input input--size_s" type="tel" name="phone" placeholder="Телефон" required>
 					<!-- <span>Телефон</span> -->
 				</label>
-				<button class="btn article-page__form-btn btn--style_bg-black" type="submit">Отправить
-					заявку</button>
+                @@include("blocks/button/button.html", {
+                    "type": "submit",
+                    "style": "bg-black",
+                    "class": "article-page__form-btn",
+                    "text": "Отправить заявку",
+                })
 				<div class="form-agree article-page__form-agree">
 					Отправляя заявку вы соглашаетесь
 					с&nbsp;условиями обработки персональных данных

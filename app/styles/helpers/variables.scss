@@ -1,11 +1,21 @@
 :root {
     --opacity-10: 0.1;
+    --opacity-20: 0.2;
     --opacity-30: 0.3;
     --opacity-50: 0.5;
+    --opacity-60: 0.6;
     --opacity-70: 0.7;
     --opacity-80: 0.8;
 
     --color-white-rgb: 255, 255, 255;
+    --white-opacity-10: rgba(var(--color-white-rgb), var(--opacity-10));
+    --white-opacity-20: rgba(var(--color-white-rgb), var(--opacity-20));
+    --white-opacity-30: rgba(var(--color-white-rgb), var(--opacity-30));
+    --white-opacity-50: rgba(var(--color-white-rgb), var(--opacity-50));
+    --white-opacity-60: rgba(var(--color-white-rgb), var(--opacity-60));
+    --white-opacity-70: rgba(var(--color-white-rgb), var(--opacity-70));
+    --white-opacity-70: rgba(var(--color-white-rgb), var(--opacity-80));
+
     --white: rgb(var(--color-white-rgb));
     --black: #020818;
     --color-default: var(--black);
@@ -36,15 +46,20 @@
     // offsets (gaps)
     --offset-xxxl: 6.4rem;
     --offset-xxl: 5.6rem;
-    --offset-xls: 4rem;
     --offset-xl: 4.8rem;
+    --offset-xls: 4rem;
     --offset-l: 3.2rem;
     --offset-m: 2.4rem;
+    --offset-sm: 2rem;
     --offset-s: 1.6rem;
+    --offset-sx: 1.4rem;
     --offset-xs: 1.2rem;
+    --offset-x: 1rem;
     --offset-xxs: 0.8rem;
+    --offset-xxxs: 0.2rem;
 
     --gap: 20rem;
+    --gap_xs: 8rem;
 
     --container: calc(100vw - var(--gap) * 4);
     --container-padding: var(--offset-xs);
@@ -60,7 +75,7 @@
 
     // section
     --section-height: 80rem;
-    --section-padding: 8rem;
+    --section-padding: var(--gap_xs);
     --section-padding_xl: 8.8rem;
 
     // other
@@ -72,11 +87,25 @@
     --form: 67.2rem;
     --select: 34.4rem;
     --progressbar: 0.6rem;
-    --arrow-btn: var(--offset-xl);
+
+    // icon sizes
+    --icon-size_xs: 1.2rem;
+    --icon-size_s: 1.6rem;
+    --icon-size_sm: 2rem;
+    --icon-size: 2.4rem;
+    --icon-size_l: 3.2rem;
+    --icon-size_xls: 4rem;
+    --icon-size_xl: 4.8rem;
+    --icon-size_xxl: 5.6rem;
+    --icon-size_xxxl: 6.4rem;
+
+    --arrow-btn: var(--icon-size_xl);
+    --arrow-btn_l: var(--icon-size_l);
 
     // typography
     --base-font: 15;
     --font-family: 'Gotham Pro', sans-serif;
+    --letter-spacing: 0.1em;
 
     // shadows
     --shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.2);
@@ -84,13 +113,18 @@
 
     // radiuses
     --border-radius: 3.2rem;
+    --border-radius_xs: 0.4rem;
 
     // border
     --border-width: 0.1rem;
     --border-style: solid;
     --border: var(--border-width) var(--border-style) var(--line-color);
     --border-white: var(--border-width) var(--border-style) var(--white);
+    --border-white-10: var(--border-width) var(--border-style) var(--white-opacity-10);
     --border-black: var(--border-width) var(--border-style) var(--black);
+    --border-dark: var(--border-width) var(--border-style) var(--dark);
+    --border-light-blue: var(--border-width) var(--border-style) var(--light-blue);
+    --border-yellow: var(--border-width) var(--border-style) var(--yellow);
 
     // animations
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
@@ -109,7 +143,7 @@
     @media (max-width: 767px) {
         --rating: var(--section-padding);
         --card-height: 36rem;
-        --arrow-btn: 4rem;
+        --arrow-btn: var(--icon-size_xls);
         --team-card-h: 29.6rem;
     }
 }
@@ -118,13 +152,13 @@
 %text-10 {
     font-size: rem(10);
     line-height: 1.4rem;
-    letter-spacing: 0.1em;
+    letter-spacing: var(--letter-spacing);
 }
 
 %text-11 {
     font-size: rem(11);
     line-height: 1.6rem;
-    letter-spacing: 0.1em;
+    letter-spacing: var(--letter-spacing);
 }
 
 // Typography

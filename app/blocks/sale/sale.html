@@ -22,16 +22,15 @@
 			</div>
 		</div>
 		<a class="sale__rightside" href="#">
-			<div class="sale__rightside-img">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/aside-clients/cheeks.webp">
-					<img src="assets/images/content/aside-clients/cheeks.jpg" alt="фитнес чиксы" width="200"
-						height="800" loading="lazy">
-				</picture>
-			</div>
+            @@include("blocks/img/img.html", {
+                "cover": true,
+                "src": "assets/images/content/aside-clients/cheeks",
+                "width": "200",
+                "height": "800",
+            })
 			@@include('blocks/arrow-btn/arrow-btn.html', {
-			"span": true,
-			"class": "sale__rightside-btn"
+                "span": true,
+                "class": "sale__rightside-btn"
 			})
 		</a>
 	</div>

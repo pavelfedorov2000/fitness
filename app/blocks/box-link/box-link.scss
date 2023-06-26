@@ -1,9 +1,9 @@
 .box-link {
     box-sizing: border-box;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    position: relative;
     padding: var(--offset-m) var(--offset-xls) calc(var(--arrow-btn) + var(--offset-m)) var(--offset-m);
     min-height: var(--gap);
     background-color: var(--yellow);
@@ -31,7 +31,7 @@
     &__text {
         @extend %text-13;
         font-weight: 500;
-        letter-spacing: 0.1em;
+        letter-spacing: var(--letter-spacing);
         text-transform: uppercase;
 
         @media (max-width: 767px) {

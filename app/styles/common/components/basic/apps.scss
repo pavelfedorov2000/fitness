@@ -13,10 +13,10 @@
 		}
 
 		&--radius {
-			border-radius: 0.4rem;
+			border-radius: var(--brs-xs);
 
 			img {
-				border-radius: 0.4rem;
+				border-radius: var(--border-radius_xs);
 			}
 		}
 

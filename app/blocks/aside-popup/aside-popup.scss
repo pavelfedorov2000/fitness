@@ -44,17 +44,17 @@
     // .aside-popup__close-btn
 
     &__close-btn {
+        @extend %grid-center;
         position: absolute;
         top: 0;
         right: 0;
         width: var(--arrow-btn);
         height: var(--arrow-btn);
         background-color: var(--light-blue);
-        @extend %grid-center;
 
         img {
-            width: var(--offset-m);
-            height: var(--offset-m);
+            width: var(--icon-size);
+            height: var(--icon-size);
         }
     }
 

@@ -25,10 +25,14 @@
 			</div>
 		</div>
 		<a href="coach.html" class="club-ceo__img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/ceo.webp" srcset="assets/images/src.webp">
-				<img src="assets/images/content/ceo.png" alt="фото управляющего клуба" width="780" height="638">
-			</picture>
+            @@include("blocks/img/img.html", {
+                "contain": true,
+                "src": "assets/images/content/ceo",
+                "format": "png",
+                "width": "780",
+                "height": "638",
+                "alt": "фото управляющего клуба"
+            })
 		</a>
 		<div class="club-ceo__content">
 			<div class="suptitle club-ceo__suptitle suptitle--black">Управляющий клуба</div>

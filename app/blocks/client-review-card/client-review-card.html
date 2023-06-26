@@ -1,13 +1,13 @@
 <li @@if(context.swiper){ class="swiper-slide" }>
 	<article class="client-review-card">
 		<figure class="client-review-card__inner">
-			<a class="full-link client-review-card__bg" href="https://www.youtube.com/watch?v=NmxCy0wMV9A"
-				target="_blank">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/client-review.webp">
-					<img src="assets/images/content/client-review.jpg" alt="фото" width="728" height="400"
-						loading="lazy">
-				</picture>
+			<a class="full-link client-review-card__bg" href="https://www.youtube.com/watch?v=NmxCy0wMV9A" target="_blank">
+                @@include("blocks/img/img.html", {
+                    "cover": true,
+                    "src": "assets/images/content/client-review",
+                    "width": "728",
+                    "height": "400",
+                })
 			</a>
 			<div class="client-review-card__content">
 				<blockquote class="client-review-card__quote">
@@ -23,13 +23,13 @@
 					</div>
 				</span>
 				<div class="client-review-card__person client">
-					<div class="client__avatar">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/client-avatar.webp">
-							<img src="assets/images/content/client-avatar.jpg" alt="фото" width="64" height="64"
-								loading="lazy">
-						</picture>
-					</div>
+					@@include("blocks/img/img.html", {
+                        "class": "client__avatar",
+                        "cover": true,
+                        "src": "assets/images/content/client-avatar",
+                        "width": "64",
+                        "height": "64",
+                    })
 					<figcaption class="client__info">
 						<p class="client__name">Екатерина Гарибальди</p>
 						<p class="client__descr">Постоянный клиент клуба</p>

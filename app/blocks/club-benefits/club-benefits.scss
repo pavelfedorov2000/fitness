@@ -36,10 +36,6 @@
             grid-row: 1 / -1;
             grid-column: 1 / span 3;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     &__content {

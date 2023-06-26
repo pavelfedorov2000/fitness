@@ -26,7 +26,7 @@
         font-weight: 500;
         height: var(--input-height);
         background-color: var(--white);
-        border: 0.1rem solid var(--white);
+        border: var(--border-white);
         cursor: pointer;
         transition: var(--transition) background-color, var(--transition) border-color;
 
@@ -42,14 +42,14 @@
             position: absolute;
             top: 1.8rem;
             right: var(--offset-s);
-            width: 2rem;
-            height: 2rem;
+            width: var(--icon-size_sm);
+            height: var(--icon-size_sm);
             background-image: url(../images/icons/drop.svg);
             @extend %bg-contain;
-            transition: transform var(--transition) ease-out;
+            transition: transform var(--transition);
 
             @media (max-width: 1024px) {
-                top: 1.4rem;
+                top: var(--offset-sx);
             }
         }
 
@@ -76,7 +76,7 @@
         top: var(--input-height);
         left: 0;
         right: 0;
-        border: 0.1rem solid var(--yellow);
+        border: var(--border-yellow);
         border-top: none;
         z-index: 30;
         background-color: var(--white);
@@ -169,7 +169,7 @@
         &_border {
             #{$this} {
                 &__title {
-                    border: 0.1rem solid var(--black);
+                    border: var(--border-black);
 
                     &.active {
                         border-color: var(--yellow);
@@ -189,7 +189,7 @@
         @media (max-width: 1024px) {
             #{$this} {
                 &__title {
-                    border: 0.1rem solid var(--black);
+                    border: var(--border-black);
 
                     &.active {
                         border-color: var(--yellow);

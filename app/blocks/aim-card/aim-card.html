@@ -1,10 +1,12 @@
 <li>
 	<article class="aim-card">
 		<div class="aim-card__bg">
-			<picture>
-				<source type="image/webp" srcset="@@src.webp">
-				<img src="@@src.jpg" alt="фото" width="@@width" height="@@height" loading="lazy">
-			</picture>
+            @@include("blocks/img/img.html", {
+                "cover": true,
+                "src": "@@src",
+                "width": "@@width",
+                "height": "@@height",
+            })
 		</div>
 		<div class="aim-card__content">
 			<div class="aim-card__title">@@title</div>

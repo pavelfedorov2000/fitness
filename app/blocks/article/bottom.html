@@ -1,13 +1,13 @@
 <aside class="aside-article-bottom container">
 	<div class="aside-article-bottom__cards section-body">
 		<article class="article-aside-card">
-			<div class="article-aside-card__bg">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/text-page/aside-bottom/01.webp">
-					<img src="assets/images/content/text-page/aside-bottom/01.jpg" alt="фото" width="532" height="200"
-						loading="lazy">
-				</picture>
-			</div>
+			@@include("blocks/img/img.html", {
+                "class": "article-aside-card__bg",
+                "cover": true,
+                "src": "assets/images/content/text-page/aside-bottom/01",
+                "width": "532",
+                "height": "200",
+            })
 			<div class="article-aside-card__content">
 				<h3 class="article-aside-card__title">
 					<a href="#" class="full-link">
@@ -22,20 +22,24 @@
 			})
 		</article>
 		<div class="article-aside-card">
-			<div class="article-aside-card__bg">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/text-page/aside-bottom/02.webp">
-					<img src="assets/images/content/text-page/aside-bottom/02.jpg" alt="фото" width="532" height="200"
-						loading="lazy">
-				</picture>
-			</div>
+			@@include("blocks/img/img.html", {
+                "class": "article-aside-card__bg",
+                "cover": true,
+                "src": "assets/images/content/text-page/aside-bottom/02",
+                "width": "532",
+                "height": "200",
+            })
 			<div class="article-aside-card__content">
 				<h3 class="article-aside-card__title">
 					Будь в курсе новостей из фитнеса
 				</h3>
 				<form action="#" class="subscribe-form">
 					<input class="input subscribe-form__input" type="email" placeholder="E–mail" required>
-					<button class="btn subscribe-form__btn" type="submit">Подписаться</button>
+                    @@include("blocks/button/button.html", {
+                        "type": "submit",
+                        "class": "subscribe-form__btn",
+                        "text": "Подписаться",
+                    })
 				</form>
 			</div>
 		</div>

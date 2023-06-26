@@ -16,7 +16,7 @@
         width: var(--arrow-btn);
         height: var(--arrow-btn);
         background-color: var(--light-blue);
-        border: 0.1rem solid var(--light-blue);
+        border: var(--border-light-blue);
         transition: var(--transition) all;
 
         @media (any-hover: hover) {

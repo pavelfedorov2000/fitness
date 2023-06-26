@@ -10,117 +10,111 @@
         </div>
         <div class="splide club-team__slider club-team-slider">
             @@include('blocks/slider-nav/slider-nav.html', {
-            "class": "club-team"
+                "class": "club-team"
             })
             <div class="splide__track">
                 <div class="splide__list club-team-slider__list">
                     <div class="club-team__slider-item splide__slide">
                         @@include('blocks/team-member/team-member.html', {
-                        "color": "pink",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/01",
-                        "width": "384",
-                        "height": "832",
-                        "role": "Персональный<br>тренер–наставник",
-                        "name": "Вера громова",
-                        "da": ".club-team-slider__list, 1024, 0"
+                            "color": "pink",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/01",
+                            "width": "384",
+                            "height": "832",
+                            "role": "Персональный<br>тренер–наставник",
+                            "name": "Вера громова",
+                            "da": ".club-team-slider__list, 1024, 0"
                         })
                     </div>
                     <div class="club-team__slider-item splide__slide club-team__slider-item--grid">
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "ocean",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/02",
-                        "width": "768",
-                        "height": "416",
-                        "role": "Персональный<br>тренер–наставник",
-                        "name": "Ренат якубов",
-                        "da": ".club-team-slider__list, 1024, 1"
-                        })
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "yellow",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/05",
-                        "width": "385",
-                        "height": "416",
-                        "role": "Персональный<br>тренер–наставник",
-                        "name": "Вера громова",
-                        "da": ".club-team-slider__list, 1024, 2"
-                        })
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "pink",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/06",
-                        "width": "385",
-                        "height": "416",
-                        "role": "Инструктор<br>групповых программ",
-                        "name": "Анастасия Ерисова",
-                        "da": ".club-team-slider__list, 1024, 3"
-                        })
+                        @@loop('blocks/team-member/team-member.html', [{
+                            "color": "ocean",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/02",
+                            "width": "768",
+                            "height": "416",
+                            "role": "Персональный<br>тренер–наставник",
+                            "name": "Ренат якубов",
+                            "da": ".club-team-slider__list, 1024, 1"
+                        }, {
+                            "color": "yellow",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/05",
+                            "width": "385",
+                            "height": "416",
+                            "role": "Персональный<br>тренер–наставник",
+                            "name": "Вера громова",
+                            "da": ".club-team-slider__list, 1024, 2"
+                        }, {
+                            "color": "pink",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/06",
+                            "width": "385",
+                            "height": "416",
+                            "role": "Инструктор<br>групповых программ",
+                            "name": "Анастасия Ерисова",
+                            "da": ".club-team-slider__list, 1024, 3"
+                        }])
                     </div>
                     <div class="club-team__slider-item splide__slide club-team__slider-item--grid_reverse">
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "yellow",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/03",
-                        "width": "385",
-                        "height": "416",
-                        "role": "Персональный<br>тренер–наставник",
-                        "name": "Вера громова",
-                        "da": ".club-team-slider__list, 1024, 4"
-                        })
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "ocean",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/04",
-                        "width": "385",
-                        "height": "416",
-                        "role": "Инструктор<br>групповых программ",
-                        "name": "Анастасия Ерисова",
-                        "da": ".club-team-slider__list, 1024, 5"
-                        })
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "purple",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/07",
-                        "width": "768",
-                        "height": "416",
-                        "role": "Персональный<br>тренер–наставник",
-                        "name": "Ренат якубов",
-                        "da": ".club-team-slider__list, 1024, 6"
-                        })
+                        @@loop('blocks/team-member/team-member.html', [{
+                            "color": "yellow",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/03",
+                            "width": "385",
+                            "height": "416",
+                            "role": "Персональный<br>тренер–наставник",
+                            "name": "Вера громова",
+                            "da": ".club-team-slider__list, 1024, 4"
+                        }, {
+                            "color": "ocean",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/04",
+                            "width": "385",
+                            "height": "416",
+                            "role": "Инструктор<br>групповых программ",
+                            "name": "Анастасия Ерисова",
+                            "da": ".club-team-slider__list, 1024, 5"
+                        }, {
+                            "color": "purple",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/07",
+                            "width": "768",
+                            "height": "416",
+                            "role": "Персональный<br>тренер–наставник",
+                            "name": "Ренат якубов",
+                            "da": ".club-team-slider__list, 1024, 6"
+                        }])
                     </div>
                     <div class="club-team__slider-item splide__slide club-team__slider-item--grid">
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "ocean",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/02",
-                        "width": "768",
-                        "height": "416",
-                        "role": "Персональный<br>тренер–наставник",
-                        "name": "Ренат якубов",
-                        "da": ".club-team-slider__list, 1024, 7"
-                        })
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "yellow",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/05",
-                        "width": "385",
-                        "height": "416",
-                        "role": "Персональный<br>тренер–наставник",
-                        "name": "Вера громова",
-                        "da": ".club-team-slider__list, 1024, 8"
-                        })
-                        @@include('blocks/team-member/team-member.html', {
-                        "color": "pink",
-                        "class": "club-team__card",
-                        "src": "assets/images/content/team/06",
-                        "width": "385",
-                        "height": "416",
-                        "role": "Инструктор<br>групповых программ",
-                        "name": "Анастасия Ерисова",
-                        "da": ".club-team-slider__list, 1024, 9"
-                        })
+                        @@loop('blocks/team-member/team-member.html', [{
+                            "color": "ocean",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/02",
+                            "width": "768",
+                            "height": "416",
+                            "role": "Персональный<br>тренер–наставник",
+                            "name": "Ренат якубов",
+                            "da": ".club-team-slider__list, 1024, 7"
+                        }, {
+                            "color": "yellow",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/05",
+                            "width": "385",
+                            "height": "416",
+                            "role": "Персональный<br>тренер–наставник",
+                            "name": "Вера громова",
+                            "da": ".club-team-slider__list, 1024, 8"
+                        }, {
+                            "color": "pink",
+                            "class": "club-team__card",
+                            "src": "assets/images/content/team/06",
+                            "width": "385",
+                            "height": "416",
+                            "role": "Инструктор<br>групповых программ",
+                            "name": "Анастасия Ерисова",
+                            "da": ".club-team-slider__list, 1024, 9"
+                        }])
                     </div>
                 </div>
             </div>

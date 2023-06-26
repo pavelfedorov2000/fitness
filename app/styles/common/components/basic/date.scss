@@ -4,16 +4,17 @@
 }
 
 .date-box {
+    --size: 9.6rem;
+
     @extend %grid-center;
     align-content: center;
     background-color: var(--black);
     color: var(--white);
-    width: 9.6rem;
-    height: 9.6rem;
+    width: var(--size);
+    height: var(--size);
 
     @media (max-width: 767px) {
-        width: var(--offset-xxxl);
-        height: var(--offset-xxxl);
+        --size: var(--icon-size_xxxl);
         font-size: 1.1rem;
         line-height: 1.5rem;
     }
