@@ -15,8 +15,10 @@
 		<div class="article-page__form-wrap">
 			<form action="#" class="article-page__form-body">
 				<div class="select">
-					<div class="select__title select__title--small">Выберите клуб</div>
-					<div class="select__content">
+					<button class="select__toggle select__toggle--small" type="button" aria-expanded="false">
+                        <span class="select__toggle-text">Выберите клуб</span>
+                    </button>
+					<div class="select__dropdown">
 						<input id="club0" class="select__input" type="radio" name="club" checked />
 						<label for="club0" tabindex="0" class="select__label" data-value="Выберите клуб">Выберите
 							клуб</label>

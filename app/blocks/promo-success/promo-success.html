@@ -1,15 +1,11 @@
 <div class="promo-success">
-    <div class="promo-bg promo-success__bg">
-        <picture>
-            <source type="image/webp"
-                    srcset="assets/images/content/promo/promo-concept.webp">
-            <img src="assets/images/content/promo/promo-concept.jpg"
-                 alt="фото"
-                 width="1920"
-                 height="960"
-                 loading="lazy">
-        </picture>
-    </div>
+    @@include("blocks/img/img.html", {
+        "class": "promo-bg promo-success__bg",
+        "cover": true,
+        "src": "assets/images/content/promo/promo-concept",
+        "width": "1920",
+        "height": "960",
+    })
     <div class="container promo-success__grid promo-body">
         @@include("blocks/img/img.html", {
             "class": "promo-success__aside-img",
@@ -24,10 +20,9 @@
                 Истории успеха клиентов FINTESSON
             </h1>
             <div class="promo-success__box">
-                <div class="circle-text promo-success__circle-text"
-                     data-da=".promo-success, 767, 0">
+                <div class="circle-text promo-success__circle-text" data-da=".promo-success, 767, 0">
                     @@include("blocks/img/img.html", {
-                        "withoutPicture": true,
+                        "picture": "false",
                         "class": "circle-text__img",
                         "src": "assets/images/white-circle-text",
                         "format": "svg",
@@ -36,9 +31,9 @@
                     })
                 </div>
                 @@include('blocks/box-link/box-link.html', {
-                "href": "#success-story-start",
-                "class": "promo-success__box-link",
-                "text": "Хочу свою историю успеха"
+                    "href": "#success-story-start",
+                    "class": "promo-success__box-link",
+                    "text": "Хочу свою историю успеха"
                 })
             </div>
             <p class="promo-success__text">
@@ -48,7 +43,7 @@
             </p>
         </div>
         @@include('blocks/marquee/promo-marquee.html', {
-        "class": "promo-success",
+            "class": "promo-success",
         })
     </div>
 </div>

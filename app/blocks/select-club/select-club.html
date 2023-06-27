@@ -1,6 +1,8 @@
 <div class="select@@if(context.class){ @@class__select}@@if(context.bg){ select--style_bg-@@bg}@@if(context.with){ select--with_@@with}@@if(context.size){ select--size_@@size}">
-	<div class="select__title">Выберите клуб</div>
-	<div class="select__content">
+	<button class="select__toggle" type="button" aria-expanded="false">
+        <span class="select__toggle-text">Выберите клуб</span>
+    </button>
+	<div class="select__dropdown">
 		<input id="club0" class="select__input" type="radio" name="club" checked />
 		<label for="club0" tabindex="0" class="select__label" data-value="Выберите клуб">Выберите
 			клуб</label>

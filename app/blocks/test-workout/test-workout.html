@@ -24,13 +24,26 @@
 					концепцией FITNESSON.
 				</li>
 			</ol>
-			<button data-popup="request-popup" class="btn test-workout__btn" type="button">Хочу попробовать</button>
+            @@include("blocks/button/button.html", {
+                "data": {
+                    "attr": "popup",
+                    "value": "request-popup"
+                },
+                "class": "test-workout__btn",
+                "text": "Хочу попробовать",
+            })
 			<small class="test-workout__subbtn-text">Пробная тренировка бесплатная</small>
 			<figure class="test-workout__video video">
 				<div class="video__body test-workout__video-body">
 					<div class="circle-text test-workout__circle-text">
-						<img class="circle-text__img" src="assets/images/circle-text.svg" alt="фото" width="220"
-							height="220" loading="lazy">
+                        @@include("blocks/img/img.html", {
+                            "class": "circle-text__img",
+                            "cover": true,
+                            "src": "assets/images/circle-text",
+                            "format": "svg",
+                            "width": "220",
+                            "height": "220",
+                        })
 					</div>
                     @@include("blocks/img/img.html", {
                         "class": "video__bg",
@@ -40,14 +53,13 @@
                         "height": "379",
                     })
 					<button class="video__box" type="button">
-						<div class="video__text">
+						<span class="video__text">
 							Посмотрите<br>
 							процесс
-						</div>
+						</span>
 						<svg class="video__player" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z"
-								fill="#020818" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z" />
 						</svg>
 					</button>
 				</div>

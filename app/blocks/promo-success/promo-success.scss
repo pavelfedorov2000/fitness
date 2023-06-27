@@ -113,7 +113,7 @@
 
     &__box {
         --box-right-offset: 12.4rem;
-        --box-left-offset: var(--gap) - var(--right-offset);
+        --box-left-offset: calc(var(--gap) - var(--right-offset));
         --box-bottom-offset: 6.2rem;
         --left-offset: calc(var(--circle-text) - var(--box-left-offset));
         --top-offset: calc(var(--circle-text) - (var(--gap) - var(--box-bottom-offset)));

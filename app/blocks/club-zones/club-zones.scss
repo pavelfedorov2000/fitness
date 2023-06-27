@@ -113,10 +113,6 @@
             height: 50%;
             background: linear-gradient(360deg, rgba(2, 8, 24, 0.6) 0%, rgba(2, 8, 24, 0) 100%);
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     &__item-title {
@@ -133,7 +129,7 @@
             line-height: 1.8rem;
         }
 
-        .label {
+        .badge {
             white-space: nowrap;
             margin-right: var(--container-padding);
         }

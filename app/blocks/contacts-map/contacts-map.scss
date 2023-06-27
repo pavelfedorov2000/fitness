@@ -2,7 +2,6 @@
     --pt: 6.5rem;
     --pb: 9.8rem;
     --box-mb: 11.4rem;
-    --select: 34.4rem;
     // .contacts-map__grid
 
     &__grid {
@@ -56,7 +55,7 @@
         }
 
         @media (min-width: 1025px) {
-            grid-template-columns: var(--select) 1fr var(--gap);
+            grid-template-columns: var(--select-width) 1fr var(--gap);
             align-items: flex-end;
         }
     }

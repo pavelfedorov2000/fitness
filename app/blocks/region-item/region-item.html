@@ -8,21 +8,21 @@
 	</button>
 	<ul class="region-item__info">
 		<li class="region-item__info-item">
-			<svg>
-				<use xlink:href="assets/images/sprite.svg#pin"></use>
-			</svg>
-			@@address
+			@@include('blocks/sprite/sprite.html', {
+                "icon": "pin"
+            })
+			<span>@@address</span>
 		</li>
 		<li class="region-item__info-item">
-			<svg>
-				<use xlink:href="assets/images/sprite.svg#time"></use>
-			</svg>
-			@@timetable
+			@@include('blocks/sprite/sprite.html', {
+                "icon": "time"
+            })
+			<span>@@timetable</span>
 		</li>
 		<li class="region-item__info-item">
-			<svg>
-				<use xlink:href="assets/images/sprite.svg#phone"></use>
-			</svg>
+			@@include('blocks/sprite/sprite.html', {
+                "icon": "phone"
+            })
 			<a href="tel:+74959467609">+7 (495) 946–76–09</a>
 		</li>
 	</ul>

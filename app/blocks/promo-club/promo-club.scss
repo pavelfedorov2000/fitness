@@ -21,9 +21,7 @@
 
     &__body {
         @media (min-width: 1025px) {
-            grid-template-rows: calc(var(--header-height) + var(--pt)) max-content calc(var(--gap) - var(--offset-xxl)) var(
-                    --offset-xxl
-                );
+            grid-template-rows: calc(var(--header-height) + var(--pt)) max-content calc(var(--gap) - var(--offset-xxl)) var(--offset-xxl);
             grid-template-areas:
                 '. . . . marquee'
                 '. . content . marquee'
@@ -51,9 +49,7 @@
 
         @media (min-width: 1025px) {
             grid-area: content;
-            grid-template-columns: var(--rating) var(--offset-l) calc(var(--title) - var(--offset-l) - var(--rating)) 1fr var(
-                    --gap
-                );
+            grid-template-columns: var(--rating) var(--offset-l) calc(var(--title) - var(--offset-l) - var(--rating)) 1fr var(--gap);
         }
 
         @media (max-width: 1024px) {

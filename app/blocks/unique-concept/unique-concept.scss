@@ -29,9 +29,7 @@
 
         @media (min-width: 1025px) {
             grid-template-rows: var(--pt) max-content 7.2rem max-content 11rem 23.5rem 1fr 10.4rem - 4.9rem;
-            grid-template-columns: var(--form) var(--offset-xl) 10.1rem 1fr calc(var(--img) - var(--circle-text) / 2) calc(
-                    var(--circle-text) / 2
-                );
+            grid-template-columns: var(--form) var(--offset-xl) 10.1rem 1fr calc(var(--img) - var(--circle-text) / 2) calc(var(--circle-text) / 2);
         }
 
         > * {
@@ -86,10 +84,6 @@
             position: relative;
             grid-row: 4 / 7;
             grid-column: 5 / -1;
-        }
-
-        img {
-            @extend %cover;
         }
     }
 

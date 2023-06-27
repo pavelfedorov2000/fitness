@@ -4,7 +4,7 @@
     position: relative;
     background-color: var(--yellow);
     display: grid;
-    grid-template-columns: repeat(2, var(--gap)) var(--select) var(--text) var(--input-height) 1fr repeat(2, var(--gap));
+    grid-template-columns: repeat(2, var(--gap)) var(--select-width) var(--text) var(--input-height) 1fr repeat(2, var(--gap));
 
     @media (max-width: 1024px) {
         padding-top: var(--offset-m);
@@ -19,8 +19,7 @@
     }
 
     @media (min-width: 1025px) {
-        grid-template-rows:
-            var(--header-height) var(--offset-xxl) calc(var(--gap) - var(--header-height) - var(--offset-xxl)) max-content var(--offset-x) max-content var(--offset-xxl) repeat(2, var(--input-height));
+        grid-template-rows: var(--header-height) var(--offset-xxl) calc(var(--gap) - var(--header-height) - var(--offset-xxl)) max-content var(--offset-x) max-content var(--offset-xxl) repeat(2, var(--input-height));
         grid-template-areas:
             'aside . . . . . . .'
             'aside . . . . img img .'
@@ -132,7 +131,7 @@
             }
         }
 
-        .select__title {
+        .select__toggle {
             border-bottom: var(--border);
         }
     }

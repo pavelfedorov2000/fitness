@@ -19,15 +19,17 @@
     @extend %text-14;
     color: var(--black);
 
-    &__title {
+    &__toggle {
         @extend %vertical-align;
+        @extend %text-14;
         @include padding-x(var(--offset-s));
+        cursor: pointer;
+        width: 100%;
         gap: var(--offset-s);
         font-weight: 500;
         height: var(--input-height);
         background-color: var(--white);
         border: var(--border-white);
-        cursor: pointer;
         transition: var(--transition) background-color, var(--transition) border-color;
 
         @media (any-hover: hover) {
@@ -53,7 +55,7 @@
             }
         }
 
-        &.active {
+        &[aria-expanded="true"] {
             background-color: var(--white);
             border-color: var(--yellow);
             border-bottom: none;
@@ -70,7 +72,7 @@
         }
     }
 
-    &__content {
+    &__dropdown {
         display: none;
         position: absolute;
         top: var(--input-height);
@@ -112,7 +114,7 @@
             }
 
             #{$this} {
-                &__title {
+                &__toggle {
                     height: var(--arrow-btn);
 
                     &::after {
@@ -124,7 +126,7 @@
                     }
                 }
 
-                &__content {
+                &__dropdown {
                     top: var(--arrow-btn);
                 }
             }
@@ -132,7 +134,7 @@
 
         &_xl {
             #{$this} {
-                &__title {
+                &__toggle {
                     height: var(--select-height_xl);
 
                     &:after {
@@ -142,7 +144,7 @@
                     }
                 }
 
-                &__content {
+                &__dropdown {
                     top: var(--select-height_xl);
 
                     @media (max-width: 1024px) {
@@ -157,7 +159,7 @@
         &_bg {
             &-light-blue {
                 #{$this} {
-                    &__title {
+                    &__toggle {
                         background-color: var(--light-blue);
                     }
                 }
@@ -168,10 +170,10 @@
     &--with {
         &_border {
             #{$this} {
-                &__title {
+                &__toggle {
                     border: var(--border-black);
 
-                    &.active {
+                    &[aria-expanded="true"] {
                         border-color: var(--yellow);
                     }
 
@@ -188,10 +190,10 @@
     &--touch-border {
         @media (max-width: 1024px) {
             #{$this} {
-                &__title {
+                &__toggle {
                     border: var(--border-black);
 
-                    &.active {
+                    &[aria-expanded="true"] {
                         border-color: var(--yellow);
                     }
 

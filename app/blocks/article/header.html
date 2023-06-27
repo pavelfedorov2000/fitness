@@ -4,7 +4,16 @@
         "value": "1 200",
         "color": "gray"
 	})
-	<a href="#" class="label article-info__item label--style_bg-blue">Блог</a>
-	<a href="#" class="label article-info__item label--style_bg-blue">Тренировки</a>
+	@@loop("blocks/badge/badge.html", [{
+        "href": "#",
+        "style": "bg-blue",
+        "class": "article-info__item",
+        "text": "Блог",
+    }, {
+        "href": "#",
+        "style": "bg-blue",
+        "class": "article-info__item",
+        "text": "Тренировки",
+    }])
 	<time class="date article-page__date" datetime="2020-09-08">08.09.2020</time>
 </header>

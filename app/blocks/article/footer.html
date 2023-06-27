@@ -4,7 +4,16 @@
         "value": "1 200",
         "color": "gray"
     })
-    <a href="#" class="label article-info__item label--style_bg-blue">Блог</a>
-    <a href="#" class="label article-info__item label--style_bg-blue">Тренировки</a>
+    @@loop("blocks/badge/badge.html", [{
+        "href": "#",
+        "style": "bg-blue",
+        "class": "article-info__item",
+        "text": "Блог",
+    }, {
+        "href": "#",
+        "style": "bg-blue",
+        "class": "article-info__item",
+        "text": "Тренировки",
+    }])
     @@include('blocks/estimate/estimate.html')
 </footer>

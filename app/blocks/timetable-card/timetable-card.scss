@@ -13,20 +13,17 @@
 	}
 
 	display: grid;
-	grid-template-rows: var(--offset-l) max-content var(--offset-m) max-content calc(var(--offset-l) / 2) max-content 1fr minmax(var(--coach),
-		max-content);
+	grid-template-rows: var(--offset-l) max-content var(--offset-m) max-content calc(var(--offset-l) / 2) max-content 1fr minmax(var(--coach), max-content);
 	grid-template-columns: var(--offset-l) 31.5rem var(--offset-xls) var(--offset-xxl) 11.7rem 1fr 3rem calc(var(--people) - var(--coach)) var(--coach);
 	align-items: flex-start;
 	background-color: var(--light-blue);
 	position: relative;
 
 	@media (max-width: 1024px) {
-		grid-template-rows:
-			max-content max-content max-content var(--offset-m) minmax(var(--white-info-box-h), max-content) calc(var(--img-h) - var(--white-info-box-h) - var(--progressbar) - var(--img-pb) - var(--offset-s)) var(--progressbar) calc(var(--img-pb) - var(--offset-s)) repeat(2, max-content);
-		grid-template-columns:
-			var(--container-padding) calc(var(--offset-s) - var(--container-padding)) 1fr calc(var(--white-info-box-w) - var(--offset-s)) calc(var(--offset-s) - var(--container-padding)) var(--container-padding);
+        @include padding-y(var(--offset-s));
+		grid-template-rows: max-content max-content max-content var(--offset-m) minmax(var(--white-info-box-h), max-content) calc(var(--img-h) - var(--white-info-box-h) - var(--progressbar) - var(--img-pb) - var(--offset-s)) var(--progressbar) calc(var(--img-pb) - var(--offset-s)) repeat(2, max-content);
+		grid-template-columns: var(--container-padding) calc(var(--offset-s) - var(--container-padding)) 1fr calc(var(--white-info-box-w) - var(--offset-s)) calc(var(--offset-s) - var(--container-padding)) var(--container-padding);
 		row-gap: var(--offset-s);
-		@include padding-y(var(--offset-s));
 	}
 
 	&::before,
@@ -72,7 +69,6 @@
 	// .timetable-card__label
 
 	&__label {
-
 		&.label--style_bg-green,
 		&.label--style_bg-yellow {
 			display: none;
@@ -143,10 +139,6 @@
 	&__coach-img {
 		grid-row: span 2;
 		grid-area: avatar;
-
-		img {
-			@extend %cover;
-		}
 	}
 
 	// .timetable-card__coach-name
@@ -175,10 +167,6 @@
 		@media (max-width: 1024px) {
 			grid-row: 4 / span 5;
 			grid-column: 1 / -1;
-		}
-
-		img {
-			@extend %cover;
 		}
 	}
 

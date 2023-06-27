@@ -140,10 +140,6 @@
         @media (min-width: 1025px) {
             grid-row: 1 / -1;
         }
-
-        img {
-            @extend %cover;
-        }
     }
 
     &__decor-title {

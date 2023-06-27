@@ -24,7 +24,11 @@
 					<input class="input form-block__input form-block__input--tel input--style_bg-light-blue" type="tel"
 						name="phone" placeholder="Телефон" required>
 					<div class="form-block__btn">
-						<button class="btn btn--style_bg-black" type="submit">Отправить заявку</button>
+                        @@include("blocks/button/button.html", {
+                            "type": "submit",
+                            "style": "bg-black",
+                            "text": "Отправить заявку",
+                        })
 						<p class="form-agree">
 							Отправляя заявку вы соглашаетесь с&nbsp;условиями обработки персональных&nbsp;данных.
 						</p>
@@ -87,15 +91,14 @@
 			</div>
 		</div>
 		<figure class="video info-workout-popup__video video--without_caption">
-			<a class="video__body info-workout-popup__video-body"
-				href="https://www.youtube.com/watch?v=g2QpERgKzI4&t=1s" target="_blank" aria-label="Смотреть видео">
-				<div class="video__bg">
-					<picture>
-						<source type="image/webp" srcset="assets/images/content/unique-concept/video.webp">
-						<img src="assets/images/content/unique-concept/video.jpg" alt="фото" width="652" height="315"
-							loading="lazy">
-					</picture>
-				</div>
+			<a class="video__body info-workout-popup__video-body" href="https://www.youtube.com/watch?v=g2QpERgKzI4&t=1s" target="_blank" aria-label="Смотреть видео">
+                @@include("blocks/img/img.html", {
+                    "class": "video__bg",
+                    "cover": true,
+                    "src": "assets/images/content/unique-concept/video",
+                    "width": "652",
+                    "height": "315",
+                })
 				<span class="video__box video__box--icon-only video__box--round" type="button">
 					<svg class="video__player" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd"

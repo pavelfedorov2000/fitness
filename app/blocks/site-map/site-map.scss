@@ -1,11 +1,11 @@
 .site-map {
+    @extend %grid-center;
+    @extend %text-11;
     cursor: pointer;
     position: fixed;
     top: 28.4rem;
     left: 0;
     z-index: 200;
-    @extend %grid-center;
-    @extend %text-11;
     width: var(--section-padding);
     height: var(--section-padding);
     background-color: var(--purple);

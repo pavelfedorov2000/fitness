@@ -2,6 +2,7 @@
     --opacity-10: 0.1;
     --opacity-20: 0.2;
     --opacity-30: 0.3;
+    --opacity-40: 0.4;
     --opacity-50: 0.5;
     --opacity-60: 0.6;
     --opacity-70: 0.7;
@@ -11,10 +12,11 @@
     --white-opacity-10: rgba(var(--color-white-rgb), var(--opacity-10));
     --white-opacity-20: rgba(var(--color-white-rgb), var(--opacity-20));
     --white-opacity-30: rgba(var(--color-white-rgb), var(--opacity-30));
+    --white-opacity-40: rgba(var(--color-white-rgb), var(--opacity-40));
     --white-opacity-50: rgba(var(--color-white-rgb), var(--opacity-50));
     --white-opacity-60: rgba(var(--color-white-rgb), var(--opacity-60));
     --white-opacity-70: rgba(var(--color-white-rgb), var(--opacity-70));
-    --white-opacity-70: rgba(var(--color-white-rgb), var(--opacity-80));
+    --white-opacity-80: rgba(var(--color-white-rgb), var(--opacity-80));
 
     --white: rgb(var(--color-white-rgb));
     --black: #020818;
@@ -85,7 +87,7 @@
     --rating: 11.1rem;
     --figcaption-height: 3.4rem;
     --form: 67.2rem;
-    --select: 34.4rem;
+    --select-width: 34.4rem;
     --progressbar: 0.6rem;
 
     // icon sizes

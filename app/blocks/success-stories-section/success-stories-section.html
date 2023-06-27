@@ -13,51 +13,51 @@
 			<div class="splide__track">
 				<ul class="splide__list">
 					@@loop('blocks/success-story/success-story.html', [{
-					"splide": true,
-					"name": "Дмитрий<br>Бондаренко",
-					"kg": "-12",
-					"src": "assets/images/content/success-stories/01",
-					"before": "82",
-					"after": "70",
-					"duration": "6 месяцев"
+                        "splide": true,
+                        "name": "Дмитрий<br>Бондаренко",
+                        "kg": "-12",
+                        "src": "assets/images/content/success-stories/01",
+                        "before": "82",
+                        "after": "70",
+                        "duration": "6 месяцев"
 					}, {
-					"splide": true,
-					"name": "Балабанова<br>Елена",
-					"kg": "-15",
-					"src": "assets/images/content/success-stories/02",
-					"before": "64",
-					"after": "49",
-					"duration": "7 месяцев"
+                        "splide": true,
+                        "name": "Балабанова<br>Елена",
+                        "kg": "-15",
+                        "src": "assets/images/content/success-stories/02",
+                        "before": "64",
+                        "after": "49",
+                        "duration": "7 месяцев"
 					}, {
-					"splide": true,
-					"name": "Водянова<br>Виктория",
-					"kg": "-25",
-					"src": "assets/images/content/success-stories/03",
-					"before": "80",
-					"after": "65",
-					"duration": "5 месяцев"
+                        "splide": true,
+                        "name": "Водянова<br>Виктория",
+                        "kg": "-25",
+                        "src": "assets/images/content/success-stories/03",
+                        "before": "80",
+                        "after": "65",
+                        "duration": "5 месяцев"
 					}, {
-					"splide": true,
-					"name": "Дмитрий<br>Бондаренко",
-					"kg": "-12",
-					"src": "assets/images/content/success-stories/01",
-					"before": "82",
-					"after": "70",
-					"duration": "6 месяцев"
+                        "splide": true,
+                        "name": "Дмитрий<br>Бондаренко",
+                        "kg": "-12",
+                        "src": "assets/images/content/success-stories/01",
+                        "before": "82",
+                        "after": "70",
+                        "duration": "6 месяцев"
 					}, {
-					"splide": true,
-					"name": "Балабанова<br>Елена",
-					"kg": "-15",
-					"src": "assets/images/content/success-stories/02",
-					"before": "64",
-					"after": "49",
-					"duration": "7 месяцев"
+                        "splide": true,
+                        "name": "Балабанова<br>Елена",
+                        "kg": "-15",
+                        "src": "assets/images/content/success-stories/02",
+                        "before": "64",
+                        "after": "49",
+                        "duration": "7 месяцев"
 					}])
 				</ul>
 			</div>
 			@@include('blocks/slider-nav/slider-nav.html', {
-			"class": "success-stories-section",
-			"bg": "white"
+                "class": "success-stories-section",
+                "bg": "white"
 			})
 		</div>
 		<div class="success-stories-section__form">
@@ -69,8 +69,10 @@
 				</div>
 				<form action="#" class="success-stories-section__form-body">
 					<div class="select success-stories-section__form-select">
-						<div class="select__title">Выберите клуб</div>
-						<div class="select__content">
+						<button class="select__toggle" type="button" aria-expanded="false">
+                            <span class="select__toggle-text">Выберите клуб</span>
+                        </button>
+						<div class="select__dropdown">
 							<input id="club0" class="select__input" type="radio" name="club" checked />
 							<label for="club0" tabindex="0" class="select__label" data-value="Выберите клуб">Выберите
 								клуб</label>

@@ -1,9 +1,10 @@
-<article
-	class="splide__slide workout-card@@if(context.brsWithout){ workout-card--without-brs}@@if(context.blue){ workout-card--style_bg-light-blue}">
+<article class="splide__slide workout-card@@if(context.brsWithout){ workout-card--without-brs}@@if(context.blue){ workout-card--style_bg-light-blue}">
 	<div class="workout-card__content">
 		<div class="workout-card__top">
 			<h3 class="workout-card__title title">Силовая тренировка</h3>
-			<span class="label">группа до 4 человек</span>
+			@@include("blocks/badge/badge.html", {
+                "text": "группа до 4 человек",
+            })
 		</div>
 		<div class="section-text workout-card__text">
 			<p>Cras fermentum et diam vel placerat. Curabitur nec augue ut urna porta tempus id eu tellus. Nunc non
@@ -18,23 +19,40 @@
 		<ul class="workout-card__timetable workout-timetable">
 			<li class="workout-timetable__item">
 				<div class="workout-timetable__item-day">Понедельник</div>
-				<span class="label label--style_bg-blue">9:00 — 9:50</span>
+				@@include("blocks/badge/badge.html", {
+                    "style": "bg-blue",
+                    "text": "9:00 — 9:50",
+                })
 			</li>
 			<li class="workout-timetable__item">
 				<div class="workout-timetable__item-day">Среда</div>
-				<span class="label label--style_bg-blue">12:00 — 12:50</span>
+				@@include("blocks/badge/badge.html", {
+                    "style": "bg-blue",
+                    "text": "12:00 — 12:50",
+                })
 			</li>
 			<li class="workout-timetable__item">
 				<div class="workout-timetable__item-day">Пятница</div>
-				<span class="label label--style_bg-blue">11:00 — 11:50</span>
+				@@include("blocks/badge/badge.html", {
+                    "style": "bg-blue",
+                    "text": "11:00 — 11:50",
+                })
 			</li>
 		</ul>
-		<button data-popup="info-workout-popup" class="btn workout-card__btn" type="button">Хочу попробовать</button>
+        @@include("blocks/button/button.html", {
+            "data": {
+                "attr": "popup",
+                "value": "info-workout-popup"
+            },
+            "class": "workout-card__btn",
+            "text": "Хочу попробовать",
+        })
 	</div>
-	<div class="workout-card__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/workout-img.webp">
-			<img src="assets/images/content/workout-img.jpg" alt="фото" width="556" height="552" loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "workout-card__img",
+        "cover": true,
+        "src": "assets/images/content/workout-img",
+        "width": "556",
+        "height": "552",
+    })
 </article>

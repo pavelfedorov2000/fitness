@@ -19,8 +19,7 @@
 
     &__grid {
         min-height: 100vh;
-        grid-template-rows:
-            minmax(var(--title-mh), 1fr) var(--white-part-offset) max-content var(--offset-xl) max-content calc(var(--section-padding_xl) - var(--progressbar)) var(--progressbar);
+        grid-template-rows: minmax(var(--title-mh), 1fr) var(--white-part-offset) max-content var(--offset-xl) max-content calc(var(--section-padding_xl) - var(--progressbar)) var(--progressbar);
         grid-template-columns: repeat(2, var(--gap)) var(--text) 1fr repeat(2, var(--gap));
     }
 

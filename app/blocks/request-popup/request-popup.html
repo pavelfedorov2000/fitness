@@ -1,6 +1,12 @@
 <div id="request-popup" class="aside-popup request-popup">
 	<button class="aside-popup__close-btn" type="button" aria-label="Закрыть попап">
-		<img src="assets/images/icons/close.svg" alt="image" loading="lazy" width="24" height="24">
+        @@include("blocks/img/img.html", {
+            "picture": "false",
+            "src": "assets/images/icons/close",
+            "format": "svg",
+            "width": "24",
+            "height": "24",
+        })
 	</button>
 	<div class="request-popup__body">
 		<div class="title aside-popup__title request-popup__title">
@@ -9,8 +15,8 @@
 		</div>
 		<form action="#" class="request-popup__form">
 			@@include('blocks/select-club/select-club.html', {
-			"class": "form-block",
-			"bg": "light-blue"
+                "class": "form-block",
+                "bg": "light-blue"
 			})
 			<input class="input form-block__input form-block__input--name input--style_bg-light-blue" name="name"
 				placeholder="Имя" required>
@@ -25,7 +31,7 @@
 		</form>
 		<div class="request-popup__form-contacts contacts">
 			@@include('blocks/messangers/messangers.html', {
-			"class": "form-block"
+			    "class": "form-block"
 			})
 			<a href="tel:+74959467600" class="contact form-block__contact">+7 495 946-76-00</a>
 		</div>

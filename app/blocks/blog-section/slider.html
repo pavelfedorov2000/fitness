@@ -3,27 +3,34 @@
 		<ul class="splide__list blog-section__slider-inner">
 			<li class="splide__slide blog-section__slider-item">
 				<article class="article-card">
-					<time class="date article-card__date" datetime="2020-09-08">08.09.2020</time>
+                    @@include("blocks/datetime/datetime.html", {
+                        "class": "article-card__date",
+                        "formattedDate": "2020-09-08",
+                        "date": "08.09.2020",
+                    })
 					<div class="article-card__body">
-						<div class="article-card__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/blog/01.webp">
-								<img src="assets/images/content/blog/01.jpg" alt="фото" width="344" height="440"
-									loading="lazy">
-							</picture>
-						</div>
+                        @@include("blocks/img/img.html", {
+                            "class": "article-card__img",
+                            "cover": true,
+                            "src": "assets/images/content/blog/01",
+                            "width": "344",
+                            "height": "440",
+                        })
 						<div class="article-card__content">
-							<span class="label article-card__label">Тренировки</span>
+                            @@include("blocks/badge/badge.html", {
+                                "class": "article-card__label",
+                                "text": "Тренировки",
+                            })
 							<a href="#" class="full-link article-card__title">Советы по домашним тренировкам
 								от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
 							</a>
 							@@include('blocks/views/views.html', {
-							"class": "article-card__views",
-							"value": "1 200"
+                                "class": "article-card__views",
+                                "value": "1 200"
 							})
 							@@include('blocks/arrow-btn/arrow-btn.html', {
-							"span": true,
-							"bg": "white"
+                                "span": true,
+                                "bg": "white"
 							})
 						</div>
 					</div>
@@ -31,28 +38,35 @@
 			</li>
 			<li class="splide__slide blog-section__slider-item">
 				<article class="article-card sale">
-					<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
+					@@include("blocks/datetime/datetime.html", {
+                        "class": "article-card__date",
+                        "formattedDate": "2020-09-08",
+                        "date": "08.09.2020",
+                    })
 					<div class="article-card__body">
-						<div class="article-card__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/blog/02.webp">
-								<img src="assets/images/content/blog/02.jpg" alt="фото" width="344" height="440"
-									loading="lazy">
-							</picture>
-						</div>
+                        @@include("blocks/img/img.html", {
+                            "class": "article-card__img",
+                            "cover": true,
+                            "src": "assets/images/content/blog/02",
+                            "width": "344",
+                            "height": "440",
+                        })
 						<div class="article-card__content">
-							<span class="label article-card__label">Акции</span>
+							@@include("blocks/badge/badge.html", {
+                                "class": "article-card__label",
+                                "text": "Акции",
+                            })
 							<a href="#" class="article-card__title">
 								<span>Осенние скидки</span>
 								<span>от 17% до 33%</span>
 							</a>
 							@@include('blocks/views/views.html', {
-							"class": "article-card__views",
-							"value": "542"
+                                "class": "article-card__views",
+                                "value": "542"
 							})
 							@@include('blocks/arrow-btn/arrow-btn.html', {
-							"span": true,
-							"bg": "white"
+                                "span": true,
+                                "bg": "white"
 							})
 						</div>
 					</div>
@@ -60,27 +74,34 @@
 			</li>
 			<li class="splide__slide blog-section__slider-item">
 				<article class="article-card">
-					<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
+					@@include("blocks/datetime/datetime.html", {
+                        "class": "article-card__date",
+                        "formattedDate": "2020-09-08",
+                        "date": "08.09.2020",
+                    })
 					<div class="article-card__body">
-						<div class="article-card__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/blog/01.webp">
-								<img src="assets/images/content/blog/01.jpg" alt="фото" width="344" height="440"
-									loading="lazy">
-							</picture>
-						</div>
+                        @@include("blocks/img/img.html", {
+                            "class": "article-card__img",
+                            "cover": true,
+                            "src": "assets/images/content/blog/01",
+                            "width": "344",
+                            "height": "440",
+                        })  
 						<div class="article-card__content">
-							<span class="label article-card__label">Тренировки</span>
+							@@include("blocks/badge/badge.html", {
+                                "class": "article-card__label",
+                                "text": "Тренировки",
+                            })
 							<a href="#" class="article-card__title">Советы по домашним тренировкам
 								от&nbsp;тренера&nbsp;<span class="ttu">FITNESSON</span>
 							</a>
 							@@include('blocks/views/views.html', {
-							"class": "article-card__views",
-							"value": "1 200"
+                                "class": "article-card__views",
+                                "value": "1 200"
 							})
 							@@include('blocks/arrow-btn/arrow-btn.html', {
-							"span": true,
-							"bg": "white"
+                                "span": true,
+                                "bg": "white"
 							})
 						</div>
 					</div>
@@ -88,28 +109,35 @@
 			</li>
 			<li class="splide__slide blog-section__slider-item">
 				<article class="article-card sale">
-					<time class="date article-card__date" datetime="2020-09-08">08.09.2020 </time>
+					@@include("blocks/datetime/datetime.html", {
+                        "class": "article-card__date",
+                        "formattedDate": "2020-09-08",
+                        "date": "08.09.2020",
+                    })
 					<div class="article-card__body">
-						<div class="article-card__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/blog/02.webp">
-								<img src="assets/images/content/blog/02.jpg" alt="фото" width="344" height="440"
-									loading="lazy">
-							</picture>
-						</div>
+						@@include("blocks/img/img.html", {
+                            "class": "article-card__img",
+                            "cover": true,
+                            "src": "assets/images/content/blog/02",
+                            "width": "344",
+                            "height": "440",
+                        })
 						<div class="article-card__content">
-							<span class="label article-card__label">Акции</span>
+							@@include("blocks/badge/badge.html", {
+                                "class": "article-card__label",
+                                "text": "Акции",
+                            })
 							<a href="#" class="article-card__title">
 								<span>Осенние скидки</span>
 								<span>от 17% до 33%</span>
 							</a>
 							@@include('blocks/views/views.html', {
-							"class": "article-card__views",
-							"value": "542"
+                                "class": "article-card__views",
+                                "value": "542"
 							})
 							@@include('blocks/arrow-btn/arrow-btn.html', {
-							"span": true,
-							"bg": "white"
+							    "span": true,
+							    "bg": "white"
 							})
 						</div>
 					</div>
@@ -118,6 +146,6 @@
 		</ul>
 	</div>
 	@@include('blocks/slider-nav/slider-nav.html', {
-	"class": "blog-slider"
+	    "class": "blog-slider"
 	})
 </div>

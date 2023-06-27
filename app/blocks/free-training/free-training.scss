@@ -59,10 +59,8 @@
         }
 
         @media (min-width: 1025px) {
-            grid-template-rows: var(--title-offset-top) max-content var(--offset-xl) max-content 6.6rem 10.2rem - 6.6rem minmax(var(--video-height),
-                    max-content);
-            grid-template-columns:
-                var(--list) 7.7rem var(--offset-xls) calc(var(--title) - var(--text)) 1fr calc(var(--img) - var(--img-offset)) var(--img-offset) 6rem;
+            grid-template-rows: var(--title-offset-top) max-content var(--offset-xl) max-content 6.6rem 10.2rem - 6.6rem minmax(var(--video-height), max-content);
+            grid-template-columns: var(--list) 7.7rem var(--offset-xls) calc(var(--title) - var(--text)) 1fr calc(var(--img) - var(--img-offset)) var(--img-offset) 6rem;
             grid-template-areas:
                 '. . . . . img img .'
                 'title title title title . img img .'

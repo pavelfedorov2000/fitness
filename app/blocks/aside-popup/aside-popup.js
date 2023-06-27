@@ -2,13 +2,17 @@ app.asidePopup = {
     name: 'asidePopup',
     description: 'your script description',
     init() {
+        const $html = $('html');
+        const $body = $('body');
+        const $overlay = $('.overlay');
+
         $('[data-popup]').on('click', function (e) {
             e.preventDefault();
             const $popupBtn = $(this);
 
-            $('body').addClass('_lock');
-            $('html').addClass('disable-fix');
-            $('.overlay').fadeIn('slow');
+            $body.addClass('_lock');
+            $html.addClass('disable-fix');
+            $overlay.fadeIn('slow');
             $popupBtn.attr('aria-expanded', true);
             $(`#${$popupBtn.attr('data-popup')}`).addClass('active');
         });
@@ -19,9 +23,9 @@ app.asidePopup = {
 
             $asidePopup.removeClass('active');
             $(`[data-popup="${$asidePopup.attr('id')}"]`).attr('aria-expanded', false);
-            $('.overlay').fadeOut();
-            $('body').removeClass('_lock');
-            $('html').removeClass('disable-fix');
+            $overlay.fadeOut();
+            $body.removeClass('_lock');
+            $html.removeClass('disable-fix');
         });
 
         $(document).on('mouseup', function (e) {
@@ -30,9 +34,9 @@ app.asidePopup = {
             if (!$asidePopup.is(e.target) && $asidePopup.has(e.target).length === 0) {
                 $asidePopup.removeClass('active');
                 $(`[data-popup="${$asidePopup.attr('id')}"]`).attr('aria-expanded', false);
-                $('.overlay').fadeOut();
-                $('body').removeClass('_lock');
-                $('html').removeClass('disable-fix');
+                $overlay.fadeOut();
+                $body.removeClass('_lock');
+                $html.removeClass('disable-fix');
             }
         });
 
@@ -75,9 +79,9 @@ app.asidePopup = {
                 data: data,
             });
 
-            $('body').addClass('_lock');
-            $('html').addClass('disable-fix');
-            $('.overlay').fadeIn();
+            $body.addClass('_lock');
+            $html.addClass('disable-fix');
+            $overlay.fadeIn();
             $('.success-popup').addClass('active');
             $form.find('.input').each(function (index, input) {
                 $(input).val('');

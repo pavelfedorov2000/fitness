@@ -1,9 +1,9 @@
 <section class="unique-concept">
 	<div class="container unique-concept__inner">
 		@@include('blocks/aside-client/aside-client.html', {
-		"direction": "reverse",
-		"name": "Дмитрий Борисов.",
-		"src": "assets/images/content/aside-clients/man"
+            "direction": "reverse",
+            "name": "Дмитрий Борисов.",
+            "src": "assets/images/content/aside-clients/man"
 		})
 		<div class="section-body unique-concept__body">
 			<h2 class="section-title unique-concept__title">Уникальная концепция <span class="ttu">FITNESSON</span></h2>
@@ -24,31 +24,35 @@
 				</p>
 			</div>
 			<div class="unique-concept__img">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/unique-concept/img.webp">
-					<img src="assets/images/content/unique-concept/img.jpg" alt="фото" width="480" height="631"
-						loading="lazy">
-				</picture>
+                @@include("blocks/img/img.html", {
+                    "cover": true,
+                    "src": "assets/images/content/unique-concept/img",
+                    "width": "480",
+                    "height": "631",
+                })
 				<div class="circle-text unique-concept__circle-text">
-					<img class="circle-text__img" src="assets/images/circle-text.svg" alt="фото" width="220"
-						height="220" loading="lazy">
+                    @@include("blocks/img/img.html", {
+                        "class": "circle-text__img",
+                        "src": "assets/images/circle-text",
+                        "format": "svg",
+                        "width": "220",
+                        "height": "220",
+                    })
 				</div>
 			</div>
 			<figure class="unique-concept__video video">
-				<a class="video__body unique-concept__video-body" href="https://www.youtube.com/watch?v=TxZYXAAvPvo"
-					target="_blank" aria-label="Смотреть видео">
-					<div class="video__bg">
-						<picture>
-							<source type="image/webp" srcset="assets/images/content/unique-concept/video.webp">
-							<img src="assets/images/content/unique-concept/video.jpg" alt="фото" width="632"
-								height="382" loading="lazy">
-						</picture>
-					</div>
+				<a class="video__body unique-concept__video-body" href="https://www.youtube.com/watch?v=TxZYXAAvPvo" target="_blank" aria-label="Смотреть видео">
+                    @@include("blocks/img/img.html", {
+                        "class": "video__bg",
+                        "cover": true,
+                        "src": "assets/images/content/unique-concept/video",
+                        "width": "632",
+                        "height": "382",
+                    })
 					<span class="video__box video__box--icon-only">
 						<svg class="video__player" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z"
-								fill="#020818" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z" />
 						</svg>
 					</span>
 				</a>
@@ -71,7 +75,11 @@
 						<input class="input input--style_bg-light-blue" type="tel" name="phone" placeholder="Телефон"
 							required>
 					</label>
-					<button class="btn form__btn" type="submit">Отправить заявку</button>
+                    @@include("blocks/button/button.html", {
+                        "type": "submit",
+                        "class": "form__btn",
+                        "text": "Отправить заявку",
+                    })
 				</div>
 				<p class="form-agree">
 					Отправляя заявку вы соглашаетесь

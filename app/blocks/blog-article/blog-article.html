@@ -13,7 +13,9 @@
             "bg": "white"
 		})
 		<div class="blog-article__tags">
-			<span class="label">Новости</span>
+			@@include("blocks/badge/badge.html", {
+                "text": "Новости",
+            })
 		</div>
 		<a href="#" class="full-link blog-article__title">
 			Советы по домашним тренировкам

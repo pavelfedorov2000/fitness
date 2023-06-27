@@ -23,8 +23,10 @@
 				<a href="#more" class="tab club-services__tab" type="button">Еще</a>
 			</div>
 			<div class="select club-services__select select--with_border" data-da=".club-services__grid, 1024, 1">
-				<div class="select__title">Цели</div>
-				<div class="select__content">
+				<button class="select__toggle" type="button" aria-expanded="false">
+                    <span class="select__toggle-text">Цели</span>
+                </button>
+				<div class="select__dropdown">
 					<input id="clubService0" class="select__input" type="radio" name="clubService" checked />
 					<label for="clubService0" tabindex="0" class="select__label" data-tab="aims">Цели</label>
 					<input id="clubService1" class="select__input" type="radio" name="clubService" />

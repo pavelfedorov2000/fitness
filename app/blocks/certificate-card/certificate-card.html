@@ -6,7 +6,11 @@
 		<div class="card__text">
 			Сертификат персонального фитнес–тренера
 		</div>
-		<span class="label card__label label--style_bg-white">Сертификат</span>
+        @@include("blocks/badge/badge.html", {
+            "class": "card__label",
+            "style": "bg-white",
+            "text": "Сертификат",
+        })
 	</div>
 	@@include('blocks/arrow-btn/arrow-btn.html', {
         "class": "card",

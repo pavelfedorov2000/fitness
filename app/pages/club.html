@@ -63,12 +63,12 @@
 			// Создание макета балуна на основе Twitter Bootstrap.
 			let warehouseBalloonLayout = ymaps.templateLayoutFactory.createClass(
 				`<div class="map-balloon">
-			$[properties.balloonTitle]
-			$[properties.balloonAddress]
-			$[properties.balloonWorkHours]
-			$[properties.balloonTel]
-			<a class="btn map-balloon__btn" href="club.html">Подробнее о клубе</a>
-		</div>`
+                    $[properties.balloonTitle]
+                    $[properties.balloonAddress]
+                    $[properties.balloonWorkHours]
+                    $[properties.balloonTel]
+                    <a class="btn map-balloon__btn" href="club.html">Подробнее о клубе</a>
+                </div>`
 			);
 
 			//let warehousePlacemark;
@@ -81,12 +81,11 @@
 				class="map-balloon__item map-balloon__item--address">${club.address_full}</p>`,
 				balloonWorkHours: club.work_hours && club.work_hours.items && club
 					.work_hours.items.length > 0 ?
-					`<div class="map-balloon__item map-balloon__item--time">
-				Работаем ${club.work_hours.items.join(', ')}
-			</div>` : null,
+                        `<div class="map-balloon__item map-balloon__item--time">
+                            Работаем ${club.work_hours.items.join(', ')}
+                        </div>` : null,
 				balloonTel: club.tel && club.tel !== '' &&
-					`<a class="map-balloon__item map-balloon__item--tel"
-				href="tel:${club.tel.split('').map(item => item.split('').filter(el => el !== '' && el !== '(' && el !== ')' && el !== '-')).join('')}">${club.tel}</a>`,
+					`<a class="map-balloon__item map-balloon__item--tel" href="tel:${club.tel.split('').map(item => item.split('').filter(el => el !== '' && el !== '(' && el !== ')' && el !== '-')).join('')}">${club.tel}</a>`,
 			}, {
 				iconImageHref: 'assets/images/icons/map-pin.svg',
 				iconLayout: "default#image",

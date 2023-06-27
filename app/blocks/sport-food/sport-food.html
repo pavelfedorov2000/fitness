@@ -19,12 +19,13 @@
 				<span class="label label--style_bg-blue">Энергетические батончики</span>
 			</div>
 		</div>
-		<div class="sport-food__img">
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/sport-food.webp">
-				<img src="assets/images/content/sport-food.jpg" alt="фото" width="960" height="655" loading="lazy">
-			</picture>
-		</div>
+        @@include("blocks/img/img.html", {
+            "class": "sport-food__img",
+            "cover": true,
+            "src": "assets/images/content/sport-food",
+            "width": "960",
+            "height": "655",
+        })
 		<div class="decor-title sport-food__decor-title">Магазин</div>
 	</div>
 </section>

@@ -195,7 +195,7 @@
                 content: '';
                 position: absolute;
                 left: calc(var(--gap) * (-1));
-                background-color: rgba(var(--color-white-rgb), 0.4);
+                background-color: var(--white-opacity-40);
             }
         }
 

@@ -12,32 +12,43 @@
 	<ul class="workout-card__timetable workout-timetable">
 		<li class="workout-timetable__item">
 			<div class="workout-timetable__item-day">Понедельник</div>
-			<span class="label label--style_bg-blue">9:00 — 9:50</span>
+            @@include("blocks/badge/badge.html", {
+                "class": "bg-blue",
+                "text": "9:00 — 9:50",
+            })
 		</li>
 		<li class="workout-timetable__item">
 			<div class="workout-timetable__item-day">Среда</div>
-			<span class="label label--style_bg-blue">12:00 — 12:50</span>
+            @@include("blocks/badge/badge.html", {
+                "class": "bg-blue",
+                "text": "12:00 — 12:50",
+            })
 		</li>
 		<li class="workout-timetable__item">
 			<div class="workout-timetable__item-day">Пятница</div>
-			<span class="label label--style_bg-blue">11:00 — 11:50</span>
+            @@include("blocks/badge/badge.html", {
+                "class": "bg-blue",
+                "text": "11:00 — 11:50",
+            })
 		</li>
 	</ul>
-	<div class="workout-card__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/children-sections/img.webp">
-			<img src="assets/images/content/children-sections/img.jpg" alt="фото" width="556" height="552"
-				loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "workout-card__img",
+        "cover": true,
+        "src": "assets/images/content/children-sections/img",
+        "width": "556",
+        "height": "552",
+    })
 	<div class="workout-card__instructor instructor">
 		<div class="instructor__info">
 			<div class="instructor__avatar instructor__avatar--round">
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/instructor-avatar.webp">
-					<img src="assets/images/content/instructor-avatar.png" alt="фото" width="56" height="56"
-						loading="lazy">
-				</picture>
+				@@include("blocks/img/img.html", {
+                    "class": "",
+                    "cover": true,
+                    "src": "assets/images/content/instructor-avatar",
+                    "width": "56",
+                    "height": "56",
+                })
 			</div>
 			<div class="instructor__name">Ирина Садовская</div>
 			<div class="instructor__descr">Инструктор детских секций</div>
@@ -53,6 +64,13 @@
 			</div>
 		</dl>
 	</div>
-	<button data-popup="info-workout-popup" class="btn workout-card__btn btn--with_radius" type="button">Хочу
-		попробовать</button>
+    @@include("blocks/button/button.html", {
+        "data": {
+            "attr": "popup",
+            "value": "info-workout-popup"
+        },
+        "class": "workout-card__btn",
+        "with": "radius",
+        "text": "Хочу попробовать",
+    })
 </article>

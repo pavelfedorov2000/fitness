@@ -1,35 +1,31 @@
 .apps {
-	display: flex;
-	// .apps__item
+    display: flex;
+    // .apps__item
 
-	&__item {
-		height: var(--offset-xls);
-		transition: var(--transition) box-shadow;
+    &__item {
+        height: var(--offset-xls);
+        transition: var(--transition) box-shadow;
 
-		@media (any-hover: hover) {
-			&:hover {
-				box-shadow: var(--shadow);
-			}
-		}
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: var(--shadow);
+            }
+        }
 
-		&--radius {
-			border-radius: var(--brs-xs);
+        &--radius {
+            border-radius: var(--brs-xs);
 
-			img {
-				border-radius: var(--border-radius_xs);
-			}
-		}
+            img {
+                border-radius: var(--border-radius_xs);
+            }
+        }
 
-		&--appstore {
-			width: 12.8rem;
-		}
+        &--appstore {
+            width: 12.8rem;
+        }
 
-		&--googleplay {
-			width: 13.5rem;
-		}
-
-		img {
-			@extend %cover;
-		}
-	}
+        &--googleplay {
+            width: 13.5rem;
+        }
+    }
 }

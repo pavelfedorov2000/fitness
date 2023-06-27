@@ -4,19 +4,28 @@
             <span class="calendar-card__time">@@time</span>
             <div class="calendar-card__category">
                 @@if(context.category == 'group') {
-                    <span class="label label--style_bg-transparent">Групповая
-                        тренировка</span>
+                    @@include("blocks/badge/badge.html", {
+                        "style": "bg-transparent",
+                        "text": "Групповая тренировка",
+                    })
                 }
                 @@if(context.category == 'appointment') {
-                    <span class="label label--style_bg-yellow">По записи</span>
-                    <span class="label">Мест: 2</span>
+                    @@loop("blocks/badge/badge.html", [{
+                        "style": "bg-yellow",
+                        "text": "По записи",
+                    }, {
+                        "text": "Мест: 2"
+                    }])
                 }
                 @@if(context.category == 'children') {
-                    <span class="label">Детская
-                        секция</span>
+                    @@include("blocks/badge/badge.html", {
+                        "text": "Детская секция",
+                    })
                 }
                 @@if(context.category == 'business') {
-                    <span class="label">Бизнес–класс</span>
+                    @@include("blocks/badge/badge.html", {
+                        "text": "Бизнес–класс",
+                    })
                 }
             </div>
         </div>

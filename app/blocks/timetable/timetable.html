@@ -1,10 +1,10 @@
 <section id="timetable" class="timetable-section">
 	<div class="container timetable-section__grid">
 		@@include('blocks/aside-client/aside-client.html', {
-		"direction": "reverse",
-		"class": "timetable-section",
-		"name": "Дмитрий Борисов.",
-		"src": "assets/images/content/aside-clients/man"
+            "direction": "reverse",
+            "class": "timetable-section",
+            "name": "Дмитрий Борисов.",
+            "src": "assets/images/content/aside-clients/man"
 		})
 		<header class="timetable-section__head">
 			<time class="date-box timetable-section__date" datetime="2022-12-10">
@@ -15,13 +15,17 @@
 				Расписание занятий
 				на&nbsp;сегодня
 			</h2>
-			<a href="timetable.html" class="btn timetable-section__btn">Все расписание</a>
+            @@include("blocks/button/button.html", {
+                "href": "timetable.html",
+                "class": "timetable-section__btn",
+                "text": "Все расписание",
+            })
 		</header>
 		<ul class="timetable-section__items">
 			@@loop('blocks/timetable-card/timetable-card.html', "../resources/assets/club-timetable-today.json")
 		</ul>
 		@@include('blocks/aside-nums/aside-nums.html', {
-		"class": "timetable-section__stats"
+		    "class": "timetable-section__stats"
 		})
 	</div>
 </section>

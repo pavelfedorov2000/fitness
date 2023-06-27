@@ -125,10 +125,24 @@
 	<div class="burger-menu__apps apps">
 		<a href="https://apps.apple.com/ru/app/fitnesson-%D1%81%D0%B5%D1%82%D1%8C-%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81-%D0%BA%D0%BB%D1%83%D0%B1%D0%BE%D0%B2/id1595843755"
 			target="_blank" class="apps__item">
-			<img src="assets/images/logo/apps/appstore.svg" alt="app store" width="128" height="40">
+            @@include("blocks/img/img.html", {
+                "cover": true,
+                "src": "assets/images/logo/apps/appstore",
+                "format": "svg",
+                "width": "128",
+                "height": "40",
+                "alt": "app store"
+            })
 		</a>
 		<a href="https://play.google.com/store/apps/details?id=ru.fitnesson.app" target="_blank" class="apps__item">
-			<img src="assets/images/logo/apps/googleplay.svg" alt="google play" width="136" height="40">
+            @@include("blocks/img/img.html", {
+                "cover": true,
+                "src": "assets/images/logo/apps/googleplay",
+                "format": "svg",
+                "width": "136",
+                "height": "40",
+                "alt": "google play"
+            })
 		</a>
 	</div>
 </div>

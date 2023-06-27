@@ -1,8 +1,8 @@
 .success-popup {
-    background-color: var(--yellow);
     padding-top: 12.5rem;
     @include row-grid(9.2rem);
     justify-items: center;
+    background-color: var(--yellow);
 
     @media(min-width: 1025px) {
         align-content: space-between;
@@ -53,9 +53,5 @@
     &__img {
         display: flex;
         align-items: flex-end;
-
-        img {
-            @extend %contain;
-        }
     }
 }

@@ -28,7 +28,6 @@
             row-gap: var(--offset-m);
             grid-template-rows: repeat(3, var(--input-height));
             grid-template-columns: repeat(3, 1fr);
-            //grid-template-columns: repeat(2, 1fr) repeat(2, max-content);
             grid-template-areas:
                 'name textarea textarea'
                 'tel textarea textarea'

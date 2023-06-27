@@ -48,6 +48,7 @@ $(function () {
             pageSlider.destroy(true, true);
         }
     }
+    
     initSlider();
 
     window.addEventListener('resize', function () {

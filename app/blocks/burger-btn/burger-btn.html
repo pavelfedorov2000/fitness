@@ -3,15 +3,17 @@
         aria-label="Открыть меню"
         aria-expanded="false"
         aria-controls="menu">
-    <img class="js-open"
-         src="assets/images/icons/burger.svg"
-         alt="burger icon"
-         width="24"
-         height="24">
-    <img class="js-close"
-         src="assets/images/icons/close.svg"
-         alt="image"
-         loading="lazy"
-         width="24"
-         height="24">
+    @@loop("blocks/img/img.html", [{
+        "class": "js-open",
+        "src": "assets/images/icons/burger",
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+    }, {
+        "class": "js-close",
+        "src": "assets/images/icons/close",
+        "format": "svg",
+        "width": "24",
+        "height": "24",
+    }])
 </button>

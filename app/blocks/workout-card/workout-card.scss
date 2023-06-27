@@ -98,8 +98,6 @@
         }
 
         img {
-            @extend %cover;
-
             @media (min-width: 1025px) {
                 border-radius: 0 var(--border-radius) var(--border-radius) 0;
             }
@@ -131,7 +129,7 @@
             &-light-blue {
                 background-color: var(--light-blue);
 
-                .label {
+                .badge {
                     background-color: var(--white);
                 }
 

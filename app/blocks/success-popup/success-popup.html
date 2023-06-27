@@ -1,6 +1,12 @@
 <div class="aside-popup success-popup">
 	<button class="aside-popup__close-btn" type="button" aria-label="Закрыть попап">
-		<img src="assets/images/icons/close.svg" alt="image" loading="lazy" width="24" height="24">
+        @@include("blocks/img/img.html", {
+            "picture": "false",
+            "src": "assets/images/icons/close",
+            "format": "svg",
+            "width": "24",
+            "height": "24",
+        })
 	</button>
 	<div class="success-popup__content">
 		<div class="title aside-popup__title">
@@ -12,12 +18,17 @@
 			Мы перезвоним вам для уточнения деталей
 			в рабочее время.
 		</p>
-		<button class="btn success-popup__btn btn--style_bg-white" type="button">Понятно</button>
+        @@include("blocks/button/button.html", {
+            "style": "bg-white",
+            "class": "success-popup__btn",
+            "text": "Понятно",
+        })
 	</div>
-	<div class="success-popup__img">
-		<picture>
-			<source type="image/webp" srcset="assets/images/content/success-popup.webp">
-			<img src="assets/images/content/success-popup.jpg" alt="фото" width="652" height="439" loading="lazy">
-		</picture>
-	</div>
+    @@include("blocks/img/img.html", {
+        "class": "success-popup__img",
+        "contain": true,
+        "src": "assets/images/content/success-popup",
+        "width": "652",
+        "height": "439",
+    })
 </div>

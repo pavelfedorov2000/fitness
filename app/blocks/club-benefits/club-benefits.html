@@ -13,12 +13,14 @@
                 обычного&nbsp;фитнес клуба!
             </h2>
             <div class="circle-text club-benefits__circle-text">
-                <img class="circle-text__img"
-                     src="assets/images/white-circle-text.svg"
-                     alt="фото"
-                     width="223"
-                     height="223"
-                     loading="lazy">
+                @@include("blocks/img/img.html", {
+                    "class": "circle-text__img",
+                    "cover": true,
+                    "src": "assets/images/white-circle-text",
+                    "format": "svg",
+                    "width": "223",
+                    "height": "223",
+                })
             </div>
             <ol class="club-benefits__list counter">
                 <li>

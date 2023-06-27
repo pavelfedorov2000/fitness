@@ -1,18 +1,43 @@
-<article class="team-member@@if(context.class){ @@class}@@if(context.color){ team-member--style_bg-@@color}" data-da="@@if(context.da){@@da}">
-    @@include("blocks/img/img.html", {
-        "class": "team-member__img",
-        "cover": true,
-        "src": "@@src",
-        "format": "png",
-        "width": "@@width",
-        "height": "@@height",
-    })
-	<div class="team-member__content">
-		<div class="team-member__role">@@role</div>
-		<a href="coach.html" class="full-link team-member__name">@@name</a>
-		@@include('blocks/arrow-btn/arrow-btn.html', {
-            "span": true,
-            "class": "team-member__arrow"
-		})
-	</div>
-</article>
+@@if(context.listItem){
+    <li>
+        <article class="team-member@@if(context.class){ @@class}@@if(context.color){ team-member--style_bg-@@color}" data-da="@@if(context.da){@@da}">
+            @@include("blocks/img/img.html", {
+                "class": "team-member__img",
+                "cover": true,
+                "src": "@@src",
+                "format": "png",
+                "width": "@@width",
+                "height": "@@height",
+            })
+            <div class="team-member__content">
+                <div class="team-member__role">@@role</div>
+                <a href="coach.html" class="full-link team-member__name">@@name</a>
+                @@include('blocks/arrow-btn/arrow-btn.html', {
+                    "span": true,
+                    "class": "team-member__arrow"
+                })
+            </div>
+        </article>
+    </li>
+}
+
+@@if(!context.listItem){
+    <article class="team-member@@if(context.class){ @@class}@@if(context.color){ team-member--style_bg-@@color}" data-da="@@if(context.da){@@da}">
+        @@include("blocks/img/img.html", {
+            "class": "team-member__img",
+            "cover": true,
+            "src": "@@src",
+            "format": "png",
+            "width": "@@width",
+            "height": "@@height",
+        })
+        <div class="team-member__content">
+            <div class="team-member__role">@@role</div>
+            <a href="coach.html" class="full-link team-member__name">@@name</a>
+            @@include('blocks/arrow-btn/arrow-btn.html', {
+                "span": true,
+                "class": "team-member__arrow"
+            })
+        </div>
+    </article>
+}

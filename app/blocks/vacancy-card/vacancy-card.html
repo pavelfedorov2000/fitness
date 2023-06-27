@@ -1,6 +1,10 @@
 <article class="card">
 	<div class="card__content">
-		<span class="label card__label label--style_bg-white">Тренерский состав</span>
+        @@include("blocks/badge/badge.html", {
+            "class": "card__label",
+            "style": "bg-white",
+            "text": "Тренерский состав",
+        })
 		<h4 class="title card__title">
 			Персональный<br>
 			тренер–наставник
@@ -11,9 +15,9 @@
 		</div>
 	</div>
 	@@include('blocks/arrow-btn/arrow-btn.html', {
-	"class": "card",
-	"href": "#",
-	"fullLink": true,
-	"bg": "white"
+        "class": "card",
+        "href": "#",
+        "fullLink": true,
+        "bg": "white"
 	})
 </article>

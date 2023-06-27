@@ -2,12 +2,12 @@
 	<div class="section-body">
 		<div class="success-stories__filter filter-selects" data-da=".success-stories, 767, first">
 			@@include('blocks/select-club/select-club.html', {
-			"class": "success-stories__select",
-			"with": "border"
+                "class": "success-stories__select",
+                "with": "border"
 			})
 			<div class="select success-stories__select select--with_border">
 				<div class="select__title">Выберите тренера</div>
-				<div class="select__content">
+				<div class="select__dropdown">
 					<input id="coach0" class="select__input" type="radio" name="coach" checked />
 					<label for="coach0" tabindex="0" class="select__label" data-value="Выберите клуб">Выберите
 						тренера</label>
@@ -30,7 +30,7 @@
 			</div>
 			<div class="select success-stories__select select--with_border">
 				<div class="select__title">Цель тренировок</div>
-				<div class="select__content">
+				<div class="select__dropdown">
 					<input id="aim0" class="select__input" type="radio" name="aim" checked />
 					<label for="aim0" tabindex="0" class="select__label" data-value="Цель тренировок">Цель
 						тренировок</label>
@@ -44,86 +44,68 @@
 		</div>
 		<div class="success-stories__grid">
 			@@loop('blocks/article-card/article-card.html', [{
-			"bg": "light-blue",
-			"class": "success-stories__item success-stories__item--1",
-			"src": {
-			"webp": "assets/images/content/blog/03.webp",
-			"default": "assets/images/content/blog/03.png"
-			},
-			"label": {
-			"text": "История успеха",
-			"bg": "black"
-			},
-			"kg": "-14",
-			"title": "Баланова Елена"
+                "bg": "light-blue",
+                "class": "success-stories__item success-stories__item--1",
+                "src": "assets/images/content/blog/03",
+                "label": {
+                    "text": "История успеха",
+                    "bg": "black"
+                },
+                "kg": "-14",
+                "title": "Баланова Елена"
 			}, {
-			"bg": "yellow",
-			"class": "success-stories__item success-stories__item--2",
-			"src": {
-			"webp": "assets/images/content/blog/04.webp",
-			"default": "assets/images/content/blog/04.png"
-			},
-			"label": {
-			"text": "История успеха",
-			"bg": "black"
-			},
-			"kg": "+12",
-			"title": "Владимир Березов"
+                "bg": "yellow",
+                "class": "success-stories__item success-stories__item--2",
+                "src": "assets/images/content/blog/04",
+                "label": {
+                    "text": "История успеха",
+                    "bg": "black"
+                },
+                "kg": "+12",
+                "title": "Владимир Березов"
 			}, {
-			"bg": "pink",
-			"class": "success-stories__item success-stories__item--3",
-			"src": {
-			"webp": "assets/images/content/blog/03.webp",
-			"default": "assets/images/content/blog/03.png"
-			},
-			"label": {
-			"text": "История успеха",
-			"bg": "black"
-			},
-			"kg": "-14",
-			"title": "Баланова Елена"
+                "bg": "pink",
+                "class": "success-stories__item success-stories__item--3",
+                "src": "assets/images/content/blog/03",
+                "label": {
+                    "text": "История успеха",
+                    "bg": "black"
+                },
+                "kg": "-14",
+                "title": "Баланова Елена"
 			}, {
-			"bg": "pink",
-			"class": "success-stories__item success-stories__item--4",
-			"src": {
-			"webp": "assets/images/content/blog/06.webp",
-			"default": "assets/images/content/blog/06.png"
-			},
-			"label": {
-			"text": "История успеха",
-			"bg": "black"
-			},
-			"kg": "-12",
-			"title": "Дмитрий Бондаренко"
+                "bg": "pink",
+                "class": "success-stories__item success-stories__item--4",
+                "src": "assets/images/content/blog/06",
+                "label": {
+                    "text": "История успеха",
+                    "bg": "black"
+                },
+                "kg": "-12",
+                "title": "Дмитрий Бондаренко"
 			}, {
-			"bg": "light-blue",
-			"class": "success-stories__item success-stories__item--5",
-			"src": {
-			"webp": "assets/images/content/blog/07.webp",
-			"default": "assets/images/content/blog/07.png"
-			},
-			"label": {
-			"text": "История успеха",
-			"bg": "black"
-			},
-			"kg": "-25",
-			"title": "Виктория Водянова"
+                "bg": "light-blue",
+                "class": "success-stories__item success-stories__item--5",
+                "src": "assets/images/content/blog/07",
+                "label": {
+                    "text": "История успеха",
+                    "bg": "black"
+                },
+                "kg": "-25",
+                "title": "Виктория Водянова"
 			}, {
-			"bg": "yellow",
-			"class": "success-stories__item success-stories__item--6",
-			"src": {
-			"webp": "assets/images/content/blog/04.webp",
-			"default": "assets/images/content/blog/04.png"
-			},
-			"label": {
-			"text": "История успеха",
-			"bg": "black"
-			},
-			"kg": "+12",
-			"title": "Владимир Березов"
+                "bg": "yellow",
+                "class": "success-stories__item success-stories__item--6",
+                "src": "assets/images/content/blog/04",
+                "label": {
+                    "text": "История успеха",
+                    "bg": "black"
+                },
+                "kg": "+12",
+                "title": "Владимир Березов"
 			}])
 			@@include('blocks/pagination/pagination.html', {
-			"class": "success-stories"
+			    "class": "success-stories"
 			})
 		</div>
 	</div>
