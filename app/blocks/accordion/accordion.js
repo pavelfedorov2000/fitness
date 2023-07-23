@@ -12,9 +12,9 @@ app.accordion = {
             if ($accordionTitle.hasClass('footer__title') && $(window).width() > 1024) return;
 
             $accordionItemNotActiveSummary.removeClass('active');
-            $accordionItemNotActiveContent.slideUp('300');
+            $accordionItemNotActiveContent.slideUp();
             $accordionTitle.toggleClass('active');
-            $accordionContent.slideToggle('300');
+            $accordionContent.slideToggle();
         });
     },
 };

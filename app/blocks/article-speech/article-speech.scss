@@ -4,7 +4,7 @@
     position: relative;
     display: grid;
     grid-template-columns: var(--section-padding_xl) 1fr var(--section-padding_xl);
-    grid-template-rows: var(--offset-xl) max-content var(--offset-xl) minmax(var(--section-padding_xl), max-content);
+    grid-template-rows: var(--offset-xl) max-content var(--offset-xl) minmax(var(--gap_xs), max-content);
     grid-template-areas:
         '. . .'
         '. speech .'

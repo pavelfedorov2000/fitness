@@ -65,6 +65,7 @@
     &--reverse {
         @media (min-width: 1025px) {
             padding-bottom: var(--offset-xl);
+            
             #{$this} {
                 &__body {
                     flex-direction: column-reverse;

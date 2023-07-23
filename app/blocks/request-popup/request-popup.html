@@ -23,7 +23,10 @@
 			<input class="input form-block__input form-block__input--tel input--style_bg-light-blue" type="tel"
 				name="phone" placeholder="Телефон" required>
 			<div class="form-block__btn">
-				<button class="btn" type="submit">Отправить заявку</button>
+                @@include("blocks/button/button.html", {
+                    "type": "submit",
+                    "text": "Отправить заявку",
+                })
 				<p class="form-agree">
 					Отправляя заявку вы соглашаетесь с&nbsp;условиями обработки персональных&nbsp;данных.
 				</p>

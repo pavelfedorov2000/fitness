@@ -1,0 +1,61 @@
+[{
+    "bg": "light-blue",
+    "class": "success-stories__item success-stories__item--1",
+    "src": "assets/images/content/blog/03",
+    "label": {
+        "text": "История успеха",
+        "bg": "black"
+    },
+    "kg": "-14",
+    "title": "Баланова Елена"
+}, {
+    "bg": "yellow",
+    "class": "success-stories__item success-stories__item--2",
+    "src": "assets/images/content/blog/04",
+    "label": {
+        "text": "История успеха",
+        "bg": "black"
+    },
+    "kg": "+12",
+    "title": "Владимир Березов"
+}, {
+    "bg": "pink",
+    "class": "success-stories__item success-stories__item--3",
+    "src": "assets/images/content/blog/03",
+    "label": {
+        "text": "История успеха",
+        "bg": "black"
+    },
+    "kg": "-14",
+    "title": "Баланова Елена"
+}, {
+    "bg": "pink",
+    "class": "success-stories__item success-stories__item--4",
+    "src": "assets/images/content/blog/06",
+    "label": {
+        "text": "История успеха",
+        "bg": "black"
+    },
+    "kg": "-12",
+    "title": "Дмитрий Бондаренко"
+}, {
+    "bg": "light-blue",
+    "class": "success-stories__item success-stories__item--5",
+    "src": "assets/images/content/blog/07",
+    "label": {
+        "text": "История успеха",
+        "bg": "black"
+    },
+    "kg": "-25",
+    "title": "Виктория Водянова"
+}, {
+    "bg": "yellow",
+    "class": "success-stories__item success-stories__item--6",
+    "src": "assets/images/content/blog/04",
+    "label": {
+        "text": "История успеха",
+        "bg": "black"
+    },
+    "kg": "+12",
+    "title": "Владимир Березов"
+}]
