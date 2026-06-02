@@ -92,7 +92,7 @@
 
             &-prev,
             &-next {
-                @extend %grid-center;
+                @extend %flex-center;
                 position: static;
                 margin: 0;
                 width: var(--arrow-btn);

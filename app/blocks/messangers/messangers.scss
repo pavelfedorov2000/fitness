@@ -3,8 +3,7 @@
 }
 
 .messanger {
-    @extend %grid-center;
-    // .messanger__icon
+    @extend %flex-center;
 
     &__icon {
         --size: var(--icon-size);

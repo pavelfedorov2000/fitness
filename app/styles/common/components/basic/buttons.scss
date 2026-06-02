@@ -1,5 +1,5 @@
 .btn {
-    @extend %grid-center;
+    @extend %flex-center;
     @extend %text-12;
     padding: 1.55rem;
     background-color: var(--yellow);

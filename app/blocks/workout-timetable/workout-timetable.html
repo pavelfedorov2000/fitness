@@ -1,0 +1,23 @@
+<ul class="workout-timetable@@if(context.class){ @@class}">
+	<li class="workout-timetable__item">
+		<div class="workout-timetable__item-day">Понедельник</div>
+		@@include("blocks/badge/badge.html", {
+            "style": "bg-blue",
+            "text": "9:00 — 9:50",
+        })
+	</li>
+	<li class="workout-timetable__item">
+		<div class="workout-timetable__item-day">Среда</div>
+		@@include("blocks/badge/badge.html", {
+            "style": "bg-blue",
+            "text": "12:00 — 12:50",
+        })
+	</li>
+	<li class="workout-timetable__item">
+		<div class="workout-timetable__item-day">Пятница</div>
+		@@include("blocks/badge/badge.html", {
+            "style": "bg-blue",
+            "text": "11:00 — 11:50",
+        })
+	</li>
+</ul>

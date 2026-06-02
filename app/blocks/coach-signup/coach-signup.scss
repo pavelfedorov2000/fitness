@@ -1,7 +1,7 @@
 .coach-signup {
+    position: relative;
     background-color: var(--black);
     color: var(--white);
-    position: relative;
 
     @media(min-width: 1025px) {
         display: grid;
@@ -31,7 +31,7 @@
     // .coach-signup__form-wrap
 
     &__form-wrap {
-        @extend %grid-center;
+        @extend %flex-center;
         align-content: center;
         gap: var(--section-padding);
         position: relative;

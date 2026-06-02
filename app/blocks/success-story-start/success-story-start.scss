@@ -59,7 +59,7 @@
     &__content {
         position: relative;
         z-index: 25;
-        @extend %grid-center;
+        @extend %flex-center;
         align-content: center;
         text-align: center;
         row-gap: var(--offset-xxl);

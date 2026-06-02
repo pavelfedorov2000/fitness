@@ -92,7 +92,7 @@
     // .promo-concept__video
 
     &__video {
-        @extend %grid-center;
+        @extend %flex-center;
         height: var(--video);
         border-radius: 50%;
         border: var(--border-white);

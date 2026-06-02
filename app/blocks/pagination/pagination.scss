@@ -12,7 +12,7 @@
 
     &__link {
         @extend %text-18;
-        @extend %grid-center;
+        @extend %flex-center;
         width: var(--arrow-btn);
         height: var(--arrow-btn);
         background-color: var(--light-blue);

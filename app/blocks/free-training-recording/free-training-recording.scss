@@ -1,7 +1,7 @@
 .free-training-recording {
+    @include padding-y(10.4rem);
     box-sizing: border-box;
     border: var(--offset-m) solid var(--yellow);
-    @include padding-y(10.4rem);
 
     @media (max-width: 1024px) {
         @include padding-y(4rem);

@@ -2,7 +2,8 @@
     @extend %vertical-align;
     @extend %text-14;
     @include padding-x(var(--offset-s));
-    height: var(--input-height);
+    width: 100%;
+    height: var(--field-height);
     background-color: var(--white);
     color: var(--black);
 
@@ -34,8 +35,8 @@
     }
 }
 
-.form-field {
+/* .form-field {
     input {
         width: 100%;
     }
-}
+} */

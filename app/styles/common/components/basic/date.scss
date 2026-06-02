@@ -6,8 +6,8 @@
 .date-box {
     --size: 9.6rem;
 
-    @extend %grid-center;
-    align-content: center;
+    @extend %flex-center;
+    flex-direction: column;
     background-color: var(--black);
     color: var(--white);
     width: var(--size);

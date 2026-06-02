@@ -1,5 +1,5 @@
 .site-map {
-    @extend %grid-center;
+    @extend %flex-center;
     @extend %text-11;
     cursor: pointer;
     position: fixed;

@@ -78,7 +78,7 @@
     // .regular-measurements__circle-text
 
     &__circle {
-        @extend %grid-center;
+        @extend %flex-center;
         position: relative;
         z-index: 25;
 

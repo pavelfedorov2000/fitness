@@ -1,6 +1,12 @@
 <div id="info-workout-popup" class="aside-popup info-workout-popup">
 	<button class="aside-popup__close-btn" type="button" aria-label="Закрыть попап">
-		<img src="assets/images/icons/close.svg" alt="image" loading="lazy" width="24" height="24">
+        @@include("blocks/img/img.html", {
+            "picture": "false",
+            "src": "assets/images/icons/close",
+            "format": "svg",
+            "width": "24",
+            "height": "24",
+        })
 	</button>
 	<div class="info-workout-popup__inner">
 		<div class="info-workout-popup__head">
@@ -51,20 +57,7 @@
 						<div class="instructor__descr">Тренер групповых программ</div>
 					</div>
 				</div>
-				<ul class="workout-timetable">
-					<li class="workout-timetable__item">
-						<div class="workout-timetable__item-day">Понедельник</div>
-						<span class="label label--style_bg-blue">9:00 — 9:50</span>
-					</li>
-					<li class="workout-timetable__item">
-						<div class="workout-timetable__item-day">Среда</div>
-						<span class="label label--style_bg-blue">12:00 — 12:50</span>
-					</li>
-					<li class="workout-timetable__item">
-						<div class="workout-timetable__item-day">Пятница</div>
-						<span class="label label--style_bg-blue">11:00 — 11:50</span>
-					</li>
-				</ul>
+				@@include('blocks/workout-timetable/workout-timetable.html')
 			</div>
 			<div class="info-workout-popup__coach">
 				<div class="instructor">
@@ -74,20 +67,7 @@
 						<div class="instructor__descr">Тренер групповых программ</div>
 					</div>
 				</div>
-				<ul class="workout-timetable">
-					<li class="workout-timetable__item">
-						<div class="workout-timetable__item-day">Понедельник</div>
-						<span class="label label--style_bg-blue">9:00 — 9:50</span>
-					</li>
-					<li class="workout-timetable__item">
-						<div class="workout-timetable__item-day">Среда</div>
-						<span class="label label--style_bg-blue">12:00 — 12:50</span>
-					</li>
-					<li class="workout-timetable__item">
-						<div class="workout-timetable__item-day">Пятница</div>
-						<span class="label label--style_bg-blue">11:00 — 11:50</span>
-					</li>
-				</ul>
+				@@include('blocks/workout-timetable/workout-timetable.html')
 			</div>
 		</div>
 		<figure class="video info-workout-popup__video video--without_caption">
@@ -99,7 +79,7 @@
                     "width": "652",
                     "height": "315",
                 })
-				<span class="video__box video__box--icon-only video__box--round" type="button">
+				<span class="video__box video__box--icon-only video__box--round">
 					<svg class="video__player" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd"
 							d="M16 4C9.37097 4 4 9.37097 4 16C4 22.629 9.37097 28 16 28C22.629 28 28 22.629 28 16C28 9.37097 22.629 4 16 4ZM21.5984 17.1613L13.0823 22.0484C12.3177 22.4742 11.3548 21.9274 11.3548 21.0323V10.9677C11.3548 10.0774 12.3129 9.52581 13.0823 9.95161L21.5984 15.129C22.3919 15.5742 22.3919 16.721 21.5984 17.1613Z" />

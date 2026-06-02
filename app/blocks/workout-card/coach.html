@@ -16,29 +16,9 @@
 				est eleifend condimentum.
 			</p>
 		</div>
-		<ul class="workout-card__timetable workout-timetable">
-			<li class="workout-timetable__item">
-				<div class="workout-timetable__item-day">Понедельник</div>
-				@@include("blocks/badge/badge.html", {
-                    "style": "bg-blue",
-                    "text": "9:00 — 9:50",
-                })
-			</li>
-			<li class="workout-timetable__item">
-				<div class="workout-timetable__item-day">Среда</div>
-				@@include("blocks/badge/badge.html", {
-                    "style": "bg-blue",
-                    "text": "12:00 — 12:50",
-                })
-			</li>
-			<li class="workout-timetable__item">
-				<div class="workout-timetable__item-day">Пятница</div>
-				@@include("blocks/badge/badge.html", {
-                    "style": "bg-blue",
-                    "text": "11:00 — 11:50",
-                })
-			</li>
-		</ul>
+		@@include('blocks/workout-timetable/workout-timetable.html', {
+            "class": "workout-card__timetable"
+        })
         @@include("blocks/button/button.html", {
             "data": {
                 "attr": "popup",

@@ -12,11 +12,11 @@
 
     @media (min-width: 1025px) {
         &:before {
-            @include rect(top, left, calc(var(--input-height) + var(--team-card-height)), 0, 64rem, var(--beige));
+            @include rect(top, left, calc(var(--field-height) + var(--team-card-height)), 0, 64rem, var(--beige));
         }
 
         &:after {
-            @include rect(top, right, calc(var(--input-height) * (-1)), 0, 67.2rem, var(--beige));
+            @include rect(top, right, calc(var(--field-height) * (-1)), 0, 67.2rem, var(--beige));
             z-index: 2;
         }
     }

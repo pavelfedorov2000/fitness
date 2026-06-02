@@ -72,7 +72,7 @@
     // .coach-rating__average
 
     &__average {
-        @extend %grid-center;
+        @extend %flex-center;
         @extend %text-20;
         @extend .title;
         width: var(--arrow-btn);

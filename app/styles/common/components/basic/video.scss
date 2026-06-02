@@ -141,6 +141,7 @@
     &__player {
         width: var(--play);
         height: var(--play);
+        fill: var(--black);
 
         @media (min-width: 1025px) {
             grid-area: player;
@@ -182,7 +183,7 @@
 }
 
 .player-circle-wrap {
-    @extend %grid-center;
+    @extend %flex-center;
     border: var(--border-white);
     border-radius: 50%;
 }
@@ -190,7 +191,7 @@
 .player-btn {
     --size: var(--icon-size_xxl);
 
-    @extend %grid-center;
+    @extend %flex-center;
     width: var(--size);
     height: var(--size);
     background-color: var(--yellow);
@@ -210,6 +211,7 @@
     svg {
         width: var(--icon-size_l);
         height: var(--icon-size_l);
+        fill: var(--black);
 
         @media(max-width: 767px) {
             width: 2.1rem;

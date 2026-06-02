@@ -1,6 +1,6 @@
 .wrapper {
+    @extend %flex-col;
 	position: relative;
-	@extend %flex-col;
 	min-height: 100vh;
 	overflow-x: hidden;
 

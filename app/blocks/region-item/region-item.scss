@@ -2,7 +2,7 @@
     // .region-item__btn
 
     &__btn {
-        @extend %grid-center;
+        @extend %flex-center;
         width: 100%;
         min-height: 13.6rem;
     }

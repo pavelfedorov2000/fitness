@@ -26,7 +26,7 @@
     &__form {
         @media (min-width: 768px) {
             row-gap: var(--offset-m);
-            grid-template-rows: repeat(3, var(--input-height));
+            grid-template-rows: repeat(3, var(--field-height));
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas:
                 'name textarea textarea'

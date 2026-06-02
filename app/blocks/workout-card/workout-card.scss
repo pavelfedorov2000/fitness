@@ -65,13 +65,13 @@
         }
 
         &::before {
+            @extend %bg-contain;
             content: '';
             @include position-center-y;
             left: 0;
             width: var(--icon-size_l);
             height: var(--icon-size_l);
             background-image: url(../images/icons/ico-kid.svg);
-            @extend %bg-contain;
         }
     }
 

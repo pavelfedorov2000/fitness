@@ -1,10 +1,10 @@
 .map-balloon {
+    @include row-grid(var(--offset-s));
     box-sizing: border-box;
     position: absolute;
     top: 50% !important;
     transform: translateY(-50%);
     left: var(--offset-l) !important;
-    @include row-grid(var(--offset-s));
     width: 24rem;
     padding: var(--offset-s);
     background: var(--white);

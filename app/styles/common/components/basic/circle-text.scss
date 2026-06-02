@@ -8,7 +8,7 @@
     }
 
     &__text {
-        @extend %grid-center;
+        @extend %flex-center;
         @extend %text-13;
         text-align: center;
         border-radius: 50%;
@@ -30,7 +30,7 @@
     }
 
     &--text {
-        @extend %grid-center;
+        @extend %flex-center;
         position: relative;
 
         @media(min-width: 768px) {

@@ -30,13 +30,13 @@
     }
 
     &::before {
+        @extend .title;
+        @extend %text-16;
         content: '0'counter(faq-num);
         counter-increment: faq-num;
         position: absolute;
         top: 0;
         right: 0;
-        @extend .title;
-        @extend %text-16;
         color: var(--gray);
     }
 

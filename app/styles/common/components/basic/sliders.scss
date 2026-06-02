@@ -25,15 +25,10 @@
     }
 
     &__arrow {
-        @extend %grid-center;
+        @extend %flex-center;
         width: var(--nav);
         height: var(--nav);
         transition: var(--transition) background-color;
-
-        /* &:focus,
-        &:active {
-            background-color: var(--dark-yellow);
-        } */
 
         @media (any-hover: hover) {
             &:hover {
@@ -121,10 +116,11 @@
 .slider-pagination {
     $this: &;
 
+    @extend %flex-row;
     position: relative;
     z-index: 10;
     width: 100%;
-    @extend %flex-row;
+
     // .slider-pagination__item
 
     &__item {

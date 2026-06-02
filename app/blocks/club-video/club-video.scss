@@ -65,7 +65,7 @@
     // .club-video__player
 
     &__player {
-        @extend %grid-center;
+        @extend %flex-center;
         border-radius: 50%;
         border: var(--border-white);
         grid-area: player;
